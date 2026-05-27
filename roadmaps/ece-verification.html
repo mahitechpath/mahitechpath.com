@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath India - VLSI Design Engineer Career Roadmap</title>
-  <meta name="description" content="Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.">
+  <title>CareerPath India - Semiconductor Verification Engineer Career Roadmap</title>
+  <meta name="description" content="Write SystemVerilog verification code, build UVM verification environments, configure functional coverage, and run assertions.">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="domain-ece">
@@ -63,16 +63,16 @@
   </div>
 
   <!-- Main Grid Container -->
-  <div class="container roadmap-container" data-roadmap-id="ece-vlsi">
+  <div class="container roadmap-container" data-roadmap-id="ece-verification">
     
     <!-- Left Sidebar: Table of Contents -->
     <aside class="toc-sidebar">
       <div class="toc-title">ON THIS ROADMAP</div>
       <ul class="toc-list">
-        <li class="toc-item"><a href="#phase1">Phase 1: Semiconductor & CMOS Physics</a></li>
-        <li class="toc-item"><a href="#phase2">Phase 2: Verilog HDL & RTL Modeling</a></li>
-        <li class="toc-item"><a href="#phase3">Phase 3: ASIC Physical Design</a></li>
-        <li class="toc-item"><a href="#phase4">Phase 4: Static Timing Analysis & Verification</a></li>
+        <li class="toc-item"><a href="#phase1">Phase 1: SystemVerilog OOP Verification</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: SV Mailboxes, Threads & Assertions</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: UVM Architecture Core</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: UVM Sequences, Coverage & Audits</a></li>
         <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
         <li class="toc-item"><a href="#placement">Placement Tips</a></li>
       </ul>
@@ -83,8 +83,8 @@
       
       <div class="roadmap-header">
         <span class="badge">16 Weeks • 4 Phases</span>
-        <h1>VLSI Design Engineer</h1>
-        <p>Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.</p>
+        <h1>Semiconductor Verification Engineer</h1>
+        <p>Write SystemVerilog verification code, build UVM verification environments, configure functional coverage, and run assertions.</p>
       </div>
 
       <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
@@ -108,98 +108,98 @@
       <section id="phase1" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
+          SystemVerilog OOP Verification
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write SystemVerilog classes, configure inheritance, and build interfaces.</p>
 
-        <!-- Week 1: Semiconductor Physics -->
+        <!-- Week 1: SystemVerilog Classes & Objects -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 1: Semiconductor Physics</h3>
+            <h3 class="week-title">Week 1: SystemVerilog Classes & Objects</h3>
             <span class="week-tag">Week $1</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <span class="topic-text">OOP concepts: properties, methods, constructors (new)</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <span class="topic-text">Object handles, copying objects: shallow vs deep copy</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 2: CMOS Inverter VTC -->
+        <!-- Week 2: OOP Inheritance & Polymorphism -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 2: CMOS Inverter VTC</h3>
+            <h3 class="week-title">Week 2: OOP Inheritance & Polymorphism</h3>
             <span class="week-tag">Week $2</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <span class="topic-text">Virtual methods, abstract base classes, super keyword</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <span class="topic-text">Polymorphism, parameter inheritance workflows</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 3: Combinational CMOS Circuits -->
+        <!-- Week 3: SV Interfaces & Modports -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 3: Combinational CMOS Circuits</h3>
+            <h3 class="week-title">Week 3: SV Interfaces & Modports</h3>
             <span class="week-tag">Week $3</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <span class="topic-text">Virtual interfaces, clocking blocks, input/output skews</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <span class="topic-text">Modports, connect signals between testbench and DUT</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 4: Sequential CMOS Circuits -->
+        <!-- Week 4: Randomization & Constraints -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 4: Sequential CMOS Circuits</h3>
+            <h3 class="week-title">Week 4: Randomization & Constraints</h3>
             <span class="week-tag">Week $4</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <span class="topic-text">Random variables (rand, randc), constraint blocks math</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-1-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <span class="topic-text">In-line constraints (with), dynamic constraint enables/disables</span>
               </label>
             </li>
           </ul>
@@ -210,98 +210,98 @@
       <section id="phase2" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
+          SV Mailboxes, Threads & Assertions
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure concurrent threads, write mailboxes, and write SystemVerilog assertions.</p>
 
-        <!-- Week 5: Verilog Fundamentals -->
+        <!-- Week 5: Interprocess Communications -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 5: Verilog Fundamentals</h3>
+            <h3 class="week-title">Week 5: Interprocess Communications</h3>
             <span class="week-tag">Week $5</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <span class="topic-text">Mailboxes (bounded/unbounded), event triggers, semaphores</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <span class="topic-text">Producer-consumer patterns implementation in testbenches</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 6: Verilog Testbenches -->
+        <!-- Week 6: Fork-Join Processes -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 6: Verilog Testbenches</h3>
+            <h3 class="week-title">Week 6: Fork-Join Processes</h3>
             <span class="week-tag">Week $6</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <span class="topic-text">Fork-join, fork-join_any, fork-join_none thread execution blocks</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <span class="topic-text">Disabling threads: disable fork, wait fork commands</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 7: RTL Design Patterns -->
+        <!-- Week 7: SystemVerilog Assertions (SVA) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 7: RTL Design Patterns</h3>
+            <h3 class="week-title">Week 7: SystemVerilog Assertions (SVA)</h3>
             <span class="week-tag">Week $7</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <span class="topic-text">Concurrent assertions syntax, sequences, properties definitions</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <span class="topic-text">Implication operators: overlapped (|=) vs non-overlapped (|=)</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 8: Design for Testability (DFT) -->
+        <!-- Week 8: SVA Verification Blocks -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 8: Design for Testability (DFT)</h3>
+            <h3 class="week-title">Week 8: SVA Verification Blocks</h3>
             <span class="week-tag">Week $8</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <span class="topic-text">SVA system functions: past, rose, fell, stable</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-2-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <span class="topic-text">Binding assertions to DUT interfaces, assertion coverage audits</span>
               </label>
             </li>
           </ul>
@@ -312,98 +312,98 @@
       <section id="phase3" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
+          UVM Architecture Core
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study UVM testbench hierarchies, configuration databases, and run-phases.</p>
 
-        <!-- Week 9: Logic Synthesis -->
+        <!-- Week 9: UVM Component Trees -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 9: Logic Synthesis</h3>
+            <h3 class="week-title">Week 9: UVM Component Trees</h3>
             <span class="week-tag">Week $9</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <span class="topic-text">UVM factory registration, uvm_component vs uvm_object</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <span class="topic-text">UVM testbench hierarchy: test, env, agent, driver, monitor</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 10: Floorplanning & Placement -->
+        <!-- Week 10: UVM Configuration Database -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 10: Floorplanning & Placement</h3>
+            <h3 class="week-title">Week 10: UVM Configuration Database</h3>
             <span class="week-tag">Week $10</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <span class="topic-text">uvm_config_db API: set/get virtual interfaces</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <span class="topic-text">UVM factory overrides: replacing components dynamically</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 11: Clock Tree Synthesis (CTS) -->
+        <!-- Week 11: UVM Run-Phases -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 11: Clock Tree Synthesis (CTS)</h3>
+            <h3 class="week-title">Week 11: UVM Run-Phases</h3>
             <span class="week-tag">Week $11</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <span class="topic-text">UVM phases: build, connect, end_of_elaboration, run_phase</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <span class="topic-text">Phase synchronization, raise_objection/drop_objection methods</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 12: Routing & Design Rules -->
+        <!-- Week 12: TLM Communications -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 12: Routing & Design Rules</h3>
+            <h3 class="week-title">Week 12: TLM Communications</h3>
             <span class="week-tag">Week $12</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <span class="topic-text">Transaction Level Modeling (TLM) ports, exports, FIFO interfaces</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-3-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <span class="topic-text">Blocking vs non-blocking TLM communications flows</span>
               </label>
             </li>
           </ul>
@@ -414,98 +414,98 @@
       <section id="phase4" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
+          UVM Sequences, Coverage & Audits
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write transaction sequences, configure functional coverage, and run regressions.</p>
 
-        <!-- Week 13: STA Concepts -->
+        <!-- Week 13: UVM Sequences & Drivers -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 13: STA Concepts</h3>
+            <h3 class="week-title">Week 13: UVM Sequences & Drivers</h3>
             <span class="week-tag">Week $13</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <span class="topic-text">UVM sequence items (transactions), sequence body implementations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <span class="topic-text">uvm_driver get_next_item and item_done handshake loops</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 14: Low-Power Design -->
+        <!-- Week 14: UVM Scoreboards & Monitors -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 14: Low-Power Design</h3>
+            <h3 class="week-title">Week 14: UVM Scoreboards & Monitors</h3>
             <span class="week-tag">Week $14</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <span class="topic-text">uvm_monitor passive data capture, writing broadcast ports</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <span class="topic-text">uvm_scoreboard: writing transaction comparison algorithms</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 15: Memory Architectures -->
+        <!-- Week 15: Functional Coverage & Binning -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 15: Memory Architectures</h3>
+            <h3 class="week-title">Week 15: Functional Coverage & Binning</h3>
             <span class="week-tag">Week $15</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <span class="topic-text">Covergroups, coverpoints, custom bins definitions</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <span class="topic-text">Cross coverage verification, target coverage calculations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 16: Tape-out & Post-Silicon -->
+        <!-- Week 16: Regressions & Bug Audits -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 16: Tape-out & Post-Silicon</h3>
+            <h3 class="week-title">Week 16: Regressions & Bug Audits</h3>
             <span class="week-tag">Week $16</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <span class="topic-text">Running verification regressions, seed randomization tests</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-verification-4-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <span class="topic-text">Reading simulation logs, bug tracking formats</span>
               </label>
             </li>
           </ul>
@@ -517,23 +517,23 @@
         <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
         <div class="placement-grid">
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 16-bit RISC Microprocessor RTL</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and synthesize a 16-bit RISC processor core in Verilog including a 5-stage pipeline, hazard detection, and register file.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. UVM Verification of synchronous FIFO</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Build a complete UVM environment verifying a synchronous FIFO block, writing sequences, assertions, and scoreboards.</p>
             <div class="project-tech">
-              <span class="tech-tag">Verilog HDL</span>
+              <span class="tech-tag">SystemVerilog</span>
+              <span class="tech-tag">UVM Framework</span>
               <span class="tech-tag">ModelSim</span>
-              <span class="tech-tag">RTL Synthesis</span>
-              <span class="tech-tag">RISC ISA</span>
+              <span class="tech-tag">Coverage Bins</span>
             </div>
           </div>
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. CMOS Operational Amplifier Layout</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and layout a two-stage CMOS operational amplifier in a 180nm process, performing DRC, LVS, and parasitic RC extraction.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. SVA Assertion IP for APB Bridge</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design a reusable SystemVerilog Assertions IP checking protocol compliance on an APB bridge interface.</p>
             <div class="project-tech">
-              <span class="tech-tag">Cadence Virtuoso</span>
-              <span class="tech-tag">DRC/LVS Sign-off</span>
-              <span class="tech-tag">Analog Layout</span>
-              <span class="tech-tag">Parasitic Extraction</span>
+              <span class="tech-tag">SystemVerilog Assertions</span>
+              <span class="tech-tag">APB Protocol</span>
+              <span class="tech-tag">Verification Testing</span>
+              <span class="tech-tag">DUT Binding</span>
             </div>
           </div>
         </div>
@@ -552,12 +552,12 @@
               Resume Keywords
             </h3>
             <ul class="placement-card-list">
-              <li>VLSI Design & RTL Coding</li>
-              <li>Verilog HDL & SystemVerilog</li>
-              <li>Static Timing Analysis (STA)</li>
-              <li>ASIC/FPGA Design Flow</li>
-              <li>Physical Design (P&R) & CTS</li>
-              <li>DRC, LVS & Parasitic Extraction</li>
+              <li>ASIC Verification Engineering</li>
+              <li>SystemVerilog OOP Coding</li>
+              <li>UVM Testbench Architecture</li>
+              <li>SystemVerilog Assertions (SVA)</li>
+              <li>Functional Coverage & Bins</li>
+              <li>TLM Port Handshaking</li>
             </ul>
           </div>
 
@@ -567,11 +567,11 @@
               Core Interview Focus
             </h3>
             <ul class="placement-card-list">
-              <li>Deriving setup and hold time equations with clock skew and jitter.</li>
-              <li>Drawing and explaining CMOS inverter voltage transfer characteristics (VTC).</li>
-              <li>Explaining clock domain crossing (CDC) and 2-stage synchronizer design.</li>
-              <li>Describing scan chain insertion and why Design for Testability (DFT) is needed.</li>
-              <li>Contrasting blocking and non-blocking assignments in Verilog with hardware equivalents.</li>
+              <li>Contrasting virtual methods and non-virtual methods in SystemVerilog.</li>
+              <li>Explaining the UVM run phase execution flow and phasing mechanics.</li>
+              <li>Explaining shallow copy vs deep copy in SystemVerilog OOP.</li>
+              <li>Designing a SystemVerilog assertion checking setup-hold times.</li>
+              <li>Describing the config_db set and get parameter mechanisms.</li>
             </ul>
           </div>
 
@@ -633,11 +633,11 @@
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Target Role</span>
-            <span class="meta-info-val">VLSI Design Engineer</span>
+            <span class="meta-info-val">ASIC Verification Engineer</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Prerequisites</span>
-            <span class="meta-info-val">Digital logic, semiconductor physics, and basic C</span>
+            <span class="meta-info-val">Verilog HDL, Object Oriented Programming concepts</span>
           </li>
         </ul>
       </div>

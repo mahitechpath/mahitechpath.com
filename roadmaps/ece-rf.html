@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath India - VLSI Design Engineer Career Roadmap</title>
-  <meta name="description" content="Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.">
+  <title>CareerPath India - RF Engineer Career Roadmap</title>
+  <meta name="description" content="Design RF amplifiers, analyze transmission line impedances, design impedance matches on Smith Charts, and perform RF audits.">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body class="domain-ece">
@@ -63,16 +63,16 @@
   </div>
 
   <!-- Main Grid Container -->
-  <div class="container roadmap-container" data-roadmap-id="ece-vlsi">
+  <div class="container roadmap-container" data-roadmap-id="ece-rf">
     
     <!-- Left Sidebar: Table of Contents -->
     <aside class="toc-sidebar">
       <div class="toc-title">ON THIS ROADMAP</div>
       <ul class="toc-list">
-        <li class="toc-item"><a href="#phase1">Phase 1: Semiconductor & CMOS Physics</a></li>
-        <li class="toc-item"><a href="#phase2">Phase 2: Verilog HDL & RTL Modeling</a></li>
-        <li class="toc-item"><a href="#phase3">Phase 3: ASIC Physical Design</a></li>
-        <li class="toc-item"><a href="#phase4">Phase 4: Static Timing Analysis & Verification</a></li>
+        <li class="toc-item"><a href="#phase1">Phase 1: Transmission Lines & S-Parameters</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: RF Active Components</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: Passive RF Components</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: Antennas & RF Testing</a></li>
         <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
         <li class="toc-item"><a href="#placement">Placement Tips</a></li>
       </ul>
@@ -83,8 +83,8 @@
       
       <div class="roadmap-header">
         <span class="badge">16 Weeks • 4 Phases</span>
-        <h1>VLSI Design Engineer</h1>
-        <p>Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.</p>
+        <h1>RF Engineer</h1>
+        <p>Design RF amplifiers, analyze transmission line impedances, design impedance matches on Smith Charts, and perform RF audits.</p>
       </div>
 
       <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
@@ -108,98 +108,98 @@
       <section id="phase1" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
+          Transmission Lines & S-Parameters
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study transmission line parameters, Smith Charts, and S-parameter matrices.</p>
 
-        <!-- Week 1: Semiconductor Physics -->
+        <!-- Week 1: Transmission Line Equations -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 1: Semiconductor Physics</h3>
+            <h3 class="week-title">Week 1: Transmission Line Equations</h3>
             <span class="week-tag">Week $1</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <span class="topic-text">Voltage and current waves, propagation constant, characteristic impedance</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <span class="topic-text">Reflection coefficient, Standing Wave Ratio (SWR), return loss</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 2: CMOS Inverter VTC -->
+        <!-- Week 2: Smith Chart Foundations -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 2: CMOS Inverter VTC</h3>
+            <h3 class="week-title">Week 2: Smith Chart Foundations</h3>
             <span class="week-tag">Week $2</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <span class="topic-text">Plotting complex impedances, admittance conversions</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <span class="topic-text">Constant resistance and reactance circles mapping</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 3: Combinational CMOS Circuits -->
+        <!-- Week 3: Impedance Matching Networks -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 3: Combinational CMOS Circuits</h3>
+            <h3 class="week-title">Week 3: Impedance Matching Networks</h3>
             <span class="week-tag">Week $3</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <span class="topic-text">L-networks, stub tuning (single stub matching) design</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <span class="topic-text">Quarter-wave transformers matching implementations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 4: Sequential CMOS Circuits -->
+        <!-- Week 4: S-Parameters Matrix -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 4: Sequential CMOS Circuits</h3>
+            <h3 class="week-title">Week 4: S-Parameters Matrix</h3>
             <span class="week-tag">Week $4</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <span class="topic-text">Scattering parameters definition, network analyzer calibrations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-1-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <span class="topic-text">S11, S12, S21, S22 measurements and physical meanings</span>
               </label>
             </li>
           </ul>
@@ -210,98 +210,98 @@
       <section id="phase2" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
+          RF Active Components
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design Low Noise Amplifiers (LNAs), mixers, and power amplifiers.</p>
 
-        <!-- Week 5: Verilog Fundamentals -->
+        <!-- Week 5: Low Noise Amplifiers (LNA) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 5: Verilog Fundamentals</h3>
+            <h3 class="week-title">Week 5: Low Noise Amplifiers (LNA)</h3>
             <span class="week-tag">Week $5</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <span class="topic-text">LNA topologies, noise figure optimizations, stability circles</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <span class="topic-text">Biasing circuits, input/output matching networks</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 6: Verilog Testbenches -->
+        <!-- Week 6: RF Mixers & Up-converters -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 6: Verilog Testbenches</h3>
+            <h3 class="week-title">Week 6: RF Mixers & Up-converters</h3>
             <span class="week-tag">Week $6</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <span class="topic-text">Mixer conversions: conversion loss, isolation parameters</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <span class="topic-text">Single/double balanced mixer circuit designs</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 7: RTL Design Patterns -->
+        <!-- Week 7: Power Amplifiers -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 7: RTL Design Patterns</h3>
+            <h3 class="week-title">Week 7: Power Amplifiers</h3>
             <span class="week-tag">Week $7</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <span class="topic-text">Class A, B, C, D, E, F power amplifiers efficiency comparisons</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <span class="topic-text">Load-pull measurements, linearity (1dB compression point)</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 8: Design for Testability (DFT) -->
+        <!-- Week 8: RF Oscillators -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 8: Design for Testability (DFT)</h3>
+            <h3 class="week-title">Week 8: RF Oscillators</h3>
             <span class="week-tag">Week $8</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <span class="topic-text">Feedback oscillators: Colpitts, Hartley topologies</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-2-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <span class="topic-text">Phase noise definition, PLL frequency synthesizers</span>
               </label>
             </li>
           </ul>
@@ -312,98 +312,98 @@
       <section id="phase3" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
+          Passive RF Components
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design striplines, microstrip filters, couplers, and power dividers.</p>
 
-        <!-- Week 9: Logic Synthesis -->
+        <!-- Week 9: Microstrip & Striplines -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 9: Logic Synthesis</h3>
+            <h3 class="week-title">Week 9: Microstrip & Striplines</h3>
             <span class="week-tag">Week $9</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <span class="topic-text">Planar transmission lines: microstrip geometry calculations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <span class="topic-text">Effective dielectric constant, microstrip losses</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 10: Floorplanning & Placement -->
+        <!-- Week 10: RF Filter Design -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 10: Floorplanning & Placement</h3>
+            <h3 class="week-title">Week 10: RF Filter Design</h3>
             <span class="week-tag">Week $10</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <span class="topic-text">Insertion loss method, low-pass filter prototypes</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <span class="topic-text">Microstrip realization: Richard's transformation, Kuroda's identities</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 11: Clock Tree Synthesis (CTS) -->
+        <!-- Week 11: Power Dividers & Couplers -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 11: Clock Tree Synthesis (CTS)</h3>
+            <h3 class="week-title">Week 11: Power Dividers & Couplers</h3>
             <span class="week-tag">Week $11</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <span class="topic-text">Wilkinson power divider design equations, isolation</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <span class="topic-text">Directional couplers: coupling factor, directivity</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 12: Routing & Design Rules -->
+        <!-- Week 12: RF Simulation Tools (ADS) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 12: Routing & Design Rules</h3>
+            <h3 class="week-title">Week 12: RF Simulation Tools (ADS)</h3>
             <span class="week-tag">Week $12</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <span class="topic-text">Schematic simulations, S-parameter sweeps in ADS</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-3-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <span class="topic-text">Layout generations, EM momentum simulation setups</span>
               </label>
             </li>
           </ul>
@@ -414,98 +414,98 @@
       <section id="phase4" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
+          Antennas & RF Testing
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze antenna parameters, calculate link budgets, and perform spectrum tests.</p>
 
-        <!-- Week 13: STA Concepts -->
+        <!-- Week 13: Antenna Fundamentals -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 13: STA Concepts</h3>
+            <h3 class="week-title">Week 13: Antenna Fundamentals</h3>
             <span class="week-tag">Week $13</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <span class="topic-text">Dipole, patch, horn antennas, radiation pattern, gain</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <span class="topic-text">Input impedance, antenna arrays basics</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 14: Low-Power Design -->
+        <!-- Week 14: RF Link Budget Analysis -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 14: Low-Power Design</h3>
+            <h3 class="week-title">Week 14: RF Link Budget Analysis</h3>
             <span class="week-tag">Week $14</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <span class="topic-text">Friis transmission equation, path loss models, fade margin</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <span class="topic-text">Receiver noise figure, link margin calculations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 15: Memory Architectures -->
+        <!-- Week 15: RF Testing Equipment -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 15: Memory Architectures</h3>
+            <h3 class="week-title">Week 15: RF Testing Equipment</h3>
             <span class="week-tag">Week $15</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <span class="topic-text">Vector Network Analyzer (VNA) calibrations and measurements</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <span class="topic-text">Spectrum Analyzer: measuring harmonics, ACPR, phase noise</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 16: Tape-out & Post-Silicon -->
+        <!-- Week 16: RF Layout & Shielding -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 16: Tape-out & Post-Silicon</h3>
+            <h3 class="week-title">Week 16: RF Layout & Shielding</h3>
             <span class="week-tag">Week $16</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <span class="topic-text">PCB layout guidelines: grounding, shielding cans, vias</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
+                <input type="checkbox" id="ece-rf-4-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <span class="topic-text">EMI/EMC compliance testing standards overview</span>
               </label>
             </li>
           </ul>
@@ -517,23 +517,23 @@
         <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
         <div class="placement-grid">
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 16-bit RISC Microprocessor RTL</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and synthesize a 16-bit RISC processor core in Verilog including a 5-stage pipeline, hazard detection, and register file.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 2.4 GHz Microstrip Bandpass Filter</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and optimize a microstrip bandpass filter for 2.4 GHz in ADS, creating the layout file.</p>
             <div class="project-tech">
-              <span class="tech-tag">Verilog HDL</span>
-              <span class="tech-tag">ModelSim</span>
-              <span class="tech-tag">RTL Synthesis</span>
-              <span class="tech-tag">RISC ISA</span>
+              <span class="tech-tag">ADS Simulator</span>
+              <span class="tech-tag">Microstrip Design</span>
+              <span class="tech-tag">Filter Synthesis</span>
+              <span class="tech-tag">VNA Testing</span>
             </div>
           </div>
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. CMOS Operational Amplifier Layout</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and layout a two-stage CMOS operational amplifier in a 180nm process, performing DRC, LVS, and parasitic RC extraction.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. RF LNA Design & Match</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design a 1.9 GHz Low Noise Amplifier circuit with input matching for minimum noise figure and output matching for gain.</p>
             <div class="project-tech">
-              <span class="tech-tag">Cadence Virtuoso</span>
-              <span class="tech-tag">DRC/LVS Sign-off</span>
-              <span class="tech-tag">Analog Layout</span>
-              <span class="tech-tag">Parasitic Extraction</span>
+              <span class="tech-tag">RF Biasing</span>
+              <span class="tech-tag">ADS Schematic</span>
+              <span class="tech-tag">LNA Matching</span>
+              <span class="tech-tag">Stability Circles</span>
             </div>
           </div>
         </div>
@@ -552,12 +552,12 @@
               Resume Keywords
             </h3>
             <ul class="placement-card-list">
-              <li>VLSI Design & RTL Coding</li>
-              <li>Verilog HDL & SystemVerilog</li>
-              <li>Static Timing Analysis (STA)</li>
-              <li>ASIC/FPGA Design Flow</li>
-              <li>Physical Design (P&R) & CTS</li>
-              <li>DRC, LVS & Parasitic Extraction</li>
+              <li>RF Design Engineering</li>
+              <li>Impedance Matching (Smith Chart)</li>
+              <li>S-Parameter Analysis</li>
+              <li>Microstrip Filter Design (ADS)</li>
+              <li>LNA / Mixer Topologies</li>
+              <li>VNA / Spectrum Analyzer Testing</li>
             </ul>
           </div>
 
@@ -567,11 +567,11 @@
               Core Interview Focus
             </h3>
             <ul class="placement-card-list">
-              <li>Deriving setup and hold time equations with clock skew and jitter.</li>
-              <li>Drawing and explaining CMOS inverter voltage transfer characteristics (VTC).</li>
-              <li>Explaining clock domain crossing (CDC) and 2-stage synchronizer design.</li>
-              <li>Describing scan chain insertion and why Design for Testability (DFT) is needed.</li>
-              <li>Contrasting blocking and non-blocking assignments in Verilog with hardware equivalents.</li>
+              <li>Detailing S-parameters and what S11 return loss represents.</li>
+              <li>Designing a single-stub impedance matching network on a Smith Chart.</li>
+              <li>Deriving the noise figure of cascaded RF blocks (Friis formula).</li>
+              <li>Explaining the 1dB compression point and IP3 linearity metrics.</li>
+              <li>Describing microstrip routing guidelines to prevent crosstalk.</li>
             </ul>
           </div>
 
@@ -633,11 +633,11 @@
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Target Role</span>
-            <span class="meta-info-val">VLSI Design Engineer</span>
+            <span class="meta-info-val">RF Design Engineer</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Prerequisites</span>
-            <span class="meta-info-val">Digital logic, semiconductor physics, and basic C</span>
+            <span class="meta-info-val">Electromagnetics, Transmission Line theory, and AC circuits</span>
           </li>
         </ul>
       </div>

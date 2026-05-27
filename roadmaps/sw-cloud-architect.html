@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath India - VLSI Design Engineer Career Roadmap</title>
-  <meta name="description" content="Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.">
+  <title>CareerPath India - Cloud Architect Career Roadmap</title>
+  <meta name="description" content="Design and manage scalable, reliable, and secure cloud infrastructure on public clouds (AWS, GCP, Azure) using modern architectural patterns.">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="domain-ece">
+<body class="domain-software">
 
   <!-- Top Navigation Bar -->
   <header>
@@ -63,16 +63,16 @@
   </div>
 
   <!-- Main Grid Container -->
-  <div class="container roadmap-container" data-roadmap-id="ece-vlsi">
+  <div class="container roadmap-container" data-roadmap-id="sw-cloud-architect">
     
     <!-- Left Sidebar: Table of Contents -->
     <aside class="toc-sidebar">
       <div class="toc-title">ON THIS ROADMAP</div>
       <ul class="toc-list">
-        <li class="toc-item"><a href="#phase1">Phase 1: Semiconductor & CMOS Physics</a></li>
-        <li class="toc-item"><a href="#phase2">Phase 2: Verilog HDL & RTL Modeling</a></li>
-        <li class="toc-item"><a href="#phase3">Phase 3: ASIC Physical Design</a></li>
-        <li class="toc-item"><a href="#phase4">Phase 4: Static Timing Analysis & Verification</a></li>
+        <li class="toc-item"><a href="#phase1">Phase 1: Cloud Fundamentals & AWS Core</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: High Availability & Storage</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: Infrastructure as Code & Serverless</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: Containers, K8s & Monitoring</a></li>
         <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
         <li class="toc-item"><a href="#placement">Placement Tips</a></li>
       </ul>
@@ -83,8 +83,8 @@
       
       <div class="roadmap-header">
         <span class="badge">16 Weeks • 4 Phases</span>
-        <h1>VLSI Design Engineer</h1>
-        <p>Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.</p>
+        <h1>Cloud Architect</h1>
+        <p>Design and manage scalable, reliable, and secure cloud infrastructure on public clouds (AWS, GCP, Azure) using modern architectural patterns.</p>
       </div>
 
       <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
@@ -108,98 +108,98 @@
       <section id="phase1" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
+          Cloud Fundamentals & AWS Core
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish core networking and compute patterns on public cloud environments.</p>
 
-        <!-- Week 1: Semiconductor Physics -->
+        <!-- Week 1: Cloud Concepts & Virtualization -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 1: Semiconductor Physics</h3>
+            <h3 class="week-title">Week 1: Cloud Concepts & Virtualization</h3>
             <span class="week-tag">Week $1</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <span class="topic-text">Public vs private cloud, IaaS, PaaS, SaaS delivery models</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <span class="topic-text">Hypervisors, container virtualization concepts, and cloud regions</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 2: CMOS Inverter VTC -->
+        <!-- Week 2: Virtual Private Clouds (VPC) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 2: CMOS Inverter VTC</h3>
+            <h3 class="week-title">Week 2: Virtual Private Clouds (VPC)</h3>
             <span class="week-tag">Week $2</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <span class="topic-text">Subnets, route tables, internet gateways, NAT gateways</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <span class="topic-text">Network Access Control Lists (NACLs) vs Security Groups</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 3: Combinational CMOS Circuits -->
+        <!-- Week 3: Cloud Compute (EC2 / VM) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 3: Combinational CMOS Circuits</h3>
+            <h3 class="week-title">Week 3: Cloud Compute (EC2 / VM)</h3>
             <span class="week-tag">Week $3</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <span class="topic-text">Virtual machine creation, AMI structures, CPU/RAM sizing models</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <span class="topic-text">Storage attachments: block storage (EBS) vs network storage (EFS)</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 4: Sequential CMOS Circuits -->
+        <!-- Week 4: Identity & Access Management -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 4: Sequential CMOS Circuits</h3>
+            <h3 class="week-title">Week 4: Identity & Access Management</h3>
             <span class="week-tag">Week $4</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <span class="topic-text">IAM users, groups, roles, JSON policies validation</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-1-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <span class="topic-text">Multi-factor authentication (MFA) and single sign-on (SSO) set</span>
               </label>
             </li>
           </ul>
@@ -210,98 +210,98 @@
       <section id="phase2" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
+          High Availability & Storage
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure load balancing, auto-scaling, database clustering, and object stores.</p>
 
-        <!-- Week 5: Verilog Fundamentals -->
+        <!-- Week 5: Load Balancing & Scaling -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 5: Verilog Fundamentals</h3>
+            <h3 class="week-title">Week 5: Load Balancing & Scaling</h3>
             <span class="week-tag">Week $5</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <span class="topic-text">Application Load Balancers (ALB) vs Network Load Balancers</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <span class="topic-text">Auto Scaling Groups: launch configurations, scale-out metrics</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 6: Verilog Testbenches -->
+        <!-- Week 6: Cloud Databases & Caching -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 6: Verilog Testbenches</h3>
+            <h3 class="week-title">Week 6: Cloud Databases & Caching</h3>
             <span class="week-tag">Week $6</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <span class="topic-text">Relational databases: AWS RDS configurations, read-replicas</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <span class="topic-text">NoSQL stores: DynamoDB indices, Redis cache integrations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 7: RTL Design Patterns -->
+        <!-- Week 7: Object Storage Systems -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 7: RTL Design Patterns</h3>
+            <h3 class="week-title">Week 7: Object Storage Systems</h3>
             <span class="week-tag">Week $7</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <span class="topic-text">Object stores: AWS S3 lifecycle policies, encryption models</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <span class="topic-text">CDN networks: CloudFront caches, edge locations configs</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 8: Design for Testability (DFT) -->
+        <!-- Week 8: DNS & Routing Strategies -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 8: Design for Testability (DFT)</h3>
+            <h3 class="week-title">Week 8: DNS & Routing Strategies</h3>
             <span class="week-tag">Week $8</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <span class="topic-text">Domain routing: Route53 latency, failover, weighted records</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-2-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <span class="topic-text">Health checks setups and global accelerator configurations</span>
               </label>
             </li>
           </ul>
@@ -312,98 +312,98 @@
       <section id="phase3" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
+          Infrastructure as Code & Serverless
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Automate resource deployments with Terraform and write serverless functions.</p>
 
-        <!-- Week 9: Logic Synthesis -->
+        <!-- Week 9: Terraform Syntax & State -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 9: Logic Synthesis</h3>
+            <h3 class="week-title">Week 9: Terraform Syntax & State</h3>
             <span class="week-tag">Week $9</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <span class="topic-text">Terraform HCL syntax: providers, resources, variables inputs</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <span class="topic-text">State files: remote states locks, backend configurations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 10: Floorplanning & Placement -->
+        <!-- Week 10: Modular Terraform -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 10: Floorplanning & Placement</h3>
+            <h3 class="week-title">Week 10: Modular Terraform</h3>
             <span class="week-tag">Week $10</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <span class="topic-text">Writing custom modules, terraform workspaces, import existing resources</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <span class="topic-text">Infrastructure drift detections, plan and apply workflows</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 11: Clock Tree Synthesis (CTS) -->
+        <!-- Week 11: Serverless Architectures -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 11: Clock Tree Synthesis (CTS)</h3>
+            <h3 class="week-title">Week 11: Serverless Architectures</h3>
             <span class="week-tag">Week $11</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <span class="topic-text">Serverless functions: AWS Lambda event triggers, cold starts</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <span class="topic-text">API Gateways configurations, serverless integrations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 12: Routing & Design Rules -->
+        <!-- Week 12: Application Services -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 12: Routing & Design Rules</h3>
+            <h3 class="week-title">Week 12: Application Services</h3>
             <span class="week-tag">Week $12</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <span class="topic-text">Queue services: SQS notifications, SNS pub-sub patterns</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-3-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <span class="topic-text">EventBridge routing, Step Functions state machines</span>
               </label>
             </li>
           </ul>
@@ -414,98 +414,98 @@
       <section id="phase4" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
+          Containers, K8s & Monitoring
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deploy Kubernetes clusters and configure cloud observability.</p>
 
-        <!-- Week 13: STA Concepts -->
+        <!-- Week 13: Container Orchestration (ECS) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 13: STA Concepts</h3>
+            <h3 class="week-title">Week 13: Container Orchestration (ECS)</h3>
             <span class="week-tag">Week $13</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <span class="topic-text">ECS tasks, service definitions, Fargate serverless containers</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <span class="topic-text">Docker registry (ECR) set, image building pipelines</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 14: Low-Power Design -->
+        <!-- Week 14: Kubernetes on Cloud (EKS) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 14: Low-Power Design</h3>
+            <h3 class="week-title">Week 14: Kubernetes on Cloud (EKS)</h3>
             <span class="week-tag">Week $14</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <span class="topic-text">EKS cluster configurations, node groups, kubectl setups</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <span class="topic-text">K8s manifests: deployments, services, ingress configurations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 15: Memory Architectures -->
+        <!-- Week 15: Observability & Monitoring -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 15: Memory Architectures</h3>
+            <h3 class="week-title">Week 15: Observability & Monitoring</h3>
             <span class="week-tag">Week $15</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <span class="topic-text">Logs collections: CloudWatch agents, log groups queries</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <span class="topic-text">Metrics collections: Prometheus, Grafana visualization dashboards</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 16: Tape-out & Post-Silicon -->
+        <!-- Week 16: Cost Optimization & Frameworks -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 16: Tape-out & Post-Silicon</h3>
+            <h3 class="week-title">Week 16: Cost Optimization & Frameworks</h3>
             <span class="week-tag">Week $16</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <span class="topic-text">Well-Architected Framework: security, reliability, cost pillars</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-cloud-architect-4-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <span class="topic-text">Budget alerts, cost explorer analysis, sizing optimizations</span>
               </label>
             </li>
           </ul>
@@ -517,23 +517,23 @@
         <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
         <div class="placement-grid">
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 16-bit RISC Microprocessor RTL</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and synthesize a 16-bit RISC processor core in Verilog including a 5-stage pipeline, hazard detection, and register file.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. Multi-Region Web Infrastructure</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Write Terraform scripts to deploy a load-balanced, auto-scaled WordPress stack across two AWS regions with RDS databases.</p>
             <div class="project-tech">
-              <span class="tech-tag">Verilog HDL</span>
-              <span class="tech-tag">ModelSim</span>
-              <span class="tech-tag">RTL Synthesis</span>
-              <span class="tech-tag">RISC ISA</span>
+              <span class="tech-tag">Terraform</span>
+              <span class="tech-tag">AWS VPC / RDS</span>
+              <span class="tech-tag">Route53 DNS</span>
+              <span class="tech-tag">Auto Scaling</span>
             </div>
           </div>
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. CMOS Operational Amplifier Layout</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and layout a two-stage CMOS operational amplifier in a 180nm process, performing DRC, LVS, and parasitic RC extraction.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. Kubernetes Microservices App</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Package and deploy a microservices-based e-commerce application on AWS EKS using Helm charts, monitoring metrics with Prometheus.</p>
             <div class="project-tech">
-              <span class="tech-tag">Cadence Virtuoso</span>
-              <span class="tech-tag">DRC/LVS Sign-off</span>
-              <span class="tech-tag">Analog Layout</span>
-              <span class="tech-tag">Parasitic Extraction</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Kubernetes / Helm</span>
+              <span class="tech-tag">AWS EKS</span>
+              <span class="tech-tag">Grafana</span>
             </div>
           </div>
         </div>
@@ -552,12 +552,12 @@
               Resume Keywords
             </h3>
             <ul class="placement-card-list">
-              <li>VLSI Design & RTL Coding</li>
-              <li>Verilog HDL & SystemVerilog</li>
-              <li>Static Timing Analysis (STA)</li>
-              <li>ASIC/FPGA Design Flow</li>
-              <li>Physical Design (P&R) & CTS</li>
-              <li>DRC, LVS & Parasitic Extraction</li>
+              <li>Cloud Infrastructure Design</li>
+              <li>Terraform (IaC) Automation</li>
+              <li>AWS / GCP Implementations</li>
+              <li>Kubernetes Orchestration (EKS)</li>
+              <li>High Availability Architectures</li>
+              <li>Serverless Services (Lambda)</li>
             </ul>
           </div>
 
@@ -567,11 +567,11 @@
               Core Interview Focus
             </h3>
             <ul class="placement-card-list">
-              <li>Deriving setup and hold time equations with clock skew and jitter.</li>
-              <li>Drawing and explaining CMOS inverter voltage transfer characteristics (VTC).</li>
-              <li>Explaining clock domain crossing (CDC) and 2-stage synchronizer design.</li>
-              <li>Describing scan chain insertion and why Design for Testability (DFT) is needed.</li>
-              <li>Contrasting blocking and non-blocking assignments in Verilog with hardware equivalents.</li>
+              <li>Explaining the difference between NACLs and Security Groups in VPCs.</li>
+              <li>Describing how Terraform manages resources using state files.</li>
+              <li>Detailing high availability and disaster recovery patterns (Active-Active).</li>
+              <li>Comparing Serverless architectures vs traditional VMs in terms of cost and scale.</li>
+              <li>Describing the Kubernetes pod lifecycle and service routing mechanisms.</li>
             </ul>
           </div>
 
@@ -633,11 +633,11 @@
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Target Role</span>
-            <span class="meta-info-val">VLSI Design Engineer</span>
+            <span class="meta-info-val">Cloud Architect</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Prerequisites</span>
-            <span class="meta-info-val">Digital logic, semiconductor physics, and basic C</span>
+            <span class="meta-info-val">Basic Networking, OS Administration, and Git</span>
           </li>
         </ul>
       </div>

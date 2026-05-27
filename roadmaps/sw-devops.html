@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath India - VLSI Design Engineer Career Roadmap</title>
-  <meta name="description" content="Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.">
+  <title>CareerPath India - DevOps / Site Reliability Engineer Career Roadmap</title>
+  <meta name="description" content="Automate build pipelines, configure container deployments, write Infrastructure as Code, and manage system observability.">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="domain-ece">
+<body class="domain-software">
 
   <!-- Top Navigation Bar -->
   <header>
@@ -63,16 +63,16 @@
   </div>
 
   <!-- Main Grid Container -->
-  <div class="container roadmap-container" data-roadmap-id="ece-vlsi">
+  <div class="container roadmap-container" data-roadmap-id="sw-devops">
     
     <!-- Left Sidebar: Table of Contents -->
     <aside class="toc-sidebar">
       <div class="toc-title">ON THIS ROADMAP</div>
       <ul class="toc-list">
-        <li class="toc-item"><a href="#phase1">Phase 1: Semiconductor & CMOS Physics</a></li>
-        <li class="toc-item"><a href="#phase2">Phase 2: Verilog HDL & RTL Modeling</a></li>
-        <li class="toc-item"><a href="#phase3">Phase 3: ASIC Physical Design</a></li>
-        <li class="toc-item"><a href="#phase4">Phase 4: Static Timing Analysis & Verification</a></li>
+        <li class="toc-item"><a href="#phase1">Phase 1: Linux, Shell & Networking</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: CI/CD & Containers</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: Infrastructure Automation & K8s</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: Observability & SRE Principles</a></li>
         <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
         <li class="toc-item"><a href="#placement">Placement Tips</a></li>
       </ul>
@@ -83,8 +83,8 @@
       
       <div class="roadmap-header">
         <span class="badge">16 Weeks • 4 Phases</span>
-        <h1>VLSI Design Engineer</h1>
-        <p>Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.</p>
+        <h1>DevOps / Site Reliability Engineer</h1>
+        <p>Automate build pipelines, configure container deployments, write Infrastructure as Code, and manage system observability.</p>
       </div>
 
       <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
@@ -108,98 +108,98 @@
       <section id="phase1" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
+          Linux, Shell & Networking
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Linux operating system management, bash shell scripting, and core networking protocols.</p>
 
-        <!-- Week 1: Semiconductor Physics -->
+        <!-- Week 1: Linux Administration Core -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 1: Semiconductor Physics</h3>
+            <h3 class="week-title">Week 1: Linux Administration Core</h3>
             <span class="week-tag">Week $1</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <span class="topic-text">File system permissions, user groups management, cron scheduling</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <span class="topic-text">Process monitoring (top, ps), systemctl services, log files</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 2: CMOS Inverter VTC -->
+        <!-- Week 2: Bash Shell Scripting -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 2: CMOS Inverter VTC</h3>
+            <h3 class="week-title">Week 2: Bash Shell Scripting</h3>
             <span class="week-tag">Week $2</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <span class="topic-text">Variables, loops, conditionals, positional arguments parsing</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <span class="topic-text">Automating log rotations, backups, and API health pings</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 3: Combinational CMOS Circuits -->
+        <!-- Week 3: Core Networking Protocols -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 3: Combinational CMOS Circuits</h3>
+            <h3 class="week-title">Week 3: Core Networking Protocols</h3>
             <span class="week-tag">Week $3</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <span class="topic-text">TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <span class="topic-text">Network diagnostics: curl, netstat, lsof, dig command usage</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 4: Sequential CMOS Circuits -->
+        <!-- Week 4: Version Control (Git) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 4: Sequential CMOS Circuits</h3>
+            <h3 class="week-title">Week 4: Version Control (Git)</h3>
             <span class="week-tag">Week $4</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <span class="topic-text">Branching, rebasing, merge conflict resolution strategies</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-1-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <span class="topic-text">Git hooks, conventional commits, configurations</span>
               </label>
             </li>
           </ul>
@@ -210,98 +210,98 @@
       <section id="phase2" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
+          CI/CD & Containers
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Build automated pipelines, configure Docker containers, and set registries.</p>
 
-        <!-- Week 5: Verilog Fundamentals -->
+        <!-- Week 5: CI/CD with GitHub Actions -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 5: Verilog Fundamentals</h3>
+            <h3 class="week-title">Week 5: CI/CD with GitHub Actions</h3>
             <span class="week-tag">Week $5</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <span class="topic-text">Workflow syntax: triggers, runners, steps, variables, secrets</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <span class="topic-text">Automating unit tests, linting check blocks, build caches</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 6: Verilog Testbenches -->
+        <!-- Week 6: Docker Fundamentals -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 6: Verilog Testbenches</h3>
+            <h3 class="week-title">Week 6: Docker Fundamentals</h3>
             <span class="week-tag">Week $6</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <span class="topic-text">Writing Dockerfiles: multi-stage builds, cache optimizations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <span class="topic-text">Docker networking, volumes, bridge networks configurations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 7: RTL Design Patterns -->
+        <!-- Week 7: Container Orchestration (Compose) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 7: RTL Design Patterns</h3>
+            <h3 class="week-title">Week 7: Container Orchestration (Compose)</h3>
             <span class="week-tag">Week $7</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <span class="topic-text">Multi-container setups, network routing, environment files</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <span class="topic-text">Docker-compose commands, data volume persistence</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 8: Design for Testability (DFT) -->
+        <!-- Week 8: Artifact Registries & Packages -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 8: Design for Testability (DFT)</h3>
+            <h3 class="week-title">Week 8: Artifact Registries & Packages</h3>
             <span class="week-tag">Week $8</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <span class="topic-text">Publishing images to DockerHub, AWS ECR setups</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-2-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <span class="topic-text">Package managers, semantic versionings release flows</span>
               </label>
             </li>
           </ul>
@@ -312,98 +312,98 @@
       <section id="phase3" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
+          Infrastructure Automation & K8s
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write Ansible configurations, deploy with Terraform, and configure Kubernetes.</p>
 
-        <!-- Week 9: Logic Synthesis -->
+        <!-- Week 9: Configuration Automation (Ansible) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 9: Logic Synthesis</h3>
+            <h3 class="week-title">Week 9: Configuration Automation (Ansible)</h3>
             <span class="week-tag">Week $9</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <span class="topic-text">Playbooks, inventory files, variables, roles layouts</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <span class="topic-text">Automating server updates, user creations, config files</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 10: Floorplanning & Placement -->
+        <!-- Week 10: IaC with Terraform -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 10: Floorplanning & Placement</h3>
+            <h3 class="week-title">Week 10: IaC with Terraform</h3>
             <span class="week-tag">Week $10</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <span class="topic-text">Terraform providers, variables, local and remote state configs</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <span class="topic-text">Writing reusable modules, plan and apply execution blocks</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 11: Clock Tree Synthesis (CTS) -->
+        <!-- Week 11: Kubernetes Fundamentals -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 11: Clock Tree Synthesis (CTS)</h3>
+            <h3 class="week-title">Week 11: Kubernetes Fundamentals</h3>
             <span class="week-tag">Week $11</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <span class="topic-text">Pod, Node, Cluster architectures, Namespace segmentations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <span class="topic-text">Deployments, Services (ClusterIP, NodePort, LoadBalancer)</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 12: Routing & Design Rules -->
+        <!-- Week 12: Kubernetes Configs & Ingress -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 12: Routing & Design Rules</h3>
+            <h3 class="week-title">Week 12: Kubernetes Configs & Ingress</h3>
             <span class="week-tag">Week $12</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <span class="topic-text">ConfigMaps, Secrets, Ingress controllers routing rules</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-3-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <span class="topic-text">Persistent Volumes, PV claims, stateful applications basics</span>
               </label>
             </li>
           </ul>
@@ -414,98 +414,98 @@
       <section id="phase4" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
+          Observability & SRE Principles
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Prometheus monitoring, Grafana dashboards, log aggregations, and SLA/SLOs.</p>
 
-        <!-- Week 13: STA Concepts -->
+        <!-- Week 13: Observability with Prometheus -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 13: STA Concepts</h3>
+            <h3 class="week-title">Week 13: Observability with Prometheus</h3>
             <span class="week-tag">Week $13</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <span class="topic-text">Prometheus architecture, exporter setups, PromQL queries metrics</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <span class="topic-text">Writing alerting rules, alertmanager routing configurations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 14: Low-Power Design -->
+        <!-- Week 14: Grafana Visualizations -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 14: Low-Power Design</h3>
+            <h3 class="week-title">Week 14: Grafana Visualizations</h3>
             <span class="week-tag">Week $14</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <span class="topic-text">Importing dashboard templates, query definitions, custom panels</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <span class="topic-text">Configuring alerts to Slack/PagerDuty notification channels</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 15: Memory Architectures -->
+        <!-- Week 15: Log Aggregation (Loki/ELK) -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 15: Memory Architectures</h3>
+            <h3 class="week-title">Week 15: Log Aggregation (Loki/ELK)</h3>
             <span class="week-tag">Week $15</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <span class="topic-text">Grafana Loki agent configs, log query syntax</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <span class="topic-text">Logstash parsing rules, index lifecycle managements</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 16: Tape-out & Post-Silicon -->
+        <!-- Week 16: SRE Principles & SLI/SLO -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 16: Tape-out & Post-Silicon</h3>
+            <h3 class="week-title">Week 16: SRE Principles & SLI/SLO</h3>
             <span class="week-tag">Week $16</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <span class="topic-text">Defining Service Level Indicators (SLIs), Objectives (SLOs)</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
+                <input type="checkbox" id="sw-devops-4-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <span class="topic-text">Error budgets, incident post-mortems analysis, runbooks</span>
               </label>
             </li>
           </ul>
@@ -517,23 +517,23 @@
         <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
         <div class="placement-grid">
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 16-bit RISC Microprocessor RTL</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and synthesize a 16-bit RISC processor core in Verilog including a 5-stage pipeline, hazard detection, and register file.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. Production CI/CD Pipeline</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Deploy a node.js app to AWS EC2 using GitHub Actions, Docker multi-stage builds, and Ansible configuration playbooks.</p>
             <div class="project-tech">
-              <span class="tech-tag">Verilog HDL</span>
-              <span class="tech-tag">ModelSim</span>
-              <span class="tech-tag">RTL Synthesis</span>
-              <span class="tech-tag">RISC ISA</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Ansible</span>
+              <span class="tech-tag">AWS EC2</span>
             </div>
           </div>
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. CMOS Operational Amplifier Layout</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and layout a two-stage CMOS operational amplifier in a 180nm process, performing DRC, LVS, and parasitic RC extraction.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. Kubernetes Monitoring Stack</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Deploy a complete Prometheus and Grafana stack inside a K8s cluster using Helm, configuring alerting dashboards.</p>
             <div class="project-tech">
-              <span class="tech-tag">Cadence Virtuoso</span>
-              <span class="tech-tag">DRC/LVS Sign-off</span>
-              <span class="tech-tag">Analog Layout</span>
-              <span class="tech-tag">Parasitic Extraction</span>
+              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">Helm Charts</span>
+              <span class="tech-tag">Prometheus</span>
+              <span class="tech-tag">Grafana</span>
             </div>
           </div>
         </div>
@@ -552,12 +552,12 @@
               Resume Keywords
             </h3>
             <ul class="placement-card-list">
-              <li>VLSI Design & RTL Coding</li>
-              <li>Verilog HDL & SystemVerilog</li>
-              <li>Static Timing Analysis (STA)</li>
-              <li>ASIC/FPGA Design Flow</li>
-              <li>Physical Design (P&R) & CTS</li>
-              <li>DRC, LVS & Parasitic Extraction</li>
+              <li>CI/CD Pipeline Automation</li>
+              <li>Docker Containerization</li>
+              <li>Kubernetes Orchestration</li>
+              <li>Infrastructure as Code (Terraform)</li>
+              <li>System Observability (Prometheus)</li>
+              <li>SRE Error Budgeting</li>
             </ul>
           </div>
 
@@ -567,11 +567,11 @@
               Core Interview Focus
             </h3>
             <ul class="placement-card-list">
-              <li>Deriving setup and hold time equations with clock skew and jitter.</li>
-              <li>Drawing and explaining CMOS inverter voltage transfer characteristics (VTC).</li>
-              <li>Explaining clock domain crossing (CDC) and 2-stage synchronizer design.</li>
-              <li>Describing scan chain insertion and why Design for Testability (DFT) is needed.</li>
-              <li>Contrasting blocking and non-blocking assignments in Verilog with hardware equivalents.</li>
+              <li>Explaining the DevOps pipeline flow from code commit to deployment.</li>
+              <li>Describing the differences between virtualization (VMs) and containerization.</li>
+              <li>Writing a Dockerfile multi-stage build script optimized for speed.</li>
+              <li>Explaining Kubernetes pod networking and Service resolution.</li>
+              <li>Detailing SRE error budgets and how to calculate SLOs.</li>
             </ul>
           </div>
 
@@ -629,15 +629,15 @@
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Difficulty</span>
-            <span class="meta-info-val">Hard</span>
+            <span class="meta-info-val">Medium</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Target Role</span>
-            <span class="meta-info-val">VLSI Design Engineer</span>
+            <span class="meta-info-val">DevOps Engineer / SRE</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Prerequisites</span>
-            <span class="meta-info-val">Digital logic, semiconductor physics, and basic C</span>
+            <span class="meta-info-val">Linux commands, Git, and networking basics</span>
           </li>
         </ul>
       </div>

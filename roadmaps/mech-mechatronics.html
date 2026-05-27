@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerPath India - VLSI Design Engineer Career Roadmap</title>
-  <meta name="description" content="Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.">
+  <title>CareerPath India - Mechatronics Engineer Career Roadmap</title>
+  <meta name="description" content="Integrate mechanical actuators with microcontrollers, write feedback control algorithms, configure analog sensors, and program PLC systems.">
   <link rel="stylesheet" href="../styles.css">
 </head>
-<body class="domain-ece">
+<body class="domain-mechanical">
 
   <!-- Top Navigation Bar -->
   <header>
@@ -63,16 +63,16 @@
   </div>
 
   <!-- Main Grid Container -->
-  <div class="container roadmap-container" data-roadmap-id="ece-vlsi">
+  <div class="container roadmap-container" data-roadmap-id="mech-mechatronics">
     
     <!-- Left Sidebar: Table of Contents -->
     <aside class="toc-sidebar">
       <div class="toc-title">ON THIS ROADMAP</div>
       <ul class="toc-list">
-        <li class="toc-item"><a href="#phase1">Phase 1: Semiconductor & CMOS Physics</a></li>
-        <li class="toc-item"><a href="#phase2">Phase 2: Verilog HDL & RTL Modeling</a></li>
-        <li class="toc-item"><a href="#phase3">Phase 3: ASIC Physical Design</a></li>
-        <li class="toc-item"><a href="#phase4">Phase 4: Static Timing Analysis & Verification</a></li>
+        <li class="toc-item"><a href="#phase1">Phase 1: Sensors & Signal Conditioning</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: Electro-Mechanical Actuators</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: Control Systems & Tuning</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: PLC, SCADA & Industrial Bus</a></li>
         <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
         <li class="toc-item"><a href="#placement">Placement Tips</a></li>
       </ul>
@@ -83,8 +83,8 @@
       
       <div class="roadmap-header">
         <span class="badge">16 Weeks • 4 Phases</span>
-        <h1>VLSI Design Engineer</h1>
-        <p>Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.</p>
+        <h1>Mechatronics Engineer</h1>
+        <p>Integrate mechanical actuators with microcontrollers, write feedback control algorithms, configure analog sensors, and program PLC systems.</p>
       </div>
 
       <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
@@ -108,98 +108,98 @@
       <section id="phase1" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
+          Sensors & Signal Conditioning
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Interlock analog/digital sensors, configure operational amplifiers, and read data.</p>
 
-        <!-- Week 1: Semiconductor Physics -->
+        <!-- Week 1: Sensors & Transducers -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 1: Semiconductor Physics</h3>
+            <h3 class="week-title">Week 1: Sensors & Transducers</h3>
             <span class="week-tag">Week $1</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <span class="topic-text">Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <span class="topic-text">Sensor parameters: sensitivity, linearity, hysteresis, range</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 2: CMOS Inverter VTC -->
+        <!-- Week 2: Signal Conditioning Circuits -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 2: CMOS Inverter VTC</h3>
+            <h3 class="week-title">Week 2: Signal Conditioning Circuits</h3>
             <span class="week-tag">Week $2</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <span class="topic-text">Operational amplifier circuits: differential, summing, active filters</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <span class="topic-text">Wheatstone bridge circuits, noise rejection configurations</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 3: Combinational CMOS Circuits -->
+        <!-- Week 3: ADCs & Quantization -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 3: Combinational CMOS Circuits</h3>
+            <h3 class="week-title">Week 3: ADCs & Quantization</h3>
             <span class="week-tag">Week $3</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <span class="topic-text">Analog-to-digital converters: successive approximation, sampling</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <span class="topic-text">Quantization error, filter decimation basics</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 4: Sequential CMOS Circuits -->
+        <!-- Week 4: Microcontroller IOs -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 4: Sequential CMOS Circuits</h3>
+            <h3 class="week-title">Week 4: Microcontroller IOs</h3>
             <span class="week-tag">Week $4</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <span class="topic-text">Configuring GPIOs, ADC registers, timer interrupts on ESP32</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-1-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <span class="topic-text">Interfacing switches, debounce filters, LED displays</span>
               </label>
             </li>
           </ul>
@@ -210,98 +210,98 @@
       <section id="phase2" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
+          Electro-Mechanical Actuators
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Drive DC motors, step motors, configure solenoids, and size gears.</p>
 
-        <!-- Week 5: Verilog Fundamentals -->
+        <!-- Week 5: DC Motor Drives -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 5: Verilog Fundamentals</h3>
+            <h3 class="week-title">Week 5: DC Motor Drives</h3>
             <span class="week-tag">Week $5</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <span class="topic-text">H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <span class="topic-text">Back-EMF dynamics, speed-torque motor curves</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 6: Verilog Testbenches -->
+        <!-- Week 6: Stepper & Servo Motors -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 6: Verilog Testbenches</h3>
+            <h3 class="week-title">Week 6: Stepper & Servo Motors</h3>
             <span class="week-tag">Week $6</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <span class="topic-text">Stepper motor drivers (A4988), microstepping profiles</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <span class="topic-text">RC servos PWM control interface, duty cycles</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 7: RTL Design Patterns -->
+        <!-- Week 7: Solenoid & Relay Drivers -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 7: RTL Design Patterns</h3>
+            <h3 class="week-title">Week 7: Solenoid & Relay Drivers</h3>
             <span class="week-tag">Week $7</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <span class="topic-text">Solenoid valve drivers: flyback diodes, optoisolations</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <span class="topic-text">Relay contacts configurations, snubber circuit protections</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 8: Design for Testability (DFT) -->
+        <!-- Week 8: Mechanical Transmission -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 8: Design for Testability (DFT)</h3>
+            <h3 class="week-title">Week 8: Mechanical Transmission</h3>
             <span class="week-tag">Week $8</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <span class="topic-text">Gears, timing belts, lead screws, ball screws parameters</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-2-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <span class="topic-text">Backlash mitigation techniques, torque transformations</span>
               </label>
             </li>
           </ul>
@@ -312,98 +312,98 @@
       <section id="phase3" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
+          Control Systems & Tuning
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Model dynamic physical systems, compile PID loops, and write state machines.</p>
 
-        <!-- Week 9: Logic Synthesis -->
+        <!-- Week 9: System Dynamic Models -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 9: Logic Synthesis</h3>
+            <h3 class="week-title">Week 9: System Dynamic Models</h3>
             <span class="week-tag">Week $9</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <span class="topic-text">Mass-spring-damper systems, rotary inertia transfer functions</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <span class="topic-text">Block diagram reduction, feedback loop architectures</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 10: Floorplanning & Placement -->
+        <!-- Week 10: PID Control Tuning -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 10: Floorplanning & Placement</h3>
+            <h3 class="week-title">Week 10: PID Control Tuning</h3>
             <span class="week-tag">Week $10</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <span class="topic-text">Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd)</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <span class="topic-text">Anti-windup strategies, derivative noise filters</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 11: Clock Tree Synthesis (CTS) -->
+        <!-- Week 11: State Machine Programming -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 11: Clock Tree Synthesis (CTS)</h3>
+            <h3 class="week-title">Week 11: State Machine Programming</h3>
             <span class="week-tag">Week $11</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <span class="topic-text">Finite State Machines (FSMs) design, state transition diagrams</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <span class="topic-text">Writing clean non-blocking state loops in C</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 12: Routing & Design Rules -->
+        <!-- Week 12: Encoders & Position Feedback -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 12: Routing & Design Rules</h3>
+            <h3 class="week-title">Week 12: Encoders & Position Feedback</h3>
             <span class="week-tag">Week $12</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <span class="topic-text">Quadrature optical encoders, decoding quadrature ticks</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-3-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <span class="topic-text">Speed and position estimation from encoder feedback</span>
               </label>
             </li>
           </ul>
@@ -414,98 +414,98 @@
       <section id="phase4" class="phase-section">
         <h2 class="phase-heading">
           <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
+          PLC, SCADA & Industrial Bus
         </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program PLC panels, configure Modbus networks, and check safety limits.</p>
 
-        <!-- Week 13: STA Concepts -->
+        <!-- Week 13: PLC & Ladder Logic -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 13: STA Concepts</h3>
+            <h3 class="week-title">Week 13: PLC & Ladder Logic</h3>
             <span class="week-tag">Week $13</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-1-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <span class="topic-text">PLC I/O wiring, basic ladder logic contacts, timers</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-1-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <span class="topic-text">DOL and Star-Delta starters PLC execution</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 14: Low-Power Design -->
+        <!-- Week 14: Industrial Communications -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 14: Low-Power Design</h3>
+            <h3 class="week-title">Week 14: Industrial Communications</h3>
             <span class="week-tag">Week $14</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-2-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <span class="topic-text">Modbus RTU/TCP protocols, serial RS485 communication line</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-2-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <span class="topic-text">CAN bus controller setups, automotive message protocols</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 15: Memory Architectures -->
+        <!-- Week 15: Safety & Enclosures -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 15: Memory Architectures</h3>
+            <h3 class="week-title">Week 15: Safety & Enclosures</h3>
             <span class="week-tag">Week $15</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-3-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <span class="topic-text">Safety relay interlocks, emergency stop category loops</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-3-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <span class="topic-text">Electrical panel layout, shielding against EMI noise</span>
               </label>
             </li>
           </ul>
         </div>
-        <!-- Week 16: Tape-out & Post-Silicon -->
+        <!-- Week 16: System Diagnostics -->
         <div class="week-card">
           <div class="week-header">
-            <h3 class="week-title">Week 16: Tape-out & Post-Silicon</h3>
+            <h3 class="week-title">Week 16: System Diagnostics</h3>
             <span class="week-tag">Week $16</span>
           </div>
           <ul class="topics-list">
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-4-1" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <span class="topic-text">Troubleshooting wiring, testing current loops (4-20mA)</span>
               </label>
             </li>
             <li class="topic-item">
               <label class="topic-checkbox-wrapper">
-                <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
+                <input type="checkbox" id="mech-mechatronics-4-4-2" class="topic-checkbox">
                 <span class="checkmark"></span>
-                <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <span class="topic-text">Commissioning checklists, electrical drawings verification</span>
               </label>
             </li>
           </ul>
@@ -517,23 +517,23 @@
         <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
         <div class="placement-grid">
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. 16-bit RISC Microprocessor RTL</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design, simulate, and synthesize a 16-bit RISC processor core in Verilog including a 5-stage pipeline, hazard detection, and register file.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. Automated Sorting Conveyor</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and program a conveyor system using ESP32 that reads color sensor values, driving a servo to eject defective blocks.</p>
             <div class="project-tech">
-              <span class="tech-tag">Verilog HDL</span>
-              <span class="tech-tag">ModelSim</span>
-              <span class="tech-tag">RTL Synthesis</span>
-              <span class="tech-tag">RISC ISA</span>
+              <span class="tech-tag">ESP32 / C</span>
+              <span class="tech-tag">Sensor Interfacing</span>
+              <span class="tech-tag">Servo Motors</span>
+              <span class="tech-tag">FSM Programming</span>
             </div>
           </div>
           <div class="placement-card">
-            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. CMOS Operational Amplifier Layout</h3>
-            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design and layout a two-stage CMOS operational amplifier in a 180nm process, performing DRC, LVS, and parasitic RC extraction.</p>
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. Ball-and-Beam Balance System</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Build a ball-and-beam balancing rig using a distance sensor and servo actuator, tuning PID loops to balance the ball.</p>
             <div class="project-tech">
-              <span class="tech-tag">Cadence Virtuoso</span>
-              <span class="tech-tag">DRC/LVS Sign-off</span>
-              <span class="tech-tag">Analog Layout</span>
-              <span class="tech-tag">Parasitic Extraction</span>
+              <span class="tech-tag">PID Controller</span>
+              <span class="tech-tag">Distance Sensors</span>
+              <span class="tech-tag">C / Arduino</span>
+              <span class="tech-tag">Feedback Loop</span>
             </div>
           </div>
         </div>
@@ -552,12 +552,12 @@
               Resume Keywords
             </h3>
             <ul class="placement-card-list">
-              <li>VLSI Design & RTL Coding</li>
-              <li>Verilog HDL & SystemVerilog</li>
-              <li>Static Timing Analysis (STA)</li>
-              <li>ASIC/FPGA Design Flow</li>
-              <li>Physical Design (P&R) & CTS</li>
-              <li>DRC, LVS & Parasitic Extraction</li>
+              <li>Electro-Mechanical Systems</li>
+              <li>Sensor Signal Conditioning</li>
+              <li>Motor Drive Electronics</li>
+              <li>PID Control Implementation</li>
+              <li>Finite State Machines (C)</li>
+              <li>AutoCAD Electrical Panel Designs</li>
             </ul>
           </div>
 
@@ -567,11 +567,11 @@
               Core Interview Focus
             </h3>
             <ul class="placement-card-list">
-              <li>Deriving setup and hold time equations with clock skew and jitter.</li>
-              <li>Drawing and explaining CMOS inverter voltage transfer characteristics (VTC).</li>
-              <li>Explaining clock domain crossing (CDC) and 2-stage synchronizer design.</li>
-              <li>Describing scan chain insertion and why Design for Testability (DFT) is needed.</li>
-              <li>Contrasting blocking and non-blocking assignments in Verilog with hardware equivalents.</li>
+              <li>Designing an operational amplifier circuit to scale a 0-100mV sensor to 0-5V.</li>
+              <li>Explaining the purpose of a flyback diode in inductive load driver circuits.</li>
+              <li>Writing C code to decode quadrature signals from an encoder.</li>
+              <li>Tuning PID loops to minimize response time while avoiding overshoot.</li>
+              <li>Describing the difference between open-loop and closed-loop systems.</li>
             </ul>
           </div>
 
@@ -629,15 +629,15 @@
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Difficulty</span>
-            <span class="meta-info-val">Hard</span>
+            <span class="meta-info-val">Medium</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Target Role</span>
-            <span class="meta-info-val">VLSI Design Engineer</span>
+            <span class="meta-info-val">Mechatronics Systems Engineer</span>
           </li>
           <li class="meta-info-item">
             <span class="meta-info-label">Prerequisites</span>
-            <span class="meta-info-val">Digital logic, semiconductor physics, and basic C</span>
+            <span class="meta-info-val">Basic C programming, basic Circuit theory, and Mechanics</span>
           </li>
         </ul>
       </div>

@@ -244,7 +244,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
         },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
-          max_tokens": 4000,
+          max_tokens: 4000,
           messages: [
             {
               "role": "user",
@@ -255,7 +255,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
       });
 
       if (!response.ok) {
-        throw new Error(\`API returned status \${response.status}\`);
+        throw new Error(`API returned status ${response.status}`);
       }
 
       updateGenStep(1, 'done');
@@ -265,7 +265,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
       let text = result.content[0].text.trim();
       
       if (text.startsWith("```")) {
-        text = text.replace(/^```json\\s*/, "").replace(/^```\\s*/, "").replace(/\\s*```$/, "");
+        text = text.replace(/^```json\s*/, "").replace(/^```\s*/, "").replace(/\s*```$/, "");
       }
 
       updateGenStep(2, 'done');
@@ -301,13 +301,13 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
         }
       }
 
-      localStorage.setItem(\`custom-roadmap-\${roadmapData.id}\`, JSON.stringify(roadmapData));
+      localStorage.setItem(`custom-roadmap-${roadmapData.id}`, JSON.stringify(roadmapData));
 
       updateGenStep(5, 'done');
       await new Promise(r => setTimeout(r, 500));
 
       const isInRoadmapsSubdir = window.location.pathname.includes('/roadmaps/');
-      const redirectUrl = isInRoadmapsSubdir ? \`viewer.html?id=\${roadmapData.id}\` : \`roadmaps/viewer.html?id=\${roadmapData.id}\`;
+      const redirectUrl = isInRoadmapsSubdir ? `viewer.html?id=${roadmapData.id}` : `roadmaps/viewer.html?id=${roadmapData.id}`;
       window.location.href = redirectUrl;
 
     } catch (err) {
@@ -475,60 +475,488 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     });
   }
 
-  // --- Homepage Card Filter Search ---
+  // --- Global Homepage Search Filter Logic ---
   const searchInput = document.getElementById('roadmap-search');
   if (searchInput) {
-    const subcats = document.querySelectorAll('.subcategory-wrapper');
-    const sections = document.querySelectorAll('.roadmap-category-section');
+    // 40 Careers Search Database
+    const CAREERS_INDEX = [
+  {
+    "id": "sw-ai-ml",
+    "title": "AI / Machine Learning Engineer",
+    "emoji": "\ud83e\udde0",
+    "desc": "Develop and deploy machine learning models, neural networks, and AI pipelines to solve complex real-world problems.",
+    "domain": "software",
+    "keywords": "AI Machine Learning Neural Networks Deep Learning PyTorch TensorFlow MLOps Regression Classification",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-cybersecurity",
+    "title": "Cybersecurity Engineer",
+    "emoji": "\ud83d\udd12",
+    "desc": "Protect software systems, networks, and data by designing secure architectures, analyzing threats, and performing pen testing.",
+    "domain": "software",
+    "keywords": "Cybersecurity Penetration Testing Network Security Cryptography Wireshark Metasploit OWASP Splunk Incident Response",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-cloud-architect",
+    "title": "Cloud Architect",
+    "emoji": "\u2601\ufe0f",
+    "desc": "Design and manage scalable, reliable, and secure cloud infrastructure on public clouds (AWS, GCP, Azure) using modern architectural patterns.",
+    "domain": "software",
+    "keywords": "Cloud Computing AWS Terraform Kubernetes Docker IAM DevOps CI/CD Microservices High Availability Serverless",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-data-scientist",
+    "title": "Data Scientist / Data Engineer",
+    "emoji": "\ud83d\udcca",
+    "desc": "Analyze large scale data, build statistics pipelines, configure ETL workflows, and prepare enterprise datasets for ML models.",
+    "domain": "software",
+    "keywords": "Data Engineering Data Science SQL Pandas Spark ETL Airflow Hadoop Data Warehousing Big Data Data Pipelines",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-ai-security",
+    "title": "AI Security Specialist",
+    "emoji": "\ud83d\udee1\ufe0f",
+    "desc": "Secure AI/ML systems against adversarial attacks, data poisoning, prompt injection, and intellectual property theft.",
+    "domain": "software",
+    "keywords": "AI Security Adversarial Attacks Prompt Injection Data Poisoning Model Evasion Security Auditing LLM Vulnerabilities",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-devops",
+    "title": "DevOps / Site Reliability Engineer",
+    "emoji": "\u2699\ufe0f",
+    "desc": "Automate build pipelines, configure container deployments, write Infrastructure as Code, and manage system observability.",
+    "domain": "software",
+    "keywords": "DevOps SRE CI/CD Jenkins GitHub Actions Docker Kubernetes Linux Terraform Ansible Prometheus Grafana Ansible",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-quantum",
+    "title": "Quantum Computing Specialist",
+    "emoji": "\u269b\ufe0f",
+    "desc": "Develop quantum algorithms, program quantum circuits using Qiskit, and simulate quantum architectures on modern computing grids.",
+    "domain": "software",
+    "keywords": "Quantum Computing Qiskit Quantum Circuits Qubits Quantum Algorithms Deutsch-Jozsa Grover Shor Simulation Quantum Physics",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-blockchain",
+    "title": "Blockchain Developer",
+    "emoji": "\ud83d\udd17",
+    "desc": "Design smart contracts, build decentralized applications (DApps), and audit blockchain networks using Solidity and Web3 libraries.",
+    "domain": "software",
+    "keywords": "Blockchain Ethereum Solidity Smart Contracts Web3.js Hardhat DApp ERC-20 ERC-721 Truffle IPFS",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-datacenter",
+    "title": "Data Center Technician",
+    "emoji": "\ud83c\udfd7\ufe0f",
+    "desc": "Manage physical servers, networking gear, cooling infrastructures, power distribution, and virtualization grids inside enterprise data centers.",
+    "domain": "software",
+    "keywords": "Data Center Server Hardware Linux OS KVM Hypervisors Cabling UPS PDU Fiber Optics cooling HVAC monitoring",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "sw-enterprise-architect",
+    "title": "Digital Transformation / Enterprise Architect",
+    "emoji": "\ud83c\udf10",
+    "desc": "Align business goals with modern IT strategies. Design microservices, secure legacy migrations, and drive cloud transformation journeys.",
+    "domain": "software",
+    "keywords": "Enterprise Architecture TOGAF Microservices Domain Driven Design Cloud Migration Legacy Systems Security Governance SOA",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-vlsi",
+    "title": "VLSI Design Engineer",
+    "emoji": "\ud83e\udde9",
+    "desc": "Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.",
+    "domain": "ece",
+    "keywords": "VLSI CMOS Verilog FPGA ASIC Synthesis Layout Floorplanning DRC LVS STA Setup Hold timing",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-embedded",
+    "title": "Embedded Systems Engineer",
+    "emoji": "\ud83d\udcdf",
+    "desc": "Develop hardware-firmware codes, configure RTOS kernel tasks, write driver modules, and design ARM/ESP32 firmware.",
+    "domain": "ece",
+    "keywords": "Embedded C ARM Cortex RTOS FreeRTOS I2C SPI UART Firmware DMA JTAG Logic Analyzer",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-ai-hardware",
+    "title": "AI Hardware Engineer",
+    "emoji": "\ud83e\udde0",
+    "desc": "Design neuromorphic circuits, design tensor processing units (TPUs), and optimize hardware accelerators for deep neural network execution.",
+    "domain": "ece",
+    "keywords": "AI Hardware Tensor Processing Unit TPU Accelerator Systolic Array Neuromorphic Quantization MAC Memory Compiler",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-iot",
+    "title": "IoT Engineer",
+    "emoji": "\ud83d\udce1",
+    "desc": "Design smart connected devices, deploy sensor networks, write MQTT cloud integrations, and configure low-power wireless modules.",
+    "domain": "ece",
+    "keywords": "IoT Sensors ESP32 RaspberryPi MQTT HTTP BLE Zigbee LoRa gateway cloud dashboard integration",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-robotics",
+    "title": "Robotics & Automation Engineer",
+    "emoji": "\ud83e\udd16",
+    "desc": "Design robotic kinematics, implement feedback control loops, write ROS nodes, and integrate vision sensors for autonomous navigation.",
+    "domain": "ece",
+    "keywords": "Robotics Kinematics ROS C++ PID Control LiDAR OpenCV Path Planning SLAM Odometry Simulation",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-communication",
+    "title": "5G / 6G Communication Engineer",
+    "emoji": "\ud83d\udcf6",
+    "desc": "Design baseband modems, compile wireless channel models, configure OFDM grids, and design beamforming RF systems.",
+    "domain": "ece",
+    "keywords": "5G 6G Wireless Communication OFDM MIMO Beamforming baseband processing channel modeling SDR RF Link Budget",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-rf",
+    "title": "RF Engineer",
+    "emoji": "\ud83d\udce1",
+    "desc": "Design RF amplifiers, analyze transmission line impedances, design impedance matches on Smith Charts, and perform RF audits.",
+    "domain": "ece",
+    "keywords": "RF engineering transmission lines impedance matching Smith Chart LNA Mixer filter S-parameters spectrum analyzer",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-ev-electronics",
+    "title": "EV Electronics Engineer",
+    "emoji": "\u26a1",
+    "desc": "Design Battery Management Systems (BMS), motor control circuits, inverter boards, and CAN bus vehicle telemetry networks.",
+    "domain": "ece",
+    "keywords": "Electric Vehicle BMS CAN bus Motor Control Inverters Microcontrollers Altium automotive design thermal management",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-dsp",
+    "title": "DSP Engineer",
+    "emoji": "\ud83d\udcca",
+    "desc": "Study continuous and discrete signals, Z-transforms, convolution, FFT algorithms, and FIR/IIR filter designs.",
+    "domain": "ece",
+    "keywords": "DSP digital signal processing convolution FFT DFT FIR IIR filter design z-transform MATLAB sampling multirate adaptive filtering",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "ece-verification",
+    "title": "Semiconductor Verification Engineer",
+    "emoji": "\ud83d\udd2c",
+    "desc": "Write SystemVerilog verification code, build UVM verification environments, configure functional coverage, and run assertions.",
+    "domain": "ece",
+    "keywords": "SystemVerilog UVM verification ASIC simulation OOP OOP interfaces functional coverage assertions debugging",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-power-systems",
+    "title": "Power Systems Engineer",
+    "emoji": "\ud83d\udd78\ufe0f",
+    "desc": "Master transmission lines, load flows (Newton-Raphson), symmetrical/unsymmetrical faults, and protection relay operations.",
+    "domain": "eee",
+    "keywords": "power systems EEE transmission lines load flow faults stability relay circuit breakers smart grid HVDC",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-power-electronics",
+    "title": "Power Electronics Engineer",
+    "emoji": "\ud83c\udf9b\ufe0f",
+    "desc": "Learn about power devices (SCR, IGBT), converters, buck/boost choppers, inverters, and PWM switching systems.",
+    "domain": "eee",
+    "keywords": "power electronics EEE SCR IGBT buck boost converter choppers inverters cycloconverters PWM MATLAB",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-ev",
+    "title": "Electric Vehicle (EV) Engineer",
+    "emoji": "\ud83d\ude97",
+    "desc": "Design electric powertrains, optimize high-voltage traction batteries, configure regenerative braking, and program industrial motor drives.",
+    "domain": "eee",
+    "keywords": "EV Powertrain Traction Battery PMSM Motor Drives Regenerative Braking BMS High Voltage Safety EEE",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-renewable",
+    "title": "Renewable Energy Engineer",
+    "emoji": "\u2600\ufe0f",
+    "desc": "Design solar PV systems, wind turbine generators, microgrid storage arrays, and configure grid-tied power inverters.",
+    "domain": "eee",
+    "keywords": "Renewable Energy Solar PV Wind Turbines Microgrids Grid Integration MPPT Battery Storage EEE",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-plc-scada",
+    "title": "PLC & SCADA Automation Engineer",
+    "emoji": "\ud83e\udd16",
+    "desc": "Program industrial PLCs in Ladder logic, design SCADA dashboards, configure fieldbuses, and design plant automation loops.",
+    "domain": "eee",
+    "keywords": "PLC SCADA Ladder Logic HMI industrial automation Modbus Profibus sensor interfacing motor starter",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-smart-grid",
+    "title": "Smart Grid Engineer",
+    "emoji": "\u26a1",
+    "desc": "Design intelligent power distribution systems, configure smart meters, integrate grid storage, and manage SCADA network security.",
+    "domain": "eee",
+    "keywords": "Smart Grid Power Systems Smart Meters SCADA Microgrids Cybersecurity Distributed Generation EEE",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-semi-manufacturing",
+    "title": "Semiconductor Manufacturing Engineer",
+    "emoji": "\ud83c\udfed",
+    "desc": "Manage cleanroom systems, photolithography pipelines, silicon wafer oxidation, plasma etching, and chip packaging facilities.",
+    "domain": "eee",
+    "keywords": "Semiconductor Manufacturing Wafer Fabrication Photolithography Etching Cleanroom Metrology CMP EEE Packaging",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-electrical-design",
+    "title": "Electrical Design Engineer",
+    "emoji": "\ud83d\udcd0",
+    "desc": "Design electrical switchgear layouts, draw control panel schematics in AutoCAD Electrical, size cables, and configure building electrical codes.",
+    "domain": "eee",
+    "keywords": "Electrical Design AutoCAD Electrical schematics cable sizing switchgear panel design codes standards grounding EEE",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-control-systems",
+    "title": "Control Systems Engineer",
+    "emoji": "\ud83d\udcc8",
+    "desc": "Master transfer functions, block reduction, time response, and stability analysis (Root Locus, Bode, Nyquist plots).",
+    "domain": "eee",
+    "keywords": "control systems EEE PID transfer function root locus bode plot stability nyquist state space compensators",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "eee-embedded-iot",
+    "title": "Embedded & Industrial IoT Engineer",
+    "emoji": "\ud83d\udd0c",
+    "desc": "Design smart sensor networks, connect PLC fieldbuses to cloud gateways, write Modbus/MQTT brokers, and compile low-power firmware.",
+    "domain": "eee",
+    "keywords": "IIoT industrial IoT Modbus MQTT gateway Node-RED PLC connection smart sensor dashboard EEE",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-design",
+    "title": "Design Engineer",
+    "emoji": "\ud83d\udcd0",
+    "desc": "Master engineering mechanics, strength of materials, thermodynamics, fluid dynamics, manufacturing processes, and computer-aided design (CAD/CAE).",
+    "domain": "mechanical",
+    "keywords": "solidworks cad mechanical engineering structural stress mechanics material fluid thermodynamics combustion machining ansys design",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-automotive",
+    "title": "Automotive Engineer",
+    "emoji": "\ud83d\ude97",
+    "desc": "Study internal combustion engines, chassis, transmission gearboxes, brakes, suspension systems, and EV battery drives.",
+    "domain": "mechanical",
+    "keywords": "automobile engineering EEE mechanical engines chassis transmission gearbox differential steering brakes suspension EV battery",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-robotics",
+    "title": "Robotics Engineer",
+    "emoji": "\ud83e\udd16",
+    "desc": "Design physical robot manipulators, model link joints, calculate kinematics, and configure hydraulic/pneumatic actuators.",
+    "domain": "mechanical",
+    "keywords": "robotics mechanical kinematics inverse kinematics servos actuators linkages arm design dynamics",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-manufacturing",
+    "title": "Manufacturing Engineer",
+    "emoji": "\ud83c\udfed",
+    "desc": "Study casting riser design, welding processes, metal cutting Merchant circles, Taylor tool life, and CNC machining.",
+    "domain": "mechanical",
+    "keywords": "manufacturing science EEE mechanical casting gating system welding heat affected zone metal cutting merchant circle tool life forming",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-aerospace",
+    "title": "Aerospace Engineer",
+    "emoji": "\u2708\ufe0f",
+    "desc": "Design aerodynamics wing structures, analyze jet engine cycles, model rocket propulsion systems, and compute flight mechanics trajectories.",
+    "domain": "mechanical",
+    "keywords": "aerospace engineering aerodynamics compressible flow gas turbines rocket propulsion structural analysis orbit mechanics",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-mechatronics",
+    "title": "Mechatronics Engineer",
+    "emoji": "\u2699\ufe0f",
+    "desc": "Integrate mechanical actuators with microcontrollers, write feedback control algorithms, configure analog sensors, and program PLC systems.",
+    "domain": "mechanical",
+    "keywords": "mechatronics actuators sensors Arduino C control loops signal conditioning encoders",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-thermal",
+    "title": "Thermal Engineer",
+    "emoji": "\ud83d\udd25",
+    "desc": "Master first/second laws of thermodynamics, Rankine steam cycles, conduction/convection heat transfer, and gas turbines.",
+    "domain": "mechanical",
+    "keywords": "thermal engineering thermodynamics Rankine cycle steam power Brayton heat transfer conduction convection radiation refrigeration psychrometrics EEE mechanical",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-industrial-automation",
+    "title": "Industrial Automation Engineer",
+    "emoji": "\ud83e\udd16",
+    "desc": "Program manufacturing assembly lines, configure industrial robots (SCARA, Delta), compile PLC ladder logic, and monitor sensors.",
+    "domain": "mechanical",
+    "keywords": "industrial automation PLC SCADA pneumatic sensors SCARA delta robotics motor starter panels",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-quality-control",
+    "title": "Quality Control Engineer",
+    "emoji": "\ud83d\udd0d",
+    "desc": "Establish quality management frameworks, compile SPC control charts, audit dimensional tolerances, and run Non-Destructive Testing (NDT) audits.",
+    "domain": "mechanical",
+    "keywords": "quality control metrology NDT non destructive testing SPC statistical process control ISO 9001 GD&T tolerances",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "mech-renewable",
+    "title": "Renewable Energy Engineer",
+    "emoji": "\u2600\ufe0f",
+    "desc": "Design wind turbine aerodynamic blades, model solar thermal power collectors, configure geothermal loops, and run CFD fluid simulations.",
+    "domain": "mechanical",
+    "keywords": "renewable energy solar thermal wind aerodynamics geothermal biomass CFD simulation mechanical",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  }
+];
+
+    const categoriesContainer = document.getElementById('homepage-categories');
+    const searchResultsSection = document.getElementById('search-results-section');
+    const searchResultsGrid = document.getElementById('search-results-grid');
+    const searchResultsTitle = document.getElementById('search-results-title');
+
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase().trim();
-      let totalVisibleCount = 0;
       
-      subcats.forEach(subcat => {
-        const cards = subcat.querySelectorAll('.card');
-        let visibleCount = 0;
-        cards.forEach(card => {
-          const title = card.querySelector('.card-title').textContent.toLowerCase();
-          const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-          const duration = card.querySelector('.card-duration').textContent.toLowerCase();
-          const keywords = card.getAttribute('data-keywords') || '';
-          
-          if (
-            title.includes(query) || 
-            desc.includes(query) || 
-            duration.includes(query) ||
-            keywords.toLowerCase().includes(query)
-          ) {
-            card.style.display = 'flex';
-            visibleCount++;
-            totalVisibleCount++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
+      if (query.length === 0) {
+        categoriesContainer.style.display = 'grid';
+        searchResultsSection.style.display = 'none';
+        searchResultsGrid.innerHTML = '';
         
-        // Hide subcategory wrapper if no cards match
-        if (visibleCount > 0) {
-          subcat.style.display = 'block';
-        } else {
-          subcat.style.display = 'none';
+        let fallback = document.getElementById('search-fallback');
+        if (fallback) {
+          fallback.style.display = 'none';
         }
+        return;
+      }
+
+      // Hide category cards and show search results
+      categoriesContainer.style.display = 'none';
+      searchResultsSection.style.display = 'block';
+
+      // Filter careers
+      const matches = CAREERS_INDEX.filter(c => {
+        return c.title.toLowerCase().includes(query) || 
+               c.desc.toLowerCase().includes(query) || 
+               c.keywords.toLowerCase().includes(query) ||
+               c.domain.toLowerCase().includes(query);
       });
 
-      // Hide parent category sections if no subcategories are visible
-      sections.forEach(sec => {
-        const visibleSubcats = Array.from(sec.querySelectorAll('.subcategory-wrapper'))
-          .filter(sub => sub.style.display !== 'none');
-        if (visibleSubcats.length > 0) {
-          sec.style.display = 'block';
-        } else {
-          sec.style.display = 'none';
+      searchResultsTitle.textContent = `Search Results (${matches.length})`;
+
+      // Render cards
+      searchResultsGrid.innerHTML = '';
+      matches.forEach(c => {
+        let domainColor = "#3182ce";
+        let domainLabel = "Software";
+        if (c.domain === "ece") {
+          domainColor = "#9f7aea";
+          domainLabel = "ECE";
+        } else if (c.domain === "eee") {
+          domainColor = "#dd6b20";
+          domainLabel = "EEE";
+        } else if (c.domain === "mechanical") {
+          domainColor = "#4a5568";
+          domainLabel = "Mechanical";
         }
+
+        const cardHtml = `
+          <a href="roadmaps/${c.id}.html" class="card solid-card" style="--domain-color: ${domainColor};">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; margin-bottom: 1rem;">
+              <div class="card-icon" style="font-size: 1.5rem; width: auto; height: auto; border: none; background: none; padding: 0;">
+                ${c.emoji}
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <span class="badge" style="background-color: var(--accent-light); color: var(--accent); border: 1px solid var(--accent-light-border); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">${domainLabel}</span>
+                <span class="badge" style="background-color: var(--accent-light); color: var(--accent); border: 1px solid var(--accent-light-border); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 0.5rem; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; display: inline-block;">Top 10</span>
+              </div>
+            </div>
+            <h2 class="card-title">${c.title}</h2>
+            <p class="card-desc">${c.desc}</p>
+            <div class="card-meta">
+              <span class="card-duration">${c.duration} • ${c.phases}</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+        `;
+        searchResultsGrid.insertAdjacentHTML('beforeend', cardHtml);
       });
 
       // Show/hide search fallback card
       let fallback = document.getElementById('search-fallback');
-      if (totalVisibleCount === 0 && query.length > 0) {
+      if (matches.length === 0) {
         if (!fallback) {
           fallback = document.createElement('div');
           fallback.id = 'search-fallback';
