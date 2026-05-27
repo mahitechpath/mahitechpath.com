@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerPath India - Dynamic AI Roadmap Viewer</title>
+  <meta name="description" content="CareerPath India - View and track custom AI-generated career roadmaps.">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Viewer specific styles */
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      border-left-color: var(--accent);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1.5rem;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .viewer-error-card {
+      background-color: rgba(229, 62, 62, 0.1);
+      border: 1px solid #e53e3e;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      max-width: 500px;
+      margin: 4rem auto;
+    }
+    .viewer-error-card h2 {
+      color: #e53e3e;
+      margin-bottom: 1rem;
+    }
+    .viewer-error-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+    /* Hide layout blocks before data is ready */
+    .roadmap-container-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="domain-viewer">
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand">Career<span>Path</span> India</a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link dropdown-trigger active">
+              Roadmaps
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">B.Tech - Software</li>
+              <li><a href="web-dev.html">Web Development</a></li>
+              <li><a href="data-analytics.html">Data Analytics</a></li>
+              <li><a href="data-science.html">Data Science</a></li>
+              <li><a href="ml-ai.html">Machine Learning / AI</a></li>
+              <li><a href="devops-cloud.html">DevOps & Cloud</a></li>
+              <li><a href="mobile-dev.html">Mobile Development</a></li>
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="dsa-cp.html">DSA & CP</a></li>
+              <li class="dropdown-header">B.Tech - Hardware</li>
+              <li><a href="ece.html">ECE (Electronics)</a></li>
+              <li><a href="eee.html">EEE (Electrical)</a></li>
+              <li><a href="mechanical.html">Mechanical Eng.</a></li>
+              <li class="dropdown-header">Government Exams</li>
+              <li><a href="upsc.html">UPSC IAS</a></li>
+              <li><a href="ssc-cgl.html">SSC CGL</a></li>
+              <li><a href="gate.html">GATE Exam</a></li>
+              <li><a href="ibps.html">IBPS Banking</a></li>
+              <li><a href="si-police.html">SI Police</a></li>
+              <li><a href="group1.html">Group 1 Services</a></li>
+              <li><a href="group2-3.html">Group 2 & 3</a></li>
+              <li><a href="state-psc.html">State PSC</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="mobile-menu-header">
+      <a href="../index.html" class="nav-brand">Career<span>Path</span> India</a>
+      <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="../index.html" class="mobile-menu-link">Home</a></li>
+      <li class="mobile-menu-section-title">All Roadmaps</li>
+      <li><a href="web-dev.html" class="mobile-menu-link">Web Development</a></li>
+      <li><a href="data-analytics.html" class="mobile-menu-link">Data Analytics</a></li>
+      <li><a href="data-science.html" class="mobile-menu-link">Data Science</a></li>
+      <li><a href="ml-ai.html" class="mobile-menu-link">Machine Learning / AI</a></li>
+      <li><a href="devops-cloud.html" class="mobile-menu-link">DevOps & Cloud</a></li>
+      <li><a href="mobile-dev.html" class="mobile-menu-link">Mobile Development</a></li>
+      <li><a href="cybersecurity.html" class="mobile-menu-link">Cybersecurity</a></li>
+      <li><a href="dsa-cp.html" class="mobile-menu-link">DSA & Competitive Programming</a></li>
+    </ul>
+  </div>
+
+  <!-- Loading View -->
+  <div id="viewer-loading" class="container" style="padding: 10rem 0; text-align: center;">
+    <div class="spinner"></div>
+    <h2 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Retrieving Custom Roadmap</h2>
+    <p style="color: var(--text-secondary); max-width: 400px; margin: 0 auto;">Fetching structured curriculum data and setting up your progress tracker...</p>
+  </div>
+
+  <!-- Error View -->
+  <div id="viewer-error" class="container" style="display: none;">
+    <div class="viewer-error-card">
+      <h2>Roadmap Not Found</h2>
+      <p>The roadmap ID specified in the URL does not exist or could not be loaded. Please ensure you generated it correctly.</p>
+      <a href="../index.html" class="hero-btn" style="display: inline-block;">Return to Homepage</a>
+    </div>
+  </div>
+
+  <!-- Main Grid Container (Initially Hidden) -->
+  <div id="viewer-layout" class="container roadmap-container roadmap-container-hidden" data-roadmap-id="viewer-temp">
+    
+    <!-- Left Sidebar: Table of Contents -->
+    <aside class="toc-sidebar" id="viewer-toc">
+      <!-- Generated dynamically -->
+    </aside>
+
+    <!-- Center Content: The Roadmap Detail -->
+    <main class="roadmap-content">
+      
+      <div class="roadmap-header" id="viewer-header">
+        <!-- Generated dynamically -->
+      </div>
+
+      <!-- Mobile Meta Info Block -->
+      <div class="roadmap-meta-mobile">
+        <div class="progress-widget-mobile">
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-weight: 600;">Overall Progress</div>
+            <div class="progress-percentage" style="font-size: 1.5rem; font-weight: 700; font-family: var(--font-mono); color: var(--accent);">0%</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.85rem; font-weight: 500;"><span id="checked-topics-mobile">0</span> / <span id="total-topics-mobile">0</span> Completed</div>
+          </div>
+        </div>
+        <div class="progress-bar-linear">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Phases Section Container -->
+      <div id="viewer-phases">
+        <!-- Generated dynamically -->
+      </div>
+
+      <!-- Capstone Projects Section -->
+      <section id="capstone" class="capstone-section" style="margin: 4rem 0 6rem; border-top: 1px solid var(--border-color); padding-top: 4rem;">
+        <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">Capstone Projects</h2>
+        <div class="placement-grid" id="viewer-capstones">
+          <!-- Generated dynamically -->
+        </div>
+      </section>
+
+      <!-- Placement & Interview Strategy Section -->
+      <section id="placement" class="placement-section">
+        <h2>Placement & Interview Strategy</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Essential tips for cracking technical roles, formatting resumes, and preparing for system interviews.</p>
+        
+        <div class="placement-grid">
+          
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Resume Keywords
+            </h3>
+            <ul class="placement-card-list" id="viewer-keywords">
+              <!-- Generated dynamically -->
+            </ul>
+          </div>
+
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              Core Interview Focus
+            </h3>
+            <ul class="placement-card-list" id="viewer-focus">
+              <!-- Generated dynamically -->
+            </ul>
+          </div>
+
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              Standard Preparation
+            </h3>
+            <ul class="placement-card-list">
+              <li>Review textbooks and past exam question databases.</li>
+              <li>Practice timed numerical solving and multiple-choice questions.</li>
+              <li>Develop comprehensive subject-wise summary sheets.</li>
+              <li>Participate in mock tests to analyze error diagnostics.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Sidebar: Interactive Progress & Meta -->
+    <aside class="meta-sidebar">
+      
+      <!-- Progress Ring Widget -->
+      <div class="meta-widget progress-widget">
+        <h3 class="meta-widget-title">Your Progress</h3>
+        
+        <div class="progress-ring-container">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" fill="transparent" stroke="var(--progress-bg)" stroke-width="8" />
+            <circle class="progress-ring-circle" cx="60" cy="60" r="50" fill="transparent" stroke="var(--accent)" stroke-width="8" stroke-dasharray="314.16 314.16" stroke-dashoffset="314.16" stroke-linecap="round" transform="rotate(-90 60 60)" />
+          </svg>
+          <span class="progress-ring-text progress-percentage">0%</span>
+        </div>
+
+        <div style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+          <span id="checked-topics">0</span> / <span id="total-topics">0</span> Topics
+        </div>
+        
+        <button id="reset-progress" class="btn-reset-progress">Reset Progress</button>
+      </div>
+
+      <!-- Specs Widget -->
+      <div class="meta-widget" id="viewer-specs">
+        <!-- Generated dynamically -->
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        &ldquo;The journey ends, but the grind never does.&rdquo;
+      </p>
+    </div>
+  </footer>
+
+  <!-- Firebase Scripts (Loaded dynamically only if credentials are set) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import { initializeApp } from 'firebase/app';
+    import { getFirestore, doc, getDoc } from 'firebase/firestore';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Helper: get query parameter
+      const getQueryParam = (name) => {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      };
+
+      const roadmapId = getQueryParam('id');
+      if (!roadmapId) {
+        showError();
+        return;
+      }
+
+      // Set global data-roadmap-id
+      const layoutEl = document.getElementById('viewer-layout');
+      layoutEl.setAttribute('data-roadmap-id', roadmapId);
+
+      let roadmapData = null;
+
+      // 1. Try Firestore first if configured
+      const firebaseConfigStr = localStorage.getItem('firebase-config');
+      if (firebaseConfigStr) {
+        try {
+          const config = JSON.parse(firebaseConfigStr);
+          if (config && config.apiKey) {
+            const app = initializeApp(config);
+            const db = getFirestore(app);
+            const docRef = doc(db, 'roadmaps', roadmapId);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+              roadmapData = docSnap.data();
+              console.log("Loaded roadmap from Firestore:", roadmapId);
+            }
+          }
+        } catch (err) {
+          console.error("Firestore retrieval error, falling back to LocalStorage:", err);
+        }
+      }
+
+      // 2. Fall back to LocalStorage if not found or no Firestore
+      if (!roadmapData) {
+        try {
+          const localDataStr = localStorage.getItem(`custom-roadmap-${roadmapId}`);
+          if (localDataStr) {
+            roadmapData = JSON.parse(localDataStr);
+            console.log("Loaded roadmap from LocalStorage:", roadmapId);
+          }
+        } catch (err) {
+          console.error("LocalStorage retrieval error:", err);
+        }
+      }
+
+      // 3. Render or error
+      if (roadmapData) {
+        renderRoadmap(roadmapData);
+      } else {
+        showError();
+      }
+    });
+
+    const showError = () => {
+      document.getElementById('viewer-loading').style.display = 'none';
+      document.getElementById('viewer-error').style.display = 'block';
+    };
+
+    const renderRoadmap = (data) => {
+      // Set Document Title
+      document.title = `CareerPath India - ${data.title} Career Roadmap`;
+
+      // 1. Header (badge, title, desc)
+      const headerEl = document.getElementById('viewer-header');
+      const totalPhases = data.phases.length;
+      headerEl.innerHTML = `
+        <span class="badge">${data.duration || '16 Weeks'} • ${totalPhases} Phases</span>
+        <h1>${data.title}</h1>
+        <p>${data.description}</p>
+      `;
+
+      // 2. TOC Sidebar
+      const tocEl = document.getElementById('viewer-toc');
+      let tocHtml = `<div class="toc-title">ON THIS ROADMAP</div><ul class="toc-list">`;
+      data.phases.forEach(p => {
+        tocHtml += `<li class="toc-item"><a href="#phase${p.num}">Phase ${p.num}: ${p.title}</a></li>`;
+      });
+      tocHtml += `<li class="toc-item"><a href="#capstone">Capstone Projects</a></li>`;
+      tocHtml += `<li class="toc-item"><a href="#placement">Placement Tips</a></li>`;
+      tocHtml += `</ul>`;
+      tocEl.innerHTML = tocHtml;
+
+      // 3. Phases & Weeks & Topics
+      const phasesEl = document.getElementById('viewer-phases');
+      let phasesHtml = '';
+      let totalTopics = 0;
+      let totalWeeks = 0;
+
+      data.phases.forEach(p => {
+        let phaseWeeksHtml = '';
+        p.weeks.forEach((w, wIdx) => {
+          totalWeeks++;
+          // Support both legacy (tuple/array of [title, list]) and dynamic (object {title, topics}) structures
+          const wTitle = w.title || w[0] || `Week ${totalWeeks}`;
+          const topicsList = w.topics || w[1] || [];
+          
+          let topicsLi = '';
+          topicsList.forEach((topic, tIdx) => {
+            totalTopics++;
+            const cbId = `${data.id}-${p.num}-${wIdx + 1}-${tIdx + 1}`;
+            topicsLi += `
+              <li class="topic-item">
+                <label class="topic-checkbox-wrapper">
+                  <input type="checkbox" id="${cbId}" class="topic-checkbox topic-checkbox-viewer">
+                  <span class="checkmark"></span>
+                  <span class="topic-text">${topic}</span>
+                </label>
+              </li>
+            `;
+          });
+
+          phaseWeeksHtml += `
+            <div class="week-card">
+              <div class="week-header">
+                <h3 class="week-title">${wTitle}</h3>
+                <span class="week-tag">Week ${totalWeeks}</span>
+              </div>
+              <ul class="topics-list">${topicsLi}</ul>
+            </div>
+          `;
+        });
+
+        phasesHtml += `
+          <section id="phase${p.num}" class="phase-section">
+            <h2 class="phase-heading">
+              <span class="phase-number">Phase ${p.num}</span>
+              ${p.title}
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">${p.desc || ''}</p>
+            ${phaseWeeksHtml}
+          </section>
+        `;
+      });
+      phasesEl.innerHTML = phasesHtml;
+
+      // Update total counts
+      document.getElementById('total-topics').textContent = totalTopics;
+      document.getElementById('total-topics-mobile').textContent = totalTopics;
+
+      // 4. Capstones
+      const capstonesEl = document.getElementById('viewer-capstones');
+      let capstonesHtml = '';
+      data.capstones.forEach((c, idx) => {
+        // Support both tuple [title, desc, tech] and object {title, desc, tech}
+        const cTitle = c.title || c[0] || `Project ${idx+1}`;
+        const cDesc = c.desc || c[1] || '';
+        const cTech = c.tech || c[2] || [];
+        
+        let techSpans = '';
+        cTech.forEach(t => {
+          techSpans += `\n              <span class="tech-tag">${t}</span>`;
+        });
+        
+        capstonesHtml += `
+          <div class="placement-card">
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">${idx + 1}. ${cTitle}</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">${cDesc}</p>
+            <div class="project-tech">${techSpans}</div>
+          </div>
+        `;
+      });
+      capstonesEl.innerHTML = capstonesHtml;
+
+      // 5. Resume Keywords & Focus
+      const keywordsEl = document.getElementById('viewer-keywords');
+      let keywordsHtml = '';
+      (data.resume_keywords || []).forEach(k => {
+        keywordsHtml += `<li>${k}</li>`;
+      });
+      keywordsEl.innerHTML = keywordsHtml || '<li>Resume keywords tailored to this domain.</li>';
+
+      const focusEl = document.getElementById('viewer-focus');
+      let focusHtml = '';
+      (data.interview_focus || []).forEach(f => {
+        focusHtml += `<li>${f}</li>`;
+      });
+      focusEl.innerHTML = focusHtml || '<li>Whiteboard coding, architecture, and core concept checks.</li>';
+
+      // 6. Specs Sidebar
+      const specsEl = document.getElementById('viewer-specs');
+      specsEl.innerHTML = `
+        <h3 class="meta-widget-title">Roadmap Specs</h3>
+        <ul class="meta-info-list">
+          <li class="meta-info-item">
+            <span class="meta-info-label">Duration</span>
+            <span class="meta-info-val">${data.duration || '16 Weeks'}</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Difficulty</span>
+            <span class="meta-info-val">${data.difficulty || 'Hard'}</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Target Role</span>
+            <span class="meta-info-val">${data.role || 'Engineer'}</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Prerequisites</span>
+            <span class="meta-info-val">${data.prerequisites || 'None'}</span>
+          </li>
+        </ul>
+      `;
+
+      // Hide loading, show layout
+      document.getElementById('viewer-loading').style.display = 'none';
+      const layoutEl = document.getElementById('viewer-layout');
+      layoutEl.classList.remove('roadmap-container-hidden');
+
+      // 7. Bind interactive tracker logic
+      initializeProgressTracker(data.id);
+      initializeScrollSpy();
+    };
+
+    const initializeProgressTracker = (roadmapId) => {
+      const checkboxes = document.querySelectorAll('.topic-checkbox-viewer');
+      const progressRing = document.querySelector('.progress-ring-circle');
+      const resetBtn = document.getElementById('reset-progress');
+      const progressPercentEls = document.querySelectorAll('.progress-percentage');
+      const barFills = document.querySelectorAll('.progress-bar-fill');
+
+      let ringDashArray = 0;
+      if (progressRing) {
+        const radius = progressRing.r.baseVal.value;
+        ringDashArray = 2 * Math.PI * radius;
+        progressRing.style.strokeDasharray = `${ringDashArray} ${ringDashArray}`;
+      }
+
+      const loadState = () => {
+        const savedState = JSON.parse(localStorage.getItem(`roadmap-${roadmapId}`)) || {};
+        checkboxes.forEach(cb => {
+          cb.checked = !!savedState[cb.id];
+        });
+        updateProgress();
+      };
+
+      const saveState = () => {
+        const state = {};
+        checkboxes.forEach(cb => {
+          if (cb.checked) state[cb.id] = true;
+        });
+        localStorage.setItem(`roadmap-${roadmapId}`, JSON.stringify(state));
+      };
+
+      const updateProgress = () => {
+        const total = checkboxes.length;
+        const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+        const percent = total > 0 ? Math.round((checked / total) * 100) : 0;
+
+        const totalCountEls = [document.getElementById('total-topics'), document.getElementById('total-topics-mobile')];
+        const checkedCountEls = [document.getElementById('checked-topics'), document.getElementById('checked-topics-mobile')];
+        
+        totalCountEls.forEach(el => { if (el) el.textContent = total; });
+        checkedCountEls.forEach(el => { if (el) el.textContent = checked; });
+
+        progressPercentEls.forEach(el => { el.textContent = `${percent}%`; });
+        barFills.forEach(bar => { bar.style.width = `${percent}%`; });
+
+        if (progressRing && ringDashArray > 0) {
+          const offset = ringDashArray - (percent / 100) * ringDashArray;
+          progressRing.style.strokeDashoffset = offset;
+        }
+      };
+
+      checkboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+          saveState();
+          updateProgress();
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+          if (confirm('Are you sure you want to reset your progress for this custom roadmap?')) {
+            localStorage.removeItem(`roadmap-${roadmapId}`);
+            loadState();
+          }
+        });
+      }
+
+      loadState();
+    };
+
+    const initializeScrollSpy = () => {
+      const sections = document.querySelectorAll('.phase-section, .placement-section');
+      const tocItems = document.querySelectorAll('#viewer-toc .toc-item');
+
+      if (sections.length > 0 && tocItems.length > 0) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '-20% 0px -60% 0px',
+          threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute('id');
+              tocItems.forEach(item => {
+                const link = item.querySelector('a');
+                if (link && link.getAttribute('href') === `#${id}`) {
+                  item.classList.add('active');
+                } else {
+                  item.classList.remove('active');
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      }
+    };
+  </script>
+  <script src="../app.js"></script>
+</body>
+</html>
