@@ -204,24 +204,49 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Homepage Card Filter Search ---
   const searchInput = document.getElementById('roadmap-search');
   if (searchInput) {
-    const cards = document.querySelectorAll('.grid .card');
+    const subcats = document.querySelectorAll('.subcategory-wrapper');
+    const sections = document.querySelectorAll('.roadmap-category-section');
     searchInput.addEventListener('input', (e) => {
       const query = e.target.value.toLowerCase().trim();
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title').textContent.toLowerCase();
-        const desc = card.querySelector('.card-desc').textContent.toLowerCase();
-        const duration = card.querySelector('.card-duration').textContent.toLowerCase();
-        const keywords = card.getAttribute('data-keywords') || '';
+      
+      subcats.forEach(subcat => {
+        const cards = subcat.querySelectorAll('.card');
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const title = card.querySelector('.card-title').textContent.toLowerCase();
+          const desc = card.querySelector('.card-desc').textContent.toLowerCase();
+          const duration = card.querySelector('.card-duration').textContent.toLowerCase();
+          const keywords = card.getAttribute('data-keywords') || '';
+          
+          if (
+            title.includes(query) || 
+            desc.includes(query) || 
+            duration.includes(query) ||
+            keywords.toLowerCase().includes(query)
+          ) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
         
-        if (
-          title.includes(query) || 
-          desc.includes(query) || 
-          duration.includes(query) ||
-          keywords.toLowerCase().includes(query)
-        ) {
-          card.style.display = 'flex';
+        // Hide subcategory wrapper if no cards match
+        if (visibleCount > 0) {
+          subcat.style.display = 'block';
         } else {
-          card.style.display = 'none';
+          subcat.style.display = 'none';
+        }
+      });
+
+      // Hide parent category sections if no subcategories are visible
+      sections.forEach(sec => {
+        const visibleSubcats = Array.from(sec.querySelectorAll('.subcategory-wrapper'))
+          .filter(sub => sub.style.display !== 'none');
+        if (visibleSubcats.length > 0) {
+          sec.style.display = 'block';
+        } else {
+          sec.style.display = 'none';
         }
       });
     });

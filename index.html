@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechPath - Student Tech Career Roadmap</title>
-  <meta name="description" content="TechPath - A premium, phase-based tech career roadmap and interactive curriculum tracker for students. Distraction-free study guides for 8 major tech domains.">
+  <title>CareerPath India - Student Tech Career Roadmap</title>
+  <meta name="description" content="CareerPath India - A premium, phase-based tech career roadmap and interactive curriculum tracker for students. Distraction-free study guides for 8 major tech domains.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <!-- Top Navigation Bar -->
   <header>
     <div class="container navbar">
-      <a href="index.html" class="nav-brand">Tech<span>Path</span></a>
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
       
       <nav>
         <ul class="nav-links">
@@ -22,7 +22,8 @@
               Roadmaps
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </span>
-            <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
+              <li class="dropdown-header">B.Tech - Software</li>
               <li><a href="roadmaps/web-dev.html">Web Development</a></li>
               <li><a href="roadmaps/data-analytics.html">Data Analytics</a></li>
               <li><a href="roadmaps/data-science.html">Data Science</a></li>
@@ -30,7 +31,20 @@
               <li><a href="roadmaps/devops-cloud.html">DevOps & Cloud</a></li>
               <li><a href="roadmaps/mobile-dev.html">Mobile Development</a></li>
               <li><a href="roadmaps/cybersecurity.html">Cybersecurity</a></li>
-              <li><a href="roadmaps/dsa-cp.html">DSA & Competitive Programming</a></li>
+              <li><a href="roadmaps/dsa-cp.html">DSA & CP</a></li>
+              <li class="dropdown-header">B.Tech - Hardware</li>
+              <li><a href="roadmaps/ece.html">ECE (Electronics)</a></li>
+              <li><a href="roadmaps/eee.html">EEE (Electrical)</a></li>
+              <li><a href="roadmaps/mechanical.html">Mechanical Eng.</a></li>
+              <li class="dropdown-header">Government Exams</li>
+              <li><a href="roadmaps/upsc.html">UPSC IAS</a></li>
+              <li><a href="roadmaps/ssc-cgl.html">SSC CGL</a></li>
+              <li><a href="roadmaps/gate.html">GATE Exam</a></li>
+              <li><a href="roadmaps/ibps.html">IBPS Banking</a></li>
+              <li><a href="roadmaps/si-police.html">SI Police</a></li>
+              <li><a href="roadmaps/group1.html">Group 1 Services</a></li>
+              <li><a href="roadmaps/group2-3.html">Group 2 & 3</a></li>
+              <li><a href="roadmaps/state-psc.html">State PSC</a></li>
             </ul>
           </li>
         </ul>
@@ -51,7 +65,7 @@
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
   <div class="mobile-menu-drawer" id="mobile-drawer">
     <div class="mobile-menu-header">
-      <a href="index.html" class="nav-brand">Tech<span>Path</span></a>
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
       <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
     </div>
     <ul class="mobile-menu-links">
@@ -102,141 +116,360 @@
       </div>
     </div>
 
-    <!-- Domain Roadmap Grid -->
-    <section id="domains" class="grid">
+    <!-- Category Navigation Cards -->
+    <div class="categories-container">
+      <a href="#btech-section" class="category-card">
+        <div class="category-card-icon">🎓</div>
+        <h2 class="category-card-title">B.Tech Roadmaps</h2>
+        <p class="category-card-desc">Detailed 16-20 week study guides for Software and Hardware Engineering branches.</p>
+      </a>
+      <a href="#gov-section" class="category-card">
+        <div class="category-card-icon">🏛️</div>
+        <h2 class="category-card-title">Government Exams</h2>
+        <p class="category-card-desc">Phase-wise syllabus trackers for Central and State competitive examinations.</p>
+      </a>
+    </div>
+
+    <!-- Section 1: B.Tech Roadmaps -->
+    <section id="btech-section" class="roadmap-category-section" style="scroll-margin-top: 6rem;">
+      <h2 class="category-section-title">🎓 B.Tech Roadmaps</h2>
       
-      <!-- 1. Web Development -->
-      <a href="roadmaps/web-dev.html" class="card solid-card" style="--domain-color: #2b6cb0;" data-keywords="react html css javascript vite frontend backend express node sql postgres mongodb api crud">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-            <line x1="8" y1="21" x2="16" y2="21"></line>
-            <line x1="12" y1="17" x2="12" y2="21"></line>
-          </svg>
-        </div>
-        <h2 class="card-title">Web Development</h2>
-        <p class="card-desc">Master frontend design and robust backend APIs. Learn HTML, CSS, modern JavaScript, database modeling, and Express servers.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+      <!-- Subcategory: Software -->
+      <div class="subcategory-wrapper">
+        <h3 class="subcategory-title">Software Engineering</h3>
+        <div class="grid">
+          
+          <!-- 1. Web Development -->
+          <a href="roadmaps/web-dev.html" class="card solid-card" style="--domain-color: #2b6cb0;" data-keywords="react html css javascript vite frontend backend express node sql postgres mongodb api crud">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">Web Development</h2>
+            <p class="card-desc">Master frontend design and robust backend APIs. Learn HTML, CSS, modern JavaScript, database modeling, and Express servers.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 2. Data Analytics -->
-      <a href="roadmaps/data-analytics.html" class="card solid-card" style="--domain-color: #a9442a;" data-keywords="excel SQL tableau powerbi python pandas numpy statistics ab-testing regression dashboards charts queries">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 3v18h18"></path>
-            <path d="m19 9-5 5-4-4-6 6"></path>
-          </svg>
-        </div>
-        <h2 class="card-title">Data Analytics</h2>
-        <p class="card-desc">Extract meaning from raw data. Master Excel spreadsheets, query databases with SQL, manipulate data with Pandas, build dashboards in Tableau/Power BI, and apply ML forecasting.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 2. Data Analytics -->
+          <a href="roadmaps/data-analytics.html" class="card solid-card" style="--domain-color: #b7791f;" data-keywords="excel SQL tableau powerbi python pandas numpy statistics ab-testing regression dashboards charts queries">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 3v18h18"></path>
+                <path d="m19 9-5 5-4-4-6 6"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">Data Analytics</h2>
+            <p class="card-desc">Extract meaning from raw data. Master Excel spreadsheets, query databases with SQL, manipulate data with Pandas, build dashboards in Tableau/Power BI, and apply ML forecasting.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 3. Data Science -->
-      <a href="roadmaps/data-science.html" class="card solid-card" style="--domain-color: #2f855a;" data-keywords="python pandas numpy matplotlib statistics regression classification sql spark fastapi eda machine learning matrix">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="18" y1="20" x2="18" y2="10"></line>
-            <line x1="12" y1="20" x2="12" y2="4"></line>
-            <line x1="6" y1="20" x2="6" y2="14"></line>
-          </svg>
-        </div>
-        <h2 class="card-title">Data Science</h2>
-        <p class="card-desc">Extract insights from raw datasets. Build a foundation in statistics, data cleaning, exploratory visual analysis, and classical ML models.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 3. Data Science -->
+          <a href="roadmaps/data-science.html" class="card solid-card" style="--domain-color: #2f855a;" data-keywords="python pandas numpy matplotlib statistics regression classification sql spark fastapi eda machine learning matrix">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">Data Science</h2>
+            <p class="card-desc">Extract insights from raw datasets. Build a foundation in statistics, data cleaning, exploratory visual analysis, and classical ML models.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 4. Machine Learning / AI -->
-      <a href="roadmaps/ml-ai.html" class="card solid-card" style="--domain-color: #c2410c;" data-keywords="python pytorch deep learning math neural networks transformer lora llm agents rag langchain vector chromadb pinecone">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-          </svg>
-        </div>
-        <h2 class="card-title">Machine Learning / AI</h2>
-        <p class="card-desc">Dive deep into core mathematical concepts, neural network architectures, PyTorch, Large Language Models (LLMs), and agent workflows.</p>
-        <div class="card-meta">
-          <span class="card-duration">20 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 4. Machine Learning / AI -->
+          <a href="roadmaps/ml-ai.html" class="card solid-card" style="--domain-color: #dd6b20;" data-keywords="python pytorch deep learning math neural networks transformer lora llm agents rag langchain vector chromadb pinecone">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">Machine Learning / AI</h2>
+            <p class="card-desc">Dive deep into core mathematical concepts, neural network architectures, PyTorch, Large Language Models (LLMs), and agent workflows.</p>
+            <div class="card-meta">
+              <span class="card-duration">20 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 5. DevOps & Cloud -->
-      <a href="roadmaps/devops-cloud.html" class="card solid-card" style="--domain-color: #0f766e;" data-keywords="docker kubernetes linux terraform ansible aws lambda cloud ci/cd prometheus grafana shell bash networking git">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-          </svg>
-        </div>
-        <h2 class="card-title">DevOps & Cloud</h2>
-        <p class="card-desc">Build automated, scalable infrastructures. Master Linux systems, Docker containerization, Kubernetes orchestration, CI/CD, and AWS services.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 5. DevOps & Cloud -->
+          <a href="roadmaps/devops-cloud.html" class="card solid-card" style="--domain-color: #319795;" data-keywords="docker kubernetes linux terraform ansible aws lambda cloud ci/cd prometheus grafana shell bash networking git">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h2 class="card-title">DevOps & Cloud</h2>
+            <p class="card-desc">Build automated, scalable infrastructures. Master Linux systems, Docker containerization, Kubernetes orchestration, CI/CD, and AWS services.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 6. Mobile Development -->
-      <a href="roadmaps/mobile-dev.html" class="card solid-card" style="--domain-color: #d53f8c;" data-keywords="kotlin swift swiftui compose mvvm mobile ios android room swiftdata api retrofit urlsession local db database">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-          </svg>
-        </div>
-        <h2 class="card-title">Mobile Development</h2>
-        <p class="card-desc">Construct responsive applications for mobile screens. Study Kotlin for Android, Swift for iOS, reactive layouts, APIs, and publishing.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 6. Mobile Development -->
+          <a href="roadmaps/mobile-dev.html" class="card solid-card" style="--domain-color: #d53f8c;" data-keywords="kotlin swift swiftui compose mvvm mobile ios android room swiftdata api retrofit urlsession local db database">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">Mobile Development</h2>
+            <p class="card-desc">Construct responsive applications for mobile screens. Study Kotlin for Android, Swift for iOS, reactive layouts, APIs, and publishing.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 7. Cybersecurity -->
-      <a href="roadmaps/cybersecurity.html" class="card solid-card" style="--domain-color: #5b21b6;" data-keywords="wireshark cryptography owasp burp suite penetration testing privilege escalation metasploit splunk siem ports scanner nmap">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-          </svg>
-        </div>
-        <h2 class="card-title">Cybersecurity</h2>
-        <p class="card-desc">Defend computing environments. Explore network security, pen testing web apps, privilege escalation, threat hunting, and SIEM analysis.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+          <!-- 7. Cybersecurity -->
+          <a href="roadmaps/cybersecurity.html" class="card solid-card" style="--domain-color: #805ad5;" data-keywords="wireshark cryptography owasp burp suite penetration testing privilege escalation metasploit splunk siem ports scanner nmap">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">Cybersecurity</h2>
+            <p class="card-desc">Defend computing environments. Explore network security, pen testing web apps, privilege escalation, threat hunting, and SIEM analysis.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
 
-      <!-- 8. DSA & Competitive Programming -->
-      <a href="roadmaps/dsa-cp.html" class="card solid-card" style="--domain-color: #a16207;" data-keywords="big o arrays strings search sort recursion backtracking trees graphs dijkstra dp modular arithmetic stacks queues heap">
-        <div class="card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
+          <!-- 8. DSA & Competitive Programming -->
+          <a href="roadmaps/dsa-cp.html" class="card solid-card" style="--domain-color: #b7791f;" data-keywords="big o arrays strings search sort recursion backtracking trees graphs dijkstra dp modular arithmetic stacks queues heap">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h2 class="card-title">DSA & CP</h2>
+            <p class="card-desc">Excel in coding interviews and technical evaluations. Master data structures, algorithmic paradigms (Greedy, DP), and patterns-based problems.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
         </div>
-        <h2 class="card-title">DSA & CP</h2>
-        <p class="card-desc">Excel in coding interviews and technical evaluations. Master data structures, algorithmic paradigms (Greedy, DP), and patterns-based problems.</p>
-        <div class="card-meta">
-          <span class="card-duration">16 WEEKS • 4 PHASES</span>
-          <span class="card-arrow">&rarr;</span>
-        </div>
-      </a>
+      </div>
 
-        </section>
+      <!-- Subcategory: Hardware -->
+      <div class="subcategory-wrapper">
+        <h3 class="subcategory-title">Hardware Engineering</h3>
+        <div class="grid">
+          <!-- 1. ECE -->
+          <a href="roadmaps/ece.html" class="card solid-card" style="--domain-color: #dd6b20;" data-keywords="vlsi embedded microcontrollers semiconductor circuit analog digital logic gates microcontroller ARM RTOS I2C SPI UART signal processing DSP">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                <line x1="6" y1="18" x2="6.01" y2="18"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">ECE (Electronics & Communication)</h2>
+            <p class="card-desc">Study semiconductors, digital and analog designs, microcontrollers, embedded protocols, and signal processing DSP systems.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 2. EEE -->
+          <a href="roadmaps/eee.html" class="card solid-card" style="--domain-color: #b7791f;" data-keywords="power systems electric machines electrical motor generator transformer MATLAB circuit AC DC control stability relay converter">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+                <line x1="12" y1="2" x2="12" y2="12"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">EEE (Electrical & Electronics)</h2>
+            <p class="card-desc">Master electric AC/DC machinery, transformers, power grids analysis, control feedback loops, and power electronics choppers/inverters.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 3. Mechanical -->
+          <a href="roadmaps/mechanical.html" class="card solid-card" style="--domain-color: #4a5568;" data-keywords="solidworks cad mechanical engineering structural stress mechanics material fluid thermodynamics combustion machining ansys design">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">Mechanical Engineering</h2>
+            <p class="card-desc">Study structural mechanics, stress failure, Rankine cycles, thermodynamics, fluid dynamics boundary layers, casting, and CAD modeling.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Government Exams -->
+    <section id="gov-section" class="roadmap-category-section" style="scroll-margin-top: 6rem;">
+      <h2 class="category-section-title">🏛️ Government Exams</h2>
+      
+      <!-- Subcategory: Central -->
+      <div class="subcategory-wrapper">
+        <h3 class="subcategory-title">Central Government Exams</h3>
+        <div class="grid">
+          <!-- 1. UPSC IAS -->
+          <a href="roadmaps/upsc.html" class="card solid-card" style="--domain-color: #2b6cb0;" data-keywords="UPSC IAS civil services GS history polity constitution geography mains prelims ethics public administration international relations">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">UPSC IAS Exam</h2>
+            <p class="card-desc">Prepare systematically for Prelims (GS & CSAT), Mains GS I-IV papers, Essay writing, policy research, and final interview panels.</p>
+            <div class="card-meta">
+              <span class="card-duration">24 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 2. SSC CGL -->
+          <a href="roadmaps/ssc-cgl.html" class="card solid-card" style="--domain-color: #319795;" data-keywords="SSC CGL Staff Selection Commission Tier 1 Tier 2 Quant Aptitude Reasoning English General Awareness History Geography">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <h2 class="card-title">SSC CGL Exam</h2>
+            <p class="card-desc">Master Arithmetic, Advanced Algebra, Geometry, English grammar/vocabulary, Reasoning, and General Awareness for Tier 1 & 2 exams.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 3. GATE -->
+          <a href="roadmaps/gate.html" class="card solid-card" style="--domain-color: #805ad5;" data-keywords="GATE engineering maths general aptitude PSU M.Tech technical core computer science mechanical electrical electronics civil">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10v6M22 13H2"></path>
+                <rect x="6" y="4" width="12" height="16" rx="2"></rect>
+              </svg>
+            </div>
+            <h2 class="card-title">GATE Exam</h2>
+            <p class="card-desc">Master General Aptitude, Engineering Mathematics, and core technical concepts of your branch for M.Tech admissions and PSU jobs.</p>
+            <div class="card-meta">
+              <span class="card-duration">20 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 4. IBPS Banking -->
+          <a href="roadmaps/ibps.html" class="card solid-card" style="--domain-color: #2f855a;" data-keywords="IBPS PO Clerk Banking exam Quantitative Aptitude Reasoning English General Awareness RBI finance banking terminal">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">IBPS Banking PO/Clerk</h2>
+            <p class="card-desc">Excel in speed arithmetic, complex seating puzzles, English comprehension, RBI monetary policies, and banking awareness.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Subcategory: State -->
+      <div class="subcategory-wrapper">
+        <h3 class="subcategory-title">State Government Exams</h3>
+        <div class="grid">
+          <!-- 1. SI Police -->
+          <a href="roadmaps/si-police.html" class="card solid-card" style="--domain-color: #e53e3e;" data-keywords="SI Sub Inspector Police written exam General Studies Arithmetic Reasoning Language Physical standards Indian polity law">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <path d="M12 14h.01M12 10h.01M12 6h.01"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">SI Police Exam</h2>
+            <p class="card-desc">Prepare for state SI written evaluations covering General Studies, Arithmetic, Reasoning, Language tests, and physical guidelines.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 2. Group 1 -->
+          <a href="roadmaps/group1.html" class="card solid-card" style="--domain-color: #319795;" data-keywords="Group 1 services civil services state psc deputy collector DSP prelims mains general studies history polity essay">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">Group 1 Exam</h2>
+            <p class="card-desc">Prepare for top administrative services (Deputy Collector/DSP) covering Prelims GS and comprehensive analytical Mains writing.</p>
+            <div class="card-meta">
+              <span class="card-duration">20 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 3. Group 2 & 3 -->
+          <a href="roadmaps/group2-3.html" class="card solid-card" style="--domain-color: #d53f8c;" data-keywords="Group 2 Group 3 municipal commissioner sub registrar senior assistant state exams polity constitution arithmetic reasoning">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V12M12 12L2 7.5M12 12l10-4.5M2 7.5L12 3l10 4.5M2 7.5v9l10 4.5v-9M22 7.5v9l-10 4.5v-9"></path>
+              </svg>
+            </div>
+            <h2 class="card-title">Group 2 & 3 Exams</h2>
+            <p class="card-desc">Track syllabus for sub-registrar, municipal commissioners, and executive officer posts. Master Polity, Economy, and Math.</p>
+            <div class="card-meta">
+              <span class="card-duration">16 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- 4. State PSC -->
+          <a href="roadmaps/state-psc.html" class="card solid-card" style="--domain-color: #b7791f;" data-keywords="State PSC public service commission PCS civil services prelims mains history geography polity budget local administration">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+            </div>
+            <h2 class="card-title">State PSC Exam</h2>
+            <p class="card-desc">Prepare for state civil service positions focusing on state geography, culture, historical dynasties, budgets, and district administration.</p>
+            <div class="card-meta">
+              <span class="card-duration">20 WEEKS • 4 PHASES</span>
+              <span class="card-arrow">&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- What This Roadmap Doesn't Cover Section -->
     <section class="out-of-scope-section" style="margin: 4rem 0 6rem; scroll-margin-top: 8rem;">

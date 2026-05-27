@@ -1310,4 +1310,234 @@ body.domain-dsa-cp {
   50% { transform: scale(1.3); opacity: 0.7; }
 }
 
+/* --- New Domain Overrides --- */
+
+/* Mechanical - Slate Blue */
+body.domain-mechanical {
+  --accent: #4a5568;
+  --accent-light: #edf2f7;
+  --accent-light-border: #cbd5e0;
+}
+[data-theme="dark"] body.domain-mechanical {
+  --accent: #a0aec0;
+  --accent-light: #1a202c;
+  --accent-light-border: #4a5568;
+}
+
+/* ECE & Central/State Exams mapping to existing themes to keep them visually distinct */
+body.domain-ece {
+  --accent: #dd6b20;
+  --accent-light: #fffaf0;
+  --accent-light-border: #feebc8;
+}
+[data-theme="dark"] body.domain-ece {
+  --accent: #f6ad55;
+  --accent-light: #2c201a;
+  --accent-light-border: #dd6b20;
+}
+
+body.domain-eee {
+  --accent: #b7791f;
+  --accent-light: #fefcbf;
+  --accent-light-border: #fef08a;
+}
+[data-theme="dark"] body.domain-eee {
+  --accent: #ecc94b;
+  --accent-light: #2d2618;
+  --accent-light-border: #b7791f;
+}
+
+/* UPSC IAS - Steel Blue / Regal */
+body.domain-upsc {
+  --accent: #2b6cb0;
+  --accent-light: #ebf8ff;
+  --accent-light-border: #bee3f8;
+}
+[data-theme="dark"] body.domain-upsc {
+  --accent: #63b3ed;
+  --accent-light: #1a202c;
+  --accent-light-border: #2b6cb0;
+}
+
+/* GATE - Purple */
+body.domain-gate {
+  --accent: #805ad5;
+  --accent-light: #f5f3ff;
+  --accent-light-border: #e9d8fd;
+}
+[data-theme="dark"] body.domain-gate {
+  --accent: #b794f4;
+  --accent-light: #241a3c;
+  --accent-light-border: #805ad5;
+}
+
+/* SSC CGL - Teal */
+body.domain-ssc-cgl {
+  --accent: #319795;
+  --accent-light: #e6fffa;
+  --accent-light-border: #b2f5ea;
+}
+[data-theme="dark"] body.domain-ssc-cgl {
+  --accent: #4fd1c5;
+  --accent-light: #1a2c2c;
+  --accent-light-border: #319795;
+}
+
+/* IBPS Banking - Green */
+body.domain-ibps {
+  --accent: #2f855a;
+  --accent-light: #f0fff4;
+  --accent-light-border: #c6f6d5;
+}
+[data-theme="dark"] body.domain-ibps {
+  --accent: #48bb78;
+  --accent-light: #1c2820;
+  --accent-light-border: #2f855a;
+}
+
+/* SI Police - Crimson Red */
+body.domain-si-police {
+  --accent: #e53e3e;
+  --accent-light: #fff5f5;
+  --accent-light-border: #fed7d7;
+}
+[data-theme="dark"] body.domain-si-police {
+  --accent: #feb2b2;
+  --accent-light: #2c1a1a;
+  --accent-light-border: #e53e3e;
+}
+
+/* Group 1 - Deep Teal */
+body.domain-group1 {
+  --accent: #319795;
+  --accent-light: #e6fffa;
+  --accent-light-border: #b2f5ea;
+}
+[data-theme="dark"] body.domain-group1 {
+  --accent: #4fd1c5;
+  --accent-light: #1a2c2c;
+  --accent-light-border: #319795;
+}
+
+/* Group 2 & 3 - Pink */
+body.domain-group2-3 {
+  --accent: #d53f8c;
+  --accent-light: #fff5f7;
+  --accent-light-border: #fed7e2;
+}
+[data-theme="dark"] body.domain-group2-3 {
+  --accent: #fbb6ce;
+  --accent-light: #2c1a24;
+  --accent-light-border: #d53f8c;
+}
+
+/* State PSC - Amber/Gold */
+body.domain-state-psc {
+  --accent: #b7791f;
+  --accent-light: #fefcbf;
+  --accent-light-border: #fef08a;
+}
+[data-theme="dark"] body.domain-state-psc {
+  --accent: #ecc94b;
+  --accent-light: #2d2618;
+  --accent-light-border: #b7791f;
+}
+
+/* Layout additions for Homepage Categories Selection */
+.categories-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem auto 3rem;
+  max-width: 800px;
+}
+
+.category-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--card-shadow);
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.category-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.category-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.category-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.category-section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 4rem 0 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.subcategory-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subcategory-wrapper {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* --- Categorized Nav Dropdown Headers --- */
+.dropdown-header {
+  padding: 0.5rem 1rem 0.25rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent) !important;
+  font-weight: 700 !important;
+  border-top: 1px solid var(--border-color);
+  margin-top: 0.25rem;
+  pointer-events: none; /* Make header unclickable */
+}
+
+.dropdown-menu li:first-child.dropdown-header {
+  border-top: none;
+  margin-top: 0;
+}
+
 
