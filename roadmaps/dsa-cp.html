@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA & Competitive Programming Career Roadmap — Study Tracker</title>
+  <meta name="description" content="A 16-week study roadmap and curriculum for Data Structures, Algorithms, and Competitive Programming, covering Big O, trees, graphs, dynamic programming, and math.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="domain-dsa-cp">
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <a href="../index.html" class="nav-brand">Tech<span>Path</span></a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link dropdown-trigger active">
+              Roadmaps
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="web-dev.html">Web Development</a></li>
+              <li><a href="data-analytics.html">Data Analytics</a></li>
+              <li><a href="data-science.html">Data Science</a></li>
+              <li><a href="ml-ai.html">Machine Learning / AI</a></li>
+              <li><a href="devops-cloud.html">DevOps & Cloud</a></li>
+              <li><a href="mobile-dev.html">Mobile Development</a></li>
+              <li><a href="cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="dsa-cp.html" class="active">DSA & Competitive Programming</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        
+        <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="mobile-menu-header">
+      <a href="../index.html" class="nav-brand">Tech<span>Path</span></a>
+      <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="../index.html" class="mobile-menu-link">Home</a></li>
+      <li class="mobile-menu-section-title">All Roadmaps</li>
+      <li><a href="web-dev.html" class="mobile-menu-link">Web Development</a></li>
+      <li><a href="data-analytics.html" class="mobile-menu-link">Data Analytics</a></li>
+      <li><a href="data-science.html" class="mobile-menu-link">Data Science</a></li>
+      <li><a href="ml-ai.html" class="mobile-menu-link">Machine Learning / AI</a></li>
+      <li><a href="devops-cloud.html" class="mobile-menu-link">DevOps & Cloud</a></li>
+      <li><a href="mobile-dev.html" class="mobile-menu-link">Mobile Development</a></li>
+      <li><a href="cybersecurity.html" class="mobile-menu-link">Cybersecurity</a></li>
+      <li><a href="dsa-cp.html" class="mobile-menu-link">DSA & Competitive Programming</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Grid Container -->
+  <div class="container roadmap-container" data-roadmap-id="dsa-cp">
+    
+    <!-- Left Sidebar: Table of Contents -->
+    <aside class="toc-sidebar">
+      <div class="toc-title">ON THIS ROADMAP</div>
+      <ul class="toc-list">
+        <li class="toc-item active"><a href="#phase1">Phase 1: Linear Structs</a></li>
+        <li class="toc-item"><a href="#phase2">Phase 2: Basic Algorithms</a></li>
+        <li class="toc-item"><a href="#phase3">Phase 3: Trees & Graphs</a></li>
+        <li class="toc-item"><a href="#phase4">Phase 4: DP & Math</a></li>
+        <li class="toc-item"><a href="#capstone">Capstone Projects</a></li>
+        <li class="toc-item"><a href="#placement">Placement Tips</a></li>
+      </ul>
+    </aside>
+
+    <!-- Center Content: The Roadmap Detail -->
+    <main class="roadmap-content">
+      
+      <div class="roadmap-header">
+        <span class="badge">16 Weeks • 4 Phases</span>
+        <h1>DSA & Competitive Programming</h1>
+        <p>Master complexity evaluations, linear search models, recursive backtracking solvers, AVL trees, graph search algorithms (BFS/DFS), Dijkstra shortest paths, Dynamic Programming grids, and number theory primes.</p>
+      </div>
+
+      <!-- Mobile Meta Info Block (Collapses in desktop, visible on tablets/mobile) -->
+      <div class="roadmap-meta-mobile">
+        <div class="progress-widget-mobile">
+          <div>
+            <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); font-weight: 600;">Overall Progress</div>
+            <div class="progress-percentage" style="font-size: 1.5rem; font-weight: 700; font-family: var(--font-mono); color: var(--accent);">0%</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.85rem; font-weight: 500;"><span id="checked-topics-mobile">0</span> / <span id="total-topics-mobile">40</span> Completed</div>
+          </div>
+        </div>
+        <div class="progress-bar-linear">
+          <div class="progress-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- PHASE 1 -->
+      <section id="phase1" class="phase-section">
+        <h2 class="phase-heading">
+          <span class="phase-number">Phase 1</span>
+          Language Core & Linear Data Structures
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze algorithmic complexity, sliding window techniques, stack/queue memory, and linked list traversals.</p>
+
+        <!-- Week 1 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 1: Time & Space Complexity</h3>
+            <span class="week-tag">Week 1</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-1-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Big O notation, worst-case, best-case, average-case equations</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-1-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Recursion space complexity, stack frames analysis, loop complexity profiles</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 2: Arrays & Dynamic Arrays</h3>
+            <span class="week-tag">Week 2</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-2-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Two-pointer technique, sliding window models, prefix sums mappings</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-2-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Vector resizing complexities, array rotation algorithms, custom structures</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 3: Strings & Manipulation</h3>
+            <span class="week-tag">Week 3</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-3-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">String comparisons complexities, Rabin-Karp hashing fundamentals, patterns search</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 4 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 4: Linear structures (Stacks, Queues, Linked Lists)</h3>
+            <span class="week-tag">Week 4</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-4-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Linked lists insertions/deletions, stack parsing structures, queue buffers</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        </section>
+
+      <!-- PHASE 2 -->
+      <section id="phase2" class="phase-section">
+        <h2 class="phase-heading">
+          <span class="phase-number">Phase 2</span>
+          Basic Algorithms & Recursion
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement binary search boundaries, recursion branching, backtracking limits, and exponentiation formulas.</p>
+
+        <!-- Week 5 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 5: Binary Search</h3>
+            <span class="week-tag">Week 5</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-5-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Classic binary search indices calculations, lower bound/upper bound parameters</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-5-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Binary search on answers (maximizing/minimizing thresholds values bounds)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 6 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 6: Sorting Algorithms</h3>
+            <span class="week-tag">Week 6</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-6-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Quick Sort partition variants, Merge Sort divide-and-conquer steps</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 7 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 7: Backtracking</h3>
+            <span class="week-tag">Week 7</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-7-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Recursion tree paths checks, subset generators, N-Queens placement solvers</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 8 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 8: Divide and Conquer</h3>
+            <span class="week-tag">Week 8</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-8-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Master Theorem complexity equations, binary exponentiation matrix powers</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        </section>
+
+      <!-- PHASE 3 -->
+      <section id="phase3" class="phase-section">
+        <h2 class="phase-heading">
+          <span class="phase-number">Phase 3</span>
+          Advanced Trees & Graphs
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Traverse trees, implement BFS/DFS graphs mapping, trace shortest paths, and configure DSU blocks.</p>
+
+        <!-- Week 9 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 9: Trees & BST</h3>
+            <span class="week-tag">Week 9</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-9-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">BST traversals (Inorder, Preorder, Postorder), nodes balance rotations AVL</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 10 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 10: Graphs representation & Traversals</h3>
+            <span class="week-tag">Week 10</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-10-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Adjacency Lists configurations, BFS queues iterations, DFS stack recursions</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-10-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Graph cycles checks, Topological Sort (Kahn's queue algorithm, DFS checks)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 11 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 11: Shortest Path Algorithms</h3>
+            <span class="week-tag">Week 11</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-11-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Dijkstra algorithm (Priority Queue, path relaxations), Bellman-Ford negative checks</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-11-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Floyd-Warshall all-pairs calculations, grid path iterations</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 12 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 12: Minimum Spanning Tree & DSU</h3>
+            <span class="week-tag">Week 12</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-12-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Kruskal's algorithm (edge lists sorting), Disjoint Set Union (union-by-rank, path compression)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        </section>
+
+      <!-- PHASE 4 -->
+      <section id="phase4" class="phase-section">
+        <h2 class="phase-heading">
+          <span class="phase-number">Phase 4</span>
+          Dynamic Programming & Math for CP
+        </h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Build memoization tables, solve grid paths, configure bitmask arrays, and utilize prime sieves.</p>
+
+        <!-- Week 13 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 13: 1D Dynamic Programming</h3>
+            <span class="week-tag">Week 13</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-13-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Memoization vs Tabulation, overlapping subproblems definition, fibonacci optimizations</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-13-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">LCS (Longest Common Subsequence), LIS (Longest Increasing Subsequence) structures</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 14 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 14: 2D Dynamic Programming</h3>
+            <span class="week-tag">Week 14</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-14-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Grid paths counts (minimum cost pathways), Knapsack optimization rules (0/1 Knapsack)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 15 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 15: Bit Manipulation & Masking</h3>
+            <span class="week-tag">Week 15</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-15-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Bitwise operations (AND, OR, XOR, shift functions), representations sets</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-15-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">DP with bitmasks (solving Hamiltonian path issues, scheduling combinations)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Week 16 -->
+        <div class="week-card">
+          <div class="week-header">
+            <h3 class="week-title">Week 16: Number Theory for CP</h3>
+            <span class="week-tag">Week 16</span>
+          </div>
+          <ul class="topics-list">
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-16-1" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Prime sieves (Sieve of Eratosthenes complexity), GCD Euclid algorithm</span>
+              </label>
+            </li>
+            <li class="topic-item">
+              <label class="topic-checkbox-wrapper">
+                <input type="checkbox" id="ds-16-2" class="topic-checkbox">
+                <span class="checkmark"></span>
+                <span class="topic-text">Modular arithmetic properties, Fermat's Little Theorem modular inverses</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        </section>
+
+      <!-- CAPSTONE PROJECTS -->
+      <section id="capstone" class="placement-section">
+        <h2>Capstone Projects</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Combine all your learning across the phases into these comprehensive, production-grade projects.</p>
+        <div class="placement-grid">
+          
+          <div class="placement-card">
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">1. High-Frequency Arbitrage Trading Simulator</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">Design an order-book engine using custom heap arrays and red-black trees. Match buy/sell orders, run shortest-path currency routing arbitrage, and optimize via dynamic programming.</p>
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Priority Queues</span>
+              <span class="tech-tag">Red-Black Trees</span>
+              <span class="tech-tag">Graph Algorithms</span>
+            </div>
+          </div>
+          <div class="placement-card">
+            <h3 class="placement-card-title" style="border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">2. Interactive Algorithmic Pathfinding Suite</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.5;">An interactive visualizer demonstrating Dijkstra, A*, and BFS maze-solvers. Allow custom grid configurations, weight placements, and real-time execution step counters.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML Canvas</span>
+              <span class="tech-tag">Vanilla JS</span>
+              <span class="tech-tag">Data Structures</span>
+              <span class="tech-tag">A* Pathfinding</span>
+            </div>
+          </div>
+    
+        </div>
+      </section>
+
+      <!-- PLACEMENT TIPS -->
+      <section id="placement" class="placement-section">
+        <h2>Placement & Interview Strategy</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">DSA evaluations test code complexity estimations, optimization checks, and patterns matching.</p>
+        
+        <div class="placement-grid">
+          
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Resume Keywords
+            </h3>
+            <ul class="placement-card-list">
+              <li>Data Structures, Complexity Analysis (Big O)</li>
+              <li>Recursion, Backtracking, Divide & Conquer</li>
+              <li>Binary Search, BFS, DFS, Shortest Paths</li>
+              <li>Dynamic Programming (Tabulation, LCS)</li>
+              <li>DSU, Minimum Spanning Trees, Bitmasks</li>
+            </ul>
+          </div>
+
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              Core Interview Focus
+            </h3>
+            <ul class="placement-card-list">
+              <li>Deriving time complexity of recursive operations.</li>
+              <li>Explain differences: Dijkstra vs Bellman-Ford paths.</li>
+              <li>Explain state transitions in LCS dynamic grids.</li>
+              <li>Explain sliding window models in arrays indexes.</li>
+              <li>Describe how disjoint set path compression runs.</li>
+            </ul>
+          </div>
+
+          <div class="placement-card">
+            <h3 class="placement-card-title">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              Preparation Platforms
+            </h3>
+            <ul class="placement-card-list">
+              <li><strong>LeetCode</strong> — 150 top interview questions.</li>
+              <li><strong>NeetCode</strong> — Solving pattern-based structures.</li>
+              <li><strong>Codeforces</strong> — Competitive contests.</li>
+              <li><strong>USACO Guide</strong> — Deep algorithmic paths.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Right Sidebar: Interactive Progress & Meta -->
+    <aside class="meta-sidebar">
+      
+      <!-- Progress Ring Widget -->
+      <div class="meta-widget progress-widget">
+        <h3 class="meta-widget-title">Your Progress</h3>
+        
+        <div class="progress-ring-container">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" fill="transparent" stroke="var(--progress-bg)" stroke-width="8" />
+            <circle class="progress-ring-circle" cx="60" cy="60" r="50" fill="transparent" stroke="var(--accent)" stroke-width="8" stroke-dasharray="314.16 314.16" stroke-dashoffset="314.16" stroke-linecap="round" transform="rotate(-90 60 60)" />
+          </svg>
+          <span class="progress-ring-text progress-percentage">0%</span>
+        </div>
+
+        <div style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+          <span id="checked-topics">0</span> / <span id="total-topics">40</span> Topics
+        </div>
+        
+        <div class="progress-bar-linear" style="width: 80%; display: none;">
+          <div class="progress-bar-fill"></div>
+        </div>
+
+        <button id="reset-progress" class="btn-reset-progress">Reset Progress</button>
+      </div>
+
+      <!-- Roadmap Meta Info Widget -->
+      <div class="meta-widget">
+        <h3 class="meta-widget-title">Roadmap Specs</h3>
+        <ul class="meta-info-list">
+          <li class="meta-info-item">
+            <span class="meta-info-label">Duration</span>
+            <span class="meta-info-val">16 Weeks</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Difficulty</span>
+            <span class="meta-info-val">Mid to Hard</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Target Role</span>
+            <span class="meta-info-val">Software Engineer (SWE)</span>
+          </li>
+          <li class="meta-info-item">
+            <span class="meta-info-label">Prerequisites</span>
+            <span class="meta-info-val">Basic loop and type logic</span>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        &ldquo;The journey ends, but the grind never does.&rdquo;
+      </p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

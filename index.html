@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Tech Career Roadmap — Study Guide & Tracker</title>
+  <meta name="description" content="A premium, phase-based tech career roadmap and interactive curriculum tracker for students. Zero framework, distraction-free study guides for 8 major tech domains.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">Tech<span>Path</span></a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link dropdown-trigger">
+              Roadmaps
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+            <ul class="dropdown-menu">
+              <li><a href="roadmaps/web-dev.html">Web Development</a></li>
+              <li><a href="roadmaps/data-analytics.html">Data Analytics</a></li>
+              <li><a href="roadmaps/data-science.html">Data Science</a></li>
+              <li><a href="roadmaps/ml-ai.html">Machine Learning / AI</a></li>
+              <li><a href="roadmaps/devops-cloud.html">DevOps & Cloud</a></li>
+              <li><a href="roadmaps/mobile-dev.html">Mobile Development</a></li>
+              <li><a href="roadmaps/cybersecurity.html">Cybersecurity</a></li>
+              <li><a href="roadmaps/dsa-cp.html">DSA & Competitive Programming</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="nav-brand">Tech<span>Path</span></a>
+      <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+      <li class="mobile-menu-section-title">All Roadmaps</li>
+      <li><a href="roadmaps/web-dev.html" class="mobile-menu-link">Web Development</a></li>
+      <li><a href="roadmaps/data-analytics.html" class="mobile-menu-link">Data Analytics</a></li>
+      <li><a href="roadmaps/data-science.html" class="mobile-menu-link">Data Science</a></li>
+      <li><a href="roadmaps/ml-ai.html" class="mobile-menu-link">Machine Learning / AI</a></li>
+      <li><a href="roadmaps/devops-cloud.html" class="mobile-menu-link">DevOps & Cloud</a></li>
+      <li><a href="roadmaps/mobile-dev.html" class="mobile-menu-link">Mobile Development</a></li>
+      <li><a href="roadmaps/cybersecurity.html" class="mobile-menu-link">Cybersecurity</a></li>
+      <li><a href="roadmaps/dsa-cp.html" class="mobile-menu-link">DSA & Competitive Programming</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-wrap">
+    <div class="hero-glow"></div>
+    <div class="container hero">
+      <span class="hero-badge">
+        <span class="dot"></span>
+        THE 2026 EDITION &middot; 8 DOMAINS &middot; PLACEMENT READY
+      </span>
+      <h1>
+        The only roadmap you need to <br>
+        <span class="hero-highlight">get placed in tech.</span>
+      </h1>
+      <p>
+        A comprehensive collection of phase-by-phase curriculums, projects, and placement tips designed to guide students from absolute foundations to production-grade engineering.
+      </p>
+      <a href="#domains" class="hero-btn">
+        EXPLORE THE ROADMAP &darr;
+      </a>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Search Section -->
+    <div class="search-container">
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="roadmap-search" placeholder="Search domains, libraries, or tools (e.g., React, Python, K8s, DP)..." aria-label="Search roadmaps">
+      </div>
+    </div>
+
+    <!-- Domain Roadmap Grid -->
+    <section id="domains" class="grid">
+      
+      <!-- 1. Web Development -->
+      <a href="roadmaps/web-dev.html" class="card solid-card" style="--domain-color: #2b6cb0;" data-keywords="react html css javascript vite frontend backend express node sql postgres mongodb api crud">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <h2 class="card-title">Web Development</h2>
+        <p class="card-desc">Master frontend design and robust backend APIs. Learn HTML, CSS, modern JavaScript, database modeling, and Express servers.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 2. Data Analytics -->
+      <a href="roadmaps/data-analytics.html" class="card solid-card" style="--domain-color: #a9442a;" data-keywords="excel SQL tableau powerbi python pandas numpy statistics ab-testing regression dashboards charts queries">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3v18h18"></path>
+            <path d="m19 9-5 5-4-4-6 6"></path>
+          </svg>
+        </div>
+        <h2 class="card-title">Data Analytics</h2>
+        <p class="card-desc">Extract meaning from raw data. Master Excel spreadsheets, query databases with SQL, manipulate data with Pandas, build dashboards in Tableau/Power BI, and apply ML forecasting.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 3. Data Science -->
+      <a href="roadmaps/data-science.html" class="card solid-card" style="--domain-color: #2f855a;" data-keywords="python pandas numpy matplotlib statistics regression classification sql spark fastapi eda machine learning matrix">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+        </div>
+        <h2 class="card-title">Data Science</h2>
+        <p class="card-desc">Extract insights from raw datasets. Build a foundation in statistics, data cleaning, exploratory visual analysis, and classical ML models.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 4. Machine Learning / AI -->
+      <a href="roadmaps/ml-ai.html" class="card solid-card" style="--domain-color: #c2410c;" data-keywords="python pytorch deep learning math neural networks transformer lora llm agents rag langchain vector chromadb pinecone">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <h2 class="card-title">Machine Learning / AI</h2>
+        <p class="card-desc">Dive deep into core mathematical concepts, neural network architectures, PyTorch, Large Language Models (LLMs), and agent workflows.</p>
+        <div class="card-meta">
+          <span class="card-duration">20 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 5. DevOps & Cloud -->
+      <a href="roadmaps/devops-cloud.html" class="card solid-card" style="--domain-color: #0f766e;" data-keywords="docker kubernetes linux terraform ansible aws lambda cloud ci/cd prometheus grafana shell bash networking git">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h2 class="card-title">DevOps & Cloud</h2>
+        <p class="card-desc">Build automated, scalable infrastructures. Master Linux systems, Docker containerization, Kubernetes orchestration, CI/CD, and AWS services.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 6. Mobile Development -->
+      <a href="roadmaps/mobile-dev.html" class="card solid-card" style="--domain-color: #d53f8c;" data-keywords="kotlin swift swiftui compose mvvm mobile ios android room swiftdata api retrofit urlsession local db database">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </div>
+        <h2 class="card-title">Mobile Development</h2>
+        <p class="card-desc">Construct responsive applications for mobile screens. Study Kotlin for Android, Swift for iOS, reactive layouts, APIs, and publishing.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 7. Cybersecurity -->
+      <a href="roadmaps/cybersecurity.html" class="card solid-card" style="--domain-color: #5b21b6;" data-keywords="wireshark cryptography owasp burp suite penetration testing privilege escalation metasploit splunk siem ports scanner nmap">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <h2 class="card-title">Cybersecurity</h2>
+        <p class="card-desc">Defend computing environments. Explore network security, pen testing web apps, privilege escalation, threat hunting, and SIEM analysis.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- 8. DSA & Competitive Programming -->
+      <a href="roadmaps/dsa-cp.html" class="card solid-card" style="--domain-color: #a16207;" data-keywords="big o arrays strings search sort recursion backtracking trees graphs dijkstra dp modular arithmetic stacks queues heap">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <h2 class="card-title">DSA & CP</h2>
+        <p class="card-desc">Excel in coding interviews and technical evaluations. Master data structures, algorithmic paradigms (Greedy, DP), and patterns-based problems.</p>
+        <div class="card-meta">
+          <span class="card-duration">16 WEEKS • 4 PHASES</span>
+          <span class="card-arrow">&rarr;</span>
+        </div>
+      </a>
+
+        </section>
+
+    <!-- What This Roadmap Doesn't Cover Section -->
+    <section class="out-of-scope-section" style="margin: 4rem 0 6rem; scroll-margin-top: 8rem;">
+      <h2 style="font-family: var(--font-serif); font-size: 1.85rem; font-weight: 600; margin-bottom: 2rem; text-align: center; color: var(--text-primary);">What This Roadmap Doesn't Cover</h2>
+      <div class="out-of-scope-card" style="background-color: #121210; border: 1px solid var(--border-color); border-left: 4px solid var(--accent); border-radius: 12px; padding: 2.25rem; max-width: 720px; margin: 0 auto; box-shadow: var(--card-shadow); color: #eae6df;">
+        <div style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;">
+          <svg style="color: var(--accent); flex-shrink: 0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; color: #ffffff;">Out of Scope Topics</h3>
+            <p style="font-size: 0.9rem; color: #9e9a92; margin-top: 0.25rem;">This study guide is focused strictly on core technical execution and domain engineering pipelines. To maintain focus, we exclude the following career preparation details:</p>
+          </div>
+        </div>
+        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.85rem; list-style: none; padding-left: 0.5rem;">
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>Soft skills & communication training
+          </li>
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>Company-specific interview prep
+          </li>
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>College academics & exam preparation
+          </li>
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>Internship hunting strategies
+          </li>
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>Entrepreneurship & startup building
+          </li>
+          <li style="font-size: 0.9rem; color: #eae6df; position: relative; padding-left: 1.25rem;">
+            <span style="position: absolute; left: 0; color: var(--accent); font-weight: bold;">&bull;</span>Hardware & embedded systems
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        &ldquo;The journey ends, but the grind never does.&rdquo;
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
