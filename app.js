@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Active Roadmap ID Resolution ---
+  const getRoadmapIdFromPath = () => {
+    try {
+      const path = window.location.pathname;
+      const filename = path.substring(path.lastIndexOf('/') + 1);
+      if (filename && filename.endsWith('.html') && filename !== 'index.html' && filename !== 'viewer.html') {
+        return filename.replace('.html', '');
+      }
+    } catch (e) {}
+    return null;
+  };
+
+  let activeRoadmapId = null;
+  if (typeof roadmapId !== 'undefined') {
+    activeRoadmapId = roadmapId;
+  } else {
+    activeRoadmapId = getRoadmapIdFromPath();
+  }
+
   // --- Theme Management ---
   const initTheme = () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
@@ -812,7 +831,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Phase Lock Manager ---
   const initPhaseLocks = () => {
-    if (!roadmapId) return;
+    if (!activeRoadmapId) return;
     
     const phaseSections = document.querySelectorAll('.phase-section');
     phaseSections.forEach((section, idx) => {
@@ -820,7 +839,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (phaseNum === 1) return; // Phase 1 is always unlocked
       
       const prevPhaseNum = phaseNum - 1;
-      const isPrevPassed = localStorage.getItem(`roadmap-${roadmapId}-phase-${prevPhaseNum}-passed`) === 'true';
+      const isPrevPassed = localStorage.getItem(`roadmap-${activeRoadmapId}-phase-${prevPhaseNum}-passed`) === 'true';
       
       // Remove existing lock overlay if any
       const existingOverlay = section.querySelector('.phase-lock-overlay');
@@ -915,7 +934,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Mock Test Quiz Controller ---
   const initMockTests = () => {
-    if (!roadmapId) return;
+    if (!activeRoadmapId) return;
     
     const quizCards = document.querySelectorAll('.mock-test-card');
     quizCards.forEach(card => {
@@ -1128,7 +1147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         
         if (passed) {
-          localStorage.setItem(`roadmap-${roadmapId}-phase-${phaseNum}-passed`, 'true');
+          localStorage.setItem(`roadmap-${activeRoadmapId}-phase-${phaseNum}-passed`, 'true');
           initPhaseLocks();
           
           try {
@@ -1199,7 +1218,7 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
         
-        const cacheKey = `roadmap-${roadmapId}-topic-${topic}-simplified`;
+        const cacheKey = `roadmap-${activeRoadmapId}-topic-${topic}-simplified`;
         const cachedNotes = localStorage.getItem(cacheKey);
         
         if (cachedNotes) {
@@ -1266,7 +1285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- AI Doubt Solver Chat Panel ---
   const initDoubtSolver = () => {
-    if (!roadmapId) return;
+    if (!activeRoadmapId) return;
     
     const floatingBtn = document.createElement('button');
     floatingBtn.className = 'ai-doubt-solver-btn';
