@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Default fallback Gemini API key provided by user
+  const DEFAULT_GEMINI_KEY = 'AIzaSyDwenvRAxJXPrmZjyznQ7YodF6nPPNC_6U';
+
   // --- Active Roadmap ID Resolution ---
   const getRoadmapIdFromPath = () => {
     try {
@@ -97,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputKey = document.getElementById('input-api-key');
 
     const openSettings = () => {
-      inputKey.value = localStorage.getItem('gemini_api_key') || '';
+      inputKey.value = localStorage.getItem('gemini_api_key') || DEFAULT_GEMINI_KEY;
       overlay.classList.add('open');
     };
 
@@ -888,7 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Gemini API Call Core Helper ---
   const askGemini = async (systemPrompt, userPrompt, isJson = false) => {
-    const apiKey = localStorage.getItem('gemini_api_key');
+    const apiKey = localStorage.getItem('gemini_api_key') || DEFAULT_GEMINI_KEY;
     if (!apiKey) {
       throw new Error("API_KEY_MISSING");
     }
@@ -1014,7 +1017,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch quiz questions from Gemini
     const loadQuiz = async () => {
-      const apiKey = localStorage.getItem('gemini_api_key');
+      const apiKey = localStorage.getItem('gemini_api_key') || DEFAULT_GEMINI_KEY;
       if (!apiKey) {
         loadingPanel.innerHTML = `
           <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
@@ -1206,7 +1209,7 @@ document.addEventListener('DOMContentLoaded', () => {
           panel.appendChild(wrapper);
         }
         
-        const apiKey = localStorage.getItem('gemini_api_key');
+        const apiKey = localStorage.getItem('gemini_api_key') || DEFAULT_GEMINI_KEY;
         if (!apiKey) {
           wrapper.innerHTML = `
             <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
@@ -1350,7 +1353,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chatMessages.appendChild(userMsg);
       chatMessages.scrollTop = chatMessages.scrollHeight;
       
-      const apiKey = localStorage.getItem('gemini_api_key');
+      const apiKey = localStorage.getItem('gemini_api_key') || DEFAULT_GEMINI_KEY;
       if (!apiKey) {
         const alertMsg = document.createElement('div');
         alertMsg.className = 'ai-message system-alert';
