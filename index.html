@@ -23,12 +23,15 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </span>
             <ul class="dropdown-menu">
-              <li class="dropdown-header">Engineering Portals</li>
+              <li class="dropdown-header">B.Tech Portals</li>
+              <li><a href="btech.html">🎓 B.Tech Hub</a></li>
               <li><a href="btech-software.html">💻 Software Engineering</a></li>
+              <li><a href="btech-hardware.html">🛠️ Hardware Engineering Hub</a></li>
               <li><a href="btech-ece.html">📡 Electronics &amp; Communication (ECE)</a></li>
               <li><a href="btech-eee.html">⚡ Electrical &amp; Electronics (EEE)</a></li>
               <li><a href="btech-mechanical.html">⚙️ Mechanical Engineering</a></li>
               <li class="dropdown-header">Government Exams</li>
+              <li><a href="government.html">🏛️ Government Hub</a></li>
               <li><a href="government-central.html">🏛️ Central Government Exams</a></li>
               <li><a href="government-state.html">🌲 State Government Exams</a></li>
             </ul>
@@ -56,12 +59,15 @@
     </div>
     <ul class="mobile-menu-links">
       <li><a href="index.html" class="mobile-menu-link">Home</a></li>
-      <li class="mobile-menu-section-title">Portals</li>
+      <li class="mobile-menu-section-title">B.Tech Portals</li>
+      <li><a href="btech.html" class="mobile-menu-link">🎓 B.Tech Hub</a></li>
       <li><a href="btech-software.html" class="mobile-menu-link">💻 Software Engineering</a></li>
+      <li><a href="btech-hardware.html" class="mobile-menu-link">🛠️ Hardware Engineering Hub</a></li>
       <li><a href="btech-ece.html" class="mobile-menu-link">📡 Electronics &amp; Communication</a></li>
       <li><a href="btech-eee.html" class="mobile-menu-link">⚡ Electrical &amp; Electronics</a></li>
       <li><a href="btech-mechanical.html" class="mobile-menu-link">⚙️ Mechanical Engineering</a></li>
       <li class="mobile-menu-section-title">Government Exams</li>
+      <li><a href="government.html" class="mobile-menu-link">🏛️ Government Hub</a></li>
       <li><a href="government-central.html" class="mobile-menu-link">🏛️ Central Government</a></li>
       <li><a href="government-state.html" class="mobile-menu-link">🌲 State Government</a></li>
     </ul>
@@ -89,6 +95,9 @@
 
     <!-- Search Section -->
     <div class="search-container">
+      <p class="search-quote" style="text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.15rem; font-family: var(--font-serif); font-style: italic;">
+        "The roadmap you need — anything, anytime. Just search and get it. ✨"
+      </p>
       <div class="search-wrapper">
         <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8"></circle>
@@ -98,37 +107,19 @@
       </div>
     </div>
 
-    <!-- Category Navigation Cards (Portals) - 6 Portals -->
-    <div class="categories-container" id="homepage-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-      <a href="btech-software.html" class="category-card">
-        <div class="category-card-icon">💻</div>
-        <h2 class="category-card-title">Software Engineering</h2>
-        <p class="category-card-desc">Detailed 16-week study guides for AI/ML, Cloud, DevOps, Blockchain, and Cybersecurity.</p>
+    <!-- Category Navigation Cards (Portals) - 2 Portals -->
+    <div class="categories-container" id="homepage-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
+      <a href="btech.html" class="category-card" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="category-card-icon" style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
+        <h2 class="category-card-title">B.Tech Roadmaps</h2>
+        <p class="category-card-desc">Comprehensive week-by-week syllabus and placement guides for Software and Hardware (ECE, EEE, Mechanical) branches.</p>
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem;">Explore B.Tech Careers &rarr;</span>
       </a>
-      <a href="btech-ece.html" class="category-card">
-        <div class="category-card-icon">📡</div>
-        <h2 class="category-card-title">ECE (Electronics)</h2>
-        <p class="category-card-desc">Core syllabus and placement roadmaps for VLSI, embedded systems, IoT, and communications.</p>
-      </a>
-      <a href="btech-eee.html" class="category-card">
-        <div class="category-card-icon">⚡</div>
-        <h2 class="category-card-title">EEE (Electrical)</h2>
-        <p class="category-card-desc">Master electric machinery, EV designs, smart grids, and industrial automation.</p>
-      </a>
-      <a href="btech-mechanical.html" class="category-card">
-        <div class="category-card-icon">⚙️</div>
-        <h2 class="category-card-title">Mechanical Engineering</h2>
-        <p class="category-card-desc">Phase-wise syllabus guides for CAD/CAM, automotive, robotics, and manufacturing.</p>
-      </a>
-      <a href="government-central.html" class="category-card">
-        <div class="category-card-icon">🏛️</div>
-        <h2 class="category-card-title">Central Government Exams</h2>
-        <p class="category-card-desc">Syllabus guidelines and mock strategies for premier civil services like IAS, IPS, and SSC.</p>
-      </a>
-      <a href="government-state.html" class="category-card">
-        <div class="category-card-icon">🌲</div>
-        <h2 class="category-card-title">State Government Exams</h2>
-        <p class="category-card-desc">Navigate civil services, administrative officers, and department examinations at state levels.</p>
+      <a href="government.html" class="category-card" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
+        <div class="category-card-icon" style="font-size: 3rem; margin-bottom: 1rem;">🏛️</div>
+        <h2 class="category-card-title">Government Exams</h2>
+        <p class="category-card-desc">Structured preparation roadmaps, recommended books, exam patterns, and strategy guides for Central and State civil service exams.</p>
+        <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem;">Explore Gov Exams &rarr;</span>
       </a>
     </div>
 

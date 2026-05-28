@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Government Exams Hub - CareerPath India</title>
+  <meta name="description" content="Explore preparation roadmaps for Central and State government examinations.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link dropdown-trigger active">
+              Roadmaps
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">B.Tech Portals</li>
+              <li><a href="btech.html">🎓 B.Tech Hub</a></li>
+              <li><a href="btech-software.html">💻 Software Engineering</a></li>
+              <li><a href="btech-hardware.html">🛠️ Hardware Engineering Hub</a></li>
+              <li><a href="btech-ece.html">📡 Electronics &amp; Communication (ECE)</a></li>
+              <li><a href="btech-eee.html">⚡ Electrical &amp; Electronics (EEE)</a></li>
+              <li><a href="btech-mechanical.html">⚙️ Mechanical Engineering</a></li>
+              <li class="dropdown-header">Government Exams</li>
+              <li><a href="government.html">🏛️ Government Hub</a></li>
+              <li><a href="government-central.html">🏛️ Central Government Exams</a></li>
+              <li><a href="government-state.html">🌲 State Government Exams</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
+      <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+      <li class="mobile-menu-section-title">B.Tech Portals</li>
+      <li><a href="btech.html" class="mobile-menu-link">🎓 B.Tech Hub</a></li>
+      <li><a href="btech-software.html" class="mobile-menu-link">💻 Software Engineering</a></li>
+      <li><a href="btech-hardware.html" class="mobile-menu-link">🛠️ Hardware Engineering Hub</a></li>
+      <li><a href="btech-ece.html" class="mobile-menu-link">📡 Electronics &amp; Communication</a></li>
+      <li><a href="btech-eee.html" class="mobile-menu-link">⚡ Electrical &amp; Electronics</a></li>
+      <li><a href="btech-mechanical.html" class="mobile-menu-link">⚙️ Mechanical Engineering</a></li>
+      <li class="mobile-menu-section-title">Government Exams</li>
+      <li><a href="government.html" class="mobile-menu-link">🏛️ Government Hub</a></li>
+      <li><a href="government-central.html" class="mobile-menu-link">🏛️ Central Government</a></li>
+      <li><a href="government-state.html" class="mobile-menu-link">🌲 State Government</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-wrap" style="padding: 3rem 0; margin-bottom: 2rem;">
+    <div class="container hero" style="text-align: center; max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+      <h1 style="font-family: var(--font-sans); font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 1rem;">
+        🏛️ Government Exams Hub
+      </h1>
+      <p style="font-size: 1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+        Choose between Central civil services and State level departmental examinations.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid" style="margin-top: 2rem; margin-bottom: 5rem;">
+      
+          <!-- Central -->
+          <a href="government-central.html" class="card solid-card" style="--domain-color: #319795; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+            <div style="font-size: 3rem; margin-bottom: 1.5rem;">🏛️</div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">Central Government</h2>
+            <p class="card-desc" style="margin-bottom: 1.5rem;">National level civil services, banking, railways, space, and defense exams.</p>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem;">Explore Central Exams &rarr;</span>
+          </a>
+
+          <!-- State -->
+          <a href="government-state.html" class="card solid-card" style="--domain-color: #e53e3e; padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+            <div style="font-size: 3rem; margin-bottom: 1.5rem;">🌲</div>
+            <h2 class="card-title" style="font-size: 1.5rem; margin-bottom: 0.75rem;">State Government</h2>
+            <p class="card-desc" style="margin-bottom: 1.5rem;">State civil services, sub-inspectors, engineering services, and local PSC exams.</p>
+            <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem;">Explore State Exams &rarr;</span>
+          </a>
+    
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        &ldquo;The journey ends, but the grind never does.&rdquo;
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -487,7 +487,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Develop and deploy machine learning models, neural networks, and AI pipelines to solve complex real-world problems.",
     "domain": "software",
     "keywords": "AI Machine Learning Neural Networks Deep Learning PyTorch TensorFlow MLOps Regression Classification",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -497,7 +497,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Protect software systems, networks, and data by designing secure architectures, analyzing threats, and performing pen testing.",
     "domain": "software",
     "keywords": "Cybersecurity Penetration Testing Network Security Cryptography Wireshark Metasploit OWASP Splunk Incident Response",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -507,7 +507,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design and manage scalable, reliable, and secure cloud infrastructure on public clouds (AWS, GCP, Azure) using modern architectural patterns.",
     "domain": "software",
     "keywords": "Cloud Computing AWS Terraform Kubernetes Docker IAM DevOps CI/CD Microservices High Availability Serverless",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -517,7 +517,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Analyze large scale data, build statistics pipelines, configure ETL workflows, and prepare enterprise datasets for ML models.",
     "domain": "software",
     "keywords": "Data Engineering Data Science SQL Pandas Spark ETL Airflow Hadoop Data Warehousing Big Data Data Pipelines",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -527,7 +527,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Secure AI/ML systems against adversarial attacks, data poisoning, prompt injection, and intellectual property theft.",
     "domain": "software",
     "keywords": "AI Security Adversarial Attacks Prompt Injection Data Poisoning Model Evasion Security Auditing LLM Vulnerabilities",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -537,7 +537,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Automate build pipelines, configure container deployments, write Infrastructure as Code, and manage system observability.",
     "domain": "software",
     "keywords": "DevOps SRE CI/CD Jenkins GitHub Actions Docker Kubernetes Linux Terraform Ansible Prometheus Grafana Ansible",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -547,7 +547,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Develop quantum algorithms, program quantum circuits using Qiskit, and simulate quantum architectures on modern computing grids.",
     "domain": "software",
     "keywords": "Quantum Computing Qiskit Quantum Circuits Qubits Quantum Algorithms Deutsch-Jozsa Grover Shor Simulation Quantum Physics",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -557,7 +557,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design smart contracts, build decentralized applications (DApps), and audit blockchain networks using Solidity and Web3 libraries.",
     "domain": "software",
     "keywords": "Blockchain Ethereum Solidity Smart Contracts Web3.js Hardhat DApp ERC-20 ERC-721 Truffle IPFS",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -577,7 +577,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Align business goals with modern IT strategies. Design microservices, secure legacy migrations, and drive cloud transformation journeys.",
     "domain": "software",
     "keywords": "Enterprise Architecture TOGAF Microservices Domain Driven Design Cloud Migration Legacy Systems Security Governance SOA",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -587,7 +587,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design and verify integrated circuits, CMOS logic cells, and execute physical design (P&R) pipelines for microchips.",
     "domain": "ece",
     "keywords": "VLSI CMOS Verilog FPGA ASIC Synthesis Layout Floorplanning DRC LVS STA Setup Hold timing",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -597,7 +597,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Develop hardware-firmware codes, configure RTOS kernel tasks, write driver modules, and design ARM/ESP32 firmware.",
     "domain": "ece",
     "keywords": "Embedded C ARM Cortex RTOS FreeRTOS I2C SPI UART Firmware DMA JTAG Logic Analyzer",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -607,7 +607,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design neuromorphic circuits, design tensor processing units (TPUs), and optimize hardware accelerators for deep neural network execution.",
     "domain": "ece",
     "keywords": "AI Hardware Tensor Processing Unit TPU Accelerator Systolic Array Neuromorphic Quantization MAC Memory Compiler",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -617,7 +617,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design smart connected devices, deploy sensor networks, write MQTT cloud integrations, and configure low-power wireless modules.",
     "domain": "ece",
     "keywords": "IoT Sensors ESP32 RaspberryPi MQTT HTTP BLE Zigbee LoRa gateway cloud dashboard integration",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -627,7 +627,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design robotic kinematics, implement feedback control loops, write ROS nodes, and integrate vision sensors for autonomous navigation.",
     "domain": "ece",
     "keywords": "Robotics Kinematics ROS C++ PID Control LiDAR OpenCV Path Planning SLAM Odometry Simulation",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -637,7 +637,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design baseband modems, compile wireless channel models, configure OFDM grids, and design beamforming RF systems.",
     "domain": "ece",
     "keywords": "5G 6G Wireless Communication OFDM MIMO Beamforming baseband processing channel modeling SDR RF Link Budget",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -647,7 +647,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design RF amplifiers, analyze transmission line impedances, design impedance matches on Smith Charts, and perform RF audits.",
     "domain": "ece",
     "keywords": "RF engineering transmission lines impedance matching Smith Chart LNA Mixer filter S-parameters spectrum analyzer",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -657,7 +657,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design Battery Management Systems (BMS), motor control circuits, inverter boards, and CAN bus vehicle telemetry networks.",
     "domain": "ece",
     "keywords": "Electric Vehicle BMS CAN bus Motor Control Inverters Microcontrollers Altium automotive design thermal management",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -667,7 +667,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Study continuous and discrete signals, Z-transforms, convolution, FFT algorithms, and FIR/IIR filter designs.",
     "domain": "ece",
     "keywords": "DSP digital signal processing convolution FFT DFT FIR IIR filter design z-transform MATLAB sampling multirate adaptive filtering",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -677,7 +677,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Write SystemVerilog verification code, build UVM verification environments, configure functional coverage, and run assertions.",
     "domain": "ece",
     "keywords": "SystemVerilog UVM verification ASIC simulation OOP OOP interfaces functional coverage assertions debugging",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -687,7 +687,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Master transmission lines, load flows (Newton-Raphson), symmetrical/unsymmetrical faults, and protection relay operations.",
     "domain": "eee",
     "keywords": "power systems EEE transmission lines load flow faults stability relay circuit breakers smart grid HVDC",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -697,7 +697,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Learn about power devices (SCR, IGBT), converters, buck/boost choppers, inverters, and PWM switching systems.",
     "domain": "eee",
     "keywords": "power electronics EEE SCR IGBT buck boost converter choppers inverters cycloconverters PWM MATLAB",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -707,7 +707,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design electric powertrains, optimize high-voltage traction batteries, configure regenerative braking, and program industrial motor drives.",
     "domain": "eee",
     "keywords": "EV Powertrain Traction Battery PMSM Motor Drives Regenerative Braking BMS High Voltage Safety EEE",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -717,7 +717,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design solar PV systems, wind turbine generators, microgrid storage arrays, and configure grid-tied power inverters.",
     "domain": "eee",
     "keywords": "Renewable Energy Solar PV Wind Turbines Microgrids Grid Integration MPPT Battery Storage EEE",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -727,7 +727,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Program industrial PLCs in Ladder logic, design SCADA dashboards, configure fieldbuses, and design plant automation loops.",
     "domain": "eee",
     "keywords": "PLC SCADA Ladder Logic HMI industrial automation Modbus Profibus sensor interfacing motor starter",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -737,7 +737,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design intelligent power distribution systems, configure smart meters, integrate grid storage, and manage SCADA network security.",
     "domain": "eee",
     "keywords": "Smart Grid Power Systems Smart Meters SCADA Microgrids Cybersecurity Distributed Generation EEE",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -747,7 +747,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Manage cleanroom systems, photolithography pipelines, silicon wafer oxidation, plasma etching, and chip packaging facilities.",
     "domain": "eee",
     "keywords": "Semiconductor Manufacturing Wafer Fabrication Photolithography Etching Cleanroom Metrology CMP EEE Packaging",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -757,7 +757,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design electrical switchgear layouts, draw control panel schematics in AutoCAD Electrical, size cables, and configure building electrical codes.",
     "domain": "eee",
     "keywords": "Electrical Design AutoCAD Electrical schematics cable sizing switchgear panel design codes standards grounding EEE",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -767,7 +767,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Master transfer functions, block reduction, time response, and stability analysis (Root Locus, Bode, Nyquist plots).",
     "domain": "eee",
     "keywords": "control systems EEE PID transfer function root locus bode plot stability nyquist state space compensators",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -777,7 +777,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design smart sensor networks, connect PLC fieldbuses to cloud gateways, write Modbus/MQTT brokers, and compile low-power firmware.",
     "domain": "eee",
     "keywords": "IIoT industrial IoT Modbus MQTT gateway Node-RED PLC connection smart sensor dashboard EEE",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -787,7 +787,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Master engineering mechanics, strength of materials, thermodynamics, fluid dynamics, manufacturing processes, and computer-aided design (CAD/CAE).",
     "domain": "mechanical",
     "keywords": "solidworks cad mechanical engineering structural stress mechanics material fluid thermodynamics combustion machining ansys design",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -797,7 +797,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Study internal combustion engines, chassis, transmission gearboxes, brakes, suspension systems, and EV battery drives.",
     "domain": "mechanical",
     "keywords": "automobile engineering EEE mechanical engines chassis transmission gearbox differential steering brakes suspension EV battery",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -807,7 +807,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design physical robot manipulators, model link joints, calculate kinematics, and configure hydraulic/pneumatic actuators.",
     "domain": "mechanical",
     "keywords": "robotics mechanical kinematics inverse kinematics servos actuators linkages arm design dynamics",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -817,7 +817,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Study casting riser design, welding processes, metal cutting Merchant circles, Taylor tool life, and CNC machining.",
     "domain": "mechanical",
     "keywords": "manufacturing science EEE mechanical casting gating system welding heat affected zone metal cutting merchant circle tool life forming",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -827,7 +827,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design aerodynamics wing structures, analyze jet engine cycles, model rocket propulsion systems, and compute flight mechanics trajectories.",
     "domain": "mechanical",
     "keywords": "aerospace engineering aerodynamics compressible flow gas turbines rocket propulsion structural analysis orbit mechanics",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -837,7 +837,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Integrate mechanical actuators with microcontrollers, write feedback control algorithms, configure analog sensors, and program PLC systems.",
     "domain": "mechanical",
     "keywords": "mechatronics actuators sensors Arduino C control loops signal conditioning encoders",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -847,7 +847,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Master first/second laws of thermodynamics, Rankine steam cycles, conduction/convection heat transfer, and gas turbines.",
     "domain": "mechanical",
     "keywords": "thermal engineering thermodynamics Rankine cycle steam power Brayton heat transfer conduction convection radiation refrigeration psychrometrics EEE mechanical",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -857,7 +857,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Program manufacturing assembly lines, configure industrial robots (SCARA, Delta), compile PLC ladder logic, and monitor sensors.",
     "domain": "mechanical",
     "keywords": "industrial automation PLC SCADA pneumatic sensors SCARA delta robotics motor starter panels",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -867,7 +867,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Establish quality management frameworks, compile SPC control charts, audit dimensional tolerances, and run Non-Destructive Testing (NDT) audits.",
     "domain": "mechanical",
     "keywords": "quality control metrology NDT non destructive testing SPC statistical process control ISO 9001 GD&T tolerances",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -877,7 +877,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design wind turbine aerodynamic blades, model solar thermal power collectors, configure geothermal loops, and run CFD fluid simulations.",
     "domain": "mechanical",
     "keywords": "renewable energy solar thermal wind aerodynamics geothermal biomass CFD simulation mechanical",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -887,7 +887,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Top premier civil service of India, responsible for administering districts, policy implementation, and administrative leadership.",
     "domain": "gov-central",
     "keywords": "UPSC IAS Civil Services GS Prelims Mains CSAT Public Policy Constitution Governance History Indian Economy",
-    "duration": "16 Weeks",
+    "duration": "72 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -897,7 +897,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Responsible for state-level security, maintaining law and order, intelligence operations, and policing administration across districts.",
     "domain": "gov-central",
     "keywords": "UPSC IPS Civil Services Law Enforcement Criminal Justice Internal Security Forensics Policing Security Laws",
-    "duration": "16 Weeks",
+    "duration": "60 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -907,7 +907,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Indian diplomat represent the nation globally, managing embassies, trade relations, international organizations, and foreign policy.",
     "domain": "gov-central",
     "keywords": "UPSC IFS Foreign Service Diplomacy Foreign Policy International Relations Global Trade Bilateral Treaties UN",
-    "duration": "16 Weeks",
+    "duration": "56 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -917,7 +917,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Responsible for managing direct and indirect tax collections, policy formulation, tax audits, and combatting tax evasion.",
     "domain": "gov-central",
     "keywords": "UPSC IRS Revenue Service Taxation Direct Tax GST Income Tax Auditing Money Laundering Customs Finance",
-    "duration": "16 Weeks",
+    "duration": "52 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -927,7 +927,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Recruited as Inspectors in Income Tax, Central Excise, Preventive Officers, or ASOs in Central Secretariat and Ministries.",
     "domain": "gov-central",
     "keywords": "SSC CGL Staff Selection Commission Quant Aptitude English Grammar Reasoning General Awareness Audit Files",
-    "duration": "16 Weeks",
+    "duration": "36 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -937,7 +937,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Manage financial stability, monetary policy operations, government debt, currency circulation, and bank regulatory frameworks.",
     "domain": "gov-central",
     "keywords": "RBI Grade B Reserve Bank Monetary Policy Economic Social Issues Financial Management Banking Regulation Finance",
-    "duration": "16 Weeks",
+    "duration": "32 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -947,7 +947,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Manage bank branch operations, credit appraisals, loan processing, customer accounts, and retail banking services.",
     "domain": "gov-central",
     "keywords": "IBPS PO SBI PO Banking Exam Quantitative Aptitude Reasoning English General Awareness Bank Accounts Loans",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -957,7 +957,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Officer rank in Central Armed Police Forces (BSF, CRPF, CISF, ITBP, SSB), leading border guarding and internal security units.",
     "domain": "gov-central",
     "keywords": "UPSC CAPF Assistant Commandant BSF CRPF CISF Internal Security Physical Test General Studies Essay Pr\u00e9cis",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -967,7 +967,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Design satellite payloads, build launch vehicles, develop missile guidance systems, and conduct advanced defense/space research.",
     "domain": "gov-central",
     "keywords": "ISRO DRDO Scientist Engineering Math Space Systems Aerospace Rockets Missiles Aerospace Defense",
-    "duration": "16 Weeks",
+    "duration": "40 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -977,7 +977,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Recruited as Graduate Engineer Trainees (GET) at Maharatna/Navratna PSUs (NTPC, ONGC, BHEL, IOCL) using GATE scores.",
     "domain": "gov-central",
     "keywords": "GATE Exam PSU Recruitment BHEL ONGC NTPC IOCL Engineering Mathematics Aptitude Technical Syllabus",
-    "duration": "16 Weeks",
+    "duration": "32 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -987,7 +987,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Recruited through State PSC (Group 1), responsible for sub-divisional administration, land revenue, and local policy implementations.",
     "domain": "gov-state",
     "keywords": "State PSC Civil Services Group 1 Deputy Collector Land Revenue Local Government District Administration Regional Schemes",
-    "duration": "16 Weeks",
+    "duration": "48 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -997,7 +997,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "State police officer recruited through State PSC, managing sub-divisional police stations, local law enforcement, and crime prevention.",
     "domain": "gov-state",
     "keywords": "State PSC Police Officer DSP Law Enforcement Crime Prevention Local Riots State Police Police Ethics",
-    "duration": "16 Weeks",
+    "duration": "32 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1007,7 +1007,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Administer state commercial taxes, monitor SGST compliance, perform business tax audits, and investigate regional tax evasions.",
     "domain": "gov-state",
     "keywords": "State PSC CTO Commercial Tax SGST Compliance Business Audits Tax Evasion Revenue GST Portal",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1017,7 +1017,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Process files, manage correspondence, draft government notes, and assist in secretariat policy administrations.",
     "domain": "gov-state",
     "keywords": "State PSC ASO Assistant Section Officer File Processing Secretariat Office Manual Drafting Note Sheets",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1027,7 +1027,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Manage village panchayat development plans, monitor rural schemes (MGNREGA), allocate local grants, and audit rural infrastructure projects.",
     "domain": "gov-state",
     "keywords": "State PSC PDO Panchayat Development Rural Schemes MGNREGA Village Infrastructure Local Grants Audit",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1037,7 +1037,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Recruited through State PSC, managing urban local bodies (municipalities), urban planning, civic infrastructure, and waste management.",
     "domain": "gov-state",
     "keywords": "State PSC Municipal Commissioner Urban Planning Civic Infrastructure Waste Management Municipal Finance City Administration",
-    "duration": "16 Weeks",
+    "duration": "32 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1047,7 +1047,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Monitor alcoholic beverages manufacturing/distribution, check illicit liquor networks, enforce excise acts, and collect state revenues.",
     "domain": "gov-state",
     "keywords": "State PSC Excise Officer Excise Duty Illicit Liquor Enforce Excise Act Revenue Licenses Checkpoints",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1057,7 +1057,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Officer in PWD, Water Resources, or Irrigation departments, managing infrastructure design, estimations, contracting, and site execution.",
     "domain": "gov-state",
     "keywords": "State PSC Assistant Engineer PWD Water Resources Infrastructure Design Estimating Contracting Execution",
-    "duration": "16 Weeks",
+    "duration": "28 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1067,7 +1067,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Recruited through State PSC or NET, teaching undergraduate/postgraduate courses at government colleges, conducting research, and designing curriculums.",
     "domain": "gov-state",
     "keywords": "State PSC Lecturer Professor UGC NET SET Pedagogy Academic Research Curriculum Design College Education",
-    "duration": "16 Weeks",
+    "duration": "24 Weeks",
     "phases": "4 PHASES"
   },
   {
@@ -1077,7 +1077,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "desc": "Officer in state corporations (electricity boards, transit utilities, state warehouses), managing operations, financial books, and regional projects.",
     "domain": "gov-state",
     "keywords": "State PSC PSU Officer Transit Utilities Electricity Boards Operations Finance Corporate Governance Audits",
-    "duration": "16 Weeks",
+    "duration": "20 Weeks",
     "phases": "4 PHASES"
   }
 ];
