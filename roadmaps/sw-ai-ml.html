@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Foundations & Regression Models
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish statistical math bases and implement classical linear models.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Foundations & Regression Models
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish statistical math bases and implement classical linear models.</p>
+   
         <!-- Week 1: Mathematics & Python Foundations -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-1-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Linear algebra: matrices, vectors, eigenvalues, and transformations</span>
+                <button class="simplify-btn" data-topic="Linear algebra: matrices, vectors, eigenvalues, and transformations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-1-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Calculus: partial derivatives, gradients, and optimization</span>
+                <button class="simplify-btn" data-topic="Calculus: partial derivatives, gradients, and optimization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-2-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Data cleaning: imputation, outliers detection, and normalizations</span>
+                <button class="simplify-btn" data-topic="Data cleaning: imputation, outliers detection, and normalizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-2-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Exploratory analysis: visualization using Matplotlib and Seaborn</span>
+                <button class="simplify-btn" data-topic="Exploratory analysis: visualization using Matplotlib and Seaborn">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-3-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Linear regression: cost functions, MSE, and gradient descent</span>
+                <button class="simplify-btn" data-topic="Linear regression: cost functions, MSE, and gradient descent">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-3-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Logistic regression: binary class math, sigmoid, and log loss</span>
+                <button class="simplify-btn" data-topic="Logistic regression: binary class math, sigmoid, and log loss">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-4-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Regularization: Ridge (L2), Lasso (L1), and elastic net</span>
+                <button class="simplify-btn" data-topic="Regularization: Ridge (L2), Lasso (L1), and elastic net">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-4-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Cross-validation: train-test splits, k-fold splits, and metrics</span>
+                <button class="simplify-btn" data-topic="Cross-validation: train-test splits, k-fold splits, and metrics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-5-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-5-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-6-1" class="topic-checkbox">
                 <label for="sw-ai-ml-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="sw-ai-ml-1-6-2" class="topic-checkbox">
                 <label for="sw-ai-ml-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linear algebra: matrices, vectors, eigenvalues, and transformations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linear algebra: matrices, vectors, eigenvalues, and transformations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra: matrices, vectors, eigenvalues, and transformations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Calculus: partial derivatives, gradients, and optimization typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Calculus: partial derivatives, gradients, and optimization.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Calculus: partial derivatives, gradients, and optimization&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Data cleaning: imputation, outliers detection, and normalizations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Data cleaning: imputation, outliers detection, and normalizations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Data cleaning: imputation, outliers detection, and normalizations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Exploratory analysis: visualization using Matplotlib and Seaborn?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Exploratory analysis: visualization using Matplotlib and Seaborn&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linear regression: cost functions, MSE, and gradient descent?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linear regression: cost functions, MSE, and gradient descent.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear regression: cost functions, MSE, and gradient descent&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Logistic regression: binary class math, sigmoid, and log loss typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Logistic regression: binary class math, sigmoid, and log loss.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Logistic regression: binary class math, sigmoid, and log loss&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Regularization: Ridge (L2), Lasso (L1), and elastic net practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Regularization: Ridge (L2), Lasso (L1), and elastic net systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Regularization: Ridge (L2), Lasso (L1), and elastic net&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Cross-validation: train-test splits, k-fold splits, and metrics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Cross-validation: train-test splits, k-fold splits, and metrics&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra: matrices, vectors, eigenvalues, and transformations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra: matrices, vectors, eigenvalues, and transformations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Advanced Classification & Ensemble Method
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master tree models, Support Vector Machines, and ensemble techniques.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Advanced Classification & Ensemble Method
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master tree models, Support Vector Machines, and ensemble techniques.</p>
+   
         <!-- Week 7: Decision Trees & Entropy -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-1-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Information gain, Gini impurity, and tree split math</span>
+                <button class="simplify-btn" data-topic="Information gain, Gini impurity, and tree split math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-1-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Tree pruning: avoiding overfitting, decision boundaries plotting</span>
+                <button class="simplify-btn" data-topic="Tree pruning: avoiding overfitting, decision boundaries plotting">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-2-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-2-1" class="checkmark"></label>
                 <span class="topic-text">SVM math: hyperplanes, margin maximization, and slack</span>
+                <button class="simplify-btn" data-topic="SVM math: hyperplanes, margin maximization, and slack">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-2-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Kernel trick: polynomial and Radial Basis Function (RBF) kernels</span>
+                <button class="simplify-btn" data-topic="Kernel trick: polynomial and Radial Basis Function (RBF) kernels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-3-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Bagging concepts: Random Forest bagging and feature splits</span>
+                <button class="simplify-btn" data-topic="Bagging concepts: Random Forest bagging and feature splits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-3-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Boosting algorithms: AdaBoost, Gradient Boosting, and XGBoost</span>
+                <button class="simplify-btn" data-topic="Boosting algorithms: AdaBoost, Gradient Boosting, and XGBoost">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-4-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Unsupervised clustering: K-means and hierarchical methods</span>
+                <button class="simplify-btn" data-topic="Unsupervised clustering: K-means and hierarchical methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-4-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Dimensionality reduction: Principal Component Analysis (PCA)</span>
+                <button class="simplify-btn" data-topic="Dimensionality reduction: Principal Component Analysis (PCA)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-5-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-5-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-6-1" class="topic-checkbox">
                 <label for="sw-ai-ml-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="sw-ai-ml-2-6-2" class="topic-checkbox">
                 <label for="sw-ai-ml-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Information gain, Gini impurity, and tree split math?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Information gain, Gini impurity, and tree split math.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Information gain, Gini impurity, and tree split math&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Tree pruning: avoiding overfitting, decision boundaries plotting typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Tree pruning: avoiding overfitting, decision boundaries plotting.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Tree pruning: avoiding overfitting, decision boundaries plotting&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting SVM math: hyperplanes, margin maximization, and slack practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of SVM math: hyperplanes, margin maximization, and slack systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;SVM math: hyperplanes, margin maximization, and slack&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Kernel trick: polynomial and Radial Basis Function (RBF) kernels?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Kernel trick: polynomial and Radial Basis Function (RBF) kernels&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Bagging concepts: Random Forest bagging and feature splits?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Bagging concepts: Random Forest bagging and feature splits.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bagging concepts: Random Forest bagging and feature splits&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Boosting algorithms: AdaBoost, Gradient Boosting, and XGBoost typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Boosting algorithms: AdaBoost, Gradient Boosting, and XGBoost.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Boosting algorithms: AdaBoost, Gradient Boosting, and XGBoost&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Unsupervised clustering: K-means and hierarchical methods practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Unsupervised clustering: K-means and hierarchical methods systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Unsupervised clustering: K-means and hierarchical methods&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Dimensionality reduction: Principal Component Analysis (PCA)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Dimensionality reduction: Principal Component Analysis (PCA)&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Information gain, Gini impurity, and tree split math&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Information gain, Gini impurity, and tree split math&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Deep Learning & Neural Networks
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study multi-layer perceptrons, convolutional nets, and PyTorch model designs.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Deep Learning & Neural Networks
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study multi-layer perceptrons, convolutional nets, and PyTorch model designs.</p>
+   
         <!-- Week 13: Deep Neural Networks basics -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-1-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design</span>
+                <button class="simplify-btn" data-topic="Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-1-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Backpropagation: chain rule, loss calculations, and weight updates</span>
+                <button class="simplify-btn" data-topic="Backpropagation: chain rule, loss calculations, and weight updates">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-2-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-2-1" class="checkmark"></label>
                 <span class="topic-text">PyTorch tensors, autograd engine, and custom Dataset loaders</span>
+                <button class="simplify-btn" data-topic="PyTorch tensors, autograd engine, and custom Dataset loaders">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-2-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Writing training loops, loss functions, and optimizer steps</span>
+                <button class="simplify-btn" data-topic="Writing training loops, loss functions, and optimizer steps">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-3-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-3-1" class="checkmark"></label>
                 <span class="topic-text">CNN convolutions, pooling layers, and kernel strides configuration</span>
+                <button class="simplify-btn" data-topic="CNN convolutions, pooling layers, and kernel strides configuration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-3-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Architectures: ResNet, VGG, and transfer learning workflows</span>
+                <button class="simplify-btn" data-topic="Architectures: ResNet, VGG, and transfer learning workflows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-4-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Recurrent Neural Networks (RNN) and LSTM cell designs</span>
+                <button class="simplify-btn" data-topic="Recurrent Neural Networks (RNN) and LSTM cell designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-4-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Natural Language Processing: word embeddings, Word2Vec, and tokenizers</span>
+                <button class="simplify-btn" data-topic="Natural Language Processing: word embeddings, Word2Vec, and tokenizers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-5-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-5-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-6-1" class="topic-checkbox">
                 <label for="sw-ai-ml-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="sw-ai-ml-3-6-2" class="topic-checkbox">
                 <label for="sw-ai-ml-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Backpropagation: chain rule, loss calculations, and weight updates typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Backpropagation: chain rule, loss calculations, and weight updates.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Backpropagation: chain rule, loss calculations, and weight updates&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PyTorch tensors, autograd engine, and custom Dataset loaders practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PyTorch tensors, autograd engine, and custom Dataset loaders systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PyTorch tensors, autograd engine, and custom Dataset loaders&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Writing training loops, loss functions, and optimizer steps?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Writing training loops, loss functions, and optimizer steps&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of CNN convolutions, pooling layers, and kernel strides configuration?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for CNN convolutions, pooling layers, and kernel strides configuration.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;CNN convolutions, pooling layers, and kernel strides configuration&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Architectures: ResNet, VGG, and transfer learning workflows typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Architectures: ResNet, VGG, and transfer learning workflows.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Architectures: ResNet, VGG, and transfer learning workflows&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Recurrent Neural Networks (RNN) and LSTM cell designs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Recurrent Neural Networks (RNN) and LSTM cell designs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Recurrent Neural Networks (RNN) and LSTM cell designs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Natural Language Processing: word embeddings, Word2Vec, and tokenizers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Natural Language Processing: word embeddings, Word2Vec, and tokenizers&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Perceptrons: activation functions (ReLU, Sigmoid, Tanh) design&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Transformers & MLOps Deployment
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deeper look into transformer models, LLMs, and robust model serving.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Transformers & MLOps Deployment
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deeper look into transformer models, LLMs, and robust model serving.</p>
+   
         <!-- Week 19: Attention & Transformers -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-1-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Self-attention mechanism: Query, Key, Value calculations</span>
+                <button class="simplify-btn" data-topic="Self-attention mechanism: Query, Key, Value calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-1-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Transformer encoder/decoder blocks and multi-head attention</span>
+                <button class="simplify-btn" data-topic="Transformer encoder/decoder blocks and multi-head attention">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-2-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Pre-trained models, HuggingFace transformers library imports</span>
+                <button class="simplify-btn" data-topic="Pre-trained models, HuggingFace transformers library imports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-2-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-2-2" class="checkmark"></label>
                 <span class="topic-text">LoRA and QLoRA parameter-efficient fine-tuning (PEFT) techniques</span>
+                <button class="simplify-btn" data-topic="LoRA and QLoRA parameter-efficient fine-tuning (PEFT) techniques">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-3-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Quantization: FP16, INT8 formats, and model pruning methods</span>
+                <button class="simplify-btn" data-topic="Quantization: FP16, INT8 formats, and model pruning methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-3-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-3-2" class="checkmark"></label>
                 <span class="topic-text">ONNX runtime conversions and execution speed profiles</span>
+                <button class="simplify-btn" data-topic="ONNX runtime conversions and execution speed profiles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-4-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Model APIs: FastAPI servings, Docker container containerization</span>
+                <button class="simplify-btn" data-topic="Model APIs: FastAPI servings, Docker container containerization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-4-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-4-2" class="checkmark"></label>
                 <span class="topic-text">MLflow tracking, model registries, and Triton inference server</span>
+                <button class="simplify-btn" data-topic="MLflow tracking, model registries, and Triton inference server">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-5-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-5-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-6-1" class="topic-checkbox">
                 <label for="sw-ai-ml-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="sw-ai-ml-4-6-2" class="topic-checkbox">
                 <label for="sw-ai-ml-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;What is the main difference between a Docker container and a Virtual Machine?&quot;, &quot;options&quot;: [&quot;Containers share the host OS kernel, while VMs include a full guest OS.&quot;, &quot;VMs require less memory and storage than containers.&quot;, &quot;Containers run on specialized hardware, while VMs run on standard CPUs.&quot;, &quot;VMs do not support networking or persistent storage operations.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Model APIs: FastAPI servings, Docker container containerization&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Self-attention mechanism: Query, Key, Value calculations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Self-attention mechanism: Query, Key, Value calculations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Self-attention mechanism: Query, Key, Value calculations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Transformer encoder/decoder blocks and multi-head attention typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Transformer encoder/decoder blocks and multi-head attention.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Transformer encoder/decoder blocks and multi-head attention&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Pre-trained models, HuggingFace transformers library imports practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Pre-trained models, HuggingFace transformers library imports systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Pre-trained models, HuggingFace transformers library imports&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with LoRA and QLoRA parameter-efficient fine-tuning (PEFT) techniques?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;LoRA and QLoRA parameter-efficient fine-tuning (PEFT) techniques&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Quantization: FP16, INT8 formats, and model pruning methods?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Quantization: FP16, INT8 formats, and model pruning methods.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Quantization: FP16, INT8 formats, and model pruning methods&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ONNX runtime conversions and execution speed profiles typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ONNX runtime conversions and execution speed profiles.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ONNX runtime conversions and execution speed profiles&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Model APIs: FastAPI servings, Docker container containerization practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Model APIs: FastAPI servings, Docker container containerization systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Model APIs: FastAPI servings, Docker container containerization&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with MLflow tracking, model registries, and Triton inference server?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;MLflow tracking, model registries, and Triton inference server&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI / Machine Learning Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Self-attention mechanism: Query, Key, Value calculations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

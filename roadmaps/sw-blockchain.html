@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Blockchain Basics & Ethereum
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master block hashes, peer-to-peer networks, gas models, and basic Solidity syntax.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Blockchain Basics & Ethereum
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master block hashes, peer-to-peer networks, gas models, and basic Solidity syntax.</p>
+   
         <!-- Week 1: P2P Networks & Consensuses -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-blockchain-1-1-1" class="topic-checkbox">
                 <label for="sw-blockchain-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Distributed ledger, block hash linkages, SHA-256 blocks validation</span>
+                <button class="simplify-btn" data-topic="Distributed ledger, block hash linkages, SHA-256 blocks validation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-blockchain-1-1-2" class="topic-checkbox">
                 <label for="sw-blockchain-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Proof of Work (PoW) vs Proof of Stake (PoS) consensus</span>
+                <button class="simplify-btn" data-topic="Proof of Work (PoW) vs Proof of Stake (PoS) consensus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-blockchain-1-2-1" class="topic-checkbox">
                 <label for="sw-blockchain-1-2-1" class="checkmark"></label>
                 <span class="topic-text">EVM architecture, transaction execution, account types (EOA vs Contract)</span>
+                <button class="simplify-btn" data-topic="EVM architecture, transaction execution, account types (EOA vs Contract)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-blockchain-1-2-2" class="topic-checkbox">
                 <label for="sw-blockchain-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Ethereum gas model: gas limit, base fee, priority fee calculation</span>
+                <button class="simplify-btn" data-topic="Ethereum gas model: gas limit, base fee, priority fee calculation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-blockchain-1-3-1" class="topic-checkbox">
                 <label for="sw-blockchain-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Pragma directives, contract structures, state variables, data types</span>
+                <button class="simplify-btn" data-topic="Pragma directives, contract structures, state variables, data types">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-blockchain-1-3-2" class="topic-checkbox">
                 <label for="sw-blockchain-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Solidity functions: pure, view, public, private visibility</span>
+                <button class="simplify-btn" data-topic="Solidity functions: pure, view, public, private visibility">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-blockchain-1-4-1" class="topic-checkbox">
                 <label for="sw-blockchain-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Control structures, mapping arrays, structs layouts</span>
+                <button class="simplify-btn" data-topic="Control structures, mapping arrays, structs layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-blockchain-1-4-2" class="topic-checkbox">
                 <label for="sw-blockchain-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Memory, storage, calldata locations differences</span>
+                <button class="simplify-btn" data-topic="Memory, storage, calldata locations differences">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-blockchain-1-5-1" class="topic-checkbox">
                 <label for="sw-blockchain-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-blockchain-1-5-2" class="topic-checkbox">
                 <label for="sw-blockchain-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Distributed ledger, block hash linkages, SHA-256 blocks validation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Distributed ledger, block hash linkages, SHA-256 blocks validation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Distributed ledger, block hash linkages, SHA-256 blocks validation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Proof of Work (PoW) vs Proof of Stake (PoS) consensus typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Proof of Work (PoW) vs Proof of Stake (PoS) consensus.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Proof of Work (PoW) vs Proof of Stake (PoS) consensus&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting EVM architecture, transaction execution, account types (EOA vs Contract) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of EVM architecture, transaction execution, account types (EOA vs Contract) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;EVM architecture, transaction execution, account types (EOA vs Contract)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Ethereum gas model: gas limit, base fee, priority fee calculation?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Ethereum gas model: gas limit, base fee, priority fee calculation&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pragma directives, contract structures, state variables, data types?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pragma directives, contract structures, state variables, data types.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pragma directives, contract structures, state variables, data types&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Solidity functions: pure, view, public, private visibility typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Solidity functions: pure, view, public, private visibility.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Solidity functions: pure, view, public, private visibility&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Control structures, mapping arrays, structs layouts practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Control structures, mapping arrays, structs layouts systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Control structures, mapping arrays, structs layouts&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Memory, storage, calldata locations differences?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Memory, storage, calldata locations differences&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Blockchain Developer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Distributed ledger, block hash linkages, SHA-256 blocks validation&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Blockchain Developer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Distributed ledger, block hash linkages, SHA-256 blocks validation&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Solidity Advanced & Hardhat
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study inheritance, modifiers, custom events, and compile with Hardhat framework.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Solidity Advanced & Hardhat
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study inheritance, modifiers, custom events, and compile with Hardhat framework.</p>
+   
         <!-- Week 6: Smart Contract Inheritance -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="sw-blockchain-2-1-1" class="topic-checkbox">
                 <label for="sw-blockchain-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Inheritance structures (is keyword), abstract contracts, interfaces</span>
+                <button class="simplify-btn" data-topic="Inheritance structures (is keyword), abstract contracts, interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="sw-blockchain-2-1-2" class="topic-checkbox">
                 <label for="sw-blockchain-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Method overrides, constructor calling sequences</span>
+                <button class="simplify-btn" data-topic="Method overrides, constructor calling sequences">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-blockchain-2-2-1" class="topic-checkbox">
                 <label for="sw-blockchain-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Function modifiers: writing custom require/assert checks</span>
+                <button class="simplify-btn" data-topic="Function modifiers: writing custom require/assert checks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-blockchain-2-2-2" class="topic-checkbox">
                 <label for="sw-blockchain-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Revert statements, custom errors (gas cost optimization)</span>
+                <button class="simplify-btn" data-topic="Revert statements, custom errors (gas cost optimization)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-blockchain-2-3-1" class="topic-checkbox">
                 <label for="sw-blockchain-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Contract events: indexed parameters logging, topics</span>
+                <button class="simplify-btn" data-topic="Contract events: indexed parameters logging, topics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-blockchain-2-3-2" class="topic-checkbox">
                 <label for="sw-blockchain-2-3-2" class="checkmark"></label>
                 <span class="topic-text">ERC-20 token standard: variables, balance mappings, transfer methods</span>
+                <button class="simplify-btn" data-topic="ERC-20 token standard: variables, balance mappings, transfer methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-blockchain-2-4-1" class="topic-checkbox">
                 <label for="sw-blockchain-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Hardhat project setup, compiling smart contracts</span>
+                <button class="simplify-btn" data-topic="Hardhat project setup, compiling smart contracts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-blockchain-2-4-2" class="topic-checkbox">
                 <label for="sw-blockchain-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Writing contract test scripts using Chai and ethers.js</span>
+                <button class="simplify-btn" data-topic="Writing contract test scripts using Chai and ethers.js">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-blockchain-2-5-1" class="topic-checkbox">
                 <label for="sw-blockchain-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-blockchain-2-5-2" class="topic-checkbox">
                 <label for="sw-blockchain-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Inheritance structures (is keyword), abstract contracts, interfaces?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Inheritance structures (is keyword), abstract contracts, interfaces.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inheritance structures (is keyword), abstract contracts, interfaces&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Method overrides, constructor calling sequences typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Method overrides, constructor calling sequences.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Method overrides, constructor calling sequences&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Function modifiers: writing custom require/assert checks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Function modifiers: writing custom require/assert checks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Function modifiers: writing custom require/assert checks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Revert statements, custom errors (gas cost optimization)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Revert statements, custom errors (gas cost optimization)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Contract events: indexed parameters logging, topics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Contract events: indexed parameters logging, topics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Contract events: indexed parameters logging, topics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ERC-20 token standard: variables, balance mappings, transfer methods typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ERC-20 token standard: variables, balance mappings, transfer methods.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ERC-20 token standard: variables, balance mappings, transfer methods&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Hardhat project setup, compiling smart contracts practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Hardhat project setup, compiling smart contracts systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Hardhat project setup, compiling smart contracts&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Writing contract test scripts using Chai and ethers.js?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Writing contract test scripts using Chai and ethers.js&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Blockchain Developer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inheritance structures (is keyword), abstract contracts, interfaces&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Blockchain Developer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inheritance structures (is keyword), abstract contracts, interfaces&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Decentralized Apps (DApps) & Web3
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Connect frontend websites to metamask wallet and query smart contracts with Web3.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Decentralized Apps (DApps) & Web3
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Connect frontend websites to metamask wallet and query smart contracts with Web3.</p>
+   
         <!-- Week 11: Ethers.js & Web3 libraries -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="sw-blockchain-3-1-1" class="topic-checkbox">
                 <label for="sw-blockchain-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Ethers.js provider setups, signer configurations, contract instances</span>
+                <button class="simplify-btn" data-topic="Ethers.js provider setups, signer configurations, contract instances">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="sw-blockchain-3-1-2" class="topic-checkbox">
                 <label for="sw-blockchain-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Querying contract read functions from JavaScript console</span>
+                <button class="simplify-btn" data-topic="Querying contract read functions from JavaScript console">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="sw-blockchain-3-2-1" class="topic-checkbox">
                 <label for="sw-blockchain-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Wallet connections: request accounts, chain changes listener</span>
+                <button class="simplify-btn" data-topic="Wallet connections: request accounts, chain changes listener">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="sw-blockchain-3-2-2" class="topic-checkbox">
                 <label for="sw-blockchain-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Sending contract write transactions, monitoring transaction receipts</span>
+                <button class="simplify-btn" data-topic="Sending contract write transactions, monitoring transaction receipts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-blockchain-3-3-1" class="topic-checkbox">
                 <label for="sw-blockchain-3-3-1" class="checkmark"></label>
                 <span class="topic-text">IPFS protocol, uploading metadata and images, pinning services</span>
+                <button class="simplify-btn" data-topic="IPFS protocol, uploading metadata and images, pinning services">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-blockchain-3-3-2" class="topic-checkbox">
                 <label for="sw-blockchain-3-3-2" class="checkmark"></label>
                 <span class="topic-text">CID hashes structures, metadata integration for NFTs</span>
+                <button class="simplify-btn" data-topic="CID hashes structures, metadata integration for NFTs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-blockchain-3-4-1" class="topic-checkbox">
                 <label for="sw-blockchain-3-4-1" class="checkmark"></label>
                 <span class="topic-text">ERC-721 interface specs, safeMint implementation</span>
+                <button class="simplify-btn" data-topic="ERC-721 interface specs, safeMint implementation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-blockchain-3-4-2" class="topic-checkbox">
                 <label for="sw-blockchain-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Metadata schema specifications, OpenZeppelin library imports</span>
+                <button class="simplify-btn" data-topic="Metadata schema specifications, OpenZeppelin library imports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-blockchain-3-5-1" class="topic-checkbox">
                 <label for="sw-blockchain-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-blockchain-3-5-2" class="topic-checkbox">
                 <label for="sw-blockchain-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes a JavaScript 'closure'?&quot;, &quot;options&quot;: [&quot;A function combined with references to its surrounding state (lexical environment).&quot;, &quot;The process of terminating a running node script when memory is exhausted.&quot;, &quot;An event handler that stops event bubbling across DOM nodes.&quot;, &quot;A compiler flag that minifies variables to reduce file size.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Querying contract read functions from JavaScript console&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Ethers.js provider setups, signer configurations, contract instances?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Ethers.js provider setups, signer configurations, contract instances.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ethers.js provider setups, signer configurations, contract instances&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Querying contract read functions from JavaScript console typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Querying contract read functions from JavaScript console.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Querying contract read functions from JavaScript console&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Wallet connections: request accounts, chain changes listener practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Wallet connections: request accounts, chain changes listener systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Wallet connections: request accounts, chain changes listener&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Sending contract write transactions, monitoring transaction receipts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Sending contract write transactions, monitoring transaction receipts&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of IPFS protocol, uploading metadata and images, pinning services?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for IPFS protocol, uploading metadata and images, pinning services.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;IPFS protocol, uploading metadata and images, pinning services&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is CID hashes structures, metadata integration for NFTs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of CID hashes structures, metadata integration for NFTs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;CID hashes structures, metadata integration for NFTs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting ERC-721 interface specs, safeMint implementation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of ERC-721 interface specs, safeMint implementation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ERC-721 interface specs, safeMint implementation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Metadata schema specifications, OpenZeppelin library imports?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Metadata schema specifications, OpenZeppelin library imports&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Blockchain Developer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ethers.js provider setups, signer configurations, contract instances&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Security, Auditing & DeFi
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit smart contracts against reentrancy attacks, explore DeFi swaps, and deploy.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Security, Auditing & DeFi
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit smart contracts against reentrancy attacks, explore DeFi swaps, and deploy.</p>
+   
         <!-- Week 16: Smart Contract Vulnerabilities -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="sw-blockchain-4-1-1" class="topic-checkbox">
                 <label for="sw-blockchain-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Reentrancy attacks: explanation, check-effects-interactions defense</span>
+                <button class="simplify-btn" data-topic="Reentrancy attacks: explanation, check-effects-interactions defense">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="sw-blockchain-4-1-2" class="topic-checkbox">
                 <label for="sw-blockchain-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Integer overflows, default visibility risks mitigation</span>
+                <button class="simplify-btn" data-topic="Integer overflows, default visibility risks mitigation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="sw-blockchain-4-2-1" class="topic-checkbox">
                 <label for="sw-blockchain-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Slither static analyzer, Mythril vulnerability scanner runs</span>
+                <button class="simplify-btn" data-topic="Slither static analyzer, Mythril vulnerability scanner runs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="sw-blockchain-4-2-2" class="topic-checkbox">
                 <label for="sw-blockchain-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Writing secure contracts, open-source auditing checklists</span>
+                <button class="simplify-btn" data-topic="Writing secure contracts, open-source auditing checklists">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="sw-blockchain-4-3-1" class="topic-checkbox">
                 <label for="sw-blockchain-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Automated Market Makers (AMMs), Uniswap liquidity pools basics</span>
+                <button class="simplify-btn" data-topic="Automated Market Makers (AMMs), Uniswap liquidity pools basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="sw-blockchain-4-3-2" class="topic-checkbox">
                 <label for="sw-blockchain-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Flash loans, yield farming concepts</span>
+                <button class="simplify-btn" data-topic="Flash loans, yield farming concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-blockchain-4-4-1" class="topic-checkbox">
                 <label for="sw-blockchain-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Deploying to Ethereum testnets (Sepolia), environment files config</span>
+                <button class="simplify-btn" data-topic="Deploying to Ethereum testnets (Sepolia), environment files config">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-blockchain-4-4-2" class="topic-checkbox">
                 <label for="sw-blockchain-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Verifying contracts on Etherscan, mainnet deployment checklists</span>
+                <button class="simplify-btn" data-topic="Verifying contracts on Etherscan, mainnet deployment checklists">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-blockchain-4-5-1" class="topic-checkbox">
                 <label for="sw-blockchain-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-blockchain-4-5-2" class="topic-checkbox">
                 <label for="sw-blockchain-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Reentrancy attacks: explanation, check-effects-interactions defense?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Reentrancy attacks: explanation, check-effects-interactions defense.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Reentrancy attacks: explanation, check-effects-interactions defense&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Integer overflows, default visibility risks mitigation typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Integer overflows, default visibility risks mitigation.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Integer overflows, default visibility risks mitigation&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Slither static analyzer, Mythril vulnerability scanner runs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Slither static analyzer, Mythril vulnerability scanner runs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Slither static analyzer, Mythril vulnerability scanner runs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Writing secure contracts, open-source auditing checklists?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Writing secure contracts, open-source auditing checklists&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Automated Market Makers (AMMs), Uniswap liquidity pools basics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Automated Market Makers (AMMs), Uniswap liquidity pools basics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Automated Market Makers (AMMs), Uniswap liquidity pools basics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Flash loans, yield farming concepts typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Flash loans, yield farming concepts.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Flash loans, yield farming concepts&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Deploying to Ethereum testnets (Sepolia), environment files config practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Deploying to Ethereum testnets (Sepolia), environment files config systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Deploying to Ethereum testnets (Sepolia), environment files config&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Verifying contracts on Etherscan, mainnet deployment checklists?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Verifying contracts on Etherscan, mainnet deployment checklists&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Blockchain Developer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Reentrancy attacks: explanation, check-effects-interactions defense&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Blockchain Developer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Reentrancy attacks: explanation, check-effects-interactions defense&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          PLC Hardware & Basic Programming
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master PLC input/output wiring, ladder logic contacts, timers, and counters.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            PLC Hardware & Basic Programming
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master PLC input/output wiring, ladder logic contacts, timers, and counters.</p>
+   
         <!-- Week 1: PLC Hardware Architectures -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-1-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Sink vs source digital inputs, analog current loops (4-20mA)</span>
+                <button class="simplify-btn" data-topic="Sink vs source digital inputs, analog current loops (4-20mA)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-1-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Motherboard bus, memory mapping, I/O module protections</span>
+                <button class="simplify-btn" data-topic="Motherboard bus, memory mapping, I/O module protections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-2-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Normally Open/Closed contacts, output latching systems</span>
+                <button class="simplify-btn" data-topic="Normally Open/Closed contacts, output latching systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-2-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Electrical interlocks logic, start/stop logic implementation</span>
+                <button class="simplify-btn" data-topic="Electrical interlocks logic, start/stop logic implementation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-3-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-3-1" class="checkmark"></label>
                 <span class="topic-text">On-delay (TON), Off-delay (TOF) timers execution</span>
+                <button class="simplify-btn" data-topic="On-delay (TON), Off-delay (TOF) timers execution">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-3-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Up-counters, down-counters, mathematical comparator gates</span>
+                <button class="simplify-btn" data-topic="Up-counters, down-counters, mathematical comparator gates">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-4-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Data words, internal bits allocations, memory maps</span>
+                <button class="simplify-btn" data-topic="Data words, internal bits allocations, memory maps">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-4-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Move data blocks, simple arithmetic instructions (ADD, SUB)</span>
+                <button class="simplify-btn" data-topic="Move data blocks, simple arithmetic instructions (ADD, SUB)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-5-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-5-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-6-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="mech-industrial-automation-1-6-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Sink vs source digital inputs, analog current loops (4-20mA)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Sink vs source digital inputs, analog current loops (4-20mA)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Sink vs source digital inputs, analog current loops (4-20mA).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Sink vs source digital inputs, analog current loops (4-20mA)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Motherboard bus, memory mapping, I/O module protections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Motherboard bus, memory mapping, I/O module protections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Motherboard bus, memory mapping, I/O module protections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Normally Open/Closed contacts, output latching systems practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Normally Open/Closed contacts, output latching systems systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Normally Open/Closed contacts, output latching systems&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Electrical interlocks logic, start/stop logic implementation?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Electrical interlocks logic, start/stop logic implementation&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of On-delay (TON), Off-delay (TOF) timers execution?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for On-delay (TON), Off-delay (TOF) timers execution.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;On-delay (TON), Off-delay (TOF) timers execution&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Up-counters, down-counters, mathematical comparator gates typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Up-counters, down-counters, mathematical comparator gates.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Up-counters, down-counters, mathematical comparator gates&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Data words, internal bits allocations, memory maps practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Data words, internal bits allocations, memory maps systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Data words, internal bits allocations, memory maps&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Move data blocks, simple arithmetic instructions (ADD, SUB)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Move data blocks, simple arithmetic instructions (ADD, SUB)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Industrial Automation Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Sink vs source digital inputs, analog current loops (4-20mA)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Pneumatics & Sensor Integration
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design pneumatic cylinder circuits, select proximity sensors, and write starters.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Pneumatics & Sensor Integration
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design pneumatic cylinder circuits, select proximity sensors, and write starters.</p>
+   
         <!-- Week 7: Industrial Pneumatics -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-1-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Pneumatic cylinders (single/double acting), solenoid valves</span>
+                <button class="simplify-btn" data-topic="Pneumatic cylinders (single/double acting), solenoid valves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-1-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Air flow speed controls, quick exhaust valves configurations</span>
+                <button class="simplify-btn" data-topic="Air flow speed controls, quick exhaust valves configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-2-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Inductive, capacitive, photoelectric sensors operating ranges</span>
+                <button class="simplify-btn" data-topic="Inductive, capacitive, photoelectric sensors operating ranges">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-2-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Limit switches, optical barriers integration with PLC I/O</span>
+                <button class="simplify-btn" data-topic="Limit switches, optical barriers integration with PLC I/O">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-3-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-3-1" class="checkmark"></label>
                 <span class="topic-text">DOL and Star-Delta starter ladder logic control loops</span>
+                <button class="simplify-btn" data-topic="DOL and Star-Delta starter ladder logic control loops">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-3-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Variable Frequency Drive (VFD) configurations, speed profiles</span>
+                <button class="simplify-btn" data-topic="Variable Frequency Drive (VFD) configurations, speed profiles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-4-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Electrical enclosure design, wiring duct routes, DIN rails</span>
+                <button class="simplify-btn" data-topic="Electrical enclosure design, wiring duct routes, DIN rails">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-4-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-4-2" class="checkmark"></label>
                 <span class="topic-text">EMI noise shielding, ground loops prevention</span>
+                <button class="simplify-btn" data-topic="EMI noise shielding, ground loops prevention">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-5-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-5-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-6-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="mech-industrial-automation-2-6-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pneumatic cylinders (single/double acting), solenoid valves?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pneumatic cylinders (single/double acting), solenoid valves.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pneumatic cylinders (single/double acting), solenoid valves&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Air flow speed controls, quick exhaust valves configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Air flow speed controls, quick exhaust valves configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Air flow speed controls, quick exhaust valves configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Inductive, capacitive, photoelectric sensors operating ranges practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Inductive, capacitive, photoelectric sensors operating ranges systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Inductive, capacitive, photoelectric sensors operating ranges&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Limit switches, optical barriers integration with PLC I/O?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Limit switches, optical barriers integration with PLC I/O&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of DOL and Star-Delta starter ladder logic control loops?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for DOL and Star-Delta starter ladder logic control loops.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DOL and Star-Delta starter ladder logic control loops&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Variable Frequency Drive (VFD) configurations, speed profiles typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Variable Frequency Drive (VFD) configurations, speed profiles.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Variable Frequency Drive (VFD) configurations, speed profiles&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Electrical enclosure design, wiring duct routes, DIN rails practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Electrical enclosure design, wiring duct routes, DIN rails systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Electrical enclosure design, wiring duct routes, DIN rails&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with EMI noise shielding, ground loops prevention?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;EMI noise shielding, ground loops prevention&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Industrial Automation Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pneumatic cylinders (single/double acting), solenoid valves&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Industrial Automation Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pneumatic cylinders (single/double acting), solenoid valves&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Industrial Robotics & SCADA
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure SCARA/Delta robots, design HMI/SCADA screens, and connect Modbus.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Industrial Robotics & SCADA
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure SCARA/Delta robots, design HMI/SCADA screens, and connect Modbus.</p>
+   
         <!-- Week 13: SCARA & Delta Robots -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-1-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Kinematics of SCARA arm, payload limitations, configurations</span>
+                <button class="simplify-btn" data-topic="Kinematics of SCARA arm, payload limitations, configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-1-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Teach pendant programming, workspace speed profiles</span>
+                <button class="simplify-btn" data-topic="Teach pendant programming, workspace speed profiles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-2-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Button mappings, numerical input fields, process flow displays</span>
+                <button class="simplify-btn" data-topic="Button mappings, numerical input fields, process flow displays">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-2-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Real-time process status dashboard configurations</span>
+                <button class="simplify-btn" data-topic="Real-time process status dashboard configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-3-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Configuring SCADA alarm limits, logging events to SQL databases</span>
+                <button class="simplify-btn" data-topic="Configuring SCADA alarm limits, logging events to SQL databases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-3-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Alarm acknowledgment flows, summary tables layout</span>
+                <button class="simplify-btn" data-topic="Alarm acknowledgment flows, summary tables layout">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-4-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Modbus RTU/TCP protocols, register structures (coils, holding)</span>
+                <button class="simplify-btn" data-topic="Modbus RTU/TCP protocols, register structures (coils, holding)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-4-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Master-slave network configuration between PLC and SCADA</span>
+                <button class="simplify-btn" data-topic="Master-slave network configuration between PLC and SCADA">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-5-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-5-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-6-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="mech-industrial-automation-3-6-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Configuring SCADA alarm limits, logging events to SQL databases&quot;}, {&quot;question&quot;: &quot;What is the function of a FOREIGN KEY constraint in relational databases?&quot;, &quot;options&quot;: [&quot;To speed up the execution of aggregate joins.&quot;, &quot;To establish and enforce a link between data in two tables.&quot;, &quot;To store non-relational document logs in memory.&quot;, &quot;To automatically generate unique numeric sequences.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Configuring SCADA alarm limits, logging events to SQL databases&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Kinematics of SCARA arm, payload limitations, configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Kinematics of SCARA arm, payload limitations, configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Kinematics of SCARA arm, payload limitations, configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Teach pendant programming, workspace speed profiles typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Teach pendant programming, workspace speed profiles.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Teach pendant programming, workspace speed profiles&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Button mappings, numerical input fields, process flow displays practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Button mappings, numerical input fields, process flow displays systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Button mappings, numerical input fields, process flow displays&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Real-time process status dashboard configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Real-time process status dashboard configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Configuring SCADA alarm limits, logging events to SQL databases?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Configuring SCADA alarm limits, logging events to SQL databases.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Configuring SCADA alarm limits, logging events to SQL databases&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Alarm acknowledgment flows, summary tables layout typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Alarm acknowledgment flows, summary tables layout.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Alarm acknowledgment flows, summary tables layout&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Modbus RTU/TCP protocols, register structures (coils, holding) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Modbus RTU/TCP protocols, register structures (coils, holding) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Modbus RTU/TCP protocols, register structures (coils, holding)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Master-slave network configuration between PLC and SCADA?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Master-slave network configuration between PLC and SCADA&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Structured Text & Functional Safety
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program PLCs in Structured Text, write PID automation loops, and design safety zones.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Structured Text & Functional Safety
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program PLCs in Structured Text, write PID automation loops, and design safety zones.</p>
+   
         <!-- Week 19: Structured Text (ST) -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-1-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks</span>
+                <button class="simplify-btn" data-topic="Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-1-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Writing custom function blocks for scale transformations</span>
+                <button class="simplify-btn" data-topic="Writing custom function blocks for scale transformations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-2-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-2-1" class="checkmark"></label>
                 <span class="topic-text">PID block configurations: feedback loops, analog control valves</span>
+                <button class="simplify-btn" data-topic="PID block configurations: feedback loops, analog control valves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-2-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Tuning PID parameters (proportional gain, integral time)</span>
+                <button class="simplify-btn" data-topic="Tuning PID parameters (proportional gain, integral time)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-3-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Safety PLC architectures, emergency stop category dual-channels</span>
+                <button class="simplify-btn" data-topic="Safety PLC architectures, emergency stop category dual-channels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-3-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Light curtains, safety mats, interlocked gates integrations</span>
+                <button class="simplify-btn" data-topic="Light curtains, safety mats, interlocked gates integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-4-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Online diagnostic checks, force I/O, loop diagnostics</span>
+                <button class="simplify-btn" data-topic="Online diagnostic checks, force I/O, loop diagnostics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-4-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Factory Acceptance Testing (FAT) guidelines, checklists</span>
+                <button class="simplify-btn" data-topic="Factory Acceptance Testing (FAT) guidelines, checklists">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-5-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-5-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-6-1" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="mech-industrial-automation-4-6-2" class="topic-checkbox">
                 <label for="mech-industrial-automation-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing custom function blocks for scale transformations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing custom function blocks for scale transformations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing custom function blocks for scale transformations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PID block configurations: feedback loops, analog control valves practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PID block configurations: feedback loops, analog control valves systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PID block configurations: feedback loops, analog control valves&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Tuning PID parameters (proportional gain, integral time)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Tuning PID parameters (proportional gain, integral time)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Safety PLC architectures, emergency stop category dual-channels?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Safety PLC architectures, emergency stop category dual-channels.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Safety PLC architectures, emergency stop category dual-channels&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Light curtains, safety mats, interlocked gates integrations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Light curtains, safety mats, interlocked gates integrations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Light curtains, safety mats, interlocked gates integrations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Online diagnostic checks, force I/O, loop diagnostics practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Online diagnostic checks, force I/O, loop diagnostics systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Online diagnostic checks, force I/O, loop diagnostics&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Factory Acceptance Testing (FAT) guidelines, checklists?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Factory Acceptance Testing (FAT) guidelines, checklists&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Industrial Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Industrial Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Structured Text syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

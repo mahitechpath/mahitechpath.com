@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Kinematics & Motor Control
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master coordinate transforms, DH parameters, motor drivers, and PID controls.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Kinematics & Motor Control
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master coordinate transforms, DH parameters, motor drivers, and PID controls.</p>
+   
         <!-- Week 1: Coordinate Transforms & Math -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-robotics-1-1-1" class="topic-checkbox">
                 <label for="ece-robotics-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Homogeneous transformation matrices, rotation representations</span>
+                <button class="simplify-btn" data-topic="Homogeneous transformation matrices, rotation representations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-robotics-1-1-2" class="topic-checkbox">
                 <label for="ece-robotics-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Forward kinematics: Denavit-Hartenberg (DH) parameters</span>
+                <button class="simplify-btn" data-topic="Forward kinematics: Denavit-Hartenberg (DH) parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-robotics-1-2-1" class="topic-checkbox">
                 <label for="ece-robotics-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Algebraic and geometric inverse kinematics derivations</span>
+                <button class="simplify-btn" data-topic="Algebraic and geometric inverse kinematics derivations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-robotics-1-2-2" class="topic-checkbox">
                 <label for="ece-robotics-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Jacobian matrices: velocity profiles, singularity checks</span>
+                <button class="simplify-btn" data-topic="Jacobian matrices: velocity profiles, singularity checks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-robotics-1-3-1" class="topic-checkbox">
                 <label for="ece-robotics-1-3-1" class="checkmark"></label>
                 <span class="topic-text">DC motors, stepper motors, BLDC motors operating principles</span>
+                <button class="simplify-btn" data-topic="DC motors, stepper motors, BLDC motors operating principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-robotics-1-3-2" class="topic-checkbox">
                 <label for="ece-robotics-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Quadrature encoders, decoding ticks, speed calculation</span>
+                <button class="simplify-btn" data-topic="Quadrature encoders, decoding ticks, speed calculation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-robotics-1-4-1" class="topic-checkbox">
                 <label for="ece-robotics-1-4-1" class="checkmark"></label>
                 <span class="topic-text">PID algorithm math, tuning parameters (Kp, Ki, Kd)</span>
+                <button class="simplify-btn" data-topic="PID algorithm math, tuning parameters (Kp, Ki, Kd)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-robotics-1-4-2" class="topic-checkbox">
                 <label for="ece-robotics-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Implementing PID speed control on stepper motors</span>
+                <button class="simplify-btn" data-topic="Implementing PID speed control on stepper motors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-robotics-1-5-1" class="topic-checkbox">
                 <label for="ece-robotics-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-robotics-1-5-2" class="topic-checkbox">
                 <label for="ece-robotics-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-robotics-1-6-1" class="topic-checkbox">
                 <label for="ece-robotics-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-robotics-1-6-2" class="topic-checkbox">
                 <label for="ece-robotics-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Homogeneous transformation matrices, rotation representations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Homogeneous transformation matrices, rotation representations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Homogeneous transformation matrices, rotation representations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Forward kinematics: Denavit-Hartenberg (DH) parameters typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Forward kinematics: Denavit-Hartenberg (DH) parameters.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Forward kinematics: Denavit-Hartenberg (DH) parameters&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Algebraic and geometric inverse kinematics derivations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Algebraic and geometric inverse kinematics derivations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Algebraic and geometric inverse kinematics derivations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Jacobian matrices: velocity profiles, singularity checks?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Jacobian matrices: velocity profiles, singularity checks&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of DC motors, stepper motors, BLDC motors operating principles?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for DC motors, stepper motors, BLDC motors operating principles.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DC motors, stepper motors, BLDC motors operating principles&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Quadrature encoders, decoding ticks, speed calculation typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Quadrature encoders, decoding ticks, speed calculation.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Quadrature encoders, decoding ticks, speed calculation&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PID algorithm math, tuning parameters (Kp, Ki, Kd) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PID algorithm math, tuning parameters (Kp, Ki, Kd) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PID algorithm math, tuning parameters (Kp, Ki, Kd)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Implementing PID speed control on stepper motors?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Implementing PID speed control on stepper motors&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Robotics & Automation Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Homogeneous transformation matrices, rotation representations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Robotics & Automation Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Homogeneous transformation matrices, rotation representations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Robot Operating System (ROS)
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write ROS nodes, create packages, configure launch files, and visualize in RViz.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Robot Operating System (ROS)
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write ROS nodes, create packages, configure launch files, and visualize in RViz.</p>
+   
         <!-- Week 7: ROS Architecture basics -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-robotics-2-1-1" class="topic-checkbox">
                 <label for="ece-robotics-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Nodes, topics, messages, publishers, subscribers configurations</span>
+                <button class="simplify-btn" data-topic="Nodes, topics, messages, publishers, subscribers configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-robotics-2-1-2" class="topic-checkbox">
                 <label for="ece-robotics-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Writing custom ROS packages in C++ or Python</span>
+                <button class="simplify-btn" data-topic="Writing custom ROS packages in C++ or Python">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-robotics-2-2-1" class="topic-checkbox">
                 <label for="ece-robotics-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Request-response services, client-server action interfaces</span>
+                <button class="simplify-btn" data-topic="Request-response services, client-server action interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-robotics-2-2-2" class="topic-checkbox">
                 <label for="ece-robotics-2-2-2" class="checkmark"></label>
                 <span class="topic-text">ROS launch files, node parameter configurations</span>
+                <button class="simplify-btn" data-topic="ROS launch files, node parameter configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-robotics-2-3-1" class="topic-checkbox">
                 <label for="ece-robotics-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Transform library (tf2): listener and broadcaster nodes</span>
+                <button class="simplify-btn" data-topic="Transform library (tf2): listener and broadcaster nodes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-robotics-2-3-2" class="topic-checkbox">
                 <label for="ece-robotics-2-3-2" class="checkmark"></label>
                 <span class="topic-text">URDF: Unified Robot Description Format XML setups</span>
+                <button class="simplify-btn" data-topic="URDF: Unified Robot Description Format XML setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-robotics-2-4-1" class="topic-checkbox">
                 <label for="ece-robotics-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Gazebo physics simulation setup, loading URDF models</span>
+                <button class="simplify-btn" data-topic="Gazebo physics simulation setup, loading URDF models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-robotics-2-4-2" class="topic-checkbox">
                 <label for="ece-robotics-2-4-2" class="checkmark"></label>
                 <span class="topic-text">RViz visualization: sensor ranges plotting, tf frames</span>
+                <button class="simplify-btn" data-topic="RViz visualization: sensor ranges plotting, tf frames">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-robotics-2-5-1" class="topic-checkbox">
                 <label for="ece-robotics-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-robotics-2-5-2" class="topic-checkbox">
                 <label for="ece-robotics-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-robotics-2-6-1" class="topic-checkbox">
                 <label for="ece-robotics-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-robotics-2-6-2" class="topic-checkbox">
                 <label for="ece-robotics-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;In Python, which built-in function returns a list of attributes and methods of an object?&quot;, &quot;options&quot;: [&quot;help()&quot;, &quot;type()&quot;, &quot;dir()&quot;, &quot;vars()&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing custom ROS packages in C++ or Python&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Nodes, topics, messages, publishers, subscribers configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Nodes, topics, messages, publishers, subscribers configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Nodes, topics, messages, publishers, subscribers configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing custom ROS packages in C++ or Python typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing custom ROS packages in C++ or Python.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing custom ROS packages in C++ or Python&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Request-response services, client-server action interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Request-response services, client-server action interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Request-response services, client-server action interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with ROS launch files, node parameter configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;ROS launch files, node parameter configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Transform library (tf2): listener and broadcaster nodes?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Transform library (tf2): listener and broadcaster nodes.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transform library (tf2): listener and broadcaster nodes&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is URDF: Unified Robot Description Format XML setups typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of URDF: Unified Robot Description Format XML setups.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;URDF: Unified Robot Description Format XML setups&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Gazebo physics simulation setup, loading URDF models practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Gazebo physics simulation setup, loading URDF models systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Gazebo physics simulation setup, loading URDF models&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with RViz visualization: sensor ranges plotting, tf frames?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;RViz visualization: sensor ranges plotting, tf frames&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Robotics & Automation Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Nodes, topics, messages, publishers, subscribers configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Sensor Fusion & Computer Vision
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Interface LiDAR, compile OpenCV pipelines, and track targets.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Sensor Fusion & Computer Vision
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Interface LiDAR, compile OpenCV pipelines, and track targets.</p>
+   
         <!-- Week 13: LiDAR & IMU Interfaces -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-robotics-3-1-1" class="topic-checkbox">
                 <label for="ece-robotics-3-1-1" class="checkmark"></label>
                 <span class="topic-text">LaserScan messages structure, point clouds mapping</span>
+                <button class="simplify-btn" data-topic="LaserScan messages structure, point clouds mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-robotics-3-1-2" class="topic-checkbox">
                 <label for="ece-robotics-3-1-2" class="checkmark"></label>
                 <span class="topic-text">IMU data reading, sensor integration setups</span>
+                <button class="simplify-btn" data-topic="IMU data reading, sensor integration setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-robotics-3-2-1" class="topic-checkbox">
                 <label for="ece-robotics-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Image representation, thresholding, edge detection (Canny)</span>
+                <button class="simplify-btn" data-topic="Image representation, thresholding, edge detection (Canny)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-robotics-3-2-2" class="topic-checkbox">
                 <label for="ece-robotics-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Color segmentation, object contour detections</span>
+                <button class="simplify-btn" data-topic="Color segmentation, object contour detections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-robotics-3-3-1" class="topic-checkbox">
                 <label for="ece-robotics-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Visual servoing, PID camera tracking of objects</span>
+                <button class="simplify-btn" data-topic="Visual servoing, PID camera tracking of objects">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-robotics-3-3-2" class="topic-checkbox">
                 <label for="ece-robotics-3-3-2" class="checkmark"></label>
                 <span class="topic-text">AprilTags / ArUco markers detection and distance estimation</span>
+                <button class="simplify-btn" data-topic="AprilTags / ArUco markers detection and distance estimation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-robotics-3-4-1" class="topic-checkbox">
                 <label for="ece-robotics-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Wheel odometry equations, sensor drift diagnostics</span>
+                <button class="simplify-btn" data-topic="Wheel odometry equations, sensor drift diagnostics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-robotics-3-4-2" class="topic-checkbox">
                 <label for="ece-robotics-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Extended Kalman Filter (EKF) sensor fusion basics</span>
+                <button class="simplify-btn" data-topic="Extended Kalman Filter (EKF) sensor fusion basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-robotics-3-5-1" class="topic-checkbox">
                 <label for="ece-robotics-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-robotics-3-5-2" class="topic-checkbox">
                 <label for="ece-robotics-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-robotics-3-6-1" class="topic-checkbox">
                 <label for="ece-robotics-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-robotics-3-6-2" class="topic-checkbox">
                 <label for="ece-robotics-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of LaserScan messages structure, point clouds mapping?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for LaserScan messages structure, point clouds mapping.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LaserScan messages structure, point clouds mapping&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is IMU data reading, sensor integration setups typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of IMU data reading, sensor integration setups.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;IMU data reading, sensor integration setups&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Image representation, thresholding, edge detection (Canny) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Image representation, thresholding, edge detection (Canny) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Image representation, thresholding, edge detection (Canny)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Color segmentation, object contour detections?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Color segmentation, object contour detections&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Visual servoing, PID camera tracking of objects?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Visual servoing, PID camera tracking of objects.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Visual servoing, PID camera tracking of objects&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is AprilTags / ArUco markers detection and distance estimation typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of AprilTags / ArUco markers detection and distance estimation.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;AprilTags / ArUco markers detection and distance estimation&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Wheel odometry equations, sensor drift diagnostics practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Wheel odometry equations, sensor drift diagnostics systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Wheel odometry equations, sensor drift diagnostics&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Extended Kalman Filter (EKF) sensor fusion basics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Extended Kalman Filter (EKF) sensor fusion basics&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Robotics & Automation Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LaserScan messages structure, point clouds mapping&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Robotics & Automation Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LaserScan messages structure, point clouds mapping&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          SLAM & Path Planning
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Run mapping algorithms, configure navigation stacks, and optimize trajectories.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            SLAM & Path Planning
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Run mapping algorithms, configure navigation stacks, and optimize trajectories.</p>
+   
         <!-- Week 19: SLAM Mapping -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-robotics-4-1-1" class="topic-checkbox">
                 <label for="ece-robotics-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Simultaneous Localization and Mapping (SLAM) algorithms</span>
+                <button class="simplify-btn" data-topic="Simultaneous Localization and Mapping (SLAM) algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-robotics-4-1-2" class="topic-checkbox">
                 <label for="ece-robotics-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Gmapping, Cartographer configuration with LiDAR scans</span>
+                <button class="simplify-btn" data-topic="Gmapping, Cartographer configuration with LiDAR scans">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-robotics-4-2-1" class="topic-checkbox">
                 <label for="ece-robotics-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Graph search planners: A* and Dijkstra path finding math</span>
+                <button class="simplify-btn" data-topic="Graph search planners: A* and Dijkstra path finding math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-robotics-4-2-2" class="topic-checkbox">
                 <label for="ece-robotics-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Rapidly-exploring Random Trees (RRT) for high-DOF arms</span>
+                <button class="simplify-btn" data-topic="Rapidly-exploring Random Trees (RRT) for high-DOF arms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="ece-robotics-4-3-1" class="topic-checkbox">
                 <label for="ece-robotics-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Costmaps: local vs global costmaps configuration</span>
+                <button class="simplify-btn" data-topic="Costmaps: local vs global costmaps configuration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="ece-robotics-4-3-2" class="topic-checkbox">
                 <label for="ece-robotics-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Trajectory Rollout (TEB/DWA) local planners</span>
+                <button class="simplify-btn" data-topic="Trajectory Rollout (TEB/DWA) local planners">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-robotics-4-4-1" class="topic-checkbox">
                 <label for="ece-robotics-4-4-1" class="checkmark"></label>
                 <span class="topic-text">PLC-to-robot communications, safety PLC configurations</span>
+                <button class="simplify-btn" data-topic="PLC-to-robot communications, safety PLC configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-robotics-4-4-2" class="topic-checkbox">
                 <label for="ece-robotics-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Robotic arm path programming, workspace analysis</span>
+                <button class="simplify-btn" data-topic="Robotic arm path programming, workspace analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-robotics-4-5-1" class="topic-checkbox">
                 <label for="ece-robotics-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-robotics-4-5-2" class="topic-checkbox">
                 <label for="ece-robotics-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-robotics-4-6-1" class="topic-checkbox">
                 <label for="ece-robotics-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-robotics-4-6-2" class="topic-checkbox">
                 <label for="ece-robotics-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Simultaneous Localization and Mapping (SLAM) algorithms?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Simultaneous Localization and Mapping (SLAM) algorithms.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Simultaneous Localization and Mapping (SLAM) algorithms&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Gmapping, Cartographer configuration with LiDAR scans typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Gmapping, Cartographer configuration with LiDAR scans.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Gmapping, Cartographer configuration with LiDAR scans&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Graph search planners: A* and Dijkstra path finding math practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Graph search planners: A* and Dijkstra path finding math systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Graph search planners: A* and Dijkstra path finding math&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Rapidly-exploring Random Trees (RRT) for high-DOF arms?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Rapidly-exploring Random Trees (RRT) for high-DOF arms&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Costmaps: local vs global costmaps configuration?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Costmaps: local vs global costmaps configuration.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Costmaps: local vs global costmaps configuration&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Trajectory Rollout (TEB/DWA) local planners typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Trajectory Rollout (TEB/DWA) local planners.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Trajectory Rollout (TEB/DWA) local planners&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PLC-to-robot communications, safety PLC configurations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PLC-to-robot communications, safety PLC configurations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PLC-to-robot communications, safety PLC configurations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Robotic arm path programming, workspace analysis?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Robotic arm path programming, workspace analysis&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Robotics & Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Simultaneous Localization and Mapping (SLAM) algorithms&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Robotics & Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Simultaneous Localization and Mapping (SLAM) algorithms&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

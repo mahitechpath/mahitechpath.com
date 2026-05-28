@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Engineering Math & Core basics
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish a strong foundation in engineering mathematics and core sciences.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Engineering Math & Core basics
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish a strong foundation in engineering mathematics and core sciences.</p>
+   
         <!-- Week 1: Linear Algebra & Calculus -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-1-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Matrices, eigenvalues, vector calculus, coordinate systems</span>
+                <button class="simplify-btn" data-topic="Matrices, eigenvalues, vector calculus, coordinate systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-1-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Multiple integrals, differential equations, Fourier transforms</span>
+                <button class="simplify-btn" data-topic="Multiple integrals, differential equations, Fourier transforms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-2-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Probability distributions, Bayes theorem, random variables</span>
+                <button class="simplify-btn" data-topic="Probability distributions, Bayes theorem, random variables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-2-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Numerical integrations, roots of equations algorithms</span>
+                <button class="simplify-btn" data-topic="Numerical integrations, roots of equations algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-3-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Mechanical: Statics, mechanics of materials, basic thermodynamics</span>
+                <button class="simplify-btn" data-topic="Mechanical: Statics, mechanics of materials, basic thermodynamics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-3-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-3-2" class="checkmark"></label>
                 <span class="topic-text">ECE: Network theorems, semiconductor devices, digital logic</span>
+                <button class="simplify-btn" data-topic="ECE: Network theorems, semiconductor devices, digital logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-4-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-4-1" class="checkmark"></label>
                 <span class="topic-text">C/Python programming for mathematical solving</span>
+                <button class="simplify-btn" data-topic="C/Python programming for mathematical solving">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-4-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Plotting data, numerical simulations of physical systems</span>
+                <button class="simplify-btn" data-topic="Plotting data, numerical simulations of physical systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-5-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-5-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-6-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-6-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-7-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-7-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -557,6 +572,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-8-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -583,6 +599,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-8-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -618,6 +635,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-9-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-9-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -644,6 +662,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-9-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-9-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -679,6 +698,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-10-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-10-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -705,6 +725,7 @@
                 <input type="checkbox" id="gov-scientist-tech-1-10-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-1-10-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -728,16 +749,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ECE: Network theorems, semiconductor devices, digital logic&quot;}, {&quot;question&quot;: &quot;In Python, which built-in function returns a list of attributes and methods of an object?&quot;, &quot;options&quot;: [&quot;help()&quot;, &quot;type()&quot;, &quot;dir()&quot;, &quot;vars()&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;C/Python programming for mathematical solving&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Matrices, eigenvalues, vector calculus, coordinate systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Matrices, eigenvalues, vector calculus, coordinate systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Matrices, eigenvalues, vector calculus, coordinate systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Multiple integrals, differential equations, Fourier transforms typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Multiple integrals, differential equations, Fourier transforms.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Multiple integrals, differential equations, Fourier transforms&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Probability distributions, Bayes theorem, random variables practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Probability distributions, Bayes theorem, random variables systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Probability distributions, Bayes theorem, random variables&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Numerical integrations, roots of equations algorithms?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Numerical integrations, roots of equations algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Mechanical: Statics, mechanics of materials, basic thermodynamics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Mechanical: Statics, mechanics of materials, basic thermodynamics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mechanical: Statics, mechanics of materials, basic thermodynamics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ECE: Network theorems, semiconductor devices, digital logic typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ECE: Network theorems, semiconductor devices, digital logic.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ECE: Network theorems, semiconductor devices, digital logic&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting C/Python programming for mathematical solving practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of C/Python programming for mathematical solving systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;C/Python programming for mathematical solving&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Plotting data, numerical simulations of physical systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Plotting data, numerical simulations of physical systems&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Core Technical Specialization
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master core subject areas (Mechanical or Electronics) for ISRO/DRDO exams.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Core Technical Specialization
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master core subject areas (Mechanical or Electronics) for ISRO/DRDO exams.</p>
+   
         <!-- Week 11: ECE - Signals & Communication -->
         <div class="week-card">
           <div class="week-header">
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-1-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Fourier series, Laplace transforms, LTI systems analysis</span>
+                <button class="simplify-btn" data-topic="Fourier series, Laplace transforms, LTI systems analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-1-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Analog and digital communication, modulation, noise profiling</span>
+                <button class="simplify-btn" data-topic="Analog and digital communication, modulation, noise profiling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-2-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Maxwell equations, wave propagation, transmission lines</span>
+                <button class="simplify-btn" data-topic="Maxwell equations, wave propagation, transmission lines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-2-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Antenna parameters: gain, radiation pattern, polarization</span>
+                <button class="simplify-btn" data-topic="Antenna parameters: gain, radiation pattern, polarization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-3-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Fluid statics, Bernoulli equation, boundary layer theory</span>
+                <button class="simplify-btn" data-topic="Fluid statics, Bernoulli equation, boundary layer theory">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-3-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Conduction, convection, radiation equations, heat exchangers</span>
+                <button class="simplify-btn" data-topic="Conduction, convection, radiation equations, heat exchangers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-4-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Kinematics of linkages, gears, cams, balancing of rotors</span>
+                <button class="simplify-btn" data-topic="Kinematics of linkages, gears, cams, balancing of rotors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-4-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Stress concentration, fatigue design, bearings sizing</span>
+                <button class="simplify-btn" data-topic="Stress concentration, fatigue design, bearings sizing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -994,6 +1038,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-5-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1020,6 +1065,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-5-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1055,6 +1101,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-6-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1081,6 +1128,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-6-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1116,6 +1164,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-7-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1142,6 +1191,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-7-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1177,6 +1227,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-8-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1203,6 +1254,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-8-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1238,6 +1290,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-9-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-9-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1264,6 +1317,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-9-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-9-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1299,6 +1353,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-10-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-10-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1325,6 +1380,7 @@
                 <input type="checkbox" id="gov-scientist-tech-2-10-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-2-10-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1348,16 +1404,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog and digital communication, modulation, noise profiling&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Fourier series, Laplace transforms, LTI systems analysis?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Fourier series, Laplace transforms, LTI systems analysis.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fourier series, Laplace transforms, LTI systems analysis&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Analog and digital communication, modulation, noise profiling typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Analog and digital communication, modulation, noise profiling.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Analog and digital communication, modulation, noise profiling&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Maxwell equations, wave propagation, transmission lines practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Maxwell equations, wave propagation, transmission lines systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Maxwell equations, wave propagation, transmission lines&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Antenna parameters: gain, radiation pattern, polarization?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Antenna parameters: gain, radiation pattern, polarization&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Fluid statics, Bernoulli equation, boundary layer theory?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Fluid statics, Bernoulli equation, boundary layer theory.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fluid statics, Bernoulli equation, boundary layer theory&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Conduction, convection, radiation equations, heat exchangers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Conduction, convection, radiation equations, heat exchangers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Conduction, convection, radiation equations, heat exchangers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Kinematics of linkages, gears, cams, balancing of rotors practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Kinematics of linkages, gears, cams, balancing of rotors systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Kinematics of linkages, gears, cams, balancing of rotors&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Stress concentration, fatigue design, bearings sizing?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Stress concentration, fatigue design, bearings sizing&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Scientist/Engineer at ISRO / DRDO in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fourier series, Laplace transforms, LTI systems analysis&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Space & Defense Systems
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study satellite orbits, propulsion, missile aerodynamics, and guidance systems.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Space & Defense Systems
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study satellite orbits, propulsion, missile aerodynamics, and guidance systems.</p>
+   
         <!-- Week 21: Orbital Mechanics & Kepler's Laws -->
         <div class="week-card">
           <div class="week-header">
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-1-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Keplerian elements, satellite orbits, launch trajectories</span>
+                <button class="simplify-btn" data-topic="Keplerian elements, satellite orbits, launch trajectories">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-1-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Orbit transfers: Hohmann transfer, orbital perturbations</span>
+                <button class="simplify-btn" data-topic="Orbit transfers: Hohmann transfer, orbital perturbations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1431,6 +1504,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-2-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Chemical rocket engines: solid vs liquid propellants</span>
+                <button class="simplify-btn" data-topic="Chemical rocket engines: solid vs liquid propellants">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1457,6 +1531,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-2-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Specific impulse, thrust equations, nozzle design parameters</span>
+                <button class="simplify-btn" data-topic="Specific impulse, thrust equations, nozzle design parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1492,6 +1567,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-3-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Transfer functions, feedback loops stability: Nyquist, Bode</span>
+                <button class="simplify-btn" data-topic="Transfer functions, feedback loops stability: Nyquist, Bode">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1518,6 +1594,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-3-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-3-2" class="checkmark"></label>
                 <span class="topic-text">State-space analysis, satellite attitude control systems</span>
+                <button class="simplify-btn" data-topic="State-space analysis, satellite attitude control systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1553,6 +1630,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-4-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-4-1" class="checkmark"></label>
                 <span class="topic-text">GPS/NavIC receiver architectures, INS navigation systems</span>
+                <button class="simplify-btn" data-topic="GPS/NavIC receiver architectures, INS navigation systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1579,6 +1657,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-4-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Radar principles: radar range equation, Doppler tracking</span>
+                <button class="simplify-btn" data-topic="Radar principles: radar range equation, Doppler tracking">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1614,6 +1693,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-5-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1640,6 +1720,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-5-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1675,6 +1756,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-6-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1701,6 +1783,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-6-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1736,6 +1819,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-7-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1762,6 +1846,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-7-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1797,6 +1882,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-8-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1823,6 +1909,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-8-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1858,6 +1945,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-9-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-9-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1884,6 +1972,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-9-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-9-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1919,6 +2008,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-10-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-10-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1945,6 +2035,7 @@
                 <input type="checkbox" id="gov-scientist-tech-3-10-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-3-10-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1968,16 +2059,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;In a PID control loop, what is the role of the Integral term?&quot;, &quot;options&quot;: [&quot;To eliminate steady-state tracking errors.&quot;, &quot;To predict future error trends and slow reaction.&quot;, &quot;To amplify the raw noise in input readings.&quot;, &quot;To limit the physical output torque of motor gearboxes.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;State-space analysis, satellite attitude control systems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Keplerian elements, satellite orbits, launch trajectories?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Keplerian elements, satellite orbits, launch trajectories.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Keplerian elements, satellite orbits, launch trajectories&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Orbit transfers: Hohmann transfer, orbital perturbations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Orbit transfers: Hohmann transfer, orbital perturbations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Orbit transfers: Hohmann transfer, orbital perturbations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Chemical rocket engines: solid vs liquid propellants practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Chemical rocket engines: solid vs liquid propellants systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Chemical rocket engines: solid vs liquid propellants&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Specific impulse, thrust equations, nozzle design parameters?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Specific impulse, thrust equations, nozzle design parameters&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Transfer functions, feedback loops stability: Nyquist, Bode?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Transfer functions, feedback loops stability: Nyquist, Bode.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transfer functions, feedback loops stability: Nyquist, Bode&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is State-space analysis, satellite attitude control systems typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of State-space analysis, satellite attitude control systems.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;State-space analysis, satellite attitude control systems&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting GPS/NavIC receiver architectures, INS navigation systems practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of GPS/NavIC receiver architectures, INS navigation systems systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;GPS/NavIC receiver architectures, INS navigation systems&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Radar principles: radar range equation, Doppler tracking?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Radar principles: radar range equation, Doppler tracking&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Scientist/Engineer at ISRO / DRDO in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Keplerian elements, satellite orbits, launch trajectories&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Mock Exams & Technical Interview
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Focus on past exam papers, speed tests, and technical interview boards.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Mock Exams & Technical Interview
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Focus on past exam papers, speed tests, and technical interview boards.</p>
+   
         <!-- Week 31: ISRO/DRDO Past Paper marathon -->
         <div class="week-card">
           <div class="week-header">
@@ -1990,6 +2096,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-1-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Solving 10 years ISRO scientist entrance papers (80 MCQs)</span>
+                <button class="simplify-btn" data-topic="Solving 10 years ISRO scientist entrance papers (80 MCQs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2016,6 +2123,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-1-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Optimizing speed: 90 seconds per technical question</span>
+                <button class="simplify-btn" data-topic="Optimizing speed: 90 seconds per technical question">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2051,6 +2159,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-2-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Attempting conceptual questions on core physics and design</span>
+                <button class="simplify-btn" data-topic="Attempting conceptual questions on core physics and design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2077,6 +2186,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-2-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Documenting derivations: orbital velocity, nozzle thrust</span>
+                <button class="simplify-btn" data-topic="Documenting derivations: orbital velocity, nozzle thrust">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2112,6 +2222,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-3-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Reviewing B.Tech final year project, framing defense uses</span>
+                <button class="simplify-btn" data-topic="Reviewing B.Tech final year project, framing defense uses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2138,6 +2249,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-3-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Preparing details on modern research trends: reusable rockets</span>
+                <button class="simplify-btn" data-topic="Preparing details on modern research trends: reusable rockets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2173,6 +2285,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-4-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Mock panels: presenting derivations on whiteboard</span>
+                <button class="simplify-btn" data-topic="Mock panels: presenting derivations on whiteboard">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2199,6 +2312,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-4-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Answering tough conceptual questions on engineering failures</span>
+                <button class="simplify-btn" data-topic="Answering tough conceptual questions on engineering failures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2234,6 +2348,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-5-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2260,6 +2375,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-5-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2295,6 +2411,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-6-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2321,6 +2438,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-6-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2356,6 +2474,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-7-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2382,6 +2501,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-7-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2417,6 +2537,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-8-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2443,6 +2564,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-8-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2478,6 +2600,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-9-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-9-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2504,6 +2627,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-9-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-9-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2539,6 +2663,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-10-1" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-10-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2565,6 +2690,7 @@
                 <input type="checkbox" id="gov-scientist-tech-4-10-2" class="topic-checkbox">
                 <label for="gov-scientist-tech-4-10-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2587,6 +2713,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solving 10 years ISRO scientist entrance papers (80 MCQs)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solving 10 years ISRO scientist entrance papers (80 MCQs).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 years ISRO scientist entrance papers (80 MCQs)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Optimizing speed: 90 seconds per technical question typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Optimizing speed: 90 seconds per technical question.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Optimizing speed: 90 seconds per technical question&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Attempting conceptual questions on core physics and design practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Attempting conceptual questions on core physics and design systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Attempting conceptual questions on core physics and design&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Documenting derivations: orbital velocity, nozzle thrust?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Documenting derivations: orbital velocity, nozzle thrust&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Reviewing B.Tech final year project, framing defense uses?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Reviewing B.Tech final year project, framing defense uses.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Reviewing B.Tech final year project, framing defense uses&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Preparing details on modern research trends: reusable rockets typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Preparing details on modern research trends: reusable rockets.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Preparing details on modern research trends: reusable rockets&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Mock panels: presenting derivations on whiteboard practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Mock panels: presenting derivations on whiteboard systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Mock panels: presenting derivations on whiteboard&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Answering tough conceptual questions on engineering failures?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Answering tough conceptual questions on engineering failures&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Scientist/Engineer at ISRO / DRDO in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 years ISRO scientist entrance papers (80 MCQs)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Scientist/Engineer at ISRO / DRDO in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 years ISRO scientist entrance papers (80 MCQs)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

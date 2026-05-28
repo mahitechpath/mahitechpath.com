@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Sensors & Signal Conditioning
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Interlock analog/digital sensors, configure operational amplifiers, and read data.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Sensors & Signal Conditioning
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Interlock analog/digital sensors, configure operational amplifiers, and read data.</p>
+   
         <!-- Week 1: Sensors & Transducers -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-1-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors</span>
+                <button class="simplify-btn" data-topic="Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-1-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Sensor parameters: sensitivity, linearity, hysteresis, range</span>
+                <button class="simplify-btn" data-topic="Sensor parameters: sensitivity, linearity, hysteresis, range">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-2-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Operational amplifier circuits: differential, summing, active filters</span>
+                <button class="simplify-btn" data-topic="Operational amplifier circuits: differential, summing, active filters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-2-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Wheatstone bridge circuits, noise rejection configurations</span>
+                <button class="simplify-btn" data-topic="Wheatstone bridge circuits, noise rejection configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-3-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Analog-to-digital converters: successive approximation, sampling</span>
+                <button class="simplify-btn" data-topic="Analog-to-digital converters: successive approximation, sampling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-3-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Quantization error, filter decimation basics</span>
+                <button class="simplify-btn" data-topic="Quantization error, filter decimation basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-4-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Configuring GPIOs, ADC registers, timer interrupts on ESP32</span>
+                <button class="simplify-btn" data-topic="Configuring GPIOs, ADC registers, timer interrupts on ESP32">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-4-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Interfacing switches, debounce filters, LED displays</span>
+                <button class="simplify-btn" data-topic="Interfacing switches, debounce filters, LED displays">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-5-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-5-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-6-1" class="topic-checkbox">
                 <label for="mech-mechatronics-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="mech-mechatronics-1-6-2" class="topic-checkbox">
                 <label for="mech-mechatronics-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog-to-digital converters: successive approximation, sampling&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Sensor parameters: sensitivity, linearity, hysteresis, range typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Sensor parameters: sensitivity, linearity, hysteresis, range.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Sensor parameters: sensitivity, linearity, hysteresis, range&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Operational amplifier circuits: differential, summing, active filters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Operational amplifier circuits: differential, summing, active filters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Operational amplifier circuits: differential, summing, active filters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Wheatstone bridge circuits, noise rejection configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Wheatstone bridge circuits, noise rejection configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Analog-to-digital converters: successive approximation, sampling?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Analog-to-digital converters: successive approximation, sampling.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Analog-to-digital converters: successive approximation, sampling&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Quantization error, filter decimation basics typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Quantization error, filter decimation basics.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Quantization error, filter decimation basics&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Configuring GPIOs, ADC registers, timer interrupts on ESP32 practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Configuring GPIOs, ADC registers, timer interrupts on ESP32 systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Configuring GPIOs, ADC registers, timer interrupts on ESP32&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Interfacing switches, debounce filters, LED displays?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Interfacing switches, debounce filters, LED displays&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Mechatronics Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Resistive (RTD), capacitive (proximity), inductive (LVDT) sensors&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Electro-Mechanical Actuators
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Drive DC motors, step motors, configure solenoids, and size gears.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Electro-Mechanical Actuators
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Drive DC motors, step motors, configure solenoids, and size gears.</p>
+   
         <!-- Week 7: DC Motor Drives -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-1-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-1-1" class="checkmark"></label>
                 <span class="topic-text">H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls</span>
+                <button class="simplify-btn" data-topic="H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-1-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Back-EMF dynamics, speed-torque motor curves</span>
+                <button class="simplify-btn" data-topic="Back-EMF dynamics, speed-torque motor curves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-2-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Stepper motor drivers (A4988), microstepping profiles</span>
+                <button class="simplify-btn" data-topic="Stepper motor drivers (A4988), microstepping profiles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-2-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-2-2" class="checkmark"></label>
                 <span class="topic-text">RC servos PWM control interface, duty cycles</span>
+                <button class="simplify-btn" data-topic="RC servos PWM control interface, duty cycles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-3-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Solenoid valve drivers: flyback diodes, optoisolations</span>
+                <button class="simplify-btn" data-topic="Solenoid valve drivers: flyback diodes, optoisolations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-3-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Relay contacts configurations, snubber circuit protections</span>
+                <button class="simplify-btn" data-topic="Relay contacts configurations, snubber circuit protections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-4-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Gears, timing belts, lead screws, ball screws parameters</span>
+                <button class="simplify-btn" data-topic="Gears, timing belts, lead screws, ball screws parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-4-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Backlash mitigation techniques, torque transformations</span>
+                <button class="simplify-btn" data-topic="Backlash mitigation techniques, torque transformations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-5-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-5-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-6-1" class="topic-checkbox">
                 <label for="mech-mechatronics-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="mech-mechatronics-2-6-2" class="topic-checkbox">
                 <label for="mech-mechatronics-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Back-EMF dynamics, speed-torque motor curves typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Back-EMF dynamics, speed-torque motor curves.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Back-EMF dynamics, speed-torque motor curves&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Stepper motor drivers (A4988), microstepping profiles practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Stepper motor drivers (A4988), microstepping profiles systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Stepper motor drivers (A4988), microstepping profiles&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with RC servos PWM control interface, duty cycles?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;RC servos PWM control interface, duty cycles&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solenoid valve drivers: flyback diodes, optoisolations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solenoid valve drivers: flyback diodes, optoisolations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solenoid valve drivers: flyback diodes, optoisolations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Relay contacts configurations, snubber circuit protections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Relay contacts configurations, snubber circuit protections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Relay contacts configurations, snubber circuit protections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Gears, timing belts, lead screws, ball screws parameters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Gears, timing belts, lead screws, ball screws parameters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Gears, timing belts, lead screws, ball screws parameters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Backlash mitigation techniques, torque transformations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Backlash mitigation techniques, torque transformations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Mechatronics Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Mechatronics Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;H-bridge motor drivers (L298N, MOSFET gates), PWM speed controls&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Control Systems & Tuning
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Model dynamic physical systems, compile PID loops, and write state machines.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Control Systems & Tuning
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Model dynamic physical systems, compile PID loops, and write state machines.</p>
+   
         <!-- Week 13: System Dynamic Models -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-1-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Mass-spring-damper systems, rotary inertia transfer functions</span>
+                <button class="simplify-btn" data-topic="Mass-spring-damper systems, rotary inertia transfer functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-1-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Block diagram reduction, feedback loop architectures</span>
+                <button class="simplify-btn" data-topic="Block diagram reduction, feedback loop architectures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-2-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd)</span>
+                <button class="simplify-btn" data-topic="Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-2-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Anti-windup strategies, derivative noise filters</span>
+                <button class="simplify-btn" data-topic="Anti-windup strategies, derivative noise filters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-3-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Finite State Machines (FSMs) design, state transition diagrams</span>
+                <button class="simplify-btn" data-topic="Finite State Machines (FSMs) design, state transition diagrams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-3-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Writing clean non-blocking state loops in C</span>
+                <button class="simplify-btn" data-topic="Writing clean non-blocking state loops in C">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-4-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Quadrature optical encoders, decoding quadrature ticks</span>
+                <button class="simplify-btn" data-topic="Quadrature optical encoders, decoding quadrature ticks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-4-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Speed and position estimation from encoder feedback</span>
+                <button class="simplify-btn" data-topic="Speed and position estimation from encoder feedback">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-5-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-5-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-6-1" class="topic-checkbox">
                 <label for="mech-mechatronics-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="mech-mechatronics-3-6-2" class="topic-checkbox">
                 <label for="mech-mechatronics-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Mass-spring-damper systems, rotary inertia transfer functions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Mass-spring-damper systems, rotary inertia transfer functions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mass-spring-damper systems, rotary inertia transfer functions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Block diagram reduction, feedback loop architectures typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Block diagram reduction, feedback loop architectures.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Block diagram reduction, feedback loop architectures&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Implementing PID algorithm in C/C++, tuning gains (Kp, Ki, Kd)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Anti-windup strategies, derivative noise filters?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Anti-windup strategies, derivative noise filters&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Finite State Machines (FSMs) design, state transition diagrams?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Finite State Machines (FSMs) design, state transition diagrams.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Finite State Machines (FSMs) design, state transition diagrams&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing clean non-blocking state loops in C typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing clean non-blocking state loops in C.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing clean non-blocking state loops in C&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Quadrature optical encoders, decoding quadrature ticks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Quadrature optical encoders, decoding quadrature ticks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Quadrature optical encoders, decoding quadrature ticks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Speed and position estimation from encoder feedback?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Speed and position estimation from encoder feedback&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Mechatronics Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mass-spring-damper systems, rotary inertia transfer functions&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Mechatronics Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mass-spring-damper systems, rotary inertia transfer functions&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          PLC, SCADA & Industrial Bus
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program PLC panels, configure Modbus networks, and check safety limits.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            PLC, SCADA & Industrial Bus
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program PLC panels, configure Modbus networks, and check safety limits.</p>
+   
         <!-- Week 19: PLC & Ladder Logic -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-1-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-1-1" class="checkmark"></label>
                 <span class="topic-text">PLC I/O wiring, basic ladder logic contacts, timers</span>
+                <button class="simplify-btn" data-topic="PLC I/O wiring, basic ladder logic contacts, timers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-1-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-1-2" class="checkmark"></label>
                 <span class="topic-text">DOL and Star-Delta starters PLC execution</span>
+                <button class="simplify-btn" data-topic="DOL and Star-Delta starters PLC execution">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-2-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Modbus RTU/TCP protocols, serial RS485 communication line</span>
+                <button class="simplify-btn" data-topic="Modbus RTU/TCP protocols, serial RS485 communication line">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-2-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-2-2" class="checkmark"></label>
                 <span class="topic-text">CAN bus controller setups, automotive message protocols</span>
+                <button class="simplify-btn" data-topic="CAN bus controller setups, automotive message protocols">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-3-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Safety relay interlocks, emergency stop category loops</span>
+                <button class="simplify-btn" data-topic="Safety relay interlocks, emergency stop category loops">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-3-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Electrical panel layout, shielding against EMI noise</span>
+                <button class="simplify-btn" data-topic="Electrical panel layout, shielding against EMI noise">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-4-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Troubleshooting wiring, testing current loops (4-20mA)</span>
+                <button class="simplify-btn" data-topic="Troubleshooting wiring, testing current loops (4-20mA)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-4-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Commissioning checklists, electrical drawings verification</span>
+                <button class="simplify-btn" data-topic="Commissioning checklists, electrical drawings verification">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-5-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-5-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-6-1" class="topic-checkbox">
                 <label for="mech-mechatronics-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="mech-mechatronics-4-6-2" class="topic-checkbox">
                 <label for="mech-mechatronics-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of PLC I/O wiring, basic ladder logic contacts, timers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for PLC I/O wiring, basic ladder logic contacts, timers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PLC I/O wiring, basic ladder logic contacts, timers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is DOL and Star-Delta starters PLC execution typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of DOL and Star-Delta starters PLC execution.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;DOL and Star-Delta starters PLC execution&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Modbus RTU/TCP protocols, serial RS485 communication line practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Modbus RTU/TCP protocols, serial RS485 communication line systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Modbus RTU/TCP protocols, serial RS485 communication line&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with CAN bus controller setups, automotive message protocols?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;CAN bus controller setups, automotive message protocols&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Safety relay interlocks, emergency stop category loops?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Safety relay interlocks, emergency stop category loops.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Safety relay interlocks, emergency stop category loops&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Electrical panel layout, shielding against EMI noise typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Electrical panel layout, shielding against EMI noise.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Electrical panel layout, shielding against EMI noise&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Troubleshooting wiring, testing current loops (4-20mA) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Troubleshooting wiring, testing current loops (4-20mA) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Troubleshooting wiring, testing current loops (4-20mA)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Commissioning checklists, electrical drawings verification?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Commissioning checklists, electrical drawings verification&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Mechatronics Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PLC I/O wiring, basic ladder logic contacts, timers&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Mechatronics Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PLC I/O wiring, basic ladder logic contacts, timers&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

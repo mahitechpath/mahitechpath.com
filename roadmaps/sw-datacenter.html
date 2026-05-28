@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Hardware Rack, Cabling & Fiber
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master physical rack configurations, copper/fiber cabling, and safety guidelines.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Hardware Rack, Cabling & Fiber
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master physical rack configurations, copper/fiber cabling, and safety guidelines.</p>
+   
         <!-- Week 1: Server Chassis & Components -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-datacenter-1-1-1" class="topic-checkbox">
                 <label for="sw-datacenter-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Rack units (U) definitions, server types (blade, rack-mount)</span>
+                <button class="simplify-btn" data-topic="Rack units (U) definitions, server types (blade, rack-mount)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-datacenter-1-1-2" class="topic-checkbox">
                 <label for="sw-datacenter-1-1-2" class="checkmark"></label>
                 <span class="topic-text">CPU, RAM slots configurations, motherboard components</span>
+                <button class="simplify-btn" data-topic="CPU, RAM slots configurations, motherboard components">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-datacenter-1-2-1" class="topic-checkbox">
                 <label for="sw-datacenter-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Uninterruptible Power Supplies (UPS), Power Distribution Units (PDUs)</span>
+                <button class="simplify-btn" data-topic="Uninterruptible Power Supplies (UPS), Power Distribution Units (PDUs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-datacenter-1-2-2" class="topic-checkbox">
                 <label for="sw-datacenter-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Redundant power inputs, ATS configurations, battery metrics</span>
+                <button class="simplify-btn" data-topic="Redundant power inputs, ATS configurations, battery metrics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-datacenter-1-3-1" class="topic-checkbox">
                 <label for="sw-datacenter-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Category cables (Cat6a), RJ45 crimping, cable management layouts</span>
+                <button class="simplify-btn" data-topic="Category cables (Cat6a), RJ45 crimping, cable management layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-datacenter-1-3-2" class="topic-checkbox">
                 <label for="sw-datacenter-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Fiber optics: single-mode vs multi-mode, transceiver types (SFP+)</span>
+                <button class="simplify-btn" data-topic="Fiber optics: single-mode vs multi-mode, transceiver types (SFP+)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-datacenter-1-4-1" class="topic-checkbox">
                 <label for="sw-datacenter-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Hot/cold aisle layouts, CRAC units, temperature thresholds</span>
+                <button class="simplify-btn" data-topic="Hot/cold aisle layouts, CRAC units, temperature thresholds">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-datacenter-1-4-2" class="topic-checkbox">
                 <label for="sw-datacenter-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Liquid cooling basics, humidity constraints inside racks</span>
+                <button class="simplify-btn" data-topic="Liquid cooling basics, humidity constraints inside racks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -362,16 +371,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Rack units (U) definitions, server types (blade, rack-mount)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Rack units (U) definitions, server types (blade, rack-mount).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rack units (U) definitions, server types (blade, rack-mount)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is CPU, RAM slots configurations, motherboard components typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of CPU, RAM slots configurations, motherboard components.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;CPU, RAM slots configurations, motherboard components&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Uninterruptible Power Supplies (UPS), Power Distribution Units (PDUs) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Uninterruptible Power Supplies (UPS), Power Distribution Units (PDUs) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Uninterruptible Power Supplies (UPS), Power Distribution Units (PDUs)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Redundant power inputs, ATS configurations, battery metrics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Redundant power inputs, ATS configurations, battery metrics&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Category cables (Cat6a), RJ45 crimping, cable management layouts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Category cables (Cat6a), RJ45 crimping, cable management layouts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Category cables (Cat6a), RJ45 crimping, cable management layouts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fiber optics: single-mode vs multi-mode, transceiver types (SFP+) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fiber optics: single-mode vs multi-mode, transceiver types (SFP+).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fiber optics: single-mode vs multi-mode, transceiver types (SFP+)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Hot/cold aisle layouts, CRAC units, temperature thresholds practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Hot/cold aisle layouts, CRAC units, temperature thresholds systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Hot/cold aisle layouts, CRAC units, temperature thresholds&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Liquid cooling basics, humidity constraints inside racks?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Liquid cooling basics, humidity constraints inside racks&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Data Center Technician in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rack units (U) definitions, server types (blade, rack-mount)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Center Technician in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rack units (U) definitions, server types (blade, rack-mount)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Server OS & Storage Arrays
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install Linux, configure RAID controllers, setup SAN/NAS storage, and perform health diagnostics.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Server OS & Storage Arrays
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install Linux, configure RAID controllers, setup SAN/NAS storage, and perform health diagnostics.</p>
+   
         <!-- Week 5: Operating System Deployments -->
         <div class="week-card">
           <div class="week-header">
@@ -384,6 +408,7 @@
                 <input type="checkbox" id="sw-datacenter-2-1-1" class="topic-checkbox">
                 <label for="sw-datacenter-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Bare-metal OS installation (Ubuntu Server, Rocky Linux)</span>
+                <button class="simplify-btn" data-topic="Bare-metal OS installation (Ubuntu Server, Rocky Linux)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -410,6 +435,7 @@
                 <input type="checkbox" id="sw-datacenter-2-1-2" class="topic-checkbox">
                 <label for="sw-datacenter-2-1-2" class="checkmark"></label>
                 <span class="topic-text">PXE boot configurations, automated installer profiles (Kickstart)</span>
+                <button class="simplify-btn" data-topic="PXE boot configurations, automated installer profiles (Kickstart)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="sw-datacenter-2-2-1" class="topic-checkbox">
                 <label for="sw-datacenter-2-2-1" class="checkmark"></label>
                 <span class="topic-text">RAID topologies: 0, 1, 5, 6, 10, hot spares configuration</span>
+                <button class="simplify-btn" data-topic="RAID topologies: 0, 1, 5, 6, 10, hot spares configuration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="sw-datacenter-2-2-2" class="topic-checkbox">
                 <label for="sw-datacenter-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Hardware vs software RAID, controller firmware flashes</span>
+                <button class="simplify-btn" data-topic="Hardware vs software RAID, controller firmware flashes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-datacenter-2-3-1" class="topic-checkbox">
                 <label for="sw-datacenter-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Network Attached Storage (NAS), Storage Area Networks (SAN)</span>
+                <button class="simplify-btn" data-topic="Network Attached Storage (NAS), Storage Area Networks (SAN)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-datacenter-2-3-2" class="topic-checkbox">
                 <label for="sw-datacenter-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Fibre Channel (FC) switches, iSCSI configurations</span>
+                <button class="simplify-btn" data-topic="Fibre Channel (FC) switches, iSCSI configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-datacenter-2-4-1" class="topic-checkbox">
                 <label for="sw-datacenter-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Memory diagnostics (Memtest86), CPU stress test blocks</span>
+                <button class="simplify-btn" data-topic="Memory diagnostics (Memtest86), CPU stress test blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-datacenter-2-4-2" class="topic-checkbox">
                 <label for="sw-datacenter-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Hard drive health checks: SMART metrics monitoring</span>
+                <button class="simplify-btn" data-topic="Hard drive health checks: SMART metrics monitoring">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -616,16 +648,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Bare-metal OS installation (Ubuntu Server, Rocky Linux)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Bare-metal OS installation (Ubuntu Server, Rocky Linux).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bare-metal OS installation (Ubuntu Server, Rocky Linux)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is PXE boot configurations, automated installer profiles (Kickstart) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of PXE boot configurations, automated installer profiles (Kickstart).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;PXE boot configurations, automated installer profiles (Kickstart)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting RAID topologies: 0, 1, 5, 6, 10, hot spares configuration practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of RAID topologies: 0, 1, 5, 6, 10, hot spares configuration systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;RAID topologies: 0, 1, 5, 6, 10, hot spares configuration&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Hardware vs software RAID, controller firmware flashes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Hardware vs software RAID, controller firmware flashes&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Network Attached Storage (NAS), Storage Area Networks (SAN)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Network Attached Storage (NAS), Storage Area Networks (SAN).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Network Attached Storage (NAS), Storage Area Networks (SAN)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fibre Channel (FC) switches, iSCSI configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fibre Channel (FC) switches, iSCSI configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fibre Channel (FC) switches, iSCSI configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Memory diagnostics (Memtest86), CPU stress test blocks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Memory diagnostics (Memtest86), CPU stress test blocks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Memory diagnostics (Memtest86), CPU stress test blocks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Hard drive health checks: SMART metrics monitoring?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Hard drive health checks: SMART metrics monitoring&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Data Center Technician in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bare-metal OS installation (Ubuntu Server, Rocky Linux)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Center Technician in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bare-metal OS installation (Ubuntu Server, Rocky Linux)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Networking Gear & KVM
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install rack switches, configure VLANs, configure KVM tools, and out-of-band management.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Networking Gear & KVM
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install rack switches, configure VLANs, configure KVM tools, and out-of-band management.</p>
+   
         <!-- Week 9: Switch Installation & Rack Setup -->
         <div class="week-card">
           <div class="week-header">
@@ -638,6 +685,7 @@
                 <input type="checkbox" id="sw-datacenter-3-1-1" class="topic-checkbox">
                 <label for="sw-datacenter-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Top of Rack (ToR) switch placements, console connections</span>
+                <button class="simplify-btn" data-topic="Top of Rack (ToR) switch placements, console connections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -664,6 +712,7 @@
                 <input type="checkbox" id="sw-datacenter-3-1-2" class="topic-checkbox">
                 <label for="sw-datacenter-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Patch panel layouts, cabling switches to server ports</span>
+                <button class="simplify-btn" data-topic="Patch panel layouts, cabling switches to server ports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -699,6 +748,7 @@
                 <input type="checkbox" id="sw-datacenter-3-2-1" class="topic-checkbox">
                 <label for="sw-datacenter-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Access vs trunk ports, VLAN setups, IP allocations</span>
+                <button class="simplify-btn" data-topic="Access vs trunk ports, VLAN setups, IP allocations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -725,6 +775,7 @@
                 <input type="checkbox" id="sw-datacenter-3-2-2" class="topic-checkbox">
                 <label for="sw-datacenter-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Link Aggregation (LACP) configurations for redundancy</span>
+                <button class="simplify-btn" data-topic="Link Aggregation (LACP) configurations for redundancy">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="sw-datacenter-3-3-1" class="topic-checkbox">
                 <label for="sw-datacenter-3-3-1" class="checkmark"></label>
                 <span class="topic-text">IPMI configs, iDRAC (Dell), iLO (HP) interface configurations</span>
+                <button class="simplify-btn" data-topic="IPMI configs, iDRAC (Dell), iLO (HP) interface configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="sw-datacenter-3-3-2" class="topic-checkbox">
                 <label for="sw-datacenter-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Serial-over-LAN (SoL) setups, remote console integrations</span>
+                <button class="simplify-btn" data-topic="Serial-over-LAN (SoL) setups, remote console integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="sw-datacenter-3-4-1" class="topic-checkbox">
                 <label for="sw-datacenter-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Creating rack elevation diagrams (Visio, Netbox)</span>
+                <button class="simplify-btn" data-topic="Creating rack elevation diagrams (Visio, Netbox)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="sw-datacenter-3-4-2" class="topic-checkbox">
                 <label for="sw-datacenter-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Asset tag scans, database records entries</span>
+                <button class="simplify-btn" data-topic="Asset tag scans, database records entries">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -870,16 +925,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Asset tag scans, database records entries&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Top of Rack (ToR) switch placements, console connections?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Top of Rack (ToR) switch placements, console connections.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Top of Rack (ToR) switch placements, console connections&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Patch panel layouts, cabling switches to server ports typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Patch panel layouts, cabling switches to server ports.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Patch panel layouts, cabling switches to server ports&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Access vs trunk ports, VLAN setups, IP allocations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Access vs trunk ports, VLAN setups, IP allocations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Access vs trunk ports, VLAN setups, IP allocations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Link Aggregation (LACP) configurations for redundancy?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Link Aggregation (LACP) configurations for redundancy&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of IPMI configs, iDRAC (Dell), iLO (HP) interface configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for IPMI configs, iDRAC (Dell), iLO (HP) interface configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;IPMI configs, iDRAC (Dell), iLO (HP) interface configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Serial-over-LAN (SoL) setups, remote console integrations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Serial-over-LAN (SoL) setups, remote console integrations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Serial-over-LAN (SoL) setups, remote console integrations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Creating rack elevation diagrams (Visio, Netbox) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Creating rack elevation diagrams (Visio, Netbox) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Creating rack elevation diagrams (Visio, Netbox)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Asset tag scans, database records entries?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Asset tag scans, database records entries&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Center Technician in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Top of Rack (ToR) switch placements, console connections&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Hypervisors, Monitoring & SLA
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install VMware ESXi/Proxmox, configure Zabbix monitoring, and manage disaster recovery.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Hypervisors, Monitoring & SLA
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Install VMware ESXi/Proxmox, configure Zabbix monitoring, and manage disaster recovery.</p>
+   
         <!-- Week 13: Virtualization (ESXi / Proxmox) -->
         <div class="week-card">
           <div class="week-header">
@@ -892,6 +962,7 @@
                 <input type="checkbox" id="sw-datacenter-4-1-1" class="topic-checkbox">
                 <label for="sw-datacenter-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Hypervisor installation, virtual switch networking</span>
+                <button class="simplify-btn" data-topic="Hypervisor installation, virtual switch networking">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -918,6 +989,7 @@
                 <input type="checkbox" id="sw-datacenter-4-1-2" class="topic-checkbox">
                 <label for="sw-datacenter-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Deploying VMs, memory allocation guidelines</span>
+                <button class="simplify-btn" data-topic="Deploying VMs, memory allocation guidelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -953,6 +1025,7 @@
                 <input type="checkbox" id="sw-datacenter-4-2-1" class="topic-checkbox">
                 <label for="sw-datacenter-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Zabbix / Nagios config, SNMP queries setup</span>
+                <button class="simplify-btn" data-topic="Zabbix / Nagios config, SNMP queries setup">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -979,6 +1052,7 @@
                 <input type="checkbox" id="sw-datacenter-4-2-2" class="topic-checkbox">
                 <label for="sw-datacenter-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Environmental sensors: temperature, humidity alerts</span>
+                <button class="simplify-btn" data-topic="Environmental sensors: temperature, humidity alerts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1014,6 +1088,7 @@
                 <input type="checkbox" id="sw-datacenter-4-3-1" class="topic-checkbox">
                 <label for="sw-datacenter-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Local backups configurations, offsite replications</span>
+                <button class="simplify-btn" data-topic="Local backups configurations, offsite replications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1040,6 +1115,7 @@
                 <input type="checkbox" id="sw-datacenter-4-3-2" class="topic-checkbox">
                 <label for="sw-datacenter-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Disaster recovery scenarios, hot vs cold recovery sites</span>
+                <button class="simplify-btn" data-topic="Disaster recovery scenarios, hot vs cold recovery sites">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="sw-datacenter-4-4-1" class="topic-checkbox">
                 <label for="sw-datacenter-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Electrostatic Discharge (ESD) safety, rack safety guidelines</span>
+                <button class="simplify-btn" data-topic="Electrostatic Discharge (ESD) safety, rack safety guidelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="sw-datacenter-4-4-2" class="topic-checkbox">
                 <label for="sw-datacenter-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Service Level Agreements (SLAs), ticket workflow processes</span>
+                <button class="simplify-btn" data-topic="Service Level Agreements (SLAs), ticket workflow processes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1123,6 +1201,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which Layer of the OSI Model is responsible for routing data packets across different networks?&quot;, &quot;options&quot;: [&quot;Data Link Layer&quot;, &quot;Network Layer&quot;, &quot;Transport Layer&quot;, &quot;Session Layer&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Hypervisor installation, virtual switch networking&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Hypervisor installation, virtual switch networking?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Hypervisor installation, virtual switch networking.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hypervisor installation, virtual switch networking&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Deploying VMs, memory allocation guidelines typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Deploying VMs, memory allocation guidelines.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Deploying VMs, memory allocation guidelines&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Zabbix / Nagios config, SNMP queries setup practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Zabbix / Nagios config, SNMP queries setup systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Zabbix / Nagios config, SNMP queries setup&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Environmental sensors: temperature, humidity alerts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Environmental sensors: temperature, humidity alerts&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Local backups configurations, offsite replications?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Local backups configurations, offsite replications.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Local backups configurations, offsite replications&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Disaster recovery scenarios, hot vs cold recovery sites typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Disaster recovery scenarios, hot vs cold recovery sites.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Disaster recovery scenarios, hot vs cold recovery sites&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Electrostatic Discharge (ESD) safety, rack safety guidelines practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Electrostatic Discharge (ESD) safety, rack safety guidelines systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Electrostatic Discharge (ESD) safety, rack safety guidelines&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Service Level Agreements (SLAs), ticket workflow processes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Service Level Agreements (SLAs), ticket workflow processes&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Center Technician in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hypervisor installation, virtual switch networking&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

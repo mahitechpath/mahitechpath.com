@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Transmission Line Modeling
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master line parameters (inductance/capacitance), transmission line performance, and cable modeling.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Transmission Line Modeling
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master line parameters (inductance/capacitance), transmission line performance, and cable modeling.</p>
+   
         <!-- Week 1: Transmission Line Parameters -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-power-systems-1-1-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Resistance, inductance of single/three-phase lines, transposition</span>
+                <button class="simplify-btn" data-topic="Resistance, inductance of single/three-phase lines, transposition">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-power-systems-1-1-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-1-2" class="checkmark"></label>
                 <span class="topic-text">GMD/GMR calculations, capacitance of overhead conductors</span>
+                <button class="simplify-btn" data-topic="GMD/GMR calculations, capacitance of overhead conductors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-power-systems-1-2-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Short, medium (nominal-T/pi), and long transmission line models</span>
+                <button class="simplify-btn" data-topic="Short, medium (nominal-T/pi), and long transmission line models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-power-systems-1-2-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-2-2" class="checkmark"></label>
                 <span class="topic-text">ABCD parameters, voltage regulation, and transmission efficiency</span>
+                <button class="simplify-btn" data-topic="ABCD parameters, voltage regulation, and transmission efficiency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-power-systems-1-3-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Surge Impedance Loading (SIL), Ferranti effect, shunt compensation</span>
+                <button class="simplify-btn" data-topic="Surge Impedance Loading (SIL), Ferranti effect, shunt compensation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-power-systems-1-3-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Corona loss, factor affecting corona, and sag calculations</span>
+                <button class="simplify-btn" data-topic="Corona loss, factor affecting corona, and sag calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-power-systems-1-4-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Insulation resistance, capacitance of single/three-core cables</span>
+                <button class="simplify-btn" data-topic="Insulation resistance, capacitance of single/three-core cables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-power-systems-1-4-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Dielectric loss, electrostatic stress, and grading of cables</span>
+                <button class="simplify-btn" data-topic="Dielectric loss, electrostatic stress, and grading of cables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-power-systems-1-5-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-power-systems-1-5-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-power-systems-1-6-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-power-systems-1-6-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="eee-power-systems-1-7-1" class="topic-checkbox">
                 <label for="eee-power-systems-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="eee-power-systems-1-7-2" class="topic-checkbox">
                 <label for="eee-power-systems-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -545,16 +560,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Resistance, inductance of single/three-phase lines, transposition?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Resistance, inductance of single/three-phase lines, transposition.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Resistance, inductance of single/three-phase lines, transposition&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is GMD/GMR calculations, capacitance of overhead conductors typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of GMD/GMR calculations, capacitance of overhead conductors.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;GMD/GMR calculations, capacitance of overhead conductors&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Short, medium (nominal-T/pi), and long transmission line models practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Short, medium (nominal-T/pi), and long transmission line models systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Short, medium (nominal-T/pi), and long transmission line models&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with ABCD parameters, voltage regulation, and transmission efficiency?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;ABCD parameters, voltage regulation, and transmission efficiency&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Surge Impedance Loading (SIL), Ferranti effect, shunt compensation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Surge Impedance Loading (SIL), Ferranti effect, shunt compensation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Surge Impedance Loading (SIL), Ferranti effect, shunt compensation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Corona loss, factor affecting corona, and sag calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Corona loss, factor affecting corona, and sag calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Corona loss, factor affecting corona, and sag calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Insulation resistance, capacitance of single/three-core cables practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Insulation resistance, capacitance of single/three-core cables systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Insulation resistance, capacitance of single/three-core cables&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Dielectric loss, electrostatic stress, and grading of cables?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Dielectric loss, electrostatic stress, and grading of cables&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Power Systems Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Resistance, inductance of single/three-phase lines, transposition&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Power Systems Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Resistance, inductance of single/three-phase lines, transposition&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Network Calculations & Load Flow
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study bus matrices, Gauss-Seidel, Newton-Raphson, and economic load dispatch.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Network Calculations & Load Flow
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study bus matrices, Gauss-Seidel, Newton-Raphson, and economic load dispatch.</p>
+   
         <!-- Week 8: Bus Admittance Matrix -->
         <div class="week-card">
           <div class="week-header">
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-power-systems-2-1-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Y-bus matrix formulation, singular transformation, line charging</span>
+                <button class="simplify-btn" data-topic="Y-bus matrix formulation, singular transformation, line charging">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-power-systems-2-1-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Z-bus matrix construction and impedance modeling</span>
+                <button class="simplify-btn" data-topic="Z-bus matrix construction and impedance modeling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-power-systems-2-2-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Gauss-Seidel iterative equations, slack, PQ, and PV buses</span>
+                <button class="simplify-btn" data-topic="Gauss-Seidel iterative equations, slack, PQ, and PV buses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-power-systems-2-2-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Acceleration factors, convergence, and power flow equations</span>
+                <button class="simplify-btn" data-topic="Acceleration factors, convergence, and power flow equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-power-systems-2-3-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Newton-Raphson algorithm, Jacobian matrix elements, polar form</span>
+                <button class="simplify-btn" data-topic="Newton-Raphson algorithm, Jacobian matrix elements, polar form">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-power-systems-2-3-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Fast Decoupled load flow simplifications and comparisons</span>
+                <button class="simplify-btn" data-topic="Fast Decoupled load flow simplifications and comparisons">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-power-systems-2-4-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Incremental cost curves, penalty factors, transmission loss formula</span>
+                <button class="simplify-btn" data-topic="Incremental cost curves, penalty factors, transmission loss formula">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-power-systems-2-4-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Economic dispatch scheduling with and without generator limits</span>
+                <button class="simplify-btn" data-topic="Economic dispatch scheduling with and without generator limits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-power-systems-2-5-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-power-systems-2-5-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="eee-power-systems-2-6-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="eee-power-systems-2-6-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="eee-power-systems-2-7-1" class="topic-checkbox">
                 <label for="eee-power-systems-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="eee-power-systems-2-7-2" class="topic-checkbox">
                 <label for="eee-power-systems-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -982,16 +1026,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Y-bus matrix formulation, singular transformation, line charging?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Y-bus matrix formulation, singular transformation, line charging.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Y-bus matrix formulation, singular transformation, line charging&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Z-bus matrix construction and impedance modeling typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Z-bus matrix construction and impedance modeling.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Z-bus matrix construction and impedance modeling&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Gauss-Seidel iterative equations, slack, PQ, and PV buses practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Gauss-Seidel iterative equations, slack, PQ, and PV buses systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Gauss-Seidel iterative equations, slack, PQ, and PV buses&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Acceleration factors, convergence, and power flow equations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Acceleration factors, convergence, and power flow equations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Newton-Raphson algorithm, Jacobian matrix elements, polar form?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Newton-Raphson algorithm, Jacobian matrix elements, polar form.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Newton-Raphson algorithm, Jacobian matrix elements, polar form&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fast Decoupled load flow simplifications and comparisons typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fast Decoupled load flow simplifications and comparisons.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fast Decoupled load flow simplifications and comparisons&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Incremental cost curves, penalty factors, transmission loss formula practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Incremental cost curves, penalty factors, transmission loss formula systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Incremental cost curves, penalty factors, transmission loss formula&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Economic dispatch scheduling with and without generator limits?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Economic dispatch scheduling with and without generator limits&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Power Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Y-bus matrix formulation, singular transformation, line charging&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Power Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Y-bus matrix formulation, singular transformation, line charging&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Fault Analysis & Stability
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study symmetrical faults, symmetrical components, unsymmetrical faults, and swing equations.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Fault Analysis & Stability
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study symmetrical faults, symmetrical components, unsymmetrical faults, and swing equations.</p>
+   
         <!-- Week 15: Symmetrical Faults -->
         <div class="week-card">
           <div class="week-header">
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-power-systems-3-1-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Transients in RL circuits, short circuit currents in generators</span>
+                <button class="simplify-btn" data-topic="Transients in RL circuits, short circuit currents in generators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-power-systems-3-1-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Symmetrical short circuit capacity (MVA), selection of reactors</span>
+                <button class="simplify-btn" data-topic="Symmetrical short circuit capacity (MVA), selection of reactors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-power-systems-3-2-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Positive, negative, and zero sequence transformation matrices</span>
+                <button class="simplify-btn" data-topic="Positive, negative, and zero sequence transformation matrices">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-power-systems-3-2-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Sequence impedances and network modeling of transformers/generators</span>
+                <button class="simplify-btn" data-topic="Sequence impedances and network modeling of transformers/generators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-power-systems-3-3-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Single Line-to-Ground (LG), Line-to-Line (LL), and Double Line-to-Ground (LLG)</span>
+                <button class="simplify-btn" data-topic="Single Line-to-Ground (LG), Line-to-Line (LL), and Double Line-to-Ground (LLG)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-power-systems-3-3-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Fault connection diagrams, fault impedance, and current calculations</span>
+                <button class="simplify-btn" data-topic="Fault connection diagrams, fault impedance, and current calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-power-systems-3-4-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Steady-state and transient stability, swing equation derivation</span>
+                <button class="simplify-btn" data-topic="Steady-state and transient stability, swing equation derivation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-power-systems-3-4-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Equal area criterion, critical clearing angle, and multi-machine stability</span>
+                <button class="simplify-btn" data-topic="Equal area criterion, critical clearing angle, and multi-machine stability">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1248,6 +1315,7 @@
                 <input type="checkbox" id="eee-power-systems-3-5-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1274,6 +1342,7 @@
                 <input type="checkbox" id="eee-power-systems-3-5-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1309,6 +1378,7 @@
                 <input type="checkbox" id="eee-power-systems-3-6-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1335,6 +1405,7 @@
                 <input type="checkbox" id="eee-power-systems-3-6-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="eee-power-systems-3-7-1" class="topic-checkbox">
                 <label for="eee-power-systems-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="eee-power-systems-3-7-2" class="topic-checkbox">
                 <label for="eee-power-systems-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1419,16 +1492,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Symmetrical short circuit capacity (MVA), selection of reactors&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Transients in RL circuits, short circuit currents in generators?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Transients in RL circuits, short circuit currents in generators.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transients in RL circuits, short circuit currents in generators&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Symmetrical short circuit capacity (MVA), selection of reactors typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Symmetrical short circuit capacity (MVA), selection of reactors.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Symmetrical short circuit capacity (MVA), selection of reactors&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Positive, negative, and zero sequence transformation matrices practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Positive, negative, and zero sequence transformation matrices systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Positive, negative, and zero sequence transformation matrices&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Sequence impedances and network modeling of transformers/generators?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Sequence impedances and network modeling of transformers/generators&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Single Line-to-Ground (LG), Line-to-Line (LL), and Double Line-to-Ground (LLG)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Single Line-to-Ground (LG), Line-to-Line (LL), and Double Line-to-Ground (LLG).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Single Line-to-Ground (LG), Line-to-Line (LL), and Double Line-to-Ground (LLG)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fault connection diagrams, fault impedance, and current calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fault connection diagrams, fault impedance, and current calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fault connection diagrams, fault impedance, and current calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Steady-state and transient stability, swing equation derivation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Steady-state and transient stability, swing equation derivation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Steady-state and transient stability, swing equation derivation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Equal area criterion, critical clearing angle, and multi-machine stability?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Equal area criterion, critical clearing angle, and multi-machine stability&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Power Systems Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transients in RL circuits, short circuit currents in generators&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Protection, Control & Smart Grids
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master protection relays, circuit breakers, voltage/frequency control, and smart grids.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Protection, Control & Smart Grids
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master protection relays, circuit breakers, voltage/frequency control, and smart grids.</p>
+   
         <!-- Week 22: Protection Relays -->
         <div class="week-card">
           <div class="week-header">
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-power-systems-4-1-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Overcurrent, directional, distance (impedance/mho), differential relays</span>
+                <button class="simplify-btn" data-topic="Overcurrent, directional, distance (impedance/mho), differential relays">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-power-systems-4-1-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Microprocessor-based static relays and protective schemes</span>
+                <button class="simplify-btn" data-topic="Microprocessor-based static relays and protective schemes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-power-systems-4-2-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Arc extinction theories, recovery/striking voltage, ratings</span>
+                <button class="simplify-btn" data-topic="Arc extinction theories, recovery/striking voltage, ratings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-power-systems-4-2-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-2-2" class="checkmark"></label>
                 <span class="topic-text">SF6, vacuum, oil, and air blast circuit breakers operations</span>
+                <button class="simplify-btn" data-topic="SF6, vacuum, oil, and air blast circuit breakers operations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-power-systems-4-3-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Automatic Voltage Regulator (AVR) loop, load frequency control (ALFC)</span>
+                <button class="simplify-btn" data-topic="Automatic Voltage Regulator (AVR) loop, load frequency control (ALFC)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-power-systems-4-3-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Reactive power control, shunt/series capacitors, and FACTS devices</span>
+                <button class="simplify-btn" data-topic="Reactive power control, shunt/series capacitors, and FACTS devices">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1624,6 +1718,7 @@
                 <input type="checkbox" id="eee-power-systems-4-4-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-4-1" class="checkmark"></label>
                 <span class="topic-text">HVDC transmission lines, converters, filters, and advantages</span>
+                <button class="simplify-btn" data-topic="HVDC transmission lines, converters, filters, and advantages">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1650,6 +1745,7 @@
                 <input type="checkbox" id="eee-power-systems-4-4-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Smart grid concepts, microgrids, battery energy storage systems</span>
+                <button class="simplify-btn" data-topic="Smart grid concepts, microgrids, battery energy storage systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1685,6 +1781,7 @@
                 <input type="checkbox" id="eee-power-systems-4-5-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1711,6 +1808,7 @@
                 <input type="checkbox" id="eee-power-systems-4-5-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1746,6 +1844,7 @@
                 <input type="checkbox" id="eee-power-systems-4-6-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1772,6 +1871,7 @@
                 <input type="checkbox" id="eee-power-systems-4-6-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1807,6 +1907,7 @@
                 <input type="checkbox" id="eee-power-systems-4-7-1" class="topic-checkbox">
                 <label for="eee-power-systems-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1833,6 +1934,7 @@
                 <input type="checkbox" id="eee-power-systems-4-7-2" class="topic-checkbox">
                 <label for="eee-power-systems-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1855,6 +1957,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reactive power control, shunt/series capacitors, and FACTS devices&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Overcurrent, directional, distance (impedance/mho), differential relays?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Overcurrent, directional, distance (impedance/mho), differential relays.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Overcurrent, directional, distance (impedance/mho), differential relays&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Microprocessor-based static relays and protective schemes typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Microprocessor-based static relays and protective schemes.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Microprocessor-based static relays and protective schemes&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Arc extinction theories, recovery/striking voltage, ratings practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Arc extinction theories, recovery/striking voltage, ratings systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Arc extinction theories, recovery/striking voltage, ratings&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with SF6, vacuum, oil, and air blast circuit breakers operations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;SF6, vacuum, oil, and air blast circuit breakers operations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Automatic Voltage Regulator (AVR) loop, load frequency control (ALFC)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Automatic Voltage Regulator (AVR) loop, load frequency control (ALFC).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Automatic Voltage Regulator (AVR) loop, load frequency control (ALFC)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Reactive power control, shunt/series capacitors, and FACTS devices typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Reactive power control, shunt/series capacitors, and FACTS devices.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reactive power control, shunt/series capacitors, and FACTS devices&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting HVDC transmission lines, converters, filters, and advantages practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of HVDC transmission lines, converters, filters, and advantages systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;HVDC transmission lines, converters, filters, and advantages&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Smart grid concepts, microgrids, battery energy storage systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Smart grid concepts, microgrids, battery energy storage systems&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Power Systems Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Overcurrent, directional, distance (impedance/mho), differential relays&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

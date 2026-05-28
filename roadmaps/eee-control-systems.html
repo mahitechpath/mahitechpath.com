@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          System Modeling & State Space
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master transfer functions, block diagrams, signal flow graphs, and state-space models.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            System Modeling & State Space
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master transfer functions, block diagrams, signal flow graphs, and state-space models.</p>
+   
         <!-- Week 1: System Modeling -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-control-systems-1-1-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Mathematical models of mechanical (translation, rotation) systems</span>
+                <button class="simplify-btn" data-topic="Mathematical models of mechanical (translation, rotation) systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-control-systems-1-1-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Electrical analogies (force-voltage, force-current), thermal systems</span>
+                <button class="simplify-btn" data-topic="Electrical analogies (force-voltage, force-current), thermal systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-control-systems-1-2-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Laplace transform application, impulse response, transfer functions</span>
+                <button class="simplify-btn" data-topic="Laplace transform application, impulse response, transfer functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-control-systems-1-2-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Block diagram reduction rules, Signal Flow Graphs, Mason's gain</span>
+                <button class="simplify-btn" data-topic="Block diagram reduction rules, Signal Flow Graphs, Mason's gain">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-control-systems-1-3-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-3-1" class="checkmark"></label>
                 <span class="topic-text">State variable formulation, physical/canonical forms, transfer function conversion</span>
+                <button class="simplify-btn" data-topic="State variable formulation, physical/canonical forms, transfer function conversion">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-control-systems-1-3-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-3-2" class="checkmark"></label>
                 <span class="topic-text">State transition matrix, solution of state equations</span>
+                <button class="simplify-btn" data-topic="State transition matrix, solution of state equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-control-systems-1-4-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Kalman's and Gilbert's tests for controllability/observability</span>
+                <button class="simplify-btn" data-topic="Kalman's and Gilbert's tests for controllability/observability">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-control-systems-1-4-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-4-2" class="checkmark"></label>
                 <span class="topic-text">State feedback controller design, pole placement, and pole-zero cancellations</span>
+                <button class="simplify-btn" data-topic="State feedback controller design, pole placement, and pole-zero cancellations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-control-systems-1-5-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-control-systems-1-5-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-control-systems-1-6-1" class="topic-checkbox">
                 <label for="eee-control-systems-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-control-systems-1-6-2" class="topic-checkbox">
                 <label for="eee-control-systems-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Mathematical models of mechanical (translation, rotation) systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Mathematical models of mechanical (translation, rotation) systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mathematical models of mechanical (translation, rotation) systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Electrical analogies (force-voltage, force-current), thermal systems typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Electrical analogies (force-voltage, force-current), thermal systems.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Electrical analogies (force-voltage, force-current), thermal systems&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Laplace transform application, impulse response, transfer functions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Laplace transform application, impulse response, transfer functions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Laplace transform application, impulse response, transfer functions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Block diagram reduction rules, Signal Flow Graphs, Mason's gain?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Block diagram reduction rules, Signal Flow Graphs, Mason's gain&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of State variable formulation, physical/canonical forms, transfer function conversion?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for State variable formulation, physical/canonical forms, transfer function conversion.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;State variable formulation, physical/canonical forms, transfer function conversion&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is State transition matrix, solution of state equations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of State transition matrix, solution of state equations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;State transition matrix, solution of state equations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Kalman's and Gilbert's tests for controllability/observability practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Kalman's and Gilbert's tests for controllability/observability systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Kalman's and Gilbert's tests for controllability/observability&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with State feedback controller design, pole placement, and pole-zero cancellations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;State feedback controller design, pole placement, and pole-zero cancellations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Control Systems Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mathematical models of mechanical (translation, rotation) systems&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Control Systems Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mathematical models of mechanical (translation, rotation) systems&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Time Response & PID Tuning
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study first/second-order transient responses, steady-state errors, and PID control.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Time Response & PID Tuning
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study first/second-order transient responses, steady-state errors, and PID control.</p>
+   
         <!-- Week 7: Transient Response -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-control-systems-2-1-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Standard test signals, step response of first-order systems</span>
+                <button class="simplify-btn" data-topic="Standard test signals, step response of first-order systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-control-systems-2-1-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Second-order systems: damping ratio, natural frequency, rise/peak/settling times</span>
+                <button class="simplify-btn" data-topic="Second-order systems: damping ratio, natural frequency, rise/peak/settling times">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-control-systems-2-2-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Static error coefficients, system type classification, steady-state errors</span>
+                <button class="simplify-btn" data-topic="Static error coefficients, system type classification, steady-state errors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-control-systems-2-2-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Generalized error series and dynamic error coefficients</span>
+                <button class="simplify-btn" data-topic="Generalized error series and dynamic error coefficients">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-control-systems-2-3-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Proportional (P), Integral (I), Derivative (D) controller properties</span>
+                <button class="simplify-btn" data-topic="Proportional (P), Integral (I), Derivative (D) controller properties">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-control-systems-2-3-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Effects of PI, PD, and PID controllers on transient/steady-state responses</span>
+                <button class="simplify-btn" data-topic="Effects of PI, PD, and PID controllers on transient/steady-state responses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-control-systems-2-4-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Ziegler-Nichols tuning rules, Cohen-Coon tuning rules</span>
+                <button class="simplify-btn" data-topic="Ziegler-Nichols tuning rules, Cohen-Coon tuning rules">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-control-systems-2-4-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-4-2" class="checkmark"></label>
                 <span class="topic-text">PID parameter optimization and anti-windup schemes</span>
+                <button class="simplify-btn" data-topic="PID parameter optimization and anti-windup schemes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-control-systems-2-5-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-control-systems-2-5-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-control-systems-2-6-1" class="topic-checkbox">
                 <label for="eee-control-systems-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-control-systems-2-6-2" class="topic-checkbox">
                 <label for="eee-control-systems-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Standard test signals, step response of first-order systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Standard test signals, step response of first-order systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Standard test signals, step response of first-order systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Second-order systems: damping ratio, natural frequency, rise/peak/settling times typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Second-order systems: damping ratio, natural frequency, rise/peak/settling times.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Second-order systems: damping ratio, natural frequency, rise/peak/settling times&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Static error coefficients, system type classification, steady-state errors practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Static error coefficients, system type classification, steady-state errors systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Static error coefficients, system type classification, steady-state errors&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Generalized error series and dynamic error coefficients?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Generalized error series and dynamic error coefficients&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Proportional (P), Integral (I), Derivative (D) controller properties?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Proportional (P), Integral (I), Derivative (D) controller properties.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Proportional (P), Integral (I), Derivative (D) controller properties&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Effects of PI, PD, and PID controllers on transient/steady-state responses typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Effects of PI, PD, and PID controllers on transient/steady-state responses.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Effects of PI, PD, and PID controllers on transient/steady-state responses&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Ziegler-Nichols tuning rules, Cohen-Coon tuning rules practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Ziegler-Nichols tuning rules, Cohen-Coon tuning rules systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Ziegler-Nichols tuning rules, Cohen-Coon tuning rules&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with PID parameter optimization and anti-windup schemes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;PID parameter optimization and anti-windup schemes&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Control Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Standard test signals, step response of first-order systems&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Control Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Standard test signals, step response of first-order systems&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Stability & Frequency Domain
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Routh-Hurwitz, Root Locus, Bode plots, and Nyquist stability criteria.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Stability & Frequency Domain
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Routh-Hurwitz, Root Locus, Bode plots, and Nyquist stability criteria.</p>
+   
         <!-- Week 13: Routh-Hurwitz Stability -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-control-systems-3-1-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Concept of stability, BIBO stability, Routh array construction</span>
+                <button class="simplify-btn" data-topic="Concept of stability, BIBO stability, Routh array construction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-control-systems-3-1-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Special cases in Routh array, relative stability analysis</span>
+                <button class="simplify-btn" data-topic="Special cases in Routh array, relative stability analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-control-systems-3-2-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Root locus construction rules, angle/magnitude conditions, breakaway points</span>
+                <button class="simplify-btn" data-topic="Root locus construction rules, angle/magnitude conditions, breakaway points">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-control-systems-3-2-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Effects of adding poles and zeros on Root Locus shapes</span>
+                <button class="simplify-btn" data-topic="Effects of adding poles and zeros on Root Locus shapes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-control-systems-3-3-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Frequency response definition, logarithmic plots, asymptotic Bode plots</span>
+                <button class="simplify-btn" data-topic="Frequency response definition, logarithmic plots, asymptotic Bode plots">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-control-systems-3-3-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Gain Margin (GM), Phase Margin (PM), relative stability evaluations</span>
+                <button class="simplify-btn" data-topic="Gain Margin (GM), Phase Margin (PM), relative stability evaluations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-control-systems-3-4-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Polar plots, Nyquist stability criterion, encirclements count</span>
+                <button class="simplify-btn" data-topic="Polar plots, Nyquist stability criterion, encirclements count">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-control-systems-3-4-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Gain/phase margins from Nyquist plots, stability of non-minimum phase</span>
+                <button class="simplify-btn" data-topic="Gain/phase margins from Nyquist plots, stability of non-minimum phase">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-control-systems-3-5-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-control-systems-3-5-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-control-systems-3-6-1" class="topic-checkbox">
                 <label for="eee-control-systems-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-control-systems-3-6-2" class="topic-checkbox">
                 <label for="eee-control-systems-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Concept of stability, BIBO stability, Routh array construction?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Concept of stability, BIBO stability, Routh array construction.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Concept of stability, BIBO stability, Routh array construction&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Special cases in Routh array, relative stability analysis typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Special cases in Routh array, relative stability analysis.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Special cases in Routh array, relative stability analysis&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Root locus construction rules, angle/magnitude conditions, breakaway points practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Root locus construction rules, angle/magnitude conditions, breakaway points systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Root locus construction rules, angle/magnitude conditions, breakaway points&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Effects of adding poles and zeros on Root Locus shapes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Effects of adding poles and zeros on Root Locus shapes&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Frequency response definition, logarithmic plots, asymptotic Bode plots?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Frequency response definition, logarithmic plots, asymptotic Bode plots.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Frequency response definition, logarithmic plots, asymptotic Bode plots&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Gain Margin (GM), Phase Margin (PM), relative stability evaluations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Gain Margin (GM), Phase Margin (PM), relative stability evaluations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Gain Margin (GM), Phase Margin (PM), relative stability evaluations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Polar plots, Nyquist stability criterion, encirclements count practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Polar plots, Nyquist stability criterion, encirclements count systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Polar plots, Nyquist stability criterion, encirclements count&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Gain/phase margins from Nyquist plots, stability of non-minimum phase?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Gain/phase margins from Nyquist plots, stability of non-minimum phase&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Control Systems Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Concept of stability, BIBO stability, Routh array construction&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Control Systems Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Concept of stability, BIBO stability, Routh array construction&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Compensators & Digital Control
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design lead/lag compensators, state observers, and digital control samplers.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Compensators & Digital Control
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design lead/lag compensators, state observers, and digital control samplers.</p>
+   
         <!-- Week 19: Lead/Lag Compensators -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-control-systems-4-1-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Lead, Lag, and Lead-Lag networks frequency response</span>
+                <button class="simplify-btn" data-topic="Lead, Lag, and Lead-Lag networks frequency response">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-control-systems-4-1-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Design of Lead/Lag compensators using Bode plot method</span>
+                <button class="simplify-btn" data-topic="Design of Lead/Lag compensators using Bode plot method">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-control-systems-4-2-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Full-order and minimum-order state observer models</span>
+                <button class="simplify-btn" data-topic="Full-order and minimum-order state observer models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-control-systems-4-2-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Separation principle, regulator-estimator combined systems</span>
+                <button class="simplify-btn" data-topic="Separation principle, regulator-estimator combined systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="eee-control-systems-4-3-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-3-1" class="checkmark"></label>
                 <span class="topic-text">z-transform mapping, pulse transfer functions, samplers, and holds</span>
+                <button class="simplify-btn" data-topic="z-transform mapping, pulse transfer functions, samplers, and holds">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="eee-control-systems-4-3-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Stability in z-plane, Jury's stability test</span>
+                <button class="simplify-btn" data-topic="Stability in z-plane, Jury's stability test">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-control-systems-4-4-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Common non-linearities (backlash, dead-zone, saturation)</span>
+                <button class="simplify-btn" data-topic="Common non-linearities (backlash, dead-zone, saturation)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-control-systems-4-4-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Describing function method, phase plane analysis, limit cycles</span>
+                <button class="simplify-btn" data-topic="Describing function method, phase plane analysis, limit cycles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-control-systems-4-5-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-control-systems-4-5-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-control-systems-4-6-1" class="topic-checkbox">
                 <label for="eee-control-systems-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-control-systems-4-6-2" class="topic-checkbox">
                 <label for="eee-control-systems-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Lead, Lag, and Lead-Lag networks frequency response?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Lead, Lag, and Lead-Lag networks frequency response.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead, Lag, and Lead-Lag networks frequency response&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Design of Lead/Lag compensators using Bode plot method typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Design of Lead/Lag compensators using Bode plot method.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Design of Lead/Lag compensators using Bode plot method&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Full-order and minimum-order state observer models practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Full-order and minimum-order state observer models systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Full-order and minimum-order state observer models&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Separation principle, regulator-estimator combined systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Separation principle, regulator-estimator combined systems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of z-transform mapping, pulse transfer functions, samplers, and holds?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for z-transform mapping, pulse transfer functions, samplers, and holds.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;z-transform mapping, pulse transfer functions, samplers, and holds&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Stability in z-plane, Jury's stability test typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Stability in z-plane, Jury's stability test.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Stability in z-plane, Jury's stability test&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Common non-linearities (backlash, dead-zone, saturation) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Common non-linearities (backlash, dead-zone, saturation) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Common non-linearities (backlash, dead-zone, saturation)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Describing function method, phase plane analysis, limit cycles?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Describing function method, phase plane analysis, limit cycles&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Control Systems Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead, Lag, and Lead-Lag networks frequency response&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Control Systems Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead, Lag, and Lead-Lag networks frequency response&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

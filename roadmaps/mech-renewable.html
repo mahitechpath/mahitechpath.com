@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Wind Turbine Aerodynamics
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study aerodynamic forces on turbine blades, Betz limits, and structural loads.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Wind Turbine Aerodynamics
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study aerodynamic forces on turbine blades, Betz limits, and structural loads.</p>
+   
         <!-- Week 1: Wind Power Physics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-renewable-1-1-1" class="topic-checkbox">
                 <label for="mech-renewable-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Betz limit derivation (max kinetic energy extraction)</span>
+                <button class="simplify-btn" data-topic="Betz limit derivation (max kinetic energy extraction)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-renewable-1-1-2" class="topic-checkbox">
                 <label for="mech-renewable-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Power coefficient, tip speed ratio, lift and drag forces</span>
+                <button class="simplify-btn" data-topic="Power coefficient, tip speed ratio, lift and drag forces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-renewable-1-2-1" class="topic-checkbox">
                 <label for="mech-renewable-1-2-1" class="checkmark"></label>
                 <span class="topic-text">BEM theory equations, induction factors, chord length sizing</span>
+                <button class="simplify-btn" data-topic="BEM theory equations, induction factors, chord length sizing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-renewable-1-2-2" class="topic-checkbox">
                 <label for="mech-renewable-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Airfoil selections: lift-to-drag optimization</span>
+                <button class="simplify-btn" data-topic="Airfoil selections: lift-to-drag optimization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-renewable-1-3-1" class="topic-checkbox">
                 <label for="mech-renewable-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Centrifugal, aerodynamic, and gravitational loads on blades</span>
+                <button class="simplify-btn" data-topic="Centrifugal, aerodynamic, and gravitational loads on blades">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-renewable-1-3-2" class="topic-checkbox">
                 <label for="mech-renewable-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Resonance mitigation, damping systems inside towers</span>
+                <button class="simplify-btn" data-topic="Resonance mitigation, damping systems inside towers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-renewable-1-4-1" class="topic-checkbox">
                 <label for="mech-renewable-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Wake effects models, wake turbulence loss calculations</span>
+                <button class="simplify-btn" data-topic="Wake effects models, wake turbulence loss calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-renewable-1-4-2" class="topic-checkbox">
                 <label for="mech-renewable-1-4-2" class="checkmark"></label>
                 <span class="topic-text">CFD simulations of wind flow over hilly terrains</span>
+                <button class="simplify-btn" data-topic="CFD simulations of wind flow over hilly terrains">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-renewable-1-5-1" class="topic-checkbox">
                 <label for="mech-renewable-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-renewable-1-5-2" class="topic-checkbox">
                 <label for="mech-renewable-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Betz limit derivation (max kinetic energy extraction)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Betz limit derivation (max kinetic energy extraction).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Betz limit derivation (max kinetic energy extraction)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Power coefficient, tip speed ratio, lift and drag forces typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Power coefficient, tip speed ratio, lift and drag forces.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Power coefficient, tip speed ratio, lift and drag forces&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting BEM theory equations, induction factors, chord length sizing practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of BEM theory equations, induction factors, chord length sizing systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;BEM theory equations, induction factors, chord length sizing&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Airfoil selections: lift-to-drag optimization?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Airfoil selections: lift-to-drag optimization&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Centrifugal, aerodynamic, and gravitational loads on blades?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Centrifugal, aerodynamic, and gravitational loads on blades.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Centrifugal, aerodynamic, and gravitational loads on blades&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Resonance mitigation, damping systems inside towers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Resonance mitigation, damping systems inside towers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Resonance mitigation, damping systems inside towers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Wake effects models, wake turbulence loss calculations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Wake effects models, wake turbulence loss calculations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Wake effects models, wake turbulence loss calculations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with CFD simulations of wind flow over hilly terrains?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;CFD simulations of wind flow over hilly terrains&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Betz limit derivation (max kinetic energy extraction)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Betz limit derivation (max kinetic energy extraction)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Solar Thermal Energy Systems
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Model flat plate collectors, design concentrated solar power, and size exchangers.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Solar Thermal Energy Systems
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Model flat plate collectors, design concentrated solar power, and size exchangers.</p>
+   
         <!-- Week 6: Solar Radiation Geometry -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="mech-renewable-2-1-1" class="topic-checkbox">
                 <label for="mech-renewable-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Direct, diffuse, and global solar radiation calculations</span>
+                <button class="simplify-btn" data-topic="Direct, diffuse, and global solar radiation calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="mech-renewable-2-1-2" class="topic-checkbox">
                 <label for="mech-renewable-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Tilt angle optimizations, solar tracking systems mechanical drives</span>
+                <button class="simplify-btn" data-topic="Tilt angle optimizations, solar tracking systems mechanical drives">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-renewable-2-2-1" class="topic-checkbox">
                 <label for="mech-renewable-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Thermal loss equations, Hottel-Whillier-Bliss efficiency model</span>
+                <button class="simplify-btn" data-topic="Thermal loss equations, Hottel-Whillier-Bliss efficiency model">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-renewable-2-2-2" class="topic-checkbox">
                 <label for="mech-renewable-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Glazing, selective absorber coatings heat transfers</span>
+                <button class="simplify-btn" data-topic="Glazing, selective absorber coatings heat transfers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-renewable-2-3-1" class="topic-checkbox">
                 <label for="mech-renewable-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Parabolic trough, solar tower, and Stirling dish systems</span>
+                <button class="simplify-btn" data-topic="Parabolic trough, solar tower, and Stirling dish systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-renewable-2-3-2" class="topic-checkbox">
                 <label for="mech-renewable-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Thermal energy storage using molten salts, phase change materials</span>
+                <button class="simplify-btn" data-topic="Thermal energy storage using molten salts, phase change materials">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-renewable-2-4-1" class="topic-checkbox">
                 <label for="mech-renewable-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Sizing solar collector areas, heat exchangers selection</span>
+                <button class="simplify-btn" data-topic="Sizing solar collector areas, heat exchangers selection">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-renewable-2-4-2" class="topic-checkbox">
                 <label for="mech-renewable-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Natural circulation (thermosiphon) vs forced circulation loops</span>
+                <button class="simplify-btn" data-topic="Natural circulation (thermosiphon) vs forced circulation loops">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-renewable-2-5-1" class="topic-checkbox">
                 <label for="mech-renewable-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-renewable-2-5-2" class="topic-checkbox">
                 <label for="mech-renewable-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Direct, diffuse, and global solar radiation calculations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Direct, diffuse, and global solar radiation calculations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Direct, diffuse, and global solar radiation calculations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Tilt angle optimizations, solar tracking systems mechanical drives typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Tilt angle optimizations, solar tracking systems mechanical drives.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Tilt angle optimizations, solar tracking systems mechanical drives&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Thermal loss equations, Hottel-Whillier-Bliss efficiency model practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Thermal loss equations, Hottel-Whillier-Bliss efficiency model systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Thermal loss equations, Hottel-Whillier-Bliss efficiency model&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Glazing, selective absorber coatings heat transfers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Glazing, selective absorber coatings heat transfers&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Parabolic trough, solar tower, and Stirling dish systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Parabolic trough, solar tower, and Stirling dish systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Parabolic trough, solar tower, and Stirling dish systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Thermal energy storage using molten salts, phase change materials typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Thermal energy storage using molten salts, phase change materials.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Thermal energy storage using molten salts, phase change materials&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Sizing solar collector areas, heat exchangers selection practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Sizing solar collector areas, heat exchangers selection systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Sizing solar collector areas, heat exchangers selection&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Natural circulation (thermosiphon) vs forced circulation loops?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Natural circulation (thermosiphon) vs forced circulation loops&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Direct, diffuse, and global solar radiation calculations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Direct, diffuse, and global solar radiation calculations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Geothermal & Hydro Power
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design geothermal heat exchangers, size Pelton/Kaplan turbines, and study biomass.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Geothermal & Hydro Power
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design geothermal heat exchangers, size Pelton/Kaplan turbines, and study biomass.</p>
+   
         <!-- Week 11: Geothermal Heat Exchangers -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="mech-renewable-3-1-1" class="topic-checkbox">
                 <label for="mech-renewable-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Ground source heat pumps, vertical vs horizontal loop designs</span>
+                <button class="simplify-btn" data-topic="Ground source heat pumps, vertical vs horizontal loop designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="mech-renewable-3-1-2" class="topic-checkbox">
                 <label for="mech-renewable-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Ground heat transfer equations, thermal conductivity of soils</span>
+                <button class="simplify-btn" data-topic="Ground heat transfer equations, thermal conductivity of soils">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="mech-renewable-3-2-1" class="topic-checkbox">
                 <label for="mech-renewable-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Pelton, Francis, and Kaplan hydraulic turbine classifications</span>
+                <button class="simplify-btn" data-topic="Pelton, Francis, and Kaplan hydraulic turbine classifications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="mech-renewable-3-2-2" class="topic-checkbox">
                 <label for="mech-renewable-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Velocity triangles, runner sizing, draft tube design</span>
+                <button class="simplify-btn" data-topic="Velocity triangles, runner sizing, draft tube design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-renewable-3-3-1" class="topic-checkbox">
                 <label for="mech-renewable-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Oscillating water column systems, wave energy converters</span>
+                <button class="simplify-btn" data-topic="Oscillating water column systems, wave energy converters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-renewable-3-3-2" class="topic-checkbox">
                 <label for="mech-renewable-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Tidal barrage turbines, ocean thermal energy conversion (OTEC)</span>
+                <button class="simplify-btn" data-topic="Tidal barrage turbines, ocean thermal energy conversion (OTEC)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-renewable-3-4-1" class="topic-checkbox">
                 <label for="mech-renewable-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Biomass combustion, gasifier reactor designs (downdraft/updraft)</span>
+                <button class="simplify-btn" data-topic="Biomass combustion, gasifier reactor designs (downdraft/updraft)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-renewable-3-4-2" class="topic-checkbox">
                 <label for="mech-renewable-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Biogas digesters sizing, methane yield calculations</span>
+                <button class="simplify-btn" data-topic="Biogas digesters sizing, methane yield calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-renewable-3-5-1" class="topic-checkbox">
                 <label for="mech-renewable-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-renewable-3-5-2" class="topic-checkbox">
                 <label for="mech-renewable-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Biomass combustion, gasifier reactor designs (downdraft/updraft)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Ground source heat pumps, vertical vs horizontal loop designs?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Ground source heat pumps, vertical vs horizontal loop designs.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ground source heat pumps, vertical vs horizontal loop designs&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Ground heat transfer equations, thermal conductivity of soils typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Ground heat transfer equations, thermal conductivity of soils.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Ground heat transfer equations, thermal conductivity of soils&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Pelton, Francis, and Kaplan hydraulic turbine classifications practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Pelton, Francis, and Kaplan hydraulic turbine classifications systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Pelton, Francis, and Kaplan hydraulic turbine classifications&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Velocity triangles, runner sizing, draft tube design?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Velocity triangles, runner sizing, draft tube design&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Oscillating water column systems, wave energy converters?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Oscillating water column systems, wave energy converters.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Oscillating water column systems, wave energy converters&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Tidal barrage turbines, ocean thermal energy conversion (OTEC) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Tidal barrage turbines, ocean thermal energy conversion (OTEC).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Tidal barrage turbines, ocean thermal energy conversion (OTEC)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Biomass combustion, gasifier reactor designs (downdraft/updraft) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Biomass combustion, gasifier reactor designs (downdraft/updraft) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Biomass combustion, gasifier reactor designs (downdraft/updraft)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Biogas digesters sizing, methane yield calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Biogas digesters sizing, methane yield calculations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ground source heat pumps, vertical vs horizontal loop designs&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Energy Auditing & CFD Optimization
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Simulate collectors in CFD software, calculate thermal efficiencies, and audit buildings.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Energy Auditing & CFD Optimization
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Simulate collectors in CFD software, calculate thermal efficiencies, and audit buildings.</p>
+   
         <!-- Week 16: Solar Collector CFD -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="mech-renewable-4-1-1" class="topic-checkbox">
                 <label for="mech-renewable-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Modeling solar collectors in ANSYS Fluent, heat transfers</span>
+                <button class="simplify-btn" data-topic="Modeling solar collectors in ANSYS Fluent, heat transfers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="mech-renewable-4-1-2" class="topic-checkbox">
                 <label for="mech-renewable-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Fluid velocity vectors plotting, hotspot optimizations</span>
+                <button class="simplify-btn" data-topic="Fluid velocity vectors plotting, hotspot optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="mech-renewable-4-2-1" class="topic-checkbox">
                 <label for="mech-renewable-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Double pipe, shell and tube, cross-flow heat exchangers</span>
+                <button class="simplify-btn" data-topic="Double pipe, shell and tube, cross-flow heat exchangers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="mech-renewable-4-2-2" class="topic-checkbox">
                 <label for="mech-renewable-4-2-2" class="checkmark"></label>
                 <span class="topic-text">LMTD and NTU-effectiveness sizing calculations</span>
+                <button class="simplify-btn" data-topic="LMTD and NTU-effectiveness sizing calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="mech-renewable-4-3-1" class="topic-checkbox">
                 <label for="mech-renewable-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Heat load calculations (U-values of walls/windows)</span>
+                <button class="simplify-btn" data-topic="Heat load calculations (U-values of walls/windows)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="mech-renewable-4-3-2" class="topic-checkbox">
                 <label for="mech-renewable-4-3-2" class="checkmark"></label>
                 <span class="topic-text">HVAC sizing, thermal insulation materials selections</span>
+                <button class="simplify-btn" data-topic="HVAC sizing, thermal insulation materials selections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-renewable-4-4-1" class="topic-checkbox">
                 <label for="mech-renewable-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Economic feasibility: net present value (NPV), payback periods</span>
+                <button class="simplify-btn" data-topic="Economic feasibility: net present value (NPV), payback periods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-renewable-4-4-2" class="topic-checkbox">
                 <label for="mech-renewable-4-4-2" class="checkmark"></label>
                 <span class="topic-text">LCOE equations for solar thermal and wind installations</span>
+                <button class="simplify-btn" data-topic="LCOE equations for solar thermal and wind installations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-renewable-4-5-1" class="topic-checkbox">
                 <label for="mech-renewable-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-renewable-4-5-2" class="topic-checkbox">
                 <label for="mech-renewable-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Modeling solar collectors in ANSYS Fluent, heat transfers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Modeling solar collectors in ANSYS Fluent, heat transfers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modeling solar collectors in ANSYS Fluent, heat transfers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fluid velocity vectors plotting, hotspot optimizations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fluid velocity vectors plotting, hotspot optimizations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fluid velocity vectors plotting, hotspot optimizations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Double pipe, shell and tube, cross-flow heat exchangers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Double pipe, shell and tube, cross-flow heat exchangers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Double pipe, shell and tube, cross-flow heat exchangers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with LMTD and NTU-effectiveness sizing calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;LMTD and NTU-effectiveness sizing calculations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Heat load calculations (U-values of walls/windows)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Heat load calculations (U-values of walls/windows).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Heat load calculations (U-values of walls/windows)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is HVAC sizing, thermal insulation materials selections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of HVAC sizing, thermal insulation materials selections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;HVAC sizing, thermal insulation materials selections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Economic feasibility: net present value (NPV), payback periods practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Economic feasibility: net present value (NPV), payback periods systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Economic feasibility: net present value (NPV), payback periods&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with LCOE equations for solar thermal and wind installations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;LCOE equations for solar thermal and wind installations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modeling solar collectors in ANSYS Fluent, heat transfers&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modeling solar collectors in ANSYS Fluent, heat transfers&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

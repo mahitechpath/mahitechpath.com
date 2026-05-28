@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Cloud Fundamentals & AWS Core
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish core networking and compute patterns on public cloud environments.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Cloud Fundamentals & AWS Core
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish core networking and compute patterns on public cloud environments.</p>
+   
         <!-- Week 1: Cloud Concepts & Virtualization -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-1-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Public vs private cloud, IaaS, PaaS, SaaS delivery models</span>
+                <button class="simplify-btn" data-topic="Public vs private cloud, IaaS, PaaS, SaaS delivery models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-1-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Hypervisors, container virtualization concepts, and cloud regions</span>
+                <button class="simplify-btn" data-topic="Hypervisors, container virtualization concepts, and cloud regions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-2-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Subnets, route tables, internet gateways, NAT gateways</span>
+                <button class="simplify-btn" data-topic="Subnets, route tables, internet gateways, NAT gateways">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-2-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Network Access Control Lists (NACLs) vs Security Groups</span>
+                <button class="simplify-btn" data-topic="Network Access Control Lists (NACLs) vs Security Groups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-3-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Virtual machine creation, AMI structures, CPU/RAM sizing models</span>
+                <button class="simplify-btn" data-topic="Virtual machine creation, AMI structures, CPU/RAM sizing models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-3-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Storage attachments: block storage (EBS) vs network storage (EFS)</span>
+                <button class="simplify-btn" data-topic="Storage attachments: block storage (EBS) vs network storage (EFS)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-4-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-4-1" class="checkmark"></label>
                 <span class="topic-text">IAM users, groups, roles, JSON policies validation</span>
+                <button class="simplify-btn" data-topic="IAM users, groups, roles, JSON policies validation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-4-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Multi-factor authentication (MFA) and single sign-on (SSO) set</span>
+                <button class="simplify-btn" data-topic="Multi-factor authentication (MFA) and single sign-on (SSO) set">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-5-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-5-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-6-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="sw-cloud-architect-1-6-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which hashing algorithm is considered cryptographically secure for storing user passwords?&quot;, &quot;options&quot;: [&quot;MD5&quot;, &quot;SHA-1&quot;, &quot;bcrypt&quot;, &quot;CRC32&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Network Access Control Lists (NACLs) vs Security Groups&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Public vs private cloud, IaaS, PaaS, SaaS delivery models?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Public vs private cloud, IaaS, PaaS, SaaS delivery models.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Public vs private cloud, IaaS, PaaS, SaaS delivery models&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Hypervisors, container virtualization concepts, and cloud regions typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Hypervisors, container virtualization concepts, and cloud regions.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Hypervisors, container virtualization concepts, and cloud regions&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Subnets, route tables, internet gateways, NAT gateways practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Subnets, route tables, internet gateways, NAT gateways systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Subnets, route tables, internet gateways, NAT gateways&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Network Access Control Lists (NACLs) vs Security Groups?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Network Access Control Lists (NACLs) vs Security Groups&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Virtual machine creation, AMI structures, CPU/RAM sizing models?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Virtual machine creation, AMI structures, CPU/RAM sizing models.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Virtual machine creation, AMI structures, CPU/RAM sizing models&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Storage attachments: block storage (EBS) vs network storage (EFS) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Storage attachments: block storage (EBS) vs network storage (EFS).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Storage attachments: block storage (EBS) vs network storage (EFS)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting IAM users, groups, roles, JSON policies validation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of IAM users, groups, roles, JSON policies validation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;IAM users, groups, roles, JSON policies validation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Multi-factor authentication (MFA) and single sign-on (SSO) set?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Multi-factor authentication (MFA) and single sign-on (SSO) set&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Cloud Architect in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Public vs private cloud, IaaS, PaaS, SaaS delivery models&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          High Availability & Storage
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure load balancing, auto-scaling, database clustering, and object stores.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            High Availability & Storage
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure load balancing, auto-scaling, database clustering, and object stores.</p>
+   
         <!-- Week 7: Load Balancing & Scaling -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-1-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Application Load Balancers (ALB) vs Network Load Balancers</span>
+                <button class="simplify-btn" data-topic="Application Load Balancers (ALB) vs Network Load Balancers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-1-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Auto Scaling Groups: launch configurations, scale-out metrics</span>
+                <button class="simplify-btn" data-topic="Auto Scaling Groups: launch configurations, scale-out metrics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-2-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Relational databases: AWS RDS configurations, read-replicas</span>
+                <button class="simplify-btn" data-topic="Relational databases: AWS RDS configurations, read-replicas">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-2-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-2-2" class="checkmark"></label>
                 <span class="topic-text">NoSQL stores: DynamoDB indices, Redis cache integrations</span>
+                <button class="simplify-btn" data-topic="NoSQL stores: DynamoDB indices, Redis cache integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-3-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Object stores: AWS S3 lifecycle policies, encryption models</span>
+                <button class="simplify-btn" data-topic="Object stores: AWS S3 lifecycle policies, encryption models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-3-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-3-2" class="checkmark"></label>
                 <span class="topic-text">CDN networks: CloudFront caches, edge locations configs</span>
+                <button class="simplify-btn" data-topic="CDN networks: CloudFront caches, edge locations configs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-4-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Domain routing: Route53 latency, failover, weighted records</span>
+                <button class="simplify-btn" data-topic="Domain routing: Route53 latency, failover, weighted records">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-4-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Health checks setups and global accelerator configurations</span>
+                <button class="simplify-btn" data-topic="Health checks setups and global accelerator configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-5-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-5-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-6-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="sw-cloud-architect-2-6-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Relational databases: AWS RDS configurations, read-replicas&quot;}, {&quot;question&quot;: &quot;What is the function of a FOREIGN KEY constraint in relational databases?&quot;, &quot;options&quot;: [&quot;To speed up the execution of aggregate joins.&quot;, &quot;To establish and enforce a link between data in two tables.&quot;, &quot;To store non-relational document logs in memory.&quot;, &quot;To automatically generate unique numeric sequences.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;NoSQL stores: DynamoDB indices, Redis cache integrations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Application Load Balancers (ALB) vs Network Load Balancers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Application Load Balancers (ALB) vs Network Load Balancers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Application Load Balancers (ALB) vs Network Load Balancers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Auto Scaling Groups: launch configurations, scale-out metrics typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Auto Scaling Groups: launch configurations, scale-out metrics.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Auto Scaling Groups: launch configurations, scale-out metrics&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Relational databases: AWS RDS configurations, read-replicas practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Relational databases: AWS RDS configurations, read-replicas systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Relational databases: AWS RDS configurations, read-replicas&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with NoSQL stores: DynamoDB indices, Redis cache integrations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;NoSQL stores: DynamoDB indices, Redis cache integrations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Object stores: AWS S3 lifecycle policies, encryption models?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Object stores: AWS S3 lifecycle policies, encryption models.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Object stores: AWS S3 lifecycle policies, encryption models&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is CDN networks: CloudFront caches, edge locations configs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of CDN networks: CloudFront caches, edge locations configs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;CDN networks: CloudFront caches, edge locations configs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Domain routing: Route53 latency, failover, weighted records practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Domain routing: Route53 latency, failover, weighted records systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Domain routing: Route53 latency, failover, weighted records&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Health checks setups and global accelerator configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Health checks setups and global accelerator configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Infrastructure as Code & Serverless
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Automate resource deployments with Terraform and write serverless functions.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Infrastructure as Code & Serverless
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Automate resource deployments with Terraform and write serverless functions.</p>
+   
         <!-- Week 13: Terraform Syntax & State -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-1-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Terraform HCL syntax: providers, resources, variables inputs</span>
+                <button class="simplify-btn" data-topic="Terraform HCL syntax: providers, resources, variables inputs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-1-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-1-2" class="checkmark"></label>
                 <span class="topic-text">State files: remote states locks, backend configurations</span>
+                <button class="simplify-btn" data-topic="State files: remote states locks, backend configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-2-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Writing custom modules, terraform workspaces, import existing resources</span>
+                <button class="simplify-btn" data-topic="Writing custom modules, terraform workspaces, import existing resources">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-2-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Infrastructure drift detections, plan and apply workflows</span>
+                <button class="simplify-btn" data-topic="Infrastructure drift detections, plan and apply workflows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-3-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Serverless functions: AWS Lambda event triggers, cold starts</span>
+                <button class="simplify-btn" data-topic="Serverless functions: AWS Lambda event triggers, cold starts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-3-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-3-2" class="checkmark"></label>
                 <span class="topic-text">API Gateways configurations, serverless integrations</span>
+                <button class="simplify-btn" data-topic="API Gateways configurations, serverless integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-4-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Queue services: SQS notifications, SNS pub-sub patterns</span>
+                <button class="simplify-btn" data-topic="Queue services: SQS notifications, SNS pub-sub patterns">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-4-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-4-2" class="checkmark"></label>
                 <span class="topic-text">EventBridge routing, Step Functions state machines</span>
+                <button class="simplify-btn" data-topic="EventBridge routing, Step Functions state machines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-5-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-5-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-6-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="sw-cloud-architect-3-6-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Terraform HCL syntax: providers, resources, variables inputs?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Terraform HCL syntax: providers, resources, variables inputs.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Terraform HCL syntax: providers, resources, variables inputs&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is State files: remote states locks, backend configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of State files: remote states locks, backend configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;State files: remote states locks, backend configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Writing custom modules, terraform workspaces, import existing resources practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Writing custom modules, terraform workspaces, import existing resources systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing custom modules, terraform workspaces, import existing resources&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Infrastructure drift detections, plan and apply workflows?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Infrastructure drift detections, plan and apply workflows&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Serverless functions: AWS Lambda event triggers, cold starts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Serverless functions: AWS Lambda event triggers, cold starts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Serverless functions: AWS Lambda event triggers, cold starts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is API Gateways configurations, serverless integrations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of API Gateways configurations, serverless integrations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;API Gateways configurations, serverless integrations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Queue services: SQS notifications, SNS pub-sub patterns practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Queue services: SQS notifications, SNS pub-sub patterns systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Queue services: SQS notifications, SNS pub-sub patterns&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with EventBridge routing, Step Functions state machines?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;EventBridge routing, Step Functions state machines&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Cloud Architect in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Terraform HCL syntax: providers, resources, variables inputs&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Cloud Architect in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Terraform HCL syntax: providers, resources, variables inputs&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Containers, K8s & Monitoring
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deploy Kubernetes clusters and configure cloud observability.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Containers, K8s & Monitoring
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Deploy Kubernetes clusters and configure cloud observability.</p>
+   
         <!-- Week 19: Container Orchestration (ECS) -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-1-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-1-1" class="checkmark"></label>
                 <span class="topic-text">ECS tasks, service definitions, Fargate serverless containers</span>
+                <button class="simplify-btn" data-topic="ECS tasks, service definitions, Fargate serverless containers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-1-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Docker registry (ECR) set, image building pipelines</span>
+                <button class="simplify-btn" data-topic="Docker registry (ECR) set, image building pipelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-2-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-2-1" class="checkmark"></label>
                 <span class="topic-text">EKS cluster configurations, node groups, kubectl setups</span>
+                <button class="simplify-btn" data-topic="EKS cluster configurations, node groups, kubectl setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-2-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-2-2" class="checkmark"></label>
                 <span class="topic-text">K8s manifests: deployments, services, ingress configurations</span>
+                <button class="simplify-btn" data-topic="K8s manifests: deployments, services, ingress configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-3-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Logs collections: CloudWatch agents, log groups queries</span>
+                <button class="simplify-btn" data-topic="Logs collections: CloudWatch agents, log groups queries">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-3-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Metrics collections: Prometheus, Grafana visualization dashboards</span>
+                <button class="simplify-btn" data-topic="Metrics collections: Prometheus, Grafana visualization dashboards">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-4-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Well-Architected Framework: security, reliability, cost pillars</span>
+                <button class="simplify-btn" data-topic="Well-Architected Framework: security, reliability, cost pillars">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-4-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Budget alerts, cost explorer analysis, sizing optimizations</span>
+                <button class="simplify-btn" data-topic="Budget alerts, cost explorer analysis, sizing optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-5-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-5-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-6-1" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="sw-cloud-architect-4-6-2" class="topic-checkbox">
                 <label for="sw-cloud-architect-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;What is the main difference between a Docker container and a Virtual Machine?&quot;, &quot;options&quot;: [&quot;Containers share the host OS kernel, while VMs include a full guest OS.&quot;, &quot;VMs require less memory and storage than containers.&quot;, &quot;Containers run on specialized hardware, while VMs run on standard CPUs.&quot;, &quot;VMs do not support networking or persistent storage operations.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Docker registry (ECR) set, image building pipelines&quot;}, {&quot;question&quot;: &quot;Which hashing algorithm is considered cryptographically secure for storing user passwords?&quot;, &quot;options&quot;: [&quot;MD5&quot;, &quot;SHA-1&quot;, &quot;bcrypt&quot;, &quot;CRC32&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Well-Architected Framework: security, reliability, cost pillars&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ECS tasks, service definitions, Fargate serverless containers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ECS tasks, service definitions, Fargate serverless containers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ECS tasks, service definitions, Fargate serverless containers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Docker registry (ECR) set, image building pipelines typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Docker registry (ECR) set, image building pipelines.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Docker registry (ECR) set, image building pipelines&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting EKS cluster configurations, node groups, kubectl setups practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of EKS cluster configurations, node groups, kubectl setups systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;EKS cluster configurations, node groups, kubectl setups&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with K8s manifests: deployments, services, ingress configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;K8s manifests: deployments, services, ingress configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Logs collections: CloudWatch agents, log groups queries?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Logs collections: CloudWatch agents, log groups queries.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Logs collections: CloudWatch agents, log groups queries&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Metrics collections: Prometheus, Grafana visualization dashboards typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Metrics collections: Prometheus, Grafana visualization dashboards.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Metrics collections: Prometheus, Grafana visualization dashboards&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Well-Architected Framework: security, reliability, cost pillars practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Well-Architected Framework: security, reliability, cost pillars systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Well-Architected Framework: security, reliability, cost pillars&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Budget alerts, cost explorer analysis, sizing optimizations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Budget alerts, cost explorer analysis, sizing optimizations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

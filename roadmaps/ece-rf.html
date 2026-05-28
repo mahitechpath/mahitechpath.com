@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Transmission Lines & S-Parameters
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study transmission line parameters, Smith Charts, and S-parameter matrices.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Transmission Lines & S-Parameters
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study transmission line parameters, Smith Charts, and S-parameter matrices.</p>
+   
         <!-- Week 1: Transmission Line Equations -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-rf-1-1-1" class="topic-checkbox">
                 <label for="ece-rf-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Voltage and current waves, propagation constant, characteristic impedance</span>
+                <button class="simplify-btn" data-topic="Voltage and current waves, propagation constant, characteristic impedance">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-rf-1-1-2" class="topic-checkbox">
                 <label for="ece-rf-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Reflection coefficient, Standing Wave Ratio (SWR), return loss</span>
+                <button class="simplify-btn" data-topic="Reflection coefficient, Standing Wave Ratio (SWR), return loss">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-rf-1-2-1" class="topic-checkbox">
                 <label for="ece-rf-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Plotting complex impedances, admittance conversions</span>
+                <button class="simplify-btn" data-topic="Plotting complex impedances, admittance conversions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-rf-1-2-2" class="topic-checkbox">
                 <label for="ece-rf-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Constant resistance and reactance circles mapping</span>
+                <button class="simplify-btn" data-topic="Constant resistance and reactance circles mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-rf-1-3-1" class="topic-checkbox">
                 <label for="ece-rf-1-3-1" class="checkmark"></label>
                 <span class="topic-text">L-networks, stub tuning (single stub matching) design</span>
+                <button class="simplify-btn" data-topic="L-networks, stub tuning (single stub matching) design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-rf-1-3-2" class="topic-checkbox">
                 <label for="ece-rf-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Quarter-wave transformers matching implementations</span>
+                <button class="simplify-btn" data-topic="Quarter-wave transformers matching implementations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-rf-1-4-1" class="topic-checkbox">
                 <label for="ece-rf-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Scattering parameters definition, network analyzer calibrations</span>
+                <button class="simplify-btn" data-topic="Scattering parameters definition, network analyzer calibrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-rf-1-4-2" class="topic-checkbox">
                 <label for="ece-rf-1-4-2" class="checkmark"></label>
                 <span class="topic-text">S11, S12, S21, S22 measurements and physical meanings</span>
+                <button class="simplify-btn" data-topic="S11, S12, S21, S22 measurements and physical meanings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-rf-1-5-1" class="topic-checkbox">
                 <label for="ece-rf-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-rf-1-5-2" class="topic-checkbox">
                 <label for="ece-rf-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-rf-1-6-1" class="topic-checkbox">
                 <label for="ece-rf-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-rf-1-6-2" class="topic-checkbox">
                 <label for="ece-rf-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Constant resistance and reactance circles mapping&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Voltage and current waves, propagation constant, characteristic impedance?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Voltage and current waves, propagation constant, characteristic impedance.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Voltage and current waves, propagation constant, characteristic impedance&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Reflection coefficient, Standing Wave Ratio (SWR), return loss typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Reflection coefficient, Standing Wave Ratio (SWR), return loss.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reflection coefficient, Standing Wave Ratio (SWR), return loss&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Plotting complex impedances, admittance conversions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Plotting complex impedances, admittance conversions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Plotting complex impedances, admittance conversions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Constant resistance and reactance circles mapping?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Constant resistance and reactance circles mapping&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of L-networks, stub tuning (single stub matching) design?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for L-networks, stub tuning (single stub matching) design.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;L-networks, stub tuning (single stub matching) design&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Quarter-wave transformers matching implementations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Quarter-wave transformers matching implementations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Quarter-wave transformers matching implementations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Scattering parameters definition, network analyzer calibrations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Scattering parameters definition, network analyzer calibrations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Scattering parameters definition, network analyzer calibrations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with S11, S12, S21, S22 measurements and physical meanings?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;S11, S12, S21, S22 measurements and physical meanings&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for RF Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Voltage and current waves, propagation constant, characteristic impedance&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          RF Active Components
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design Low Noise Amplifiers (LNAs), mixers, and power amplifiers.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            RF Active Components
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design Low Noise Amplifiers (LNAs), mixers, and power amplifiers.</p>
+   
         <!-- Week 7: Low Noise Amplifiers (LNA) -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-rf-2-1-1" class="topic-checkbox">
                 <label for="ece-rf-2-1-1" class="checkmark"></label>
                 <span class="topic-text">LNA topologies, noise figure optimizations, stability circles</span>
+                <button class="simplify-btn" data-topic="LNA topologies, noise figure optimizations, stability circles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-rf-2-1-2" class="topic-checkbox">
                 <label for="ece-rf-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Biasing circuits, input/output matching networks</span>
+                <button class="simplify-btn" data-topic="Biasing circuits, input/output matching networks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-rf-2-2-1" class="topic-checkbox">
                 <label for="ece-rf-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Mixer conversions: conversion loss, isolation parameters</span>
+                <button class="simplify-btn" data-topic="Mixer conversions: conversion loss, isolation parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-rf-2-2-2" class="topic-checkbox">
                 <label for="ece-rf-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Single/double balanced mixer circuit designs</span>
+                <button class="simplify-btn" data-topic="Single/double balanced mixer circuit designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-rf-2-3-1" class="topic-checkbox">
                 <label for="ece-rf-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Class A, B, C, D, E, F power amplifiers efficiency comparisons</span>
+                <button class="simplify-btn" data-topic="Class A, B, C, D, E, F power amplifiers efficiency comparisons">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-rf-2-3-2" class="topic-checkbox">
                 <label for="ece-rf-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Load-pull measurements, linearity (1dB compression point)</span>
+                <button class="simplify-btn" data-topic="Load-pull measurements, linearity (1dB compression point)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-rf-2-4-1" class="topic-checkbox">
                 <label for="ece-rf-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Feedback oscillators: Colpitts, Hartley topologies</span>
+                <button class="simplify-btn" data-topic="Feedback oscillators: Colpitts, Hartley topologies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-rf-2-4-2" class="topic-checkbox">
                 <label for="ece-rf-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Phase noise definition, PLL frequency synthesizers</span>
+                <button class="simplify-btn" data-topic="Phase noise definition, PLL frequency synthesizers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-rf-2-5-1" class="topic-checkbox">
                 <label for="ece-rf-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-rf-2-5-2" class="topic-checkbox">
                 <label for="ece-rf-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-rf-2-6-1" class="topic-checkbox">
                 <label for="ece-rf-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-rf-2-6-2" class="topic-checkbox">
                 <label for="ece-rf-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of LNA topologies, noise figure optimizations, stability circles?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for LNA topologies, noise figure optimizations, stability circles.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LNA topologies, noise figure optimizations, stability circles&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Biasing circuits, input/output matching networks typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Biasing circuits, input/output matching networks.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Biasing circuits, input/output matching networks&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Mixer conversions: conversion loss, isolation parameters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Mixer conversions: conversion loss, isolation parameters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Mixer conversions: conversion loss, isolation parameters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Single/double balanced mixer circuit designs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Single/double balanced mixer circuit designs&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Class A, B, C, D, E, F power amplifiers efficiency comparisons?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Class A, B, C, D, E, F power amplifiers efficiency comparisons.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Class A, B, C, D, E, F power amplifiers efficiency comparisons&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Load-pull measurements, linearity (1dB compression point) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Load-pull measurements, linearity (1dB compression point).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Load-pull measurements, linearity (1dB compression point)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Feedback oscillators: Colpitts, Hartley topologies practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Feedback oscillators: Colpitts, Hartley topologies systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Feedback oscillators: Colpitts, Hartley topologies&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Phase noise definition, PLL frequency synthesizers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Phase noise definition, PLL frequency synthesizers&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for RF Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LNA topologies, noise figure optimizations, stability circles&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for RF Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;LNA topologies, noise figure optimizations, stability circles&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Passive RF Components
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design striplines, microstrip filters, couplers, and power dividers.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Passive RF Components
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design striplines, microstrip filters, couplers, and power dividers.</p>
+   
         <!-- Week 13: Microstrip & Striplines -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-rf-3-1-1" class="topic-checkbox">
                 <label for="ece-rf-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Planar transmission lines: microstrip geometry calculations</span>
+                <button class="simplify-btn" data-topic="Planar transmission lines: microstrip geometry calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-rf-3-1-2" class="topic-checkbox">
                 <label for="ece-rf-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Effective dielectric constant, microstrip losses</span>
+                <button class="simplify-btn" data-topic="Effective dielectric constant, microstrip losses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-rf-3-2-1" class="topic-checkbox">
                 <label for="ece-rf-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Insertion loss method, low-pass filter prototypes</span>
+                <button class="simplify-btn" data-topic="Insertion loss method, low-pass filter prototypes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-rf-3-2-2" class="topic-checkbox">
                 <label for="ece-rf-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Microstrip realization: Richard's transformation, Kuroda's identities</span>
+                <button class="simplify-btn" data-topic="Microstrip realization: Richard's transformation, Kuroda's identities">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-rf-3-3-1" class="topic-checkbox">
                 <label for="ece-rf-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Wilkinson power divider design equations, isolation</span>
+                <button class="simplify-btn" data-topic="Wilkinson power divider design equations, isolation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-rf-3-3-2" class="topic-checkbox">
                 <label for="ece-rf-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Directional couplers: coupling factor, directivity</span>
+                <button class="simplify-btn" data-topic="Directional couplers: coupling factor, directivity">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-rf-3-4-1" class="topic-checkbox">
                 <label for="ece-rf-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Schematic simulations, S-parameter sweeps in ADS</span>
+                <button class="simplify-btn" data-topic="Schematic simulations, S-parameter sweeps in ADS">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-rf-3-4-2" class="topic-checkbox">
                 <label for="ece-rf-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Layout generations, EM momentum simulation setups</span>
+                <button class="simplify-btn" data-topic="Layout generations, EM momentum simulation setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-rf-3-5-1" class="topic-checkbox">
                 <label for="ece-rf-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-rf-3-5-2" class="topic-checkbox">
                 <label for="ece-rf-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-rf-3-6-1" class="topic-checkbox">
                 <label for="ece-rf-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-rf-3-6-2" class="topic-checkbox">
                 <label for="ece-rf-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Planar transmission lines: microstrip geometry calculations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Planar transmission lines: microstrip geometry calculations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Planar transmission lines: microstrip geometry calculations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Effective dielectric constant, microstrip losses typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Effective dielectric constant, microstrip losses.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Effective dielectric constant, microstrip losses&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Insertion loss method, low-pass filter prototypes practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Insertion loss method, low-pass filter prototypes systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Insertion loss method, low-pass filter prototypes&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Microstrip realization: Richard's transformation, Kuroda's identities?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Microstrip realization: Richard's transformation, Kuroda's identities&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Wilkinson power divider design equations, isolation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Wilkinson power divider design equations, isolation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Wilkinson power divider design equations, isolation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Directional couplers: coupling factor, directivity typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Directional couplers: coupling factor, directivity.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Directional couplers: coupling factor, directivity&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Schematic simulations, S-parameter sweeps in ADS practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Schematic simulations, S-parameter sweeps in ADS systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Schematic simulations, S-parameter sweeps in ADS&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Layout generations, EM momentum simulation setups?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Layout generations, EM momentum simulation setups&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for RF Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Planar transmission lines: microstrip geometry calculations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for RF Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Planar transmission lines: microstrip geometry calculations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Antennas & RF Testing
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze antenna parameters, calculate link budgets, and perform spectrum tests.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Antennas & RF Testing
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze antenna parameters, calculate link budgets, and perform spectrum tests.</p>
+   
         <!-- Week 19: Antenna Fundamentals -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-rf-4-1-1" class="topic-checkbox">
                 <label for="ece-rf-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Dipole, patch, horn antennas, radiation pattern, gain</span>
+                <button class="simplify-btn" data-topic="Dipole, patch, horn antennas, radiation pattern, gain">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-rf-4-1-2" class="topic-checkbox">
                 <label for="ece-rf-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Input impedance, antenna arrays basics</span>
+                <button class="simplify-btn" data-topic="Input impedance, antenna arrays basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-rf-4-2-1" class="topic-checkbox">
                 <label for="ece-rf-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Friis transmission equation, path loss models, fade margin</span>
+                <button class="simplify-btn" data-topic="Friis transmission equation, path loss models, fade margin">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-rf-4-2-2" class="topic-checkbox">
                 <label for="ece-rf-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Receiver noise figure, link margin calculations</span>
+                <button class="simplify-btn" data-topic="Receiver noise figure, link margin calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="ece-rf-4-3-1" class="topic-checkbox">
                 <label for="ece-rf-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Vector Network Analyzer (VNA) calibrations and measurements</span>
+                <button class="simplify-btn" data-topic="Vector Network Analyzer (VNA) calibrations and measurements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="ece-rf-4-3-2" class="topic-checkbox">
                 <label for="ece-rf-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Spectrum Analyzer: measuring harmonics, ACPR, phase noise</span>
+                <button class="simplify-btn" data-topic="Spectrum Analyzer: measuring harmonics, ACPR, phase noise">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-rf-4-4-1" class="topic-checkbox">
                 <label for="ece-rf-4-4-1" class="checkmark"></label>
                 <span class="topic-text">PCB layout guidelines: grounding, shielding cans, vias</span>
+                <button class="simplify-btn" data-topic="PCB layout guidelines: grounding, shielding cans, vias">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-rf-4-4-2" class="topic-checkbox">
                 <label for="ece-rf-4-4-2" class="checkmark"></label>
                 <span class="topic-text">EMI/EMC compliance testing standards overview</span>
+                <button class="simplify-btn" data-topic="EMI/EMC compliance testing standards overview">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-rf-4-5-1" class="topic-checkbox">
                 <label for="ece-rf-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-rf-4-5-2" class="topic-checkbox">
                 <label for="ece-rf-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-rf-4-6-1" class="topic-checkbox">
                 <label for="ece-rf-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-rf-4-6-2" class="topic-checkbox">
                 <label for="ece-rf-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Dipole, patch, horn antennas, radiation pattern, gain?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Dipole, patch, horn antennas, radiation pattern, gain.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dipole, patch, horn antennas, radiation pattern, gain&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Input impedance, antenna arrays basics typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Input impedance, antenna arrays basics.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Input impedance, antenna arrays basics&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Friis transmission equation, path loss models, fade margin practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Friis transmission equation, path loss models, fade margin systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Friis transmission equation, path loss models, fade margin&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Receiver noise figure, link margin calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Receiver noise figure, link margin calculations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Vector Network Analyzer (VNA) calibrations and measurements?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Vector Network Analyzer (VNA) calibrations and measurements.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vector Network Analyzer (VNA) calibrations and measurements&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Spectrum Analyzer: measuring harmonics, ACPR, phase noise typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Spectrum Analyzer: measuring harmonics, ACPR, phase noise.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Spectrum Analyzer: measuring harmonics, ACPR, phase noise&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PCB layout guidelines: grounding, shielding cans, vias practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PCB layout guidelines: grounding, shielding cans, vias systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PCB layout guidelines: grounding, shielding cans, vias&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with EMI/EMC compliance testing standards overview?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;EMI/EMC compliance testing standards overview&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for RF Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dipole, patch, horn antennas, radiation pattern, gain&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for RF Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dipole, patch, horn antennas, radiation pattern, gain&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

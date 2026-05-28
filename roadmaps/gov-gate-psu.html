@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Engineering Math & Aptitude
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master linear algebra, calculus, probability, and general numerical aptitude.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Engineering Math & Aptitude
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master linear algebra, calculus, probability, and general numerical aptitude.</p>
+   
         <!-- Week 1: Linear Algebra & Numerical Aptitude -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-1-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-1-1" class="checkmark"></label>
                 <span class="topic-text">System of linear equations, matrices, eigenvalues, eigenvectors</span>
+                <button class="simplify-btn" data-topic="System of linear equations, matrices, eigenvalues, eigenvectors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-1-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Quantitative aptitude: percentages, speed-distance, ratios, graphs</span>
+                <button class="simplify-btn" data-topic="Quantitative aptitude: percentages, speed-distance, ratios, graphs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-2-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Limits, continuity, differentiability, maxima/minima</span>
+                <button class="simplify-btn" data-topic="Limits, continuity, differentiability, maxima/minima">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-2-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Multiple integrals, line, surface, volume integrals, theorems</span>
+                <button class="simplify-btn" data-topic="Multiple integrals, line, surface, volume integrals, theorems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-3-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-3-1" class="checkmark"></label>
                 <span class="topic-text">First order linear/nonlinear equations, higher order equations</span>
+                <button class="simplify-btn" data-topic="First order linear/nonlinear equations, higher order equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-3-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Laplace transforms, boundary value problems</span>
+                <button class="simplify-btn" data-topic="Laplace transforms, boundary value problems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-4-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Mean, median, mode, standard deviation, random variables</span>
+                <button class="simplify-btn" data-topic="Mean, median, mode, standard deviation, random variables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-4-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-4-2" class="checkmark"></label>
                 <span class="topic-text">English grammar, vocabulary, reading comprehensions, syntax</span>
+                <button class="simplify-btn" data-topic="English grammar, vocabulary, reading comprehensions, syntax">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-5-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-5-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-6-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-6-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-7-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-7-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -557,6 +572,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-8-1" class="topic-checkbox">
                 <label for="gov-gate-psu-1-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -583,6 +599,7 @@
                 <input type="checkbox" id="gov-gate-psu-1-8-2" class="topic-checkbox">
                 <label for="gov-gate-psu-1-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -606,16 +623,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of System of linear equations, matrices, eigenvalues, eigenvectors?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for System of linear equations, matrices, eigenvalues, eigenvectors.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;System of linear equations, matrices, eigenvalues, eigenvectors&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Quantitative aptitude: percentages, speed-distance, ratios, graphs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Quantitative aptitude: percentages, speed-distance, ratios, graphs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Quantitative aptitude: percentages, speed-distance, ratios, graphs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Limits, continuity, differentiability, maxima/minima practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Limits, continuity, differentiability, maxima/minima systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Limits, continuity, differentiability, maxima/minima&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Multiple integrals, line, surface, volume integrals, theorems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Multiple integrals, line, surface, volume integrals, theorems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of First order linear/nonlinear equations, higher order equations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for First order linear/nonlinear equations, higher order equations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First order linear/nonlinear equations, higher order equations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Laplace transforms, boundary value problems typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Laplace transforms, boundary value problems.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Laplace transforms, boundary value problems&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Mean, median, mode, standard deviation, random variables practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Mean, median, mode, standard deviation, random variables systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Mean, median, mode, standard deviation, random variables&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with English grammar, vocabulary, reading comprehensions, syntax?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;English grammar, vocabulary, reading comprehensions, syntax&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for PSU Officer through GATE in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;System of linear equations, matrices, eigenvalues, eigenvectors&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PSU Officer through GATE in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;System of linear equations, matrices, eigenvalues, eigenvectors&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Core Technical Syllabus 1
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master primary core subjects for the GATE exam in your specific engineering branch.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Core Technical Syllabus 1
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master primary core subjects for the GATE exam in your specific engineering branch.</p>
+   
         <!-- Week 9: Mechanical: Thermo & Fluid -->
         <div class="week-card">
           <div class="week-header">
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-1-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Laws of thermodynamics, entropy, power cycles (Rankine)</span>
+                <button class="simplify-btn" data-topic="Laws of thermodynamics, entropy, power cycles (Rankine)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-1-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Fluid properties, continuity, momentum, boundary layers</span>
+                <button class="simplify-btn" data-topic="Fluid properties, continuity, momentum, boundary layers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-2-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-2-1" class="checkmark"></label>
                 <span class="topic-text">KCL, KVL, transient response of RL/RC networks, resonance</span>
+                <button class="simplify-btn" data-topic="KCL, KVL, transient response of RL/RC networks, resonance">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-2-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Continuous-time Fourier series, Laplace transforms, Z-transforms</span>
+                <button class="simplify-btn" data-topic="Continuous-time Fourier series, Laplace transforms, Z-transforms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-3-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-3-1" class="checkmark"></label>
                 <span class="topic-text">P-N junctions, BJT, MOSFET, operational amplifier circuits</span>
+                <button class="simplify-btn" data-topic="P-N junctions, BJT, MOSFET, operational amplifier circuits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-3-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Frequency response, active filters, oscillators design</span>
+                <button class="simplify-btn" data-topic="Frequency response, active filters, oscillators design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-4-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Asymptotic analysis, sorting & searching, stacks, queues</span>
+                <button class="simplify-btn" data-topic="Asymptotic analysis, sorting & searching, stacks, queues">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-4-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Binary trees, heaps, graphs, hashing, dynamic programming</span>
+                <button class="simplify-btn" data-topic="Binary trees, heaps, graphs, hashing, dynamic programming">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-5-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-5-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-6-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-6-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -994,6 +1038,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-7-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1020,6 +1065,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-7-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1055,6 +1101,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-8-1" class="topic-checkbox">
                 <label for="gov-gate-psu-2-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1081,6 +1128,7 @@
                 <input type="checkbox" id="gov-gate-psu-2-8-2" class="topic-checkbox">
                 <label for="gov-gate-psu-2-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1104,16 +1152,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Laws of thermodynamics, entropy, power cycles (Rankine)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Laws of thermodynamics, entropy, power cycles (Rankine).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Laws of thermodynamics, entropy, power cycles (Rankine)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fluid properties, continuity, momentum, boundary layers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fluid properties, continuity, momentum, boundary layers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fluid properties, continuity, momentum, boundary layers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting KCL, KVL, transient response of RL/RC networks, resonance practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of KCL, KVL, transient response of RL/RC networks, resonance systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;KCL, KVL, transient response of RL/RC networks, resonance&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Continuous-time Fourier series, Laplace transforms, Z-transforms?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Continuous-time Fourier series, Laplace transforms, Z-transforms&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of P-N junctions, BJT, MOSFET, operational amplifier circuits?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for P-N junctions, BJT, MOSFET, operational amplifier circuits.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;P-N junctions, BJT, MOSFET, operational amplifier circuits&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Frequency response, active filters, oscillators design typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Frequency response, active filters, oscillators design.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Frequency response, active filters, oscillators design&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Asymptotic analysis, sorting & searching, stacks, queues practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Asymptotic analysis, sorting & searching, stacks, queues systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Asymptotic analysis, sorting & searching, stacks, queues&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Binary trees, heaps, graphs, hashing, dynamic programming?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Binary trees, heaps, graphs, hashing, dynamic programming&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for PSU Officer through GATE in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Laws of thermodynamics, entropy, power cycles (Rankine)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PSU Officer through GATE in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Laws of thermodynamics, entropy, power cycles (Rankine)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Core Technical Syllabus 2
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master secondary core subjects, design codes, and system operations.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Core Technical Syllabus 2
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master secondary core subjects, design codes, and system operations.</p>
+   
         <!-- Week 17: Mechanical: Machine Design -->
         <div class="week-card">
           <div class="week-header">
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-1-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Spur gears, shaft designs, clutches, brakes, bearings</span>
+                <button class="simplify-btn" data-topic="Spur gears, shaft designs, clutches, brakes, bearings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-1-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Vibrations: free and forced single degree systems</span>
+                <button class="simplify-btn" data-topic="Vibrations: free and forced single degree systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-2-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Single phase/three phase transformers, induction motors</span>
+                <button class="simplify-btn" data-topic="Single phase/three phase transformers, induction motors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-2-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Power system stability, load flow analysis, protection relays</span>
+                <button class="simplify-btn" data-topic="Power system stability, load flow analysis, protection relays">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1248,6 +1315,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-3-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Logic gates, combinational/sequential logic, ADC/DAC</span>
+                <button class="simplify-btn" data-topic="Logic gates, combinational/sequential logic, ADC/DAC">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1274,6 +1342,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-3-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Digital modulation schemes, information theory, noise</span>
+                <button class="simplify-btn" data-topic="Digital modulation schemes, information theory, noise">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1309,6 +1378,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-4-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Process synchronization, deadlock prevention, paging, caching</span>
+                <button class="simplify-btn" data-topic="Process synchronization, deadlock prevention, paging, caching">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1335,6 +1405,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-4-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Entity-Relationship model, normalization, SQL queries, indexing</span>
+                <button class="simplify-btn" data-topic="Entity-Relationship model, normalization, SQL queries, indexing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-5-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-5-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1431,6 +1504,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-6-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1457,6 +1531,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-6-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1492,6 +1567,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-7-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1518,6 +1594,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-7-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1553,6 +1630,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-8-1" class="topic-checkbox">
                 <label for="gov-gate-psu-3-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1579,6 +1657,7 @@
                 <input type="checkbox" id="gov-gate-psu-3-8-2" class="topic-checkbox">
                 <label for="gov-gate-psu-3-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1602,16 +1681,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Digital modulation schemes, information theory, noise&quot;}, {&quot;question&quot;: &quot;What is the function of a FOREIGN KEY constraint in relational databases?&quot;, &quot;options&quot;: [&quot;To speed up the execution of aggregate joins.&quot;, &quot;To establish and enforce a link between data in two tables.&quot;, &quot;To store non-relational document logs in memory.&quot;, &quot;To automatically generate unique numeric sequences.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Entity-Relationship model, normalization, SQL queries, indexing&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Spur gears, shaft designs, clutches, brakes, bearings?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Spur gears, shaft designs, clutches, brakes, bearings.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Spur gears, shaft designs, clutches, brakes, bearings&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Vibrations: free and forced single degree systems typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Vibrations: free and forced single degree systems.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Vibrations: free and forced single degree systems&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Single phase/three phase transformers, induction motors practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Single phase/three phase transformers, induction motors systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Single phase/three phase transformers, induction motors&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Power system stability, load flow analysis, protection relays?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Power system stability, load flow analysis, protection relays&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Logic gates, combinational/sequential logic, ADC/DAC?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Logic gates, combinational/sequential logic, ADC/DAC.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Logic gates, combinational/sequential logic, ADC/DAC&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Digital modulation schemes, information theory, noise typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Digital modulation schemes, information theory, noise.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Digital modulation schemes, information theory, noise&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Process synchronization, deadlock prevention, paging, caching practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Process synchronization, deadlock prevention, paging, caching systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Process synchronization, deadlock prevention, paging, caching&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Entity-Relationship model, normalization, SQL queries, indexing?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Entity-Relationship model, normalization, SQL queries, indexing&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          GATE Mocks & PSU Interviews
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Solve comprehensive GATE mock exams and prepare for PSU technical interviews.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            GATE Mocks & PSU Interviews
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Solve comprehensive GATE mock exams and prepare for PSU technical interviews.</p>
+   
         <!-- Week 25: Full-Length GATE Mock Series -->
         <div class="week-card">
           <div class="week-header">
@@ -1624,6 +1718,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-1-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Solving 10 full-length GATE papers (65 questions, 100 marks)</span>
+                <button class="simplify-btn" data-topic="Solving 10 full-length GATE papers (65 questions, 100 marks)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1650,6 +1745,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-1-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Optimizing time: 3 hours strategy, virtual calculator usage</span>
+                <button class="simplify-btn" data-topic="Optimizing time: 3 hours strategy, virtual calculator usage">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1685,6 +1781,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-2-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Quick revision of core formulae, short-cut tricks</span>
+                <button class="simplify-btn" data-topic="Quick revision of core formulae, short-cut tricks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1711,6 +1808,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-2-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Reviewing common mistakes in mock test analysis sheets</span>
+                <button class="simplify-btn" data-topic="Reviewing common mistakes in mock test analysis sheets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1746,6 +1844,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-3-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Preparing final year B.Tech project technical details</span>
+                <button class="simplify-btn" data-topic="Preparing final year B.Tech project technical details">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1772,6 +1871,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-3-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Learning about the target PSU (e.g. NTPC coal plants, ONGC oil fields)</span>
+                <button class="simplify-btn" data-topic="Learning about the target PSU (e.g. NTPC coal plants, ONGC oil fields)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1807,6 +1907,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-4-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-4-1" class="checkmark"></label>
                 <span class="topic-text">GD topics: privatization of PSUs, green energy transitions</span>
+                <button class="simplify-btn" data-topic="GD topics: privatization of PSUs, green energy transitions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1833,6 +1934,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-4-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-4-2" class="checkmark"></label>
                 <span class="topic-text">HR mock interviews: strengths, weaknesses, goal alignments</span>
+                <button class="simplify-btn" data-topic="HR mock interviews: strengths, weaknesses, goal alignments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1868,6 +1970,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-5-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1894,6 +1997,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-5-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1929,6 +2033,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-6-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1955,6 +2060,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-6-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1990,6 +2096,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-7-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2016,6 +2123,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-7-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2051,6 +2159,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-8-1" class="topic-checkbox">
                 <label for="gov-gate-psu-4-8-1" class="checkmark"></label>
                 <span class="topic-text">Integrate recent news events and policies relating to Phase {phase_num} syllabus</span>
+                <button class="simplify-btn" data-topic="Integrate recent news events and policies relating to Phase {phase_num} syllabus">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2077,6 +2186,7 @@
                 <input type="checkbox" id="gov-gate-psu-4-8-2" class="topic-checkbox">
                 <label for="gov-gate-psu-4-8-2" class="checkmark"></label>
                 <span class="topic-text">Revise core factual details and take a quick multiple-choice quiz</span>
+                <button class="simplify-btn" data-topic="Revise core factual details and take a quick multiple-choice quiz">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -2099,6 +2209,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solving 10 full-length GATE papers (65 questions, 100 marks)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solving 10 full-length GATE papers (65 questions, 100 marks).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length GATE papers (65 questions, 100 marks)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Optimizing time: 3 hours strategy, virtual calculator usage typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Optimizing time: 3 hours strategy, virtual calculator usage.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Optimizing time: 3 hours strategy, virtual calculator usage&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Quick revision of core formulae, short-cut tricks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Quick revision of core formulae, short-cut tricks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Quick revision of core formulae, short-cut tricks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Reviewing common mistakes in mock test analysis sheets?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Reviewing common mistakes in mock test analysis sheets&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Preparing final year B.Tech project technical details?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Preparing final year B.Tech project technical details.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Preparing final year B.Tech project technical details&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Learning about the target PSU (e.g. NTPC coal plants, ONGC oil fields) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Learning about the target PSU (e.g. NTPC coal plants, ONGC oil fields).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Learning about the target PSU (e.g. NTPC coal plants, ONGC oil fields)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting GD topics: privatization of PSUs, green energy transitions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of GD topics: privatization of PSUs, green energy transitions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;GD topics: privatization of PSUs, green energy transitions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with HR mock interviews: strengths, weaknesses, goal alignments?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;HR mock interviews: strengths, weaknesses, goal alignments&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for PSU Officer through GATE in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length GATE papers (65 questions, 100 marks)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PSU Officer through GATE in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length GATE papers (65 questions, 100 marks)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

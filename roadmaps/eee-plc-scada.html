@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          PLC Hardware & Basic Programming
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master PLC input/output wiring, ladder logic instructions, timers, and counters.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            PLC Hardware & Basic Programming
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master PLC input/output wiring, ladder logic instructions, timers, and counters.</p>
+   
         <!-- Week 1: PLC Hardware Architectures -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-1-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-1-1" class="checkmark"></label>
                 <span class="topic-text">CPU, digital I/O modules, analog I/O modules, power supplies</span>
+                <button class="simplify-btn" data-topic="CPU, digital I/O modules, analog I/O modules, power supplies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-1-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Sink vs source wiring configurations, sensor connections</span>
+                <button class="simplify-btn" data-topic="Sink vs source wiring configurations, sensor connections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-2-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Normally Open (NO), Normally Closed (NC) contacts, output coils</span>
+                <button class="simplify-btn" data-topic="Normally Open (NO), Normally Closed (NC) contacts, output coils">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-2-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Latching circuits, start/stop logic, interlock logic</span>
+                <button class="simplify-btn" data-topic="Latching circuits, start/stop logic, interlock logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-3-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-3-1" class="checkmark"></label>
                 <span class="topic-text">On-delay (TON), Off-delay (TOF), Retentive timers (RTO)</span>
+                <button class="simplify-btn" data-topic="On-delay (TON), Off-delay (TOF), Retentive timers (RTO)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-3-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Up-counters (CTU), down-counters (CTD), comparison instructions</span>
+                <button class="simplify-btn" data-topic="Up-counters (CTU), down-counters (CTD), comparison instructions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-4-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Data registers, internal bits, math instructions (ADD, SUB, MUL)</span>
+                <button class="simplify-btn" data-topic="Data registers, internal bits, math instructions (ADD, SUB, MUL)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-4-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Moving data (MOV block), masking operations</span>
+                <button class="simplify-btn" data-topic="Moving data (MOV block), masking operations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-5-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-5-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-6-1" class="topic-checkbox">
                 <label for="eee-plc-scada-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-plc-scada-1-6-2" class="topic-checkbox">
                 <label for="eee-plc-scada-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CPU, digital I/O modules, analog I/O modules, power supplies&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of CPU, digital I/O modules, analog I/O modules, power supplies?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for CPU, digital I/O modules, analog I/O modules, power supplies.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;CPU, digital I/O modules, analog I/O modules, power supplies&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Sink vs source wiring configurations, sensor connections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Sink vs source wiring configurations, sensor connections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Sink vs source wiring configurations, sensor connections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Normally Open (NO), Normally Closed (NC) contacts, output coils practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Normally Open (NO), Normally Closed (NC) contacts, output coils systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Normally Open (NO), Normally Closed (NC) contacts, output coils&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Latching circuits, start/stop logic, interlock logic?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Latching circuits, start/stop logic, interlock logic&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of On-delay (TON), Off-delay (TOF), Retentive timers (RTO)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for On-delay (TON), Off-delay (TOF), Retentive timers (RTO).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;On-delay (TON), Off-delay (TOF), Retentive timers (RTO)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Up-counters (CTU), down-counters (CTD), comparison instructions typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Up-counters (CTU), down-counters (CTD), comparison instructions.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Up-counters (CTU), down-counters (CTD), comparison instructions&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Data registers, internal bits, math instructions (ADD, SUB, MUL) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Data registers, internal bits, math instructions (ADD, SUB, MUL) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Data registers, internal bits, math instructions (ADD, SUB, MUL)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Moving data (MOV block), masking operations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Moving data (MOV block), masking operations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PLC & SCADA Automation Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;CPU, digital I/O modules, analog I/O modules, power supplies&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Industrial Control & Fieldbuses
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study motor control starters, analog scaling, and Modbus/Profibus networking.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Industrial Control & Fieldbuses
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study motor control starters, analog scaling, and Modbus/Profibus networking.</p>
+   
         <!-- Week 7: Motor Control Starters -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-1-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-1-1" class="checkmark"></label>
                 <span class="topic-text">DOL starter, Star-Delta starter ladder logic controls</span>
+                <button class="simplify-btn" data-topic="DOL starter, Star-Delta starter ladder logic controls">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-1-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-1-2" class="checkmark"></label>
                 <span class="topic-text">VFD (Variable Frequency Drive) speed controls via PLC</span>
+                <button class="simplify-btn" data-topic="VFD (Variable Frequency Drive) speed controls via PLC">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-2-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling</span>
+                <button class="simplify-btn" data-topic="Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-2-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Writing analog output values to control valves</span>
+                <button class="simplify-btn" data-topic="Writing analog output values to control valves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-3-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Modbus RTU/TCP protocols, registers mapping, master-slave</span>
+                <button class="simplify-btn" data-topic="Modbus RTU/TCP protocols, registers mapping, master-slave">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-3-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Serial communication: RS485 physical layer specifications</span>
+                <button class="simplify-btn" data-topic="Serial communication: RS485 physical layer specifications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-4-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Profibus DP configurations, GSD files, Profinet setup</span>
+                <button class="simplify-btn" data-topic="Profibus DP configurations, GSD files, Profinet setup">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-4-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Industrial ethernet switches, topology designs</span>
+                <button class="simplify-btn" data-topic="Industrial ethernet switches, topology designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-5-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-5-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-6-1" class="topic-checkbox">
                 <label for="eee-plc-scada-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-plc-scada-2-6-2" class="topic-checkbox">
                 <label for="eee-plc-scada-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of DOL starter, Star-Delta starter ladder logic controls?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for DOL starter, Star-Delta starter ladder logic controls.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DOL starter, Star-Delta starter ladder logic controls&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is VFD (Variable Frequency Drive) speed controls via PLC typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of VFD (Variable Frequency Drive) speed controls via PLC.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;VFD (Variable Frequency Drive) speed controls via PLC&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Reading 4-20mA/0-10V analog sensors, analog-to-digital scaling&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Writing analog output values to control valves?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Writing analog output values to control valves&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Modbus RTU/TCP protocols, registers mapping, master-slave?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Modbus RTU/TCP protocols, registers mapping, master-slave.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modbus RTU/TCP protocols, registers mapping, master-slave&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Serial communication: RS485 physical layer specifications typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Serial communication: RS485 physical layer specifications.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Serial communication: RS485 physical layer specifications&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Profibus DP configurations, GSD files, Profinet setup practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Profibus DP configurations, GSD files, Profinet setup systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Profibus DP configurations, GSD files, Profinet setup&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Industrial ethernet switches, topology designs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Industrial ethernet switches, topology designs&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PLC & SCADA Automation Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DOL starter, Star-Delta starter ladder logic controls&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          SCADA & HMI Dashboard Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design HMI screens, configure SCADA tag databases, and setup alarming/trending.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            SCADA & HMI Dashboard Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design HMI screens, configure SCADA tag databases, and setup alarming/trending.</p>
+   
         <!-- Week 13: HMI Screen Design -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-1-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-1-1" class="checkmark"></label>
                 <span class="topic-text">HMI software setups, button mappings, numerical inputs/outputs</span>
+                <button class="simplify-btn" data-topic="HMI software setups, button mappings, numerical inputs/outputs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-1-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Screen navigation, user access level configurations</span>
+                <button class="simplify-btn" data-topic="Screen navigation, user access level configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-2-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-2-1" class="checkmark"></label>
                 <span class="topic-text">SCADA architectures: server, client, RTU, PLC configurations</span>
+                <button class="simplify-btn" data-topic="SCADA architectures: server, client, RTU, PLC configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-2-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Configuring SCADA tag databases, driver selections</span>
+                <button class="simplify-btn" data-topic="Configuring SCADA tag databases, driver selections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-3-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Configuring alarm limits, alarm summary tables, acknowledgments</span>
+                <button class="simplify-btn" data-topic="Configuring alarm limits, alarm summary tables, acknowledgments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-3-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Event logging, database connections (SQL logs)</span>
+                <button class="simplify-btn" data-topic="Event logging, database connections (SQL logs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-4-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Historical data logging, real-time trend plots</span>
+                <button class="simplify-btn" data-topic="Historical data logging, real-time trend plots">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-4-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Generating daily/monthly automation reports</span>
+                <button class="simplify-btn" data-topic="Generating daily/monthly automation reports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-5-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-5-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-6-1" class="topic-checkbox">
                 <label for="eee-plc-scada-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-plc-scada-3-6-2" class="topic-checkbox">
                 <label for="eee-plc-scada-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Configuring SCADA tag databases, driver selections&quot;}, {&quot;question&quot;: &quot;In database normalization, which normal form requires the elimination of partial dependency on primary keys?&quot;, &quot;options&quot;: [&quot;1NF&quot;, &quot;2NF&quot;, &quot;3NF&quot;, &quot;BCNF&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Event logging, database connections (SQL logs)&quot;}, {&quot;question&quot;: &quot;What is the function of a FOREIGN KEY constraint in relational databases?&quot;, &quot;options&quot;: [&quot;To speed up the execution of aggregate joins.&quot;, &quot;To establish and enforce a link between data in two tables.&quot;, &quot;To store non-relational document logs in memory.&quot;, &quot;To automatically generate unique numeric sequences.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Event logging, database connections (SQL logs)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of HMI software setups, button mappings, numerical inputs/outputs?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for HMI software setups, button mappings, numerical inputs/outputs.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;HMI software setups, button mappings, numerical inputs/outputs&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Screen navigation, user access level configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Screen navigation, user access level configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Screen navigation, user access level configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting SCADA architectures: server, client, RTU, PLC configurations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of SCADA architectures: server, client, RTU, PLC configurations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;SCADA architectures: server, client, RTU, PLC configurations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Configuring SCADA tag databases, driver selections?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Configuring SCADA tag databases, driver selections&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Configuring alarm limits, alarm summary tables, acknowledgments?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Configuring alarm limits, alarm summary tables, acknowledgments.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Configuring alarm limits, alarm summary tables, acknowledgments&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Event logging, database connections (SQL logs) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Event logging, database connections (SQL logs).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Event logging, database connections (SQL logs)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Historical data logging, real-time trend plots practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Historical data logging, real-time trend plots systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Historical data logging, real-time trend plots&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Advanced PLC & Functional Safety
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program in Structured Text, write PID automation loops, and design safety PLCs.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Advanced PLC & Functional Safety
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Program in Structured Text, write PID automation loops, and design safety PLCs.</p>
+   
         <!-- Week 19: Structured Text (ST) -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-1-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-1-1" class="checkmark"></label>
                 <span class="topic-text">ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks</span>
+                <button class="simplify-btn" data-topic="ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-1-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Function block diagrams (FBD) configurations</span>
+                <button class="simplify-btn" data-topic="Function block diagrams (FBD) configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-2-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Configuring PID instruction blocks, input/output connections</span>
+                <button class="simplify-btn" data-topic="Configuring PID instruction blocks, input/output connections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-2-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-2-2" class="checkmark"></label>
                 <span class="topic-text">PID loop tuning strategies (proportional gain, integral time)</span>
+                <button class="simplify-btn" data-topic="PID loop tuning strategies (proportional gain, integral time)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-3-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Safety integrity levels (SIL), dual-channel safety relays</span>
+                <button class="simplify-btn" data-topic="Safety integrity levels (SIL), dual-channel safety relays">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-3-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Emergency stop loops, light curtains PLC integrations</span>
+                <button class="simplify-btn" data-topic="Emergency stop loops, light curtains PLC integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-4-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Online diagnostics, forced I/O, troubleshooting techniques</span>
+                <button class="simplify-btn" data-topic="Online diagnostics, forced I/O, troubleshooting techniques">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-4-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-4-2" class="checkmark"></label>
                 <span class="topic-text">System commissioning checklists, electrical panel drawings</span>
+                <button class="simplify-btn" data-topic="System commissioning checklists, electrical panel drawings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-5-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-5-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-6-1" class="topic-checkbox">
                 <label for="eee-plc-scada-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-plc-scada-4-6-2" class="topic-checkbox">
                 <label for="eee-plc-scada-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Function block diagrams (FBD) configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Function block diagrams (FBD) configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Function block diagrams (FBD) configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Configuring PID instruction blocks, input/output connections practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Configuring PID instruction blocks, input/output connections systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Configuring PID instruction blocks, input/output connections&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with PID loop tuning strategies (proportional gain, integral time)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;PID loop tuning strategies (proportional gain, integral time)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Safety integrity levels (SIL), dual-channel safety relays?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Safety integrity levels (SIL), dual-channel safety relays.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Safety integrity levels (SIL), dual-channel safety relays&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Emergency stop loops, light curtains PLC integrations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Emergency stop loops, light curtains PLC integrations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Emergency stop loops, light curtains PLC integrations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Online diagnostics, forced I/O, troubleshooting techniques practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Online diagnostics, forced I/O, troubleshooting techniques systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Online diagnostics, forced I/O, troubleshooting techniques&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with System commissioning checklists, electrical panel drawings?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;System commissioning checklists, electrical panel drawings&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for PLC & SCADA Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for PLC & SCADA Automation Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ST programming syntax: IF-THEN, FOR/WHILE loops, CASE blocks&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

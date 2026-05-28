@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Data Science Fundamentals & SQL
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master statistics, advanced relational databases, and data manipulation.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Data Science Fundamentals & SQL
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master statistics, advanced relational databases, and data manipulation.</p>
+   
         <!-- Week 1: Statistics & Probability -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-1-1" class="topic-checkbox">
                 <label for="sw-data-scientist-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Descriptive statistics: mean, median, standard deviation, variances</span>
+                <button class="simplify-btn" data-topic="Descriptive statistics: mean, median, standard deviation, variances">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-1-2" class="topic-checkbox">
                 <label for="sw-data-scientist-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Inferential statistics: hypothesis testing, t-tests, p-values</span>
+                <button class="simplify-btn" data-topic="Inferential statistics: hypothesis testing, t-tests, p-values">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-2-1" class="topic-checkbox">
                 <label for="sw-data-scientist-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Relational DBs: window functions, CTEs, complex JOIN queries</span>
+                <button class="simplify-btn" data-topic="Relational DBs: window functions, CTEs, complex JOIN queries">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-2-2" class="topic-checkbox">
                 <label for="sw-data-scientist-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Database optimizations: index structures, partitions configs</span>
+                <button class="simplify-btn" data-topic="Database optimizations: index structures, partitions configs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-3-1" class="topic-checkbox">
                 <label for="sw-data-scientist-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Pandas: GroupBy operations, merge, pivot tables, multi-indexing</span>
+                <button class="simplify-btn" data-topic="Pandas: GroupBy operations, merge, pivot tables, multi-indexing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-3-2" class="topic-checkbox">
                 <label for="sw-data-scientist-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Numpy: vectorization operations, matrix calculations, slicing</span>
+                <button class="simplify-btn" data-topic="Numpy: vectorization operations, matrix calculations, slicing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-4-1" class="topic-checkbox">
                 <label for="sw-data-scientist-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Imputing missing values, scaling metrics (MinMax, Standard)</span>
+                <button class="simplify-btn" data-topic="Imputing missing values, scaling metrics (MinMax, Standard)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-4-2" class="topic-checkbox">
                 <label for="sw-data-scientist-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Outlier detections: IQR methods, Z-scores filters</span>
+                <button class="simplify-btn" data-topic="Outlier detections: IQR methods, Z-scores filters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-5-1" class="topic-checkbox">
                 <label for="sw-data-scientist-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-data-scientist-1-5-2" class="topic-checkbox">
                 <label for="sw-data-scientist-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Database optimizations: index structures, partitions configs&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Descriptive statistics: mean, median, standard deviation, variances?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Descriptive statistics: mean, median, standard deviation, variances.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Descriptive statistics: mean, median, standard deviation, variances&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Inferential statistics: hypothesis testing, t-tests, p-values typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Inferential statistics: hypothesis testing, t-tests, p-values.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Inferential statistics: hypothesis testing, t-tests, p-values&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Relational DBs: window functions, CTEs, complex JOIN queries practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Relational DBs: window functions, CTEs, complex JOIN queries systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Relational DBs: window functions, CTEs, complex JOIN queries&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Database optimizations: index structures, partitions configs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Database optimizations: index structures, partitions configs&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pandas: GroupBy operations, merge, pivot tables, multi-indexing?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pandas: GroupBy operations, merge, pivot tables, multi-indexing.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pandas: GroupBy operations, merge, pivot tables, multi-indexing&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Numpy: vectorization operations, matrix calculations, slicing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Numpy: vectorization operations, matrix calculations, slicing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Numpy: vectorization operations, matrix calculations, slicing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Imputing missing values, scaling metrics (MinMax, Standard) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Imputing missing values, scaling metrics (MinMax, Standard) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Imputing missing values, scaling metrics (MinMax, Standard)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Outlier detections: IQR methods, Z-scores filters?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Outlier detections: IQR methods, Z-scores filters&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Scientist / Data Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Descriptive statistics: mean, median, standard deviation, variances&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Data Warehousing & ETL Pipelines
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study ETL architecture, Kimball design, database connections, and orchestration.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Data Warehousing & ETL Pipelines
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study ETL architecture, Kimball design, database connections, and orchestration.</p>
+   
         <!-- Week 6: Data Warehouse Architecture -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-1-1" class="topic-checkbox">
                 <label for="sw-data-scientist-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Dimensional modeling: star schema vs snowflake schemas</span>
+                <button class="simplify-btn" data-topic="Dimensional modeling: star schema vs snowflake schemas">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-1-2" class="topic-checkbox">
                 <label for="sw-data-scientist-2-1-2" class="checkmark"></label>
                 <span class="topic-text">OLAP vs OLTP databases, fact and dimension table designs</span>
+                <button class="simplify-btn" data-topic="OLAP vs OLTP databases, fact and dimension table designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-2-1" class="topic-checkbox">
                 <label for="sw-data-scientist-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Writing custom ETL scripts: extract from APIs, load to Postgres</span>
+                <button class="simplify-btn" data-topic="Writing custom ETL scripts: extract from APIs, load to Postgres">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-2-2" class="topic-checkbox">
                 <label for="sw-data-scientist-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Data validation checks, parsing nested JSON datasets</span>
+                <button class="simplify-btn" data-topic="Data validation checks, parsing nested JSON datasets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-3-1" class="topic-checkbox">
                 <label for="sw-data-scientist-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Apache Airflow architecture: DAGs, operators, tasks setups</span>
+                <button class="simplify-btn" data-topic="Apache Airflow architecture: DAGs, operators, tasks setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-3-2" class="topic-checkbox">
                 <label for="sw-data-scientist-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Writing custom Airflow DAGs, schedule intervals, backfill runs</span>
+                <button class="simplify-btn" data-topic="Writing custom Airflow DAGs, schedule intervals, backfill runs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-4-1" class="topic-checkbox">
                 <label for="sw-data-scientist-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Data lake concepts: object stores partitioning parameters</span>
+                <button class="simplify-btn" data-topic="Data lake concepts: object stores partitioning parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-4-2" class="topic-checkbox">
                 <label for="sw-data-scientist-2-4-2" class="checkmark"></label>
                 <span class="topic-text">File formats comparison: CSV, JSON, Parquet, Avro schemas</span>
+                <button class="simplify-btn" data-topic="File formats comparison: CSV, JSON, Parquet, Avro schemas">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-5-1" class="topic-checkbox">
                 <label for="sw-data-scientist-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-data-scientist-2-5-2" class="topic-checkbox">
                 <label for="sw-data-scientist-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;OLAP vs OLTP databases, fact and dimension table designs&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Dimensional modeling: star schema vs snowflake schemas?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Dimensional modeling: star schema vs snowflake schemas.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dimensional modeling: star schema vs snowflake schemas&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is OLAP vs OLTP databases, fact and dimension table designs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of OLAP vs OLTP databases, fact and dimension table designs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;OLAP vs OLTP databases, fact and dimension table designs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Writing custom ETL scripts: extract from APIs, load to Postgres practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Writing custom ETL scripts: extract from APIs, load to Postgres systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing custom ETL scripts: extract from APIs, load to Postgres&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Data validation checks, parsing nested JSON datasets?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Data validation checks, parsing nested JSON datasets&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Apache Airflow architecture: DAGs, operators, tasks setups?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Apache Airflow architecture: DAGs, operators, tasks setups.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Apache Airflow architecture: DAGs, operators, tasks setups&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing custom Airflow DAGs, schedule intervals, backfill runs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing custom Airflow DAGs, schedule intervals, backfill runs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing custom Airflow DAGs, schedule intervals, backfill runs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Data lake concepts: object stores partitioning parameters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Data lake concepts: object stores partitioning parameters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Data lake concepts: object stores partitioning parameters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with File formats comparison: CSV, JSON, Parquet, Avro schemas?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;File formats comparison: CSV, JSON, Parquet, Avro schemas&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Scientist / Data Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dimensional modeling: star schema vs snowflake schemas&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Big Data & Distributed Computing
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master distributed compute with Apache Spark and PySpark API.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Big Data & Distributed Computing
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master distributed compute with Apache Spark and PySpark API.</p>
+   
         <!-- Week 11: Big Data Architectures -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-1-1" class="topic-checkbox">
                 <label for="sw-data-scientist-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Hadoop ecosystem: HDFS storage, MapReduce compute concepts</span>
+                <button class="simplify-btn" data-topic="Hadoop ecosystem: HDFS storage, MapReduce compute concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-1-2" class="topic-checkbox">
                 <label for="sw-data-scientist-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Distributed query engines: Presto, Athena configurations</span>
+                <button class="simplify-btn" data-topic="Distributed query engines: Presto, Athena configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-2-1" class="topic-checkbox">
                 <label for="sw-data-scientist-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Spark cluster architectures: driver, executor, cluster manager</span>
+                <button class="simplify-btn" data-topic="Spark cluster architectures: driver, executor, cluster manager">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-2-2" class="topic-checkbox">
                 <label for="sw-data-scientist-3-2-2" class="checkmark"></label>
                 <span class="topic-text">PySpark DataFrames API: reading, transformations, actions</span>
+                <button class="simplify-btn" data-topic="PySpark DataFrames API: reading, transformations, actions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-3-1" class="topic-checkbox">
                 <label for="sw-data-scientist-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Spark transformations: narrow vs wide joins, shuffling operations</span>
+                <button class="simplify-btn" data-topic="Spark transformations: narrow vs wide joins, shuffling operations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-3-2" class="topic-checkbox">
                 <label for="sw-data-scientist-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Caching, partitioning, and partitioning-aware joins Optimization</span>
+                <button class="simplify-btn" data-topic="Caching, partitioning, and partitioning-aware joins Optimization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-4-1" class="topic-checkbox">
                 <label for="sw-data-scientist-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Spark Structured Streaming: source to sink pipelines design</span>
+                <button class="simplify-btn" data-topic="Spark Structured Streaming: source to sink pipelines design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-4-2" class="topic-checkbox">
                 <label for="sw-data-scientist-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Kafka cluster setups, producers/consumers message flows</span>
+                <button class="simplify-btn" data-topic="Kafka cluster setups, producers/consumers message flows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-5-1" class="topic-checkbox">
                 <label for="sw-data-scientist-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-data-scientist-3-5-2" class="topic-checkbox">
                 <label for="sw-data-scientist-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Hadoop ecosystem: HDFS storage, MapReduce compute concepts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Hadoop ecosystem: HDFS storage, MapReduce compute concepts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hadoop ecosystem: HDFS storage, MapReduce compute concepts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Distributed query engines: Presto, Athena configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Distributed query engines: Presto, Athena configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Distributed query engines: Presto, Athena configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Spark cluster architectures: driver, executor, cluster manager practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Spark cluster architectures: driver, executor, cluster manager systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Spark cluster architectures: driver, executor, cluster manager&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with PySpark DataFrames API: reading, transformations, actions?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;PySpark DataFrames API: reading, transformations, actions&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Spark transformations: narrow vs wide joins, shuffling operations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Spark transformations: narrow vs wide joins, shuffling operations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Spark transformations: narrow vs wide joins, shuffling operations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Caching, partitioning, and partitioning-aware joins Optimization typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Caching, partitioning, and partitioning-aware joins Optimization.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Caching, partitioning, and partitioning-aware joins Optimization&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Spark Structured Streaming: source to sink pipelines design practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Spark Structured Streaming: source to sink pipelines design systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Spark Structured Streaming: source to sink pipelines design&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Kafka cluster setups, producers/consumers message flows?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Kafka cluster setups, producers/consumers message flows&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Data Scientist / Data Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hadoop ecosystem: HDFS storage, MapReduce compute concepts&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Scientist / Data Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hadoop ecosystem: HDFS storage, MapReduce compute concepts&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Feature Engineering & ML pipelines
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Prepare feature tables, configure MLflow tracking, and build analytics dashboards.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Feature Engineering & ML pipelines
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Prepare feature tables, configure MLflow tracking, and build analytics dashboards.</p>
+   
         <!-- Week 16: Feature Engineering -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-1-1" class="topic-checkbox">
                 <label for="sw-data-scientist-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Encoding: One-hot, label, target encodings configurations</span>
+                <button class="simplify-btn" data-topic="Encoding: One-hot, label, target encodings configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-1-2" class="topic-checkbox">
                 <label for="sw-data-scientist-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Feature selections: correlation matrix, mutual information</span>
+                <button class="simplify-btn" data-topic="Feature selections: correlation matrix, mutual information">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-2-1" class="topic-checkbox">
                 <label for="sw-data-scientist-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Scikit-Learn Pipeline building: transformers and estimators</span>
+                <button class="simplify-btn" data-topic="Scikit-Learn Pipeline building: transformers and estimators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-2-2" class="topic-checkbox">
                 <label for="sw-data-scientist-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Hyperparameter tuning: GridSearchCV, RandomizedSearchCV setups</span>
+                <button class="simplify-btn" data-topic="Hyperparameter tuning: GridSearchCV, RandomizedSearchCV setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-3-1" class="topic-checkbox">
                 <label for="sw-data-scientist-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Tracking metrics, parameters, and models artifacts registration</span>
+                <button class="simplify-btn" data-topic="Tracking metrics, parameters, and models artifacts registration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-3-2" class="topic-checkbox">
                 <label for="sw-data-scientist-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Model versionings, artifact repositories configurations</span>
+                <button class="simplify-btn" data-topic="Model versionings, artifact repositories configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-4-1" class="topic-checkbox">
                 <label for="sw-data-scientist-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Business intelligence: PowerBI, Tableau dashboard integrations</span>
+                <button class="simplify-btn" data-topic="Business intelligence: PowerBI, Tableau dashboard integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-4-2" class="topic-checkbox">
                 <label for="sw-data-scientist-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Python libraries: Streamlit, Plotly data application builds</span>
+                <button class="simplify-btn" data-topic="Python libraries: Streamlit, Plotly data application builds">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-5-1" class="topic-checkbox">
                 <label for="sw-data-scientist-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-data-scientist-4-5-2" class="topic-checkbox">
                 <label for="sw-data-scientist-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;In Python, which built-in function returns a list of attributes and methods of an object?&quot;, &quot;options&quot;: [&quot;help()&quot;, &quot;type()&quot;, &quot;dir()&quot;, &quot;vars()&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Python libraries: Streamlit, Plotly data application builds&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Encoding: One-hot, label, target encodings configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Encoding: One-hot, label, target encodings configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Encoding: One-hot, label, target encodings configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Feature selections: correlation matrix, mutual information typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Feature selections: correlation matrix, mutual information.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Feature selections: correlation matrix, mutual information&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Scikit-Learn Pipeline building: transformers and estimators practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Scikit-Learn Pipeline building: transformers and estimators systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Scikit-Learn Pipeline building: transformers and estimators&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Hyperparameter tuning: GridSearchCV, RandomizedSearchCV setups?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Hyperparameter tuning: GridSearchCV, RandomizedSearchCV setups&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Tracking metrics, parameters, and models artifacts registration?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Tracking metrics, parameters, and models artifacts registration.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Tracking metrics, parameters, and models artifacts registration&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Model versionings, artifact repositories configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Model versionings, artifact repositories configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Model versionings, artifact repositories configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Business intelligence: PowerBI, Tableau dashboard integrations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Business intelligence: PowerBI, Tableau dashboard integrations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Business intelligence: PowerBI, Tableau dashboard integrations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Python libraries: Streamlit, Plotly data application builds?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Python libraries: Streamlit, Plotly data application builds&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Data Scientist / Data Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Encoding: One-hot, label, target encodings configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

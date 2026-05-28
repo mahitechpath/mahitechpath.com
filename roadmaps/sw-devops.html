@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Linux, Shell & Networking
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Linux operating system management, bash shell scripting, and core networking protocols.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Linux, Shell & Networking
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Linux operating system management, bash shell scripting, and core networking protocols.</p>
+   
         <!-- Week 1: Linux Administration Core -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-devops-1-1-1" class="topic-checkbox">
                 <label for="sw-devops-1-1-1" class="checkmark"></label>
                 <span class="topic-text">File system permissions, user groups management, cron scheduling</span>
+                <button class="simplify-btn" data-topic="File system permissions, user groups management, cron scheduling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-devops-1-1-2" class="topic-checkbox">
                 <label for="sw-devops-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Process monitoring (top, ps), systemctl services, log files</span>
+                <button class="simplify-btn" data-topic="Process monitoring (top, ps), systemctl services, log files">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-devops-1-2-1" class="topic-checkbox">
                 <label for="sw-devops-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Variables, loops, conditionals, positional arguments parsing</span>
+                <button class="simplify-btn" data-topic="Variables, loops, conditionals, positional arguments parsing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-devops-1-2-2" class="topic-checkbox">
                 <label for="sw-devops-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Automating log rotations, backups, and API health pings</span>
+                <button class="simplify-btn" data-topic="Automating log rotations, backups, and API health pings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-devops-1-3-1" class="topic-checkbox">
                 <label for="sw-devops-1-3-1" class="checkmark"></label>
                 <span class="topic-text">TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs</span>
+                <button class="simplify-btn" data-topic="TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-devops-1-3-2" class="topic-checkbox">
                 <label for="sw-devops-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Network diagnostics: curl, netstat, lsof, dig command usage</span>
+                <button class="simplify-btn" data-topic="Network diagnostics: curl, netstat, lsof, dig command usage">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-devops-1-4-1" class="topic-checkbox">
                 <label for="sw-devops-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Branching, rebasing, merge conflict resolution strategies</span>
+                <button class="simplify-btn" data-topic="Branching, rebasing, merge conflict resolution strategies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-devops-1-4-2" class="topic-checkbox">
                 <label for="sw-devops-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Git hooks, conventional commits, configurations</span>
+                <button class="simplify-btn" data-topic="Git hooks, conventional commits, configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-devops-1-5-1" class="topic-checkbox">
                 <label for="sw-devops-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-devops-1-5-2" class="topic-checkbox">
                 <label for="sw-devops-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="sw-devops-1-6-1" class="topic-checkbox">
                 <label for="sw-devops-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="sw-devops-1-6-2" class="topic-checkbox">
                 <label for="sw-devops-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Git hooks, conventional commits, configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of File system permissions, user groups management, cron scheduling?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for File system permissions, user groups management, cron scheduling.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;File system permissions, user groups management, cron scheduling&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Process monitoring (top, ps), systemctl services, log files typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Process monitoring (top, ps), systemctl services, log files.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Process monitoring (top, ps), systemctl services, log files&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Variables, loops, conditionals, positional arguments parsing practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Variables, loops, conditionals, positional arguments parsing systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Variables, loops, conditionals, positional arguments parsing&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Automating log rotations, backups, and API health pings?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Automating log rotations, backups, and API health pings&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;TCP/IP, UDP, DNS resolutions, SSH configurations, firewall configs&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Network diagnostics: curl, netstat, lsof, dig command usage typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Network diagnostics: curl, netstat, lsof, dig command usage.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Network diagnostics: curl, netstat, lsof, dig command usage&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Branching, rebasing, merge conflict resolution strategies practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Branching, rebasing, merge conflict resolution strategies systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Branching, rebasing, merge conflict resolution strategies&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Git hooks, conventional commits, configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Git hooks, conventional commits, configurations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DevOps / Site Reliability Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;File system permissions, user groups management, cron scheduling&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          CI/CD & Containers
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Build automated pipelines, configure Docker containers, and set registries.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            CI/CD & Containers
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Build automated pipelines, configure Docker containers, and set registries.</p>
+   
         <!-- Week 7: CI/CD with GitHub Actions -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-devops-2-1-1" class="topic-checkbox">
                 <label for="sw-devops-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Workflow syntax: triggers, runners, steps, variables, secrets</span>
+                <button class="simplify-btn" data-topic="Workflow syntax: triggers, runners, steps, variables, secrets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-devops-2-1-2" class="topic-checkbox">
                 <label for="sw-devops-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Automating unit tests, linting check blocks, build caches</span>
+                <button class="simplify-btn" data-topic="Automating unit tests, linting check blocks, build caches">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-devops-2-2-1" class="topic-checkbox">
                 <label for="sw-devops-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Writing Dockerfiles: multi-stage builds, cache optimizations</span>
+                <button class="simplify-btn" data-topic="Writing Dockerfiles: multi-stage builds, cache optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-devops-2-2-2" class="topic-checkbox">
                 <label for="sw-devops-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Docker networking, volumes, bridge networks configurations</span>
+                <button class="simplify-btn" data-topic="Docker networking, volumes, bridge networks configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-devops-2-3-1" class="topic-checkbox">
                 <label for="sw-devops-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Multi-container setups, network routing, environment files</span>
+                <button class="simplify-btn" data-topic="Multi-container setups, network routing, environment files">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-devops-2-3-2" class="topic-checkbox">
                 <label for="sw-devops-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Docker-compose commands, data volume persistence</span>
+                <button class="simplify-btn" data-topic="Docker-compose commands, data volume persistence">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-devops-2-4-1" class="topic-checkbox">
                 <label for="sw-devops-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Publishing images to DockerHub, AWS ECR setups</span>
+                <button class="simplify-btn" data-topic="Publishing images to DockerHub, AWS ECR setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-devops-2-4-2" class="topic-checkbox">
                 <label for="sw-devops-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Package managers, semantic versionings release flows</span>
+                <button class="simplify-btn" data-topic="Package managers, semantic versionings release flows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="sw-devops-2-5-1" class="topic-checkbox">
                 <label for="sw-devops-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="sw-devops-2-5-2" class="topic-checkbox">
                 <label for="sw-devops-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="sw-devops-2-6-1" class="topic-checkbox">
                 <label for="sw-devops-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="sw-devops-2-6-2" class="topic-checkbox">
                 <label for="sw-devops-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;What is the main difference between a Docker container and a Virtual Machine?&quot;, &quot;options&quot;: [&quot;Containers share the host OS kernel, while VMs include a full guest OS.&quot;, &quot;VMs require less memory and storage than containers.&quot;, &quot;Containers run on specialized hardware, while VMs run on standard CPUs.&quot;, &quot;VMs do not support networking or persistent storage operations.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Writing Dockerfiles: multi-stage builds, cache optimizations&quot;}, {&quot;question&quot;: &quot;Which Layer of the OSI Model is responsible for routing data packets across different networks?&quot;, &quot;options&quot;: [&quot;Data Link Layer&quot;, &quot;Network Layer&quot;, &quot;Transport Layer&quot;, &quot;Session Layer&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Docker networking, volumes, bridge networks configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Workflow syntax: triggers, runners, steps, variables, secrets?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Workflow syntax: triggers, runners, steps, variables, secrets.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Workflow syntax: triggers, runners, steps, variables, secrets&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Automating unit tests, linting check blocks, build caches typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Automating unit tests, linting check blocks, build caches.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Automating unit tests, linting check blocks, build caches&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Writing Dockerfiles: multi-stage builds, cache optimizations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Writing Dockerfiles: multi-stage builds, cache optimizations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing Dockerfiles: multi-stage builds, cache optimizations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Docker networking, volumes, bridge networks configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Docker networking, volumes, bridge networks configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Multi-container setups, network routing, environment files?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Multi-container setups, network routing, environment files.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Multi-container setups, network routing, environment files&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Docker-compose commands, data volume persistence typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Docker-compose commands, data volume persistence.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Docker-compose commands, data volume persistence&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Publishing images to DockerHub, AWS ECR setups practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Publishing images to DockerHub, AWS ECR setups systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Publishing images to DockerHub, AWS ECR setups&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Package managers, semantic versionings release flows?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Package managers, semantic versionings release flows&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Infrastructure Automation & K8s
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write Ansible configurations, deploy with Terraform, and configure Kubernetes.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Infrastructure Automation & K8s
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write Ansible configurations, deploy with Terraform, and configure Kubernetes.</p>
+   
         <!-- Week 13: Configuration Automation (Ansible) -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-devops-3-1-1" class="topic-checkbox">
                 <label for="sw-devops-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Playbooks, inventory files, variables, roles layouts</span>
+                <button class="simplify-btn" data-topic="Playbooks, inventory files, variables, roles layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-devops-3-1-2" class="topic-checkbox">
                 <label for="sw-devops-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Automating server updates, user creations, config files</span>
+                <button class="simplify-btn" data-topic="Automating server updates, user creations, config files">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-devops-3-2-1" class="topic-checkbox">
                 <label for="sw-devops-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Terraform providers, variables, local and remote state configs</span>
+                <button class="simplify-btn" data-topic="Terraform providers, variables, local and remote state configs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-devops-3-2-2" class="topic-checkbox">
                 <label for="sw-devops-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Writing reusable modules, plan and apply execution blocks</span>
+                <button class="simplify-btn" data-topic="Writing reusable modules, plan and apply execution blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-devops-3-3-1" class="topic-checkbox">
                 <label for="sw-devops-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Pod, Node, Cluster architectures, Namespace segmentations</span>
+                <button class="simplify-btn" data-topic="Pod, Node, Cluster architectures, Namespace segmentations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-devops-3-3-2" class="topic-checkbox">
                 <label for="sw-devops-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Deployments, Services (ClusterIP, NodePort, LoadBalancer)</span>
+                <button class="simplify-btn" data-topic="Deployments, Services (ClusterIP, NodePort, LoadBalancer)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="sw-devops-3-4-1" class="topic-checkbox">
                 <label for="sw-devops-3-4-1" class="checkmark"></label>
                 <span class="topic-text">ConfigMaps, Secrets, Ingress controllers routing rules</span>
+                <button class="simplify-btn" data-topic="ConfigMaps, Secrets, Ingress controllers routing rules">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="sw-devops-3-4-2" class="topic-checkbox">
                 <label for="sw-devops-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Persistent Volumes, PV claims, stateful applications basics</span>
+                <button class="simplify-btn" data-topic="Persistent Volumes, PV claims, stateful applications basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="sw-devops-3-5-1" class="topic-checkbox">
                 <label for="sw-devops-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="sw-devops-3-5-2" class="topic-checkbox">
                 <label for="sw-devops-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="sw-devops-3-6-1" class="topic-checkbox">
                 <label for="sw-devops-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="sw-devops-3-6-2" class="topic-checkbox">
                 <label for="sw-devops-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Playbooks, inventory files, variables, roles layouts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Playbooks, inventory files, variables, roles layouts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Playbooks, inventory files, variables, roles layouts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Automating server updates, user creations, config files typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Automating server updates, user creations, config files.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Automating server updates, user creations, config files&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Terraform providers, variables, local and remote state configs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Terraform providers, variables, local and remote state configs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Terraform providers, variables, local and remote state configs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Writing reusable modules, plan and apply execution blocks?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Writing reusable modules, plan and apply execution blocks&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pod, Node, Cluster architectures, Namespace segmentations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pod, Node, Cluster architectures, Namespace segmentations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pod, Node, Cluster architectures, Namespace segmentations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Deployments, Services (ClusterIP, NodePort, LoadBalancer) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Deployments, Services (ClusterIP, NodePort, LoadBalancer).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Deployments, Services (ClusterIP, NodePort, LoadBalancer)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting ConfigMaps, Secrets, Ingress controllers routing rules practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of ConfigMaps, Secrets, Ingress controllers routing rules systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ConfigMaps, Secrets, Ingress controllers routing rules&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Persistent Volumes, PV claims, stateful applications basics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Persistent Volumes, PV claims, stateful applications basics&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for DevOps / Site Reliability Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Playbooks, inventory files, variables, roles layouts&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DevOps / Site Reliability Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Playbooks, inventory files, variables, roles layouts&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Observability & SRE Principles
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Prometheus monitoring, Grafana dashboards, log aggregations, and SLA/SLOs.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Observability & SRE Principles
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Prometheus monitoring, Grafana dashboards, log aggregations, and SLA/SLOs.</p>
+   
         <!-- Week 19: Observability with Prometheus -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-devops-4-1-1" class="topic-checkbox">
                 <label for="sw-devops-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Prometheus architecture, exporter setups, PromQL queries metrics</span>
+                <button class="simplify-btn" data-topic="Prometheus architecture, exporter setups, PromQL queries metrics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-devops-4-1-2" class="topic-checkbox">
                 <label for="sw-devops-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Writing alerting rules, alertmanager routing configurations</span>
+                <button class="simplify-btn" data-topic="Writing alerting rules, alertmanager routing configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-devops-4-2-1" class="topic-checkbox">
                 <label for="sw-devops-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Importing dashboard templates, query definitions, custom panels</span>
+                <button class="simplify-btn" data-topic="Importing dashboard templates, query definitions, custom panels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-devops-4-2-2" class="topic-checkbox">
                 <label for="sw-devops-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Configuring alerts to Slack/PagerDuty notification channels</span>
+                <button class="simplify-btn" data-topic="Configuring alerts to Slack/PagerDuty notification channels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="sw-devops-4-3-1" class="topic-checkbox">
                 <label for="sw-devops-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Grafana Loki agent configs, log query syntax</span>
+                <button class="simplify-btn" data-topic="Grafana Loki agent configs, log query syntax">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="sw-devops-4-3-2" class="topic-checkbox">
                 <label for="sw-devops-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Logstash parsing rules, index lifecycle managements</span>
+                <button class="simplify-btn" data-topic="Logstash parsing rules, index lifecycle managements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="sw-devops-4-4-1" class="topic-checkbox">
                 <label for="sw-devops-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Defining Service Level Indicators (SLIs), Objectives (SLOs)</span>
+                <button class="simplify-btn" data-topic="Defining Service Level Indicators (SLIs), Objectives (SLOs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="sw-devops-4-4-2" class="topic-checkbox">
                 <label for="sw-devops-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Error budgets, incident post-mortems analysis, runbooks</span>
+                <button class="simplify-btn" data-topic="Error budgets, incident post-mortems analysis, runbooks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="sw-devops-4-5-1" class="topic-checkbox">
                 <label for="sw-devops-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="sw-devops-4-5-2" class="topic-checkbox">
                 <label for="sw-devops-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="sw-devops-4-6-1" class="topic-checkbox">
                 <label for="sw-devops-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="sw-devops-4-6-2" class="topic-checkbox">
                 <label for="sw-devops-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Prometheus architecture, exporter setups, PromQL queries metrics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Prometheus architecture, exporter setups, PromQL queries metrics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Prometheus architecture, exporter setups, PromQL queries metrics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing alerting rules, alertmanager routing configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing alerting rules, alertmanager routing configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing alerting rules, alertmanager routing configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Importing dashboard templates, query definitions, custom panels practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Importing dashboard templates, query definitions, custom panels systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Importing dashboard templates, query definitions, custom panels&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Configuring alerts to Slack/PagerDuty notification channels?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Configuring alerts to Slack/PagerDuty notification channels&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Grafana Loki agent configs, log query syntax?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Grafana Loki agent configs, log query syntax.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Grafana Loki agent configs, log query syntax&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Logstash parsing rules, index lifecycle managements typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Logstash parsing rules, index lifecycle managements.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Logstash parsing rules, index lifecycle managements&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Defining Service Level Indicators (SLIs), Objectives (SLOs) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Defining Service Level Indicators (SLIs), Objectives (SLOs) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Defining Service Level Indicators (SLIs), Objectives (SLOs)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Error budgets, incident post-mortems analysis, runbooks?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Error budgets, incident post-mortems analysis, runbooks&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for DevOps / Site Reliability Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Prometheus architecture, exporter setups, PromQL queries metrics&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DevOps / Site Reliability Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Prometheus architecture, exporter setups, PromQL queries metrics&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

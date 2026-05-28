@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Networking & Cryptography
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master TCP/IP networking protocols and fundamental cryptographic concepts.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Networking & Cryptography
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master TCP/IP networking protocols and fundamental cryptographic concepts.</p>
+   
         <!-- Week 1: TCP/IP & Network Audits -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-1-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-1-1" class="checkmark"></label>
                 <span class="topic-text">TCP/IP stack: packet headers, routing, and DNS resolutions</span>
+                <button class="simplify-btn" data-topic="TCP/IP stack: packet headers, routing, and DNS resolutions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-1-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Wireshark packet captures, handshake analysis, and packet sniffing</span>
+                <button class="simplify-btn" data-topic="Wireshark packet captures, handshake analysis, and packet sniffing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-2-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Symmetric algorithms: AES, DES block modes operations</span>
+                <button class="simplify-btn" data-topic="Symmetric algorithms: AES, DES block modes operations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-2-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Asymmetric encryption: RSA math, key exchange (Diffie-Hellman)</span>
+                <button class="simplify-btn" data-topic="Asymmetric encryption: RSA math, key exchange (Diffie-Hellman)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-3-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Hash algorithms: SHA-256, MD5, and collision risks</span>
+                <button class="simplify-btn" data-topic="Hash algorithms: SHA-256, MD5, and collision risks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-3-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Digital signatures: public-private key validation, certificates (X.509)</span>
+                <button class="simplify-btn" data-topic="Digital signatures: public-private key validation, certificates (X.509)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-4-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Nmap scans, stealth scans, OS detection, and scripting engine</span>
+                <button class="simplify-btn" data-topic="Nmap scans, stealth scans, OS detection, and scripting engine">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-4-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Passive recon: OSINT, DNS harvesting, and WHOIS lookups</span>
+                <button class="simplify-btn" data-topic="Passive recon: OSINT, DNS harvesting, and WHOIS lookups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-5-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-cybersecurity-1-5-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Digital signatures: public-private key validation, certificates (X.509)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of TCP/IP stack: packet headers, routing, and DNS resolutions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for TCP/IP stack: packet headers, routing, and DNS resolutions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;TCP/IP stack: packet headers, routing, and DNS resolutions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Wireshark packet captures, handshake analysis, and packet sniffing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Wireshark packet captures, handshake analysis, and packet sniffing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Wireshark packet captures, handshake analysis, and packet sniffing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Symmetric algorithms: AES, DES block modes operations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Symmetric algorithms: AES, DES block modes operations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Symmetric algorithms: AES, DES block modes operations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Asymmetric encryption: RSA math, key exchange (Diffie-Hellman)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Asymmetric encryption: RSA math, key exchange (Diffie-Hellman)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Hash algorithms: SHA-256, MD5, and collision risks?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Hash algorithms: SHA-256, MD5, and collision risks.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hash algorithms: SHA-256, MD5, and collision risks&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Digital signatures: public-private key validation, certificates (X.509) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Digital signatures: public-private key validation, certificates (X.509).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Digital signatures: public-private key validation, certificates (X.509)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Nmap scans, stealth scans, OS detection, and scripting engine practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Nmap scans, stealth scans, OS detection, and scripting engine systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Nmap scans, stealth scans, OS detection, and scripting engine&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Passive recon: OSINT, DNS harvesting, and WHOIS lookups?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Passive recon: OSINT, DNS harvesting, and WHOIS lookups&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Cybersecurity Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;TCP/IP stack: packet headers, routing, and DNS resolutions&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          System Security & Pentesting
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze operating systems vulnerabilities and configure access control models.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            System Security & Pentesting
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze operating systems vulnerabilities and configure access control models.</p>
+   
         <!-- Week 6: Operating System Hardening -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-1-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Linux security permissions, SSH configuration, firewalls (iptables)</span>
+                <button class="simplify-btn" data-topic="Linux security permissions, SSH configuration, firewalls (iptables)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-1-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Windows Active Directory security settings and group policies</span>
+                <button class="simplify-btn" data-topic="Windows Active Directory security settings and group policies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-2-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Common Vulnerabilities and Exposures (CVE) databases lookup</span>
+                <button class="simplify-btn" data-topic="Common Vulnerabilities and Exposures (CVE) databases lookup">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-2-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Vulnerability scanners: Nessus, OpenVAS scans configuration</span>
+                <button class="simplify-btn" data-topic="Vulnerability scanners: Nessus, OpenVAS scans configuration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-3-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Metasploit framework: modules, auxiliary tools, and payloads</span>
+                <button class="simplify-btn" data-topic="Metasploit framework: modules, auxiliary tools, and payloads">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-3-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Privilege escalation: Windows/Linux post-exploitation checks</span>
+                <button class="simplify-btn" data-topic="Privilege escalation: Windows/Linux post-exploitation checks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-4-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-4-1" class="checkmark"></label>
                 <span class="topic-text">ARP spoofing, DNS poisoning, and MITM attacks mitigation</span>
+                <button class="simplify-btn" data-topic="ARP spoofing, DNS poisoning, and MITM attacks mitigation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-4-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Intrusion Detection Systems (IDS): Snort rule writing</span>
+                <button class="simplify-btn" data-topic="Intrusion Detection Systems (IDS): Snort rule writing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-5-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-cybersecurity-2-5-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which hashing algorithm is considered cryptographically secure for storing user passwords?&quot;, &quot;options&quot;: [&quot;MD5&quot;, &quot;SHA-1&quot;, &quot;bcrypt&quot;, &quot;CRC32&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Linux security permissions, SSH configuration, firewalls (iptables)&quot;}, {&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Common Vulnerabilities and Exposures (CVE) databases lookup&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linux security permissions, SSH configuration, firewalls (iptables)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linux security permissions, SSH configuration, firewalls (iptables).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linux security permissions, SSH configuration, firewalls (iptables)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Windows Active Directory security settings and group policies typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Windows Active Directory security settings and group policies.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Windows Active Directory security settings and group policies&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Common Vulnerabilities and Exposures (CVE) databases lookup practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Common Vulnerabilities and Exposures (CVE) databases lookup systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Common Vulnerabilities and Exposures (CVE) databases lookup&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Vulnerability scanners: Nessus, OpenVAS scans configuration?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Vulnerability scanners: Nessus, OpenVAS scans configuration&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Metasploit framework: modules, auxiliary tools, and payloads?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Metasploit framework: modules, auxiliary tools, and payloads.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Metasploit framework: modules, auxiliary tools, and payloads&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Privilege escalation: Windows/Linux post-exploitation checks typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Privilege escalation: Windows/Linux post-exploitation checks.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Privilege escalation: Windows/Linux post-exploitation checks&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting ARP spoofing, DNS poisoning, and MITM attacks mitigation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of ARP spoofing, DNS poisoning, and MITM attacks mitigation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ARP spoofing, DNS poisoning, and MITM attacks mitigation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Intrusion Detection Systems (IDS): Snort rule writing?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Intrusion Detection Systems (IDS): Snort rule writing&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Web Application Security
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study the OWASP Top 10 vulnerabilities, secure coding, and API security.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Web Application Security
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study the OWASP Top 10 vulnerabilities, secure coding, and API security.</p>
+   
         <!-- Week 11: Injection Vulnerabilities -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-1-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-1-1" class="checkmark"></label>
                 <span class="topic-text">SQL Injection (SQLi): manual extraction, SQLMap automation</span>
+                <button class="simplify-btn" data-topic="SQL Injection (SQLi): manual extraction, SQLMap automation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-1-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Command Injection and LDAP injection defenses</span>
+                <button class="simplify-btn" data-topic="Command Injection and LDAP injection defenses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-2-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Cross-Site Scripting (XSS): Stored, Reflected, DOM-based attacks</span>
+                <button class="simplify-btn" data-topic="Cross-Site Scripting (XSS): Stored, Reflected, DOM-based attacks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-2-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Cross-Site Request Forgery (CSRF) tokens and mitigation</span>
+                <button class="simplify-btn" data-topic="Cross-Site Request Forgery (CSRF) tokens and mitigation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-3-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-3-1" class="checkmark"></label>
                 <span class="topic-text">JWT manipulation, session hijacking, and cookie parameters</span>
+                <button class="simplify-btn" data-topic="JWT manipulation, session hijacking, and cookie parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-3-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Insecure Direct Object References (IDOR) validation fixes</span>
+                <button class="simplify-btn" data-topic="Insecure Direct Object References (IDOR) validation fixes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-4-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-4-1" class="checkmark"></label>
                 <span class="topic-text">OWASP API Top 10: authorization checks, rate-limiting rules</span>
+                <button class="simplify-btn" data-topic="OWASP API Top 10: authorization checks, rate-limiting rules">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-4-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Cloud IAM policies, AWS S3 bucket security configurations</span>
+                <button class="simplify-btn" data-topic="Cloud IAM policies, AWS S3 bucket security configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-5-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-cybersecurity-3-5-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;What is the function of a FOREIGN KEY constraint in relational databases?&quot;, &quot;options&quot;: [&quot;To speed up the execution of aggregate joins.&quot;, &quot;To establish and enforce a link between data in two tables.&quot;, &quot;To store non-relational document logs in memory.&quot;, &quot;To automatically generate unique numeric sequences.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;SQL Injection (SQLi): manual extraction, SQLMap automation&quot;}, {&quot;question&quot;: &quot;Which hashing algorithm is considered cryptographically secure for storing user passwords?&quot;, &quot;options&quot;: [&quot;MD5&quot;, &quot;SHA-1&quot;, &quot;bcrypt&quot;, &quot;CRC32&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Cloud IAM policies, AWS S3 bucket security configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of SQL Injection (SQLi): manual extraction, SQLMap automation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for SQL Injection (SQLi): manual extraction, SQLMap automation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;SQL Injection (SQLi): manual extraction, SQLMap automation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Command Injection and LDAP injection defenses typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Command Injection and LDAP injection defenses.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Command Injection and LDAP injection defenses&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Cross-Site Scripting (XSS): Stored, Reflected, DOM-based attacks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Cross-Site Scripting (XSS): Stored, Reflected, DOM-based attacks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Cross-Site Scripting (XSS): Stored, Reflected, DOM-based attacks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Cross-Site Request Forgery (CSRF) tokens and mitigation?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Cross-Site Request Forgery (CSRF) tokens and mitigation&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of JWT manipulation, session hijacking, and cookie parameters?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for JWT manipulation, session hijacking, and cookie parameters.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;JWT manipulation, session hijacking, and cookie parameters&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Insecure Direct Object References (IDOR) validation fixes typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Insecure Direct Object References (IDOR) validation fixes.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Insecure Direct Object References (IDOR) validation fixes&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting OWASP API Top 10: authorization checks, rate-limiting rules practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of OWASP API Top 10: authorization checks, rate-limiting rules systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;OWASP API Top 10: authorization checks, rate-limiting rules&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Cloud IAM policies, AWS S3 bucket security configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Cloud IAM policies, AWS S3 bucket security configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Defensive Security & Incident Response
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement SIEM monitoring, threat hunting, and digital forensics.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Defensive Security & Incident Response
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement SIEM monitoring, threat hunting, and digital forensics.</p>
+   
         <!-- Week 16: SIEM & Log Analysis -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-1-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Splunk setups, ingestion of firewall/system logs, dashboard alerts</span>
+                <button class="simplify-btn" data-topic="Splunk setups, ingestion of firewall/system logs, dashboard alerts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-1-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-1-2" class="checkmark"></label>
                 <span class="topic-text">ELK stack (Elasticsearch, Logstash, Kibana) query writing</span>
+                <button class="simplify-btn" data-topic="ELK stack (Elasticsearch, Logstash, Kibana) query writing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-2-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-2-1" class="checkmark"></label>
                 <span class="topic-text">NIST incident response life-cycle: containment, eradication</span>
+                <button class="simplify-btn" data-topic="NIST incident response life-cycle: containment, eradication">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-2-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Malware analysis basics: static analysis, sandbox runs</span>
+                <button class="simplify-btn" data-topic="Malware analysis basics: static analysis, sandbox runs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-3-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Disk imaging, memory forensics with Volatility tool</span>
+                <button class="simplify-btn" data-topic="Disk imaging, memory forensics with Volatility tool">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-3-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Timeline analysis and artifact recovery (registry, histories)</span>
+                <button class="simplify-btn" data-topic="Timeline analysis and artifact recovery (registry, histories)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-4-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-4-1" class="checkmark"></label>
                 <span class="topic-text">ISO 27001 standards, SOC2 requirements, and audit checks</span>
+                <button class="simplify-btn" data-topic="ISO 27001 standards, SOC2 requirements, and audit checks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-4-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Drafting system security reports and mitigation matrices</span>
+                <button class="simplify-btn" data-topic="Drafting system security reports and mitigation matrices">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-5-1" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-cybersecurity-4-5-2" class="topic-checkbox">
                 <label for="sw-cybersecurity-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which hashing algorithm is considered cryptographically secure for storing user passwords?&quot;, &quot;options&quot;: [&quot;MD5&quot;, &quot;SHA-1&quot;, &quot;bcrypt&quot;, &quot;CRC32&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Drafting system security reports and mitigation matrices&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Splunk setups, ingestion of firewall/system logs, dashboard alerts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Splunk setups, ingestion of firewall/system logs, dashboard alerts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Splunk setups, ingestion of firewall/system logs, dashboard alerts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ELK stack (Elasticsearch, Logstash, Kibana) query writing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ELK stack (Elasticsearch, Logstash, Kibana) query writing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ELK stack (Elasticsearch, Logstash, Kibana) query writing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting NIST incident response life-cycle: containment, eradication practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of NIST incident response life-cycle: containment, eradication systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;NIST incident response life-cycle: containment, eradication&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Malware analysis basics: static analysis, sandbox runs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Malware analysis basics: static analysis, sandbox runs&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Disk imaging, memory forensics with Volatility tool?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Disk imaging, memory forensics with Volatility tool.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Disk imaging, memory forensics with Volatility tool&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Timeline analysis and artifact recovery (registry, histories) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Timeline analysis and artifact recovery (registry, histories).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Timeline analysis and artifact recovery (registry, histories)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting ISO 27001 standards, SOC2 requirements, and audit checks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of ISO 27001 standards, SOC2 requirements, and audit checks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ISO 27001 standards, SOC2 requirements, and audit checks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Drafting system security reports and mitigation matrices?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Drafting system security reports and mitigation matrices&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Cybersecurity Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Splunk setups, ingestion of firewall/system logs, dashboard alerts&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

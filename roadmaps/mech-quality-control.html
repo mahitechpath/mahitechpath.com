@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Metrology & GD&T Tolerances
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master coordinate measurement, limit gauging, and Geometric Dimensioning and Tolerancing.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Metrology & GD&T Tolerances
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master coordinate measurement, limit gauging, and Geometric Dimensioning and Tolerancing.</p>
+   
         <!-- Week 1: Linear & Angular Measurements -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-quality-control-1-1-1" class="topic-checkbox">
                 <label for="mech-quality-control-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Vernier calipers, micrometers, slip gauges calibrations</span>
+                <button class="simplify-btn" data-topic="Vernier calipers, micrometers, slip gauges calibrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-quality-control-1-1-2" class="topic-checkbox">
                 <label for="mech-quality-control-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Sine bars, bevel protractors, optical flats configurations</span>
+                <button class="simplify-btn" data-topic="Sine bars, bevel protractors, optical flats configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-quality-control-1-2-1" class="topic-checkbox">
                 <label for="mech-quality-control-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Hole-basis and Shaft-basis tolerance systems, fits types</span>
+                <button class="simplify-btn" data-topic="Hole-basis and Shaft-basis tolerance systems, fits types">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-quality-control-1-2-2" class="topic-checkbox">
                 <label for="mech-quality-control-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Limit gauges design: Taylor's principle for GO/NO-GO</span>
+                <button class="simplify-btn" data-topic="Limit gauges design: Taylor's principle for GO/NO-GO">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-quality-control-1-3-1" class="topic-checkbox">
                 <label for="mech-quality-control-1-3-1" class="checkmark"></label>
                 <span class="topic-text">GD&T symbols: flatness, cylindricity, concentricity, runout</span>
+                <button class="simplify-btn" data-topic="GD&T symbols: flatness, cylindricity, concentricity, runout">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-quality-control-1-3-2" class="topic-checkbox">
                 <label for="mech-quality-control-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Maximum Material Condition (MMC), Least Material Condition (LMC)</span>
+                <button class="simplify-btn" data-topic="Maximum Material Condition (MMC), Least Material Condition (LMC)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-quality-control-1-4-1" class="topic-checkbox">
                 <label for="mech-quality-control-1-4-1" class="checkmark"></label>
                 <span class="topic-text">CMM working principles, probe configurations, calibration</span>
+                <button class="simplify-btn" data-topic="CMM working principles, probe configurations, calibration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-quality-control-1-4-2" class="topic-checkbox">
                 <label for="mech-quality-control-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Creating automated CMM inspection routines for machined parts</span>
+                <button class="simplify-btn" data-topic="Creating automated CMM inspection routines for machined parts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-quality-control-1-5-1" class="topic-checkbox">
                 <label for="mech-quality-control-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-quality-control-1-5-2" class="topic-checkbox">
                 <label for="mech-quality-control-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Vernier calipers, micrometers, slip gauges calibrations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Vernier calipers, micrometers, slip gauges calibrations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vernier calipers, micrometers, slip gauges calibrations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Sine bars, bevel protractors, optical flats configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Sine bars, bevel protractors, optical flats configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Sine bars, bevel protractors, optical flats configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Hole-basis and Shaft-basis tolerance systems, fits types practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Hole-basis and Shaft-basis tolerance systems, fits types systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Hole-basis and Shaft-basis tolerance systems, fits types&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Limit gauges design: Taylor's principle for GO/NO-GO?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Limit gauges design: Taylor's principle for GO/NO-GO&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of GD&T symbols: flatness, cylindricity, concentricity, runout?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for GD&T symbols: flatness, cylindricity, concentricity, runout.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;GD&T symbols: flatness, cylindricity, concentricity, runout&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Maximum Material Condition (MMC), Least Material Condition (LMC) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Maximum Material Condition (MMC), Least Material Condition (LMC).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Maximum Material Condition (MMC), Least Material Condition (LMC)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting CMM working principles, probe configurations, calibration practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of CMM working principles, probe configurations, calibration systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CMM working principles, probe configurations, calibration&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Creating automated CMM inspection routines for machined parts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Creating automated CMM inspection routines for machined parts&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quality Control Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vernier calipers, micrometers, slip gauges calibrations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quality Control Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vernier calipers, micrometers, slip gauges calibrations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Statistical Process Control (SPC)
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze process capabilities, draw control charts, and monitor variances.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Statistical Process Control (SPC)
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Analyze process capabilities, draw control charts, and monitor variances.</p>
+   
         <!-- Week 6: Quality Metrics & Distributions -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="mech-quality-control-2-1-1" class="topic-checkbox">
                 <label for="mech-quality-control-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Normal distribution curve parameters, standard deviation, variances</span>
+                <button class="simplify-btn" data-topic="Normal distribution curve parameters, standard deviation, variances">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="mech-quality-control-2-1-2" class="topic-checkbox">
                 <label for="mech-quality-control-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Calculating process capability indices: Cp and Cpk</span>
+                <button class="simplify-btn" data-topic="Calculating process capability indices: Cp and Cpk">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-quality-control-2-2-1" class="topic-checkbox">
                 <label for="mech-quality-control-2-2-1" class="checkmark"></label>
                 <span class="topic-text">X-bar (mean) charts and R (range) charts construction</span>
+                <button class="simplify-btn" data-topic="X-bar (mean) charts and R (range) charts construction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-quality-control-2-2-2" class="topic-checkbox">
                 <label for="mech-quality-control-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Reading chart trends: identifying out-of-control conditions</span>
+                <button class="simplify-btn" data-topic="Reading chart trends: identifying out-of-control conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-quality-control-2-3-1" class="topic-checkbox">
                 <label for="mech-quality-control-2-3-1" class="checkmark"></label>
                 <span class="topic-text">p-charts, np-charts, c-charts, u-charts construction</span>
+                <button class="simplify-btn" data-topic="p-charts, np-charts, c-charts, u-charts construction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-quality-control-2-3-2" class="topic-checkbox">
                 <label for="mech-quality-control-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Sizing sample groups, monitoring defect densities</span>
+                <button class="simplify-btn" data-topic="Sizing sample groups, monitoring defect densities">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-quality-control-2-4-1" class="topic-checkbox">
                 <label for="mech-quality-control-2-4-1" class="checkmark"></label>
                 <span class="topic-text">DMAIC process phases: Define, Measure, Analyze, Improve, Control</span>
+                <button class="simplify-btn" data-topic="DMAIC process phases: Define, Measure, Analyze, Improve, Control">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-quality-control-2-4-2" class="topic-checkbox">
                 <label for="mech-quality-control-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Root cause tools: Ishikawa diagrams, 5 Whys, Pareto charts</span>
+                <button class="simplify-btn" data-topic="Root cause tools: Ishikawa diagrams, 5 Whys, Pareto charts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-quality-control-2-5-1" class="topic-checkbox">
                 <label for="mech-quality-control-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-quality-control-2-5-2" class="topic-checkbox">
                 <label for="mech-quality-control-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Normal distribution curve parameters, standard deviation, variances?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Normal distribution curve parameters, standard deviation, variances.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Normal distribution curve parameters, standard deviation, variances&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Calculating process capability indices: Cp and Cpk typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Calculating process capability indices: Cp and Cpk.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Calculating process capability indices: Cp and Cpk&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting X-bar (mean) charts and R (range) charts construction practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of X-bar (mean) charts and R (range) charts construction systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;X-bar (mean) charts and R (range) charts construction&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Reading chart trends: identifying out-of-control conditions?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Reading chart trends: identifying out-of-control conditions&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of p-charts, np-charts, c-charts, u-charts construction?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for p-charts, np-charts, c-charts, u-charts construction.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;p-charts, np-charts, c-charts, u-charts construction&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Sizing sample groups, monitoring defect densities typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Sizing sample groups, monitoring defect densities.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Sizing sample groups, monitoring defect densities&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting DMAIC process phases: Define, Measure, Analyze, Improve, Control practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of DMAIC process phases: Define, Measure, Analyze, Improve, Control systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;DMAIC process phases: Define, Measure, Analyze, Improve, Control&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Root cause tools: Ishikawa diagrams, 5 Whys, Pareto charts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Root cause tools: Ishikawa diagrams, 5 Whys, Pareto charts&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quality Control Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Normal distribution curve parameters, standard deviation, variances&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quality Control Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Normal distribution curve parameters, standard deviation, variances&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Non-Destructive Testing (NDT)
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Perform dye penetrant tests, magnetic particle tests, and ultrasonic/radiographic checks.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Non-Destructive Testing (NDT)
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Perform dye penetrant tests, magnetic particle tests, and ultrasonic/radiographic checks.</p>
+   
         <!-- Week 11: Visual & Dye Penetrant Testing -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="mech-quality-control-3-1-1" class="topic-checkbox">
                 <label for="mech-quality-control-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Visual inspection checklists, magnification, borescope tools</span>
+                <button class="simplify-btn" data-topic="Visual inspection checklists, magnification, borescope tools">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="mech-quality-control-3-1-2" class="topic-checkbox">
                 <label for="mech-quality-control-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Liquid penetrant testing steps: cleaning, application, develop</span>
+                <button class="simplify-btn" data-topic="Liquid penetrant testing steps: cleaning, application, develop">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="mech-quality-control-3-2-1" class="topic-checkbox">
                 <label for="mech-quality-control-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Magnetic fields generation methods, yoke types, powders</span>
+                <button class="simplify-btn" data-topic="Magnetic fields generation methods, yoke types, powders">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="mech-quality-control-3-2-2" class="topic-checkbox">
                 <label for="mech-quality-control-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Detecting surface and sub-surface cracks in welds</span>
+                <button class="simplify-btn" data-topic="Detecting surface and sub-surface cracks in welds">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-quality-control-3-3-1" class="topic-checkbox">
                 <label for="mech-quality-control-3-3-1" class="checkmark"></label>
                 <span class="topic-text">A-scan, B-scan, C-scan displays, transducer configurations</span>
+                <button class="simplify-btn" data-topic="A-scan, B-scan, C-scan displays, transducer configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-quality-control-3-3-2" class="topic-checkbox">
                 <label for="mech-quality-control-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Sound wave reflections, measuring thickness and internal voids</span>
+                <button class="simplify-btn" data-topic="Sound wave reflections, measuring thickness and internal voids">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-quality-control-3-4-1" class="topic-checkbox">
                 <label for="mech-quality-control-3-4-1" class="checkmark"></label>
                 <span class="topic-text">X-ray and gamma-ray radiographic testing safety rules</span>
+                <button class="simplify-btn" data-topic="X-ray and gamma-ray radiographic testing safety rules">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-quality-control-3-4-2" class="topic-checkbox">
                 <label for="mech-quality-control-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Eddy current testing for conductivity and cracks in tubes</span>
+                <button class="simplify-btn" data-topic="Eddy current testing for conductivity and cracks in tubes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-quality-control-3-5-1" class="topic-checkbox">
                 <label for="mech-quality-control-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-quality-control-3-5-2" class="topic-checkbox">
                 <label for="mech-quality-control-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Visual inspection checklists, magnification, borescope tools?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Visual inspection checklists, magnification, borescope tools.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Visual inspection checklists, magnification, borescope tools&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Liquid penetrant testing steps: cleaning, application, develop typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Liquid penetrant testing steps: cleaning, application, develop.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Liquid penetrant testing steps: cleaning, application, develop&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Magnetic fields generation methods, yoke types, powders practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Magnetic fields generation methods, yoke types, powders systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Magnetic fields generation methods, yoke types, powders&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Detecting surface and sub-surface cracks in welds?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Detecting surface and sub-surface cracks in welds&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of A-scan, B-scan, C-scan displays, transducer configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for A-scan, B-scan, C-scan displays, transducer configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;A-scan, B-scan, C-scan displays, transducer configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Sound wave reflections, measuring thickness and internal voids typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Sound wave reflections, measuring thickness and internal voids.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Sound wave reflections, measuring thickness and internal voids&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting X-ray and gamma-ray radiographic testing safety rules practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of X-ray and gamma-ray radiographic testing safety rules systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;X-ray and gamma-ray radiographic testing safety rules&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Eddy current testing for conductivity and cracks in tubes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Eddy current testing for conductivity and cracks in tubes&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quality Control Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Visual inspection checklists, magnification, borescope tools&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quality Control Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Visual inspection checklists, magnification, borescope tools&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Quality Systems & Audits
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Understand ISO 9001, deploy failure modes analysis, and document audits.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Quality Systems & Audits
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Understand ISO 9001, deploy failure modes analysis, and document audits.</p>
+   
         <!-- Week 16: ISO 9001 Quality Management -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="mech-quality-control-4-1-1" class="topic-checkbox">
                 <label for="mech-quality-control-4-1-1" class="checkmark"></label>
                 <span class="topic-text">ISO 9001 clauses checklist: audits, documentation control</span>
+                <button class="simplify-btn" data-topic="ISO 9001 clauses checklist: audits, documentation control">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="mech-quality-control-4-1-2" class="topic-checkbox">
                 <label for="mech-quality-control-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Corrective and Preventive Actions (CAPA) tracking workflows</span>
+                <button class="simplify-btn" data-topic="Corrective and Preventive Actions (CAPA) tracking workflows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="mech-quality-control-4-2-1" class="topic-checkbox">
                 <label for="mech-quality-control-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Failure Mode and Effects Analysis (FMEA), Severity, Occurrence</span>
+                <button class="simplify-btn" data-topic="Failure Mode and Effects Analysis (FMEA), Severity, Occurrence">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="mech-quality-control-4-2-2" class="topic-checkbox">
                 <label for="mech-quality-control-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Calculating Risk Priority Number (RPN), mitigation strategies</span>
+                <button class="simplify-btn" data-topic="Calculating Risk Priority Number (RPN), mitigation strategies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="mech-quality-control-4-3-1" class="topic-checkbox">
                 <label for="mech-quality-control-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Operating Characteristic (OC) curves, producer vs consumer risk</span>
+                <button class="simplify-btn" data-topic="Operating Characteristic (OC) curves, producer vs consumer risk">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="mech-quality-control-4-3-2" class="topic-checkbox">
                 <label for="mech-quality-control-4-3-2" class="checkmark"></label>
                 <span class="topic-text">AQL (Acceptance Quality Limit) plans, sampling tables</span>
+                <button class="simplify-btn" data-topic="AQL (Acceptance Quality Limit) plans, sampling tables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-quality-control-4-4-1" class="topic-checkbox">
                 <label for="mech-quality-control-4-4-1" class="checkmark"></label>
                 <span class="topic-text">First Article Inspection (FAI) reports, audit protocols</span>
+                <button class="simplify-btn" data-topic="First Article Inspection (FAI) reports, audit protocols">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-quality-control-4-4-2" class="topic-checkbox">
                 <label for="mech-quality-control-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Material test certificates verification, calibration databases</span>
+                <button class="simplify-btn" data-topic="Material test certificates verification, calibration databases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-quality-control-4-5-1" class="topic-checkbox">
                 <label for="mech-quality-control-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-quality-control-4-5-2" class="topic-checkbox">
                 <label for="mech-quality-control-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which SQL clause is used to filter records based on a search condition that applies to aggregated groups?&quot;, &quot;options&quot;: [&quot;WHERE&quot;, &quot;HAVING&quot;, &quot;GROUP BY&quot;, &quot;ORDER BY&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Material test certificates verification, calibration databases&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ISO 9001 clauses checklist: audits, documentation control?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ISO 9001 clauses checklist: audits, documentation control.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ISO 9001 clauses checklist: audits, documentation control&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Corrective and Preventive Actions (CAPA) tracking workflows typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Corrective and Preventive Actions (CAPA) tracking workflows.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Corrective and Preventive Actions (CAPA) tracking workflows&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Failure Mode and Effects Analysis (FMEA), Severity, Occurrence practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Failure Mode and Effects Analysis (FMEA), Severity, Occurrence systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Failure Mode and Effects Analysis (FMEA), Severity, Occurrence&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Calculating Risk Priority Number (RPN), mitigation strategies?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Calculating Risk Priority Number (RPN), mitigation strategies&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Operating Characteristic (OC) curves, producer vs consumer risk?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Operating Characteristic (OC) curves, producer vs consumer risk.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Operating Characteristic (OC) curves, producer vs consumer risk&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is AQL (Acceptance Quality Limit) plans, sampling tables typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of AQL (Acceptance Quality Limit) plans, sampling tables.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;AQL (Acceptance Quality Limit) plans, sampling tables&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting First Article Inspection (FAI) reports, audit protocols practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of First Article Inspection (FAI) reports, audit protocols systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;First Article Inspection (FAI) reports, audit protocols&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Material test certificates verification, calibration databases?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Material test certificates verification, calibration databases&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quality Control Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ISO 9001 clauses checklist: audits, documentation control&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

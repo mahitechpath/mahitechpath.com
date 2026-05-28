@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Sensors & Controller Interfaces
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Read analog/digital sensors and interface them with ESP32 microcontrollers.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Sensors & Controller Interfaces
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Read analog/digital sensors and interface them with ESP32 microcontrollers.</p>
+   
         <!-- Week 1: ESP32 Hardware & Setup -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-iot-1-1-1" class="topic-checkbox">
                 <label for="ece-iot-1-1-1" class="checkmark"></label>
                 <span class="topic-text">ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins</span>
+                <button class="simplify-btn" data-topic="ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-iot-1-1-2" class="topic-checkbox">
                 <label for="ece-iot-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Arduino IDE and ESP-IDF setup, basic firmware runs</span>
+                <button class="simplify-btn" data-topic="Arduino IDE and ESP-IDF setup, basic firmware runs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-iot-1-2-1" class="topic-checkbox">
                 <label for="ece-iot-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Interfacing DHT11 (temp), LDR (light), ultrasonic sensors</span>
+                <button class="simplify-btn" data-topic="Interfacing DHT11 (temp), LDR (light), ultrasonic sensors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-iot-1-2-2" class="topic-checkbox">
                 <label for="ece-iot-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Interrupts-driven sensor reading, debounce filter logic</span>
+                <button class="simplify-btn" data-topic="Interrupts-driven sensor reading, debounce filter logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-iot-1-3-1" class="topic-checkbox">
                 <label for="ece-iot-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Reading MPU6050 (accelerometer) data over I2C protocol</span>
+                <button class="simplify-btn" data-topic="Reading MPU6050 (accelerometer) data over I2C protocol">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-iot-1-3-2" class="topic-checkbox">
                 <label for="ece-iot-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Interfacing SPI OLED displays, writing graphics libraries</span>
+                <button class="simplify-btn" data-topic="Interfacing SPI OLED displays, writing graphics libraries">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-iot-1-4-1" class="topic-checkbox">
                 <label for="ece-iot-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Servo motors, DC motors driving via H-bridge (L298N)</span>
+                <button class="simplify-btn" data-topic="Servo motors, DC motors driving via H-bridge (L298N)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-iot-1-4-2" class="topic-checkbox">
                 <label for="ece-iot-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Relay modules configurations, AC appliance safety controls</span>
+                <button class="simplify-btn" data-topic="Relay modules configurations, AC appliance safety controls">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-iot-1-5-1" class="topic-checkbox">
                 <label for="ece-iot-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-iot-1-5-2" class="topic-checkbox">
                 <label for="ece-iot-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Arduino IDE and ESP-IDF setup, basic firmware runs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Arduino IDE and ESP-IDF setup, basic firmware runs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Arduino IDE and ESP-IDF setup, basic firmware runs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Interfacing DHT11 (temp), LDR (light), ultrasonic sensors practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Interfacing DHT11 (temp), LDR (light), ultrasonic sensors systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Interfacing DHT11 (temp), LDR (light), ultrasonic sensors&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Interrupts-driven sensor reading, debounce filter logic?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Interrupts-driven sensor reading, debounce filter logic&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Reading MPU6050 (accelerometer) data over I2C protocol?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Reading MPU6050 (accelerometer) data over I2C protocol.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Reading MPU6050 (accelerometer) data over I2C protocol&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Interfacing SPI OLED displays, writing graphics libraries typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Interfacing SPI OLED displays, writing graphics libraries.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Interfacing SPI OLED displays, writing graphics libraries&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Servo motors, DC motors driving via H-bridge (L298N) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Servo motors, DC motors driving via H-bridge (L298N) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Servo motors, DC motors driving via H-bridge (L298N)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Relay modules configurations, AC appliance safety controls?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Relay modules configurations, AC appliance safety controls&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for IoT Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for IoT Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 pinouts: GPIOs, ADC, DAC, capacitive touch pins&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Local Wireless Networks
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure Bluetooth Low Energy (BLE), WiFi, and Zigbee/LoRa modules.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Local Wireless Networks
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure Bluetooth Low Energy (BLE), WiFi, and Zigbee/LoRa modules.</p>
+   
         <!-- Week 6: WiFi Client & Server -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="ece-iot-2-1-1" class="topic-checkbox">
                 <label for="ece-iot-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Connecting ESP32 to local routers, socket connections</span>
+                <button class="simplify-btn" data-topic="Connecting ESP32 to local routers, socket connections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="ece-iot-2-1-2" class="topic-checkbox">
                 <label for="ece-iot-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Writing a local web server to toggle GPIO outputs</span>
+                <button class="simplify-btn" data-topic="Writing a local web server to toggle GPIO outputs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-iot-2-2-1" class="topic-checkbox">
                 <label for="ece-iot-2-2-1" class="checkmark"></label>
                 <span class="topic-text">BLE services and characteristics creation, advertisements</span>
+                <button class="simplify-btn" data-topic="BLE services and characteristics creation, advertisements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-iot-2-2-2" class="topic-checkbox">
                 <label for="ece-iot-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Interfacing ESP32 with smartphone apps (LightBlue)</span>
+                <button class="simplify-btn" data-topic="Interfacing ESP32 with smartphone apps (LightBlue)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-iot-2-3-1" class="topic-checkbox">
                 <label for="ece-iot-2-3-1" class="checkmark"></label>
                 <span class="topic-text">ESP32-MESH architectures, parent-child nodes setups</span>
+                <button class="simplify-btn" data-topic="ESP32-MESH architectures, parent-child nodes setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-iot-2-3-2" class="topic-checkbox">
                 <label for="ece-iot-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Zigbee coordinator, router, and end-device configurations</span>
+                <button class="simplify-btn" data-topic="Zigbee coordinator, router, and end-device configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-iot-2-4-1" class="topic-checkbox">
                 <label for="ece-iot-2-4-1" class="checkmark"></label>
                 <span class="topic-text">LoRa transceiver modules (SX1276) wiring and configs</span>
+                <button class="simplify-btn" data-topic="LoRa transceiver modules (SX1276) wiring and configs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-iot-2-4-2" class="topic-checkbox">
                 <label for="ece-iot-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Point-to-point LoRa transmissions, link budget diagnostics</span>
+                <button class="simplify-btn" data-topic="Point-to-point LoRa transmissions, link budget diagnostics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-iot-2-5-1" class="topic-checkbox">
                 <label for="ece-iot-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-iot-2-5-2" class="topic-checkbox">
                 <label for="ece-iot-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Connecting ESP32 to local routers, socket connections?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Connecting ESP32 to local routers, socket connections.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connecting ESP32 to local routers, socket connections&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Writing a local web server to toggle GPIO outputs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Writing a local web server to toggle GPIO outputs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Writing a local web server to toggle GPIO outputs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting BLE services and characteristics creation, advertisements practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of BLE services and characteristics creation, advertisements systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;BLE services and characteristics creation, advertisements&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Interfacing ESP32 with smartphone apps (LightBlue)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Interfacing ESP32 with smartphone apps (LightBlue)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ESP32-MESH architectures, parent-child nodes setups?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ESP32-MESH architectures, parent-child nodes setups.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32-MESH architectures, parent-child nodes setups&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Zigbee coordinator, router, and end-device configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Zigbee coordinator, router, and end-device configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Zigbee coordinator, router, and end-device configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting LoRa transceiver modules (SX1276) wiring and configs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of LoRa transceiver modules (SX1276) wiring and configs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;LoRa transceiver modules (SX1276) wiring and configs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Point-to-point LoRa transmissions, link budget diagnostics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Point-to-point LoRa transmissions, link budget diagnostics&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for IoT Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connecting ESP32 to local routers, socket connections&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for IoT Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connecting ESP32 to local routers, socket connections&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          IoT Protocols & Cloud Sync
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement MQTT, HTTP, and integrate devices with AWS IoT Core or Adafruit IO.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            IoT Protocols & Cloud Sync
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement MQTT, HTTP, and integrate devices with AWS IoT Core or Adafruit IO.</p>
+   
         <!-- Week 11: HTTP REST Client -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="ece-iot-3-1-1" class="topic-checkbox">
                 <label for="ece-iot-3-1-1" class="checkmark"></label>
                 <span class="topic-text">ESP32 HTTP POST/GET requests sending, JSON payloads parsing</span>
+                <button class="simplify-btn" data-topic="ESP32 HTTP POST/GET requests sending, JSON payloads parsing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="ece-iot-3-1-2" class="topic-checkbox">
                 <label for="ece-iot-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Secure HTTP (HTTPS) setups, SSL certificate imports</span>
+                <button class="simplify-btn" data-topic="Secure HTTP (HTTPS) setups, SSL certificate imports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="ece-iot-3-2-1" class="topic-checkbox">
                 <label for="ece-iot-3-2-1" class="checkmark"></label>
                 <span class="topic-text">MQTT publish-subscribe model, brokers (Mosquitto, HiveMQ)</span>
+                <button class="simplify-btn" data-topic="MQTT publish-subscribe model, brokers (Mosquitto, HiveMQ)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="ece-iot-3-2-2" class="topic-checkbox">
                 <label for="ece-iot-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Quality of Service (QoS) levels, keep-alive, retain flags</span>
+                <button class="simplify-btn" data-topic="Quality of Service (QoS) levels, keep-alive, retain flags">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-iot-3-3-1" class="topic-checkbox">
                 <label for="ece-iot-3-3-1" class="checkmark"></label>
                 <span class="topic-text">AWS IoT Core: certificates generation, device shadows config</span>
+                <button class="simplify-btn" data-topic="AWS IoT Core: certificates generation, device shadows config">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-iot-3-3-2" class="topic-checkbox">
                 <label for="ece-iot-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Adafruit IO, ThingsBoard IoT dashboards configuration</span>
+                <button class="simplify-btn" data-topic="Adafruit IO, ThingsBoard IoT dashboards configuration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-iot-3-4-1" class="topic-checkbox">
                 <label for="ece-iot-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Partition tables configurations for dual OTA setups</span>
+                <button class="simplify-btn" data-topic="Partition tables configurations for dual OTA setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-iot-3-4-2" class="topic-checkbox">
                 <label for="ece-iot-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Firmware version checks, binary file fetches over HTTPS</span>
+                <button class="simplify-btn" data-topic="Firmware version checks, binary file fetches over HTTPS">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-iot-3-5-1" class="topic-checkbox">
                 <label for="ece-iot-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-iot-3-5-2" class="topic-checkbox">
                 <label for="ece-iot-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of ESP32 HTTP POST/GET requests sending, JSON payloads parsing?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for ESP32 HTTP POST/GET requests sending, JSON payloads parsing.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 HTTP POST/GET requests sending, JSON payloads parsing&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Secure HTTP (HTTPS) setups, SSL certificate imports typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Secure HTTP (HTTPS) setups, SSL certificate imports.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Secure HTTP (HTTPS) setups, SSL certificate imports&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting MQTT publish-subscribe model, brokers (Mosquitto, HiveMQ) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of MQTT publish-subscribe model, brokers (Mosquitto, HiveMQ) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;MQTT publish-subscribe model, brokers (Mosquitto, HiveMQ)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Quality of Service (QoS) levels, keep-alive, retain flags?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Quality of Service (QoS) levels, keep-alive, retain flags&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of AWS IoT Core: certificates generation, device shadows config?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for AWS IoT Core: certificates generation, device shadows config.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AWS IoT Core: certificates generation, device shadows config&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Adafruit IO, ThingsBoard IoT dashboards configuration typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Adafruit IO, ThingsBoard IoT dashboards configuration.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Adafruit IO, ThingsBoard IoT dashboards configuration&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Partition tables configurations for dual OTA setups practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Partition tables configurations for dual OTA setups systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Partition tables configurations for dual OTA setups&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Firmware version checks, binary file fetches over HTTPS?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Firmware version checks, binary file fetches over HTTPS&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for IoT Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 HTTP POST/GET requests sending, JSON payloads parsing&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for IoT Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;ESP32 HTTP POST/GET requests sending, JSON payloads parsing&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Low-Power Optimization & Edge
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Optimize battery setups with deep sleep modes and run TensorFlow Lite models on controllers.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Low-Power Optimization & Edge
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Optimize battery setups with deep sleep modes and run TensorFlow Lite models on controllers.</p>
+   
         <!-- Week 16: Low-Power Modes -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="ece-iot-4-1-1" class="topic-checkbox">
                 <label for="ece-iot-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Modem sleep, light sleep, and deep sleep configurations</span>
+                <button class="simplify-btn" data-topic="Modem sleep, light sleep, and deep sleep configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="ece-iot-4-1-2" class="topic-checkbox">
                 <label for="ece-iot-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Ulp coprocessor setups, wake-up source interrupts</span>
+                <button class="simplify-btn" data-topic="Ulp coprocessor setups, wake-up source interrupts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="ece-iot-4-2-1" class="topic-checkbox">
                 <label for="ece-iot-4-2-1" class="checkmark"></label>
                 <span class="topic-text">LiPo battery charging circuits, solar charging controllers</span>
+                <button class="simplify-btn" data-topic="LiPo battery charging circuits, solar charging controllers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="ece-iot-4-2-2" class="topic-checkbox">
                 <label for="ece-iot-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Measuring current consumption profiles with multimeters</span>
+                <button class="simplify-btn" data-topic="Measuring current consumption profiles with multimeters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="ece-iot-4-3-1" class="topic-checkbox">
                 <label for="ece-iot-4-3-1" class="checkmark"></label>
                 <span class="topic-text">TensorFlow Lite for Microcontrollers setups, model conversions</span>
+                <button class="simplify-btn" data-topic="TensorFlow Lite for Microcontrollers setups, model conversions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="ece-iot-4-3-2" class="topic-checkbox">
                 <label for="ece-iot-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Deploying anomaly detection models on accelerometer data</span>
+                <button class="simplify-btn" data-topic="Deploying anomaly detection models on accelerometer data">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-iot-4-4-1" class="topic-checkbox">
                 <label for="ece-iot-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Secure boot configurations, flash encryption setups</span>
+                <button class="simplify-btn" data-topic="Secure boot configurations, flash encryption setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-iot-4-4-2" class="topic-checkbox">
                 <label for="ece-iot-4-4-2" class="checkmark"></label>
                 <span class="topic-text">API key management, secure storage (NVS) implementations</span>
+                <button class="simplify-btn" data-topic="API key management, secure storage (NVS) implementations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-iot-4-5-1" class="topic-checkbox">
                 <label for="ece-iot-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-iot-4-5-2" class="topic-checkbox">
                 <label for="ece-iot-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;What is the primary function of a GPIO register in microcontrollers?&quot;, &quot;options&quot;: [&quot;To configure general purpose input or output pins.&quot;, &quot;To regulate supply voltage levels on board.&quot;, &quot;To store the instruction pointer address.&quot;, &quot;To synchronize clock frequencies across processors.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;TensorFlow Lite for Microcontrollers setups, model conversions&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Modem sleep, light sleep, and deep sleep configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Modem sleep, light sleep, and deep sleep configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modem sleep, light sleep, and deep sleep configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Ulp coprocessor setups, wake-up source interrupts typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Ulp coprocessor setups, wake-up source interrupts.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Ulp coprocessor setups, wake-up source interrupts&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting LiPo battery charging circuits, solar charging controllers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of LiPo battery charging circuits, solar charging controllers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;LiPo battery charging circuits, solar charging controllers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Measuring current consumption profiles with multimeters?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Measuring current consumption profiles with multimeters&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of TensorFlow Lite for Microcontrollers setups, model conversions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for TensorFlow Lite for Microcontrollers setups, model conversions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;TensorFlow Lite for Microcontrollers setups, model conversions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Deploying anomaly detection models on accelerometer data typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Deploying anomaly detection models on accelerometer data.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Deploying anomaly detection models on accelerometer data&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Secure boot configurations, flash encryption setups practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Secure boot configurations, flash encryption setups systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Secure boot configurations, flash encryption setups&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with API key management, secure storage (NVS) implementations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;API key management, secure storage (NVS) implementations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for IoT Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Modem sleep, light sleep, and deep sleep configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

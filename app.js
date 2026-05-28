@@ -1197,32 +1197,552 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
   // --- Topic Resources Dropdown Panels ---
   document.querySelectorAll('.topic-text').forEach(textEl => {
     textEl.style.cursor = 'pointer';
-    textEl.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const topicItem = textEl.closest('.topic-item');
-      if (!topicItem) return;
-      const panel = topicItem.querySelector('.topic-resources-panel');
-      if (!panel) return;
+    // --- Phase Lock Manager ---
+    const initPhaseLocks = () => {
+      if (!roadmapId) return;
       
-      const isOpen = topicItem.classList.contains('panel-open');
-      if (isOpen) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        panel.offsetHeight; // Force reflow
-        panel.style.maxHeight = '0';
-        topicItem.classList.remove('panel-open');
-      } else {
-        topicItem.classList.add('panel-open');
-        panel.style.maxHeight = panel.scrollHeight + 'px';
+      const phaseSections = document.querySelectorAll('.phase-section');
+      phaseSections.forEach((section, idx) => {
+        const phaseNum = parseInt(section.getAttribute('data-phase'));
+        if (phaseNum === 1) return; // Phase 1 is always unlocked
         
-        panel.addEventListener('transitionend', function handler(te) {
-          if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
-            panel.style.maxHeight = 'none';
-            panel.removeEventListener('transitionend', handler);
+        const prevPhaseNum = phaseNum - 1;
+        const isPrevPassed = localStorage.getItem(`roadmap-${roadmapId}-phase-${prevPhaseNum}-passed`) === 'true';
+        
+        // Remove existing lock overlay if any
+        const existingOverlay = section.querySelector('.phase-lock-overlay');
+        if (existingOverlay) {
+          existingOverlay.remove();
+        }
+        
+        const contentWrapper = section.querySelector('.phase-content-wrapper');
+        const checkboxes = section.querySelectorAll('.topic-checkbox');
+        const simplifyBtns = section.querySelectorAll('.simplify-btn');
+        
+        if (!isPrevPassed) {
+          section.classList.add('phase-locked');
+          if (contentWrapper) {
+            contentWrapper.style.filter = 'blur(5px)';
+            contentWrapper.style.pointerEvents = 'none';
+            contentWrapper.style.opacity = '0.4';
+          }
+          
+          checkboxes.forEach(cb => cb.disabled = true);
+          simplifyBtns.forEach(btn => btn.style.display = 'none');
+          
+          // Inject Lock Overlay
+          const overlay = document.createElement('div');
+          overlay.className = 'phase-lock-overlay';
+          overlay.innerHTML = `
+            <div class="phase-lock-card">
+              <div class="phase-lock-icon">🔒</div>
+              <div class="phase-lock-title">Phase ${phaseNum} Locked</div>
+              <div class="phase-lock-desc">Complete the Phase ${prevPhaseNum} Mock Test with 80% or above to unlock this phase.</div>
+            </div>
+          `;
+          section.appendChild(overlay);
+        } else {
+          section.classList.remove('phase-locked');
+          if (contentWrapper) {
+            contentWrapper.style.filter = 'none';
+            contentWrapper.style.pointerEvents = 'auto';
+            contentWrapper.style.opacity = '1';
+          }
+          checkboxes.forEach(cb => cb.disabled = false);
+          simplifyBtns.forEach(btn => btn.style.display = 'inline-flex');
+        }
+      });
+    };
+
+    // --- Mock Test Quiz Controller ---
+    const initMockTests = () => {
+      if (!roadmapId) return;
+      
+      const quizCards = document.querySelectorAll('.mock-test-card');
+      quizCards.forEach(card => {
+        const phaseNum = parseInt(card.getAttribute('data-phase'));
+        const questions = JSON.parse(card.getAttribute('data-questions') || '[]');
+        const container = card.querySelector('.mock-test-quiz-container');
+        const resultsPanel = card.querySelector('.mock-test-results');
+        
+        if (!container || !resultsPanel) return;
+        
+        // Reset/init state
+        let currentQuestionIdx = -1;
+        let score = 0;
+        let userAnswers = [];
+        let selectedOptionIdx = null;
+        
+        const renderQuizState = () => {
+          if (currentQuestionIdx === -1) {
+            // Start state
+            container.innerHTML = `<button class="btn-start-test hero-btn">Start Test</button>`;
+            container.querySelector('.btn-start-test').addEventListener('click', () => {
+              currentQuestionIdx = 0;
+              score = 0;
+              userAnswers = [];
+              renderQuizState();
+            });
+            return;
+          }
+          
+          if (currentQuestionIdx < questions.length) {
+            // Active quiz state
+            const q = questions[currentQuestionIdx];
+            selectedOptionIdx = null;
+            
+            const optionsHtml = q.options.map((opt, oIdx) => `
+              <li>
+                <button class="quiz-option-btn" data-index="${oIdx}">
+                  <span class="quiz-option-letter">${String.fromCharCode(65 + oIdx)}</span>
+                  <span class="quiz-option-val">${opt}</span>
+                </button>
+              </li>
+            `).join('');
+            
+            container.innerHTML = `
+              <div class="quiz-progress">Question ${currentQuestionIdx + 1} of ${questions.length}</div>
+              <div class="quiz-question-container">
+                <div class="quiz-question-text">${q.question}</div>
+                <ul class="quiz-options-list">
+                  ${optionsHtml}
+                </ul>
+              </div>
+              <div class="quiz-controls">
+                <button class="btn-next-question hero-btn" disabled>Next Question</button>
+              </div>
+            `;
+            
+            const optBtns = container.querySelectorAll('.quiz-option-btn');
+            const nextBtn = container.querySelector('.btn-next-question');
+            
+            optBtns.forEach(btn => {
+              btn.addEventListener('click', () => {
+                optBtns.forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                selectedOptionIdx = parseInt(btn.getAttribute('data-index'));
+                nextBtn.disabled = false;
+              });
+            });
+            
+            nextBtn.addEventListener('click', () => {
+              userAnswers.push(selectedOptionIdx);
+              if (selectedOptionIdx === q.correct) {
+                score++;
+              }
+              currentQuestionIdx++;
+              renderQuizState();
+            });
+          } else {
+            // Grading & Results
+            container.innerHTML = '';
+            resultsPanel.style.display = 'block';
+            
+            const passed = score >= 8;
+            const scoreClass = passed ? 'passed' : 'failed';
+            const message = passed 
+              ? `🎉 Congratulations! You Passed.<span>You scored ${score}/10 (80% or above) and unlocked the next phase.</span>`
+              : `❌ Keep Practicing!<span>You scored ${score}/10. You need at least 80% (8/10) to unlock the next phase.</span>`;
+            
+            let revisionHtml = '';
+            if (!passed) {
+              const wrongTopics = [];
+              questions.forEach((q, idx) => {
+                if (userAnswers[idx] !== q.correct && q.topic) {
+                  wrongTopics.push(q.topic);
+                }
+              });
+              
+              // Unique wrong topics
+              const uniqueWrongTopics = [...new Set(wrongTopics)];
+              const topicsLi = uniqueWrongTopics.map(t => `<li>${t}</li>`).join('');
+              
+              revisionHtml = `
+                <div class="revision-section">
+                  <div class="revision-title">Topics to Revise:</div>
+                  <ul class="revision-list">
+                    ${topicsLi || '<li>Phase Concepts</li>'}
+                  </ul>
+                </div>
+              `;
+            }
+            
+            resultsPanel.innerHTML = `
+              <div class="results-score-row">
+                <div class="results-score-circle ${scoreClass}">${score}/10</div>
+                <div class="results-message">${message}</div>
+              </div>
+              ${revisionHtml}
+              <div class="quiz-controls" style="margin-top:1.5rem;">
+                ${passed ? '' : '<button class="btn-retry-test hero-btn">Retry Test 🔄</button>'}
+              </div>
+            `;
+            
+            if (passed) {
+              localStorage.setItem(`roadmap-${roadmapId}-phase-${phaseNum}-passed`, 'true');
+              initPhaseLocks();
+              
+              // Mini Confetti effect
+              try {
+                if (typeof confetti !== 'undefined') {
+                  confetti();
+                }
+              } catch(e) {}
+            } else {
+              resultsPanel.querySelector('.btn-retry-test').addEventListener('click', () => {
+                resultsPanel.style.display = 'none';
+                currentQuestionIdx = 0;
+                score = 0;
+                userAnswers = [];
+                renderQuizState();
+              });
+            }
+          }
+        };
+        
+        // Initial load
+        renderQuizState();
+      });
+    };
+
+    // --- Claude API Call Core Helper ---
+    const askClaude = async (systemPrompt, userPrompt) => {
+      const apiKey = localStorage.getItem('anthropic-api-key');
+      if (!apiKey) {
+        throw new Error("API_KEY_MISSING");
+      }
+      
+      const proxyUrl = "https://api.allorigins.win/raw?url=";
+      const targetUrl = "https://api.anthropic.com/v1/messages";
+      const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
+
+      const response = await fetch(fullUrl, {
+        method: "POST",
+        headers: {
+          "x-api-key": apiKey,
+          "anthropic-version": "2023-06-01",
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 2000,
+          messages: [
+            {
+              role: "user",
+              content: `${systemPrompt}
+
+User Question:
+${userPrompt}`
+            }
+          ]
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
+      }
+
+      const data = await response.json();
+      if (data.content && data.content[0] && data.content[0].text) {
+        return data.content[0].text.trim();
+      }
+      throw new Error("INVALID_RESPONSE_FORMAT");
+    };
+
+    // --- Smart Notes ("✨ Simplify") Controller ---
+    const initSmartNotes = () => {
+      const simplifyBtns = document.querySelectorAll('.simplify-btn');
+      simplifyBtns.forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const topic = btn.getAttribute('data-topic');
+          const topicItem = btn.closest('.topic-item');
+          if (!topicItem) return;
+          
+          const panel = topicItem.querySelector('.topic-resources-panel');
+          if (!panel) return;
+          
+          // Check cache first
+          const cacheKey = `roadmap-${roadmapId}-topic-${topic}-simplified`;
+          const cachedNotes = localStorage.getItem(cacheKey);
+          
+          // Auto expand panel if closed
+          if (!topicItem.classList.contains('panel-open')) {
+            const textEl = topicItem.querySelector('.topic-text');
+            if (textEl) textEl.click();
+          }
+          
+          // Find or create wrapper inside resources panel
+          let wrapper = panel.querySelector('.simplified-notes-wrapper');
+          if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'simplified-notes-wrapper';
+            panel.appendChild(wrapper);
+          }
+          
+          if (cachedNotes) {
+            // Load from cache instantly
+            renderSimplifiedNotes(wrapper, cachedNotes);
+            return;
+          }
+          
+          // Loading state
+          btn.classList.add('loading');
+          btn.textContent = '✨ Simplifying...';
+          wrapper.innerHTML = `
+            <div class="simplified-notes-title">✨ Simplified Explanation</div>
+            <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; align-items:center; gap:0.5rem; margin-top:0.5rem;">
+              <div class="typing-indicator">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+              </div>
+              Summarizing topic for beginners...
+            </div>
+          `;
+          
+          // Adjust scroll height of open panel dynamically
+          panel.style.maxHeight = 'none';
+          
+          try {
+            const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
+            const userPrompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
+            
+            const simplified = await askClaude(systemPrompt, userPrompt);
+            
+            // Cache results
+            localStorage.setItem(cacheKey, simplified);
+            
+            // Render results
+            renderSimplifiedNotes(wrapper, simplified);
+          } catch(err) {
+            console.error("Failed to simplify topic:", err);
+            if (err.message === "API_KEY_MISSING") {
+              wrapper.innerHTML = `
+                <div class="simplified-notes-title">✨ Simplified Explanation</div>
+                <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem;">
+                  🔑 API Key missing! Please set your Anthropic API Key in the AI Settings (gear icon in the top right nav).
+                </div>
+              `;
+            } else {
+              wrapper.innerHTML = `
+                <div class="simplified-notes-title">✨ Simplified Explanation</div>
+                <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem;">
+                  ⚠️ Error loading summary. Please verify your API key or connection and try again.
+                </div>
+              `;
+            }
+          } finally {
+            btn.classList.remove('loading');
+            btn.textContent = '✨ Simplify';
           }
         });
-      }
+      });
+      
+      const renderSimplifiedNotes = (container, text) => {
+        // Parse bullet points
+        const lines = text.split('
+')
+          .map(l => l.replace(/^[-*•]\s*/, '').trim())
+          .filter(l => l.length > 0)
+          .slice(0, 5); // Ensure exactly 5
+          
+        const lis = lines.map(line => `<li>${line}</li>`).join('');
+        container.innerHTML = `
+          <div class="simplified-notes-title">✨ Beginner-Friendly Summary</div>
+          <ul class="simplified-notes-list" style="margin-top:0.5rem;">
+            ${lis}
+          </ul>
+        `;
+      };
+    };
+
+    // --- AI Doubt Solver Chat Panel ---
+    const initDoubtSolver = () => {
+      if (!roadmapId) return;
+      
+      // Ingest DOM floating button
+      const floatingBtn = document.createElement('button');
+      floatingBtn.className = 'ai-doubt-solver-btn';
+      floatingBtn.setAttribute('aria-label', 'AI Doubt Solver');
+      floatingBtn.innerHTML = `
+        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+      `;
+      document.body.appendChild(floatingBtn);
+      
+      // Get roadmap title
+      const headingEl = document.querySelector('.roadmap-header h1');
+      const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
+      
+      // Ingest DOM chat panel
+      const chatPanel = document.createElement('div');
+      chatPanel.className = 'ai-doubt-solver-panel';
+      chatPanel.innerHTML = `
+        <div class="ai-chat-header">
+          <div class="ai-chat-title">💬 Doubt Solver: ${roadmapTitle}</div>
+          <button class="ai-chat-close">&times;</button>
+        </div>
+        <div class="ai-chat-messages">
+          <div class="ai-message assistant">
+            Hi! I am your AI assistant for the <strong>${roadmapTitle}</strong> roadmap. Feel free to ask me any doubts about the topics in this guide!
+          </div>
+        </div>
+        <div class="ai-chat-input-area">
+          <textarea class="ai-chat-input" placeholder="Ask your doubt..."></textarea>
+          <button class="ai-chat-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+          </button>
+        </div>
+      `;
+      document.body.appendChild(chatPanel);
+      
+      const chatClose = chatPanel.querySelector('.ai-chat-close');
+      const chatInput = chatPanel.querySelector('.ai-chat-input');
+      const chatSend = chatPanel.querySelector('.ai-chat-send');
+      const chatMessages = chatPanel.querySelector('.ai-chat-messages');
+      
+      // Auto-focus input on open
+      floatingBtn.addEventListener('click', () => {
+        const isOpen = chatPanel.classList.contains('open');
+        if (isOpen) {
+          chatPanel.classList.remove('open');
+        } else {
+          chatPanel.classList.add('open');
+          chatInput.focus();
+        }
+      });
+      
+      chatClose.addEventListener('click', () => {
+        chatPanel.classList.remove('open');
+      });
+      
+      const sendMessage = async () => {
+        const query = chatInput.value.trim();
+        if (!query) return;
+        
+        chatInput.value = '';
+        
+        // Add User Message
+        const userMsg = document.createElement('div');
+        userMsg.className = 'ai-message user';
+        userMsg.textContent = query;
+        chatMessages.appendChild(userMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Check API key
+        const apiKey = localStorage.getItem('anthropic-api-key');
+        if (!apiKey) {
+          const alertMsg = document.createElement('div');
+          alertMsg.className = 'ai-message system-alert';
+          alertMsg.innerHTML = `🔑 API Key missing! Set your Anthropic API Key in the AI Settings (gear icon in the top right nav).`;
+          chatMessages.appendChild(alertMsg);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          return;
+        }
+        
+        // Typing indicator
+        const loader = document.createElement('div');
+        loader.className = 'ai-message assistant';
+        loader.innerHTML = `
+          <div class="typing-indicator">
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+            <span class="typing-dot"></span>
+          </div>
+        `;
+        chatMessages.appendChild(loader);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        try {
+          const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
+          
+          const reply = await askClaude(systemPrompt, query);
+          
+          // Remove loader and add assistant message
+          loader.remove();
+          
+          const assistantMsg = document.createElement('div');
+          assistantMsg.className = 'ai-message assistant';
+          assistantMsg.innerHTML = formatReplyText(reply);
+          chatMessages.appendChild(assistantMsg);
+        } catch(err) {
+          loader.remove();
+          const errMsg = document.createElement('div');
+          errMsg.className = 'ai-message system-alert';
+          errMsg.textContent = `⚠️ Error getting response from Claude. Please verify your network or API Key and try again.`;
+          chatMessages.appendChild(errMsg);
+        } finally {
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+      };
+      
+      chatSend.addEventListener('click', sendMessage);
+      chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+      
+      const formatReplyText = (text) => {
+        let html = text
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/
+
+/g, "</p><p>")
+          .replace(/
+-\s*(.*)/g, "<li>$1</li>")
+          .replace(/`(.*?)`/g, "<code>$1</code>");
+          
+        if (html.includes("<li>")) {
+          html = html.replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>");
+        }
+        
+        return `<p>${html}</p>`.replace(/<p><\/p>/g, '');
+      };
+    };
+    
+    // Initialize everything on page load
+    initPhaseLocks();
+    initMockTests();
+    initSmartNotes();
+    initDoubtSolver();
+
+    // Attach text toggling panels click listeners
+    document.querySelectorAll('.topic-text').forEach(textEl => {
+      textEl.style.cursor = 'pointer';
+      textEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const topicItem = textEl.closest('.topic-item');
+        if (!topicItem) return;
+        const panel = topicItem.querySelector('.topic-resources-panel');
+        if (!panel) return;
+        
+        const isOpen = topicItem.classList.contains('panel-open');
+        if (isOpen) {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.offsetHeight; // Force reflow
+          panel.style.maxHeight = '0';
+          topicItem.classList.remove('panel-open');
+        } else {
+          topicItem.classList.add('panel-open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          
+          panel.addEventListener('transitionend', function handler(te) {
+            if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
+              panel.style.maxHeight = 'none';
+              panel.removeEventListener('transitionend', handler);
+            }
+          });
+        }
+      });
     });
   });
 });

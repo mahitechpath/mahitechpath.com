@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Quantum Math & Single Qubits
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Dirac notation, quantum states, Bloch sphere mapping, and logic gates.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Quantum Math & Single Qubits
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Dirac notation, quantum states, Bloch sphere mapping, and logic gates.</p>
+   
         <!-- Week 1: Complex Vector Spaces & Dirac -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="sw-quantum-1-1-1" class="topic-checkbox">
                 <label for="sw-quantum-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Inner products, outer products, Hilbert spaces, Hermitian operators</span>
+                <button class="simplify-btn" data-topic="Inner products, outer products, Hilbert spaces, Hermitian operators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="sw-quantum-1-1-2" class="topic-checkbox">
                 <label for="sw-quantum-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Bra-ket notation, basis representations, state vectors</span>
+                <button class="simplify-btn" data-topic="Bra-ket notation, basis representations, state vectors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="sw-quantum-1-2-1" class="topic-checkbox">
                 <label for="sw-quantum-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Qubit definition, superposition, Bloch sphere coordinates mapping</span>
+                <button class="simplify-btn" data-topic="Qubit definition, superposition, Bloch sphere coordinates mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="sw-quantum-1-2-2" class="topic-checkbox">
                 <label for="sw-quantum-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Measurement postulates, Born's rule, probability calculations</span>
+                <button class="simplify-btn" data-topic="Measurement postulates, Born's rule, probability calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="sw-quantum-1-3-1" class="topic-checkbox">
                 <label for="sw-quantum-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Pauli gates: X, Y, Z matrix representations and rotations</span>
+                <button class="simplify-btn" data-topic="Pauli gates: X, Y, Z matrix representations and rotations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="sw-quantum-1-3-2" class="topic-checkbox">
                 <label for="sw-quantum-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Hadamard gate (superposition), Phase gates (S, T) configurations</span>
+                <button class="simplify-btn" data-topic="Hadamard gate (superposition), Phase gates (S, T) configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="sw-quantum-1-4-1" class="topic-checkbox">
                 <label for="sw-quantum-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Qiskit installation, Statevector simulator configurations</span>
+                <button class="simplify-btn" data-topic="Qiskit installation, Statevector simulator configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="sw-quantum-1-4-2" class="topic-checkbox">
                 <label for="sw-quantum-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Visualizing quantum states: Bloch vector, sphere plotting</span>
+                <button class="simplify-btn" data-topic="Visualizing quantum states: Bloch vector, sphere plotting">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="sw-quantum-1-5-1" class="topic-checkbox">
                 <label for="sw-quantum-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="sw-quantum-1-5-2" class="topic-checkbox">
                 <label for="sw-quantum-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="sw-quantum-1-6-1" class="topic-checkbox">
                 <label for="sw-quantum-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="sw-quantum-1-6-2" class="topic-checkbox">
                 <label for="sw-quantum-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Inner products, outer products, Hilbert spaces, Hermitian operators?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Inner products, outer products, Hilbert spaces, Hermitian operators.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inner products, outer products, Hilbert spaces, Hermitian operators&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Bra-ket notation, basis representations, state vectors typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Bra-ket notation, basis representations, state vectors.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Bra-ket notation, basis representations, state vectors&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Qubit definition, superposition, Bloch sphere coordinates mapping practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Qubit definition, superposition, Bloch sphere coordinates mapping systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Qubit definition, superposition, Bloch sphere coordinates mapping&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Measurement postulates, Born's rule, probability calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Measurement postulates, Born's rule, probability calculations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pauli gates: X, Y, Z matrix representations and rotations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pauli gates: X, Y, Z matrix representations and rotations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pauli gates: X, Y, Z matrix representations and rotations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Hadamard gate (superposition), Phase gates (S, T) configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Hadamard gate (superposition), Phase gates (S, T) configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Hadamard gate (superposition), Phase gates (S, T) configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Qiskit installation, Statevector simulator configurations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Qiskit installation, Statevector simulator configurations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Qiskit installation, Statevector simulator configurations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Visualizing quantum states: Bloch vector, sphere plotting?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Visualizing quantum states: Bloch vector, sphere plotting&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quantum Computing Specialist in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inner products, outer products, Hilbert spaces, Hermitian operators&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quantum Computing Specialist in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Inner products, outer products, Hilbert spaces, Hermitian operators&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Multi-Qubit Systems & Entanglement
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Kronecker products, quantum entanglement, and CNOT operations.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Multi-Qubit Systems & Entanglement
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Kronecker products, quantum entanglement, and CNOT operations.</p>
+   
         <!-- Week 7: Kronecker Products & Joint States -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="sw-quantum-2-1-1" class="topic-checkbox">
                 <label for="sw-quantum-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Tensor products math, composite systems configurations</span>
+                <button class="simplify-btn" data-topic="Tensor products math, composite systems configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="sw-quantum-2-1-2" class="topic-checkbox">
                 <label for="sw-quantum-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Product states vs entangled states, partial measurements</span>
+                <button class="simplify-btn" data-topic="Product states vs entangled states, partial measurements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="sw-quantum-2-2-1" class="topic-checkbox">
                 <label for="sw-quantum-2-2-1" class="checkmark"></label>
                 <span class="topic-text">CNOT gate matrix form, control-target qubit logic</span>
+                <button class="simplify-btn" data-topic="CNOT gate matrix form, control-target qubit logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="sw-quantum-2-2-2" class="topic-checkbox">
                 <label for="sw-quantum-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Controlled phase gates, Swap gates configurations</span>
+                <button class="simplify-btn" data-topic="Controlled phase gates, Swap gates configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="sw-quantum-2-3-1" class="topic-checkbox">
                 <label for="sw-quantum-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Creating Bell states: CNOT on superposition state</span>
+                <button class="simplify-btn" data-topic="Creating Bell states: CNOT on superposition state">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="sw-quantum-2-3-2" class="topic-checkbox">
                 <label for="sw-quantum-2-3-2" class="checkmark"></label>
                 <span class="topic-text">EPR paradox, Bell's inequality, entanglement validations</span>
+                <button class="simplify-btn" data-topic="EPR paradox, Bell's inequality, entanglement validations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="sw-quantum-2-4-1" class="topic-checkbox">
                 <label for="sw-quantum-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Qiskit QuantumCircuit library, drawing circuits, simulation runs</span>
+                <button class="simplify-btn" data-topic="Qiskit QuantumCircuit library, drawing circuits, simulation runs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="sw-quantum-2-4-2" class="topic-checkbox">
                 <label for="sw-quantum-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Measuring outputs, histogram plotting, count aggregations</span>
+                <button class="simplify-btn" data-topic="Measuring outputs, histogram plotting, count aggregations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="sw-quantum-2-5-1" class="topic-checkbox">
                 <label for="sw-quantum-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="sw-quantum-2-5-2" class="topic-checkbox">
                 <label for="sw-quantum-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="sw-quantum-2-6-1" class="topic-checkbox">
                 <label for="sw-quantum-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="sw-quantum-2-6-2" class="topic-checkbox">
                 <label for="sw-quantum-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Tensor products math, composite systems configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Tensor products math, composite systems configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Tensor products math, composite systems configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Product states vs entangled states, partial measurements typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Product states vs entangled states, partial measurements.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Product states vs entangled states, partial measurements&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting CNOT gate matrix form, control-target qubit logic practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of CNOT gate matrix form, control-target qubit logic systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CNOT gate matrix form, control-target qubit logic&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Controlled phase gates, Swap gates configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Controlled phase gates, Swap gates configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Creating Bell states: CNOT on superposition state?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Creating Bell states: CNOT on superposition state.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Creating Bell states: CNOT on superposition state&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is EPR paradox, Bell's inequality, entanglement validations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of EPR paradox, Bell's inequality, entanglement validations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;EPR paradox, Bell's inequality, entanglement validations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Qiskit QuantumCircuit library, drawing circuits, simulation runs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Qiskit QuantumCircuit library, drawing circuits, simulation runs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Qiskit QuantumCircuit library, drawing circuits, simulation runs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Measuring outputs, histogram plotting, count aggregations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Measuring outputs, histogram plotting, count aggregations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quantum Computing Specialist in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Tensor products math, composite systems configurations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quantum Computing Specialist in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Tensor products math, composite systems configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Quantum Algorithms 1
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement Deutsch-Jozsa, Bernstein-Vazirani, and phase estimation algorithms.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Quantum Algorithms 1
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement Deutsch-Jozsa, Bernstein-Vazirani, and phase estimation algorithms.</p>
+   
         <!-- Week 13: Quantum Oracles & Algorithms -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="sw-quantum-3-1-1" class="topic-checkbox">
                 <label for="sw-quantum-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Quantum oracle concepts, phase kickback mechanism math</span>
+                <button class="simplify-btn" data-topic="Quantum oracle concepts, phase kickback mechanism math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="sw-quantum-3-1-2" class="topic-checkbox">
                 <label for="sw-quantum-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Deutsch algorithm: logic, circuit construction, measurements</span>
+                <button class="simplify-btn" data-topic="Deutsch algorithm: logic, circuit construction, measurements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="sw-quantum-3-2-1" class="topic-checkbox">
                 <label for="sw-quantum-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Deutsch-Jozsa: determining constant vs balanced functions</span>
+                <button class="simplify-btn" data-topic="Deutsch-Jozsa: determining constant vs balanced functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="sw-quantum-3-2-2" class="topic-checkbox">
                 <label for="sw-quantum-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Bernstein-Vazirani: secret string extraction in single run</span>
+                <button class="simplify-btn" data-topic="Bernstein-Vazirani: secret string extraction in single run">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="sw-quantum-3-3-1" class="topic-checkbox">
                 <label for="sw-quantum-3-3-1" class="checkmark"></label>
                 <span class="topic-text">QFT math definition, circuit rotations patterns</span>
+                <button class="simplify-btn" data-topic="QFT math definition, circuit rotations patterns">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="sw-quantum-3-3-2" class="topic-checkbox">
                 <label for="sw-quantum-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Qiskit QFT circuit implementation, verification simulation</span>
+                <button class="simplify-btn" data-topic="Qiskit QFT circuit implementation, verification simulation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="sw-quantum-3-4-1" class="topic-checkbox">
                 <label for="sw-quantum-3-4-1" class="checkmark"></label>
                 <span class="topic-text">QPE algorithm math, phase mapping, resolution requirements</span>
+                <button class="simplify-btn" data-topic="QPE algorithm math, phase mapping, resolution requirements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="sw-quantum-3-4-2" class="topic-checkbox">
                 <label for="sw-quantum-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Implementing QPE in Qiskit, error analysis diagnostics</span>
+                <button class="simplify-btn" data-topic="Implementing QPE in Qiskit, error analysis diagnostics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="sw-quantum-3-5-1" class="topic-checkbox">
                 <label for="sw-quantum-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="sw-quantum-3-5-2" class="topic-checkbox">
                 <label for="sw-quantum-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="sw-quantum-3-6-1" class="topic-checkbox">
                 <label for="sw-quantum-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="sw-quantum-3-6-2" class="topic-checkbox">
                 <label for="sw-quantum-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Quantum oracle concepts, phase kickback mechanism math?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Quantum oracle concepts, phase kickback mechanism math.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Quantum oracle concepts, phase kickback mechanism math&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Deutsch algorithm: logic, circuit construction, measurements typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Deutsch algorithm: logic, circuit construction, measurements.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Deutsch algorithm: logic, circuit construction, measurements&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Deutsch-Jozsa: determining constant vs balanced functions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Deutsch-Jozsa: determining constant vs balanced functions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Deutsch-Jozsa: determining constant vs balanced functions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Bernstein-Vazirani: secret string extraction in single run?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Bernstein-Vazirani: secret string extraction in single run&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of QFT math definition, circuit rotations patterns?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for QFT math definition, circuit rotations patterns.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;QFT math definition, circuit rotations patterns&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Qiskit QFT circuit implementation, verification simulation typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Qiskit QFT circuit implementation, verification simulation.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Qiskit QFT circuit implementation, verification simulation&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting QPE algorithm math, phase mapping, resolution requirements practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of QPE algorithm math, phase mapping, resolution requirements systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;QPE algorithm math, phase mapping, resolution requirements&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Implementing QPE in Qiskit, error analysis diagnostics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Implementing QPE in Qiskit, error analysis diagnostics&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quantum Computing Specialist in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Quantum oracle concepts, phase kickback mechanism math&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quantum Computing Specialist in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Quantum oracle concepts, phase kickback mechanism math&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Quantum Algorithms 2 & Hardware
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement Grovers search, Shors algorithm, VQE, and error correction.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Quantum Algorithms 2 & Hardware
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Implement Grovers search, Shors algorithm, VQE, and error correction.</p>
+   
         <!-- Week 19: Grover's Search Algorithm -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="sw-quantum-4-1-1" class="topic-checkbox">
                 <label for="sw-quantum-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Amplitude amplification math, Grover diffusion operator logic</span>
+                <button class="simplify-btn" data-topic="Amplitude amplification math, Grover diffusion operator logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="sw-quantum-4-1-2" class="topic-checkbox">
                 <label for="sw-quantum-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Building oracle and diffuser circuits in Qiskit</span>
+                <button class="simplify-btn" data-topic="Building oracle and diffuser circuits in Qiskit">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="sw-quantum-4-2-1" class="topic-checkbox">
                 <label for="sw-quantum-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Period finding mathematical reduction, modular exponentiation</span>
+                <button class="simplify-btn" data-topic="Period finding mathematical reduction, modular exponentiation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="sw-quantum-4-2-2" class="topic-checkbox">
                 <label for="sw-quantum-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Shor's algorithm flow, factorization steps</span>
+                <button class="simplify-btn" data-topic="Shor's algorithm flow, factorization steps">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="sw-quantum-4-3-1" class="topic-checkbox">
                 <label for="sw-quantum-4-3-1" class="checkmark"></label>
                 <span class="topic-text">NISQ era, hybrid quantum-classical optimizers, VQE flow</span>
+                <button class="simplify-btn" data-topic="NISQ era, hybrid quantum-classical optimizers, VQE flow">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="sw-quantum-4-3-2" class="topic-checkbox">
                 <label for="sw-quantum-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Solving molecule ground state energy via VQE</span>
+                <button class="simplify-btn" data-topic="Solving molecule ground state energy via VQE">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="sw-quantum-4-4-1" class="topic-checkbox">
                 <label for="sw-quantum-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Quantum noise, bit flip and phase flip error codes</span>
+                <button class="simplify-btn" data-topic="Quantum noise, bit flip and phase flip error codes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="sw-quantum-4-4-2" class="topic-checkbox">
                 <label for="sw-quantum-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Surface codes, physical vs logical qubits mapping</span>
+                <button class="simplify-btn" data-topic="Surface codes, physical vs logical qubits mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="sw-quantum-4-5-1" class="topic-checkbox">
                 <label for="sw-quantum-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="sw-quantum-4-5-2" class="topic-checkbox">
                 <label for="sw-quantum-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="sw-quantum-4-6-1" class="topic-checkbox">
                 <label for="sw-quantum-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="sw-quantum-4-6-2" class="topic-checkbox">
                 <label for="sw-quantum-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Amplitude amplification math, Grover diffusion operator logic?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Amplitude amplification math, Grover diffusion operator logic.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Amplitude amplification math, Grover diffusion operator logic&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Building oracle and diffuser circuits in Qiskit typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Building oracle and diffuser circuits in Qiskit.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Building oracle and diffuser circuits in Qiskit&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Period finding mathematical reduction, modular exponentiation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Period finding mathematical reduction, modular exponentiation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Period finding mathematical reduction, modular exponentiation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Shor's algorithm flow, factorization steps?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Shor's algorithm flow, factorization steps&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of NISQ era, hybrid quantum-classical optimizers, VQE flow?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for NISQ era, hybrid quantum-classical optimizers, VQE flow.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;NISQ era, hybrid quantum-classical optimizers, VQE flow&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Solving molecule ground state energy via VQE typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Solving molecule ground state energy via VQE.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Solving molecule ground state energy via VQE&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Quantum noise, bit flip and phase flip error codes practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Quantum noise, bit flip and phase flip error codes systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Quantum noise, bit flip and phase flip error codes&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Surface codes, physical vs logical qubits mapping?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Surface codes, physical vs logical qubits mapping&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Quantum Computing Specialist in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Amplitude amplification math, Grover diffusion operator logic&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Quantum Computing Specialist in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Amplitude amplification math, Grover diffusion operator logic&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

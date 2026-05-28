@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Syllabus Core Foundations
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish a strong foundation in core engineering sciences, design codes, and math.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Syllabus Core Foundations
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish a strong foundation in core engineering sciences, design codes, and math.</p>
+   
         <!-- Week 1: Engineering Math & Mechanics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-1-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Linear algebra, calculus, vector calculus, differential equations</span>
+                <button class="simplify-btn" data-topic="Linear algebra, calculus, vector calculus, differential equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-1-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Free body diagrams, truss analysis, friction, kinematics</span>
+                <button class="simplify-btn" data-topic="Free body diagrams, truss analysis, friction, kinematics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-2-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Stress-strain curves, Hooke's law, shear force & bending moment</span>
+                <button class="simplify-btn" data-topic="Stress-strain curves, Hooke's law, shear force & bending moment">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-2-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Torsion of shafts, column buckling Euler equations</span>
+                <button class="simplify-btn" data-topic="Torsion of shafts, column buckling Euler equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-3-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Fluid properties, pressure measurement, Bernoulli's equation</span>
+                <button class="simplify-btn" data-topic="Fluid properties, pressure measurement, Bernoulli's equation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-3-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Flow in pipes, laminar vs turbulent, boundary layers</span>
+                <button class="simplify-btn" data-topic="Flow in pipes, laminar vs turbulent, boundary layers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-4-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Truss structures, deflection of beams, influence lines</span>
+                <button class="simplify-btn" data-topic="Truss structures, deflection of beams, influence lines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-4-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Electrical networks: circuit theorems, AC/DC transients</span>
+                <button class="simplify-btn" data-topic="Electrical networks: circuit theorems, AC/DC transients">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-5-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-5-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-6-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-6-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-7-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-1-7-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -545,16 +560,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linear algebra, calculus, vector calculus, differential equations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linear algebra, calculus, vector calculus, differential equations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra, calculus, vector calculus, differential equations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Free body diagrams, truss analysis, friction, kinematics typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Free body diagrams, truss analysis, friction, kinematics.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Free body diagrams, truss analysis, friction, kinematics&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Stress-strain curves, Hooke's law, shear force & bending moment practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Stress-strain curves, Hooke's law, shear force & bending moment systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Stress-strain curves, Hooke's law, shear force & bending moment&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Torsion of shafts, column buckling Euler equations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Torsion of shafts, column buckling Euler equations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Fluid properties, pressure measurement, Bernoulli's equation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Fluid properties, pressure measurement, Bernoulli's equation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fluid properties, pressure measurement, Bernoulli's equation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Flow in pipes, laminar vs turbulent, boundary layers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Flow in pipes, laminar vs turbulent, boundary layers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Flow in pipes, laminar vs turbulent, boundary layers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Truss structures, deflection of beams, influence lines practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Truss structures, deflection of beams, influence lines systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Truss structures, deflection of beams, influence lines&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Electrical networks: circuit theorems, AC/DC transients?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Electrical networks: circuit theorems, AC/DC transients&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra, calculus, vector calculus, differential equations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear algebra, calculus, vector calculus, differential equations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Structural & Material Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master concrete design, steel structural codes, soil mechanics, and hydrology.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Structural & Material Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master concrete design, steel structural codes, soil mechanics, and hydrology.</p>
+   
         <!-- Week 8: Concrete & Steel Design (Civil) -->
         <div class="week-card">
           <div class="week-header">
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-1-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-1-1" class="checkmark"></label>
                 <span class="topic-text">RCC design: limit state method, beams, slabs, columns</span>
+                <button class="simplify-btn" data-topic="RCC design: limit state method, beams, slabs, columns">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-1-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Steel design: tension/compression members, welds, bolts</span>
+                <button class="simplify-btn" data-topic="Steel design: tension/compression members, welds, bolts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-2-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Soil classification, index properties, effective stress, compaction</span>
+                <button class="simplify-btn" data-topic="Soil classification, index properties, effective stress, compaction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-2-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Shear strength parameters, shallow foundation bearing capacity</span>
+                <button class="simplify-btn" data-topic="Shear strength parameters, shallow foundation bearing capacity">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-3-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Water quality parameters, wastewater treatment plant units</span>
+                <button class="simplify-btn" data-topic="Water quality parameters, wastewater treatment plant units">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-3-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Water distribution systems design guidelines</span>
+                <button class="simplify-btn" data-topic="Water distribution systems design guidelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-4-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Hydrographs, flood routing, irrigation water requirements</span>
+                <button class="simplify-btn" data-topic="Hydrographs, flood routing, irrigation water requirements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-4-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Design of gravity dams, canal networks alignments</span>
+                <button class="simplify-btn" data-topic="Design of gravity dams, canal networks alignments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-5-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-5-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-6-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-6-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-7-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-2-7-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -982,16 +1026,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of RCC design: limit state method, beams, slabs, columns?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for RCC design: limit state method, beams, slabs, columns.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RCC design: limit state method, beams, slabs, columns&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Steel design: tension/compression members, welds, bolts typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Steel design: tension/compression members, welds, bolts.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Steel design: tension/compression members, welds, bolts&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Soil classification, index properties, effective stress, compaction practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Soil classification, index properties, effective stress, compaction systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Soil classification, index properties, effective stress, compaction&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Shear strength parameters, shallow foundation bearing capacity?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Shear strength parameters, shallow foundation bearing capacity&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Water quality parameters, wastewater treatment plant units?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Water quality parameters, wastewater treatment plant units.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Water quality parameters, wastewater treatment plant units&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Water distribution systems design guidelines typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Water distribution systems design guidelines.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Water distribution systems design guidelines&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Hydrographs, flood routing, irrigation water requirements practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Hydrographs, flood routing, irrigation water requirements systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Hydrographs, flood routing, irrigation water requirements&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Design of gravity dams, canal networks alignments?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Design of gravity dams, canal networks alignments&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RCC design: limit state method, beams, slabs, columns&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RCC design: limit state method, beams, slabs, columns&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Estimating, Costing & Contracts
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master project cost estimation, billing of quantities (BOQ), tender files, and contracts.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Estimating, Costing & Contracts
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master project cost estimation, billing of quantities (BOQ), tender files, and contracts.</p>
+   
         <!-- Week 15: Quantity Surveying & BOQ -->
         <div class="week-card">
           <div class="week-header">
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-1-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Material quantity calculations: cement, sand, bricks, steel</span>
+                <button class="simplify-btn" data-topic="Material quantity calculations: cement, sand, bricks, steel">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-1-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Rate analysis of items: excavation, concrete, plastering</span>
+                <button class="simplify-btn" data-topic="Rate analysis of items: excavation, concrete, plastering">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-2-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Standard specifications manual, measuring book (M-Book) entries</span>
+                <button class="simplify-btn" data-topic="Standard specifications manual, measuring book (M-Book) entries">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-2-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-2-2" class="checkmark"></label>
                 <span class="topic-text">PWD department rules: administrative approval, technical sanction</span>
+                <button class="simplify-btn" data-topic="PWD department rules: administrative approval, technical sanction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-3-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Drafting tender notices, eligibility criteria, technical bids</span>
+                <button class="simplify-btn" data-topic="Drafting tender notices, eligibility criteria, technical bids">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-3-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Financial bid evaluations, awarding contracts rules</span>
+                <button class="simplify-btn" data-topic="Financial bid evaluations, awarding contracts rules">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-4-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Activity node networks, critical path calculations (CPM)</span>
+                <button class="simplify-btn" data-topic="Activity node networks, critical path calculations (CPM)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-4-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Project crashing, float times, PERT probability calculations</span>
+                <button class="simplify-btn" data-topic="Project crashing, float times, PERT probability calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1248,6 +1315,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-5-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1274,6 +1342,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-5-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1309,6 +1378,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-6-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1335,6 +1405,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-6-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-7-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-3-7-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1419,16 +1492,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Material quantity calculations: cement, sand, bricks, steel?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Material quantity calculations: cement, sand, bricks, steel.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Material quantity calculations: cement, sand, bricks, steel&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Rate analysis of items: excavation, concrete, plastering typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Rate analysis of items: excavation, concrete, plastering.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Rate analysis of items: excavation, concrete, plastering&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Standard specifications manual, measuring book (M-Book) entries practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Standard specifications manual, measuring book (M-Book) entries systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Standard specifications manual, measuring book (M-Book) entries&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with PWD department rules: administrative approval, technical sanction?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;PWD department rules: administrative approval, technical sanction&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Drafting tender notices, eligibility criteria, technical bids?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Drafting tender notices, eligibility criteria, technical bids.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Drafting tender notices, eligibility criteria, technical bids&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Financial bid evaluations, awarding contracts rules typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Financial bid evaluations, awarding contracts rules.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Financial bid evaluations, awarding contracts rules&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Activity node networks, critical path calculations (CPM) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Activity node networks, critical path calculations (CPM) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Activity node networks, critical path calculations (CPM)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Project crashing, float times, PERT probability calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Project crashing, float times, PERT probability calculations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Material quantity calculations: cement, sand, bricks, steel&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Material quantity calculations: cement, sand, bricks, steel&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Mocks & PWD Site Case Studies
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Solve state PSC technical mocks and prepare for field engineering interviews.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Mocks & PWD Site Case Studies
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Solve state PSC technical mocks and prepare for field engineering interviews.</p>
+   
         <!-- Week 22: State PSC AE Exam Mock Series -->
         <div class="week-card">
           <div class="week-header">
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-1-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Solving 10 full-length AE entrance papers (100 questions)</span>
+                <button class="simplify-btn" data-topic="Solving 10 full-length AE entrance papers (100 questions)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-1-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Reviewing branch-specific technical mocks</span>
+                <button class="simplify-btn" data-topic="Reviewing branch-specific technical mocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-2-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Field quality tests: concrete slump test, cube strength tests</span>
+                <button class="simplify-btn" data-topic="Field quality tests: concrete slump test, cube strength tests">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-2-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Soil field compaction tests, bitumen density tests</span>
+                <button class="simplify-btn" data-topic="Soil field compaction tests, bitumen density tests">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-3-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Managing contractor delays, processing bill payments protocols</span>
+                <button class="simplify-btn" data-topic="Managing contractor delays, processing bill payments protocols">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-3-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Handling site disputes, checking M-Book entry discrepancies</span>
+                <button class="simplify-btn" data-topic="Handling site disputes, checking M-Book entry discrepancies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1624,6 +1718,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-4-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Mock panels: whiteboard design questions, department poise</span>
+                <button class="simplify-btn" data-topic="Mock panels: whiteboard design questions, department poise">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1650,6 +1745,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-4-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Answering queries on structural safety, PWD code guidelines</span>
+                <button class="simplify-btn" data-topic="Answering queries on structural safety, PWD code guidelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1685,6 +1781,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-5-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Re-read standard textbook chapters and consolidate micro-notes</span>
+                <button class="simplify-btn" data-topic="Re-read standard textbook chapters and consolidate micro-notes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1711,6 +1808,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-5-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Review previous years' question papers for trend analysis</span>
+                <button class="simplify-btn" data-topic="Review previous years' question papers for trend analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1746,6 +1844,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-6-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Practice writing structured 150-word and 250-word descriptive answers</span>
+                <button class="simplify-btn" data-topic="Practice writing structured 150-word and 250-word descriptive answers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1772,6 +1871,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-6-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Self-evaluate answers against standard toppers' model copies</span>
+                <button class="simplify-btn" data-topic="Self-evaluate answers against standard toppers' model copies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1807,6 +1907,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-7-1" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Take a full-length subject mock exam under timed conditions</span>
+                <button class="simplify-btn" data-topic="Take a full-length subject mock exam under timed conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1833,6 +1934,7 @@
                 <input type="checkbox" id="gov-assistant-engineer-4-7-2" class="topic-checkbox">
                 <label for="gov-assistant-engineer-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Perform error diagnostics and identify weak areas for re-study</span>
+                <button class="simplify-btn" data-topic="Perform error diagnostics and identify weak areas for re-study">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1855,6 +1957,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solving 10 full-length AE entrance papers (100 questions)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solving 10 full-length AE entrance papers (100 questions).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length AE entrance papers (100 questions)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Reviewing branch-specific technical mocks typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Reviewing branch-specific technical mocks.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reviewing branch-specific technical mocks&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Field quality tests: concrete slump test, cube strength tests practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Field quality tests: concrete slump test, cube strength tests systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Field quality tests: concrete slump test, cube strength tests&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Soil field compaction tests, bitumen density tests?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Soil field compaction tests, bitumen density tests&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Managing contractor delays, processing bill payments protocols?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Managing contractor delays, processing bill payments protocols.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Managing contractor delays, processing bill payments protocols&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Handling site disputes, checking M-Book entry discrepancies typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Handling site disputes, checking M-Book entry discrepancies.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Handling site disputes, checking M-Book entry discrepancies&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Mock panels: whiteboard design questions, department poise practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Mock panels: whiteboard design questions, department poise systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Mock panels: whiteboard design questions, department poise&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Answering queries on structural safety, PWD code guidelines?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Answering queries on structural safety, PWD code guidelines&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length AE entrance papers (100 questions)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Assistant Engineer (State Departments) in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solving 10 full-length AE entrance papers (100 questions)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

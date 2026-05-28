@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Traction Motors & Drive Systems
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study PMSM and Induction motors operations, torque-speed curves, and converters.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Traction Motors & Drive Systems
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study PMSM and Induction motors operations, torque-speed curves, and converters.</p>
+   
         <!-- Week 1: EV Drivetrain Architectures -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-ev-1-1-1" class="topic-checkbox">
                 <label for="eee-ev-1-1-1" class="checkmark"></label>
                 <span class="topic-text">BEV, HEV, PHEV configurations comparison, power flow layouts</span>
+                <button class="simplify-btn" data-topic="BEV, HEV, PHEV configurations comparison, power flow layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-ev-1-1-2" class="topic-checkbox">
                 <label for="eee-ev-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Traction requirements: tractive effort, aerodynamic drag, rolling resistance</span>
+                <button class="simplify-btn" data-topic="Traction requirements: tractive effort, aerodynamic drag, rolling resistance">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-ev-1-2-1" class="topic-checkbox">
                 <label for="eee-ev-1-2-1" class="checkmark"></label>
                 <span class="topic-text">PMSM structure, rotating magnetic field, back-EMF vectors</span>
+                <button class="simplify-btn" data-topic="PMSM structure, rotating magnetic field, back-EMF vectors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-ev-1-2-2" class="topic-checkbox">
                 <label for="eee-ev-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Torque-speed characteristics, constant torque and constant power regions</span>
+                <button class="simplify-btn" data-topic="Torque-speed characteristics, constant torque and constant power regions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-ev-1-3-1" class="topic-checkbox">
                 <label for="eee-ev-1-3-1" class="checkmark"></label>
                 <span class="topic-text">3-phase induction motor modeling for EV propulsion, slip control</span>
+                <button class="simplify-btn" data-topic="3-phase induction motor modeling for EV propulsion, slip control">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-ev-1-3-2" class="topic-checkbox">
                 <label for="eee-ev-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Variable voltage variable frequency (VVVF) drive systems</span>
+                <button class="simplify-btn" data-topic="Variable voltage variable frequency (VVVF) drive systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-ev-1-4-1" class="topic-checkbox">
                 <label for="eee-ev-1-4-1" class="checkmark"></label>
                 <span class="topic-text">3-phase bridge inverter power modules (IGBT/SiC MOSFET)</span>
+                <button class="simplify-btn" data-topic="3-phase bridge inverter power modules (IGBT/SiC MOSFET)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-ev-1-4-2" class="topic-checkbox">
                 <label for="eee-ev-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Sinusoidal PWM and Space Vector PWM switching configurations</span>
+                <button class="simplify-btn" data-topic="Sinusoidal PWM and Space Vector PWM switching configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-ev-1-5-1" class="topic-checkbox">
                 <label for="eee-ev-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-ev-1-5-2" class="topic-checkbox">
                 <label for="eee-ev-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-ev-1-6-1" class="topic-checkbox">
                 <label for="eee-ev-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-ev-1-6-2" class="topic-checkbox">
                 <label for="eee-ev-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of BEV, HEV, PHEV configurations comparison, power flow layouts?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for BEV, HEV, PHEV configurations comparison, power flow layouts.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;BEV, HEV, PHEV configurations comparison, power flow layouts&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Traction requirements: tractive effort, aerodynamic drag, rolling resistance typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Traction requirements: tractive effort, aerodynamic drag, rolling resistance.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Traction requirements: tractive effort, aerodynamic drag, rolling resistance&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PMSM structure, rotating magnetic field, back-EMF vectors practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PMSM structure, rotating magnetic field, back-EMF vectors systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PMSM structure, rotating magnetic field, back-EMF vectors&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Torque-speed characteristics, constant torque and constant power regions?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Torque-speed characteristics, constant torque and constant power regions&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of 3-phase induction motor modeling for EV propulsion, slip control?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for 3-phase induction motor modeling for EV propulsion, slip control.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;3-phase induction motor modeling for EV propulsion, slip control&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Variable voltage variable frequency (VVVF) drive systems typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Variable voltage variable frequency (VVVF) drive systems.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Variable voltage variable frequency (VVVF) drive systems&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting 3-phase bridge inverter power modules (IGBT/SiC MOSFET) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of 3-phase bridge inverter power modules (IGBT/SiC MOSFET) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;3-phase bridge inverter power modules (IGBT/SiC MOSFET)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Sinusoidal PWM and Space Vector PWM switching configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Sinusoidal PWM and Space Vector PWM switching configurations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;BEV, HEV, PHEV configurations comparison, power flow layouts&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;BEV, HEV, PHEV configurations comparison, power flow layouts&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Battery Pack Engineering & Safety
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study lithium cell chemistries, thermal run-away prevention, and high-voltage safety.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Battery Pack Engineering & Safety
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study lithium cell chemistries, thermal run-away prevention, and high-voltage safety.</p>
+   
         <!-- Week 7: Li-ion Chemistry & Cells -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-ev-2-1-1" class="topic-checkbox">
                 <label for="eee-ev-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Lithium-ion chemistries: LFP, NMC, NCA electrical properties</span>
+                <button class="simplify-btn" data-topic="Lithium-ion chemistries: LFP, NMC, NCA electrical properties">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-ev-2-1-2" class="topic-checkbox">
                 <label for="eee-ev-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Cell parameters: capacity, internal resistance, C-rate, lifecycle</span>
+                <button class="simplify-btn" data-topic="Cell parameters: capacity, internal resistance, C-rate, lifecycle">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-ev-2-2-1" class="topic-checkbox">
                 <label for="eee-ev-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Series-parallel cell configurations, busbar sizing, structural packs</span>
+                <button class="simplify-btn" data-topic="Series-parallel cell configurations, busbar sizing, structural packs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-ev-2-2-2" class="topic-checkbox">
                 <label for="eee-ev-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Thermal management systems: air, liquid, and phase-change cooling</span>
+                <button class="simplify-btn" data-topic="Thermal management systems: air, liquid, and phase-change cooling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-ev-2-3-1" class="topic-checkbox">
                 <label for="eee-ev-2-3-1" class="checkmark"></label>
                 <span class="topic-text">HV safety principles: isolation checks, chassis grounding</span>
+                <button class="simplify-btn" data-topic="HV safety principles: isolation checks, chassis grounding">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-ev-2-3-2" class="topic-checkbox">
                 <label for="eee-ev-2-3-2" class="checkmark"></label>
                 <span class="topic-text">High Voltage Interlock Loop (HVIL), contactor closing sequences</span>
+                <button class="simplify-btn" data-topic="High Voltage Interlock Loop (HVIL), contactor closing sequences">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-ev-2-4-1" class="topic-checkbox">
                 <label for="eee-ev-2-4-1" class="checkmark"></label>
                 <span class="topic-text">BMS block diagram, cell voltage/temp sensors, balancing circuits</span>
+                <button class="simplify-btn" data-topic="BMS block diagram, cell voltage/temp sensors, balancing circuits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-ev-2-4-2" class="topic-checkbox">
                 <label for="eee-ev-2-4-2" class="checkmark"></label>
                 <span class="topic-text">State of Charge (SoC) estimation algorithms, Coulomb counting</span>
+                <button class="simplify-btn" data-topic="State of Charge (SoC) estimation algorithms, Coulomb counting">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-ev-2-5-1" class="topic-checkbox">
                 <label for="eee-ev-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-ev-2-5-2" class="topic-checkbox">
                 <label for="eee-ev-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-ev-2-6-1" class="topic-checkbox">
                 <label for="eee-ev-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-ev-2-6-2" class="topic-checkbox">
                 <label for="eee-ev-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Lithium-ion chemistries: LFP, NMC, NCA electrical properties?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Lithium-ion chemistries: LFP, NMC, NCA electrical properties.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lithium-ion chemistries: LFP, NMC, NCA electrical properties&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Cell parameters: capacity, internal resistance, C-rate, lifecycle typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Cell parameters: capacity, internal resistance, C-rate, lifecycle.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Cell parameters: capacity, internal resistance, C-rate, lifecycle&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Series-parallel cell configurations, busbar sizing, structural packs practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Series-parallel cell configurations, busbar sizing, structural packs systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Series-parallel cell configurations, busbar sizing, structural packs&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Thermal management systems: air, liquid, and phase-change cooling?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Thermal management systems: air, liquid, and phase-change cooling&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of HV safety principles: isolation checks, chassis grounding?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for HV safety principles: isolation checks, chassis grounding.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;HV safety principles: isolation checks, chassis grounding&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is High Voltage Interlock Loop (HVIL), contactor closing sequences typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of High Voltage Interlock Loop (HVIL), contactor closing sequences.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;High Voltage Interlock Loop (HVIL), contactor closing sequences&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting BMS block diagram, cell voltage/temp sensors, balancing circuits practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of BMS block diagram, cell voltage/temp sensors, balancing circuits systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;BMS block diagram, cell voltage/temp sensors, balancing circuits&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with State of Charge (SoC) estimation algorithms, Coulomb counting?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;State of Charge (SoC) estimation algorithms, Coulomb counting&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lithium-ion chemistries: LFP, NMC, NCA electrical properties&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lithium-ion chemistries: LFP, NMC, NCA electrical properties&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Regenerative Braking & Chargers
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure regenerative braking energy converters and design onboard/offboard chargers.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Regenerative Braking & Chargers
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure regenerative braking energy converters and design onboard/offboard chargers.</p>
+   
         <!-- Week 13: Regenerative Braking Physics -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-ev-3-1-1" class="topic-checkbox">
                 <label for="eee-ev-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Four-quadrant motor drive operation, kinetic energy recovery math</span>
+                <button class="simplify-btn" data-topic="Four-quadrant motor drive operation, kinetic energy recovery math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-ev-3-1-2" class="topic-checkbox">
                 <label for="eee-ev-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Deceleration control, blending friction and regenerative brakes</span>
+                <button class="simplify-btn" data-topic="Deceleration control, blending friction and regenerative brakes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-ev-3-2-1" class="topic-checkbox">
                 <label for="eee-ev-3-2-1" class="checkmark"></label>
                 <span class="topic-text">OBC topologies: AC-DC rectifier with Power Factor Correction (PFC)</span>
+                <button class="simplify-btn" data-topic="OBC topologies: AC-DC rectifier with Power Factor Correction (PFC)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-ev-3-2-2" class="topic-checkbox">
                 <label for="eee-ev-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Isolated DC-DC converters: LLC resonant, phase-shifted full bridge</span>
+                <button class="simplify-btn" data-topic="Isolated DC-DC converters: LLC resonant, phase-shifted full bridge">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-ev-3-3-1" class="topic-checkbox">
                 <label for="eee-ev-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Offboard chargers architecture, CCS and CHAdeMO standards</span>
+                <button class="simplify-btn" data-topic="Offboard chargers architecture, CCS and CHAdeMO standards">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-ev-3-3-2" class="topic-checkbox">
                 <label for="eee-ev-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Communication protocols: ISO 15118, CAN bus chargers handshake</span>
+                <button class="simplify-btn" data-topic="Communication protocols: ISO 15118, CAN bus chargers handshake">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-ev-3-4-1" class="topic-checkbox">
                 <label for="eee-ev-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Auxiliary DC-DC converter (HV to 12V/48V system)</span>
+                <button class="simplify-btn" data-topic="Auxiliary DC-DC converter (HV to 12V/48V system)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-ev-3-4-2" class="topic-checkbox">
                 <label for="eee-ev-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Automotive loads: EPS, HVAC compressor, infotainment power</span>
+                <button class="simplify-btn" data-topic="Automotive loads: EPS, HVAC compressor, infotainment power">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-ev-3-5-1" class="topic-checkbox">
                 <label for="eee-ev-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-ev-3-5-2" class="topic-checkbox">
                 <label for="eee-ev-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-ev-3-6-1" class="topic-checkbox">
                 <label for="eee-ev-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-ev-3-6-2" class="topic-checkbox">
                 <label for="eee-ev-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Four-quadrant motor drive operation, kinetic energy recovery math?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Four-quadrant motor drive operation, kinetic energy recovery math.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Four-quadrant motor drive operation, kinetic energy recovery math&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Deceleration control, blending friction and regenerative brakes typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Deceleration control, blending friction and regenerative brakes.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Deceleration control, blending friction and regenerative brakes&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting OBC topologies: AC-DC rectifier with Power Factor Correction (PFC) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of OBC topologies: AC-DC rectifier with Power Factor Correction (PFC) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;OBC topologies: AC-DC rectifier with Power Factor Correction (PFC)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Isolated DC-DC converters: LLC resonant, phase-shifted full bridge?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Isolated DC-DC converters: LLC resonant, phase-shifted full bridge&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Offboard chargers architecture, CCS and CHAdeMO standards?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Offboard chargers architecture, CCS and CHAdeMO standards.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Offboard chargers architecture, CCS and CHAdeMO standards&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Communication protocols: ISO 15118, CAN bus chargers handshake typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Communication protocols: ISO 15118, CAN bus chargers handshake.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Communication protocols: ISO 15118, CAN bus chargers handshake&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Auxiliary DC-DC converter (HV to 12V/48V system) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Auxiliary DC-DC converter (HV to 12V/48V system) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Auxiliary DC-DC converter (HV to 12V/48V system)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Automotive loads: EPS, HVAC compressor, infotainment power?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Automotive loads: EPS, HVAC compressor, infotainment power&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Four-quadrant motor drive operation, kinetic energy recovery math&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Four-quadrant motor drive operation, kinetic energy recovery math&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          EV Control & Testing Standards
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Field Oriented Control equations, write vehicle control unit code, and run HIL tests.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            EV Control & Testing Standards
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Field Oriented Control equations, write vehicle control unit code, and run HIL tests.</p>
+   
         <!-- Week 19: Field Oriented Control (FOC) -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-ev-4-1-1" class="topic-checkbox">
                 <label for="eee-ev-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Coordinate transformations: Clarke and Park transforms math</span>
+                <button class="simplify-btn" data-topic="Coordinate transformations: Clarke and Park transforms math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-ev-4-1-2" class="topic-checkbox">
                 <label for="eee-ev-4-1-2" class="checkmark"></label>
                 <span class="topic-text">FOC block diagram: current loops, speed loops, PI tuning</span>
+                <button class="simplify-btn" data-topic="FOC block diagram: current loops, speed loops, PI tuning">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-ev-4-2-1" class="topic-checkbox">
                 <label for="eee-ev-4-2-1" class="checkmark"></label>
                 <span class="topic-text">VCU architecture, torque coordinator algorithms, sensor interfaces</span>
+                <button class="simplify-btn" data-topic="VCU architecture, torque coordinator algorithms, sensor interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-ev-4-2-2" class="topic-checkbox">
                 <label for="eee-ev-4-2-2" class="checkmark"></label>
                 <span class="topic-text">CAN bus vehicle networks integration, SAE J1939 messages</span>
+                <button class="simplify-btn" data-topic="CAN bus vehicle networks integration, SAE J1939 messages">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="eee-ev-4-3-1" class="topic-checkbox">
                 <label for="eee-ev-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Dynamometer testing: measuring range and energy consumption</span>
+                <button class="simplify-btn" data-topic="Dynamometer testing: measuring range and energy consumption">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="eee-ev-4-3-2" class="topic-checkbox">
                 <label for="eee-ev-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Crash tests standards for batteries, thermal run-away validations</span>
+                <button class="simplify-btn" data-topic="Crash tests standards for batteries, thermal run-away validations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-ev-4-4-1" class="topic-checkbox">
                 <label for="eee-ev-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Silicon Carbide (SiC) and Gallium Nitride (GaN) devices advantages</span>
+                <button class="simplify-btn" data-topic="Silicon Carbide (SiC) and Gallium Nitride (GaN) devices advantages">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-ev-4-4-2" class="topic-checkbox">
                 <label for="eee-ev-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Solid-state batteries, wireless charging technologies</span>
+                <button class="simplify-btn" data-topic="Solid-state batteries, wireless charging technologies">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-ev-4-5-1" class="topic-checkbox">
                 <label for="eee-ev-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-ev-4-5-2" class="topic-checkbox">
                 <label for="eee-ev-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-ev-4-6-1" class="topic-checkbox">
                 <label for="eee-ev-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-ev-4-6-2" class="topic-checkbox">
                 <label for="eee-ev-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Coordinate transformations: Clarke and Park transforms math?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Coordinate transformations: Clarke and Park transforms math.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Coordinate transformations: Clarke and Park transforms math&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is FOC block diagram: current loops, speed loops, PI tuning typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of FOC block diagram: current loops, speed loops, PI tuning.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;FOC block diagram: current loops, speed loops, PI tuning&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting VCU architecture, torque coordinator algorithms, sensor interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of VCU architecture, torque coordinator algorithms, sensor interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;VCU architecture, torque coordinator algorithms, sensor interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with CAN bus vehicle networks integration, SAE J1939 messages?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;CAN bus vehicle networks integration, SAE J1939 messages&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Dynamometer testing: measuring range and energy consumption?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Dynamometer testing: measuring range and energy consumption.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Dynamometer testing: measuring range and energy consumption&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Crash tests standards for batteries, thermal run-away validations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Crash tests standards for batteries, thermal run-away validations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Crash tests standards for batteries, thermal run-away validations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Silicon Carbide (SiC) and Gallium Nitride (GaN) devices advantages practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Silicon Carbide (SiC) and Gallium Nitride (GaN) devices advantages systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Silicon Carbide (SiC) and Gallium Nitride (GaN) devices advantages&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Solid-state batteries, wireless charging technologies?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Solid-state batteries, wireless charging technologies&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Coordinate transformations: Clarke and Park transforms math&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electric Vehicle (EV) Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Coordinate transformations: Clarke and Park transforms math&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

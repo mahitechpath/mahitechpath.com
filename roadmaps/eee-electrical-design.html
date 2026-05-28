@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          AutoCAD Electrical & Drafting
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master AutoCAD Electrical workspace, draw schematic symbols, and route control wires.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            AutoCAD Electrical & Drafting
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master AutoCAD Electrical workspace, draw schematic symbols, and route control wires.</p>
+   
         <!-- Week 1: AutoCAD Workspace & Setup -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-1-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-1-1" class="checkmark"></label>
                 <span class="topic-text">AutoCAD Electrical interface, project manager configurations</span>
+                <button class="simplify-btn" data-topic="AutoCAD Electrical interface, project manager configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-1-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Drawing templates, title blocks setup, layer conventions</span>
+                <button class="simplify-btn" data-topic="Drawing templates, title blocks setup, layer conventions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-2-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Inserting relays, switches, contactors, circuit breakers</span>
+                <button class="simplify-btn" data-topic="Inserting relays, switches, contactors, circuit breakers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-2-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Wiring routing, auto-numbering wires, cross-referencing</span>
+                <button class="simplify-btn" data-topic="Wiring routing, auto-numbering wires, cross-referencing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-3-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Footprint generation, component positioning on DIN rails</span>
+                <button class="simplify-btn" data-topic="Footprint generation, component positioning on DIN rails">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-3-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Cable duct layouts, panel enclosure sizing calculations</span>
+                <button class="simplify-btn" data-topic="Cable duct layouts, panel enclosure sizing calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-4-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Terminal association, wire tags generation, BOM (Bill of Materials)</span>
+                <button class="simplify-btn" data-topic="Terminal association, wire tags generation, BOM (Bill of Materials)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-4-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Exporting wiring schedules, terminal strip layout plans</span>
+                <button class="simplify-btn" data-topic="Exporting wiring schedules, terminal strip layout plans">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-5-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-5-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-6-1" class="topic-checkbox">
                 <label for="eee-electrical-design-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-electrical-design-1-6-2" class="topic-checkbox">
                 <label for="eee-electrical-design-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of AutoCAD Electrical interface, project manager configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for AutoCAD Electrical interface, project manager configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AutoCAD Electrical interface, project manager configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Drawing templates, title blocks setup, layer conventions typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Drawing templates, title blocks setup, layer conventions.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Drawing templates, title blocks setup, layer conventions&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Inserting relays, switches, contactors, circuit breakers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Inserting relays, switches, contactors, circuit breakers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Inserting relays, switches, contactors, circuit breakers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Wiring routing, auto-numbering wires, cross-referencing?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Wiring routing, auto-numbering wires, cross-referencing&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Footprint generation, component positioning on DIN rails?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Footprint generation, component positioning on DIN rails.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Footprint generation, component positioning on DIN rails&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Cable duct layouts, panel enclosure sizing calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Cable duct layouts, panel enclosure sizing calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Cable duct layouts, panel enclosure sizing calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Terminal association, wire tags generation, BOM (Bill of Materials) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Terminal association, wire tags generation, BOM (Bill of Materials) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Terminal association, wire tags generation, BOM (Bill of Materials)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Exporting wiring schedules, terminal strip layout plans?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Exporting wiring schedules, terminal strip layout plans&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electrical Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AutoCAD Electrical interface, project manager configurations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electrical Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AutoCAD Electrical interface, project manager configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Cable Sizing & Switchgear
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Calculate load currents, size cables, choose breakers, and design motor control centers.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Cable Sizing & Switchgear
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Calculate load currents, size cables, choose breakers, and design motor control centers.</p>
+   
         <!-- Week 7: Load Calculations -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-1-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Connected load vs demand load, demand factors, power factors</span>
+                <button class="simplify-btn" data-topic="Connected load vs demand load, demand factors, power factors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-1-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Three-phase load balancing calculations, unbalanced currents</span>
+                <button class="simplify-btn" data-topic="Three-phase load balancing calculations, unbalanced currents">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-2-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Sizing cables based on continuous current and voltage drop</span>
+                <button class="simplify-btn" data-topic="Sizing cables based on continuous current and voltage drop">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-2-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Derating factors: ambient temp, grouping of cables</span>
+                <button class="simplify-btn" data-topic="Derating factors: ambient temp, grouping of cables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-3-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-3-1" class="checkmark"></label>
                 <span class="topic-text">MCB, MCCB, ACB, fuses sizing rules and curves</span>
+                <button class="simplify-btn" data-topic="MCB, MCCB, ACB, fuses sizing rules and curves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-3-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Short circuit current calculation, breaking capacity requirements</span>
+                <button class="simplify-btn" data-topic="Short circuit current calculation, breaking capacity requirements">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-4-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-4-1" class="checkmark"></label>
                 <span class="topic-text">DOL, Star-Delta, VFD control panel schematics design</span>
+                <button class="simplify-btn" data-topic="DOL, Star-Delta, VFD control panel schematics design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-4-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Control transformer sizing, fuse protection on controls</span>
+                <button class="simplify-btn" data-topic="Control transformer sizing, fuse protection on controls">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-5-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-5-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-6-1" class="topic-checkbox">
                 <label for="eee-electrical-design-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-electrical-design-2-6-2" class="topic-checkbox">
                 <label for="eee-electrical-design-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Connected load vs demand load, demand factors, power factors?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Connected load vs demand load, demand factors, power factors.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connected load vs demand load, demand factors, power factors&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Three-phase load balancing calculations, unbalanced currents typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Three-phase load balancing calculations, unbalanced currents.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Three-phase load balancing calculations, unbalanced currents&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Sizing cables based on continuous current and voltage drop practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Sizing cables based on continuous current and voltage drop systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Sizing cables based on continuous current and voltage drop&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Derating factors: ambient temp, grouping of cables?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Derating factors: ambient temp, grouping of cables&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of MCB, MCCB, ACB, fuses sizing rules and curves?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for MCB, MCCB, ACB, fuses sizing rules and curves.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;MCB, MCCB, ACB, fuses sizing rules and curves&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Short circuit current calculation, breaking capacity requirements typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Short circuit current calculation, breaking capacity requirements.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Short circuit current calculation, breaking capacity requirements&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting DOL, Star-Delta, VFD control panel schematics design practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of DOL, Star-Delta, VFD control panel schematics design systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;DOL, Star-Delta, VFD control panel schematics design&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Control transformer sizing, fuse protection on controls?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Control transformer sizing, fuse protection on controls&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electrical Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connected load vs demand load, demand factors, power factors&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electrical Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Connected load vs demand load, demand factors, power factors&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Distribution & Grounding System
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design substation layouts, select transformers, and calculate grounding grid resistance.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Distribution & Grounding System
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design substation layouts, select transformers, and calculate grounding grid resistance.</p>
+   
         <!-- Week 13: Substation Layout Design -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-1-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Transformer sizing, primary/secondary protections, dry/oil types</span>
+                <button class="simplify-btn" data-topic="Transformer sizing, primary/secondary protections, dry/oil types">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-1-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Substation panels layout: HT/LT panels, busbar sizing</span>
+                <button class="simplify-btn" data-topic="Substation panels layout: HT/LT panels, busbar sizing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-2-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Copper vs aluminum busbars current capacity calculations</span>
+                <button class="simplify-btn" data-topic="Copper vs aluminum busbars current capacity calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-2-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Short-circuit mechanical forces on busbar supports</span>
+                <button class="simplify-btn" data-topic="Short-circuit mechanical forces on busbar supports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-3-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Soil resistivity measurements, grounding grid resistance formulas</span>
+                <button class="simplify-btn" data-topic="Soil resistivity measurements, grounding grid resistance formulas">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-3-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Earthing rods spacing, touch and step voltage calculations</span>
+                <button class="simplify-btn" data-topic="Earthing rods spacing, touch and step voltage calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-4-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Risk assessment calculations, lightning rod placement plans</span>
+                <button class="simplify-btn" data-topic="Risk assessment calculations, lightning rod placement plans">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-4-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Down-conductors, earth grid interfaces configurations</span>
+                <button class="simplify-btn" data-topic="Down-conductors, earth grid interfaces configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-5-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-5-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-6-1" class="topic-checkbox">
                 <label for="eee-electrical-design-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-electrical-design-3-6-2" class="topic-checkbox">
                 <label for="eee-electrical-design-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Transformer sizing, primary/secondary protections, dry/oil types?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Transformer sizing, primary/secondary protections, dry/oil types.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transformer sizing, primary/secondary protections, dry/oil types&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Substation panels layout: HT/LT panels, busbar sizing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Substation panels layout: HT/LT panels, busbar sizing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Substation panels layout: HT/LT panels, busbar sizing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Copper vs aluminum busbars current capacity calculations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Copper vs aluminum busbars current capacity calculations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Copper vs aluminum busbars current capacity calculations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Short-circuit mechanical forces on busbar supports?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Short-circuit mechanical forces on busbar supports&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Soil resistivity measurements, grounding grid resistance formulas?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Soil resistivity measurements, grounding grid resistance formulas.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Soil resistivity measurements, grounding grid resistance formulas&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Earthing rods spacing, touch and step voltage calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Earthing rods spacing, touch and step voltage calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Earthing rods spacing, touch and step voltage calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Risk assessment calculations, lightning rod placement plans practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Risk assessment calculations, lightning rod placement plans systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Risk assessment calculations, lightning rod placement plans&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Down-conductors, earth grid interfaces configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Down-conductors, earth grid interfaces configurations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electrical Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transformer sizing, primary/secondary protections, dry/oil types&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electrical Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Transformer sizing, primary/secondary protections, dry/oil types&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Electrical Codes & Estimation
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Align designs with NEC codes, size UPS batteries, and draft Bill of Quantities.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Electrical Codes & Estimation
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Align designs with NEC codes, size UPS batteries, and draft Bill of Quantities.</p>
+   
         <!-- Week 19: National Electrical Code (NEC) -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-1-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-1-1" class="checkmark"></label>
                 <span class="topic-text">NEC codes: conduit fill rates, clearance spaces around panels</span>
+                <button class="simplify-btn" data-topic="NEC codes: conduit fill rates, clearance spaces around panels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-1-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-1-2" class="checkmark"></label>
                 <span class="topic-text">IP protection ratings (IP54, IP65) selections</span>
+                <button class="simplify-btn" data-topic="IP protection ratings (IP54, IP65) selections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-2-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Diesel Generator (DG) sizing, fuel storage regulations</span>
+                <button class="simplify-btn" data-topic="Diesel Generator (DG) sizing, fuel storage regulations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-2-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-2-2" class="checkmark"></label>
                 <span class="topic-text">UPS battery sizing calculations, charger setups</span>
+                <button class="simplify-btn" data-topic="UPS battery sizing calculations, charger setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-3-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Lumen method calculations, spacing-to-mounting height ratios</span>
+                <button class="simplify-btn" data-topic="Lumen method calculations, spacing-to-mounting height ratios">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-3-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Lux level requirements, Dialux software setups</span>
+                <button class="simplify-btn" data-topic="Lux level requirements, Dialux software setups">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-4-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Drafting Bill of Quantities (BOQ), material estimations</span>
+                <button class="simplify-btn" data-topic="Drafting Bill of Quantities (BOQ), material estimations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-4-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Tender documentation preparation, technical specifications</span>
+                <button class="simplify-btn" data-topic="Tender documentation preparation, technical specifications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-5-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-5-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-6-1" class="topic-checkbox">
                 <label for="eee-electrical-design-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-electrical-design-4-6-2" class="topic-checkbox">
                 <label for="eee-electrical-design-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of NEC codes: conduit fill rates, clearance spaces around panels?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for NEC codes: conduit fill rates, clearance spaces around panels.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;NEC codes: conduit fill rates, clearance spaces around panels&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is IP protection ratings (IP54, IP65) selections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of IP protection ratings (IP54, IP65) selections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;IP protection ratings (IP54, IP65) selections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Diesel Generator (DG) sizing, fuel storage regulations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Diesel Generator (DG) sizing, fuel storage regulations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Diesel Generator (DG) sizing, fuel storage regulations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with UPS battery sizing calculations, charger setups?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;UPS battery sizing calculations, charger setups&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Lumen method calculations, spacing-to-mounting height ratios?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Lumen method calculations, spacing-to-mounting height ratios.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lumen method calculations, spacing-to-mounting height ratios&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Lux level requirements, Dialux software setups typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Lux level requirements, Dialux software setups.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Lux level requirements, Dialux software setups&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Drafting Bill of Quantities (BOQ), material estimations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Drafting Bill of Quantities (BOQ), material estimations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Drafting Bill of Quantities (BOQ), material estimations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Tender documentation preparation, technical specifications?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Tender documentation preparation, technical specifications&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Electrical Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;NEC codes: conduit fill rates, clearance spaces around panels&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Electrical Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;NEC codes: conduit fill rates, clearance spaces around panels&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

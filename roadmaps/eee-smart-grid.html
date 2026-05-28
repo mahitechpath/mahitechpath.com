@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Smart Metering & AMI
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Advanced Metering Infrastructure (AMI), smart meters, and communication protocols.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Smart Metering & AMI
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Advanced Metering Infrastructure (AMI), smart meters, and communication protocols.</p>
+   
         <!-- Week 1: Advanced Metering Infrastructure -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-1-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-1-1" class="checkmark"></label>
                 <span class="topic-text">AMI architecture: smart meters, concentrators, MDM systems</span>
+                <button class="simplify-btn" data-topic="AMI architecture: smart meters, concentrators, MDM systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-1-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Net metering vs gross metering, time-of-use (ToU) pricing</span>
+                <button class="simplify-btn" data-topic="Net metering vs gross metering, time-of-use (ToU) pricing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-2-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Voltage and current sensors, active/reactive energy calculators</span>
+                <button class="simplify-btn" data-topic="Voltage and current sensors, active/reactive energy calculators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-2-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Communication modules: Cellular, RF mesh, Power Line Carrier (PLC)</span>
+                <button class="simplify-btn" data-topic="Communication modules: Cellular, RF mesh, Power Line Carrier (PLC)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-3-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Phasor Measurement Units (PMUs), synchrophasor data streams</span>
+                <button class="simplify-btn" data-topic="Phasor Measurement Units (PMUs), synchrophasor data streams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-3-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Data Concentrators (PDCs), GPS time synchronization</span>
+                <button class="simplify-btn" data-topic="Data Concentrators (PDCs), GPS time synchronization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-4-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-4-1" class="checkmark"></label>
                 <span class="topic-text">IEC 61850 substation automation standard, GOOSE messages</span>
+                <button class="simplify-btn" data-topic="IEC 61850 substation automation standard, GOOSE messages">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-4-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-4-2" class="checkmark"></label>
                 <span class="topic-text">DNP3 and Modbus protocols over IP networks</span>
+                <button class="simplify-btn" data-topic="DNP3 and Modbus protocols over IP networks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-5-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-5-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-6-1" class="topic-checkbox">
                 <label for="eee-smart-grid-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="eee-smart-grid-1-6-2" class="topic-checkbox">
                 <label for="eee-smart-grid-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Voltage and current sensors, active/reactive energy calculators&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of AMI architecture: smart meters, concentrators, MDM systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for AMI architecture: smart meters, concentrators, MDM systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AMI architecture: smart meters, concentrators, MDM systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Net metering vs gross metering, time-of-use (ToU) pricing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Net metering vs gross metering, time-of-use (ToU) pricing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Net metering vs gross metering, time-of-use (ToU) pricing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Voltage and current sensors, active/reactive energy calculators practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Voltage and current sensors, active/reactive energy calculators systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Voltage and current sensors, active/reactive energy calculators&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Communication modules: Cellular, RF mesh, Power Line Carrier (PLC)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Communication modules: Cellular, RF mesh, Power Line Carrier (PLC)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Phasor Measurement Units (PMUs), synchrophasor data streams?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Phasor Measurement Units (PMUs), synchrophasor data streams.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Phasor Measurement Units (PMUs), synchrophasor data streams&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Data Concentrators (PDCs), GPS time synchronization typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Data Concentrators (PDCs), GPS time synchronization.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Data Concentrators (PDCs), GPS time synchronization&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting IEC 61850 substation automation standard, GOOSE messages practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of IEC 61850 substation automation standard, GOOSE messages systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;IEC 61850 substation automation standard, GOOSE messages&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with DNP3 and Modbus protocols over IP networks?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;DNP3 and Modbus protocols over IP networks&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Smart Grid Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AMI architecture: smart meters, concentrators, MDM systems&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Distributed Generation & Storage
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Integrate solar/wind generators, configure battery storage, and manage electric vehicle V2G load grids.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Distributed Generation & Storage
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Integrate solar/wind generators, configure battery storage, and manage electric vehicle V2G load grids.</p>
+   
         <!-- Week 7: Distributed Energy Resources (DER) -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-1-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Solar PV, wind, and microturbine grid connections</span>
+                <button class="simplify-btn" data-topic="Solar PV, wind, and microturbine grid connections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-1-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Impact of high DER penetration on grid voltage profiles</span>
+                <button class="simplify-btn" data-topic="Impact of high DER penetration on grid voltage profiles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-2-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Battery energy storage (BESS) sizing, peak shaving algorithms</span>
+                <button class="simplify-btn" data-topic="Battery energy storage (BESS) sizing, peak shaving algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-2-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Flywheels, supercapacitors, pumped hydro configurations</span>
+                <button class="simplify-btn" data-topic="Flywheels, supercapacitors, pumped hydro configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-3-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-3-1" class="checkmark"></label>
                 <span class="topic-text">V2G concept: bidirectional EV chargers as grid storage</span>
+                <button class="simplify-btn" data-topic="V2G concept: bidirectional EV chargers as grid storage">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-3-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-3-2" class="checkmark"></label>
                 <span class="topic-text">EV fleet charging coordination, frequency regulation support</span>
+                <button class="simplify-btn" data-topic="EV fleet charging coordination, frequency regulation support">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-4-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Islanded mode controller logic, black start sequences</span>
+                <button class="simplify-btn" data-topic="Islanded mode controller logic, black start sequences">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-4-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Virtual Power Plants (VPP) scheduling and dispatch</span>
+                <button class="simplify-btn" data-topic="Virtual Power Plants (VPP) scheduling and dispatch">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-5-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-5-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-6-1" class="topic-checkbox">
                 <label for="eee-smart-grid-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="eee-smart-grid-2-6-2" class="topic-checkbox">
                 <label for="eee-smart-grid-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solar PV, wind, and microturbine grid connections?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solar PV, wind, and microturbine grid connections.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solar PV, wind, and microturbine grid connections&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Impact of high DER penetration on grid voltage profiles typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Impact of high DER penetration on grid voltage profiles.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Impact of high DER penetration on grid voltage profiles&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Battery energy storage (BESS) sizing, peak shaving algorithms practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Battery energy storage (BESS) sizing, peak shaving algorithms systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Battery energy storage (BESS) sizing, peak shaving algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Flywheels, supercapacitors, pumped hydro configurations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Flywheels, supercapacitors, pumped hydro configurations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of V2G concept: bidirectional EV chargers as grid storage?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for V2G concept: bidirectional EV chargers as grid storage.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;V2G concept: bidirectional EV chargers as grid storage&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is EV fleet charging coordination, frequency regulation support typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of EV fleet charging coordination, frequency regulation support.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;EV fleet charging coordination, frequency regulation support&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Islanded mode controller logic, black start sequences practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Islanded mode controller logic, black start sequences systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Islanded mode controller logic, black start sequences&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Virtual Power Plants (VPP) scheduling and dispatch?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Virtual Power Plants (VPP) scheduling and dispatch&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Smart Grid Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solar PV, wind, and microturbine grid connections&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Smart Grid Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solar PV, wind, and microturbine grid connections&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Distribution Automation & Control
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Automate volt-var controls, configure self-healing switch gears, and manage power flow.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Distribution Automation & Control
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Automate volt-var controls, configure self-healing switch gears, and manage power flow.</p>
+   
         <!-- Week 13: Volt-Var Optimization (VVO) -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-1-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Voltage regulators, shunt capacitors control algorithms</span>
+                <button class="simplify-btn" data-topic="Voltage regulators, shunt capacitors control algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-1-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Conservation Voltage Reduction (CVR) saving energy</span>
+                <button class="simplify-btn" data-topic="Conservation Voltage Reduction (CVR) saving energy">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-2-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Fault Location, Isolation, and Service Restoration (FLISR)</span>
+                <button class="simplify-btn" data-topic="Fault Location, Isolation, and Service Restoration (FLISR)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-2-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Reclosers, sectionalizers, smart switches coordination</span>
+                <button class="simplify-btn" data-topic="Reclosers, sectionalizers, smart switches coordination">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-3-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Demand Response (DR) programs, peak load reductions</span>
+                <button class="simplify-btn" data-topic="Demand Response (DR) programs, peak load reductions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-3-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Automated demand response (ADR) software configurations</span>
+                <button class="simplify-btn" data-topic="Automated demand response (ADR) software configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-4-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Distribution state estimation algorithms, measurement configurations</span>
+                <button class="simplify-btn" data-topic="Distribution state estimation algorithms, measurement configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-4-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Active network management, power flow direction audits</span>
+                <button class="simplify-btn" data-topic="Active network management, power flow direction audits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-5-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-5-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-6-1" class="topic-checkbox">
                 <label for="eee-smart-grid-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="eee-smart-grid-3-6-2" class="topic-checkbox">
                 <label for="eee-smart-grid-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Voltage regulators, shunt capacitors control algorithms?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Voltage regulators, shunt capacitors control algorithms.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Voltage regulators, shunt capacitors control algorithms&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Conservation Voltage Reduction (CVR) saving energy typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Conservation Voltage Reduction (CVR) saving energy.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Conservation Voltage Reduction (CVR) saving energy&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Fault Location, Isolation, and Service Restoration (FLISR) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Fault Location, Isolation, and Service Restoration (FLISR) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Fault Location, Isolation, and Service Restoration (FLISR)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Reclosers, sectionalizers, smart switches coordination?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Reclosers, sectionalizers, smart switches coordination&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Demand Response (DR) programs, peak load reductions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Demand Response (DR) programs, peak load reductions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Demand Response (DR) programs, peak load reductions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Automated demand response (ADR) software configurations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Automated demand response (ADR) software configurations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Automated demand response (ADR) software configurations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Distribution state estimation algorithms, measurement configurations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Distribution state estimation algorithms, measurement configurations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Distribution state estimation algorithms, measurement configurations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Active network management, power flow direction audits?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Active network management, power flow direction audits&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Smart Grid Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Voltage regulators, shunt capacitors control algorithms&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Smart Grid Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Voltage regulators, shunt capacitors control algorithms&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Cybersecurity & Grid Resilience
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit smart grid networks against cyber threats, configure firewalls, and study future grids.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Cybersecurity & Grid Resilience
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit smart grid networks against cyber threats, configure firewalls, and study future grids.</p>
+   
         <!-- Week 19: Grid Network Security -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-1-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Smart grid cyber attack surfaces: smart meters, SCADA networks</span>
+                <button class="simplify-btn" data-topic="Smart grid cyber attack surfaces: smart meters, SCADA networks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-1-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Securing IEC 61850 and DNP3 communications with encryption</span>
+                <button class="simplify-btn" data-topic="Securing IEC 61850 and DNP3 communications with encryption">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-2-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Firewalls rules, intrusion detection systems in substations</span>
+                <button class="simplify-btn" data-topic="Firewalls rules, intrusion detection systems in substations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-2-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Access controls: IAM configurations for grid operators</span>
+                <button class="simplify-btn" data-topic="Access controls: IAM configurations for grid operators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-3-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Black start restoration strategies, microgrid coordination</span>
+                <button class="simplify-btn" data-topic="Black start restoration strategies, microgrid coordination">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-3-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Extreme weather grid hardening, dynamic thermal line rating</span>
+                <button class="simplify-btn" data-topic="Extreme weather grid hardening, dynamic thermal line rating">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-4-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Transactive energy systems, blockchain in smart grids</span>
+                <button class="simplify-btn" data-topic="Transactive energy systems, blockchain in smart grids">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-4-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-4-2" class="checkmark"></label>
                 <span class="topic-text">AI/ML applications in grid load forecasting</span>
+                <button class="simplify-btn" data-topic="AI/ML applications in grid load forecasting">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-5-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-5-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-6-1" class="topic-checkbox">
                 <label for="eee-smart-grid-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="eee-smart-grid-4-6-2" class="topic-checkbox">
                 <label for="eee-smart-grid-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Smart grid cyber attack surfaces: smart meters, SCADA networks?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Smart grid cyber attack surfaces: smart meters, SCADA networks.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Smart grid cyber attack surfaces: smart meters, SCADA networks&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Securing IEC 61850 and DNP3 communications with encryption typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Securing IEC 61850 and DNP3 communications with encryption.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Securing IEC 61850 and DNP3 communications with encryption&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Firewalls rules, intrusion detection systems in substations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Firewalls rules, intrusion detection systems in substations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Firewalls rules, intrusion detection systems in substations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Access controls: IAM configurations for grid operators?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Access controls: IAM configurations for grid operators&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Black start restoration strategies, microgrid coordination?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Black start restoration strategies, microgrid coordination.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Black start restoration strategies, microgrid coordination&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Extreme weather grid hardening, dynamic thermal line rating typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Extreme weather grid hardening, dynamic thermal line rating.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Extreme weather grid hardening, dynamic thermal line rating&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Transactive energy systems, blockchain in smart grids practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Transactive energy systems, blockchain in smart grids systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Transactive energy systems, blockchain in smart grids&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with AI/ML applications in grid load forecasting?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;AI/ML applications in grid load forecasting&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Smart Grid Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Smart grid cyber attack surfaces: smart meters, SCADA networks&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Smart Grid Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Smart grid cyber attack surfaces: smart meters, SCADA networks&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

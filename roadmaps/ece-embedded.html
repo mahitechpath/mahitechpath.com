@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Embedded C & MCU Architecture
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write embedded C, compile bare-metal code, and configure microcontrollers registers.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Embedded C & MCU Architecture
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write embedded C, compile bare-metal code, and configure microcontrollers registers.</p>
+   
         <!-- Week 1: Embedded C Foundations -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-embedded-1-1-1" class="topic-checkbox">
                 <label for="ece-embedded-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Pointers, memory-mapped I/O, volatile, const, static keywords</span>
+                <button class="simplify-btn" data-topic="Pointers, memory-mapped I/O, volatile, const, static keywords">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-embedded-1-1-2" class="topic-checkbox">
                 <label for="ece-embedded-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Bitwise operations, masking, register manipulation, and startup code</span>
+                <button class="simplify-btn" data-topic="Bitwise operations, masking, register manipulation, and startup code">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-embedded-1-2-1" class="topic-checkbox">
                 <label for="ece-embedded-1-2-1" class="checkmark"></label>
                 <span class="topic-text">ARM Cortex-M core registers, stack pointer, link register, memory map</span>
+                <button class="simplify-btn" data-topic="ARM Cortex-M core registers, stack pointer, link register, memory map">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-embedded-1-2-2" class="topic-checkbox">
                 <label for="ece-embedded-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Vector table, reset handler, modes of operation, and assembly basics</span>
+                <button class="simplify-btn" data-topic="Vector table, reset handler, modes of operation, and assembly basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-embedded-1-3-1" class="topic-checkbox">
                 <label for="ece-embedded-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Timer peripherals, prescalers, input capture, output compare, PWM</span>
+                <button class="simplify-btn" data-topic="Timer peripherals, prescalers, input capture, output compare, PWM">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-embedded-1-3-2" class="topic-checkbox">
                 <label for="ece-embedded-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Interrupt controller (NVIC), ISR design, priority, and latency</span>
+                <button class="simplify-btn" data-topic="Interrupt controller (NVIC), ISR design, priority, and latency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-embedded-1-4-1" class="topic-checkbox">
                 <label for="ece-embedded-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Analog-to-digital converters, sampling rate, resolution, DMA transfers</span>
+                <button class="simplify-btn" data-topic="Analog-to-digital converters, sampling rate, resolution, DMA transfers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-embedded-1-4-2" class="topic-checkbox">
                 <label for="ece-embedded-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Interfacing analog temperature sensors, potentiometers, and DAC audio output</span>
+                <button class="simplify-btn" data-topic="Interfacing analog temperature sensors, potentiometers, and DAC audio output">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-embedded-1-5-1" class="topic-checkbox">
                 <label for="ece-embedded-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-embedded-1-5-2" class="topic-checkbox">
                 <label for="ece-embedded-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-embedded-1-6-1" class="topic-checkbox">
                 <label for="ece-embedded-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-embedded-1-6-2" class="topic-checkbox">
                 <label for="ece-embedded-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog-to-digital converters, sampling rate, resolution, DMA transfers&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pointers, memory-mapped I/O, volatile, const, static keywords?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pointers, memory-mapped I/O, volatile, const, static keywords.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pointers, memory-mapped I/O, volatile, const, static keywords&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Bitwise operations, masking, register manipulation, and startup code typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Bitwise operations, masking, register manipulation, and startup code.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Bitwise operations, masking, register manipulation, and startup code&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting ARM Cortex-M core registers, stack pointer, link register, memory map practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of ARM Cortex-M core registers, stack pointer, link register, memory map systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;ARM Cortex-M core registers, stack pointer, link register, memory map&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Vector table, reset handler, modes of operation, and assembly basics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Vector table, reset handler, modes of operation, and assembly basics&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Timer peripherals, prescalers, input capture, output compare, PWM?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Timer peripherals, prescalers, input capture, output compare, PWM.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Timer peripherals, prescalers, input capture, output compare, PWM&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Interrupt controller (NVIC), ISR design, priority, and latency typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Interrupt controller (NVIC), ISR design, priority, and latency.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Interrupt controller (NVIC), ISR design, priority, and latency&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Analog-to-digital converters, sampling rate, resolution, DMA transfers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Analog-to-digital converters, sampling rate, resolution, DMA transfers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog-to-digital converters, sampling rate, resolution, DMA transfers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Interfacing analog temperature sensors, potentiometers, and DAC audio output?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Interfacing analog temperature sensors, potentiometers, and DAC audio output&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Embedded Systems Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pointers, memory-mapped I/O, volatile, const, static keywords&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Communication Protocols
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure serial, SPI, and I2C protocols packet structures.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Communication Protocols
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure serial, SPI, and I2C protocols packet structures.</p>
+   
         <!-- Week 7: UART & USART Serial -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-embedded-2-1-1" class="topic-checkbox">
                 <label for="ece-embedded-2-1-1" class="checkmark"></label>
                 <span class="topic-text">UART frame structure, baud rate calculation, parity, start/stop bits</span>
+                <button class="simplify-btn" data-topic="UART frame structure, baud rate calculation, parity, start/stop bits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-embedded-2-1-2" class="topic-checkbox">
                 <label for="ece-embedded-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Interrupt-driven vs polling UART transceiver drivers</span>
+                <button class="simplify-btn" data-topic="Interrupt-driven vs polling UART transceiver drivers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-embedded-2-2-1" class="topic-checkbox">
                 <label for="ece-embedded-2-2-1" class="checkmark"></label>
                 <span class="topic-text">SPI master-slave wiring, clock polarity (CPOL) and phase (CPHA)</span>
+                <button class="simplify-btn" data-topic="SPI master-slave wiring, clock polarity (CPOL) and phase (CPHA)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-embedded-2-2-2" class="topic-checkbox">
                 <label for="ece-embedded-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Multi-slave wiring configurations and high-speed data transfers</span>
+                <button class="simplify-btn" data-topic="Multi-slave wiring configurations and high-speed data transfers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-embedded-2-3-1" class="topic-checkbox">
                 <label for="ece-embedded-2-3-1" class="checkmark"></label>
                 <span class="topic-text">I2C bus address frames, start/stop conditions, pull-up resistors</span>
+                <button class="simplify-btn" data-topic="I2C bus address frames, start/stop conditions, pull-up resistors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-embedded-2-3-2" class="topic-checkbox">
                 <label for="ece-embedded-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Clock stretching, multi-master arbitration, and data packet structures</span>
+                <button class="simplify-btn" data-topic="Clock stretching, multi-master arbitration, and data packet structures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-embedded-2-4-1" class="topic-checkbox">
                 <label for="ece-embedded-2-4-1" class="checkmark"></label>
                 <span class="topic-text">CAN bus physical layer, differential signaling, identifier frames</span>
+                <button class="simplify-btn" data-topic="CAN bus physical layer, differential signaling, identifier frames">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-embedded-2-4-2" class="topic-checkbox">
                 <label for="ece-embedded-2-4-2" class="checkmark"></label>
                 <span class="topic-text">USB device states, descriptors, and enumeration sequence</span>
+                <button class="simplify-btn" data-topic="USB device states, descriptors, and enumeration sequence">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-embedded-2-5-1" class="topic-checkbox">
                 <label for="ece-embedded-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-embedded-2-5-2" class="topic-checkbox">
                 <label for="ece-embedded-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-embedded-2-6-1" class="topic-checkbox">
                 <label for="ece-embedded-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-embedded-2-6-2" class="topic-checkbox">
                 <label for="ece-embedded-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of UART frame structure, baud rate calculation, parity, start/stop bits?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for UART frame structure, baud rate calculation, parity, start/stop bits.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UART frame structure, baud rate calculation, parity, start/stop bits&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Interrupt-driven vs polling UART transceiver drivers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Interrupt-driven vs polling UART transceiver drivers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Interrupt-driven vs polling UART transceiver drivers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting SPI master-slave wiring, clock polarity (CPOL) and phase (CPHA) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of SPI master-slave wiring, clock polarity (CPOL) and phase (CPHA) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;SPI master-slave wiring, clock polarity (CPOL) and phase (CPHA)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Multi-slave wiring configurations and high-speed data transfers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Multi-slave wiring configurations and high-speed data transfers&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of I2C bus address frames, start/stop conditions, pull-up resistors?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for I2C bus address frames, start/stop conditions, pull-up resistors.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;I2C bus address frames, start/stop conditions, pull-up resistors&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Clock stretching, multi-master arbitration, and data packet structures typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Clock stretching, multi-master arbitration, and data packet structures.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Clock stretching, multi-master arbitration, and data packet structures&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting CAN bus physical layer, differential signaling, identifier frames practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of CAN bus physical layer, differential signaling, identifier frames systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CAN bus physical layer, differential signaling, identifier frames&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with USB device states, descriptors, and enumeration sequence?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;USB device states, descriptors, and enumeration sequence&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Embedded Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UART frame structure, baud rate calculation, parity, start/stop bits&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Embedded Systems Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UART frame structure, baud rate calculation, parity, start/stop bits&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Real-Time Operating Systems (RTOS)
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure RTOS task scheduler, solve priority inversions, and set context transitions.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Real-Time Operating Systems (RTOS)
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure RTOS task scheduler, solve priority inversions, and set context transitions.</p>
+   
         <!-- Week 13: RTOS Kernel Concepts -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-embedded-3-1-1" class="topic-checkbox">
                 <label for="ece-embedded-3-1-1" class="checkmark"></label>
                 <span class="topic-text">RTOS task creation, states (running, ready, blocked), task priorities</span>
+                <button class="simplify-btn" data-topic="RTOS task creation, states (running, ready, blocked), task priorities">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-embedded-3-1-2" class="topic-checkbox">
                 <label for="ece-embedded-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Context switching, scheduling algorithms (Round Robin, Rate Monotonic)</span>
+                <button class="simplify-btn" data-topic="Context switching, scheduling algorithms (Round Robin, Rate Monotonic)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-embedded-3-2-1" class="topic-checkbox">
                 <label for="ece-embedded-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Binary and counting semaphores, mutexes, and critical sections</span>
+                <button class="simplify-btn" data-topic="Binary and counting semaphores, mutexes, and critical sections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-embedded-3-2-2" class="topic-checkbox">
                 <label for="ece-embedded-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Priority inversion problem and priority inheritance/ceiling protocols</span>
+                <button class="simplify-btn" data-topic="Priority inversion problem and priority inheritance/ceiling protocols">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-embedded-3-3-1" class="topic-checkbox">
                 <label for="ece-embedded-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Message queues, mailboxes, event groups, and task notifications</span>
+                <button class="simplify-btn" data-topic="Message queues, mailboxes, event groups, and task notifications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-embedded-3-3-2" class="topic-checkbox">
                 <label for="ece-embedded-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Reentrancy, thread safety, and memory management inside RTOS</span>
+                <button class="simplify-btn" data-topic="Reentrancy, thread safety, and memory management inside RTOS">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-embedded-3-4-1" class="topic-checkbox">
                 <label for="ece-embedded-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Software timers, tickless idle mode for low power, hook functions</span>
+                <button class="simplify-btn" data-topic="Software timers, tickless idle mode for low power, hook functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-embedded-3-4-2" class="topic-checkbox">
                 <label for="ece-embedded-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Debugging RTOS tasks, stack overflow detection, and runtime stats</span>
+                <button class="simplify-btn" data-topic="Debugging RTOS tasks, stack overflow detection, and runtime stats">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-embedded-3-5-1" class="topic-checkbox">
                 <label for="ece-embedded-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-embedded-3-5-2" class="topic-checkbox">
                 <label for="ece-embedded-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-embedded-3-6-1" class="topic-checkbox">
                 <label for="ece-embedded-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-embedded-3-6-2" class="topic-checkbox">
                 <label for="ece-embedded-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of RTOS task creation, states (running, ready, blocked), task priorities?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for RTOS task creation, states (running, ready, blocked), task priorities.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RTOS task creation, states (running, ready, blocked), task priorities&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Context switching, scheduling algorithms (Round Robin, Rate Monotonic) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Context switching, scheduling algorithms (Round Robin, Rate Monotonic).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Context switching, scheduling algorithms (Round Robin, Rate Monotonic)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Binary and counting semaphores, mutexes, and critical sections practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Binary and counting semaphores, mutexes, and critical sections systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Binary and counting semaphores, mutexes, and critical sections&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Priority inversion problem and priority inheritance/ceiling protocols?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Priority inversion problem and priority inheritance/ceiling protocols&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Message queues, mailboxes, event groups, and task notifications?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Message queues, mailboxes, event groups, and task notifications.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Message queues, mailboxes, event groups, and task notifications&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Reentrancy, thread safety, and memory management inside RTOS typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Reentrancy, thread safety, and memory management inside RTOS.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reentrancy, thread safety, and memory management inside RTOS&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Software timers, tickless idle mode for low power, hook functions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Software timers, tickless idle mode for low power, hook functions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Software timers, tickless idle mode for low power, hook functions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Debugging RTOS tasks, stack overflow detection, and runtime stats?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Debugging RTOS tasks, stack overflow detection, and runtime stats&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Embedded Systems Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RTOS task creation, states (running, ready, blocked), task priorities&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Embedded Systems Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;RTOS task creation, states (running, ready, blocked), task priorities&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Drivers, Kernel & Debugging
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write device drivers, compile custom Linux kernel, and debug hardware signals.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Drivers, Kernel & Debugging
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write device drivers, compile custom Linux kernel, and debug hardware signals.</p>
+   
         <!-- Week 19: Embedded Linux Foundations -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-embedded-4-1-1" class="topic-checkbox">
                 <label for="ece-embedded-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Bootloader (U-Boot), Linux kernel configuration, and root filesystem</span>
+                <button class="simplify-btn" data-topic="Bootloader (U-Boot), Linux kernel configuration, and root filesystem">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-embedded-4-1-2" class="topic-checkbox">
                 <label for="ece-embedded-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Cross-compilation toolchains and building custom images with Yocto</span>
+                <button class="simplify-btn" data-topic="Cross-compilation toolchains and building custom images with Yocto">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-embedded-4-2-1" class="topic-checkbox">
                 <label for="ece-embedded-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Writing basic character driver, file operations, devicetree bindings</span>
+                <button class="simplify-btn" data-topic="Writing basic character driver, file operations, devicetree bindings">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-embedded-4-2-2" class="topic-checkbox">
                 <label for="ece-embedded-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Kernel module loading/unloading, interrupts, and sysfs interfaces</span>
+                <button class="simplify-btn" data-topic="Kernel module loading/unloading, interrupts, and sysfs interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="ece-embedded-4-3-1" class="topic-checkbox">
                 <label for="ece-embedded-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Sleep modes (light, deep, hibernation), wake-up sources, clock gating</span>
+                <button class="simplify-btn" data-topic="Sleep modes (light, deep, hibernation), wake-up sources, clock gating">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="ece-embedded-4-3-2" class="topic-checkbox">
                 <label for="ece-embedded-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Battery-operated device power budgeting and profiling tools</span>
+                <button class="simplify-btn" data-topic="Battery-operated device power budgeting and profiling tools">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-embedded-4-4-1" class="topic-checkbox">
                 <label for="ece-embedded-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Hardware debugging with JTAG/SWD, GDB server, and logic analyzers</span>
+                <button class="simplify-btn" data-topic="Hardware debugging with JTAG/SWD, GDB server, and logic analyzers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-embedded-4-4-2" class="topic-checkbox">
                 <label for="ece-embedded-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Oscilloscope diagnostics, logic analyzer traces, and serial logging</span>
+                <button class="simplify-btn" data-topic="Oscilloscope diagnostics, logic analyzer traces, and serial logging">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-embedded-4-5-1" class="topic-checkbox">
                 <label for="ece-embedded-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-embedded-4-5-2" class="topic-checkbox">
                 <label for="ece-embedded-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-embedded-4-6-1" class="topic-checkbox">
                 <label for="ece-embedded-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-embedded-4-6-2" class="topic-checkbox">
                 <label for="ece-embedded-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Bootloader (U-Boot), Linux kernel configuration, and root filesystem?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Bootloader (U-Boot), Linux kernel configuration, and root filesystem.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bootloader (U-Boot), Linux kernel configuration, and root filesystem&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Cross-compilation toolchains and building custom images with Yocto typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Cross-compilation toolchains and building custom images with Yocto.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Cross-compilation toolchains and building custom images with Yocto&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Writing basic character driver, file operations, devicetree bindings practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Writing basic character driver, file operations, devicetree bindings systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing basic character driver, file operations, devicetree bindings&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Kernel module loading/unloading, interrupts, and sysfs interfaces?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Kernel module loading/unloading, interrupts, and sysfs interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Sleep modes (light, deep, hibernation), wake-up sources, clock gating?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Sleep modes (light, deep, hibernation), wake-up sources, clock gating.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Sleep modes (light, deep, hibernation), wake-up sources, clock gating&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Battery-operated device power budgeting and profiling tools typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Battery-operated device power budgeting and profiling tools.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Battery-operated device power budgeting and profiling tools&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Hardware debugging with JTAG/SWD, GDB server, and logic analyzers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Hardware debugging with JTAG/SWD, GDB server, and logic analyzers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Hardware debugging with JTAG/SWD, GDB server, and logic analyzers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Oscilloscope diagnostics, logic analyzer traces, and serial logging?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Oscilloscope diagnostics, logic analyzer traces, and serial logging&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Embedded Systems Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bootloader (U-Boot), Linux kernel configuration, and root filesystem&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Embedded Systems Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Bootloader (U-Boot), Linux kernel configuration, and root filesystem&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

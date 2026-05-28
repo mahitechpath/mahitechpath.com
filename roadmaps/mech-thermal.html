@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Thermodynamics Foundations
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master thermodynamic laws, pure substances properties, air-standard cycles, and entropy.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Thermodynamics Foundations
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master thermodynamic laws, pure substances properties, air-standard cycles, and entropy.</p>
+   
         <!-- Week 1: Laws of Thermodynamics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-thermal-1-1-1" class="topic-checkbox">
                 <label for="mech-thermal-1-1-1" class="checkmark"></label>
                 <span class="topic-text">First Law for open/closed systems, transient flow equations</span>
+                <button class="simplify-btn" data-topic="First Law for open/closed systems, transient flow equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-thermal-1-1-2" class="topic-checkbox">
                 <label for="mech-thermal-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Second Law: Kelvin-Planck and Clausius statements, Carnot cycle</span>
+                <button class="simplify-btn" data-topic="Second Law: Kelvin-Planck and Clausius statements, Carnot cycle">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-thermal-1-2-1" class="topic-checkbox">
                 <label for="mech-thermal-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Entropy change of ideal gas, Clausius inequality, exergy analysis</span>
+                <button class="simplify-btn" data-topic="Entropy change of ideal gas, Clausius inequality, exergy analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-thermal-1-2-2" class="topic-checkbox">
                 <label for="mech-thermal-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Reversibility, irreversibility, second-law efficiency calculations</span>
+                <button class="simplify-btn" data-topic="Reversibility, irreversibility, second-law efficiency calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-thermal-1-3-1" class="topic-checkbox">
                 <label for="mech-thermal-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Steam formation phases, dryness fraction, P-V, T-S, Mollier diagrams</span>
+                <button class="simplify-btn" data-topic="Steam formation phases, dryness fraction, P-V, T-S, Mollier diagrams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-thermal-1-3-2" class="topic-checkbox">
                 <label for="mech-thermal-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Throttling and separating calorimeters calculations</span>
+                <button class="simplify-btn" data-topic="Throttling and separating calorimeters calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-thermal-1-4-1" class="topic-checkbox">
                 <label for="mech-thermal-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Otto, Diesel, Dual cycle air-standard efficiency derivations</span>
+                <button class="simplify-btn" data-topic="Otto, Diesel, Dual cycle air-standard efficiency derivations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-thermal-1-4-2" class="topic-checkbox">
                 <label for="mech-thermal-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Mean effective pressure (MEP), compression ratio tradeoffs</span>
+                <button class="simplify-btn" data-topic="Mean effective pressure (MEP), compression ratio tradeoffs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-thermal-1-5-1" class="topic-checkbox">
                 <label for="mech-thermal-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-thermal-1-5-2" class="topic-checkbox">
                 <label for="mech-thermal-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of First Law for open/closed systems, transient flow equations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for First Law for open/closed systems, transient flow equations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First Law for open/closed systems, transient flow equations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Second Law: Kelvin-Planck and Clausius statements, Carnot cycle typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Second Law: Kelvin-Planck and Clausius statements, Carnot cycle.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Second Law: Kelvin-Planck and Clausius statements, Carnot cycle&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Entropy change of ideal gas, Clausius inequality, exergy analysis practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Entropy change of ideal gas, Clausius inequality, exergy analysis systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Entropy change of ideal gas, Clausius inequality, exergy analysis&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Reversibility, irreversibility, second-law efficiency calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Reversibility, irreversibility, second-law efficiency calculations&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Steam formation phases, dryness fraction, P-V, T-S, Mollier diagrams?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Steam formation phases, dryness fraction, P-V, T-S, Mollier diagrams.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Steam formation phases, dryness fraction, P-V, T-S, Mollier diagrams&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Throttling and separating calorimeters calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Throttling and separating calorimeters calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Throttling and separating calorimeters calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Otto, Diesel, Dual cycle air-standard efficiency derivations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Otto, Diesel, Dual cycle air-standard efficiency derivations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Otto, Diesel, Dual cycle air-standard efficiency derivations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Mean effective pressure (MEP), compression ratio tradeoffs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Mean effective pressure (MEP), compression ratio tradeoffs&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Thermal Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First Law for open/closed systems, transient flow equations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Thermal Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First Law for open/closed systems, transient flow equations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Steam & Gas Power Plants
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Rankine cycles, steam generators, steam turbines, and gas turbines.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Steam & Gas Power Plants
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study Rankine cycles, steam generators, steam turbines, and gas turbines.</p>
+   
         <!-- Week 6: Rankine Cycle -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="mech-thermal-2-1-1" class="topic-checkbox">
                 <label for="mech-thermal-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Rankine steam cycle, reheat and regenerative configurations</span>
+                <button class="simplify-btn" data-topic="Rankine steam cycle, reheat and regenerative configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="mech-thermal-2-1-2" class="topic-checkbox">
                 <label for="mech-thermal-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Feedwater heaters (open/closed), cogeneration basics</span>
+                <button class="simplify-btn" data-topic="Feedwater heaters (open/closed), cogeneration basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-thermal-2-2-1" class="topic-checkbox">
                 <label for="mech-thermal-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Boiler mountings, accessories, draught (natural, forced)</span>
+                <button class="simplify-btn" data-topic="Boiler mountings, accessories, draught (natural, forced)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-thermal-2-2-2" class="topic-checkbox">
                 <label for="mech-thermal-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Condenser types, vacuum efficiency, condenser cooling systems</span>
+                <button class="simplify-btn" data-topic="Condenser types, vacuum efficiency, condenser cooling systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-thermal-2-3-1" class="topic-checkbox">
                 <label for="mech-thermal-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Impulse and reaction turbines, compounding methods (pressure, velocity)</span>
+                <button class="simplify-btn" data-topic="Impulse and reaction turbines, compounding methods (pressure, velocity)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-thermal-2-3-2" class="topic-checkbox">
                 <label for="mech-thermal-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Velocity triangles, work done, blade efficiency calculations</span>
+                <button class="simplify-btn" data-topic="Velocity triangles, work done, blade efficiency calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-thermal-2-4-1" class="topic-checkbox">
                 <label for="mech-thermal-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Brayton cycle with intercooling, reheat, and regeneration</span>
+                <button class="simplify-btn" data-topic="Brayton cycle with intercooling, reheat, and regeneration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-thermal-2-4-2" class="topic-checkbox">
                 <label for="mech-thermal-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Turbojet, turboprop, turbofan engine cycles, propulsion efficiency</span>
+                <button class="simplify-btn" data-topic="Turbojet, turboprop, turbofan engine cycles, propulsion efficiency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-thermal-2-5-1" class="topic-checkbox">
                 <label for="mech-thermal-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-thermal-2-5-2" class="topic-checkbox">
                 <label for="mech-thermal-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Impulse and reaction turbines, compounding methods (pressure, velocity)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Rankine steam cycle, reheat and regenerative configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Rankine steam cycle, reheat and regenerative configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rankine steam cycle, reheat and regenerative configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Feedwater heaters (open/closed), cogeneration basics typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Feedwater heaters (open/closed), cogeneration basics.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Feedwater heaters (open/closed), cogeneration basics&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Boiler mountings, accessories, draught (natural, forced) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Boiler mountings, accessories, draught (natural, forced) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Boiler mountings, accessories, draught (natural, forced)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Condenser types, vacuum efficiency, condenser cooling systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Condenser types, vacuum efficiency, condenser cooling systems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Impulse and reaction turbines, compounding methods (pressure, velocity)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Impulse and reaction turbines, compounding methods (pressure, velocity).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Impulse and reaction turbines, compounding methods (pressure, velocity)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Velocity triangles, work done, blade efficiency calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Velocity triangles, work done, blade efficiency calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Velocity triangles, work done, blade efficiency calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Brayton cycle with intercooling, reheat, and regeneration practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Brayton cycle with intercooling, reheat, and regeneration systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Brayton cycle with intercooling, reheat, and regeneration&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Turbojet, turboprop, turbofan engine cycles, propulsion efficiency?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Turbojet, turboprop, turbofan engine cycles, propulsion efficiency&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Thermal Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rankine steam cycle, reheat and regenerative configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Heat & Mass Transfer
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study conduction, fins, transient heat, convection (laminar/turbulent), and radiation.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Heat & Mass Transfer
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study conduction, fins, transient heat, convection (laminar/turbulent), and radiation.</p>
+   
         <!-- Week 11: Conduction Heat Transfer -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="mech-thermal-3-1-1" class="topic-checkbox">
                 <label for="mech-thermal-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Fourier's law, 1D steady conduction in cylinder/sphere</span>
+                <button class="simplify-btn" data-topic="Fourier's law, 1D steady conduction in cylinder/sphere">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="mech-thermal-3-1-2" class="topic-checkbox">
                 <label for="mech-thermal-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Critical thickness of insulation, heat source conduction</span>
+                <button class="simplify-btn" data-topic="Critical thickness of insulation, heat source conduction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="mech-thermal-3-2-1" class="topic-checkbox">
                 <label for="mech-thermal-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Fins of uniform cross-section, effectiveness and efficiency</span>
+                <button class="simplify-btn" data-topic="Fins of uniform cross-section, effectiveness and efficiency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="mech-thermal-3-2-2" class="topic-checkbox">
                 <label for="mech-thermal-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Lumped parameter analysis, Biot and Fourier numbers</span>
+                <button class="simplify-btn" data-topic="Lumped parameter analysis, Biot and Fourier numbers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-thermal-3-3-1" class="topic-checkbox">
                 <label for="mech-thermal-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Laminar and turbulent boundary layers, convective coefficient</span>
+                <button class="simplify-btn" data-topic="Laminar and turbulent boundary layers, convective coefficient">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-thermal-3-3-2" class="topic-checkbox">
                 <label for="mech-thermal-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Forced and natural convection, Nusselt, Prandtl, Grashof numbers</span>
+                <button class="simplify-btn" data-topic="Forced and natural convection, Nusselt, Prandtl, Grashof numbers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-thermal-3-4-1" class="topic-checkbox">
                 <label for="mech-thermal-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Blackbody radiation, Stefan-Boltzmann law, Planck's distribution</span>
+                <button class="simplify-btn" data-topic="Blackbody radiation, Stefan-Boltzmann law, Planck's distribution">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-thermal-3-4-2" class="topic-checkbox">
                 <label for="mech-thermal-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Radiation heat exchange between gray surfaces, shape factors</span>
+                <button class="simplify-btn" data-topic="Radiation heat exchange between gray surfaces, shape factors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-thermal-3-5-1" class="topic-checkbox">
                 <label for="mech-thermal-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-thermal-3-5-2" class="topic-checkbox">
                 <label for="mech-thermal-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Fourier's law, 1D steady conduction in cylinder/sphere?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Fourier's law, 1D steady conduction in cylinder/sphere.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fourier's law, 1D steady conduction in cylinder/sphere&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Critical thickness of insulation, heat source conduction typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Critical thickness of insulation, heat source conduction.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Critical thickness of insulation, heat source conduction&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Fins of uniform cross-section, effectiveness and efficiency practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Fins of uniform cross-section, effectiveness and efficiency systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Fins of uniform cross-section, effectiveness and efficiency&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Lumped parameter analysis, Biot and Fourier numbers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Lumped parameter analysis, Biot and Fourier numbers&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Laminar and turbulent boundary layers, convective coefficient?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Laminar and turbulent boundary layers, convective coefficient.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Laminar and turbulent boundary layers, convective coefficient&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Forced and natural convection, Nusselt, Prandtl, Grashof numbers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Forced and natural convection, Nusselt, Prandtl, Grashof numbers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Forced and natural convection, Nusselt, Prandtl, Grashof numbers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Blackbody radiation, Stefan-Boltzmann law, Planck's distribution practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Blackbody radiation, Stefan-Boltzmann law, Planck's distribution systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Blackbody radiation, Stefan-Boltzmann law, Planck's distribution&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Radiation heat exchange between gray surfaces, shape factors?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Radiation heat exchange between gray surfaces, shape factors&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Thermal Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fourier's law, 1D steady conduction in cylinder/sphere&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Thermal Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Fourier's law, 1D steady conduction in cylinder/sphere&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Refrigeration, Air Conditioning & Exchangers
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study vapor compression cycle, psychrometric processes, and heat exchangers design.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Refrigeration, Air Conditioning & Exchangers
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study vapor compression cycle, psychrometric processes, and heat exchangers design.</p>
+   
         <!-- Week 16: Refrigeration Cycles -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="mech-thermal-4-1-1" class="topic-checkbox">
                 <label for="mech-thermal-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP</span>
+                <button class="simplify-btn" data-topic="Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="mech-thermal-4-1-2" class="topic-checkbox">
                 <label for="mech-thermal-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Vapor Absorption Refrigeration (VAR) cycle, eco-friendly refrigerants</span>
+                <button class="simplify-btn" data-topic="Vapor Absorption Refrigeration (VAR) cycle, eco-friendly refrigerants">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="mech-thermal-4-2-1" class="topic-checkbox">
                 <label for="mech-thermal-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Psychrometric properties, relative humidity, psychrometric chart</span>
+                <button class="simplify-btn" data-topic="Psychrometric properties, relative humidity, psychrometric chart">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="mech-thermal-4-2-2" class="topic-checkbox">
                 <label for="mech-thermal-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Heating, cooling, humidification, dehumidification, bypass factor</span>
+                <button class="simplify-btn" data-topic="Heating, cooling, humidification, dehumidification, bypass factor">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="mech-thermal-4-3-1" class="topic-checkbox">
                 <label for="mech-thermal-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Double pipe, shell and tube, cross-flow heat exchangers</span>
+                <button class="simplify-btn" data-topic="Double pipe, shell and tube, cross-flow heat exchangers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="mech-thermal-4-3-2" class="topic-checkbox">
                 <label for="mech-thermal-4-3-2" class="checkmark"></label>
                 <span class="topic-text">LMTD method, NTU-effectiveness method of design</span>
+                <button class="simplify-btn" data-topic="LMTD method, NTU-effectiveness method of design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-thermal-4-4-1" class="topic-checkbox">
                 <label for="mech-thermal-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Solar thermal collectors, geothermal, concentrated solar power</span>
+                <button class="simplify-btn" data-topic="Solar thermal collectors, geothermal, concentrated solar power">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-thermal-4-4-2" class="topic-checkbox">
                 <label for="mech-thermal-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Thermal energy storage, phase change materials (PCMs)</span>
+                <button class="simplify-btn" data-topic="Thermal energy storage, phase change materials (PCMs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-thermal-4-5-1" class="topic-checkbox">
                 <label for="mech-thermal-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-thermal-4-5-2" class="topic-checkbox">
                 <label for="mech-thermal-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Vapor Absorption Refrigeration (VAR) cycle, eco-friendly refrigerants typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Vapor Absorption Refrigeration (VAR) cycle, eco-friendly refrigerants.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Vapor Absorption Refrigeration (VAR) cycle, eco-friendly refrigerants&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Psychrometric properties, relative humidity, psychrometric chart practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Psychrometric properties, relative humidity, psychrometric chart systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Psychrometric properties, relative humidity, psychrometric chart&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Heating, cooling, humidification, dehumidification, bypass factor?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Heating, cooling, humidification, dehumidification, bypass factor&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Double pipe, shell and tube, cross-flow heat exchangers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Double pipe, shell and tube, cross-flow heat exchangers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Double pipe, shell and tube, cross-flow heat exchangers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is LMTD method, NTU-effectiveness method of design typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of LMTD method, NTU-effectiveness method of design.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;LMTD method, NTU-effectiveness method of design&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Solar thermal collectors, geothermal, concentrated solar power practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Solar thermal collectors, geothermal, concentrated solar power systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Solar thermal collectors, geothermal, concentrated solar power&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Thermal energy storage, phase change materials (PCMs)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Thermal energy storage, phase change materials (PCMs)&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Thermal Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Thermal Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Vapor Compression Refrigeration (VCR) cycle, p-h diagrams, COP&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

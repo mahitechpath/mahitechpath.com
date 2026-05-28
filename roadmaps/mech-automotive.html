@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Engine Systems & Emissions
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master IC engine components, fuel supply, ignition, cooling, and emissions.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Engine Systems & Emissions
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master IC engine components, fuel supply, ignition, cooling, and emissions.</p>
+   
         <!-- Week 1: IC Engine Architecture -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-automotive-1-1-1" class="topic-checkbox">
                 <label for="mech-automotive-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Engine components: cylinder block, piston, crankshaft, valves, cams</span>
+                <button class="simplify-btn" data-topic="Engine components: cylinder block, piston, crankshaft, valves, cams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-automotive-1-1-2" class="topic-checkbox">
                 <label for="mech-automotive-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Four-stroke vs two-stroke cycles, valve timing diagrams</span>
+                <button class="simplify-btn" data-topic="Four-stroke vs two-stroke cycles, valve timing diagrams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-automotive-1-2-1" class="topic-checkbox">
                 <label for="mech-automotive-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Carburettor working, Multi-Point Fuel Injection (MPFI), CRDI</span>
+                <button class="simplify-btn" data-topic="Carburettor working, Multi-Point Fuel Injection (MPFI), CRDI">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-automotive-1-2-2" class="topic-checkbox">
                 <label for="mech-automotive-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Spark ignition (SI) and Compression ignition (CI) delay times</span>
+                <button class="simplify-btn" data-topic="Spark ignition (SI) and Compression ignition (CI) delay times">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-automotive-1-3-1" class="topic-checkbox">
                 <label for="mech-automotive-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Liquid cooling radiators, thermostat operation, water jackets</span>
+                <button class="simplify-btn" data-topic="Liquid cooling radiators, thermostat operation, water jackets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-automotive-1-3-2" class="topic-checkbox">
                 <label for="mech-automotive-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Engine lubrication: splash/pressure systems, oil viscosity</span>
+                <button class="simplify-btn" data-topic="Engine lubrication: splash/pressure systems, oil viscosity">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-automotive-1-4-1" class="topic-checkbox">
                 <label for="mech-automotive-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Indicated/brake power, Morse test, fuel consumption metrics</span>
+                <button class="simplify-btn" data-topic="Indicated/brake power, Morse test, fuel consumption metrics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-automotive-1-4-2" class="topic-checkbox">
                 <label for="mech-automotive-1-4-2" class="checkmark"></label>
                 <span class="topic-text">BS-VI and Euro 6 emission standards, catalytic converters, EGR</span>
+                <button class="simplify-btn" data-topic="BS-VI and Euro 6 emission standards, catalytic converters, EGR">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-automotive-1-5-1" class="topic-checkbox">
                 <label for="mech-automotive-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-automotive-1-5-2" class="topic-checkbox">
                 <label for="mech-automotive-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="mech-automotive-1-6-1" class="topic-checkbox">
                 <label for="mech-automotive-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="mech-automotive-1-6-2" class="topic-checkbox">
                 <label for="mech-automotive-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="mech-automotive-1-7-1" class="topic-checkbox">
                 <label for="mech-automotive-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="mech-automotive-1-7-2" class="topic-checkbox">
                 <label for="mech-automotive-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -545,16 +560,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Engine components: cylinder block, piston, crankshaft, valves, cams?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Engine components: cylinder block, piston, crankshaft, valves, cams.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Engine components: cylinder block, piston, crankshaft, valves, cams&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Four-stroke vs two-stroke cycles, valve timing diagrams typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Four-stroke vs two-stroke cycles, valve timing diagrams.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Four-stroke vs two-stroke cycles, valve timing diagrams&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Carburettor working, Multi-Point Fuel Injection (MPFI), CRDI practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Carburettor working, Multi-Point Fuel Injection (MPFI), CRDI systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Carburettor working, Multi-Point Fuel Injection (MPFI), CRDI&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Spark ignition (SI) and Compression ignition (CI) delay times?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Spark ignition (SI) and Compression ignition (CI) delay times&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Liquid cooling radiators, thermostat operation, water jackets?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Liquid cooling radiators, thermostat operation, water jackets.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Liquid cooling radiators, thermostat operation, water jackets&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Engine lubrication: splash/pressure systems, oil viscosity typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Engine lubrication: splash/pressure systems, oil viscosity.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Engine lubrication: splash/pressure systems, oil viscosity&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Indicated/brake power, Morse test, fuel consumption metrics practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Indicated/brake power, Morse test, fuel consumption metrics systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Indicated/brake power, Morse test, fuel consumption metrics&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with BS-VI and Euro 6 emission standards, catalytic converters, EGR?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;BS-VI and Euro 6 emission standards, catalytic converters, EGR&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Automotive Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Engine components: cylinder block, piston, crankshaft, valves, cams&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Automotive Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Engine components: cylinder block, piston, crankshaft, valves, cams&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Drivetrain & Transmission
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study clutches, gearboxes, propeller shafts, differentials, and drive axles.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Drivetrain & Transmission
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study clutches, gearboxes, propeller shafts, differentials, and drive axles.</p>
+   
         <!-- Week 8: Clutches -->
         <div class="week-card">
           <div class="week-header">
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-automotive-2-1-1" class="topic-checkbox">
                 <label for="mech-automotive-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Single-plate, multi-plate, diaphragm clutches friction calculations</span>
+                <button class="simplify-btn" data-topic="Single-plate, multi-plate, diaphragm clutches friction calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-automotive-2-1-2" class="topic-checkbox">
                 <label for="mech-automotive-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Centrifugal clutches, fluid coupling, torque converters</span>
+                <button class="simplify-btn" data-topic="Centrifugal clutches, fluid coupling, torque converters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-automotive-2-2-1" class="topic-checkbox">
                 <label for="mech-automotive-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Manual gearboxes: sliding mesh, constant mesh, synchromesh</span>
+                <button class="simplify-btn" data-topic="Manual gearboxes: sliding mesh, constant mesh, synchromesh">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-automotive-2-2-2" class="topic-checkbox">
                 <label for="mech-automotive-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Epicyclic gear train gearboxes, automatic transmission (AT/CVT)</span>
+                <button class="simplify-btn" data-topic="Epicyclic gear train gearboxes, automatic transmission (AT/CVT)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-automotive-2-3-1" class="topic-checkbox">
                 <label for="mech-automotive-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Propeller shaft, universal joints, slip joint, final drive gears</span>
+                <button class="simplify-btn" data-topic="Propeller shaft, universal joints, slip joint, final drive gears">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-automotive-2-3-2" class="topic-checkbox">
                 <label for="mech-automotive-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Differential working, slip limiting differential, differential lock</span>
+                <button class="simplify-btn" data-topic="Differential working, slip limiting differential, differential lock">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="mech-automotive-2-4-1" class="topic-checkbox">
                 <label for="mech-automotive-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Front-wheel drive, rear-wheel drive, four-wheel drive layouts</span>
+                <button class="simplify-btn" data-topic="Front-wheel drive, rear-wheel drive, four-wheel drive layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="mech-automotive-2-4-2" class="topic-checkbox">
                 <label for="mech-automotive-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Semi-floating, three-quarter floating, fully floating rear axles</span>
+                <button class="simplify-btn" data-topic="Semi-floating, three-quarter floating, fully floating rear axles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="mech-automotive-2-5-1" class="topic-checkbox">
                 <label for="mech-automotive-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="mech-automotive-2-5-2" class="topic-checkbox">
                 <label for="mech-automotive-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="mech-automotive-2-6-1" class="topic-checkbox">
                 <label for="mech-automotive-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="mech-automotive-2-6-2" class="topic-checkbox">
                 <label for="mech-automotive-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="mech-automotive-2-7-1" class="topic-checkbox">
                 <label for="mech-automotive-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="mech-automotive-2-7-2" class="topic-checkbox">
                 <label for="mech-automotive-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -982,16 +1026,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Single-plate, multi-plate, diaphragm clutches friction calculations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Single-plate, multi-plate, diaphragm clutches friction calculations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Single-plate, multi-plate, diaphragm clutches friction calculations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Centrifugal clutches, fluid coupling, torque converters typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Centrifugal clutches, fluid coupling, torque converters.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Centrifugal clutches, fluid coupling, torque converters&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Manual gearboxes: sliding mesh, constant mesh, synchromesh practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Manual gearboxes: sliding mesh, constant mesh, synchromesh systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Manual gearboxes: sliding mesh, constant mesh, synchromesh&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Epicyclic gear train gearboxes, automatic transmission (AT/CVT)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Epicyclic gear train gearboxes, automatic transmission (AT/CVT)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Propeller shaft, universal joints, slip joint, final drive gears?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Propeller shaft, universal joints, slip joint, final drive gears.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Propeller shaft, universal joints, slip joint, final drive gears&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Differential working, slip limiting differential, differential lock typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Differential working, slip limiting differential, differential lock.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Differential working, slip limiting differential, differential lock&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Front-wheel drive, rear-wheel drive, four-wheel drive layouts practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Front-wheel drive, rear-wheel drive, four-wheel drive layouts systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Front-wheel drive, rear-wheel drive, four-wheel drive layouts&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Semi-floating, three-quarter floating, fully floating rear axles?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Semi-floating, three-quarter floating, fully floating rear axles&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Automotive Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Single-plate, multi-plate, diaphragm clutches friction calculations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Automotive Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Single-plate, multi-plate, diaphragm clutches friction calculations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Steering, Brakes & Suspension
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master steering geometry, hydraulic/pneumatic brakes, ABS, and suspension springs.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Steering, Brakes & Suspension
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master steering geometry, hydraulic/pneumatic brakes, ABS, and suspension springs.</p>
+   
         <!-- Week 15: Steering System -->
         <div class="week-card">
           <div class="week-header">
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-automotive-3-1-1" class="topic-checkbox">
                 <label for="mech-automotive-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Ackerman and Davis steering geometries, steering gears</span>
+                <button class="simplify-btn" data-topic="Ackerman and Davis steering geometries, steering gears">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-automotive-3-1-2" class="topic-checkbox">
                 <label for="mech-automotive-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Caster, camber, toe-in/toe-out, power steering (hydraulic/electric)</span>
+                <button class="simplify-btn" data-topic="Caster, camber, toe-in/toe-out, power steering (hydraulic/electric)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="mech-automotive-3-2-1" class="topic-checkbox">
                 <label for="mech-automotive-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Drum and disc brakes, mechanical, hydraulic, pneumatic actuators</span>
+                <button class="simplify-btn" data-topic="Drum and disc brakes, mechanical, hydraulic, pneumatic actuators">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="mech-automotive-3-2-2" class="topic-checkbox">
                 <label for="mech-automotive-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Master cylinder, tandem cylinder, Anti-lock Braking System (ABS)</span>
+                <button class="simplify-btn" data-topic="Master cylinder, tandem cylinder, Anti-lock Braking System (ABS)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="mech-automotive-3-3-1" class="topic-checkbox">
                 <label for="mech-automotive-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Rigid axle vs independent suspensions, double wishbone, MacPherson</span>
+                <button class="simplify-btn" data-topic="Rigid axle vs independent suspensions, double wishbone, MacPherson">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="mech-automotive-3-3-2" class="topic-checkbox">
                 <label for="mech-automotive-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Leaf springs, coil springs, torsion bars, shock absorbers</span>
+                <button class="simplify-btn" data-topic="Leaf springs, coil springs, torsion bars, shock absorbers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="mech-automotive-3-4-1" class="topic-checkbox">
                 <label for="mech-automotive-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Spoked, pressed steel, alloy wheels, tyre construction (radial/bias)</span>
+                <button class="simplify-btn" data-topic="Spoked, pressed steel, alloy wheels, tyre construction (radial/bias)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="mech-automotive-3-4-2" class="topic-checkbox">
                 <label for="mech-automotive-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Tyre wear, wheel balancing, and tyre designations</span>
+                <button class="simplify-btn" data-topic="Tyre wear, wheel balancing, and tyre designations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1248,6 +1315,7 @@
                 <input type="checkbox" id="mech-automotive-3-5-1" class="topic-checkbox">
                 <label for="mech-automotive-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1274,6 +1342,7 @@
                 <input type="checkbox" id="mech-automotive-3-5-2" class="topic-checkbox">
                 <label for="mech-automotive-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1309,6 +1378,7 @@
                 <input type="checkbox" id="mech-automotive-3-6-1" class="topic-checkbox">
                 <label for="mech-automotive-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1335,6 +1405,7 @@
                 <input type="checkbox" id="mech-automotive-3-6-2" class="topic-checkbox">
                 <label for="mech-automotive-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="mech-automotive-3-7-1" class="topic-checkbox">
                 <label for="mech-automotive-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="mech-automotive-3-7-2" class="topic-checkbox">
                 <label for="mech-automotive-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1419,16 +1492,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Ackerman and Davis steering geometries, steering gears?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Ackerman and Davis steering geometries, steering gears.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ackerman and Davis steering geometries, steering gears&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Caster, camber, toe-in/toe-out, power steering (hydraulic/electric) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Caster, camber, toe-in/toe-out, power steering (hydraulic/electric).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Caster, camber, toe-in/toe-out, power steering (hydraulic/electric)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Drum and disc brakes, mechanical, hydraulic, pneumatic actuators practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Drum and disc brakes, mechanical, hydraulic, pneumatic actuators systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Drum and disc brakes, mechanical, hydraulic, pneumatic actuators&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Master cylinder, tandem cylinder, Anti-lock Braking System (ABS)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Master cylinder, tandem cylinder, Anti-lock Braking System (ABS)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Rigid axle vs independent suspensions, double wishbone, MacPherson?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Rigid axle vs independent suspensions, double wishbone, MacPherson.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rigid axle vs independent suspensions, double wishbone, MacPherson&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Leaf springs, coil springs, torsion bars, shock absorbers typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Leaf springs, coil springs, torsion bars, shock absorbers.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Leaf springs, coil springs, torsion bars, shock absorbers&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Spoked, pressed steel, alloy wheels, tyre construction (radial/bias) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Spoked, pressed steel, alloy wheels, tyre construction (radial/bias) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Spoked, pressed steel, alloy wheels, tyre construction (radial/bias)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Tyre wear, wheel balancing, and tyre designations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Tyre wear, wheel balancing, and tyre designations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Automotive Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ackerman and Davis steering geometries, steering gears&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Automotive Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Ackerman and Davis steering geometries, steering gears&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Electric & Hybrid Vehicles
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Explore EV architecture, traction motors, battery management systems, and safety testing.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Electric & Hybrid Vehicles
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Explore EV architecture, traction motors, battery management systems, and safety testing.</p>
+   
         <!-- Week 22: EV Powertrains -->
         <div class="week-card">
           <div class="week-header">
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="mech-automotive-4-1-1" class="topic-checkbox">
                 <label for="mech-automotive-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Battery Electric Vehicle (BEV), HEV, PHEV configurations</span>
+                <button class="simplify-btn" data-topic="Battery Electric Vehicle (BEV), HEV, PHEV configurations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="mech-automotive-4-1-2" class="topic-checkbox">
                 <label for="mech-automotive-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Traction battery packs, converters, inverters layouts</span>
+                <button class="simplify-btn" data-topic="Traction battery packs, converters, inverters layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="mech-automotive-4-2-1" class="topic-checkbox">
                 <label for="mech-automotive-4-2-1" class="checkmark"></label>
                 <span class="topic-text">PMSM, Induction motor, BLDC motor torque-speed curves</span>
+                <button class="simplify-btn" data-topic="PMSM, Induction motor, BLDC motor torque-speed curves">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="mech-automotive-4-2-2" class="topic-checkbox">
                 <label for="mech-automotive-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Regenerative braking energy recovery schemes</span>
+                <button class="simplify-btn" data-topic="Regenerative braking energy recovery schemes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="mech-automotive-4-3-1" class="topic-checkbox">
                 <label for="mech-automotive-4-3-1" class="checkmark"></label>
                 <span class="topic-text">BMS architecture, cell balancing, state of charge (SoC) estimation</span>
+                <button class="simplify-btn" data-topic="BMS architecture, cell balancing, state of charge (SoC) estimation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="mech-automotive-4-3-2" class="topic-checkbox">
                 <label for="mech-automotive-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Thermal management of EV batteries, safety standards (AIS 156)</span>
+                <button class="simplify-btn" data-topic="Thermal management of EV batteries, safety standards (AIS 156)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1624,6 +1718,7 @@
                 <input type="checkbox" id="mech-automotive-4-4-1" class="topic-checkbox">
                 <label for="mech-automotive-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Active vs passive safety, airbags, seatbelts, crumple zones</span>
+                <button class="simplify-btn" data-topic="Active vs passive safety, airbags, seatbelts, crumple zones">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1650,6 +1745,7 @@
                 <input type="checkbox" id="mech-automotive-4-4-2" class="topic-checkbox">
                 <label for="mech-automotive-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Crash testing standards (NCAP), vehicle diagnostics, OBD II</span>
+                <button class="simplify-btn" data-topic="Crash testing standards (NCAP), vehicle diagnostics, OBD II">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1685,6 +1781,7 @@
                 <input type="checkbox" id="mech-automotive-4-5-1" class="topic-checkbox">
                 <label for="mech-automotive-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1711,6 +1808,7 @@
                 <input type="checkbox" id="mech-automotive-4-5-2" class="topic-checkbox">
                 <label for="mech-automotive-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1746,6 +1844,7 @@
                 <input type="checkbox" id="mech-automotive-4-6-1" class="topic-checkbox">
                 <label for="mech-automotive-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1772,6 +1871,7 @@
                 <input type="checkbox" id="mech-automotive-4-6-2" class="topic-checkbox">
                 <label for="mech-automotive-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1807,6 +1907,7 @@
                 <input type="checkbox" id="mech-automotive-4-7-1" class="topic-checkbox">
                 <label for="mech-automotive-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1833,6 +1934,7 @@
                 <input type="checkbox" id="mech-automotive-4-7-2" class="topic-checkbox">
                 <label for="mech-automotive-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1855,6 +1957,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Battery Electric Vehicle (BEV), HEV, PHEV configurations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Battery Electric Vehicle (BEV), HEV, PHEV configurations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Battery Electric Vehicle (BEV), HEV, PHEV configurations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Traction battery packs, converters, inverters layouts typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Traction battery packs, converters, inverters layouts.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Traction battery packs, converters, inverters layouts&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting PMSM, Induction motor, BLDC motor torque-speed curves practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of PMSM, Induction motor, BLDC motor torque-speed curves systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;PMSM, Induction motor, BLDC motor torque-speed curves&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Regenerative braking energy recovery schemes?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Regenerative braking energy recovery schemes&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of BMS architecture, cell balancing, state of charge (SoC) estimation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for BMS architecture, cell balancing, state of charge (SoC) estimation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;BMS architecture, cell balancing, state of charge (SoC) estimation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Thermal management of EV batteries, safety standards (AIS 156) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Thermal management of EV batteries, safety standards (AIS 156).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Thermal management of EV batteries, safety standards (AIS 156)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Active vs passive safety, airbags, seatbelts, crumple zones practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Active vs passive safety, airbags, seatbelts, crumple zones systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Active vs passive safety, airbags, seatbelts, crumple zones&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Crash testing standards (NCAP), vehicle diagnostics, OBD II?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Crash testing standards (NCAP), vehicle diagnostics, OBD II&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Automotive Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Battery Electric Vehicle (BEV), HEV, PHEV configurations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Automotive Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Battery Electric Vehicle (BEV), HEV, PHEV configurations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

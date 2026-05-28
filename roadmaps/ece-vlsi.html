@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Semiconductor & CMOS Physics
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Semiconductor & CMOS Physics
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Establish semiconductor physics basis, draw layouts, and calculate CMOS parameter models.</p>
+   
         <!-- Week 1: Semiconductor Physics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-vlsi-1-1-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-1-1" class="checkmark"></label>
                 <span class="topic-text">p-n junctions, MOS capacitor structure and characteristics</span>
+                <button class="simplify-btn" data-topic="p-n junctions, MOS capacitor structure and characteristics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-vlsi-1-1-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Threshold voltage derivation and MOSFET scaling limits</span>
+                <button class="simplify-btn" data-topic="Threshold voltage derivation and MOSFET scaling limits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-vlsi-1-2-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-2-1" class="checkmark"></label>
                 <span class="topic-text">CMOS inverter VTC curve, noise margins, and switching thresholds</span>
+                <button class="simplify-btn" data-topic="CMOS inverter VTC curve, noise margins, and switching thresholds">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-vlsi-1-2-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Dynamic and static power dissipation calculations in CMOS</span>
+                <button class="simplify-btn" data-topic="Dynamic and static power dissipation calculations in CMOS">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-vlsi-1-3-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Static CMOS logic gate designs, sizing rules, and transmission gates</span>
+                <button class="simplify-btn" data-topic="Static CMOS logic gate designs, sizing rules, and transmission gates">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-vlsi-1-3-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Pass transistor logic, dynamic logic circuits, and charge sharing</span>
+                <button class="simplify-btn" data-topic="Pass transistor logic, dynamic logic circuits, and charge sharing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-vlsi-1-4-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-4-1" class="checkmark"></label>
                 <span class="topic-text">CMOS latch and flip-flop designs, setup time, and hold time constraints</span>
+                <button class="simplify-btn" data-topic="CMOS latch and flip-flop designs, setup time, and hold time constraints">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-vlsi-1-4-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Clock skew, clock jitter, and clock distribution network designs</span>
+                <button class="simplify-btn" data-topic="Clock skew, clock jitter, and clock distribution network designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-vlsi-1-5-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-vlsi-1-5-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-vlsi-1-6-1" class="topic-checkbox">
                 <label for="ece-vlsi-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-vlsi-1-6-2" class="topic-checkbox">
                 <label for="ece-vlsi-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of p-n junctions, MOS capacitor structure and characteristics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for p-n junctions, MOS capacitor structure and characteristics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;p-n junctions, MOS capacitor structure and characteristics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Threshold voltage derivation and MOSFET scaling limits typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Threshold voltage derivation and MOSFET scaling limits.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Threshold voltage derivation and MOSFET scaling limits&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting CMOS inverter VTC curve, noise margins, and switching thresholds practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of CMOS inverter VTC curve, noise margins, and switching thresholds systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CMOS inverter VTC curve, noise margins, and switching thresholds&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Dynamic and static power dissipation calculations in CMOS?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Dynamic and static power dissipation calculations in CMOS&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Static CMOS logic gate designs, sizing rules, and transmission gates?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Static CMOS logic gate designs, sizing rules, and transmission gates.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Static CMOS logic gate designs, sizing rules, and transmission gates&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Pass transistor logic, dynamic logic circuits, and charge sharing typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Pass transistor logic, dynamic logic circuits, and charge sharing.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Pass transistor logic, dynamic logic circuits, and charge sharing&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting CMOS latch and flip-flop designs, setup time, and hold time constraints practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of CMOS latch and flip-flop designs, setup time, and hold time constraints systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;CMOS latch and flip-flop designs, setup time, and hold time constraints&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Clock skew, clock jitter, and clock distribution network designs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Clock skew, clock jitter, and clock distribution network designs&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for VLSI Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;p-n junctions, MOS capacitor structure and characteristics&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for VLSI Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;p-n junctions, MOS capacitor structure and characteristics&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Verilog HDL & RTL Modeling
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Verilog HDL & RTL Modeling
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Verilog syntax, structural/behavioral modeling, and testbench writing.</p>
+   
         <!-- Week 7: Verilog Fundamentals -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-vlsi-2-1-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Data types, operators, behavioral, structural, and dataflow modeling</span>
+                <button class="simplify-btn" data-topic="Data types, operators, behavioral, structural, and dataflow modeling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-vlsi-2-1-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Blocking vs non-blocking assignments and coding guidelines</span>
+                <button class="simplify-btn" data-topic="Blocking vs non-blocking assignments and coding guidelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-vlsi-2-2-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Writing testbenches, simulation constructs, force-release, and tasks/functions</span>
+                <button class="simplify-btn" data-topic="Writing testbenches, simulation constructs, force-release, and tasks/functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-vlsi-2-2-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-2-2" class="checkmark"></label>
                 <span class="topic-text">SystemVerilog assertions (SVA) and functional coverage basics</span>
+                <button class="simplify-btn" data-topic="SystemVerilog assertions (SVA) and functional coverage basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-vlsi-2-3-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Finite State Machines (FSMs) design: Mealy vs Moore architectures</span>
+                <button class="simplify-btn" data-topic="Finite State Machines (FSMs) design: Mealy vs Moore architectures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-vlsi-2-3-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Design of counters, shift registers, and FIFO memory structures</span>
+                <button class="simplify-btn" data-topic="Design of counters, shift registers, and FIFO memory structures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-vlsi-2-4-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-4-1" class="checkmark"></label>
                 <span class="topic-text">DFT concepts, scan chains insertion, ATPG algorithms, and fault models</span>
+                <button class="simplify-btn" data-topic="DFT concepts, scan chains insertion, ATPG algorithms, and fault models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-vlsi-2-4-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Boundary scan, JTAG standards, and Built-In Self-Test (BIST)</span>
+                <button class="simplify-btn" data-topic="Boundary scan, JTAG standards, and Built-In Self-Test (BIST)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-vlsi-2-5-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-vlsi-2-5-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-vlsi-2-6-1" class="topic-checkbox">
                 <label for="ece-vlsi-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-vlsi-2-6-2" class="topic-checkbox">
                 <label for="ece-vlsi-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Data types, operators, behavioral, structural, and dataflow modeling?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Data types, operators, behavioral, structural, and dataflow modeling.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Data types, operators, behavioral, structural, and dataflow modeling&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Blocking vs non-blocking assignments and coding guidelines typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Blocking vs non-blocking assignments and coding guidelines.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Blocking vs non-blocking assignments and coding guidelines&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Writing testbenches, simulation constructs, force-release, and tasks/functions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Writing testbenches, simulation constructs, force-release, and tasks/functions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Writing testbenches, simulation constructs, force-release, and tasks/functions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with SystemVerilog assertions (SVA) and functional coverage basics?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;SystemVerilog assertions (SVA) and functional coverage basics&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Finite State Machines (FSMs) design: Mealy vs Moore architectures?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Finite State Machines (FSMs) design: Mealy vs Moore architectures.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Finite State Machines (FSMs) design: Mealy vs Moore architectures&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Design of counters, shift registers, and FIFO memory structures typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Design of counters, shift registers, and FIFO memory structures.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Design of counters, shift registers, and FIFO memory structures&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting DFT concepts, scan chains insertion, ATPG algorithms, and fault models practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of DFT concepts, scan chains insertion, ATPG algorithms, and fault models systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;DFT concepts, scan chains insertion, ATPG algorithms, and fault models&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Boundary scan, JTAG standards, and Built-In Self-Test (BIST)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Boundary scan, JTAG standards, and Built-In Self-Test (BIST)&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for VLSI Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Data types, operators, behavioral, structural, and dataflow modeling&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for VLSI Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Data types, operators, behavioral, structural, and dataflow modeling&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          ASIC Physical Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            ASIC Physical Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study logic synthesis, floorplanning, placement, clock tree synthesis, and routing.</p>
+   
         <!-- Week 13: Logic Synthesis -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-vlsi-3-1-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Synthesis translation, gate mapping, and optimization constraints</span>
+                <button class="simplify-btn" data-topic="Synthesis translation, gate mapping, and optimization constraints">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-vlsi-3-1-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Design constraints (SDC), area/timing trade-offs, and critical path analysis</span>
+                <button class="simplify-btn" data-topic="Design constraints (SDC), area/timing trade-offs, and critical path analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-vlsi-3-2-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Chip floorplanning, aspect ratio, utilization, and power grid design</span>
+                <button class="simplify-btn" data-topic="Chip floorplanning, aspect ratio, utilization, and power grid design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-vlsi-3-2-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Standard cell placement algorithms, congestion analysis, and pin assignment</span>
+                <button class="simplify-btn" data-topic="Standard cell placement algorithms, congestion analysis, and pin assignment">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-vlsi-3-3-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-3-1" class="checkmark"></label>
                 <span class="topic-text">CTS objectives, clock routing, skew and jitter minimization techniques</span>
+                <button class="simplify-btn" data-topic="CTS objectives, clock routing, skew and jitter minimization techniques">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-vlsi-3-3-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-3-2" class="checkmark"></label>
                 <span class="topic-text">H-tree, clock mesh networks, and clock gating for low power</span>
+                <button class="simplify-btn" data-topic="H-tree, clock mesh networks, and clock gating for low power">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-vlsi-3-4-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Global and detail routing, crosstalk, and EM constraints</span>
+                <button class="simplify-btn" data-topic="Global and detail routing, crosstalk, and EM constraints">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-vlsi-3-4-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction</span>
+                <button class="simplify-btn" data-topic="Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-vlsi-3-5-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-vlsi-3-5-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-vlsi-3-6-1" class="topic-checkbox">
                 <label for="ece-vlsi-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-vlsi-3-6-2" class="topic-checkbox">
                 <label for="ece-vlsi-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Synthesis translation, gate mapping, and optimization constraints?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Synthesis translation, gate mapping, and optimization constraints.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesis translation, gate mapping, and optimization constraints&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Design constraints (SDC), area/timing trade-offs, and critical path analysis typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Design constraints (SDC), area/timing trade-offs, and critical path analysis.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Design constraints (SDC), area/timing trade-offs, and critical path analysis&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Chip floorplanning, aspect ratio, utilization, and power grid design practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Chip floorplanning, aspect ratio, utilization, and power grid design systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Chip floorplanning, aspect ratio, utilization, and power grid design&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Standard cell placement algorithms, congestion analysis, and pin assignment?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Standard cell placement algorithms, congestion analysis, and pin assignment&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of CTS objectives, clock routing, skew and jitter minimization techniques?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for CTS objectives, clock routing, skew and jitter minimization techniques.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;CTS objectives, clock routing, skew and jitter minimization techniques&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is H-tree, clock mesh networks, and clock gating for low power typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of H-tree, clock mesh networks, and clock gating for low power.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;H-tree, clock mesh networks, and clock gating for low power&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Global and detail routing, crosstalk, and EM constraints practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Global and detail routing, crosstalk, and EM constraints systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Global and detail routing, crosstalk, and EM constraints&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Design Rule Checks (DRC), Layout vs Schematic (LVS), and RC extraction&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for VLSI Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesis translation, gate mapping, and optimization constraints&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for VLSI Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesis translation, gate mapping, and optimization constraints&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Static Timing Analysis & Verification
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Static Timing Analysis & Verification
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Audit timing violations (setup/hold), design low-power blocks, and generate GDSII.</p>
+   
         <!-- Week 19: STA Concepts -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-vlsi-4-1-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Setup and hold timing checks, clock constraints, and false/multicycle paths</span>
+                <button class="simplify-btn" data-topic="Setup and hold timing checks, clock constraints, and false/multicycle paths">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-vlsi-4-1-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Clock Domain Crossing (CDC) synchronization and FIFO solutions</span>
+                <button class="simplify-btn" data-topic="Clock Domain Crossing (CDC) synchronization and FIFO solutions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-vlsi-4-2-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files</span>
+                <button class="simplify-btn" data-topic="Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-vlsi-4-2-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Leakage power reduction methods and clock gating optimization</span>
+                <button class="simplify-btn" data-topic="Leakage power reduction methods and clock gating optimization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="ece-vlsi-4-3-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-3-1" class="checkmark"></label>
                 <span class="topic-text">SRAM 6T cell design, read/write margins, and DRAM cell operation</span>
+                <button class="simplify-btn" data-topic="SRAM 6T cell design, read/write margins, and DRAM cell operation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="ece-vlsi-4-3-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-3-2" class="checkmark"></label>
                 <span class="topic-text">ROM, Flash memory architectures, and sense amplifier circuits</span>
+                <button class="simplify-btn" data-topic="ROM, Flash memory architectures, and sense amplifier circuits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-vlsi-4-4-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-4-1" class="checkmark"></label>
                 <span class="topic-text">GDSII file generation, DRC/LVS final sign-off, and tape-out flow</span>
+                <button class="simplify-btn" data-topic="GDSII file generation, DRC/LVS final sign-off, and tape-out flow">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-vlsi-4-4-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Silicon bring-up, boundary scan tests, and debug procedures</span>
+                <button class="simplify-btn" data-topic="Silicon bring-up, boundary scan tests, and debug procedures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-vlsi-4-5-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-vlsi-4-5-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-vlsi-4-6-1" class="topic-checkbox">
                 <label for="ece-vlsi-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-vlsi-4-6-2" class="topic-checkbox">
                 <label for="ece-vlsi-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Setup and hold timing checks, clock constraints, and false/multicycle paths?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Setup and hold timing checks, clock constraints, and false/multicycle paths.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Setup and hold timing checks, clock constraints, and false/multicycle paths&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Clock Domain Crossing (CDC) synchronization and FIFO solutions typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Clock Domain Crossing (CDC) synchronization and FIFO solutions.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Clock Domain Crossing (CDC) synchronization and FIFO solutions&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Multi-VDD, power gating, dynamic voltage scaling (DVFS), and UPF files&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Leakage power reduction methods and clock gating optimization?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Leakage power reduction methods and clock gating optimization&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of SRAM 6T cell design, read/write margins, and DRAM cell operation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for SRAM 6T cell design, read/write margins, and DRAM cell operation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;SRAM 6T cell design, read/write margins, and DRAM cell operation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ROM, Flash memory architectures, and sense amplifier circuits typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ROM, Flash memory architectures, and sense amplifier circuits.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ROM, Flash memory architectures, and sense amplifier circuits&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting GDSII file generation, DRC/LVS final sign-off, and tape-out flow practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of GDSII file generation, DRC/LVS final sign-off, and tape-out flow systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;GDSII file generation, DRC/LVS final sign-off, and tape-out flow&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Silicon bring-up, boundary scan tests, and debug procedures?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Silicon bring-up, boundary scan tests, and debug procedures&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for VLSI Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Setup and hold timing checks, clock constraints, and false/multicycle paths&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for VLSI Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Setup and hold timing checks, clock constraints, and false/multicycle paths&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

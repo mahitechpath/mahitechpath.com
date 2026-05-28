@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Metal Casting & Riser Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master pattern allowances, gating ratio, Chvorinov's solidification rules, and casting defects.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Metal Casting & Riser Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master pattern allowances, gating ratio, Chvorinov's solidification rules, and casting defects.</p>
+   
         <!-- Week 1: Pattern Design & Sand Mold -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-1-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Pattern allowances: shrinkage, draft, machining, distortion allowances</span>
+                <button class="simplify-btn" data-topic="Pattern allowances: shrinkage, draft, machining, distortion allowances">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-1-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Mold materials, sand properties (permeability, green strength, refractoriness)</span>
+                <button class="simplify-btn" data-topic="Mold materials, sand properties (permeability, green strength, refractoriness)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-2-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Sprue design, gating ratio, choke area calculation, pouring time</span>
+                <button class="simplify-btn" data-topic="Sprue design, gating ratio, choke area calculation, pouring time">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-2-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Aspiration effect prevention, runner and gate layouts</span>
+                <button class="simplify-btn" data-topic="Aspiration effect prevention, runner and gate layouts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-3-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Solidification time, Chvorinov's rule, riser sizing methods</span>
+                <button class="simplify-btn" data-topic="Solidification time, Chvorinov's rule, riser sizing methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-3-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Modulus method, Caine's method, and shrinkage calculations</span>
+                <button class="simplify-btn" data-topic="Modulus method, Caine's method, and shrinkage calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-4-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Casting defects: blowholes, cold shuts, misruns, hot tears</span>
+                <button class="simplify-btn" data-topic="Casting defects: blowholes, cold shuts, misruns, hot tears">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-4-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Inspection: dye penetrant, ultrasonic, radiography NDT testing</span>
+                <button class="simplify-btn" data-topic="Inspection: dye penetrant, ultrasonic, radiography NDT testing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-5-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-5-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-6-1" class="topic-checkbox">
                 <label for="mech-manufacturing-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="mech-manufacturing-1-6-2" class="topic-checkbox">
                 <label for="mech-manufacturing-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Pattern allowances: shrinkage, draft, machining, distortion allowances?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Pattern allowances: shrinkage, draft, machining, distortion allowances.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pattern allowances: shrinkage, draft, machining, distortion allowances&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Mold materials, sand properties (permeability, green strength, refractoriness) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Mold materials, sand properties (permeability, green strength, refractoriness).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Mold materials, sand properties (permeability, green strength, refractoriness)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Sprue design, gating ratio, choke area calculation, pouring time practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Sprue design, gating ratio, choke area calculation, pouring time systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Sprue design, gating ratio, choke area calculation, pouring time&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Aspiration effect prevention, runner and gate layouts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Aspiration effect prevention, runner and gate layouts&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Solidification time, Chvorinov's rule, riser sizing methods?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Solidification time, Chvorinov's rule, riser sizing methods.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Solidification time, Chvorinov's rule, riser sizing methods&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Modulus method, Caine's method, and shrinkage calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Modulus method, Caine's method, and shrinkage calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Modulus method, Caine's method, and shrinkage calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Casting defects: blowholes, cold shuts, misruns, hot tears practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Casting defects: blowholes, cold shuts, misruns, hot tears systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Casting defects: blowholes, cold shuts, misruns, hot tears&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Inspection: dye penetrant, ultrasonic, radiography NDT testing?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Inspection: dye penetrant, ultrasonic, radiography NDT testing&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Manufacturing Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pattern allowances: shrinkage, draft, machining, distortion allowances&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Manufacturing Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Pattern allowances: shrinkage, draft, machining, distortion allowances&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Metal Joining & Welding
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study arc welding parameters, resistance welding, weld metallurgy, and inspection.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Metal Joining & Welding
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study arc welding parameters, resistance welding, weld metallurgy, and inspection.</p>
+   
         <!-- Week 7: Arc Welding Processes -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-1-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding</span>
+                <button class="simplify-btn" data-topic="Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-1-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-1-2" class="checkmark"></label>
                 <span class="topic-text">V-I characteristics of arc, duty cycle, heat input calculations</span>
+                <button class="simplify-btn" data-topic="V-I characteristics of arc, duty cycle, heat input calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-2-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Spot welding, seam welding, projection welding parameters</span>
+                <button class="simplify-btn" data-topic="Spot welding, seam welding, projection welding parameters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-2-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Friction welding, ultrasonic welding, explosion welding</span>
+                <button class="simplify-btn" data-topic="Friction welding, ultrasonic welding, explosion welding">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-3-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Heat Affected Zone (HAZ) phase transformations, residual stresses</span>
+                <button class="simplify-btn" data-topic="Heat Affected Zone (HAZ) phase transformations, residual stresses">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-3-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Pre-heating, post-weld heat treatment (PWHT), weldability of steels</span>
+                <button class="simplify-btn" data-topic="Pre-heating, post-weld heat treatment (PWHT), weldability of steels">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-4-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Welding defects: slag inclusion, lack of fusion, porosity, undercut</span>
+                <button class="simplify-btn" data-topic="Welding defects: slag inclusion, lack of fusion, porosity, undercut">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-4-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Destructive testing (tensile, impact) and NDT weld audits</span>
+                <button class="simplify-btn" data-topic="Destructive testing (tensile, impact) and NDT weld audits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-5-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-5-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-6-1" class="topic-checkbox">
                 <label for="mech-manufacturing-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="mech-manufacturing-2-6-2" class="topic-checkbox">
                 <label for="mech-manufacturing-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is V-I characteristics of arc, duty cycle, heat input calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of V-I characteristics of arc, duty cycle, heat input calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;V-I characteristics of arc, duty cycle, heat input calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Spot welding, seam welding, projection welding parameters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Spot welding, seam welding, projection welding parameters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Spot welding, seam welding, projection welding parameters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Friction welding, ultrasonic welding, explosion welding?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Friction welding, ultrasonic welding, explosion welding&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Heat Affected Zone (HAZ) phase transformations, residual stresses?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Heat Affected Zone (HAZ) phase transformations, residual stresses.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Heat Affected Zone (HAZ) phase transformations, residual stresses&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Pre-heating, post-weld heat treatment (PWHT), weldability of steels typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Pre-heating, post-weld heat treatment (PWHT), weldability of steels.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Pre-heating, post-weld heat treatment (PWHT), weldability of steels&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Welding defects: slag inclusion, lack of fusion, porosity, undercut practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Welding defects: slag inclusion, lack of fusion, porosity, undercut systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Welding defects: slag inclusion, lack of fusion, porosity, undercut&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Destructive testing (tensile, impact) and NDT weld audits?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Destructive testing (tensile, impact) and NDT weld audits&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Manufacturing Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Manufacturing Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Shielded Metal Arc (SMAW), TIG, MIG, Submerged Arc welding&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Metal Cutting Mechanics
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Merchant's cutting force circle, Taylor's tool life, machining economics, and non-traditional methods.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Metal Cutting Mechanics
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master Merchant's cutting force circle, Taylor's tool life, machining economics, and non-traditional methods.</p>
+   
         <!-- Week 13: Orthogonal Cutting Mechanics -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-1-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Merchant's circle diagram, shear angle relationship, cutting/thrust forces</span>
+                <button class="simplify-btn" data-topic="Merchant's circle diagram, shear angle relationship, cutting/thrust forces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-1-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Velocity relations, shear strain, chip thickness ratio</span>
+                <button class="simplify-btn" data-topic="Velocity relations, shear strain, chip thickness ratio">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-2-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Tool wear mechanisms (crater, flank wear), Taylor's tool life equation</span>
+                <button class="simplify-btn" data-topic="Tool wear mechanisms (crater, flank wear), Taylor's tool life equation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-2-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Tool materials: HSS, carbide, ceramic, cermets, diamond</span>
+                <button class="simplify-btn" data-topic="Tool materials: HSS, carbide, ceramic, cermets, diamond">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-3-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Optimum cutting speed for minimum cost, maximum production rate</span>
+                <button class="simplify-btn" data-topic="Optimum cutting speed for minimum cost, maximum production rate">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-3-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Cutting fluid properties, selections, and tool signature formats</span>
+                <button class="simplify-btn" data-topic="Cutting fluid properties, selections, and tool signature formats">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-4-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-4-1" class="checkmark"></label>
                 <span class="topic-text">EDM, ECM, USM, AJM, Water Jet, Laser Beam Machining (LBM)</span>
+                <button class="simplify-btn" data-topic="EDM, ECM, USM, AJM, Water Jet, Laser Beam Machining (LBM)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-4-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Material removal rate (MRR) formulas and processing capabilities</span>
+                <button class="simplify-btn" data-topic="Material removal rate (MRR) formulas and processing capabilities">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-5-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-5-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-6-1" class="topic-checkbox">
                 <label for="mech-manufacturing-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="mech-manufacturing-3-6-2" class="topic-checkbox">
                 <label for="mech-manufacturing-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Merchant's circle diagram, shear angle relationship, cutting/thrust forces?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Merchant's circle diagram, shear angle relationship, cutting/thrust forces.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Merchant's circle diagram, shear angle relationship, cutting/thrust forces&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Velocity relations, shear strain, chip thickness ratio typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Velocity relations, shear strain, chip thickness ratio.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Velocity relations, shear strain, chip thickness ratio&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Tool wear mechanisms (crater, flank wear), Taylor's tool life equation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Tool wear mechanisms (crater, flank wear), Taylor's tool life equation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Tool wear mechanisms (crater, flank wear), Taylor's tool life equation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Tool materials: HSS, carbide, ceramic, cermets, diamond?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Tool materials: HSS, carbide, ceramic, cermets, diamond&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Optimum cutting speed for minimum cost, maximum production rate?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Optimum cutting speed for minimum cost, maximum production rate.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Optimum cutting speed for minimum cost, maximum production rate&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Cutting fluid properties, selections, and tool signature formats typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Cutting fluid properties, selections, and tool signature formats.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Cutting fluid properties, selections, and tool signature formats&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting EDM, ECM, USM, AJM, Water Jet, Laser Beam Machining (LBM) practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of EDM, ECM, USM, AJM, Water Jet, Laser Beam Machining (LBM) systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;EDM, ECM, USM, AJM, Water Jet, Laser Beam Machining (LBM)&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Material removal rate (MRR) formulas and processing capabilities?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Material removal rate (MRR) formulas and processing capabilities&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Manufacturing Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Merchant's circle diagram, shear angle relationship, cutting/thrust forces&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Manufacturing Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Merchant's circle diagram, shear angle relationship, cutting/thrust forces&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Metal Forming & Metrology
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master bulk deformation (rolling, forging), sheet metal operations, powder metallurgy, and metrology.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Metal Forming & Metrology
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master bulk deformation (rolling, forging), sheet metal operations, powder metallurgy, and metrology.</p>
+   
         <!-- Week 19: Bulk Deformation -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-1-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Hot vs Cold working, rolling load and torque calculations</span>
+                <button class="simplify-btn" data-topic="Hot vs Cold working, rolling load and torque calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-1-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Forging types, open/closed die, extrusion, wire drawing equations</span>
+                <button class="simplify-btn" data-topic="Forging types, open/closed die, extrusion, wire drawing equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-2-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Shearing, punching, blanking clearances, force calculations</span>
+                <button class="simplify-btn" data-topic="Shearing, punching, blanking clearances, force calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-2-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Bending parameters, springback, deep drawing draw ratio limit</span>
+                <button class="simplify-btn" data-topic="Bending parameters, springback, deep drawing draw ratio limit">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-3-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Powder production methods, blending, compaction, sintering processes</span>
+                <button class="simplify-btn" data-topic="Powder production methods, blending, compaction, sintering processes">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-3-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Secondary operations, porous bearings, cermet applications</span>
+                <button class="simplify-btn" data-topic="Secondary operations, porous bearings, cermet applications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-4-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Limits, fits, tolerances, hole/shaft basis systems, Taylor's principle</span>
+                <button class="simplify-btn" data-topic="Limits, fits, tolerances, hole/shaft basis systems, Taylor's principle">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-4-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Surface roughness measurement parameters, thread and gear metrology</span>
+                <button class="simplify-btn" data-topic="Surface roughness measurement parameters, thread and gear metrology">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-5-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-5-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-6-1" class="topic-checkbox">
                 <label for="mech-manufacturing-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="mech-manufacturing-4-6-2" class="topic-checkbox">
                 <label for="mech-manufacturing-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Hot vs Cold working, rolling load and torque calculations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Hot vs Cold working, rolling load and torque calculations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hot vs Cold working, rolling load and torque calculations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Forging types, open/closed die, extrusion, wire drawing equations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Forging types, open/closed die, extrusion, wire drawing equations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Forging types, open/closed die, extrusion, wire drawing equations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Shearing, punching, blanking clearances, force calculations practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Shearing, punching, blanking clearances, force calculations systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Shearing, punching, blanking clearances, force calculations&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Bending parameters, springback, deep drawing draw ratio limit?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Bending parameters, springback, deep drawing draw ratio limit&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Powder production methods, blending, compaction, sintering processes?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Powder production methods, blending, compaction, sintering processes.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Powder production methods, blending, compaction, sintering processes&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Secondary operations, porous bearings, cermet applications typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Secondary operations, porous bearings, cermet applications.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Secondary operations, porous bearings, cermet applications&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Limits, fits, tolerances, hole/shaft basis systems, Taylor's principle practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Limits, fits, tolerances, hole/shaft basis systems, Taylor's principle systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Limits, fits, tolerances, hole/shaft basis systems, Taylor's principle&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Surface roughness measurement parameters, thread and gear metrology?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Surface roughness measurement parameters, thread and gear metrology&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Manufacturing Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hot vs Cold working, rolling load and torque calculations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Manufacturing Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Hot vs Cold working, rolling load and torque calculations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Applied Mechanics & Strength of Materials
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study forces equilibrium, shear/bending diagrams, and deflection equations.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Applied Mechanics & Strength of Materials
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study forces equilibrium, shear/bending diagrams, and deflection equations.</p>
+   
         <!-- Week 1: Engineering Mechanics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="mech-design-1-1-1" class="topic-checkbox">
                 <label for="mech-design-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Truss structures force analyses, method of joints/sections</span>
+                <button class="simplify-btn" data-topic="Truss structures force analyses, method of joints/sections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="mech-design-1-1-2" class="topic-checkbox">
                 <label for="mech-design-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Friction models, work-energy theorem, and impulse-momentum relations</span>
+                <button class="simplify-btn" data-topic="Friction models, work-energy theorem, and impulse-momentum relations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="mech-design-1-2-1" class="topic-checkbox">
                 <label for="mech-design-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Normal stress, shear stress, Hooke's law, and elastic constants</span>
+                <button class="simplify-btn" data-topic="Normal stress, shear stress, Hooke's law, and elastic constants">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="mech-design-1-2-2" class="topic-checkbox">
                 <label for="mech-design-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Poisson's ratio, thermal stresses, and Mohr's circle analysis</span>
+                <button class="simplify-btn" data-topic="Poisson's ratio, thermal stresses, and Mohr's circle analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="mech-design-1-3-1" class="topic-checkbox">
                 <label for="mech-design-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Shear Force and Bending Moment diagrams (SFD/BMD) for beams</span>
+                <button class="simplify-btn" data-topic="Shear Force and Bending Moment diagrams (SFD/BMD) for beams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="mech-design-1-3-2" class="topic-checkbox">
                 <label for="mech-design-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Flexural and shear stress distributions across beam cross-sections</span>
+                <button class="simplify-btn" data-topic="Flexural and shear stress distributions across beam cross-sections">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="mech-design-1-4-1" class="topic-checkbox">
                 <label for="mech-design-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Deflection equations: Double integration, Macaulay, area-moment methods</span>
+                <button class="simplify-btn" data-topic="Deflection equations: Double integration, Macaulay, area-moment methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="mech-design-1-4-2" class="topic-checkbox">
                 <label for="mech-design-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Torsion of circular shafts, thin-walled cylinders, Euler's columns</span>
+                <button class="simplify-btn" data-topic="Torsion of circular shafts, thin-walled cylinders, Euler's columns">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="mech-design-1-5-1" class="topic-checkbox">
                 <label for="mech-design-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="mech-design-1-5-2" class="topic-checkbox">
                 <label for="mech-design-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="mech-design-1-6-1" class="topic-checkbox">
                 <label for="mech-design-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="mech-design-1-6-2" class="topic-checkbox">
                 <label for="mech-design-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Truss structures force analyses, method of joints/sections?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Truss structures force analyses, method of joints/sections.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Truss structures force analyses, method of joints/sections&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Friction models, work-energy theorem, and impulse-momentum relations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Friction models, work-energy theorem, and impulse-momentum relations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Friction models, work-energy theorem, and impulse-momentum relations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Normal stress, shear stress, Hooke's law, and elastic constants practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Normal stress, shear stress, Hooke's law, and elastic constants systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Normal stress, shear stress, Hooke's law, and elastic constants&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Poisson's ratio, thermal stresses, and Mohr's circle analysis?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Poisson's ratio, thermal stresses, and Mohr's circle analysis&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Shear Force and Bending Moment diagrams (SFD/BMD) for beams?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Shear Force and Bending Moment diagrams (SFD/BMD) for beams.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Shear Force and Bending Moment diagrams (SFD/BMD) for beams&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Flexural and shear stress distributions across beam cross-sections typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Flexural and shear stress distributions across beam cross-sections.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Flexural and shear stress distributions across beam cross-sections&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Deflection equations: Double integration, Macaulay, area-moment methods practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Deflection equations: Double integration, Macaulay, area-moment methods systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Deflection equations: Double integration, Macaulay, area-moment methods&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Torsion of circular shafts, thin-walled cylinders, Euler's columns?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Torsion of circular shafts, thin-walled cylinders, Euler's columns&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Truss structures force analyses, method of joints/sections&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Design Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Truss structures force analyses, method of joints/sections&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Thermal Science & Fluid Mechanics
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master laws of thermodynamics, air-standard cycles, and viscous fluid flows.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Thermal Science & Fluid Mechanics
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master laws of thermodynamics, air-standard cycles, and viscous fluid flows.</p>
+   
         <!-- Week 7: Thermodynamics Foundations -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="mech-design-2-1-1" class="topic-checkbox">
                 <label for="mech-design-2-1-1" class="checkmark"></label>
                 <span class="topic-text">First and Second laws of thermodynamics, entropy, and availability</span>
+                <button class="simplify-btn" data-topic="First and Second laws of thermodynamics, entropy, and availability">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="mech-design-2-1-2" class="topic-checkbox">
                 <label for="mech-design-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Properties of pure substances, thermodynamic cycles (Otto, Diesel, Dual)</span>
+                <button class="simplify-btn" data-topic="Properties of pure substances, thermodynamic cycles (Otto, Diesel, Dual)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="mech-design-2-2-1" class="topic-checkbox">
                 <label for="mech-design-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Steam power cycle: Rankine cycle modifications, reheat, regeneration</span>
+                <button class="simplify-btn" data-topic="Steam power cycle: Rankine cycle modifications, reheat, regeneration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="mech-design-2-2-2" class="topic-checkbox">
                 <label for="mech-design-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Gas turbine cycle: Brayton cycle, intercooling, regeneration</span>
+                <button class="simplify-btn" data-topic="Gas turbine cycle: Brayton cycle, intercooling, regeneration">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="mech-design-2-3-1" class="topic-checkbox">
                 <label for="mech-design-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Manometry, buoyancy, continuity equation, Bernoulli's equation</span>
+                <button class="simplify-btn" data-topic="Manometry, buoyancy, continuity equation, Bernoulli's equation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="mech-design-2-3-2" class="topic-checkbox">
                 <label for="mech-design-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Venturimeter, orificemeter, momentum equation applications</span>
+                <button class="simplify-btn" data-topic="Venturimeter, orificemeter, momentum equation applications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="mech-design-2-4-1" class="topic-checkbox">
                 <label for="mech-design-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Laminar and turbulent flows in pipes, Darcy-Weisbach head loss</span>
+                <button class="simplify-btn" data-topic="Laminar and turbulent flows in pipes, Darcy-Weisbach head loss">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="mech-design-2-4-2" class="topic-checkbox">
                 <label for="mech-design-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Boundary layer separation, drag and lift forces, dimensional analysis</span>
+                <button class="simplify-btn" data-topic="Boundary layer separation, drag and lift forces, dimensional analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="mech-design-2-5-1" class="topic-checkbox">
                 <label for="mech-design-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="mech-design-2-5-2" class="topic-checkbox">
                 <label for="mech-design-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="mech-design-2-6-1" class="topic-checkbox">
                 <label for="mech-design-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="mech-design-2-6-2" class="topic-checkbox">
                 <label for="mech-design-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of First and Second laws of thermodynamics, entropy, and availability?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for First and Second laws of thermodynamics, entropy, and availability.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First and Second laws of thermodynamics, entropy, and availability&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Properties of pure substances, thermodynamic cycles (Otto, Diesel, Dual) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Properties of pure substances, thermodynamic cycles (Otto, Diesel, Dual).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Properties of pure substances, thermodynamic cycles (Otto, Diesel, Dual)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Steam power cycle: Rankine cycle modifications, reheat, regeneration practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Steam power cycle: Rankine cycle modifications, reheat, regeneration systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Steam power cycle: Rankine cycle modifications, reheat, regeneration&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Gas turbine cycle: Brayton cycle, intercooling, regeneration?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Gas turbine cycle: Brayton cycle, intercooling, regeneration&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Manometry, buoyancy, continuity equation, Bernoulli's equation?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Manometry, buoyancy, continuity equation, Bernoulli's equation.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Manometry, buoyancy, continuity equation, Bernoulli's equation&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Venturimeter, orificemeter, momentum equation applications typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Venturimeter, orificemeter, momentum equation applications.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Venturimeter, orificemeter, momentum equation applications&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Laminar and turbulent flows in pipes, Darcy-Weisbach head loss practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Laminar and turbulent flows in pipes, Darcy-Weisbach head loss systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Laminar and turbulent flows in pipes, Darcy-Weisbach head loss&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Boundary layer separation, drag and lift forces, dimensional analysis?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Boundary layer separation, drag and lift forces, dimensional analysis&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First and Second laws of thermodynamics, entropy, and availability&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Design Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;First and Second laws of thermodynamics, entropy, and availability&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Design of Machine Elements
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study mechanisms, gear calculations, and design under static/fatigue loads.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Design of Machine Elements
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study mechanisms, gear calculations, and design under static/fatigue loads.</p>
+   
         <!-- Week 13: Kinematics of Mechanisms -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="mech-design-3-1-1" class="topic-checkbox">
                 <label for="mech-design-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Linkages velocity and acceleration diagrams, instant centers</span>
+                <button class="simplify-btn" data-topic="Linkages velocity and acceleration diagrams, instant centers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="mech-design-3-1-2" class="topic-checkbox">
                 <label for="mech-design-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Gears: involute profiles, interference, gear trains calculations</span>
+                <button class="simplify-btn" data-topic="Gears: involute profiles, interference, gear trains calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="mech-design-3-2-1" class="topic-checkbox">
                 <label for="mech-design-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Flywheel coefficient of fluctuation, governors, and balancing</span>
+                <button class="simplify-btn" data-topic="Flywheel coefficient of fluctuation, governors, and balancing">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="mech-design-3-2-2" class="topic-checkbox">
                 <label for="mech-design-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Vibration: Free/forced single DOF systems, critical speeds of shafts</span>
+                <button class="simplify-btn" data-topic="Vibration: Free/forced single DOF systems, critical speeds of shafts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="mech-design-3-3-1" class="topic-checkbox">
                 <label for="mech-design-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Principal stress theories of failure (maximum distortion energy, shear)</span>
+                <button class="simplify-btn" data-topic="Principal stress theories of failure (maximum distortion energy, shear)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="mech-design-3-3-2" class="topic-checkbox">
                 <label for="mech-design-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Fatigue failure: S-N curves, Soderberg, Goodman, and Gerber lines</span>
+                <button class="simplify-btn" data-topic="Fatigue failure: S-N curves, Soderberg, Goodman, and Gerber lines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="mech-design-3-4-1" class="topic-checkbox">
                 <label for="mech-design-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Threaded fasteners, welded joints, keys, and shafts design</span>
+                <button class="simplify-btn" data-topic="Threaded fasteners, welded joints, keys, and shafts design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="mech-design-3-4-2" class="topic-checkbox">
                 <label for="mech-design-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Sliding contact and rolling contact bearings, L10 life equations</span>
+                <button class="simplify-btn" data-topic="Sliding contact and rolling contact bearings, L10 life equations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="mech-design-3-5-1" class="topic-checkbox">
                 <label for="mech-design-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="mech-design-3-5-2" class="topic-checkbox">
                 <label for="mech-design-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="mech-design-3-6-1" class="topic-checkbox">
                 <label for="mech-design-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="mech-design-3-6-2" class="topic-checkbox">
                 <label for="mech-design-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linkages velocity and acceleration diagrams, instant centers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linkages velocity and acceleration diagrams, instant centers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linkages velocity and acceleration diagrams, instant centers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Gears: involute profiles, interference, gear trains calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Gears: involute profiles, interference, gear trains calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Gears: involute profiles, interference, gear trains calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Flywheel coefficient of fluctuation, governors, and balancing practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Flywheel coefficient of fluctuation, governors, and balancing systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Flywheel coefficient of fluctuation, governors, and balancing&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Vibration: Free/forced single DOF systems, critical speeds of shafts?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Vibration: Free/forced single DOF systems, critical speeds of shafts&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Principal stress theories of failure (maximum distortion energy, shear)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Principal stress theories of failure (maximum distortion energy, shear).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Principal stress theories of failure (maximum distortion energy, shear)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Fatigue failure: S-N curves, Soderberg, Goodman, and Gerber lines typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Fatigue failure: S-N curves, Soderberg, Goodman, and Gerber lines.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Fatigue failure: S-N curves, Soderberg, Goodman, and Gerber lines&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Threaded fasteners, welded joints, keys, and shafts design practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Threaded fasteners, welded joints, keys, and shafts design systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Threaded fasteners, welded joints, keys, and shafts design&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Sliding contact and rolling contact bearings, L10 life equations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Sliding contact and rolling contact bearings, L10 life equations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linkages velocity and acceleration diagrams, instant centers&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Design Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linkages velocity and acceleration diagrams, instant centers&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Manufacturing Engineering & CAD/CAE
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study metal casting, machining mechanics, tool life, and FEM grids.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Manufacturing Engineering & CAD/CAE
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study metal casting, machining mechanics, tool life, and FEM grids.</p>
+   
         <!-- Week 19: Casting & Welding -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="mech-design-4-1-1" class="topic-checkbox">
                 <label for="mech-design-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Metal casting riser and gating system design, solidification time</span>
+                <button class="simplify-btn" data-topic="Metal casting riser and gating system design, solidification time">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="mech-design-4-1-2" class="topic-checkbox">
                 <label for="mech-design-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Welding processes: Arc, TIG, MIG, resistance, and defects</span>
+                <button class="simplify-btn" data-topic="Welding processes: Arc, TIG, MIG, resistance, and defects">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="mech-design-4-2-1" class="topic-checkbox">
                 <label for="mech-design-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Merchant's circle analysis, force calculations in metal cutting</span>
+                <button class="simplify-btn" data-topic="Merchant's circle analysis, force calculations in metal cutting">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="mech-design-4-2-2" class="topic-checkbox">
                 <label for="mech-design-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Taylor's tool life equation, economics of machining</span>
+                <button class="simplify-btn" data-topic="Taylor's tool life equation, economics of machining">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="mech-design-4-3-1" class="topic-checkbox">
                 <label for="mech-design-4-3-1" class="checkmark"></label>
                 <span class="topic-text">CAD representations: Wireframe, surface, and solid modeling</span>
+                <button class="simplify-btn" data-topic="CAD representations: Wireframe, surface, and solid modeling">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="mech-design-4-3-2" class="topic-checkbox">
                 <label for="mech-design-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Geometric transformations (translation, rotation, scaling matrices)</span>
+                <button class="simplify-btn" data-topic="Geometric transformations (translation, rotation, scaling matrices)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="mech-design-4-4-1" class="topic-checkbox">
                 <label for="mech-design-4-4-1" class="checkmark"></label>
                 <span class="topic-text">FEM 1D spring and bar formulations, shape functions</span>
+                <button class="simplify-btn" data-topic="FEM 1D spring and bar formulations, shape functions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="mech-design-4-4-2" class="topic-checkbox">
                 <label for="mech-design-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Stiffness matrix construction, boundary conditions, and FEA simulations</span>
+                <button class="simplify-btn" data-topic="Stiffness matrix construction, boundary conditions, and FEA simulations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="mech-design-4-5-1" class="topic-checkbox">
                 <label for="mech-design-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="mech-design-4-5-2" class="topic-checkbox">
                 <label for="mech-design-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="mech-design-4-6-1" class="topic-checkbox">
                 <label for="mech-design-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="mech-design-4-6-2" class="topic-checkbox">
                 <label for="mech-design-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Metal casting riser and gating system design, solidification time?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Metal casting riser and gating system design, solidification time.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Metal casting riser and gating system design, solidification time&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Welding processes: Arc, TIG, MIG, resistance, and defects typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Welding processes: Arc, TIG, MIG, resistance, and defects.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Welding processes: Arc, TIG, MIG, resistance, and defects&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Merchant's circle analysis, force calculations in metal cutting practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Merchant's circle analysis, force calculations in metal cutting systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Merchant's circle analysis, force calculations in metal cutting&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Taylor's tool life equation, economics of machining?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Taylor's tool life equation, economics of machining&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of CAD representations: Wireframe, surface, and solid modeling?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for CAD representations: Wireframe, surface, and solid modeling.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;CAD representations: Wireframe, surface, and solid modeling&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Geometric transformations (translation, rotation, scaling matrices) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Geometric transformations (translation, rotation, scaling matrices).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Geometric transformations (translation, rotation, scaling matrices)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting FEM 1D spring and bar formulations, shape functions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of FEM 1D spring and bar formulations, shape functions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;FEM 1D spring and bar formulations, shape functions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Stiffness matrix construction, boundary conditions, and FEA simulations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Stiffness matrix construction, boundary conditions, and FEA simulations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Metal casting riser and gating system design, solidification time&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Design Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Metal casting riser and gating system design, solidification time&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          ML Arithmetic & Architectures
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study hardware requirements for ML and code custom multiply-accumulate (MAC) units.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            ML Arithmetic & Architectures
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study hardware requirements for ML and code custom multiply-accumulate (MAC) units.</p>
+   
         <!-- Week 1: AI Hardware Overview -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-1-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Compute vs memory bottlenecks, arithmetic workloads in neural nets</span>
+                <button class="simplify-btn" data-topic="Compute vs memory bottlenecks, arithmetic workloads in neural nets">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-1-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Quantization: FP32, FP16, INT8, and Brain Floating Point (BF16)</span>
+                <button class="simplify-btn" data-topic="Quantization: FP32, FP16, INT8, and Brain Floating Point (BF16)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-2-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Design of fixed-point/floating-point MAC units, adder trees</span>
+                <button class="simplify-btn" data-topic="Design of fixed-point/floating-point MAC units, adder trees">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-2-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Pipelining MAC operations for maximum clock frequency</span>
+                <button class="simplify-btn" data-topic="Pipelining MAC operations for maximum clock frequency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-3-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Systolic array concept, matrix-matrix multiplication hardware</span>
+                <button class="simplify-btn" data-topic="Systolic array concept, matrix-matrix multiplication hardware">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-3-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Dataflow patterns: weight-stationary vs output-stationary</span>
+                <button class="simplify-btn" data-topic="Dataflow patterns: weight-stationary vs output-stationary">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-4-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-4-1" class="checkmark"></label>
                 <span class="topic-text">SRAM buffers: double buffering, ping-pong memory structures</span>
+                <button class="simplify-btn" data-topic="SRAM buffers: double buffering, ping-pong memory structures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-4-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-4-2" class="checkmark"></label>
                 <span class="topic-text">High Bandwidth Memory (HBM) interfaces, DDR controllers</span>
+                <button class="simplify-btn" data-topic="High Bandwidth Memory (HBM) interfaces, DDR controllers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-5-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-5-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-6-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-6-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -496,6 +509,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-7-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -522,6 +536,7 @@
                 <input type="checkbox" id="ece-ai-hardware-1-7-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-1-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -545,16 +560,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Compute vs memory bottlenecks, arithmetic workloads in neural nets?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Compute vs memory bottlenecks, arithmetic workloads in neural nets.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Compute vs memory bottlenecks, arithmetic workloads in neural nets&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Quantization: FP32, FP16, INT8, and Brain Floating Point (BF16) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Quantization: FP32, FP16, INT8, and Brain Floating Point (BF16).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Quantization: FP32, FP16, INT8, and Brain Floating Point (BF16)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Design of fixed-point/floating-point MAC units, adder trees practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Design of fixed-point/floating-point MAC units, adder trees systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Design of fixed-point/floating-point MAC units, adder trees&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Pipelining MAC operations for maximum clock frequency?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Pipelining MAC operations for maximum clock frequency&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Systolic array concept, matrix-matrix multiplication hardware?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Systolic array concept, matrix-matrix multiplication hardware.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Systolic array concept, matrix-matrix multiplication hardware&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Dataflow patterns: weight-stationary vs output-stationary typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Dataflow patterns: weight-stationary vs output-stationary.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Dataflow patterns: weight-stationary vs output-stationary&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting SRAM buffers: double buffering, ping-pong memory structures practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of SRAM buffers: double buffering, ping-pong memory structures systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;SRAM buffers: double buffering, ping-pong memory structures&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with High Bandwidth Memory (HBM) interfaces, DDR controllers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;High Bandwidth Memory (HBM) interfaces, DDR controllers&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI Hardware Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Compute vs memory bottlenecks, arithmetic workloads in neural nets&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI Hardware Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Compute vs memory bottlenecks, arithmetic workloads in neural nets&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Verilog Accelerator Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write RTL configurations for AI processing engines and build control logic.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Verilog Accelerator Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write RTL configurations for AI processing engines and build control logic.</p>
+   
         <!-- Week 8: RTL Systolic Array Modeling -->
         <div class="week-card">
           <div class="week-header">
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-1-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Writing parametrizable systolic array modules in Verilog</span>
+                <button class="simplify-btn" data-topic="Writing parametrizable systolic array modules in Verilog">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-1-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Interconnects design, routing data across processing elements (PE)</span>
+                <button class="simplify-btn" data-topic="Interconnects design, routing data across processing elements (PE)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-2-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Designing Processing Element (PE) state machines, bypass logic</span>
+                <button class="simplify-btn" data-topic="Designing Processing Element (PE) state machines, bypass logic">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-2-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Hardware implementation of activation functions (ReLU, Sigmoid)</span>
+                <button class="simplify-btn" data-topic="Hardware implementation of activation functions (ReLU, Sigmoid)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-3-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Implementing dynamic bit-width MACs (configurable 8-bit/4-bit)</span>
+                <button class="simplify-btn" data-topic="Implementing dynamic bit-width MACs (configurable 8-bit/4-bit)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-3-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Scaling, bias additions, and saturation logic in hardware</span>
+                <button class="simplify-btn" data-topic="Scaling, bias additions, and saturation logic in hardware">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-4-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Integrating accelerators with AXI-Lite/AXI4 interfaces</span>
+                <button class="simplify-btn" data-topic="Integrating accelerators with AXI-Lite/AXI4 interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-4-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-4-2" class="checkmark"></label>
                 <span class="topic-text">DMA controller integrations for direct memory access transfers</span>
+                <button class="simplify-btn" data-topic="DMA controller integrations for direct memory access transfers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-5-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-5-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -872,6 +912,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-6-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -898,6 +939,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-6-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -933,6 +975,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-7-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -959,6 +1002,7 @@
                 <input type="checkbox" id="ece-ai-hardware-2-7-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-2-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -982,16 +1026,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Writing parametrizable systolic array modules in Verilog?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Writing parametrizable systolic array modules in Verilog.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Writing parametrizable systolic array modules in Verilog&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Interconnects design, routing data across processing elements (PE) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Interconnects design, routing data across processing elements (PE).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Interconnects design, routing data across processing elements (PE)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Designing Processing Element (PE) state machines, bypass logic practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Designing Processing Element (PE) state machines, bypass logic systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Designing Processing Element (PE) state machines, bypass logic&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Hardware implementation of activation functions (ReLU, Sigmoid)?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Hardware implementation of activation functions (ReLU, Sigmoid)&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Implementing dynamic bit-width MACs (configurable 8-bit/4-bit)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Implementing dynamic bit-width MACs (configurable 8-bit/4-bit).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Implementing dynamic bit-width MACs (configurable 8-bit/4-bit)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Scaling, bias additions, and saturation logic in hardware typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Scaling, bias additions, and saturation logic in hardware.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Scaling, bias additions, and saturation logic in hardware&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Integrating accelerators with AXI-Lite/AXI4 interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Integrating accelerators with AXI-Lite/AXI4 interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Integrating accelerators with AXI-Lite/AXI4 interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with DMA controller integrations for direct memory access transfers?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;DMA controller integrations for direct memory access transfers&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI Hardware Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Writing parametrizable systolic array modules in Verilog&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI Hardware Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Writing parametrizable systolic array modules in Verilog&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Memory Compiler & Sparsity
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design on-chip memory arrays, skip zero computations, and compile networks.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Memory Compiler & Sparsity
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design on-chip memory arrays, skip zero computations, and compile networks.</p>
+   
         <!-- Week 15: Memory Compilers (SRAM) -->
         <div class="week-card">
           <div class="week-header">
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-1-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Using memory compilers, generating custom SRAM blocks</span>
+                <button class="simplify-btn" data-topic="Using memory compilers, generating custom SRAM blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-1-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Multi-port SRAM designs for simultaneous read/write</span>
+                <button class="simplify-btn" data-topic="Multi-port SRAM designs for simultaneous read/write">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-2-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Zero-skipping hardware logic: exploiting activation sparsity</span>
+                <button class="simplify-btn" data-topic="Zero-skipping hardware logic: exploiting activation sparsity">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-2-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Compressed Sparse Row (CSR) hardware decoder models</span>
+                <button class="simplify-btn" data-topic="Compressed Sparse Row (CSR) hardware decoder models">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-3-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Processing-In-Memory (PIM) concepts, analog compute basics</span>
+                <button class="simplify-btn" data-topic="Processing-In-Memory (PIM) concepts, analog compute basics">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-3-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-3-2" class="checkmark"></label>
                 <span class="topic-text">ReRAM and memristor crossbar array designs</span>
+                <button class="simplify-btn" data-topic="ReRAM and memristor crossbar array designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-4-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Mapping graphs: compilers converting ONNX to hardware instructions</span>
+                <button class="simplify-btn" data-topic="Mapping graphs: compilers converting ONNX to hardware instructions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-4-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Scheduling operations, memory reuse optimizations</span>
+                <button class="simplify-btn" data-topic="Scheduling operations, memory reuse optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1248,6 +1315,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-5-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1274,6 +1342,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-5-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1309,6 +1378,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-6-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1335,6 +1405,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-6-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1370,6 +1441,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-7-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1396,6 +1468,7 @@
                 <input type="checkbox" id="ece-ai-hardware-3-7-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-3-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1419,16 +1492,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Using memory compilers, generating custom SRAM blocks?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Using memory compilers, generating custom SRAM blocks.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Using memory compilers, generating custom SRAM blocks&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Multi-port SRAM designs for simultaneous read/write typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Multi-port SRAM designs for simultaneous read/write.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Multi-port SRAM designs for simultaneous read/write&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Zero-skipping hardware logic: exploiting activation sparsity practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Zero-skipping hardware logic: exploiting activation sparsity systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Zero-skipping hardware logic: exploiting activation sparsity&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Compressed Sparse Row (CSR) hardware decoder models?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Compressed Sparse Row (CSR) hardware decoder models&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Processing-In-Memory (PIM) concepts, analog compute basics?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Processing-In-Memory (PIM) concepts, analog compute basics.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Processing-In-Memory (PIM) concepts, analog compute basics&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is ReRAM and memristor crossbar array designs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of ReRAM and memristor crossbar array designs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;ReRAM and memristor crossbar array designs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Mapping graphs: compilers converting ONNX to hardware instructions practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Mapping graphs: compilers converting ONNX to hardware instructions systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Mapping graphs: compilers converting ONNX to hardware instructions&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Scheduling operations, memory reuse optimizations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Scheduling operations, memory reuse optimizations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI Hardware Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Using memory compilers, generating custom SRAM blocks&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI Hardware Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Using memory compilers, generating custom SRAM blocks&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          FPGA Prototyping & Verification
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Test accelerators on FPGA boards and analyze power metrics.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            FPGA Prototyping & Verification
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Test accelerators on FPGA boards and analyze power metrics.</p>
+   
         <!-- Week 22: FPGA Synthesis & Constraints -->
         <div class="week-card">
           <div class="week-header">
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-1-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Synthesizing AI accelerator on Xilinx Vivado, resource utilization</span>
+                <button class="simplify-btn" data-topic="Synthesizing AI accelerator on Xilinx Vivado, resource utilization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-1-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Timing closure: routing constraints, max frequency checks</span>
+                <button class="simplify-btn" data-topic="Timing closure: routing constraints, max frequency checks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-2-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Deploying accelerator on Zynq platform, ARM-FPGA interfaces</span>
+                <button class="simplify-btn" data-topic="Deploying accelerator on Zynq platform, ARM-FPGA interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-2-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Verifying outputs against PyTorch references</span>
+                <button class="simplify-btn" data-topic="Verifying outputs against PyTorch references">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-3-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Estimating power consumption: dynamic switching vs static leakage</span>
+                <button class="simplify-btn" data-topic="Estimating power consumption: dynamic switching vs static leakage">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-3-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Thermal hotspots mitigation, clock gating architectures</span>
+                <button class="simplify-btn" data-topic="Thermal hotspots mitigation, clock gating architectures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1624,6 +1718,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-4-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Spiking Neural Networks (SNN) hardware architectures</span>
+                <button class="simplify-btn" data-topic="Spiking Neural Networks (SNN) hardware architectures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1650,6 +1745,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-4-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Event-driven compute circuits, brain-inspired chip designs</span>
+                <button class="simplify-btn" data-topic="Event-driven compute circuits, brain-inspired chip designs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1685,6 +1781,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-5-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1711,6 +1808,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-5-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1746,6 +1844,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-6-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1772,6 +1871,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-6-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1807,6 +1907,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-7-1" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-7-1" class="checkmark"></label>
                 <span class="topic-text">Refactor existing codebases to adhere to clean code principles</span>
+                <button class="simplify-btn" data-topic="Refactor existing codebases to adhere to clean code principles">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1833,6 +1934,7 @@
                 <input type="checkbox" id="ece-ai-hardware-4-7-2" class="topic-checkbox">
                 <label for="ece-ai-hardware-4-7-2" class="checkmark"></label>
                 <span class="topic-text">Write unit tests to cover core logic and verify edge cases</span>
+                <button class="simplify-btn" data-topic="Write unit tests to cover core logic and verify edge cases">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1855,6 +1957,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Synthesizing AI accelerator on Xilinx Vivado, resource utilization?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Synthesizing AI accelerator on Xilinx Vivado, resource utilization.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesizing AI accelerator on Xilinx Vivado, resource utilization&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Timing closure: routing constraints, max frequency checks typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Timing closure: routing constraints, max frequency checks.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Timing closure: routing constraints, max frequency checks&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Deploying accelerator on Zynq platform, ARM-FPGA interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Deploying accelerator on Zynq platform, ARM-FPGA interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Deploying accelerator on Zynq platform, ARM-FPGA interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Verifying outputs against PyTorch references?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Verifying outputs against PyTorch references&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Estimating power consumption: dynamic switching vs static leakage?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Estimating power consumption: dynamic switching vs static leakage.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Estimating power consumption: dynamic switching vs static leakage&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Thermal hotspots mitigation, clock gating architectures typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Thermal hotspots mitigation, clock gating architectures.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Thermal hotspots mitigation, clock gating architectures&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Spiking Neural Networks (SNN) hardware architectures practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Spiking Neural Networks (SNN) hardware architectures systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Spiking Neural Networks (SNN) hardware architectures&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Event-driven compute circuits, brain-inspired chip designs?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Event-driven compute circuits, brain-inspired chip designs&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for AI Hardware Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesizing AI accelerator on Xilinx Vivado, resource utilization&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for AI Hardware Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Synthesizing AI accelerator on Xilinx Vivado, resource utilization&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

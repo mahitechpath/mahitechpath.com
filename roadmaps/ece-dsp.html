@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Discrete-Time Signals & Z-Transforms
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master sampling theorem, convolution, stability, and pole-zero mappings.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Discrete-Time Signals & Z-Transforms
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Master sampling theorem, convolution, stability, and pole-zero mappings.</p>
+   
         <!-- Week 1: Sampling & Quantization -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-dsp-1-1-1" class="topic-checkbox">
                 <label for="ece-dsp-1-1-1" class="checkmark"></label>
                 <span class="topic-text">Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters</span>
+                <button class="simplify-btn" data-topic="Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-dsp-1-1-2" class="topic-checkbox">
                 <label for="ece-dsp-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Analog-to-digital conversion, quantization noise, and signal-to-noise ratio</span>
+                <button class="simplify-btn" data-topic="Analog-to-digital conversion, quantization noise, and signal-to-noise ratio">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-dsp-1-2-1" class="topic-checkbox">
                 <label for="ece-dsp-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Linear Time-Invariant (LTI) systems properties, impulse response</span>
+                <button class="simplify-btn" data-topic="Linear Time-Invariant (LTI) systems properties, impulse response">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-dsp-1-2-2" class="topic-checkbox">
                 <label for="ece-dsp-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Linear convolution, block convolution, and stability/causality conditions</span>
+                <button class="simplify-btn" data-topic="Linear convolution, block convolution, and stability/causality conditions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-dsp-1-3-1" class="topic-checkbox">
                 <label for="ece-dsp-1-3-1" class="checkmark"></label>
                 <span class="topic-text">DTFT definition, properties, frequency response of LTI systems</span>
+                <button class="simplify-btn" data-topic="DTFT definition, properties, frequency response of LTI systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-dsp-1-3-2" class="topic-checkbox">
                 <label for="ece-dsp-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Discrete Fourier Series (DFS) for periodic signals</span>
+                <button class="simplify-btn" data-topic="Discrete Fourier Series (DFS) for periodic signals">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-dsp-1-4-1" class="topic-checkbox">
                 <label for="ece-dsp-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Region of Convergence (ROC) properties, poles and zeros mapping</span>
+                <button class="simplify-btn" data-topic="Region of Convergence (ROC) properties, poles and zeros mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-dsp-1-4-2" class="topic-checkbox">
                 <label for="ece-dsp-1-4-2" class="checkmark"></label>
                 <span class="topic-text">Inverse Z-transform methods, transfer function, and system stability</span>
+                <button class="simplify-btn" data-topic="Inverse Z-transform methods, transfer function, and system stability">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-dsp-1-5-1" class="topic-checkbox">
                 <label for="ece-dsp-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-dsp-1-5-2" class="topic-checkbox">
                 <label for="ece-dsp-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which Git command is used to record changes to the repository after staging them?&quot;, &quot;options&quot;: [&quot;git status&quot;, &quot;git add&quot;, &quot;git commit&quot;, &quot;git push&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog-to-digital conversion, quantization noise, and signal-to-noise ratio&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Analog-to-digital conversion, quantization noise, and signal-to-noise ratio typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Analog-to-digital conversion, quantization noise, and signal-to-noise ratio.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Analog-to-digital conversion, quantization noise, and signal-to-noise ratio&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Linear Time-Invariant (LTI) systems properties, impulse response practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Linear Time-Invariant (LTI) systems properties, impulse response systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Linear Time-Invariant (LTI) systems properties, impulse response&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Linear convolution, block convolution, and stability/causality conditions?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Linear convolution, block convolution, and stability/causality conditions&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of DTFT definition, properties, frequency response of LTI systems?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for DTFT definition, properties, frequency response of LTI systems.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DTFT definition, properties, frequency response of LTI systems&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Discrete Fourier Series (DFS) for periodic signals typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Discrete Fourier Series (DFS) for periodic signals.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Discrete Fourier Series (DFS) for periodic signals&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Region of Convergence (ROC) properties, poles and zeros mapping practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Region of Convergence (ROC) properties, poles and zeros mapping systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Region of Convergence (ROC) properties, poles and zeros mapping&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Inverse Z-transform methods, transfer function, and system stability?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Inverse Z-transform methods, transfer function, and system stability&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DSP Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Nyquist-Shannon sampling theorem, aliasing, and anti-aliasing filters&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Discrete Fourier Transform (DFT) & FFT
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study DFT equations, circular convolution, windowing, and Fast Fourier Transform algorithms.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Discrete Fourier Transform (DFT) & FFT
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study DFT equations, circular convolution, windowing, and Fast Fourier Transform algorithms.</p>
+   
         <!-- Week 6: DFT Foundations -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="ece-dsp-2-1-1" class="topic-checkbox">
                 <label for="ece-dsp-2-1-1" class="checkmark"></label>
                 <span class="topic-text">DFT definition, matrix formulation, and properties of DFT</span>
+                <button class="simplify-btn" data-topic="DFT definition, matrix formulation, and properties of DFT">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="ece-dsp-2-1-2" class="topic-checkbox">
                 <label for="ece-dsp-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Circular convolution vs linear convolution, overlap-add/save methods</span>
+                <button class="simplify-btn" data-topic="Circular convolution vs linear convolution, overlap-add/save methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-dsp-2-2-1" class="topic-checkbox">
                 <label for="ece-dsp-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Decimation-in-time and decimation-in-frequency FFT algorithms</span>
+                <button class="simplify-btn" data-topic="Decimation-in-time and decimation-in-frequency FFT algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-dsp-2-2-2" class="topic-checkbox">
                 <label for="ece-dsp-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Cooley-Tukey FFT computational complexity and butterfly diagrams</span>
+                <button class="simplify-btn" data-topic="Cooley-Tukey FFT computational complexity and butterfly diagrams">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-dsp-2-3-1" class="topic-checkbox">
                 <label for="ece-dsp-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Rectangular, Hamming, Hanning, Blackman, and Kaiser windows</span>
+                <button class="simplify-btn" data-topic="Rectangular, Hamming, Hanning, Blackman, and Kaiser windows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-dsp-2-3-2" class="topic-checkbox">
                 <label for="ece-dsp-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Spectral leakage, resolution vs dynamic range tradeoffs</span>
+                <button class="simplify-btn" data-topic="Spectral leakage, resolution vs dynamic range tradeoffs">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-dsp-2-4-1" class="topic-checkbox">
                 <label for="ece-dsp-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Magnitude and phase responses, group delay, and phase delay</span>
+                <button class="simplify-btn" data-topic="Magnitude and phase responses, group delay, and phase delay">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-dsp-2-4-2" class="topic-checkbox">
                 <label for="ece-dsp-2-4-2" class="checkmark"></label>
                 <span class="topic-text">All-pass systems, minimum-phase systems, and linear-phase systems</span>
+                <button class="simplify-btn" data-topic="All-pass systems, minimum-phase systems, and linear-phase systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-dsp-2-5-1" class="topic-checkbox">
                 <label for="ece-dsp-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-dsp-2-5-2" class="topic-checkbox">
                 <label for="ece-dsp-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of DFT definition, matrix formulation, and properties of DFT?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for DFT definition, matrix formulation, and properties of DFT.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DFT definition, matrix formulation, and properties of DFT&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Circular convolution vs linear convolution, overlap-add/save methods typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Circular convolution vs linear convolution, overlap-add/save methods.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Circular convolution vs linear convolution, overlap-add/save methods&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Decimation-in-time and decimation-in-frequency FFT algorithms practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Decimation-in-time and decimation-in-frequency FFT algorithms systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Decimation-in-time and decimation-in-frequency FFT algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Cooley-Tukey FFT computational complexity and butterfly diagrams?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Cooley-Tukey FFT computational complexity and butterfly diagrams&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Rectangular, Hamming, Hanning, Blackman, and Kaiser windows?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Rectangular, Hamming, Hanning, Blackman, and Kaiser windows.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Rectangular, Hamming, Hanning, Blackman, and Kaiser windows&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Spectral leakage, resolution vs dynamic range tradeoffs typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Spectral leakage, resolution vs dynamic range tradeoffs.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Spectral leakage, resolution vs dynamic range tradeoffs&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Magnitude and phase responses, group delay, and phase delay practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Magnitude and phase responses, group delay, and phase delay systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Magnitude and phase responses, group delay, and phase delay&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with All-pass systems, minimum-phase systems, and linear-phase systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;All-pass systems, minimum-phase systems, and linear-phase systems&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for DSP Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DFT definition, matrix formulation, and properties of DFT&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DSP Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;DFT definition, matrix formulation, and properties of DFT&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Digital Filter Design
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study FIR and IIR digital filter design, windowing, bilinear transformations, and realization.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Digital Filter Design
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study FIR and IIR digital filter design, windowing, bilinear transformations, and realization.</p>
+   
         <!-- Week 11: FIR Filter Design -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="ece-dsp-3-1-1" class="topic-checkbox">
                 <label for="ece-dsp-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Linear phase FIR filters, symmetric/asymmetric coefficients</span>
+                <button class="simplify-btn" data-topic="Linear phase FIR filters, symmetric/asymmetric coefficients">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="ece-dsp-3-1-2" class="topic-checkbox">
                 <label for="ece-dsp-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Windowing design method, frequency sampling design method</span>
+                <button class="simplify-btn" data-topic="Windowing design method, frequency sampling design method">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="ece-dsp-3-2-1" class="topic-checkbox">
                 <label for="ece-dsp-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Analog filter designs (Butterworth, Chebyshev) mapping</span>
+                <button class="simplify-btn" data-topic="Analog filter designs (Butterworth, Chebyshev) mapping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="ece-dsp-3-2-2" class="topic-checkbox">
                 <label for="ece-dsp-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Impulse invariance method and Bilinear Transformation (BLT) warping</span>
+                <button class="simplify-btn" data-topic="Impulse invariance method and Bilinear Transformation (BLT) warping">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-dsp-3-3-1" class="topic-checkbox">
                 <label for="ece-dsp-3-3-1" class="checkmark"></label>
                 <span class="topic-text">Direct Form I, Direct Form II, Cascade, and Parallel structures</span>
+                <button class="simplify-btn" data-topic="Direct Form I, Direct Form II, Cascade, and Parallel structures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-dsp-3-3-2" class="topic-checkbox">
                 <label for="ece-dsp-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Lattice structures, signal flow graphs, and transposition theorem</span>
+                <button class="simplify-btn" data-topic="Lattice structures, signal flow graphs, and transposition theorem">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-dsp-3-4-1" class="topic-checkbox">
                 <label for="ece-dsp-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Coefficient quantization errors, product round-off noise analysis</span>
+                <button class="simplify-btn" data-topic="Coefficient quantization errors, product round-off noise analysis">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-dsp-3-4-2" class="topic-checkbox">
                 <label for="ece-dsp-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Limit cycles in IIR filters, scaling, and overflow prevention</span>
+                <button class="simplify-btn" data-topic="Limit cycles in IIR filters, scaling, and overflow prevention">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-dsp-3-5-1" class="topic-checkbox">
                 <label for="ece-dsp-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-dsp-3-5-2" class="topic-checkbox">
                 <label for="ece-dsp-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Linear phase FIR filters, symmetric/asymmetric coefficients?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Linear phase FIR filters, symmetric/asymmetric coefficients.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear phase FIR filters, symmetric/asymmetric coefficients&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Windowing design method, frequency sampling design method typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Windowing design method, frequency sampling design method.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Windowing design method, frequency sampling design method&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Analog filter designs (Butterworth, Chebyshev) mapping practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Analog filter designs (Butterworth, Chebyshev) mapping systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Analog filter designs (Butterworth, Chebyshev) mapping&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Impulse invariance method and Bilinear Transformation (BLT) warping?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Impulse invariance method and Bilinear Transformation (BLT) warping&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Direct Form I, Direct Form II, Cascade, and Parallel structures?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Direct Form I, Direct Form II, Cascade, and Parallel structures.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Direct Form I, Direct Form II, Cascade, and Parallel structures&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Lattice structures, signal flow graphs, and transposition theorem typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Lattice structures, signal flow graphs, and transposition theorem.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Lattice structures, signal flow graphs, and transposition theorem&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Coefficient quantization errors, product round-off noise analysis practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Coefficient quantization errors, product round-off noise analysis systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Coefficient quantization errors, product round-off noise analysis&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Limit cycles in IIR filters, scaling, and overflow prevention?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Limit cycles in IIR filters, scaling, and overflow prevention&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for DSP Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear phase FIR filters, symmetric/asymmetric coefficients&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DSP Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Linear phase FIR filters, symmetric/asymmetric coefficients&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Advanced DSP & Hardware Implementation
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Explore multirate DSP, adaptive filters, audio/image processing, and fixed-point architecture.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Advanced DSP & Hardware Implementation
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Explore multirate DSP, adaptive filters, audio/image processing, and fixed-point architecture.</p>
+   
         <!-- Week 16: Multirate Signal Processing -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="ece-dsp-4-1-1" class="topic-checkbox">
                 <label for="ece-dsp-4-1-1" class="checkmark"></label>
                 <span class="topic-text">Decimation, interpolation, sampling rate converters</span>
+                <button class="simplify-btn" data-topic="Decimation, interpolation, sampling rate converters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="ece-dsp-4-1-2" class="topic-checkbox">
                 <label for="ece-dsp-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Polyphase structures, subband coding, and filter banks</span>
+                <button class="simplify-btn" data-topic="Polyphase structures, subband coding, and filter banks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="ece-dsp-4-2-1" class="topic-checkbox">
                 <label for="ece-dsp-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Wiener filter, Least Mean Squares (LMS) and RLS algorithms</span>
+                <button class="simplify-btn" data-topic="Wiener filter, Least Mean Squares (LMS) and RLS algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="ece-dsp-4-2-2" class="topic-checkbox">
                 <label for="ece-dsp-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Adaptive noise cancellation, echo cancellation, and system identification</span>
+                <button class="simplify-btn" data-topic="Adaptive noise cancellation, echo cancellation, and system identification">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="ece-dsp-4-3-1" class="topic-checkbox">
                 <label for="ece-dsp-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Spectrograms, short-time Fourier transform (STFT), speech coding</span>
+                <button class="simplify-btn" data-topic="Spectrograms, short-time Fourier transform (STFT), speech coding">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="ece-dsp-4-3-2" class="topic-checkbox">
                 <label for="ece-dsp-4-3-2" class="checkmark"></label>
                 <span class="topic-text">2D signals, 2D DFT, image enhancement filters, and DCT compression</span>
+                <button class="simplify-btn" data-topic="2D signals, 2D DFT, image enhancement filters, and DCT compression">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-dsp-4-4-1" class="topic-checkbox">
                 <label for="ece-dsp-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Fixed-point vs floating-point implementation, MAC units</span>
+                <button class="simplify-btn" data-topic="Fixed-point vs floating-point implementation, MAC units">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-dsp-4-4-2" class="topic-checkbox">
                 <label for="ece-dsp-4-4-2" class="checkmark"></label>
                 <span class="topic-text">DSP processor architectures (TMS320), FPGA-based DSP pipelines</span>
+                <button class="simplify-btn" data-topic="DSP processor architectures (TMS320), FPGA-based DSP pipelines">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-dsp-4-5-1" class="topic-checkbox">
                 <label for="ece-dsp-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-dsp-4-5-2" class="topic-checkbox">
                 <label for="ece-dsp-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Decimation, interpolation, sampling rate converters?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Decimation, interpolation, sampling rate converters.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Decimation, interpolation, sampling rate converters&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Polyphase structures, subband coding, and filter banks typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Polyphase structures, subband coding, and filter banks.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Polyphase structures, subband coding, and filter banks&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Wiener filter, Least Mean Squares (LMS) and RLS algorithms practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Wiener filter, Least Mean Squares (LMS) and RLS algorithms systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Wiener filter, Least Mean Squares (LMS) and RLS algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Adaptive noise cancellation, echo cancellation, and system identification?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Adaptive noise cancellation, echo cancellation, and system identification&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Spectrograms, short-time Fourier transform (STFT), speech coding?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Spectrograms, short-time Fourier transform (STFT), speech coding.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Spectrograms, short-time Fourier transform (STFT), speech coding&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is 2D signals, 2D DFT, image enhancement filters, and DCT compression typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of 2D signals, 2D DFT, image enhancement filters, and DCT compression.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;2D signals, 2D DFT, image enhancement filters, and DCT compression&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Fixed-point vs floating-point implementation, MAC units practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Fixed-point vs floating-point implementation, MAC units systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Fixed-point vs floating-point implementation, MAC units&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with DSP processor architectures (TMS320), FPGA-based DSP pipelines?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;DSP processor architectures (TMS320), FPGA-based DSP pipelines&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for DSP Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Decimation, interpolation, sampling rate converters&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for DSP Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Decimation, interpolation, sampling rate converters&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          Solar Photovoltaic Systems
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study solar cell physics, MPPT tracking algorithms, and design PV strings.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            Solar Photovoltaic Systems
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study solar cell physics, MPPT tracking algorithms, and design PV strings.</p>
+   
         <!-- Week 1: Solar Cell Physics -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="eee-renewable-1-1-1" class="topic-checkbox">
                 <label for="eee-renewable-1-1-1" class="checkmark"></label>
                 <span class="topic-text">PV effect: p-n junction under light, equivalent circuit model</span>
+                <button class="simplify-btn" data-topic="PV effect: p-n junction under light, equivalent circuit model">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="eee-renewable-1-1-2" class="topic-checkbox">
                 <label for="eee-renewable-1-1-2" class="checkmark"></label>
                 <span class="topic-text">I-V and P-V characteristics, fill factor, efficiency calculations</span>
+                <button class="simplify-btn" data-topic="I-V and P-V characteristics, fill factor, efficiency calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="eee-renewable-1-2-1" class="topic-checkbox">
                 <label for="eee-renewable-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Maximum Power Point Tracking: Perturb & Observe, Incremental Conductance</span>
+                <button class="simplify-btn" data-topic="Maximum Power Point Tracking: Perturb & Observe, Incremental Conductance">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="eee-renewable-1-2-2" class="topic-checkbox">
                 <label for="eee-renewable-1-2-2" class="checkmark"></label>
                 <span class="topic-text">DC-DC boost converters with MPPT control loops design</span>
+                <button class="simplify-btn" data-topic="DC-DC boost converters with MPPT control loops design">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="eee-renewable-1-3-1" class="topic-checkbox">
                 <label for="eee-renewable-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Single-phase/three-phase grid-tied inverters, phase synchronization (PLL)</span>
+                <button class="simplify-btn" data-topic="Single-phase/three-phase grid-tied inverters, phase synchronization (PLL)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="eee-renewable-1-3-2" class="topic-checkbox">
                 <label for="eee-renewable-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Filter designs (L, LCL) for grid current harmonics reduction</span>
+                <button class="simplify-btn" data-topic="Filter designs (L, LCL) for grid current harmonics reduction">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="eee-renewable-1-4-1" class="topic-checkbox">
                 <label for="eee-renewable-1-4-1" class="checkmark"></label>
                 <span class="topic-text">String sizing equations, open circuit voltage constraints</span>
+                <button class="simplify-btn" data-topic="String sizing equations, open circuit voltage constraints">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="eee-renewable-1-4-2" class="topic-checkbox">
                 <label for="eee-renewable-1-4-2" class="checkmark"></label>
                 <span class="topic-text">AC/DC cabling sizing, protection fuses, lightning arrestors</span>
+                <button class="simplify-btn" data-topic="AC/DC cabling sizing, protection fuses, lightning arrestors">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="eee-renewable-1-5-1" class="topic-checkbox">
                 <label for="eee-renewable-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="eee-renewable-1-5-2" class="topic-checkbox">
                 <label for="eee-renewable-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -423,16 +434,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of PV effect: p-n junction under light, equivalent circuit model?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for PV effect: p-n junction under light, equivalent circuit model.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PV effect: p-n junction under light, equivalent circuit model&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is I-V and P-V characteristics, fill factor, efficiency calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of I-V and P-V characteristics, fill factor, efficiency calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;I-V and P-V characteristics, fill factor, efficiency calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Maximum Power Point Tracking: Perturb & Observe, Incremental Conductance practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Maximum Power Point Tracking: Perturb & Observe, Incremental Conductance systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Maximum Power Point Tracking: Perturb & Observe, Incremental Conductance&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with DC-DC boost converters with MPPT control loops design?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;DC-DC boost converters with MPPT control loops design&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Single-phase/three-phase grid-tied inverters, phase synchronization (PLL)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Single-phase/three-phase grid-tied inverters, phase synchronization (PLL).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Single-phase/three-phase grid-tied inverters, phase synchronization (PLL)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Filter designs (L, LCL) for grid current harmonics reduction typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Filter designs (L, LCL) for grid current harmonics reduction.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Filter designs (L, LCL) for grid current harmonics reduction&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting String sizing equations, open circuit voltage constraints practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of String sizing equations, open circuit voltage constraints systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;String sizing equations, open circuit voltage constraints&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with AC/DC cabling sizing, protection fuses, lightning arrestors?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;AC/DC cabling sizing, protection fuses, lightning arrestors&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PV effect: p-n junction under light, equivalent circuit model&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;PV effect: p-n junction under light, equivalent circuit model&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          Wind Energy Systems
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study wind physics, Betz limit, DFG alternators, and turbine pitch controls.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            Wind Energy Systems
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study wind physics, Betz limit, DFG alternators, and turbine pitch controls.</p>
+   
         <!-- Week 6: Wind Power Aerodynamics -->
         <div class="week-card">
           <div class="week-header">
@@ -445,6 +471,7 @@
                 <input type="checkbox" id="eee-renewable-2-1-1" class="topic-checkbox">
                 <label for="eee-renewable-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Kinetic energy of wind, Betz limit derivation (max efficiency)</span>
+                <button class="simplify-btn" data-topic="Kinetic energy of wind, Betz limit derivation (max efficiency)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -471,6 +498,7 @@
                 <input type="checkbox" id="eee-renewable-2-1-2" class="topic-checkbox">
                 <label for="eee-renewable-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Power coefficient, tip speed ratio, wind turbine classifications</span>
+                <button class="simplify-btn" data-topic="Power coefficient, tip speed ratio, wind turbine classifications">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="eee-renewable-2-2-1" class="topic-checkbox">
                 <label for="eee-renewable-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Doubly Fed Induction Generator (DFIG) working and equivalent circuit</span>
+                <button class="simplify-btn" data-topic="Doubly Fed Induction Generator (DFIG) working and equivalent circuit">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="eee-renewable-2-2-2" class="topic-checkbox">
                 <label for="eee-renewable-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Permanent Magnet Synchronous Generator (PMSG) wind systems</span>
+                <button class="simplify-btn" data-topic="Permanent Magnet Synchronous Generator (PMSG) wind systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="eee-renewable-2-3-1" class="topic-checkbox">
                 <label for="eee-renewable-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Back-to-back converter systems: rotor-side and grid-side controllers</span>
+                <button class="simplify-btn" data-topic="Back-to-back converter systems: rotor-side and grid-side controllers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="eee-renewable-2-3-2" class="topic-checkbox">
                 <label for="eee-renewable-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Reactive power support, low-voltage ride-through (LVRT)</span>
+                <button class="simplify-btn" data-topic="Reactive power support, low-voltage ride-through (LVRT)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="eee-renewable-2-4-1" class="topic-checkbox">
                 <label for="eee-renewable-2-4-1" class="checkmark"></label>
                 <span class="topic-text">Blade pitch control systems, yaw drive motors operation</span>
+                <button class="simplify-btn" data-topic="Blade pitch control systems, yaw drive motors operation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="eee-renewable-2-4-2" class="topic-checkbox">
                 <label for="eee-renewable-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Active wind tracking control loops, safety braking systems</span>
+                <button class="simplify-btn" data-topic="Active wind tracking control loops, safety braking systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="eee-renewable-2-5-1" class="topic-checkbox">
                 <label for="eee-renewable-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="eee-renewable-2-5-2" class="topic-checkbox">
                 <label for="eee-renewable-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -738,16 +774,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;In React, which hook should be used to run a side-effect (such as data fetching or subscription updates)?&quot;, &quot;options&quot;: [&quot;useState&quot;, &quot;useEffect&quot;, &quot;useMemo&quot;, &quot;useContext&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reactive power support, low-voltage ride-through (LVRT)&quot;}, {&quot;question&quot;: &quot;In a PID control loop, what is the role of the Integral term?&quot;, &quot;options&quot;: [&quot;To eliminate steady-state tracking errors.&quot;, &quot;To predict future error trends and slow reaction.&quot;, &quot;To amplify the raw noise in input readings.&quot;, &quot;To limit the physical output torque of motor gearboxes.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Blade pitch control systems, yaw drive motors operation&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Kinetic energy of wind, Betz limit derivation (max efficiency)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Kinetic energy of wind, Betz limit derivation (max efficiency).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Kinetic energy of wind, Betz limit derivation (max efficiency)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Power coefficient, tip speed ratio, wind turbine classifications typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Power coefficient, tip speed ratio, wind turbine classifications.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Power coefficient, tip speed ratio, wind turbine classifications&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Doubly Fed Induction Generator (DFIG) working and equivalent circuit practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Doubly Fed Induction Generator (DFIG) working and equivalent circuit systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Doubly Fed Induction Generator (DFIG) working and equivalent circuit&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Permanent Magnet Synchronous Generator (PMSG) wind systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Permanent Magnet Synchronous Generator (PMSG) wind systems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Back-to-back converter systems: rotor-side and grid-side controllers?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Back-to-back converter systems: rotor-side and grid-side controllers.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Back-to-back converter systems: rotor-side and grid-side controllers&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Reactive power support, low-voltage ride-through (LVRT) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Reactive power support, low-voltage ride-through (LVRT).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Reactive power support, low-voltage ride-through (LVRT)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Blade pitch control systems, yaw drive motors operation practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Blade pitch control systems, yaw drive motors operation systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Blade pitch control systems, yaw drive motors operation&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Active wind tracking control loops, safety braking systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Active wind tracking control loops, safety braking systems&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          Energy Storage & Microgrids
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design battery storage, calculate charge cycles, and configure microgrid controllers.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            Energy Storage & Microgrids
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Design battery storage, calculate charge cycles, and configure microgrid controllers.</p>
+   
         <!-- Week 11: Battery Storage Technologies -->
         <div class="week-card">
           <div class="week-header">
@@ -760,6 +811,7 @@
                 <input type="checkbox" id="eee-renewable-3-1-1" class="topic-checkbox">
                 <label for="eee-renewable-3-1-1" class="checkmark"></label>
                 <span class="topic-text">Lead-acid, Li-ion, and flow batteries parameter comparisons</span>
+                <button class="simplify-btn" data-topic="Lead-acid, Li-ion, and flow batteries parameter comparisons">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -786,6 +838,7 @@
                 <input type="checkbox" id="eee-renewable-3-1-2" class="topic-checkbox">
                 <label for="eee-renewable-3-1-2" class="checkmark"></label>
                 <span class="topic-text">Battery sizing equations, Depth of Discharge (DoD), cycle life</span>
+                <button class="simplify-btn" data-topic="Battery sizing equations, Depth of Discharge (DoD), cycle life">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -821,6 +874,7 @@
                 <input type="checkbox" id="eee-renewable-3-2-1" class="topic-checkbox">
                 <label for="eee-renewable-3-2-1" class="checkmark"></label>
                 <span class="topic-text">Buck-boost converter topologies for battery charging/discharging</span>
+                <button class="simplify-btn" data-topic="Buck-boost converter topologies for battery charging/discharging">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -847,6 +901,7 @@
                 <input type="checkbox" id="eee-renewable-3-2-2" class="topic-checkbox">
                 <label for="eee-renewable-3-2-2" class="checkmark"></label>
                 <span class="topic-text">Current control loops, state-of-charge tracking algorithms</span>
+                <button class="simplify-btn" data-topic="Current control loops, state-of-charge tracking algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="eee-renewable-3-3-1" class="topic-checkbox">
                 <label for="eee-renewable-3-3-1" class="checkmark"></label>
                 <span class="topic-text">AC microgrids vs DC microgrids, hybrid grid architectures</span>
+                <button class="simplify-btn" data-topic="AC microgrids vs DC microgrids, hybrid grid architectures">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="eee-renewable-3-3-2" class="topic-checkbox">
                 <label for="eee-renewable-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Islanded mode vs grid-connected operations, synchronization</span>
+                <button class="simplify-btn" data-topic="Islanded mode vs grid-connected operations, synchronization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="eee-renewable-3-4-1" class="topic-checkbox">
                 <label for="eee-renewable-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Proton Exchange Membrane (PEM) fuel cells, electrolyzers</span>
+                <button class="simplify-btn" data-topic="Proton Exchange Membrane (PEM) fuel cells, electrolyzers">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="eee-renewable-3-4-2" class="topic-checkbox">
                 <label for="eee-renewable-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Hydrogen storage systems, fuel cell grid integrations</span>
+                <button class="simplify-btn" data-topic="Hydrogen storage systems, fuel cell grid integrations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="eee-renewable-3-5-1" class="topic-checkbox">
                 <label for="eee-renewable-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="eee-renewable-3-5-2" class="topic-checkbox">
                 <label for="eee-renewable-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1053,16 +1114,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Lead-acid, Li-ion, and flow batteries parameter comparisons?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Lead-acid, Li-ion, and flow batteries parameter comparisons.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead-acid, Li-ion, and flow batteries parameter comparisons&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Battery sizing equations, Depth of Discharge (DoD), cycle life typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Battery sizing equations, Depth of Discharge (DoD), cycle life.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Battery sizing equations, Depth of Discharge (DoD), cycle life&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Buck-boost converter topologies for battery charging/discharging practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Buck-boost converter topologies for battery charging/discharging systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Buck-boost converter topologies for battery charging/discharging&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Current control loops, state-of-charge tracking algorithms?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Current control loops, state-of-charge tracking algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of AC microgrids vs DC microgrids, hybrid grid architectures?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for AC microgrids vs DC microgrids, hybrid grid architectures.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;AC microgrids vs DC microgrids, hybrid grid architectures&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Islanded mode vs grid-connected operations, synchronization typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Islanded mode vs grid-connected operations, synchronization.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Islanded mode vs grid-connected operations, synchronization&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Proton Exchange Membrane (PEM) fuel cells, electrolyzers practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Proton Exchange Membrane (PEM) fuel cells, electrolyzers systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Proton Exchange Membrane (PEM) fuel cells, electrolyzers&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Hydrogen storage systems, fuel cell grid integrations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Hydrogen storage systems, fuel cell grid integrations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead-acid, Li-ion, and flow batteries parameter comparisons&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Lead-acid, Li-ion, and flow batteries parameter comparisons&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          Grid Integration & Smart Grid
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study grid synchronization, power quality standards, and smart grids.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            Grid Integration & Smart Grid
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study grid synchronization, power quality standards, and smart grids.</p>
+   
         <!-- Week 16: Grid Interconnection Codes -->
         <div class="week-card">
           <div class="week-header">
@@ -1075,6 +1151,7 @@
                 <input type="checkbox" id="eee-renewable-4-1-1" class="topic-checkbox">
                 <label for="eee-renewable-4-1-1" class="checkmark"></label>
                 <span class="topic-text">IEEE 1547 and local grid standards, voltage/frequency tolerances</span>
+                <button class="simplify-btn" data-topic="IEEE 1547 and local grid standards, voltage/frequency tolerances">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1101,6 +1178,7 @@
                 <input type="checkbox" id="eee-renewable-4-1-2" class="topic-checkbox">
                 <label for="eee-renewable-4-1-2" class="checkmark"></label>
                 <span class="topic-text">Anti-islanding protection schemes, rate of change of frequency</span>
+                <button class="simplify-btn" data-topic="Anti-islanding protection schemes, rate of change of frequency">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1136,6 +1214,7 @@
                 <input type="checkbox" id="eee-renewable-4-2-1" class="topic-checkbox">
                 <label for="eee-renewable-4-2-1" class="checkmark"></label>
                 <span class="topic-text">Total Harmonic Distortion (THD) limits, active power filters</span>
+                <button class="simplify-btn" data-topic="Total Harmonic Distortion (THD) limits, active power filters">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1162,6 +1241,7 @@
                 <input type="checkbox" id="eee-renewable-4-2-2" class="topic-checkbox">
                 <label for="eee-renewable-4-2-2" class="checkmark"></label>
                 <span class="topic-text">Flicker, voltage sags, swells in grid-tied solar/wind systems</span>
+                <button class="simplify-btn" data-topic="Flicker, voltage sags, swells in grid-tied solar/wind systems">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1197,6 +1277,7 @@
                 <input type="checkbox" id="eee-renewable-4-3-1" class="topic-checkbox">
                 <label for="eee-renewable-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Smart meters, SCADA networks, remote terminal units (RTUs)</span>
+                <button class="simplify-btn" data-topic="Smart meters, SCADA networks, remote terminal units (RTUs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1223,6 +1304,7 @@
                 <input type="checkbox" id="eee-renewable-4-3-2" class="topic-checkbox">
                 <label for="eee-renewable-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Demand response strategies, virtual power plants (VPPs)</span>
+                <button class="simplify-btn" data-topic="Demand response strategies, virtual power plants (VPPs)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="eee-renewable-4-4-1" class="topic-checkbox">
                 <label for="eee-renewable-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Using PVsyst/HOMER software for plant optimization</span>
+                <button class="simplify-btn" data-topic="Using PVsyst/HOMER software for plant optimization">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="eee-renewable-4-4-2" class="topic-checkbox">
                 <label for="eee-renewable-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Economic analysis: Levelized Cost of Energy (LCOE) calculations</span>
+                <button class="simplify-btn" data-topic="Economic analysis: Levelized Cost of Energy (LCOE) calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="eee-renewable-4-5-1" class="topic-checkbox">
                 <label for="eee-renewable-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="eee-renewable-4-5-2" class="topic-checkbox">
                 <label for="eee-renewable-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1367,6 +1453,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of IEEE 1547 and local grid standards, voltage/frequency tolerances?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for IEEE 1547 and local grid standards, voltage/frequency tolerances.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;IEEE 1547 and local grid standards, voltage/frequency tolerances&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Anti-islanding protection schemes, rate of change of frequency typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Anti-islanding protection schemes, rate of change of frequency.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Anti-islanding protection schemes, rate of change of frequency&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Total Harmonic Distortion (THD) limits, active power filters practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Total Harmonic Distortion (THD) limits, active power filters systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Total Harmonic Distortion (THD) limits, active power filters&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Flicker, voltage sags, swells in grid-tied solar/wind systems?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Flicker, voltage sags, swells in grid-tied solar/wind systems&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Smart meters, SCADA networks, remote terminal units (RTUs)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Smart meters, SCADA networks, remote terminal units (RTUs).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Smart meters, SCADA networks, remote terminal units (RTUs)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Demand response strategies, virtual power plants (VPPs) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Demand response strategies, virtual power plants (VPPs).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Demand response strategies, virtual power plants (VPPs)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Using PVsyst/HOMER software for plant optimization practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Using PVsyst/HOMER software for plant optimization systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Using PVsyst/HOMER software for plant optimization&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Economic analysis: Levelized Cost of Energy (LCOE) calculations?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Economic analysis: Levelized Cost of Energy (LCOE) calculations&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Renewable Energy Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;IEEE 1547 and local grid standards, voltage/frequency tolerances&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Renewable Energy Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;IEEE 1547 and local grid standards, voltage/frequency tolerances&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 

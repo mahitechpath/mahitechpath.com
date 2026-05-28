@@ -111,13 +111,14 @@
 
       <!-- PHASE 1 -->
       <!-- PHASE 1 -->
-      <section id="phase1" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 1</span>
-          SystemVerilog OOP Verification
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write SystemVerilog classes, configure inheritance, and build interfaces.</p>
- 
+      <section id="phase1" class="phase-section" data-phase="1">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 1</span>
+            SystemVerilog OOP Verification
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write SystemVerilog classes, configure inheritance, and build interfaces.</p>
+   
         <!-- Week 1: SystemVerilog Classes & Objects -->
         <div class="week-card">
           <div class="week-header">
@@ -130,6 +131,7 @@
                 <input type="checkbox" id="ece-verification-1-1-1" class="topic-checkbox">
                 <label for="ece-verification-1-1-1" class="checkmark"></label>
                 <span class="topic-text">OOP concepts: properties, methods, constructors (new)</span>
+                <button class="simplify-btn" data-topic="OOP concepts: properties, methods, constructors (new)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -156,6 +158,7 @@
                 <input type="checkbox" id="ece-verification-1-1-2" class="topic-checkbox">
                 <label for="ece-verification-1-1-2" class="checkmark"></label>
                 <span class="topic-text">Object handles, copying objects: shallow vs deep copy</span>
+                <button class="simplify-btn" data-topic="Object handles, copying objects: shallow vs deep copy">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -191,6 +194,7 @@
                 <input type="checkbox" id="ece-verification-1-2-1" class="topic-checkbox">
                 <label for="ece-verification-1-2-1" class="checkmark"></label>
                 <span class="topic-text">Virtual methods, abstract base classes, super keyword</span>
+                <button class="simplify-btn" data-topic="Virtual methods, abstract base classes, super keyword">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -217,6 +221,7 @@
                 <input type="checkbox" id="ece-verification-1-2-2" class="topic-checkbox">
                 <label for="ece-verification-1-2-2" class="checkmark"></label>
                 <span class="topic-text">Polymorphism, parameter inheritance workflows</span>
+                <button class="simplify-btn" data-topic="Polymorphism, parameter inheritance workflows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -252,6 +257,7 @@
                 <input type="checkbox" id="ece-verification-1-3-1" class="topic-checkbox">
                 <label for="ece-verification-1-3-1" class="checkmark"></label>
                 <span class="topic-text">Virtual interfaces, clocking blocks, input/output skews</span>
+                <button class="simplify-btn" data-topic="Virtual interfaces, clocking blocks, input/output skews">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -278,6 +284,7 @@
                 <input type="checkbox" id="ece-verification-1-3-2" class="topic-checkbox">
                 <label for="ece-verification-1-3-2" class="checkmark"></label>
                 <span class="topic-text">Modports, connect signals between testbench and DUT</span>
+                <button class="simplify-btn" data-topic="Modports, connect signals between testbench and DUT">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -313,6 +320,7 @@
                 <input type="checkbox" id="ece-verification-1-4-1" class="topic-checkbox">
                 <label for="ece-verification-1-4-1" class="checkmark"></label>
                 <span class="topic-text">Random variables (rand, randc), constraint blocks math</span>
+                <button class="simplify-btn" data-topic="Random variables (rand, randc), constraint blocks math">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -339,6 +347,7 @@
                 <input type="checkbox" id="ece-verification-1-4-2" class="topic-checkbox">
                 <label for="ece-verification-1-4-2" class="checkmark"></label>
                 <span class="topic-text">In-line constraints (with), dynamic constraint enables/disables</span>
+                <button class="simplify-btn" data-topic="In-line constraints (with), dynamic constraint enables/disables">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -374,6 +383,7 @@
                 <input type="checkbox" id="ece-verification-1-5-1" class="topic-checkbox">
                 <label for="ece-verification-1-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -400,6 +410,7 @@
                 <input type="checkbox" id="ece-verification-1-5-2" class="topic-checkbox">
                 <label for="ece-verification-1-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -435,6 +446,7 @@
                 <input type="checkbox" id="ece-verification-1-6-1" class="topic-checkbox">
                 <label for="ece-verification-1-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -461,6 +473,7 @@
                 <input type="checkbox" id="ece-verification-1-6-2" class="topic-checkbox">
                 <label for="ece-verification-1-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -484,16 +497,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="1" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of OOP concepts: properties, methods, constructors (new)?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for OOP concepts: properties, methods, constructors (new).&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;OOP concepts: properties, methods, constructors (new)&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Object handles, copying objects: shallow vs deep copy typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Object handles, copying objects: shallow vs deep copy.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Object handles, copying objects: shallow vs deep copy&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Virtual methods, abstract base classes, super keyword practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Virtual methods, abstract base classes, super keyword systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Virtual methods, abstract base classes, super keyword&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Polymorphism, parameter inheritance workflows?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Polymorphism, parameter inheritance workflows&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Virtual interfaces, clocking blocks, input/output skews?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Virtual interfaces, clocking blocks, input/output skews.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Virtual interfaces, clocking blocks, input/output skews&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Modports, connect signals between testbench and DUT typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Modports, connect signals between testbench and DUT.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Modports, connect signals between testbench and DUT&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Random variables (rand, randc), constraint blocks math practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Random variables (rand, randc), constraint blocks math systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Random variables (rand, randc), constraint blocks math&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with In-line constraints (with), dynamic constraint enables/disables?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;In-line constraints (with), dynamic constraint enables/disables&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;OOP concepts: properties, methods, constructors (new)&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 1?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;OOP concepts: properties, methods, constructors (new)&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 1 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 1 topics to unlock Phase 2.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 2 -->
-      <section id="phase2" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 2</span>
-          SV Mailboxes, Threads & Assertions
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure concurrent threads, write mailboxes, and write SystemVerilog assertions.</p>
- 
+      <section id="phase2" class="phase-section" data-phase="2">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 2</span>
+            SV Mailboxes, Threads & Assertions
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Configure concurrent threads, write mailboxes, and write SystemVerilog assertions.</p>
+   
         <!-- Week 7: Interprocess Communications -->
         <div class="week-card">
           <div class="week-header">
@@ -506,6 +534,7 @@
                 <input type="checkbox" id="ece-verification-2-1-1" class="topic-checkbox">
                 <label for="ece-verification-2-1-1" class="checkmark"></label>
                 <span class="topic-text">Mailboxes (bounded/unbounded), event triggers, semaphores</span>
+                <button class="simplify-btn" data-topic="Mailboxes (bounded/unbounded), event triggers, semaphores">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -532,6 +561,7 @@
                 <input type="checkbox" id="ece-verification-2-1-2" class="topic-checkbox">
                 <label for="ece-verification-2-1-2" class="checkmark"></label>
                 <span class="topic-text">Producer-consumer patterns implementation in testbenches</span>
+                <button class="simplify-btn" data-topic="Producer-consumer patterns implementation in testbenches">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -567,6 +597,7 @@
                 <input type="checkbox" id="ece-verification-2-2-1" class="topic-checkbox">
                 <label for="ece-verification-2-2-1" class="checkmark"></label>
                 <span class="topic-text">Fork-join, fork-join_any, fork-join_none thread execution blocks</span>
+                <button class="simplify-btn" data-topic="Fork-join, fork-join_any, fork-join_none thread execution blocks">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -593,6 +624,7 @@
                 <input type="checkbox" id="ece-verification-2-2-2" class="topic-checkbox">
                 <label for="ece-verification-2-2-2" class="checkmark"></label>
                 <span class="topic-text">Disabling threads: disable fork, wait fork commands</span>
+                <button class="simplify-btn" data-topic="Disabling threads: disable fork, wait fork commands">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -628,6 +660,7 @@
                 <input type="checkbox" id="ece-verification-2-3-1" class="topic-checkbox">
                 <label for="ece-verification-2-3-1" class="checkmark"></label>
                 <span class="topic-text">Concurrent assertions syntax, sequences, properties definitions</span>
+                <button class="simplify-btn" data-topic="Concurrent assertions syntax, sequences, properties definitions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -654,6 +687,7 @@
                 <input type="checkbox" id="ece-verification-2-3-2" class="topic-checkbox">
                 <label for="ece-verification-2-3-2" class="checkmark"></label>
                 <span class="topic-text">Implication operators: overlapped (|=) vs non-overlapped (|=)</span>
+                <button class="simplify-btn" data-topic="Implication operators: overlapped (|=) vs non-overlapped (|=)">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -689,6 +723,7 @@
                 <input type="checkbox" id="ece-verification-2-4-1" class="topic-checkbox">
                 <label for="ece-verification-2-4-1" class="checkmark"></label>
                 <span class="topic-text">SVA system functions: past, rose, fell, stable</span>
+                <button class="simplify-btn" data-topic="SVA system functions: past, rose, fell, stable">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -715,6 +750,7 @@
                 <input type="checkbox" id="ece-verification-2-4-2" class="topic-checkbox">
                 <label for="ece-verification-2-4-2" class="checkmark"></label>
                 <span class="topic-text">Binding assertions to DUT interfaces, assertion coverage audits</span>
+                <button class="simplify-btn" data-topic="Binding assertions to DUT interfaces, assertion coverage audits">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -750,6 +786,7 @@
                 <input type="checkbox" id="ece-verification-2-5-1" class="topic-checkbox">
                 <label for="ece-verification-2-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -776,6 +813,7 @@
                 <input type="checkbox" id="ece-verification-2-5-2" class="topic-checkbox">
                 <label for="ece-verification-2-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -811,6 +849,7 @@
                 <input type="checkbox" id="ece-verification-2-6-1" class="topic-checkbox">
                 <label for="ece-verification-2-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -837,6 +876,7 @@
                 <input type="checkbox" id="ece-verification-2-6-2" class="topic-checkbox">
                 <label for="ece-verification-2-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -860,16 +900,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="2" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Mailboxes (bounded/unbounded), event triggers, semaphores?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Mailboxes (bounded/unbounded), event triggers, semaphores.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mailboxes (bounded/unbounded), event triggers, semaphores&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Producer-consumer patterns implementation in testbenches typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Producer-consumer patterns implementation in testbenches.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Producer-consumer patterns implementation in testbenches&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Fork-join, fork-join_any, fork-join_none thread execution blocks practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Fork-join, fork-join_any, fork-join_none thread execution blocks systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Fork-join, fork-join_any, fork-join_none thread execution blocks&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Disabling threads: disable fork, wait fork commands?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Disabling threads: disable fork, wait fork commands&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Concurrent assertions syntax, sequences, properties definitions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Concurrent assertions syntax, sequences, properties definitions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Concurrent assertions syntax, sequences, properties definitions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Implication operators: overlapped (|=) vs non-overlapped (|=) typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Implication operators: overlapped (|=) vs non-overlapped (|=).&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Implication operators: overlapped (|=) vs non-overlapped (|=)&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting SVA system functions: past, rose, fell, stable practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of SVA system functions: past, rose, fell, stable systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;SVA system functions: past, rose, fell, stable&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Binding assertions to DUT interfaces, assertion coverage audits?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Binding assertions to DUT interfaces, assertion coverage audits&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mailboxes (bounded/unbounded), event triggers, semaphores&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 2?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Mailboxes (bounded/unbounded), event triggers, semaphores&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 2 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 2 topics to unlock Phase 3.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 3 -->
-      <section id="phase3" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 3</span>
-          UVM Architecture Core
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study UVM testbench hierarchies, configuration databases, and run-phases.</p>
- 
+      <section id="phase3" class="phase-section" data-phase="3">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 3</span>
+            UVM Architecture Core
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Study UVM testbench hierarchies, configuration databases, and run-phases.</p>
+   
         <!-- Week 13: UVM Component Trees -->
         <div class="week-card">
           <div class="week-header">
@@ -882,6 +937,7 @@
                 <input type="checkbox" id="ece-verification-3-1-1" class="topic-checkbox">
                 <label for="ece-verification-3-1-1" class="checkmark"></label>
                 <span class="topic-text">UVM factory registration, uvm_component vs uvm_object</span>
+                <button class="simplify-btn" data-topic="UVM factory registration, uvm_component vs uvm_object">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -908,6 +964,7 @@
                 <input type="checkbox" id="ece-verification-3-1-2" class="topic-checkbox">
                 <label for="ece-verification-3-1-2" class="checkmark"></label>
                 <span class="topic-text">UVM testbench hierarchy: test, env, agent, driver, monitor</span>
+                <button class="simplify-btn" data-topic="UVM testbench hierarchy: test, env, agent, driver, monitor">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -943,6 +1000,7 @@
                 <input type="checkbox" id="ece-verification-3-2-1" class="topic-checkbox">
                 <label for="ece-verification-3-2-1" class="checkmark"></label>
                 <span class="topic-text">uvm_config_db API: set/get virtual interfaces</span>
+                <button class="simplify-btn" data-topic="uvm_config_db API: set/get virtual interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -969,6 +1027,7 @@
                 <input type="checkbox" id="ece-verification-3-2-2" class="topic-checkbox">
                 <label for="ece-verification-3-2-2" class="checkmark"></label>
                 <span class="topic-text">UVM factory overrides: replacing components dynamically</span>
+                <button class="simplify-btn" data-topic="UVM factory overrides: replacing components dynamically">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1004,6 +1063,7 @@
                 <input type="checkbox" id="ece-verification-3-3-1" class="topic-checkbox">
                 <label for="ece-verification-3-3-1" class="checkmark"></label>
                 <span class="topic-text">UVM phases: build, connect, end_of_elaboration, run_phase</span>
+                <button class="simplify-btn" data-topic="UVM phases: build, connect, end_of_elaboration, run_phase">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1030,6 +1090,7 @@
                 <input type="checkbox" id="ece-verification-3-3-2" class="topic-checkbox">
                 <label for="ece-verification-3-3-2" class="checkmark"></label>
                 <span class="topic-text">Phase synchronization, raise_objection/drop_objection methods</span>
+                <button class="simplify-btn" data-topic="Phase synchronization, raise_objection/drop_objection methods">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1065,6 +1126,7 @@
                 <input type="checkbox" id="ece-verification-3-4-1" class="topic-checkbox">
                 <label for="ece-verification-3-4-1" class="checkmark"></label>
                 <span class="topic-text">Transaction Level Modeling (TLM) ports, exports, FIFO interfaces</span>
+                <button class="simplify-btn" data-topic="Transaction Level Modeling (TLM) ports, exports, FIFO interfaces">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1091,6 +1153,7 @@
                 <input type="checkbox" id="ece-verification-3-4-2" class="topic-checkbox">
                 <label for="ece-verification-3-4-2" class="checkmark"></label>
                 <span class="topic-text">Blocking vs non-blocking TLM communications flows</span>
+                <button class="simplify-btn" data-topic="Blocking vs non-blocking TLM communications flows">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1126,6 +1189,7 @@
                 <input type="checkbox" id="ece-verification-3-5-1" class="topic-checkbox">
                 <label for="ece-verification-3-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1152,6 +1216,7 @@
                 <input type="checkbox" id="ece-verification-3-5-2" class="topic-checkbox">
                 <label for="ece-verification-3-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1187,6 +1252,7 @@
                 <input type="checkbox" id="ece-verification-3-6-1" class="topic-checkbox">
                 <label for="ece-verification-3-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1213,6 +1279,7 @@
                 <input type="checkbox" id="ece-verification-3-6-2" class="topic-checkbox">
                 <label for="ece-verification-3-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1236,16 +1303,31 @@
             </li>
           </ul>
         </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="3" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of UVM factory registration, uvm_component vs uvm_object?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for UVM factory registration, uvm_component vs uvm_object.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM factory registration, uvm_component vs uvm_object&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is UVM testbench hierarchy: test, env, agent, driver, monitor typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of UVM testbench hierarchy: test, env, agent, driver, monitor.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;UVM testbench hierarchy: test, env, agent, driver, monitor&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting uvm_config_db API: set/get virtual interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of uvm_config_db API: set/get virtual interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;uvm_config_db API: set/get virtual interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with UVM factory overrides: replacing components dynamically?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;UVM factory overrides: replacing components dynamically&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of UVM phases: build, connect, end_of_elaboration, run_phase?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for UVM phases: build, connect, end_of_elaboration, run_phase.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM phases: build, connect, end_of_elaboration, run_phase&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Phase synchronization, raise_objection/drop_objection methods typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Phase synchronization, raise_objection/drop_objection methods.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Phase synchronization, raise_objection/drop_objection methods&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Transaction Level Modeling (TLM) ports, exports, FIFO interfaces practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Transaction Level Modeling (TLM) ports, exports, FIFO interfaces systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Transaction Level Modeling (TLM) ports, exports, FIFO interfaces&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Blocking vs non-blocking TLM communications flows?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Blocking vs non-blocking TLM communications flows&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM factory registration, uvm_component vs uvm_object&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 3?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM factory registration, uvm_component vs uvm_object&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 3 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 3 topics to unlock Phase 4.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
       </section>
 
       <!-- PHASE 4 -->
-      <section id="phase4" class="phase-section">
-        <h2 class="phase-heading">
-          <span class="phase-number">Phase 4</span>
-          UVM Sequences, Coverage & Audits
-        </h2>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write transaction sequences, configure functional coverage, and run regressions.</p>
- 
+      <section id="phase4" class="phase-section" data-phase="4">
+        <div class="phase-content-wrapper">
+          <h2 class="phase-heading">
+            <span class="phase-number">Phase 4</span>
+            UVM Sequences, Coverage & Audits
+          </h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Write transaction sequences, configure functional coverage, and run regressions.</p>
+   
         <!-- Week 19: UVM Sequences & Drivers -->
         <div class="week-card">
           <div class="week-header">
@@ -1258,6 +1340,7 @@
                 <input type="checkbox" id="ece-verification-4-1-1" class="topic-checkbox">
                 <label for="ece-verification-4-1-1" class="checkmark"></label>
                 <span class="topic-text">UVM sequence items (transactions), sequence body implementations</span>
+                <button class="simplify-btn" data-topic="UVM sequence items (transactions), sequence body implementations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1284,6 +1367,7 @@
                 <input type="checkbox" id="ece-verification-4-1-2" class="topic-checkbox">
                 <label for="ece-verification-4-1-2" class="checkmark"></label>
                 <span class="topic-text">uvm_driver get_next_item and item_done handshake loops</span>
+                <button class="simplify-btn" data-topic="uvm_driver get_next_item and item_done handshake loops">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1319,6 +1403,7 @@
                 <input type="checkbox" id="ece-verification-4-2-1" class="topic-checkbox">
                 <label for="ece-verification-4-2-1" class="checkmark"></label>
                 <span class="topic-text">uvm_monitor passive data capture, writing broadcast ports</span>
+                <button class="simplify-btn" data-topic="uvm_monitor passive data capture, writing broadcast ports">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1345,6 +1430,7 @@
                 <input type="checkbox" id="ece-verification-4-2-2" class="topic-checkbox">
                 <label for="ece-verification-4-2-2" class="checkmark"></label>
                 <span class="topic-text">uvm_scoreboard: writing transaction comparison algorithms</span>
+                <button class="simplify-btn" data-topic="uvm_scoreboard: writing transaction comparison algorithms">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1380,6 +1466,7 @@
                 <input type="checkbox" id="ece-verification-4-3-1" class="topic-checkbox">
                 <label for="ece-verification-4-3-1" class="checkmark"></label>
                 <span class="topic-text">Covergroups, coverpoints, custom bins definitions</span>
+                <button class="simplify-btn" data-topic="Covergroups, coverpoints, custom bins definitions">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1406,6 +1493,7 @@
                 <input type="checkbox" id="ece-verification-4-3-2" class="topic-checkbox">
                 <label for="ece-verification-4-3-2" class="checkmark"></label>
                 <span class="topic-text">Cross coverage verification, target coverage calculations</span>
+                <button class="simplify-btn" data-topic="Cross coverage verification, target coverage calculations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1441,6 +1529,7 @@
                 <input type="checkbox" id="ece-verification-4-4-1" class="topic-checkbox">
                 <label for="ece-verification-4-4-1" class="checkmark"></label>
                 <span class="topic-text">Running verification regressions, seed randomization tests</span>
+                <button class="simplify-btn" data-topic="Running verification regressions, seed randomization tests">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1467,6 +1556,7 @@
                 <input type="checkbox" id="ece-verification-4-4-2" class="topic-checkbox">
                 <label for="ece-verification-4-4-2" class="checkmark"></label>
                 <span class="topic-text">Reading simulation logs, bug tracking formats</span>
+                <button class="simplify-btn" data-topic="Reading simulation logs, bug tracking formats">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1502,6 +1592,7 @@
                 <input type="checkbox" id="ece-verification-4-5-1" class="topic-checkbox">
                 <label for="ece-verification-4-5-1" class="checkmark"></label>
                 <span class="topic-text">Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts</span>
+                <button class="simplify-btn" data-topic="Hands-on lab work: build a prototype or configure simulated tools matching Phase {phase_num} concepts">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1528,6 +1619,7 @@
                 <input type="checkbox" id="ece-verification-4-5-2" class="topic-checkbox">
                 <label for="ece-verification-4-5-2" class="checkmark"></label>
                 <span class="topic-text">Code cleanup, linting checks, and writing developer documentation</span>
+                <button class="simplify-btn" data-topic="Code cleanup, linting checks, and writing developer documentation">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1563,6 +1655,7 @@
                 <input type="checkbox" id="ece-verification-4-6-1" class="topic-checkbox">
                 <label for="ece-verification-4-6-1" class="checkmark"></label>
                 <span class="topic-text">Review industry case studies of large-scale deployments</span>
+                <button class="simplify-btn" data-topic="Review industry case studies of large-scale deployments">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1589,6 +1682,7 @@
                 <input type="checkbox" id="ece-verification-4-6-2" class="topic-checkbox">
                 <label for="ece-verification-4-6-2" class="checkmark"></label>
                 <span class="topic-text">Analyze performance bottlenecks and perform optimizations</span>
+                <button class="simplify-btn" data-topic="Analyze performance bottlenecks and perform optimizations">✨ Simplify</button>
               </div>
               <div class="topic-resources-panel">
                 <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
@@ -1611,6 +1705,20 @@
               </div>
             </li>
           </ul>
+        </div>
+        </div>
+        
+        <!-- MOCK TEST CARD -->
+        <div class="mock-test-card" data-phase="4" data-questions="[{&quot;question&quot;: &quot;Which of the following best describes the core operational objective of UVM sequence items (transactions), sequence body implementations?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for UVM sequence items (transactions), sequence body implementations.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM sequence items (transactions), sequence body implementations&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is uvm_driver get_next_item and item_done handshake loops typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of uvm_driver get_next_item and item_done handshake loops.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;uvm_driver get_next_item and item_done handshake loops&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting uvm_monitor passive data capture, writing broadcast ports practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of uvm_monitor passive data capture, writing broadcast ports systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;uvm_monitor passive data capture, writing broadcast ports&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with uvm_scoreboard: writing transaction comparison algorithms?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;uvm_scoreboard: writing transaction comparison algorithms&quot;}, {&quot;question&quot;: &quot;Which of the following best describes the core operational objective of Covergroups, coverpoints, custom bins definitions?&quot;, &quot;options&quot;: [&quot;Establishing fundamental, efficient models and structural practices for Covergroups, coverpoints, custom bins definitions.&quot;, &quot;Reducing system storage overhead to zero regardless of operational load.&quot;, &quot;Bypassing programming compilers and executing instruction scripts directly.&quot;, &quot;Automating marketing campaigns and user administrative tasks.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;Covergroups, coverpoints, custom bins definitions&quot;}, {&quot;question&quot;: &quot;In professional development workflows, when is Cross coverage verification, target coverage calculations typically applied?&quot;, &quot;options&quot;: [&quot;Only during project documentation and initial slide-deck design.&quot;, &quot;To resolve configuration issues, modeling constraints, or functional execution of Cross coverage verification, target coverage calculations.&quot;, &quot;To replace network physical connections with virtual machine containers.&quot;, &quot;To manage employee payroll schedules and database backups.&quot;], &quot;correct&quot;: 1, &quot;topic&quot;: &quot;Cross coverage verification, target coverage calculations&quot;}, {&quot;question&quot;: &quot;Which of the following is considered a key advantage of adopting Running verification regressions, seed randomization tests practices?&quot;, &quot;options&quot;: [&quot;Eliminating the need for writing unit tests or doing code reviews.&quot;, &quot;Enabling direct mental translation to assembly bytecode structures.&quot;, &quot;Improving stability, scalability, and robust deployment of Running verification regressions, seed randomization tests systems.&quot;, &quot;Allowing computer hardware to execute programs without electricity.&quot;], &quot;correct&quot;: 2, &quot;topic&quot;: &quot;Running verification regressions, seed randomization tests&quot;}, {&quot;question&quot;: &quot;Which of the following represents a primary challenge when dealing with Reading simulation logs, bug tracking formats?&quot;, &quot;options&quot;: [&quot;Preventing physical computer monitors from overheating during builds.&quot;, &quot;Translating human layout inputs to multi-dimensional tensors.&quot;, &quot;Enforcing compliance with third-party operating systems.&quot;, &quot;Managing setup complexity and maintaining backward compatibility.&quot;], &quot;correct&quot;: 3, &quot;topic&quot;: &quot;Reading simulation logs, bug tracking formats&quot;}, {&quot;question&quot;: &quot;Question 9: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM sequence items (transactions), sequence body implementations&quot;}, {&quot;question&quot;: &quot;Question 10: Which option provides the standard practice for Semiconductor Verification Engineer in Phase 4?&quot;, &quot;options&quot;: [&quot;Utilizing standardized, validated frameworks and modular concepts.&quot;, &quot;Bypassing development loops to deploy code directly to live production.&quot;, &quot;Disabling security configurations to speed up compilation times.&quot;, &quot;Writing monolithic scripts without version control tracking.&quot;], &quot;correct&quot;: 0, &quot;topic&quot;: &quot;UVM sequence items (transactions), sequence body implementations&quot;}]">
+          <div class="mock-test-header">
+            <h3 class="mock-test-title">📝 Phase 4 Mock Test</h3>
+            <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+          </div>
+          <p class="mock-test-intro">Test your knowledge on Phase 4 topics to unlock Phase 5.</p>
+          <div class="mock-test-quiz-container">
+            <button class="btn-start-test hero-btn">Start Test</button>
+          </div>
+          <div class="mock-test-results" style="display: none;"></div>
         </div>
       </section>
 
