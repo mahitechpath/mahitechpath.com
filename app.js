@@ -40,446 +40,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Attach theme toggle handler
-  const themeBtn = document.querySelector('.btn-theme-toggle');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', toggleTheme);
-  }
   initTheme();
+  const themeToggle = document.querySelector('.btn-theme-toggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', toggleTheme);
+  }
 
-  // --- AI Settings & Generation Logic ---
-  const injectSettingsButton = () => {
-    const navControls = document.querySelector('.nav-controls');
-    if (navControls && !document.querySelector('.btn-settings-toggle')) {
-      const btn = document.createElement('button');
-      btn.className = 'btn-settings-toggle';
-      btn.setAttribute('aria-label', 'AI Settings');
-      btn.innerHTML = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-        </svg>
-      `;
-      const themeBtn = navControls.querySelector('.btn-theme-toggle');
-      if (themeBtn) {
-        navControls.insertBefore(btn, themeBtn);
-      } else {
-        navControls.appendChild(btn);
-      }
-      btn.addEventListener('click', openSettingsModal);
-    }
-  };
-
-  const openSettingsModal = () => {
-    const overlay = document.getElementById('settings-modal-overlay');
-    if (overlay) {
-      document.getElementById('anthropic-key').value = localStorage.getItem('anthropic-api-key') || '';
-      document.getElementById('firebase-config').value = localStorage.getItem('firebase-config') || '';
-      overlay.classList.add('open');
-    }
-  };
-
-  const closeSettingsModal = () => {
-    const overlay = document.getElementById('settings-modal-overlay');
-    if (overlay) {
-      overlay.classList.remove('open');
-    }
-  };
-
-  const saveSettings = () => {
-    const key = document.getElementById('anthropic-key').value.trim();
-    const config = document.getElementById('firebase-config').value.trim();
-
-    localStorage.setItem('anthropic-api-key', key);
-    localStorage.setItem('firebase-config', config);
-
-    closeSettingsModal();
-    alert('Settings saved successfully!');
-  };
-
-  const injectSettingsModal = () => {
-    if (document.getElementById('settings-modal-overlay')) return;
-    
+  // --- Settings Modal and API Key Management ---
+  const settingsBtn = document.querySelector('.btn-settings');
+  if (settingsBtn) {
+    // Ingest DOM settings modal overlay
     const overlay = document.createElement('div');
-    overlay.id = 'settings-modal-overlay';
     overlay.className = 'settings-modal-overlay';
+    overlay.id = 'settings-modal-overlay';
     overlay.innerHTML = `
       <div class="settings-modal">
         <div class="settings-modal-header">
-          <h2 class="settings-modal-title">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);"><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-            AI Settings
-          </h2>
-          <button class="settings-modal-close" id="settings-close">&times;</button>
+          <h3 class="settings-modal-title">\u2699\ufe0f AI Settings</h3>
+          <button class="settings-modal-close" id="btn-close-settings">&times;</button>
         </div>
         <div class="settings-modal-body">
           <div class="form-group">
-            <label for="anthropic-key">Anthropic API Key</label>
-            <input type="password" id="anthropic-key" placeholder="sk-ant-...">
-            <p class="help-text">Your API Key is saved securely in your browser's LocalStorage and never sent to any external server other than Anthropic.</p>
-          </div>
-          <div class="form-group">
-            <label for="firebase-config">Firebase Web Config (Optional)</label>
-            <textarea id="firebase-config" rows="6" placeholder='{&#10;  "apiKey": "...",&#10;  "authDomain": "...",&#10;  "projectId": "...",&#10;  "storageBucket": "...",&#10;  "messagingSenderId": "...",&#10;  "appId": "..."&#10;}'></textarea>
-            <p class="help-text">Optional. Paste your Firebase project configuration JSON to synchronize generated roadmaps across devices. Falls back to local storage if empty.</p>
+            <label for="input-api-key" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Anthropic API Key</label>
+            <input type="password" id="input-api-key" placeholder="sk-ant-..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Anthropic's endpoints.</p>
           </div>
         </div>
         <div class="settings-modal-footer">
-          <button class="hero-btn" style="border-radius: 8px; padding: 0.6rem 1.2rem; font-family: var(--font-sans); text-transform: none; letter-spacing: 0;" id="settings-cancel">Cancel</button>
-          <button class="hero-btn" style="border-radius: 8px; padding: 0.6rem 1.2rem; background-color: var(--text-primary); color: var(--bg-primary) !important; font-family: var(--font-sans); text-transform: none; letter-spacing: 0;" id="settings-save">Save Settings</button>
+          <button class="hero-btn" id="btn-save-settings">Save Config</button>
         </div>
       </div>
     `;
     document.body.appendChild(overlay);
 
-    document.getElementById('settings-close').addEventListener('click', closeSettingsModal);
-    document.getElementById('settings-cancel').addEventListener('click', closeSettingsModal);
-    document.getElementById('settings-save').addEventListener('click', saveSettings);
+    const closeBtn = document.getElementById('btn-close-settings');
+    const saveBtn = document.getElementById('btn-save-settings');
+    const inputKey = document.getElementById('input-api-key');
+
+    const openSettings = () => {
+      inputKey.value = localStorage.getItem('anthropic-api-key') || '';
+      overlay.classList.add('open');
+    };
+
+    const closeSettings = () => {
+      overlay.classList.remove('open');
+    };
+
+    settingsBtn.addEventListener('click', openSettings);
+    closeBtn.addEventListener('click', closeSettings);
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeSettingsModal();
-    });
-  };
-
-  const showGenLoader = (query) => {
-    const loader = document.createElement('div');
-    loader.id = 'gen-loader';
-    loader.className = 'gen-loader-overlay';
-    loader.innerHTML = `
-      <div class="gen-loader-box">
-        <div class="spinner"></div>
-        <h2>Generating Career Roadmap</h2>
-        <p>Building a personalized, premium study guide for "<strong>${query}</strong>" using Claude Sonnet...</p>
-        <ul class="gen-steps-list">
-          <li class="gen-step-item active" id="step-1">Prompting Claude AI model...</li>
-          <li class="gen-step-item pending" id="step-2">Structuring phase-wise syllabus...</li>
-          <li class="gen-step-item pending" id="step-3">Designing capstone projects...</li>
-          <li class="gen-step-item pending" id="step-4">Compiling placement tips...</li>
-          <li class="gen-step-item pending" id="step-5">Saving to database and rendering...</li>
-        </ul>
-      </div>
-    `;
-    document.body.appendChild(loader);
-  };
-
-  const updateGenStep = (stepNum, status) => {
-    const step = document.getElementById(`step-${stepNum}`);
-    if (!step) return;
-    if (status === 'active') {
-      step.className = 'gen-step-item active';
-    } else if (status === 'done') {
-      step.className = 'gen-step-item done';
-    } else if (status === 'pending') {
-      step.className = 'gen-step-item pending';
-    }
-  };
-
-  const generateRoadmapWithAI = async (query) => {
-    const apiKey = localStorage.getItem('anthropic-api-key');
-    if (!apiKey) {
-      alert('Please configure your Anthropic API Key in Settings to generate a custom roadmap with AI.');
-      openSettingsModal();
-      return;
-    }
-
-    showGenLoader(query);
-
-    try {
-      updateGenStep(1, 'active');
-      const systemPrompt = `You are a professional curriculum designer and career advisor.
-Generate a comprehensive, premium, phase-based, week-by-week student career roadmap for the topic: "${query}".
-The output must be a single, strictly valid JSON object matching the following structure:
-{
-  "id": "slugified-lowercase-id",
-  "title": "Clean Title",
-  "description": "Premium phase-based study guide description.",
-  "difficulty": "Medium or Hard",
-  "duration": "16 Weeks",
-  "role": "Target Professional Role",
-  "prerequisites": "Prerequisites list",
-  "keywords": "space-separated keywords",
-  "phases": [
-    {
-      "num": "1",
-      "title": "Phase 1 Title",
-      "desc": "Description of Phase 1",
-      "weeks": [
-        {
-          "title": "Week 1: Week Title",
-          "topics": [
-            "Topic 1 description and tools",
-            "Topic 2 description and tools"
-          ]
-        }
-      ]
-    }
-  ],
-  "capstones": [
-    {
-      "title": "Capstone Project 1",
-      "desc": "Detailed project definition",
-      "tech": ["Tech 1", "Tech 2"]
-    }
-  ],
-  "resume_keywords": [
-    "Keyword 1",
-    "Keyword 2"
-  ],
-  "interview_focus": [
-    "Focus 1",
-    "Focus 2"
-  ]
-}
-Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \`\`\`json ... \`\`\`), do not output any surrounding text. Make sure it is valid JSON with double quoted strings, no trailing commas, and escaped newlines in strings.`;
-
-      const proxyUrl = "https://api.allorigins.win/raw?url=";
-      const targetUrl = "https://api.anthropic.com/v1/messages";
-      const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
-
-      const response = await fetch(fullUrl, {
-        method: "POST",
-        headers: {
-          "x-api-key": apiKey,
-          "anthropic-version": "2023-06-01",
-          "content-type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 4000,
-          messages: [
-            {
-              "role": "user",
-              "content": systemPrompt
-            }
-          ]
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error(`API returned status ${response.status}`);
-      }
-
-      updateGenStep(1, 'done');
-      updateGenStep(2, 'active');
-
-      const result = await response.json();
-      let text = result.content[0].text.trim();
-      
-      if (text.startsWith("```")) {
-        text = text.replace(/^```json\s*/, "").replace(/^```\s*/, "").replace(/\s*```$/, "");
-      }
-
-      updateGenStep(2, 'done');
-      updateGenStep(3, 'active');
-
-      const roadmapData = JSON.parse(text);
-      roadmapData.id = (roadmapData.id || query.toLowerCase().replace(/[^a-z0-9]+/g, '-')).trim();
-
-      updateGenStep(3, 'done');
-      updateGenStep(4, 'active');
-      
-      await new Promise(r => setTimeout(r, 800));
-
-      updateGenStep(4, 'done');
-      updateGenStep(5, 'active');
-
-      const firebaseConfigStr = localStorage.getItem('firebase-config');
-      if (firebaseConfigStr) {
-        try {
-          const config = JSON.parse(firebaseConfigStr);
-          if (config && config.apiKey) {
-            const firebaseApp = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js');
-            const firebaseFirestore = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
-            
-            const app = firebaseApp.initializeApp(config);
-            const db = firebaseFirestore.getFirestore(app);
-            const docRef = firebaseFirestore.doc(db, 'roadmaps', roadmapData.id);
-            await firebaseFirestore.setDoc(docRef, roadmapData);
-            console.log("Saved to Firestore successfully.");
-          }
-        } catch (dbErr) {
-          console.error("Failed to write to Firestore, storing locally:", dbErr);
-        }
-      }
-
-      localStorage.setItem(`custom-roadmap-${roadmapData.id}`, JSON.stringify(roadmapData));
-
-      updateGenStep(5, 'done');
-      await new Promise(r => setTimeout(r, 500));
-
-      const isInRoadmapsSubdir = window.location.pathname.includes('/roadmaps/');
-      const redirectUrl = isInRoadmapsSubdir ? `viewer.html?id=${roadmapData.id}` : `roadmaps/viewer.html?id=${roadmapData.id}`;
-      window.location.href = redirectUrl;
-
-    } catch (err) {
-      console.error(err);
-      alert('Failed to generate roadmap: ' + err.message);
-      const loader = document.getElementById('gen-loader');
-      if (loader) loader.remove();
-    }
-  };
-
-  injectSettingsButton();
-  injectSettingsModal();
-
-  // --- Mobile Navigation Menu Drawer ---
-  const mobileToggleBtn = document.querySelector('.mobile-nav-toggle');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-  const overlay = document.getElementById('mobile-overlay');
-  const drawerCloseBtn = document.getElementById('drawer-close');
-
-  const openMobileNav = () => {
-    if (mobileDrawer && overlay) {
-      overlay.style.display = 'block';
-      setTimeout(() => {
-        overlay.style.opacity = '1';
-        mobileDrawer.classList.add('open');
-      }, 10);
-    }
-  };
-
-  const closeMobileNav = () => {
-    if (mobileDrawer && overlay) {
-      mobileDrawer.classList.remove('open');
-      overlay.style.opacity = '0';
-      setTimeout(() => {
-        overlay.style.display = 'none';
-      }, 300);
-    }
-  };
-
-  if (mobileToggleBtn) {
-    mobileToggleBtn.addEventListener('click', openMobileNav);
-  }
-  if (drawerCloseBtn) {
-    drawerCloseBtn.addEventListener('click', closeMobileNav);
-  }
-  if (overlay) {
-    overlay.addEventListener('click', closeMobileNav);
-  }
-
-  // --- Checklist & Progress Tracking ---
-  const roadmapEl = document.querySelector('[data-roadmap-id]');
-  if (roadmapEl) {
-    const roadmapId = roadmapEl.getAttribute('data-roadmap-id');
-    const checkboxes = document.querySelectorAll('.topic-checkbox');
-    const totalCountEl = document.getElementById('total-topics');
-    const checkedCountEl = document.getElementById('checked-topics');
-    const progressPercentEls = document.querySelectorAll('.progress-percentage');
-    const barFills = document.querySelectorAll('.progress-bar-fill');
-    const progressRing = document.querySelector('.progress-ring-circle');
-    const resetBtn = document.getElementById('reset-progress');
-
-    // Calculate ring properties if circular progress widget is present
-    let ringDashArray = 0;
-    if (progressRing) {
-      const radius = progressRing.r.baseVal.value;
-      ringDashArray = 2 * Math.PI * radius;
-      progressRing.style.strokeDasharray = `${ringDashArray} ${ringDashArray}`;
-    }
-
-    const loadState = () => {
-      const savedState = JSON.parse(localStorage.getItem(`roadmap-${roadmapId}`)) || {};
-      checkboxes.forEach(cb => {
-        if (savedState[cb.id]) {
-          cb.checked = true;
-        } else {
-          cb.checked = false;
-        }
-      });
-      updateProgress();
-    };
-
-    const saveState = () => {
-      const state = {};
-      checkboxes.forEach(cb => {
-        if (cb.checked) {
-          state[cb.id] = true;
-        }
-      });
-      localStorage.setItem(`roadmap-${roadmapId}`, JSON.stringify(state));
-    };
-
-    const updateProgress = () => {
-      const total = checkboxes.length;
-      const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
-      const percent = total > 0 ? Math.round((checked / total) * 100) : 0;
-
-      const totalCountEls = [document.getElementById('total-topics'), document.getElementById('total-topics-mobile')];
-      const checkedCountEls = [document.getElementById('checked-topics'), document.getElementById('checked-topics-mobile')];
-      
-      totalCountEls.forEach(el => { if (el) el.textContent = total; });
-      checkedCountEls.forEach(el => { if (el) el.textContent = checked; });
-
-      progressPercentEls.forEach(el => {
-        el.textContent = `${percent}%`;
-      });
-
-      barFills.forEach(bar => {
-        bar.style.width = `${percent}%`;
-      });
-
-      if (progressRing && ringDashArray > 0) {
-        const offset = ringDashArray - (percent / 100) * ringDashArray;
-        progressRing.style.strokeDashoffset = offset;
-      }
-    };
-
-    checkboxes.forEach(cb => {
-      cb.addEventListener('change', () => {
-        saveState();
-        updateProgress();
-      });
+      if (e.target === overlay) closeSettings();
     });
 
-    if (resetBtn) {
-      resetBtn.addEventListener('click', () => {
-        if (confirm('Are you sure you want to reset your progress for this roadmap?')) {
-          localStorage.removeItem(`roadmap-${roadmapId}`);
-          loadState();
-        }
-      });
-    }
-
-    loadState();
-  }
-
-  // --- Scroll Spy Navigation for Desktop Sidebar ---
-  const sections = document.querySelectorAll('.phase-section, .placement-section');
-  const tocItems = document.querySelectorAll('.toc-item');
-
-  if (sections.length > 0 && tocItems.length > 0) {
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -60% 0px', // Highlights as section enters upper-middle screen
-      threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          tocItems.forEach(item => {
-            const link = item.querySelector('a');
-            if (link && link.getAttribute('href') === `#${id}`) {
-              item.classList.add('active');
-            } else {
-              item.classList.remove('active');
-            }
-          });
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      observer.observe(section);
+    saveBtn.addEventListener('click', () => {
+      const val = inputKey.value.trim();
+      if (val) {
+        localStorage.setItem('anthropic-api-key', val);
+      } else {
+        localStorage.removeItem('anthropic-api-key');
+      }
+      closeSettings();
     });
   }
 
-  // --- Global Homepage Search Filter Logic ---
-  const searchInput = document.getElementById('roadmap-search');
-  if (searchInput) {
-    // 60 Careers Search Database
-    const CAREERS_INDEX = [
+  // --- Dynamic Search Portal Engine ---
+  const careersIndex = [
   {
     "id": "sw-ai-ml",
     "title": "AI / Machine Learning Engineer",
@@ -1081,52 +706,43 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "phases": "4 PHASES"
   }
 ];
-
-    const categoriesContainer = document.getElementById('homepage-categories');
-    const searchResultsSection = document.getElementById('search-results-section');
+  const roadmapSearch = document.getElementById('roadmap-search');
+  if (roadmapSearch) {
     const searchResultsGrid = document.getElementById('search-results-grid');
-    const searchResultsTitle = document.getElementById('search-results-title');
-
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
+    roadmapSearch.addEventListener('input', () => {
+      const query = roadmapSearch.value.trim().toLowerCase();
       
-      if (query.length === 0) {
-        categoriesContainer.style.display = 'grid';
-        searchResultsSection.style.display = 'none';
-        searchResultsGrid.innerHTML = '';
-        
-        let fallback = document.getElementById('search-fallback');
+      // If empty query, show standard recommended deck, hide fallback
+      if (!query) {
+        document.querySelectorAll('.card.solid-card').forEach(card => card.style.display = 'flex');
+        const fallback = document.getElementById('search-fallback');
         if (fallback) {
           fallback.style.display = 'none';
         }
         return;
       }
 
-      // Hide category cards and show search results
-      categoriesContainer.style.display = 'none';
-      searchResultsSection.style.display = 'block';
+      // Hide all standard cards first
+      document.querySelectorAll('.card.solid-card').forEach(card => card.style.display = 'none');
 
-      // Filter careers
-      const matches = CAREERS_INDEX.filter(c => {
+      // Filter matches
+      const matches = careersIndex.filter(c => {
         return c.title.toLowerCase().includes(query) || 
                c.desc.toLowerCase().includes(query) || 
-               c.keywords.toLowerCase().includes(query) ||
-               c.domain.toLowerCase().includes(query);
+               c.keywords.toLowerCase().includes(query);
       });
 
-      searchResultsTitle.textContent = `Search Results (${matches.length})`;
+      // Clear search fallbacks first
+      const existingSearchResults = document.querySelectorAll('.search-result-injected');
+      existingSearchResults.forEach(el => el.remove());
 
-      // Render cards
-      searchResultsGrid.innerHTML = '';
       matches.forEach(c => {
-        let domainColor = "#3182ce";
+        let domainColor = "var(--accent)";
         let domainLabel = "Software";
-        if (c.domain === "ece") {
-          domainColor = "#9f7aea";
-          domainLabel = "ECE";
-        } else if (c.domain === "eee") {
+        
+        if (c.domain === "hardware") {
           domainColor = "#dd6b20";
-          domainLabel = "EEE";
+          domainLabel = "Hardware";
         } else if (c.domain === "mechanical") {
           domainColor = "#4a5568";
           domainLabel = "Mechanical";
@@ -1139,7 +755,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
         }
 
         const cardHtml = `
-          <a href="roadmaps/${c.id}.html" class="card solid-card" style="--domain-color: ${domainColor};">
+          <a href="roadmaps/${c.id}.html" class="card solid-card search-result-injected" style="--domain-color: ${domainColor};">
             <div style="display: flex; justify-content: space-between; align-items: flex-start; width: 100%; margin-bottom: 1rem;">
               <div class="card-icon" style="font-size: 1.5rem; width: auto; height: auto; border: none; background: none; padding: 0;">
                 ${c.emoji}
@@ -1170,7 +786,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
           fallback.innerHTML = `
             <h3>No roadmaps found for "<span id="search-query-highlight"></span>"</h3>
             <p>You can generate a custom, premium week-by-week roadmap for this topic using Claude AI!</p>
-            <button id="btn-generate-ai" class="hero-btn">Generate with AI ✨</button>
+            <button id="btn-generate-ai" class="hero-btn">Generate with AI \u2728</button>
           `;
           const mainContainer = document.querySelector('main.container');
           if (mainContainer) {
@@ -1194,547 +810,309 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     });
   }
 
-  // --- Topic Resources Dropdown Panels ---
-  document.querySelectorAll('.topic-text').forEach(textEl => {
-    textEl.style.cursor = 'pointer';
-    // --- Phase Lock Manager ---
-    const initPhaseLocks = () => {
-      if (!roadmapId) return;
-      
-      const phaseSections = document.querySelectorAll('.phase-section');
-      phaseSections.forEach((section, idx) => {
-        const phaseNum = parseInt(section.getAttribute('data-phase'));
-        if (phaseNum === 1) return; // Phase 1 is always unlocked
-        
-        const prevPhaseNum = phaseNum - 1;
-        const isPrevPassed = localStorage.getItem(`roadmap-${roadmapId}-phase-${prevPhaseNum}-passed`) === 'true';
-        
-        // Remove existing lock overlay if any
-        const existingOverlay = section.querySelector('.phase-lock-overlay');
-        if (existingOverlay) {
-          existingOverlay.remove();
-        }
-        
-        const contentWrapper = section.querySelector('.phase-content-wrapper');
-        const checkboxes = section.querySelectorAll('.topic-checkbox');
-        const simplifyBtns = section.querySelectorAll('.simplify-btn');
-        
-        if (!isPrevPassed) {
-          section.classList.add('phase-locked');
-          if (contentWrapper) {
-            contentWrapper.style.filter = 'blur(5px)';
-            contentWrapper.style.pointerEvents = 'none';
-            contentWrapper.style.opacity = '0.4';
-          }
-          
-          checkboxes.forEach(cb => cb.disabled = true);
-          simplifyBtns.forEach(btn => btn.style.display = 'none');
-          
-          // Inject Lock Overlay
-          const overlay = document.createElement('div');
-          overlay.className = 'phase-lock-overlay';
-          overlay.innerHTML = `
-            <div class="phase-lock-card">
-              <div class="phase-lock-icon">🔒</div>
-              <div class="phase-lock-title">Phase ${phaseNum} Locked</div>
-              <div class="phase-lock-desc">Complete the Phase ${prevPhaseNum} Mock Test with 80% or above to unlock this phase.</div>
-            </div>
-          `;
-          section.appendChild(overlay);
-        } else {
-          section.classList.remove('phase-locked');
-          if (contentWrapper) {
-            contentWrapper.style.filter = 'none';
-            contentWrapper.style.pointerEvents = 'auto';
-            contentWrapper.style.opacity = '1';
-          }
-          checkboxes.forEach(cb => cb.disabled = false);
-          simplifyBtns.forEach(btn => btn.style.display = 'inline-flex');
-        }
-      });
-    };
-
-    // --- Mock Test Quiz Controller ---
-    const initMockTests = () => {
-      if (!roadmapId) return;
-      
-      const quizCards = document.querySelectorAll('.mock-test-card');
-      quizCards.forEach(card => {
-        const phaseNum = parseInt(card.getAttribute('data-phase'));
-        const questions = JSON.parse(card.getAttribute('data-questions') || '[]');
-        const container = card.querySelector('.mock-test-quiz-container');
-        const resultsPanel = card.querySelector('.mock-test-results');
-        
-        if (!container || !resultsPanel) return;
-        
-        // Reset/init state
-        let currentQuestionIdx = -1;
-        let score = 0;
-        let userAnswers = [];
-        let selectedOptionIdx = null;
-        
-        const renderQuizState = () => {
-          if (currentQuestionIdx === -1) {
-            // Start state
-            container.innerHTML = `<button class="btn-start-test hero-btn">Start Test</button>`;
-            container.querySelector('.btn-start-test').addEventListener('click', () => {
-              currentQuestionIdx = 0;
-              score = 0;
-              userAnswers = [];
-              renderQuizState();
-            });
-            return;
-          }
-          
-          if (currentQuestionIdx < questions.length) {
-            // Active quiz state
-            const q = questions[currentQuestionIdx];
-            selectedOptionIdx = null;
-            
-            const optionsHtml = q.options.map((opt, oIdx) => `
-              <li>
-                <button class="quiz-option-btn" data-index="${oIdx}">
-                  <span class="quiz-option-letter">${String.fromCharCode(65 + oIdx)}</span>
-                  <span class="quiz-option-val">${opt}</span>
-                </button>
-              </li>
-            `).join('');
-            
-            container.innerHTML = `
-              <div class="quiz-progress">Question ${currentQuestionIdx + 1} of ${questions.length}</div>
-              <div class="quiz-question-container">
-                <div class="quiz-question-text">${q.question}</div>
-                <ul class="quiz-options-list">
-                  ${optionsHtml}
-                </ul>
-              </div>
-              <div class="quiz-controls">
-                <button class="btn-next-question hero-btn" disabled>Next Question</button>
-              </div>
-            `;
-            
-            const optBtns = container.querySelectorAll('.quiz-option-btn');
-            const nextBtn = container.querySelector('.btn-next-question');
-            
-            optBtns.forEach(btn => {
-              btn.addEventListener('click', () => {
-                optBtns.forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
-                selectedOptionIdx = parseInt(btn.getAttribute('data-index'));
-                nextBtn.disabled = false;
-              });
-            });
-            
-            nextBtn.addEventListener('click', () => {
-              userAnswers.push(selectedOptionIdx);
-              if (selectedOptionIdx === q.correct) {
-                score++;
-              }
-              currentQuestionIdx++;
-              renderQuizState();
-            });
-          } else {
-            // Grading & Results
-            container.innerHTML = '';
-            resultsPanel.style.display = 'block';
-            
-            const passed = score >= 8;
-            const scoreClass = passed ? 'passed' : 'failed';
-            const message = passed 
-              ? `🎉 Congratulations! You Passed.<span>You scored ${score}/10 (80% or above) and unlocked the next phase.</span>`
-              : `❌ Keep Practicing!<span>You scored ${score}/10. You need at least 80% (8/10) to unlock the next phase.</span>`;
-            
-            let revisionHtml = '';
-            if (!passed) {
-              const wrongTopics = [];
-              questions.forEach((q, idx) => {
-                if (userAnswers[idx] !== q.correct && q.topic) {
-                  wrongTopics.push(q.topic);
-                }
-              });
-              
-              // Unique wrong topics
-              const uniqueWrongTopics = [...new Set(wrongTopics)];
-              const topicsLi = uniqueWrongTopics.map(t => `<li>${t}</li>`).join('');
-              
-              revisionHtml = `
-                <div class="revision-section">
-                  <div class="revision-title">Topics to Revise:</div>
-                  <ul class="revision-list">
-                    ${topicsLi || '<li>Phase Concepts</li>'}
-                  </ul>
-                </div>
-              `;
-            }
-            
-            resultsPanel.innerHTML = `
-              <div class="results-score-row">
-                <div class="results-score-circle ${scoreClass}">${score}/10</div>
-                <div class="results-message">${message}</div>
-              </div>
-              ${revisionHtml}
-              <div class="quiz-controls" style="margin-top:1.5rem;">
-                ${passed ? '' : '<button class="btn-retry-test hero-btn">Retry Test 🔄</button>'}
-              </div>
-            `;
-            
-            if (passed) {
-              localStorage.setItem(`roadmap-${roadmapId}-phase-${phaseNum}-passed`, 'true');
-              initPhaseLocks();
-              
-              // Mini Confetti effect
-              try {
-                if (typeof confetti !== 'undefined') {
-                  confetti();
-                }
-              } catch(e) {}
-            } else {
-              resultsPanel.querySelector('.btn-retry-test').addEventListener('click', () => {
-                resultsPanel.style.display = 'none';
-                currentQuestionIdx = 0;
-                score = 0;
-                userAnswers = [];
-                renderQuizState();
-              });
-            }
-          }
-        };
-        
-        // Initial load
-        renderQuizState();
-      });
-    };
-
-    // --- Claude API Call Core Helper ---
-    const askClaude = async (systemPrompt, userPrompt) => {
-      const apiKey = localStorage.getItem('anthropic-api-key');
-      if (!apiKey) {
-        throw new Error("API_KEY_MISSING");
-      }
-      
-      const proxyUrl = "https://api.allorigins.win/raw?url=";
-      const targetUrl = "https://api.anthropic.com/v1/messages";
-      const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
-
-      const response = await fetch(fullUrl, {
-        method: "POST",
-        headers: {
-          "x-api-key": apiKey,
-          "anthropic-version": "2023-06-01",
-          "content-type": "application/json"
-        },
-        body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 2000,
-          messages: [
-            {
-              role: "user",
-              content: `${systemPrompt}
-
-User Question:
-${userPrompt}`
-            }
-          ]
-        })
-      });
-
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
-      }
-
-      const data = await response.json();
-      if (data.content && data.content[0] && data.content[0].text) {
-        return data.content[0].text.trim();
-      }
-      throw new Error("INVALID_RESPONSE_FORMAT");
-    };
-
-    // --- Smart Notes ("✨ Simplify") Controller ---
-    const initSmartNotes = () => {
-      const simplifyBtns = document.querySelectorAll('.simplify-btn');
-      simplifyBtns.forEach(btn => {
-        btn.addEventListener('click', async (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          const topic = btn.getAttribute('data-topic');
-          const topicItem = btn.closest('.topic-item');
-          if (!topicItem) return;
-          
-          const panel = topicItem.querySelector('.topic-resources-panel');
-          if (!panel) return;
-          
-          // Check cache first
-          const cacheKey = `roadmap-${roadmapId}-topic-${topic}-simplified`;
-          const cachedNotes = localStorage.getItem(cacheKey);
-          
-          // Auto expand panel if closed
-          if (!topicItem.classList.contains('panel-open')) {
-            const textEl = topicItem.querySelector('.topic-text');
-            if (textEl) textEl.click();
-          }
-          
-          // Find or create wrapper inside resources panel
-          let wrapper = panel.querySelector('.simplified-notes-wrapper');
-          if (!wrapper) {
-            wrapper = document.createElement('div');
-            wrapper.className = 'simplified-notes-wrapper';
-            panel.appendChild(wrapper);
-          }
-          
-          if (cachedNotes) {
-            // Load from cache instantly
-            renderSimplifiedNotes(wrapper, cachedNotes);
-            return;
-          }
-          
-          // Loading state
-          btn.classList.add('loading');
-          btn.textContent = '✨ Simplifying...';
-          wrapper.innerHTML = `
-            <div class="simplified-notes-title">✨ Simplified Explanation</div>
-            <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; align-items:center; gap:0.5rem; margin-top:0.5rem;">
-              <div class="typing-indicator">
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
-              </div>
-              Summarizing topic for beginners...
-            </div>
-          `;
-          
-          // Adjust scroll height of open panel dynamically
-          panel.style.maxHeight = 'none';
-          
-          try {
-            const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
-            const userPrompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
-            
-            const simplified = await askClaude(systemPrompt, userPrompt);
-            
-            // Cache results
-            localStorage.setItem(cacheKey, simplified);
-            
-            // Render results
-            renderSimplifiedNotes(wrapper, simplified);
-          } catch(err) {
-            console.error("Failed to simplify topic:", err);
-            if (err.message === "API_KEY_MISSING") {
-              wrapper.innerHTML = `
-                <div class="simplified-notes-title">✨ Simplified Explanation</div>
-                <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem;">
-                  🔑 API Key missing! Please set your Anthropic API Key in the AI Settings (gear icon in the top right nav).
-                </div>
-              `;
-            } else {
-              wrapper.innerHTML = `
-                <div class="simplified-notes-title">✨ Simplified Explanation</div>
-                <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem;">
-                  ⚠️ Error loading summary. Please verify your API key or connection and try again.
-                </div>
-              `;
-            }
-          } finally {
-            btn.classList.remove('loading');
-            btn.textContent = '✨ Simplify';
-          }
-        });
-      });
-      
-      const renderSimplifiedNotes = (container, text) => {
-        // Parse bullet points
-        const lines = text.split('
-')
-          .map(l => l.replace(/^[-*•]\s*/, '').trim())
-          .filter(l => l.length > 0)
-          .slice(0, 5); // Ensure exactly 5
-          
-        const lis = lines.map(line => `<li>${line}</li>`).join('');
-        container.innerHTML = `
-          <div class="simplified-notes-title">✨ Beginner-Friendly Summary</div>
-          <ul class="simplified-notes-list" style="margin-top:0.5rem;">
-            ${lis}
-          </ul>
-        `;
-      };
-    };
-
-    // --- AI Doubt Solver Chat Panel ---
-    const initDoubtSolver = () => {
-      if (!roadmapId) return;
-      
-      // Ingest DOM floating button
-      const floatingBtn = document.createElement('button');
-      floatingBtn.className = 'ai-doubt-solver-btn';
-      floatingBtn.setAttribute('aria-label', 'AI Doubt Solver');
-      floatingBtn.innerHTML = `
-        <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
-      `;
-      document.body.appendChild(floatingBtn);
-      
-      // Get roadmap title
-      const headingEl = document.querySelector('.roadmap-header h1');
-      const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
-      
-      // Ingest DOM chat panel
-      const chatPanel = document.createElement('div');
-      chatPanel.className = 'ai-doubt-solver-panel';
-      chatPanel.innerHTML = `
-        <div class="ai-chat-header">
-          <div class="ai-chat-title">💬 Doubt Solver: ${roadmapTitle}</div>
-          <button class="ai-chat-close">&times;</button>
-        </div>
-        <div class="ai-chat-messages">
-          <div class="ai-message assistant">
-            Hi! I am your AI assistant for the <strong>${roadmapTitle}</strong> roadmap. Feel free to ask me any doubts about the topics in this guide!
-          </div>
-        </div>
-        <div class="ai-chat-input-area">
-          <textarea class="ai-chat-input" placeholder="Ask your doubt..."></textarea>
-          <button class="ai-chat-send" aria-label="Send message">
-            <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          </button>
-        </div>
-      `;
-      document.body.appendChild(chatPanel);
-      
-      const chatClose = chatPanel.querySelector('.ai-chat-close');
-      const chatInput = chatPanel.querySelector('.ai-chat-input');
-      const chatSend = chatPanel.querySelector('.ai-chat-send');
-      const chatMessages = chatPanel.querySelector('.ai-chat-messages');
-      
-      // Auto-focus input on open
-      floatingBtn.addEventListener('click', () => {
-        const isOpen = chatPanel.classList.contains('open');
-        if (isOpen) {
-          chatPanel.classList.remove('open');
-        } else {
-          chatPanel.classList.add('open');
-          chatInput.focus();
-        }
-      });
-      
-      chatClose.addEventListener('click', () => {
-        chatPanel.classList.remove('open');
-      });
-      
-      const sendMessage = async () => {
-        const query = chatInput.value.trim();
-        if (!query) return;
-        
-        chatInput.value = '';
-        
-        // Add User Message
-        const userMsg = document.createElement('div');
-        userMsg.className = 'ai-message user';
-        userMsg.textContent = query;
-        chatMessages.appendChild(userMsg);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-        // Check API key
-        const apiKey = localStorage.getItem('anthropic-api-key');
-        if (!apiKey) {
-          const alertMsg = document.createElement('div');
-          alertMsg.className = 'ai-message system-alert';
-          alertMsg.innerHTML = `🔑 API Key missing! Set your Anthropic API Key in the AI Settings (gear icon in the top right nav).`;
-          chatMessages.appendChild(alertMsg);
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-          return;
-        }
-        
-        // Typing indicator
-        const loader = document.createElement('div');
-        loader.className = 'ai-message assistant';
-        loader.innerHTML = `
-          <div class="typing-indicator">
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
-            <span class="typing-dot"></span>
-          </div>
-        `;
-        chatMessages.appendChild(loader);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-        try {
-          const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
-          
-          const reply = await askClaude(systemPrompt, query);
-          
-          // Remove loader and add assistant message
-          loader.remove();
-          
-          const assistantMsg = document.createElement('div');
-          assistantMsg.className = 'ai-message assistant';
-          assistantMsg.innerHTML = formatReplyText(reply);
-          chatMessages.appendChild(assistantMsg);
-        } catch(err) {
-          loader.remove();
-          const errMsg = document.createElement('div');
-          errMsg.className = 'ai-message system-alert';
-          errMsg.textContent = `⚠️ Error getting response from Claude. Please verify your network or API Key and try again.`;
-          chatMessages.appendChild(errMsg);
-        } finally {
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-      };
-      
-      chatSend.addEventListener('click', sendMessage);
-      chatInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' && !e.shiftKey) {
-          e.preventDefault();
-          sendMessage();
-        }
-      });
-      
-      const formatReplyText = (text) => {
-        let html = text
-          .replace(/&/g, "&amp;")
-          .replace(/</g, "&lt;")
-          .replace(/>/g, "&gt;")
-          .replace(/
-
-/g, "</p><p>")
-          .replace(/
--\s*(.*)/g, "<li>$1</li>")
-          .replace(/`(.*?)`/g, "<code>$1</code>");
-          
-        if (html.includes("<li>")) {
-          html = html.replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>");
-        }
-        
-        return `<p>${html}</p>`.replace(/<p><\/p>/g, '');
-      };
-    };
+  // --- Phase Lock Manager ---
+  const initPhaseLocks = () => {
+    if (!roadmapId) return;
     
-    // Initialize everything on page load
-    initPhaseLocks();
-    initMockTests();
-    initSmartNotes();
-    initDoubtSolver();
+    const phaseSections = document.querySelectorAll('.phase-section');
+    phaseSections.forEach((section, idx) => {
+      const phaseNum = parseInt(section.getAttribute('data-phase'));
+      if (phaseNum === 1) return; // Phase 1 is always unlocked
+      
+      const prevPhaseNum = phaseNum - 1;
+      const isPrevPassed = localStorage.getItem(`roadmap-${roadmapId}-phase-${prevPhaseNum}-passed`) === 'true';
+      
+      // Remove existing lock overlay if any
+      const existingOverlay = section.querySelector('.phase-lock-overlay');
+      if (existingOverlay) {
+        existingOverlay.remove();
+      }
+      
+      const contentWrapper = section.querySelector('.phase-content-wrapper');
+      const checkboxes = section.querySelectorAll('.topic-checkbox');
+      const simplifyBtns = section.querySelectorAll('.simplify-btn');
+      
+      if (!isPrevPassed) {
+        section.classList.add('phase-locked');
+        if (contentWrapper) {
+          contentWrapper.style.filter = 'blur(5px)';
+          contentWrapper.style.pointerEvents = 'none';
+          contentWrapper.style.opacity = '0.4';
+        }
+        
+        checkboxes.forEach(cb => cb.disabled = true);
+        simplifyBtns.forEach(btn => btn.style.display = 'none');
+        
+        // Inject Lock Overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'phase-lock-overlay';
+        overlay.innerHTML = `
+          <div class="phase-lock-card">
+            <div class="phase-lock-icon">\ud83d\udd12</div>
+            <div class="phase-lock-title">Phase ${phaseNum} Locked</div>
+            <div class="phase-lock-desc">Complete the Phase ${prevPhaseNum} Mock Test with 80% or above to unlock this phase.</div>
+          </div>
+        `;
+        section.appendChild(overlay);
+      } else {
+        section.classList.remove('phase-locked');
+        if (contentWrapper) {
+          contentWrapper.style.filter = 'none';
+          contentWrapper.style.pointerEvents = 'auto';
+          contentWrapper.style.opacity = '1';
+        }
+        checkboxes.forEach(cb => cb.disabled = false);
+        simplifyBtns.forEach(btn => btn.style.display = 'inline-flex');
+      }
+    });
+  };
 
-    // Attach text toggling panels click listeners
-    document.querySelectorAll('.topic-text').forEach(textEl => {
-      textEl.style.cursor = 'pointer';
-      textEl.addEventListener('click', (e) => {
+  // --- Mock Test Quiz Controller ---
+  const initMockTests = () => {
+    if (!roadmapId) return;
+    
+    const quizCards = document.querySelectorAll('.mock-test-card');
+    quizCards.forEach(card => {
+      const phaseNum = parseInt(card.getAttribute('data-phase'));
+      const questions = JSON.parse(card.getAttribute('data-questions') || '[]');
+      const startBtn = card.querySelector('.btn-start-test');
+      
+      if (!startBtn) return;
+      
+      startBtn.addEventListener('click', () => {
+        openQuizModal(phaseNum, questions);
+      });
+    });
+  };
+
+  // Helper to open Quiz Modal
+  const openQuizModal = (phaseNum, questions) => {
+    let currentQuestionIdx = 0;
+    let score = 0;
+    let userAnswers = [];
+    let selectedOptionIdx = null;
+
+    // Create modal elements
+    const overlay = document.createElement('div');
+    overlay.className = 'quiz-modal-overlay';
+    overlay.innerHTML = `
+      <div class="quiz-modal">
+        <div class="quiz-modal-header">
+          <h3 class="quiz-modal-title">\ud83d\udcdd Phase ${phaseNum} Mock Test</h3>
+          <button class="quiz-modal-close" aria-label="Close Quiz">&times;</button>
+        </div>
+        <div class="quiz-modal-body">
+          <div class="mock-test-quiz-container"></div>
+          <div class="mock-test-results" style="display: none;"></div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const closeBtn = overlay.querySelector('.quiz-modal-close');
+    const container = overlay.querySelector('.mock-test-quiz-container');
+    const resultsPanel = overlay.querySelector('.mock-test-results');
+
+    const closeModal = () => {
+      overlay.classList.remove('open');
+      setTimeout(() => overlay.remove(), 300);
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+
+    // Force reflow and add open class
+    overlay.offsetHeight;
+    overlay.classList.add('open');
+
+    const renderQuizState = () => {
+      if (currentQuestionIdx < questions.length) {
+        // Active quiz state
+        const q = questions[currentQuestionIdx];
+        selectedOptionIdx = null;
+        
+        const optionsHtml = q.options.map((opt, oIdx) => `
+          <li>
+            <button class="quiz-option-btn" data-index="${oIdx}">
+              <span class="quiz-option-letter">${String.fromCharCode(65 + oIdx)}</span>
+              <span class="quiz-option-val">${opt}</span>
+            </button>
+          </li>
+        `).join('');
+        
+        container.innerHTML = `
+          <div class="quiz-progress">Question ${currentQuestionIdx + 1} of ${questions.length}</div>
+          <div class="quiz-question-container">
+            <div class="quiz-question-text">${q.question}</div>
+            <ul class="quiz-options-list">
+              ${optionsHtml}
+            </ul>
+          </div>
+          <div class="quiz-controls">
+            <button class="btn-next-question hero-btn" disabled>Next Question</button>
+          </div>
+        `;
+        
+        const optBtns = container.querySelectorAll('.quiz-option-btn');
+        const nextBtn = container.querySelector('.btn-next-question');
+        
+        optBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            optBtns.forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            selectedOptionIdx = parseInt(btn.getAttribute('data-index'));
+            nextBtn.disabled = false;
+          });
+        });
+        
+        nextBtn.addEventListener('click', () => {
+          userAnswers.push(selectedOptionIdx);
+          if (selectedOptionIdx === q.correct) {
+            score++;
+          }
+          currentQuestionIdx++;
+          renderQuizState();
+        });
+      } else {
+        // Grading & Results
+        container.innerHTML = '';
+        container.style.display = 'none';
+        resultsPanel.style.display = 'block';
+        
+        const passed = score >= 8;
+        const scoreClass = passed ? 'passed' : 'failed';
+        const message = passed 
+          ? `\uD83C\uDF89 Congratulations! You Passed.<span>You scored ${score}/10 (80% or above) and unlocked the next phase.</span>`
+          : `\u274C Keep Practicing!<span>You scored ${score}/10. You need at least 80% (8/10) to unlock the next phase.</span>`;
+        
+        let revisionHtml = '';
+        if (!passed) {
+          const wrongTopics = [];
+          questions.forEach((q, idx) => {
+            if (userAnswers[idx] !== q.correct && q.topic) {
+              wrongTopics.push(q.topic);
+            }
+          });
+          
+          // Unique wrong topics
+          const uniqueWrongTopics = [...new Set(wrongTopics)];
+          const topicsLi = uniqueWrongTopics.map(t => `<li>${t}</li>`).join('');
+          
+          revisionHtml = `
+            <div class="revision-section">
+              <div class="revision-title">Topics to Revise:</div>
+              <ul class="revision-list">
+                ${topicsLi || '<li>Phase Concepts</li>'}
+              </ul>
+            </div>
+          `;
+        }
+        
+        resultsPanel.innerHTML = `
+          <div class="results-score-row">
+            <div class="results-score-circle ${scoreClass}">${score}/10</div>
+            <div class="results-message">${message}</div>
+          </div>
+          ${revisionHtml}
+          <div class="quiz-controls" style="margin-top:1.5rem;">
+            ${passed 
+              ? '<button class="btn-close-quiz hero-btn">Close Quiz & Explore</button>' 
+              : '<button class="btn-retry-test hero-btn">Retry Test \uD83D\uDD04</button>'}
+          </div>
+        `;
+        
+        if (passed) {
+          localStorage.setItem(`roadmap-${roadmapId}-phase-${phaseNum}-passed`, 'true');
+          initPhaseLocks();
+          
+          // Mini Confetti effect
+          try {
+            if (typeof confetti !== 'undefined') {
+              confetti();
+            }
+          } catch(e) {}
+
+          resultsPanel.querySelector('.btn-close-quiz').addEventListener('click', closeModal);
+        } else {
+          resultsPanel.querySelector('.btn-retry-test').addEventListener('click', () => {
+            resultsPanel.style.display = 'none';
+            container.style.display = 'block';
+            currentQuestionIdx = 0;
+            score = 0;
+            userAnswers = [];
+            renderQuizState();
+          });
+        }
+      }
+    };
+
+    // Start quiz rendering
+    renderQuizState();
+  };
+
+  // --- Claude API Call Core Helper ---
+  const askClaude = async (systemPrompt, userPrompt) => {
+    const apiKey = localStorage.getItem('anthropic-api-key');
+    if (!apiKey) {
+      throw new Error("API_KEY_MISSING");
+    }
+    
+    const proxyUrl = "https://api.allorigins.win/raw?url=";
+    const targetUrl = "https://api.anthropic.com/v1/messages";
+    const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
+
+    const response = await fetch(fullUrl, {
+      method: "POST",
+      headers: {
+        "x-api-key": apiKey,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 2000,
+        messages: [
+          {
+            role: "user",
+            content: `${systemPrompt}\n\nUser Question:\n${userPrompt}`
+          }
+        ]
+      })
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
+    }
+
+    const data = await response.json();
+    if (data.content && data.content[0] && data.content[0].text) {
+      return data.content[0].text.trim();
+    }
+    throw new Error("INVALID_RESPONSE_FORMAT");
+  };
+
+  // --- Smart Notes ("\u2728 Simplify") Controller ---
+  const initSmartNotes = () => {
+    const simplifyBtns = document.querySelectorAll('.simplify-btn');
+    simplifyBtns.forEach(btn => {
+      btn.addEventListener('click', async (e) => {
         e.preventDefault();
         e.stopPropagation();
-
-        const topicItem = textEl.closest('.topic-item');
+        
+        const topic = btn.getAttribute('data-topic');
+        const topicItem = btn.closest('.topic-item');
         if (!topicItem) return;
+        
         const panel = topicItem.querySelector('.topic-resources-panel');
         if (!panel) return;
         
-        const isOpen = topicItem.classList.contains('panel-open');
-        if (isOpen) {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-          panel.offsetHeight; // Force reflow
-          panel.style.maxHeight = '0';
-          topicItem.classList.remove('panel-open');
-        } else {
+        // Auto expand panel if closed
+        if (!topicItem.classList.contains('panel-open')) {
           topicItem.classList.add('panel-open');
           panel.style.maxHeight = panel.scrollHeight + 'px';
-          
           panel.addEventListener('transitionend', function handler(te) {
             if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
               panel.style.maxHeight = 'none';
@@ -1742,7 +1120,277 @@ ${userPrompt}`
             }
           });
         }
+        
+        // Find or create wrapper inside resources panel
+        let wrapper = panel.querySelector('.simplified-notes-wrapper');
+        if (!wrapper) {
+          wrapper = document.createElement('div');
+          wrapper.className = 'simplified-notes-wrapper';
+          panel.appendChild(wrapper);
+        }
+        
+        // Check API key first
+        const apiKey = localStorage.getItem('anthropic-api-key');
+        if (!apiKey) {
+          wrapper.innerHTML = `
+            <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
+            <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem; font-weight:500;">
+              Please add your API key in Settings \u2699\ufe0f
+            </div>
+          `;
+          panel.style.maxHeight = 'none';
+          return;
+        }
+        
+        // Check cache next
+        const cacheKey = `roadmap-${roadmapId}-topic-${topic}-simplified`;
+        const cachedNotes = localStorage.getItem(cacheKey);
+        
+        if (cachedNotes) {
+          renderSimplifiedNotes(wrapper, cachedNotes);
+          panel.style.maxHeight = 'none';
+          return;
+        }
+        
+        // Loading state
+        btn.classList.add('loading');
+        btn.textContent = '\u2728 Simplifying...';
+        wrapper.innerHTML = `
+          <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
+          <div style="font-size:0.85rem; color:var(--text-secondary); display:flex; align-items:center; gap:0.5rem; margin-top:0.5rem;">
+            <div class="typing-indicator">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+            Summarizing topic for beginners...
+          </div>
+        `;
+        
+        panel.style.maxHeight = 'none';
+        
+        try {
+          const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
+          const userPrompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
+          
+          const simplified = await askClaude(systemPrompt, userPrompt);
+          
+          // Cache results
+          localStorage.setItem(cacheKey, simplified);
+          
+          // Render results
+          renderSimplifiedNotes(wrapper, simplified);
+        } catch(err) {
+          console.error("Failed to simplify topic:", err);
+          wrapper.innerHTML = `
+            <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
+            <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem; font-weight:500;">
+              \u26A0\ufe0f Error loading summary. Please verify your API key or connection and try again.
+            </div>
+          `;
+        } finally {
+          btn.classList.remove('loading');
+          btn.textContent = '\u2728 Simplify';
+          panel.style.maxHeight = 'none';
+        }
       });
+    });
+    
+    const renderSimplifiedNotes = (container, text) => {
+      const lines = text.split('\n')
+        .map(l => l.replace(/^[-*•]\s*/, '').trim())
+        .filter(l => l.length > 0)
+        .slice(0, 5);
+        
+      const lis = lines.map(line => `<li>${line}</li>`).join('');
+      container.innerHTML = `
+        <div class="simplified-notes-title">\u2728 Beginner-Friendly Summary</div>
+        <ul class="simplified-notes-list" style="margin-top:0.5rem;">
+          ${lis}
+        </ul>
+      `;
+    };
+  };
+
+  // --- AI Doubt Solver Chat Panel ---
+  const initDoubtSolver = () => {
+    if (!roadmapId) return;
+    
+    // Ingest DOM floating button
+    const floatingBtn = document.createElement('button');
+    floatingBtn.className = 'ai-doubt-solver-btn';
+    floatingBtn.setAttribute('aria-label', 'AI Doubt Solver');
+    floatingBtn.innerHTML = `
+      <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+    `;
+    document.body.appendChild(floatingBtn);
+    
+    // Get roadmap title
+    const headingEl = document.querySelector('.roadmap-header h1');
+    const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
+    
+    // Ingest DOM chat panel
+    const chatPanel = document.createElement('div');
+    chatPanel.className = 'ai-doubt-solver-panel';
+    chatPanel.innerHTML = `
+      <div class="ai-chat-header">
+        <div class="ai-chat-title">\ud83d\udcac Doubt Solver: ${roadmapTitle}</div>
+        <button class="ai-chat-close">&times;</button>
+      </div>
+      <div class="ai-chat-messages">
+        <div class="ai-message assistant">
+          Hi! I am your AI assistant for the <strong>${roadmapTitle}</strong> roadmap. Feel free to ask me any doubts about the topics in this guide!
+        </div>
+      </div>
+      <div class="ai-chat-input-area">
+        <textarea class="ai-chat-input" placeholder="Ask your doubt..."></textarea>
+        <button class="ai-chat-send" aria-label="Send message">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    `;
+    document.body.appendChild(chatPanel);
+    
+    const chatClose = chatPanel.querySelector('.ai-chat-close');
+    const chatInput = chatPanel.querySelector('.ai-chat-input');
+    const chatSend = chatPanel.querySelector('.ai-chat-send');
+    const chatMessages = chatPanel.querySelector('.ai-chat-messages');
+    
+    // Auto-focus input on open
+    floatingBtn.addEventListener('click', () => {
+      const isOpen = chatPanel.classList.contains('open');
+      if (isOpen) {
+        chatPanel.classList.remove('open');
+      } else {
+        chatPanel.classList.add('open');
+        chatInput.focus();
+      }
+    });
+    
+    chatClose.addEventListener('click', () => {
+      chatPanel.classList.remove('open');
+    });
+    
+    const sendMessage = async () => {
+      const query = chatInput.value.trim();
+      if (!query) return;
+      
+      chatInput.value = '';
+      
+      // Add User Message
+      const userMsg = document.createElement('div');
+      userMsg.className = 'ai-message user';
+      userMsg.textContent = query;
+      chatMessages.appendChild(userMsg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      
+      // Check API key
+      const apiKey = localStorage.getItem('anthropic-api-key');
+      if (!apiKey) {
+        const alertMsg = document.createElement('div');
+        alertMsg.className = 'ai-message system-alert';
+        alertMsg.innerHTML = `\ud83d\udd11 API Key missing! Please add your API key in Settings \u2699\ufe0f`;
+        chatMessages.appendChild(alertMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        return;
+      }
+      
+      // Typing indicator
+      const loader = document.createElement('div');
+      loader.className = 'ai-message assistant';
+      loader.innerHTML = `
+        <div class="typing-indicator">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      `;
+      chatMessages.appendChild(loader);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      
+      try {
+        const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
+        
+        const reply = await askClaude(systemPrompt, query);
+        
+        // Remove loader and add assistant message
+        loader.remove();
+        
+        const assistantMsg = document.createElement('div');
+        assistantMsg.className = 'ai-message assistant';
+        assistantMsg.innerHTML = formatReplyText(reply);
+        chatMessages.appendChild(assistantMsg);
+      } catch(err) {
+        loader.remove();
+        const errMsg = document.createElement('div');
+        errMsg.className = 'ai-message system-alert';
+        errMsg.textContent = `\u26A0\ufe0f Error getting response from Claude. Please verify your network or API Key and try again.`;
+        chatMessages.appendChild(errMsg);
+      } finally {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    };
+    
+    chatSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+    
+    const formatReplyText = (text) => {
+      let html = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\n\n/g, "</p><p>")
+        .replace(/\n-\s*(.*)/g, "<li>$1</li>")
+        .replace(/`(.*?)`/g, "<code>$1</code>");
+        
+      if (html.includes("<li>")) {
+        html = html.replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>");
+      }
+      
+      return `<p>${html}</p>`.replace(/<p><\/p>/g, '');
+    };
+  };
+  
+  // Initialize everything on page load
+  initPhaseLocks();
+  initMockTests();
+  initSmartNotes();
+  initDoubtSolver();
+
+  // Attach text toggling panels click listeners
+  document.querySelectorAll('.topic-text').forEach(textEl => {
+    textEl.style.cursor = 'pointer';
+    textEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const topicItem = textEl.closest('.topic-item');
+      if (!topicItem) return;
+      const panel = topicItem.querySelector('.topic-resources-panel');
+      if (!panel) return;
+      
+      const isOpen = topicItem.classList.contains('panel-open');
+      if (isOpen) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        panel.offsetHeight; // Force reflow
+        panel.style.maxHeight = '0';
+        topicItem.classList.remove('panel-open');
+      } else {
+        topicItem.classList.add('panel-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        
+        panel.addEventListener('transitionend', function handler(te) {
+          if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
+            panel.style.maxHeight = 'none';
+            panel.removeEventListener('transitionend', handler);
+          }
+        });
+      }
     });
   });
 });
