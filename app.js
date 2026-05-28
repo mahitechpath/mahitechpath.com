@@ -1047,7 +1047,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Failed to load quiz from Gemini:", err);
         loadingPanel.innerHTML = `
           <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
-            \u26a0\ufe0f Error generating quiz. Please verify your Gemini API key or connection and try again.
+            ⚠️ Error: ${err.message || err}
           </div>
         `;
       }
@@ -1256,7 +1256,7 @@ document.addEventListener('DOMContentLoaded', () => {
           wrapper.innerHTML = `
             <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
             <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem; font-weight:500;">
-              \u26a0\ufe0f Error loading summary. Please verify your API key or connection and try again.
+              ⚠️ Error: ${err.message || err}
             </div>
           `;
         } finally {
@@ -1386,7 +1386,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loader.remove();
         const errMsg = document.createElement('div');
         errMsg.className = 'ai-message system-alert';
-        errMsg.textContent = `\u26a0\ufe0f Error getting response from Gemini. Please verify your network or API Key and try again.`;
+        errMsg.textContent = `⚠️ Error: ${err.message || err}`;
         chatMessages.appendChild(errMsg);
       } finally {
         chatMessages.scrollTop = chatMessages.scrollHeight;
