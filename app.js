@@ -478,7 +478,7 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
   // --- Global Homepage Search Filter Logic ---
   const searchInput = document.getElementById('roadmap-search');
   if (searchInput) {
-    // 40 Careers Search Database
+    // 60 Careers Search Database
     const CAREERS_INDEX = [
   {
     "id": "sw-ai-ml",
@@ -879,6 +879,206 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
     "keywords": "renewable energy solar thermal wind aerodynamics geothermal biomass CFD simulation mechanical",
     "duration": "16 Weeks",
     "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-ias",
+    "title": "IAS (Indian Administrative Service)",
+    "emoji": "\ud83c\udfdb\ufe0f",
+    "desc": "Top premier civil service of India, responsible for administering districts, policy implementation, and administrative leadership.",
+    "domain": "gov-central",
+    "keywords": "UPSC IAS Civil Services GS Prelims Mains CSAT Public Policy Constitution Governance History Indian Economy",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-ips",
+    "title": "IPS (Indian Police Service)",
+    "emoji": "\ud83d\udee1\ufe0f",
+    "desc": "Responsible for state-level security, maintaining law and order, intelligence operations, and policing administration across districts.",
+    "domain": "gov-central",
+    "keywords": "UPSC IPS Civil Services Law Enforcement Criminal Justice Internal Security Forensics Policing Security Laws",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-ifs",
+    "title": "IFS (Indian Foreign Service)",
+    "emoji": "\ud83c\udf10",
+    "desc": "Indian diplomat represent the nation globally, managing embassies, trade relations, international organizations, and foreign policy.",
+    "domain": "gov-central",
+    "keywords": "UPSC IFS Foreign Service Diplomacy Foreign Policy International Relations Global Trade Bilateral Treaties UN",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-irs",
+    "title": "IRS (Indian Revenue Service)",
+    "emoji": "\ud83d\udcb8",
+    "desc": "Responsible for managing direct and indirect tax collections, policy formulation, tax audits, and combatting tax evasion.",
+    "domain": "gov-central",
+    "keywords": "UPSC IRS Revenue Service Taxation Direct Tax GST Income Tax Auditing Money Laundering Customs Finance",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-ssc-cgl",
+    "title": "SSC CGL Officer",
+    "emoji": "\ud83d\udd0d",
+    "desc": "Recruited as Inspectors in Income Tax, Central Excise, Preventive Officers, or ASOs in Central Secretariat and Ministries.",
+    "domain": "gov-central",
+    "keywords": "SSC CGL Staff Selection Commission Quant Aptitude English Grammar Reasoning General Awareness Audit Files",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-rbi-grade-b",
+    "title": "RBI Grade B Officer",
+    "emoji": "\ud83c\udfe6",
+    "desc": "Manage financial stability, monetary policy operations, government debt, currency circulation, and bank regulatory frameworks.",
+    "domain": "gov-central",
+    "keywords": "RBI Grade B Reserve Bank Monetary Policy Economic Social Issues Financial Management Banking Regulation Finance",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-banking-po",
+    "title": "IBPS PO / SBI PO",
+    "emoji": "\ud83d\udcb3",
+    "desc": "Manage bank branch operations, credit appraisals, loan processing, customer accounts, and retail banking services.",
+    "domain": "gov-central",
+    "keywords": "IBPS PO SBI PO Banking Exam Quantitative Aptitude Reasoning English General Awareness Bank Accounts Loans",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-assistant-commandant",
+    "title": "Assistant Commandant (CAPF)",
+    "emoji": "\ud83d\udc6e",
+    "desc": "Officer rank in Central Armed Police Forces (BSF, CRPF, CISF, ITBP, SSB), leading border guarding and internal security units.",
+    "domain": "gov-central",
+    "keywords": "UPSC CAPF Assistant Commandant BSF CRPF CISF Internal Security Physical Test General Studies Essay Pr\u00e9cis",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-scientist-tech",
+    "title": "Scientist/Engineer at ISRO / DRDO",
+    "emoji": "\ud83d\ude80",
+    "desc": "Design satellite payloads, build launch vehicles, develop missile guidance systems, and conduct advanced defense/space research.",
+    "domain": "gov-central",
+    "keywords": "ISRO DRDO Scientist Engineering Math Space Systems Aerospace Rockets Missiles Aerospace Defense",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-gate-psu",
+    "title": "PSU Officer through GATE",
+    "emoji": "\ud83c\udfed",
+    "desc": "Recruited as Graduate Engineer Trainees (GET) at Maharatna/Navratna PSUs (NTPC, ONGC, BHEL, IOCL) using GATE scores.",
+    "domain": "gov-central",
+    "keywords": "GATE Exam PSU Recruitment BHEL ONGC NTPC IOCL Engineering Mathematics Aptitude Technical Syllabus",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-deputy-collector",
+    "title": "Deputy Collector (State Civil Services)",
+    "emoji": "\ud83c\udfdb\ufe0f",
+    "desc": "Recruited through State PSC (Group 1), responsible for sub-divisional administration, land revenue, and local policy implementations.",
+    "domain": "gov-state",
+    "keywords": "State PSC Civil Services Group 1 Deputy Collector Land Revenue Local Government District Administration Regional Schemes",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-dsp",
+    "title": "DSP (Deputy Superintendent of Police)",
+    "emoji": "\ud83d\udea8",
+    "desc": "State police officer recruited through State PSC, managing sub-divisional police stations, local law enforcement, and crime prevention.",
+    "domain": "gov-state",
+    "keywords": "State PSC Police Officer DSP Law Enforcement Crime Prevention Local Riots State Police Police Ethics",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-cto",
+    "title": "Commercial Tax Officer (CTO)",
+    "emoji": "\ud83d\udcc8",
+    "desc": "Administer state commercial taxes, monitor SGST compliance, perform business tax audits, and investigate regional tax evasions.",
+    "domain": "gov-state",
+    "keywords": "State PSC CTO Commercial Tax SGST Compliance Business Audits Tax Evasion Revenue GST Portal",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-aso",
+    "title": "Assistant Section Officer (ASO)",
+    "emoji": "\ud83d\udcc2",
+    "desc": "Process files, manage correspondence, draft government notes, and assist in secretariat policy administrations.",
+    "domain": "gov-state",
+    "keywords": "State PSC ASO Assistant Section Officer File Processing Secretariat Office Manual Drafting Note Sheets",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-pdo",
+    "title": "Panchayat Development Officer (PDO)",
+    "emoji": "\ud83c\udf3e",
+    "desc": "Manage village panchayat development plans, monitor rural schemes (MGNREGA), allocate local grants, and audit rural infrastructure projects.",
+    "domain": "gov-state",
+    "keywords": "State PSC PDO Panchayat Development Rural Schemes MGNREGA Village Infrastructure Local Grants Audit",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-municipal-commissioner",
+    "title": "Municipal Commissioner",
+    "emoji": "\ud83c\udfe2",
+    "desc": "Recruited through State PSC, managing urban local bodies (municipalities), urban planning, civic infrastructure, and waste management.",
+    "domain": "gov-state",
+    "keywords": "State PSC Municipal Commissioner Urban Planning Civic Infrastructure Waste Management Municipal Finance City Administration",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-excise-officer",
+    "title": "State Excise Officer",
+    "emoji": "\ud83c\udf7e",
+    "desc": "Monitor alcoholic beverages manufacturing/distribution, check illicit liquor networks, enforce excise acts, and collect state revenues.",
+    "domain": "gov-state",
+    "keywords": "State PSC Excise Officer Excise Duty Illicit Liquor Enforce Excise Act Revenue Licenses Checkpoints",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-assistant-engineer",
+    "title": "Assistant Engineer (State Departments)",
+    "emoji": "\ud83c\udfd7\ufe0f",
+    "desc": "Officer in PWD, Water Resources, or Irrigation departments, managing infrastructure design, estimations, contracting, and site execution.",
+    "domain": "gov-state",
+    "keywords": "State PSC Assistant Engineer PWD Water Resources Infrastructure Design Estimating Contracting Execution",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-lecturer-prof",
+    "title": "Government Lecturer/Professor",
+    "emoji": "\ud83c\udf93",
+    "desc": "Recruited through State PSC or NET, teaching undergraduate/postgraduate courses at government colleges, conducting research, and designing curriculums.",
+    "domain": "gov-state",
+    "keywords": "State PSC Lecturer Professor UGC NET SET Pedagogy Academic Research Curriculum Design College Education",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
+  },
+  {
+    "id": "gov-state-psu",
+    "title": "State PSU Officer",
+    "emoji": "\ud83c\udfe2",
+    "desc": "Officer in state corporations (electricity boards, transit utilities, state warehouses), managing operations, financial books, and regional projects.",
+    "domain": "gov-state",
+    "keywords": "State PSC PSU Officer Transit Utilities Electricity Boards Operations Finance Corporate Governance Audits",
+    "duration": "16 Weeks",
+    "phases": "4 PHASES"
   }
 ];
 
@@ -930,6 +1130,12 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
         } else if (c.domain === "mechanical") {
           domainColor = "#4a5568";
           domainLabel = "Mechanical";
+        } else if (c.domain === "gov-central") {
+          domainColor = "#319795";
+          domainLabel = "Gov-Central";
+        } else if (c.domain === "gov-state") {
+          domainColor = "#e53e3e";
+          domainLabel = "Gov-State";
         }
 
         const cardHtml = `
