@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
         <div class="settings-modal-body">
           <div class="form-group">
-            <label for="input-api-key" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Anthropic API Key</label>
-            <input type="password" id="input-api-key" placeholder="sk-ant-..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
-            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Anthropic's endpoints.</p>
+            <label for="input-api-key" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Gemini API Key</label>
+            <input type="password" id="input-api-key" placeholder="AIzaSy..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Google's Gemini endpoints.</p>
           </div>
         </div>
         <div class="settings-modal-footer">
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputKey = document.getElementById('input-api-key');
 
     const openSettings = () => {
-      inputKey.value = localStorage.getItem('anthropic-api-key') || '';
+      inputKey.value = localStorage.getItem('gemini_api_key') || '';
       overlay.classList.add('open');
     };
 
@@ -95,9 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
     saveBtn.addEventListener('click', () => {
       const val = inputKey.value.trim();
       if (val) {
-        localStorage.setItem('anthropic-api-key', val);
+        localStorage.setItem('gemini_api_key', val);
       } else {
-        localStorage.removeItem('anthropic-api-key');
+        localStorage.removeItem('gemini_api_key');
       }
       closeSettings();
     });
@@ -867,6 +867,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // --- Gemini API Call Core Helper ---
+  const askGemini = async (systemPrompt, userPrompt, isJson = false) => {
+    const apiKey = localStorage.getItem('gemini_api_key');
+    if (!apiKey) {
+      throw new Error("API_KEY_MISSING");
+    }
+    
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
+
+    const requestBody = {
+      contents: [
+        {
+          parts: [{ text: userPrompt }]
+        }
+      ],
+      systemInstruction: {
+        parts: [{ text: systemPrompt }]
+      }
+    };
+
+    if (isJson) {
+      requestBody.generationConfig = {
+        responseMimeType: "application/json"
+      };
+    }
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
+    }
+
+    const data = await response.json();
+    if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0] && data.candidates[0].content.parts[0].text) {
+      return data.candidates[0].content.parts[0].text.trim();
+    }
+    throw new Error("INVALID_RESPONSE_FORMAT");
+  };
+
   // --- Mock Test Quiz Controller ---
   const initMockTests = () => {
     if (!roadmapId) return;
@@ -874,23 +920,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizCards = document.querySelectorAll('.mock-test-card');
     quizCards.forEach(card => {
       const phaseNum = parseInt(card.getAttribute('data-phase'));
-      const questions = JSON.parse(card.getAttribute('data-questions') || '[]');
       const startBtn = card.querySelector('.btn-start-test');
       
       if (!startBtn) return;
       
       startBtn.addEventListener('click', () => {
-        openQuizModal(phaseNum, questions);
+        // Collect topics of the current phase section
+        const phaseSection = card.closest('.phase-section');
+        const topics = [];
+        if (phaseSection) {
+          phaseSection.querySelectorAll('.topic-text').forEach(el => {
+            const topicName = el.textContent.trim();
+            if (topicName) {
+              topics.push(topicName);
+            }
+          });
+        }
+        openQuizModal(phaseNum, topics);
       });
     });
   };
 
   // Helper to open Quiz Modal
-  const openQuizModal = (phaseNum, questions) => {
+  const openQuizModal = (phaseNum, topics) => {
     let currentQuestionIdx = 0;
     let score = 0;
     let userAnswers = [];
     let selectedOptionIdx = null;
+    let questions = [];
 
     // Create modal elements
     const overlay = document.createElement('div');
@@ -902,7 +959,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="quiz-modal-close" aria-label="Close Quiz">&times;</button>
         </div>
         <div class="quiz-modal-body">
-          <div class="mock-test-quiz-container"></div>
+          <div class="mock-test-loading" style="text-align: center; padding: 2rem;">
+            <div class="typing-indicator" style="margin: 0 auto 1rem auto; justify-content: center;">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Generating 10 custom questions using Gemini AI...</p>
+          </div>
+          <div class="mock-test-quiz-container" style="display: none;"></div>
           <div class="mock-test-results" style="display: none;"></div>
         </div>
       </div>
@@ -910,6 +975,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(overlay);
 
     const closeBtn = overlay.querySelector('.quiz-modal-close');
+    const loadingPanel = overlay.querySelector('.mock-test-loading');
     const container = overlay.querySelector('.mock-test-quiz-container');
     const resultsPanel = overlay.querySelector('.mock-test-results');
 
@@ -927,9 +993,49 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.offsetHeight;
     overlay.classList.add('open');
 
+    // Fetch quiz questions from Gemini
+    const loadQuiz = async () => {
+      const apiKey = localStorage.getItem('gemini_api_key');
+      if (!apiKey) {
+        loadingPanel.innerHTML = `
+          <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
+            Please add your API key in Settings \u2699\ufe0f
+          </div>
+        `;
+        return;
+      }
+
+      try {
+        const headingEl = document.querySelector('.roadmap-header h1');
+        const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
+
+        const systemPrompt = "You are an expert examiner. Generate a multiple-choice quiz of exactly 10 questions based on the provided list of topics. Return ONLY a valid JSON array of objects. Each object in the array must have the following keys: 'question' (string), 'options' (array of exactly 4 strings), 'correct' (integer index 0-3 of the correct option), and 'topic' (string matching one of the provided topics).";
+        const userPrompt = `Generate 10 MCQ questions for the following phase topics from the "${roadmapTitle}" roadmap:\n${topics.join('\n')}`;
+
+        const reply = await askGemini(systemPrompt, userPrompt, true);
+        
+        let cleanText = reply.replace(/```json/gi, '').replace(/```/g, '').trim();
+        questions = JSON.parse(cleanText);
+        
+        if (!Array.isArray(questions) || questions.length !== 10) {
+          throw new Error("Invalid questions count or structure");
+        }
+
+        loadingPanel.style.display = 'none';
+        container.style.display = 'block';
+        renderQuizState();
+      } catch(err) {
+        console.error("Failed to load quiz from Gemini:", err);
+        loadingPanel.innerHTML = `
+          <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
+            \u26a0\ufe0f Error generating quiz. Please verify your Gemini API key or connection and try again.
+          </div>
+        `;
+      }
+    };
+
     const renderQuizState = () => {
       if (currentQuestionIdx < questions.length) {
-        // Active quiz state
         const q = questions[currentQuestionIdx];
         selectedOptionIdx = null;
         
@@ -976,7 +1082,6 @@ document.addEventListener('DOMContentLoaded', () => {
           renderQuizState();
         });
       } else {
-        // Grading & Results
         container.innerHTML = '';
         container.style.display = 'none';
         resultsPanel.style.display = 'block';
@@ -996,7 +1101,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
           
-          // Unique wrong topics
           const uniqueWrongTopics = [...new Set(wrongTopics)];
           const topicsLi = uniqueWrongTopics.map(t => `<li>${t}</li>`).join('');
           
@@ -1027,7 +1131,6 @@ document.addEventListener('DOMContentLoaded', () => {
           localStorage.setItem(`roadmap-${roadmapId}-phase-${phaseNum}-passed`, 'true');
           initPhaseLocks();
           
-          // Mini Confetti effect
           try {
             if (typeof confetti !== 'undefined') {
               confetti();
@@ -1048,50 +1151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    // Start quiz rendering
-    renderQuizState();
-  };
-
-  // --- Claude API Call Core Helper ---
-  const askClaude = async (systemPrompt, userPrompt) => {
-    const apiKey = localStorage.getItem('anthropic-api-key');
-    if (!apiKey) {
-      throw new Error("API_KEY_MISSING");
-    }
-    
-    const proxyUrl = "https://api.allorigins.win/raw?url=";
-    const targetUrl = "https://api.anthropic.com/v1/messages";
-    const fullUrl = proxyUrl + encodeURIComponent(targetUrl);
-
-    const response = await fetch(fullUrl, {
-      method: "POST",
-      headers: {
-        "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "claude-sonnet-4-20250514",
-        max_tokens: 2000,
-        messages: [
-          {
-            role: "user",
-            content: `${systemPrompt}\n\nUser Question:\n${userPrompt}`
-          }
-        ]
-      })
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
-    }
-
-    const data = await response.json();
-    if (data.content && data.content[0] && data.content[0].text) {
-      return data.content[0].text.trim();
-    }
-    throw new Error("INVALID_RESPONSE_FORMAT");
+    loadQuiz();
   };
 
   // --- Smart Notes ("\u2728 Simplify") Controller ---
@@ -1109,7 +1169,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const panel = topicItem.querySelector('.topic-resources-panel');
         if (!panel) return;
         
-        // Auto expand panel if closed
         if (!topicItem.classList.contains('panel-open')) {
           topicItem.classList.add('panel-open');
           panel.style.maxHeight = panel.scrollHeight + 'px';
@@ -1121,7 +1180,6 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
         
-        // Find or create wrapper inside resources panel
         let wrapper = panel.querySelector('.simplified-notes-wrapper');
         if (!wrapper) {
           wrapper = document.createElement('div');
@@ -1129,8 +1187,7 @@ document.addEventListener('DOMContentLoaded', () => {
           panel.appendChild(wrapper);
         }
         
-        // Check API key first
-        const apiKey = localStorage.getItem('anthropic-api-key');
+        const apiKey = localStorage.getItem('gemini_api_key');
         if (!apiKey) {
           wrapper.innerHTML = `
             <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
@@ -1142,7 +1199,6 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
         
-        // Check cache next
         const cacheKey = `roadmap-${roadmapId}-topic-${topic}-simplified`;
         const cachedNotes = localStorage.getItem(cacheKey);
         
@@ -1152,7 +1208,6 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
         
-        // Loading state
         btn.classList.add('loading');
         btn.textContent = '\u2728 Simplifying...';
         wrapper.innerHTML = `
@@ -1173,19 +1228,16 @@ document.addEventListener('DOMContentLoaded', () => {
           const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
           const userPrompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
           
-          const simplified = await askClaude(systemPrompt, userPrompt);
+          const simplified = await askGemini(systemPrompt, userPrompt);
           
-          // Cache results
           localStorage.setItem(cacheKey, simplified);
-          
-          // Render results
           renderSimplifiedNotes(wrapper, simplified);
         } catch(err) {
           console.error("Failed to simplify topic:", err);
           wrapper.innerHTML = `
             <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
             <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem; font-weight:500;">
-              \u26A0\ufe0f Error loading summary. Please verify your API key or connection and try again.
+              \u26a0\ufe0f Error loading summary. Please verify your API key or connection and try again.
             </div>
           `;
         } finally {
@@ -1216,7 +1268,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const initDoubtSolver = () => {
     if (!roadmapId) return;
     
-    // Ingest DOM floating button
     const floatingBtn = document.createElement('button');
     floatingBtn.className = 'ai-doubt-solver-btn';
     floatingBtn.setAttribute('aria-label', 'AI Doubt Solver');
@@ -1225,11 +1276,9 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.body.appendChild(floatingBtn);
     
-    // Get roadmap title
     const headingEl = document.querySelector('.roadmap-header h1');
     const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
     
-    // Ingest DOM chat panel
     const chatPanel = document.createElement('div');
     chatPanel.className = 'ai-doubt-solver-panel';
     chatPanel.innerHTML = `
@@ -1256,7 +1305,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatSend = chatPanel.querySelector('.ai-chat-send');
     const chatMessages = chatPanel.querySelector('.ai-chat-messages');
     
-    // Auto-focus input on open
     floatingBtn.addEventListener('click', () => {
       const isOpen = chatPanel.classList.contains('open');
       if (isOpen) {
@@ -1277,15 +1325,13 @@ document.addEventListener('DOMContentLoaded', () => {
       
       chatInput.value = '';
       
-      // Add User Message
       const userMsg = document.createElement('div');
       userMsg.className = 'ai-message user';
       userMsg.textContent = query;
       chatMessages.appendChild(userMsg);
       chatMessages.scrollTop = chatMessages.scrollHeight;
       
-      // Check API key
-      const apiKey = localStorage.getItem('anthropic-api-key');
+      const apiKey = localStorage.getItem('gemini_api_key');
       if (!apiKey) {
         const alertMsg = document.createElement('div');
         alertMsg.className = 'ai-message system-alert';
@@ -1295,7 +1341,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       
-      // Typing indicator
       const loader = document.createElement('div');
       loader.className = 'ai-message assistant';
       loader.innerHTML = `
@@ -1310,10 +1355,8 @@ document.addEventListener('DOMContentLoaded', () => {
       
       try {
         const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
+        const reply = await askGemini(systemPrompt, query);
         
-        const reply = await askClaude(systemPrompt, query);
-        
-        // Remove loader and add assistant message
         loader.remove();
         
         const assistantMsg = document.createElement('div');
@@ -1324,7 +1367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loader.remove();
         const errMsg = document.createElement('div');
         errMsg.className = 'ai-message system-alert';
-        errMsg.textContent = `\u26A0\ufe0f Error getting response from Claude. Please verify your network or API Key and try again.`;
+        errMsg.textContent = `\u26a0\ufe0f Error getting response from Gemini. Please verify your network or API Key and try again.`;
         chatMessages.appendChild(errMsg);
       } finally {
         chatMessages.scrollTop = chatMessages.scrollHeight;
