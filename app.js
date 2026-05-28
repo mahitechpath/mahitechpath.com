@@ -1193,4 +1193,36 @@ Return ONLY the raw JSON object. Do not wrap it in markdown block quotes (e.g. \
       }
     });
   }
+
+  // --- Topic Resources Dropdown Panels ---
+  document.querySelectorAll('.topic-text').forEach(textEl => {
+    textEl.style.cursor = 'pointer';
+    textEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const topicItem = textEl.closest('.topic-item');
+      if (!topicItem) return;
+      const panel = topicItem.querySelector('.topic-resources-panel');
+      if (!panel) return;
+      
+      const isOpen = topicItem.classList.contains('panel-open');
+      if (isOpen) {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        panel.offsetHeight; // Force reflow
+        panel.style.maxHeight = '0';
+        topicItem.classList.remove('panel-open');
+      } else {
+        topicItem.classList.add('panel-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        
+        panel.addEventListener('transitionend', function handler(te) {
+          if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
+            panel.style.maxHeight = 'none';
+            panel.removeEventListener('transitionend', handler);
+          }
+        });
+      }
+    });
+  });
 });
