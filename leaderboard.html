@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard - CareerPath India</title>
+  <meta name="description" content="View top student rankings on CareerPath India. Rank by roadmap progress, view profile badges, and compare scores.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
+      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="leaderboard.html" class="nav-link active">Leaderboard</a></li>
+          <li class="nav-dropdown">
+            <span class="nav-link dropdown-trigger">
+              Roadmaps
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+            <ul class="dropdown-menu">
+              <li class="dropdown-header">B.Tech Portals</li>
+              <li><a href="btech.html">🎓 B.Tech Hub</a></li>
+              <li><a href="btech-software.html">💻 Software Engineering</a></li>
+              <li><a href="btech-hardware.html">🛠️ Hardware Engineering Hub</a></li>
+              <li><a href="btech-ece.html">📡 Electronics &amp; Communication (ECE)</a></li>
+              <li><a href="btech-eee.html">⚡ Electrical &amp; Electronics (EEE)</a></li>
+              <li><a href="btech-mechanical.html">⚙️ Mechanical Engineering</a></li>
+              <li class="dropdown-header">Government Exams</li>
+              <li><a href="government.html">🏛️ Government Hub</a></li>
+              <li><a href="government-central.html">🏛️ Central Government Exams</a></li>
+              <li><a href="government-state.html">🌲 State Government Exams</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-controls">
+        <button class="btn-settings btn-settings-toggle" aria-label="AI Settings">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
+        </button>
+
+        <div id="user-profile-container" class="profile-container">
+          <button id="btn-login" class="btn-login-google">
+            <svg class="google-icon" viewBox="0 0 24 24" width="16" height="16">
+              <path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.133 1 1.18 5.925 1.18 12s4.953 11 11.06 11c6.373 0 10.602-4.475 10.602-10.795 0-.727-.08-1.284-.175-1.92H12.24z"/>
+            </svg>
+            <span>Sign In</span>
+          </button>
+          
+          <div id="user-avatar-menu" class="user-avatar-wrapper" style="display: none;">
+            <img id="user-avatar-img" class="user-avatar" src="" alt="User Profile">
+            <div class="profile-dropdown">
+              <div class="profile-dropdown-header">
+                <div id="user-display-name" class="user-name">Guest</div>
+                <div id="user-display-email" class="user-email">guest@example.com</div>
+              </div>
+              <div class="profile-dropdown-badges" id="profile-badges-container">
+                <!-- Badges dynamically rendered -->
+              </div>
+              <div class="profile-dropdown-divider"></div>
+              <a href="leaderboard.html" class="profile-dropdown-item leaderboard-link-item">🏆 Leaderboard</a>
+              <button id="btn-logout" class="profile-dropdown-item btn-logout-item">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Overlay & Drawer -->
+  <div class="mobile-menu-overlay" id="mobile-overlay"></div>
+  <div class="mobile-menu-drawer" id="mobile-drawer">
+    <div class="mobile-menu-header">
+      <a href="index.html" class="nav-brand">Career<span>Path</span> India</a>
+      <button class="mobile-menu-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-menu-link">Home</a></li>
+      <li><a href="leaderboard.html" class="mobile-menu-link">🏆 Leaderboard</a></li>
+      <li class="mobile-menu-section-title">B.Tech Portals</li>
+      <li><a href="btech.html" class="mobile-menu-link">🎓 B.Tech Hub</a></li>
+      <li><a href="btech-software.html" class="mobile-menu-link">💻 Software Engineering</a></li>
+      <li><a href="btech-hardware.html" class="mobile-menu-link">🛠️ Hardware Engineering Hub</a></li>
+      <li><a href="btech-ece.html" class="mobile-menu-link">📡 Electronics &amp; Communication</a></li>
+      <li><a href="btech-eee.html" class="mobile-menu-link">⚡ Electrical &amp; Electronics</a></li>
+      <li><a href="btech-mechanical.html" class="mobile-menu-link">⚙️ Mechanical Engineering</a></li>
+      <li class="mobile-menu-section-title">Government Exams</li>
+      <li><a href="government.html" class="mobile-menu-link">🏛️ Government Hub</a></li>
+      <li><a href="government-central.html" class="mobile-menu-link">🏛️ Central Government</a></li>
+      <li><a href="government-state.html" class="mobile-menu-link">🌲 State Government</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Leaderboard Interface -->
+  <main class="leaderboard-section">
+    <div style="text-align: center; margin-bottom: 3rem; margin-top: 3rem;">
+      <span class="hero-badge">
+        <span class="dot"></span>
+        GLOBAL STUDENT RANKINGS
+      </span>
+      <h1 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; color: var(--text-primary); margin-top: 1rem;">
+        Top 10 Learning Champions
+      </h1>
+      <p style="color: var(--text-secondary); max-width: 600px; margin: 0.5rem auto 0; font-size: 0.95rem; line-height: 1.5;">
+        Students are ranked globally based on their aggregate progress across all active learning paths. Sign in and check off topics to secure your spot!
+      </p>
+    </div>
+
+    <!-- Domain wise tabs -->
+    <div class="leaderboard-tabs" id="leaderboard-tabs-bar">
+      <button class="leaderboard-tab-btn active" data-domain="overall">Overall</button>
+      <button class="leaderboard-tab-btn" data-domain="software">Software Engineering</button>
+      <button class="leaderboard-tab-btn" data-domain="ece">ECE</button>
+      <button class="leaderboard-tab-btn" data-domain="eee">EEE</button>
+      <button class="leaderboard-tab-btn" data-domain="mechanical">Mechanical</button>
+      <button class="leaderboard-tab-btn" data-domain="gov">Government Exams</button>
+    </div>
+
+    <!-- Rankings Card -->
+    <div class="leaderboard-card">
+      <div id="leaderboard-loading" class="leaderboard-status">
+        <div class="leaderboard-status-spinner"></div>
+        <p>Loading rankings from database...</p>
+      </div>
+
+      <div id="leaderboard-no-config" class="leaderboard-status" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1rem; color: var(--text-secondary);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <h3>Firebase Not Configured</h3>
+        <p style="margin-top: 0.5rem; max-width: 400px; margin-left: auto; margin-right: auto; font-size: 0.85rem;">Please paste your Firebase configuration in the settings modal (⚙️ gear button in the navbar) to initialize cloud sync and view rankings.</p>
+        <button id="btn-configure-leaderboard" class="hero-btn" style="margin-top: 1rem;">Open Settings</button>
+      </div>
+
+      <div id="leaderboard-empty" class="leaderboard-status" style="display: none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1rem; color: var(--text-secondary);"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <h3>No Student Records Yet</h3>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">Be the first one to sign in and complete a topic to list on this leaderboard!</p>
+      </div>
+
+      <table class="leaderboard-table" id="leaderboard-table-el" style="display: none;">
+        <thead>
+          <tr>
+            <th style="width: 80px;">Rank</th>
+            <th>Student</th>
+            <th>Achievements</th>
+            <th style="text-align: right; width: 150px;">Progress</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-tbody">
+          <!-- Dynamically populated rows -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-quote">
+        &ldquo;The journey ends, but the grind never does.&rdquo;
+      </p>
+    </div>
+  </footer>
+
+  <!-- Firebase Scripts Dynamic imports mapper -->
+  <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
+      }
+    }
+  </script>
+
+  <script src="app.js"></script>
+
+  <!-- Leaderboard page controller module -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+    import { getFirestore, collection, getDocs } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const configBtn = document.getElementById('btn-configure-leaderboard');
+      if (configBtn) {
+        configBtn.addEventListener('click', () => {
+          const settingsBtn = document.querySelector('.btn-settings');
+          if (settingsBtn) settingsBtn.click();
+        });
+      }
+
+      // Initialize leaderboard engine
+      initLeaderboard();
+    });
+
+    const initLeaderboard = async () => {
+      const configStr = localStorage.getItem('firebase-config');
+      const loadingPanel = document.getElementById('leaderboard-loading');
+      const noConfigPanel = document.getElementById('leaderboard-no-config');
+      const emptyPanel = document.getElementById('leaderboard-empty');
+      const tableEl = document.getElementById('leaderboard-table-el');
+      const tbody = document.getElementById('leaderboard-tbody');
+
+      if (!configStr) {
+        loadingPanel.style.display = 'none';
+        noConfigPanel.style.display = 'block';
+        return;
+      }
+
+      try {
+        const config = JSON.parse(configStr);
+        const app = initializeApp(config);
+        const db = getFirestore(app);
+
+        // Fetch users
+        const querySnap = await getDocs(collection(db, 'users'));
+        const usersList = [];
+        querySnap.forEach(docSnap => {
+          usersList.push(docSnap.data());
+        });
+
+        if (usersList.length === 0) {
+          loadingPanel.style.display = 'none';
+          emptyPanel.style.display = 'block';
+          return;
+        }
+
+        // Setup Tab switching
+        const tabButtons = document.querySelectorAll('.leaderboard-tab-btn');
+        tabButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const domain = btn.getAttribute('data-domain');
+            renderRankings(usersList, domain, tbody, loadingPanel, tableEl, emptyPanel);
+          });
+        });
+
+        // Initial render (overall)
+        renderRankings(usersList, 'overall', tbody, loadingPanel, tableEl, emptyPanel);
+
+      } catch (err) {
+        console.error("Leaderboard database error:", err);
+        loadingPanel.innerHTML = `<p style="color: #e53e3e;">⚠️ Error connecting to database: ${err.message}</p>`;
+      }
+    };
+
+    const renderRankings = (users, filterDomain, tbody, loadingPanel, tableEl, emptyPanel) => {
+      tbody.innerHTML = '';
+      
+      // 1. Filter users based on domain
+      // For overall, check totalProgressPercent
+      // For specific domain, check domainProgress map or mock values
+      let rankedUsers = [...users];
+
+      if (filterDomain === 'overall') {
+        rankedUsers = rankedUsers
+          .filter(u => u.totalProgressPercent !== undefined)
+          .sort((a, b) => b.totalProgressPercent - a.totalProgressPercent);
+      } else {
+        // filter domain: check user's started roadmaps in that domain or calculate mock progress for testing
+        // if user document doesn't have domainProgress, fall back to overall progress
+        rankedUsers = rankedUsers
+          .filter(u => {
+            const hasOverall = u.totalProgressPercent !== undefined;
+            return hasOverall; // simple fallback
+          })
+          .sort((a, b) => {
+            const aVal = (a.domainProgress && a.domainProgress[filterDomain] !== undefined) ? a.domainProgress[filterDomain] : (a.totalProgressPercent || 0);
+            const bVal = (b.domainProgress && b.domainProgress[filterDomain] !== undefined) ? b.domainProgress[filterDomain] : (b.totalProgressPercent || 0);
+            return bVal - aVal;
+          });
+      }
+
+      // Slice top 10
+      const top10 = rankedUsers.slice(0, 10);
+
+      if (top10.length === 0) {
+        tableEl.style.display = 'none';
+        loadingPanel.style.display = 'none';
+        emptyPanel.style.display = 'block';
+        return;
+      }
+
+      emptyPanel.style.display = 'none';
+      loadingPanel.style.display = 'none';
+      tableEl.style.display = 'table';
+
+      top10.forEach((user, idx) => {
+        const rank = idx + 1;
+        let rankClass = 'rank-other';
+        if (rank === 1) rankClass = 'rank-1';
+        else if (rank === 2) rankClass = 'rank-2';
+        else if (rank === 3) rankClass = 'rank-3';
+
+        const photo = user.photoURL || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
+        const name = user.name || 'Anonymous';
+        const progressVal = filterDomain === 'overall' 
+          ? (user.totalProgressPercent || 0)
+          : ((user.domainProgress && user.domainProgress[filterDomain] !== undefined) ? user.domainProgress[filterDomain] : (user.totalProgressPercent || 0));
+
+        // Format Badges Display
+        const badgeMeta = {
+          'phase-complete': { emoji: '🏆', title: 'Phase Complete' },
+          'roadmap-complete': { emoji: '🎓', title: 'Roadmap Complete' },
+          'streak-7': { emoji: '🔥', title: '7-Day Streak' },
+          'perfect-100': { emoji: '💯', title: 'Perfect Score' }
+        };
+
+        let badgeSpans = '';
+        (user.badges || []).forEach(bId => {
+          const meta = badgeMeta[bId];
+          if (meta) {
+            badgeSpans += `<span class="profile-badge-icon" title="${meta.title}" style="cursor: help; margin-right: 0.25rem;">${meta.emoji}</span>`;
+          }
+        });
+
+        if (!badgeSpans) {
+          badgeSpans = '<span style="color: var(--text-secondary); font-size: 0.8rem; font-style: italic;">No badges yet</span>';
+        }
+
+        const row = `
+          <tr>
+            <td>
+              <span class="rank-badge ${rankClass}">${rank}</span>
+            </td>
+            <td>
+              <div class="leaderboard-user">
+                <img class="leaderboard-user-img" src="${photo}" alt="${name}">
+                <span class="leaderboard-user-name">${name}</span>
+              </div>
+            </td>
+            <td>
+              <div style="display: flex; align-items: center;">${badgeSpans}</div>
+            </td>
+            <td style="text-align: right; font-weight: 700; font-family: var(--font-mono); color: var(--accent);">
+              ${progressVal}%
+            </td>
+          </tr>
+        `;
+        tbody.insertAdjacentHTML('beforeend', row);
+      });
+    };
+  </script>
+</body>
+</html>

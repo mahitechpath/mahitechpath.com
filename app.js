@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let firebaseManager = null;
   // --- Active Roadmap ID Resolution ---
   const getRoadmapIdFromPath = () => {
     try {
@@ -75,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.innerHTML = `
       <div class="settings-modal">
         <div class="settings-modal-header">
-          <h3 class="settings-modal-title">\u2699\ufe0f AI Settings</h3>
+          <h3 class="settings-modal-title">\u2699\ufe0f AI &amp; Cloud Settings</h3>
           <button class="settings-modal-close" id="btn-close-settings">&times;</button>
         </div>
         <div class="settings-modal-body">
@@ -83,6 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <label for="input-api-key" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Gemini API Key</label>
             <input type="password" id="input-api-key" placeholder="AIzaSy..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
             <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Google's Gemini endpoints.</p>
+          </div>
+          <div class="form-group" style="margin-top: 1.25rem;">
+            <label for="input-firebase-config" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Firebase Configuration (JSON)</label>
+            <textarea id="input-firebase-config" placeholder='{"apiKey": "...", "authDomain": "...", ...}' style="width: 100%; height: 110px; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: monospace; font-size: 0.8rem; box-sizing: border-box; resize: vertical;"></textarea>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Paste your Firebase Web App configuration JSON here to enable sign-in, cloud sync, and global leaderboards.</p>
           </div>
         </div>
         <div class="settings-modal-footer">
@@ -95,9 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('btn-close-settings');
     const saveBtn = document.getElementById('btn-save-settings');
     const inputKey = document.getElementById('input-api-key');
+    const inputFbConfig = document.getElementById('input-firebase-config');
 
     const openSettings = () => {
       inputKey.value = localStorage.getItem('gemini_api_key') || '';
+      inputFbConfig.value = localStorage.getItem('firebase-config') || '';
       overlay.classList.add('open');
     };
 
@@ -118,7 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         localStorage.removeItem('gemini_api_key');
       }
+
+      const fbVal = inputFbConfig.value.trim();
+      if (fbVal) {
+        localStorage.setItem('firebase-config', fbVal);
+      } else {
+        localStorage.removeItem('firebase-config');
+      }
+
       closeSettings();
+      window.location.reload();
     });
   }
 
@@ -1156,6 +1173,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           } catch(e) {}
 
+          if (firebaseManager && firebaseManager.isLoggedIn()) {
+            firebaseManager.checkAndUnlockBadge('phase-complete', '🏆 Phase Complete Badge Unlocked!');
+            if (score === 10) {
+              firebaseManager.checkAndUnlockBadge('perfect-100', '💯 Perfect Score Badge Unlocked!');
+            }
+          }
+
           resultsPanel.querySelector('.btn-close-quiz').addEventListener('click', closeModal);
         } else {
           resultsPanel.querySelector('.btn-retry-test').addEventListener('click', () => {
@@ -1417,12 +1441,502 @@ document.addEventListener('DOMContentLoaded', () => {
       return `<p>${html}</p>`.replace(/<p><\/p>/g, '');
     };
   };
-  
-  // Initialize everything on page load
+
+  // --- Progress Sync UI Updater ---
+  const updateProgressUI = () => {
+    if (!activeRoadmapId) return;
+    const checkboxes = document.querySelectorAll('.topic-checkbox');
+    const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+    const totalCount = checkboxes.length;
+
+    const checkedEl = document.getElementById('checked-topics');
+    const checkedMobileEl = document.getElementById('checked-topics-mobile');
+    if (checkedEl) checkedEl.textContent = checkedCount;
+    if (checkedMobileEl) checkedMobileEl.textContent = checkedCount;
+
+    const totalEl = document.getElementById('total-topics');
+    const totalMobileEl = document.getElementById('total-topics-mobile');
+    if (totalEl) totalEl.textContent = totalCount;
+    if (totalMobileEl) totalMobileEl.textContent = totalCount;
+
+    const percent = totalCount > 0 ? Math.round((checkedCount / totalCount) * 100) : 0;
+    
+    // Update text indicators
+    document.querySelectorAll('.progress-percentage').forEach(el => {
+      el.textContent = `${percent}%`;
+    });
+
+    // Update linear progress bar fills
+    document.querySelectorAll('.progress-bar-fill').forEach(el => {
+      el.style.width = `${percent}%`;
+    });
+
+    // Update circular progress ring
+    document.querySelectorAll('.progress-ring-circle').forEach(circle => {
+      const radius = circle.r.baseVal.value;
+      const circumference = 2 * Math.PI * radius;
+      circle.style.strokeDasharray = `${circumference} ${circumference}`;
+      const offset = circumference - (percent / 100) * circumference;
+      circle.style.strokeDashoffset = offset;
+    });
+  };
+
+  // --- Local Progress Tracker Initializer ---
+  const initProgressTracker = () => {
+    if (!activeRoadmapId) return;
+
+    const checkboxes = document.querySelectorAll('.topic-checkbox');
+    if (checkboxes.length === 0) return;
+
+    // Load progress from local storage
+    let progress = {};
+    const localProgStr = localStorage.getItem(`roadmap-${activeRoadmapId}-progress`);
+    if (localProgStr) {
+      try {
+        progress = JSON.parse(localProgStr);
+      } catch(e) {}
+    }
+
+    checkboxes.forEach(cb => {
+      cb.checked = !!progress[cb.id];
+      cb.addEventListener('change', async () => {
+        let currentProg = {};
+        const storedStr = localStorage.getItem(`roadmap-${activeRoadmapId}-progress`);
+        if (storedStr) {
+          try { currentProg = JSON.parse(storedStr); } catch(e) {}
+        }
+        
+        if (cb.checked) {
+          currentProg[cb.id] = true;
+        } else {
+          delete currentProg[cb.id];
+        }
+
+        // Save locally
+        localStorage.setItem(`roadmap-${activeRoadmapId}-progress`, JSON.stringify(currentProg));
+        updateProgressUI();
+
+        // Save to Firebase Cloud
+        if (firebaseManager && firebaseManager.isLoggedIn()) {
+          await firebaseManager.saveProgressToCloud(activeRoadmapId, currentProg);
+        }
+      });
+    });
+
+    updateProgressUI();
+
+    const resetBtn = document.getElementById('reset-progress');
+    if (resetBtn) {
+      resetBtn.style.cursor = 'pointer';
+      resetBtn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        if (confirm('Are you sure you want to reset all your progress for this roadmap?')) {
+          checkboxes.forEach(cb => cb.checked = false);
+          
+          localStorage.removeItem(`roadmap-${activeRoadmapId}-progress`);
+          updateProgressUI();
+
+          if (firebaseManager && firebaseManager.isLoggedIn()) {
+            await firebaseManager.saveProgressToCloud(activeRoadmapId, {});
+          }
+        }
+      });
+    }
+  };
+
+  // --- Firebase Cloud Synchronization Manager ---
+  class FirebaseSyncManager {
+    constructor() {
+      this.db = null;
+      this.auth = null;
+      this.user = null;
+      this.initialized = false;
+    }
+
+    async init() {
+      const configStr = localStorage.getItem('firebase-config');
+      if (!configStr) return;
+
+      try {
+        const config = JSON.parse(configStr);
+        const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js');
+        const { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
+        const { getFirestore, doc, setDoc, getDoc, collection, updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+
+        const app = initializeApp(config);
+        this.db = getFirestore(app);
+        this.auth = getAuth(app);
+        this.initialized = true;
+
+        // Attach login button handler
+        const loginBtn = document.getElementById('btn-login');
+        if (loginBtn) {
+          loginBtn.addEventListener('click', async () => {
+            try {
+              const provider = new GoogleAuthProvider();
+              await signInWithPopup(this.auth, provider);
+            } catch (err) {
+              console.error("Firebase Login Error:", err);
+              alert("⚠️ Error during Google Sign-in. Please verify connection and try again.");
+            }
+          });
+        }
+
+        // Attach logout button handler
+        const logoutBtn = document.getElementById('btn-logout');
+        if (logoutBtn) {
+          logoutBtn.addEventListener('click', async () => {
+            try {
+              await signOut(this.auth);
+              window.location.reload();
+            } catch (err) {
+              console.error("Firebase Logout Error:", err);
+            }
+          });
+        }
+
+        // User avatar dropdown menu toggle
+        const avatarMenu = document.getElementById('user-avatar-menu');
+        if (avatarMenu) {
+          avatarMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            avatarMenu.classList.toggle('active');
+          });
+          document.addEventListener('click', () => {
+            avatarMenu.classList.remove('active');
+          });
+        }
+
+        // Handle auth state changes
+        onAuthStateChanged(this.auth, async (user) => {
+          if (user) {
+            this.user = user;
+            await this.onUserLoggedIn(user);
+          } else {
+            this.user = null;
+            this.onUserLoggedOut();
+          }
+        });
+
+      } catch (err) {
+        console.error("Firebase Initialization Error:", err);
+      }
+    }
+
+    isLoggedIn() {
+      return this.user !== null;
+    }
+
+    async onUserLoggedIn(user) {
+      // Toggle navbar UI
+      const loginBtn = document.getElementById('btn-login');
+      const avatarMenu = document.getElementById('user-avatar-menu');
+      const avatarImg = document.getElementById('user-avatar-img');
+      const displayName = document.getElementById('user-display-name');
+      const displayEmail = document.getElementById('user-display-email');
+
+      if (loginBtn) loginBtn.style.display = 'none';
+      if (avatarMenu) avatarMenu.style.display = 'flex';
+      if (avatarImg) avatarImg.src = user.photoURL || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y';
+      if (displayName) displayName.textContent = user.displayName || 'Guest';
+      if (displayEmail) displayEmail.textContent = user.email || '';
+
+      // Initialize Firestore document
+      const { doc, getDoc, setDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+      const userDocRef = doc(this.db, 'users', user.uid);
+      let userSnap = await getDoc(userDocRef);
+      let userData = {};
+
+      if (!userSnap.exists()) {
+        userData = {
+          name: user.displayName || 'Guest',
+          photoURL: user.photoURL || '',
+          email: user.email || '',
+          badges: [],
+          totalProgressPercent: 0,
+          domainProgress: {
+            software: 0,
+            ece: 0,
+            eee: 0,
+            mechanical: 0,
+            gov: 0
+          },
+          lastActive: new Date().toISOString(),
+          streakDates: [new Date().toDateString()]
+        };
+        await setDoc(userDocRef, userData);
+      } else {
+        userData = userSnap.data();
+        userData = await this.updateStreak(userDocRef, userData);
+      }
+
+      this.renderBadges(userData.badges || []);
+
+      // Synchronize checkboxes
+      if (activeRoadmapId) {
+        await this.syncRoadmapProgress(activeRoadmapId);
+      }
+    }
+
+    onUserLoggedOut() {
+      const loginBtn = document.getElementById('btn-login');
+      const avatarMenu = document.getElementById('user-avatar-menu');
+      if (loginBtn) loginBtn.style.display = 'inline-flex';
+      if (avatarMenu) avatarMenu.style.display = 'none';
+    }
+
+    async updateStreak(userDocRef, userData) {
+      const { updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+      const todayStr = new Date().toDateString();
+      let streakDates = userData.streakDates || [];
+      
+      if (!streakDates.includes(todayStr)) {
+        streakDates.push(todayStr);
+        const sortedDates = streakDates.map(d => new Date(d)).sort((a,b) => a-b);
+        if (sortedDates.length > 15) {
+          sortedDates.shift();
+        }
+        
+        const newStreakDates = sortedDates.map(d => d.toDateString());
+        let currentStreak = 1;
+        
+        for (let i = newStreakDates.length - 1; i > 0; i--) {
+          const d1 = new Date(newStreakDates[i]);
+          const d2 = new Date(newStreakDates[i-1]);
+          const diffTime = Math.abs(d1 - d2);
+          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+          if (diffDays === 1) {
+            currentStreak++;
+          } else if (diffDays > 1) {
+            break;
+          }
+        }
+
+        let badges = userData.badges || [];
+        if (currentStreak >= 7 && !badges.includes('streak-7')) {
+          badges.push('streak-7');
+          this.triggerBadgeUnlock('streak-7', '🔥 7-Day Streak Badge Unlocked!');
+        }
+
+        await updateDoc(userDocRef, {
+          streakDates: newStreakDates,
+          badges: badges,
+          lastActive: new Date().toISOString()
+        });
+        userData.streakDates = newStreakDates;
+        userData.badges = badges;
+      }
+      return userData;
+    }
+
+    renderBadges(badges) {
+      const container = document.getElementById('profile-badges-container');
+      if (!container) return;
+      container.innerHTML = '';
+      
+      const badgeMeta = {
+        'phase-complete': { emoji: '🏆', title: 'Phase Complete' },
+        'roadmap-complete': { emoji: '🎓', title: 'Roadmap Complete' },
+        'streak-7': { emoji: '🔥', title: '7-Day Streak' },
+        'perfect-100': { emoji: '💯', title: 'Perfect Score' }
+      };
+
+      badges.forEach(bId => {
+        const meta = badgeMeta[bId];
+        if (meta) {
+          const span = document.createElement('span');
+          span.className = 'profile-badge-icon';
+          span.title = meta.title;
+          span.textContent = meta.emoji;
+          container.appendChild(span);
+        }
+      });
+    }
+
+    async syncRoadmapProgress(roadmapId) {
+      const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+      const progDocRef = doc(this.db, 'users', this.user.uid, 'progress', roadmapId);
+      const progSnap = await getDoc(progDocRef);
+      
+      let localProg = {};
+      const localProgStr = localStorage.getItem(`roadmap-${roadmapId}-progress`);
+      if (localProgStr) {
+        try { localProg = JSON.parse(localProgStr); } catch(e) {}
+      }
+
+      let cloudProg = {};
+      if (progSnap.exists()) {
+        cloudProg = progSnap.data().checkedTopics || {};
+      }
+
+      const mergedProg = { ...localProg, ...cloudProg };
+      localStorage.setItem(`roadmap-${roadmapId}-progress`, JSON.stringify(mergedProg));
+
+      const checkboxes = document.querySelectorAll('.topic-checkbox');
+      checkboxes.forEach(cb => {
+        cb.checked = !!mergedProg[cb.id];
+      });
+      updateProgressUI();
+
+      await this.saveProgressToCloud(roadmapId, mergedProg);
+    }
+
+    async saveProgressToCloud(roadmapId, checkedTopics) {
+      if (!this.initialized || !this.user) return;
+
+      try {
+        const { doc, setDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+        
+        const checkboxes = document.querySelectorAll('.topic-checkbox');
+        const totalCount = checkboxes.length;
+        const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+        const percent = totalCount > 0 ? Math.round((checkedCount / totalCount) * 100) : 0;
+
+        const progDocRef = doc(this.db, 'users', this.user.uid, 'progress', roadmapId);
+        await setDoc(progDocRef, {
+          checkedTopics: checkedTopics,
+          percent: percent,
+          lastUpdated: new Date().toISOString()
+        }, { merge: true });
+
+        await this.updateUserProgressMetrics();
+
+        if (percent === 100) {
+          await this.checkAndUnlockBadge('roadmap-complete', '🎓 Roadmap Complete Badge Unlocked!');
+        }
+
+      } catch (err) {
+        console.error("Error saving progress:", err);
+      }
+    }
+
+    async updateUserProgressMetrics() {
+      const { doc, getDocs, collection, updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+      
+      const progressCollRef = collection(this.db, 'users', this.user.uid, 'progress');
+      const querySnap = await getDocs(progressCollRef);
+      
+      let softwareSum = 0, softwareCount = 0;
+      let eceSum = 0, eceCount = 0;
+      let eeeSum = 0, eeeCount = 0;
+      let mechanicalSum = 0, mechanicalCount = 0;
+      let govSum = 0, govCount = 0;
+      
+      let overallSum = 0;
+      let totalRoadmaps = 0;
+
+      const getDomainFromRoadmapId = (rId) => {
+        if (rId.startsWith('sw-') || rId.startsWith('software-')) return 'software';
+        if (rId.startsWith('ece-')) return 'ece';
+        if (rId.startsWith('eee-')) return 'eee';
+        if (rId.startsWith('mech-') || rId.startsWith('mechanical-')) return 'mechanical';
+        if (rId.startsWith('gov-')) return 'gov';
+        return 'software';
+      };
+
+      querySnap.forEach(docSnap => {
+        const data = docSnap.data();
+        const percent = data.percent || 0;
+        const domain = getDomainFromRoadmapId(docSnap.id);
+        
+        overallSum += percent;
+        totalRoadmaps++;
+
+        if (domain === 'software') {
+          softwareSum += percent;
+          softwareCount++;
+        } else if (domain === 'ece') {
+          eceSum += percent;
+          eceCount++;
+        } else if (domain === 'eee') {
+          eeeSum += percent;
+          eeeCount++;
+        } else if (domain === 'mechanical') {
+          mechanicalSum += percent;
+          mechanicalCount++;
+        } else if (domain === 'gov') {
+          govSum += percent;
+          govCount++;
+        }
+      });
+
+      const overallAvg = totalRoadmaps > 0 ? Math.round(overallSum / totalRoadmaps) : 0;
+      const softwareAvg = softwareCount > 0 ? Math.round(softwareSum / softwareCount) : 0;
+      const eceAvg = eceCount > 0 ? Math.round(eceSum / eceCount) : 0;
+      const eeeAvg = eeeCount > 0 ? Math.round(eeeSum / eeeCount) : 0;
+      const mechanicalAvg = mechanicalCount > 0 ? Math.round(mechanicalSum / mechanicalCount) : 0;
+      const govAvg = govCount > 0 ? Math.round(govSum / govCount) : 0;
+
+      const userDocRef = doc(this.db, 'users', this.user.uid);
+      await updateDoc(userDocRef, {
+        totalProgressPercent: overallAvg,
+        domainProgress: {
+          software: softwareAvg,
+          ece: eceAvg,
+          eee: eeeAvg,
+          mechanical: mechanicalAvg,
+          gov: govAvg
+        }
+      });
+    }
+
+    async checkAndUnlockBadge(badgeId, message) {
+      if (!this.initialized || !this.user) return;
+      try {
+        const { doc, getDoc, updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+        const userDocRef = doc(this.db, 'users', this.user.uid);
+        const userSnap = await getDoc(userDocRef);
+        if (userSnap.exists()) {
+          const userData = userSnap.data();
+          let badges = userData.badges || [];
+          if (!badges.includes(badgeId)) {
+            badges.push(badgeId);
+            await updateDoc(userDocRef, { badges: badges });
+            this.triggerBadgeUnlock(badgeId, message);
+            this.renderBadges(badges);
+          }
+        }
+      } catch (err) {
+        console.error("Error unlocking badge:", err);
+      }
+    }
+
+    triggerBadgeUnlock(badgeId, message) {
+      try {
+        if (typeof confetti !== 'undefined') {
+          confetti();
+        }
+      } catch(e) {}
+
+      const toast = document.createElement('div');
+      toast.className = 'badge-toast';
+      toast.innerHTML = `
+        <div class="badge-toast-content">
+          <span style="font-size: 2rem;">${badgeId === 'phase-complete' ? '🏆' : badgeId === 'roadmap-complete' ? '🎓' : badgeId === 'streak-7' ? '🔥' : '💯'}</span>
+          <div>
+            <div style="font-weight: 700; color: #fff; font-size: 0.95rem;">${message}</div>
+            <div style="font-size: 0.75rem; color: #a0aec0; margin-top: 0.15rem;">You earned a new achievement!</div>
+          </div>
+        </div>
+      `;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.add('fade-out');
+        setTimeout(() => toast.remove(), 500);
+      }, 4000);
+    }
+  }
+
+  // Initialize progress trackers, Firebase Sync Manager and standard handlers
   initPhaseLocks();
   initMockTests();
   initSmartNotes();
   initDoubtSolver();
+  initProgressTracker();
+
+  firebaseManager = new FirebaseSyncManager();
+  firebaseManager.init();
 
   // Attach text toggling panels click listeners
   document.querySelectorAll('.topic-text').forEach(textEl => {
