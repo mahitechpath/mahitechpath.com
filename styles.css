@@ -3062,6 +3062,201 @@ body.domain-state-psc {
   .btn-login-google span {
     display: none;
   }
+  color: var(--accent);
+}
+
+.btn-logout-item {
+  color: #e53e3e;
+}
+
+.btn-logout-item:hover {
+  background-color: rgba(229, 62, 62, 0.05);
+  color: #e53e3e;
+}
+
+/* 3. Badge Achievement Unlock Notification Toast */
+.badge-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: rgba(18, 18, 16, 0.9);
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  z-index: 9999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  animation: toastSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  backdrop-filter: blur(12px);
+}
+
+.badge-toast.fade-out {
+  animation: toastFadeOut 0.5s ease forwards;
+}
+
+.badge-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@keyframes toastSlideUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes toastFadeOut {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+/* 4. Leaderboard System Style Sheets */
+.leaderboard-section {
+  max-width: 900px;
+  margin: 2rem auto 5rem;
+  padding: 0 1rem;
+}
+
+.leaderboard-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.leaderboard-tab-btn {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.leaderboard-tab-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.leaderboard-tab-btn.active {
+  background-color: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.leaderboard-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.leaderboard-table th {
+  background-color: var(--bg-primary);
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-table td {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.leaderboard-table tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* User rank style shapes */
+.rank-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.rank-1 { background-color: #ffd700; color: #1a202c; }
+.rank-2 { background-color: #c0c0c0; color: #1a202c; }
+.rank-3 { background-color: #cd7f32; color: #1a202c; }
+.rank-other { background-color: var(--border-color); color: var(--text-secondary); }
+
+/* User row elements styles */
+.leaderboard-user {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.leaderboard-user-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--accent);
+}
+
+.leaderboard-user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Leaderboard Loading / Empty status layout */
+.leaderboard-status {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.leaderboard-status-spinner {
+  border: 3px solid var(--border-color);
+  border-left-color: var(--accent);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+/* Responsive horizontal tabs support */
+@media (max-width: 768px) {
+  .leaderboard-table th, 
+  .leaderboard-table td {
+    padding: 1rem;
+  }
+}
+
+/* Mobile responsiveness improvements for Google login and TOC */
+@media (max-width: 480px) {
+  .btn-login-google span {
+    display: none;
+  }
   .btn-login-google {
     padding: 0.5rem;
   }
@@ -3072,6 +3267,7 @@ body.domain-state-psc {
     display: block !important;
     position: sticky;
     top: 4rem;
+    height: auto !important; /* Fix vertical full screen height issue */
     z-index: 100;
     background-color: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
@@ -3089,7 +3285,8 @@ body.domain-state-psc {
     display: none;
   }
   .toc-sidebar .toc-list {
-    display: flex;
+    display: flex !important;
+    flex-direction: row !important; /* Ensure horizontal rows of pills */
     gap: 0.75rem;
     padding: 0;
     margin: 0;
@@ -3117,4 +3314,115 @@ body.domain-state-psc {
     border-color: var(--accent);
     color: var(--accent);
   }
+}
+
+/* Full-screen Blocker/Login overlay */
+.gate-login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121210; /* Dark premium background matching site theme */
+  z-index: 99999; /* Higher than everything else */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.gate-login-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+.gate-brand {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.gate-brand span {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.gate-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.gate-btn-google {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  color: #1a202c;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gate-btn-google:hover {
+  background-color: #f7fafc;
+  transform: translateY(-1px);
+}
+
+.gate-config-warning {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #f56565;
+  background-color: rgba(229, 62, 62, 0.1);
+  border: 1px solid rgba(229, 62, 62, 0.2);
+  border-radius: 6px;
+  padding: 0.75rem;
+  line-height: 1.4;
+}
+
+.gate-btn-config {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.gate-btn-config:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.gate-loading-spinner {
+  border: 4px solid var(--border-color);
+  border-left-color: var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
 }

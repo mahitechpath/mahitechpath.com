@@ -1442,6 +1442,100 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   };
 
+  // --- Blocker Login Gate Logic ---
+  const injectLoginGate = () => {
+    if (document.getElementById('gate-login-overlay')) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'gate-login-overlay';
+    overlay.id = 'gate-login-overlay';
+    overlay.innerHTML = `
+      <div class="gate-login-card" id="gate-login-card-el">
+        <div class="gate-loading-spinner" id="gate-spinner"></div>
+        <div id="gate-content" style="display:none; text-align: center;">
+          <h2 class="gate-brand" style="margin-bottom:0.75rem;">Career<span>Path</span> India</h2>
+          <p class="gate-subtitle">Please sign in to access B.Tech engineering roadmaps and government exam study guides.</p>
+          
+          <button class="gate-btn-google" id="gate-btn-login" style="margin: 1.5rem auto 0; max-width: 280px; display: inline-flex;">
+            <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" style="vertical-align: middle; margin-right: 0.5rem;">
+              <path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.133 1 1.18 5.925 1.18 12s4.953 11 11.06 11c6.373 0 10.602-4.475 10.602-10.795 0-.727-.08-1.284-.175-1.92H12.24z"/>
+            </svg>
+            <span>Sign In with Google</span>
+          </button>
+          
+          <div id="gate-config-warning-container" style="display:none; margin-top: 1.5rem;">
+            <div class="gate-config-warning">
+              ⚠️ Firebase configuration is missing. Configure Firebase to enable login.
+            </div>
+            <button class="gate-btn-config" id="gate-btn-open-settings">⚙️ Open Settings</button>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const gateOpenSettings = document.getElementById('gate-btn-open-settings');
+    if (gateOpenSettings) {
+      gateOpenSettings.addEventListener('click', () => {
+        const settingsToggleBtn = document.querySelector('.btn-settings');
+        if (settingsToggleBtn) settingsToggleBtn.click();
+      });
+    }
+  };
+
+  const removeLoginGate = () => {
+    const overlay = document.getElementById('gate-login-overlay');
+    if (overlay) {
+      overlay.style.transition = 'opacity 0.3s ease';
+      overlay.style.opacity = '0';
+      setTimeout(() => overlay.remove(), 300);
+    }
+  };
+
+  const showGateLoginScreen = (isConfigured = true) => {
+    injectLoginGate();
+    
+    const spinner = document.getElementById('gate-spinner');
+    const content = document.getElementById('gate-content');
+    const warning = document.getElementById('gate-config-warning-container');
+    const loginBtn = document.getElementById('gate-btn-login');
+
+    if (spinner) spinner.style.display = 'none';
+    if (content) content.style.display = 'block';
+
+    if (!isConfigured) {
+      if (warning) warning.style.display = 'block';
+      if (loginBtn) {
+        loginBtn.disabled = true;
+        loginBtn.style.opacity = '0.5';
+        loginBtn.style.cursor = 'not-allowed';
+      }
+    } else {
+      if (warning) warning.style.display = 'none';
+      if (loginBtn) {
+        loginBtn.disabled = false;
+        loginBtn.style.opacity = '1';
+        loginBtn.style.cursor = 'pointer';
+        
+        loginBtn.onclick = async () => {
+          if (firebaseManager && firebaseManager.auth) {
+            try {
+              const { GoogleAuthProvider, signInWithPopup } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
+              const provider = new GoogleAuthProvider();
+              await signInWithPopup(firebaseManager.auth, provider);
+              
+              const isNested = window.location.pathname.includes('/roadmaps/');
+              window.location.href = isNested ? '../index.html' : 'index.html';
+            } catch (err) {
+              console.error("Login gate authentication error:", err);
+              alert("⚠️ Login failed. Please verify connection and try again.");
+            }
+          }
+        };
+      }
+    }
+  };
+
   // --- Progress Sync UI Updater ---
   const updateProgressUI = () => {
     if (!activeRoadmapId) return;
@@ -1555,7 +1649,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async init() {
       const configStr = localStorage.getItem('firebase-config');
-      if (!configStr) return;
+      if (!configStr) {
+        showGateLoginScreen(false);
+        return;
+      }
 
       try {
         const config = JSON.parse(configStr);
@@ -1612,9 +1709,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (user) {
             this.user = user;
             await this.onUserLoggedIn(user);
+            removeLoginGate();
           } else {
             this.user = null;
             this.onUserLoggedOut();
+            showGateLoginScreen(true);
           }
         });
 
@@ -1927,6 +2026,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 4000);
     }
   }
+
+  // Inject blocker gate immediately
+  injectLoginGate();
 
   // Initialize progress trackers, Firebase Sync Manager and standard handlers
   initPhaseLocks();
