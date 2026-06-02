@@ -1650,9 +1650,18 @@ document.addEventListener('DOMContentLoaded', () => {
     async init() {
       const configStr = localStorage.getItem('firebase-config');
       if (!configStr) {
-        showGateLoginScreen(false);
+        removeLoginGate();
         return;
       }
+
+      let authResolved = false;
+      const timeoutId = setTimeout(() => {
+        if (!authResolved) {
+          authResolved = true;
+          console.warn("Firebase auth check timed out after 3 seconds. Proceeding to login screen.");
+          showGateLoginScreen(true);
+        }
+      }, 3000);
 
       try {
         const config = JSON.parse(configStr);
@@ -1706,6 +1715,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle auth state changes
         onAuthStateChanged(this.auth, async (user) => {
+          if (!authResolved) {
+            authResolved = true;
+            clearTimeout(timeoutId);
+          }
           if (user) {
             this.user = user;
             await this.onUserLoggedIn(user);
@@ -1719,6 +1732,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       } catch (err) {
         console.error("Firebase Initialization Error:", err);
+        if (!authResolved) {
+          authResolved = true;
+          clearTimeout(timeoutId);
+        }
+        showGateLoginScreen(false);
       }
     }
 
