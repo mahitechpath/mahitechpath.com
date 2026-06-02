@@ -299,44 +299,25 @@
       let roadmapData = null;
 
       // 1. Try Firestore first if configured
-      const firebaseConfigStr = localStorage.getItem('firebase_config');
-      if (firebaseConfigStr) {
-        try {
-          let str = firebaseConfigStr.trim();
-          const firstBrace = str.indexOf('{');
-          if (firstBrace !== -1) {
-            str = str.substring(firstBrace);
-          }
-          const lastBrace = str.lastIndexOf('}');
-          if (lastBrace !== -1) {
-            str = str.substring(0, lastBrace + 1);
-          }
-
-          let config = null;
-          try {
-            config = JSON.parse(str);
-          } catch (e) {
-            let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
-            clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
-            clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
-            clean = clean.replace(/,\s*([5}\]])/g, '$1');
-            clean = clean.replace(/,\s*([}\]])/g, '$1');
-            config = JSON.parse(clean);
-          }
-
-          if (config && config.apiKey) {
-            const app = initializeApp(config);
-            const db = getFirestore(app);
-            const docRef = doc(db, 'roadmaps', roadmapId);
-            const docSnap = await getDoc(docRef);
-            if (docSnap.exists()) {
-              roadmapData = docSnap.data();
-              console.log("Loaded roadmap from Firestore:", roadmapId);
-            }
-          }
-        } catch (err) {
-          console.error("Firestore retrieval error, falling back to LocalStorage:", err);
+      try {
+        const config = {
+          apiKey: "AIzaSyDS5o-fMCUkNh0jGwlnj74ggKp1AIiFiVs",
+          authDomain: "careerpathindia-343a1.firebaseapp.com",
+          projectId: "careerpathindia-343a1",
+          storageBucket: "careerpathindia-343a1.appspot.com",
+          messagingSenderId: "717563492580",
+          appId: "1:717563492580:web:8d094fcad2b1a8541954f1"
+        };
+        const app = initializeApp(config);
+        const db = getFirestore(app);
+        const docRef = doc(db, 'roadmaps', roadmapId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          roadmapData = docSnap.data();
+          console.log("Loaded roadmap from Firestore:", roadmapId);
         }
+      } catch (err) {
+        console.error("Firestore retrieval error, falling back to LocalStorage:", err);
       }
 
       // 2. Fall back to LocalStorage if not found or no Firestore

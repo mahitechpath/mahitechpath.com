@@ -85,11 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="password" id="input-api-key" placeholder="AIzaSy..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
             <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Google's Gemini endpoints.</p>
           </div>
-          <div class="form-group" style="margin-top: 1.25rem;">
-            <label for="input-firebase-config" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Firebase Configuration (JSON)</label>
-            <textarea id="input-firebase-config" placeholder='{"apiKey": "...", "authDomain": "...", ...}' style="width: 100%; height: 110px; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: monospace; font-size: 0.8rem; box-sizing: border-box; resize: vertical;"></textarea>
-            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Paste your Firebase Web App configuration JSON here to enable sign-in, cloud sync, and global leaderboards.</p>
-          </div>
         </div>
         <div class="settings-modal-footer">
           <button class="hero-btn" id="btn-save-settings">Save Config</button>
@@ -101,11 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.getElementById('btn-close-settings');
     const saveBtn = document.getElementById('btn-save-settings');
     const inputKey = document.getElementById('input-api-key');
-    const inputFbConfig = document.getElementById('input-firebase-config');
 
     const openSettings = () => {
       inputKey.value = localStorage.getItem('gemini_api_key') || '';
-      inputFbConfig.value = localStorage.getItem('firebase_config') || '';
       overlay.classList.add('open');
     };
 
@@ -125,46 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('gemini_api_key', val);
       } else {
         localStorage.removeItem('gemini_api_key');
-      }
-
-      const fbVal = inputFbConfig.value.trim();
-      if (fbVal) {
-        try {
-          // Extract matching Javascript object declaration or standard JSON
-          let str = fbVal;
-          const firstBrace = str.indexOf('{');
-          if (firstBrace !== -1) {
-            str = str.substring(firstBrace);
-          }
-          const lastBrace = str.lastIndexOf('}');
-          if (lastBrace !== -1) {
-            str = str.substring(0, lastBrace + 1);
-          }
-
-          let parsedConfig = null;
-          try {
-            parsedConfig = JSON.parse(str);
-          } catch (e) {
-            // Unquoted keys and single quotes converter
-            let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
-            clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
-            clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
-            clean = clean.replace(/,\s*([5}\]])/g, '$1'); // trailing comma cleanup
-            clean = clean.replace(/,\s*([}\]])/g, '$1');
-            parsedConfig = JSON.parse(clean);
-          }
-
-          if (!parsedConfig || !parsedConfig.apiKey) {
-            throw new Error("Missing 'apiKey' inside the configuration object.");
-          }
-
-          localStorage.setItem('firebase_config', JSON.stringify(parsedConfig));
-        } catch (err) {
-          alert("⚠️ Invalid Firebase Configuration: " + err.message + "\nPlease make sure you copied the correct config block (JSON or JS literal) containing at least an apiKey.");
-          return;
-        }
-      } else {
-        localStorage.removeItem('firebase_config');
       }
 
       closeSettings();
@@ -936,51 +889,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // --- Gemini API Call Core Helper ---
-  const askGemini = async (systemPrompt, userPrompt, isJson = false) => {
-    const apiKey = localStorage.getItem('gemini_api_key');
-    if (!apiKey) {
-      throw new Error("API_KEY_MISSING");
-    }
-    
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
-
-    const requestBody = {
-      contents: [
-        {
-          parts: [{ text: userPrompt }]
-        }
-      ],
-      systemInstruction: {
-        parts: [{ text: systemPrompt }]
-      }
-    };
-
-    if (isJson) {
-      requestBody.generationConfig = {
-        responseMimeType: "application/json"
-      };
-    }
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify(requestBody)
-    });
-
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`API_ERROR: ${response.status} - ${errorText}`);
-    }
-
-    const data = await response.json();
-    if (data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts[0] && data.candidates[0].content.parts[0].text) {
-      return data.candidates[0].content.parts[0].text.trim();
-    }
-    throw new Error("INVALID_RESPONSE_FORMAT");
-  };
 
   // --- Mock Test Quiz Controller ---
   const initMockTests = () => {
@@ -1063,27 +971,34 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('open');
 
     // Fetch quiz questions from Gemini
+    // Fetch quiz questions from Vercel Serverless API
     const loadQuiz = async () => {
-      const apiKey = localStorage.getItem('gemini_api_key');
-      if (!apiKey) {
-        loadingPanel.innerHTML = `
-          <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
-            Please add your API key in Settings \u2699\ufe0f
-          </div>
-        `;
-        return;
-      }
-
       try {
         const headingEl = document.querySelector('.roadmap-header h1');
         const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
 
-        const systemPrompt = "You are an expert examiner. Generate a multiple-choice quiz of exactly 10 questions based on the provided list of topics. Return ONLY a valid JSON array of objects. Each object in the array must have the following keys: 'question' (string), 'options' (array of exactly 4 strings), 'correct' (integer index 0-3 of the correct option), and 'topic' (string matching one of the provided topics).";
-        const userPrompt = `Generate 10 MCQ questions for the following phase topics from the "${roadmapTitle}" roadmap:\n${topics.join('\n')}`;
+        const headers = { 'Content-Type': 'application/json' };
+        const clientApiKey = localStorage.getItem('gemini_api_key');
+        if (clientApiKey) {
+          headers['x-gemini-api-key'] = clientApiKey;
+        }
 
-        const reply = await askGemini(systemPrompt, userPrompt, true);
-        
-        let cleanText = reply.replace(/```json/gi, '').replace(/```/g, '').trim();
+        const isNested = window.location.pathname.includes('/roadmaps/');
+        const apiEndpoint = isNested ? '../api/generate-questions' : 'api/generate-questions';
+
+        const res = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({ topics: topics, roadmapTitle: roadmapTitle })
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.error || `HTTP Error ${res.status}`);
+        }
+
+        const data = await res.json();
+        let cleanText = data.reply.replace(/```json/gi, '').replace(/```/g, '').trim();
         questions = JSON.parse(cleanText);
         
         if (!Array.isArray(questions) || questions.length !== 10) {
@@ -1094,7 +1009,7 @@ document.addEventListener('DOMContentLoaded', () => {
         container.style.display = 'block';
         renderQuizState();
       } catch(err) {
-        console.error("Failed to load quiz from Gemini:", err);
+        console.error("Failed to load quiz from API:", err);
         loadingPanel.innerHTML = `
           <div style="font-size: 0.9rem; color: #e57373; font-weight: 500;">
             ⚠️ Error: ${err.message || err}
@@ -1301,10 +1216,28 @@ document.addEventListener('DOMContentLoaded', () => {
         panel.style.maxHeight = 'none';
         
         try {
-          const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
-          const userPrompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
-          
-          const simplified = await askGemini(systemPrompt, userPrompt);
+          const headers = { 'Content-Type': 'application/json' };
+          const clientApiKey = localStorage.getItem('gemini_api_key');
+          if (clientApiKey) {
+            headers['x-gemini-api-key'] = clientApiKey;
+          }
+
+          const isNested = window.location.pathname.includes('/roadmaps/');
+          const apiEndpoint = isNested ? '../api/simplify-topic' : 'api/simplify-topic';
+
+          const res = await fetch(apiEndpoint, {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify({ topic: topic })
+          });
+
+          if (!res.ok) {
+            const errData = await res.json().catch(() => ({}));
+            throw new Error(errData.error || `HTTP Error ${res.status}`);
+          }
+
+          const data = await res.json();
+          const simplified = data.reply;
           
           localStorage.setItem(cacheKey, simplified);
           renderSimplifiedNotes(wrapper, simplified);
@@ -1407,16 +1340,6 @@ document.addEventListener('DOMContentLoaded', () => {
       chatMessages.appendChild(userMsg);
       chatMessages.scrollTop = chatMessages.scrollHeight;
       
-      const apiKey = localStorage.getItem('gemini_api_key');
-      if (!apiKey) {
-        const alertMsg = document.createElement('div');
-        alertMsg.className = 'ai-message system-alert';
-        alertMsg.innerHTML = `\ud83d\udd11 API Key missing! Please add your API key in Settings \u2699\ufe0f`;
-        chatMessages.appendChild(alertMsg);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-        return;
-      }
-      
       const loader = document.createElement('div');
       loader.className = 'ai-message assistant';
       loader.innerHTML = `
@@ -1430,8 +1353,28 @@ document.addEventListener('DOMContentLoaded', () => {
       chatMessages.scrollTop = chatMessages.scrollHeight;
       
       try {
-        const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
-        const reply = await askGemini(systemPrompt, query);
+        const headers = { 'Content-Type': 'application/json' };
+        const clientApiKey = localStorage.getItem('gemini_api_key');
+        if (clientApiKey) {
+          headers['x-gemini-api-key'] = clientApiKey;
+        }
+
+        const isNested = window.location.pathname.includes('/roadmaps/');
+        const apiEndpoint = isNested ? '../api/doubt-solver' : 'api/doubt-solver';
+
+        const res = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: headers,
+          body: JSON.stringify({ query: query, roadmapTitle: roadmapTitle })
+        });
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.error || `HTTP Error ${res.status}`);
+        }
+
+        const data = await res.json();
+        const reply = data.reply;
         
         loader.remove();
         
@@ -1495,25 +1438,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </svg>
             <span>Sign In with Google</span>
           </button>
-          
-          <div id="gate-config-warning-container" style="display:none; margin-top: 1.5rem;">
-            <div class="gate-config-warning">
-              ⚠️ Firebase configuration is missing. Configure Firebase to enable login.
-            </div>
-            <button class="gate-btn-config" id="gate-btn-open-settings">⚙️ Open Settings</button>
-          </div>
         </div>
       </div>
     `;
     document.body.appendChild(overlay);
-
-    const gateOpenSettings = document.getElementById('gate-btn-open-settings');
-    if (gateOpenSettings) {
-      gateOpenSettings.addEventListener('click', () => {
-        const settingsToggleBtn = document.querySelector('.btn-settings');
-        if (settingsToggleBtn) settingsToggleBtn.click();
-      });
-    }
   };
 
   const removeLoginGate = () => {
@@ -1525,47 +1453,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const showGateLoginScreen = (isConfigured = true) => {
+  const showGateLoginScreen = () => {
     injectLoginGate();
     
     const spinner = document.getElementById('gate-spinner');
     const content = document.getElementById('gate-content');
-    const warning = document.getElementById('gate-config-warning-container');
     const loginBtn = document.getElementById('gate-btn-login');
 
     if (spinner) spinner.style.display = 'none';
     if (content) content.style.display = 'block';
 
-    if (!isConfigured) {
-      if (warning) warning.style.display = 'block';
-      if (loginBtn) {
-        loginBtn.disabled = true;
-        loginBtn.style.opacity = '0.5';
-        loginBtn.style.cursor = 'not-allowed';
-      }
-    } else {
-      if (warning) warning.style.display = 'none';
-      if (loginBtn) {
-        loginBtn.disabled = false;
-        loginBtn.style.opacity = '1';
-        loginBtn.style.cursor = 'pointer';
-        
-        loginBtn.onclick = async () => {
-          if (firebaseManager && firebaseManager.auth) {
-            try {
-              const { GoogleAuthProvider, signInWithPopup } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
-              const provider = new GoogleAuthProvider();
-              await signInWithPopup(firebaseManager.auth, provider);
-              
-              const isNested = window.location.pathname.includes('/roadmaps/');
-              window.location.href = isNested ? '../index.html' : 'index.html';
-            } catch (err) {
-              console.error("Login gate authentication error:", err);
-              alert("⚠️ Login failed. Please verify connection and try again.");
-            }
+    if (loginBtn) {
+      loginBtn.disabled = false;
+      loginBtn.style.opacity = '1';
+      loginBtn.style.cursor = 'pointer';
+      
+      loginBtn.onclick = async () => {
+        if (firebaseManager && firebaseManager.auth) {
+          try {
+            const { GoogleAuthProvider, signInWithPopup } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
+            const provider = new GoogleAuthProvider();
+            await signInWithPopup(firebaseManager.auth, provider);
+            
+            const isNested = window.location.pathname.includes('/roadmaps/');
+            window.location.href = isNested ? '../index.html' : 'index.html';
+          } catch (err) {
+            console.error("Login gate authentication error:", err);
+            alert("⚠️ Login failed. Please verify connection and try again.");
           }
-        };
-      }
+        }
+      };
     }
   };
 
@@ -1681,11 +1598,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async init() {
-      const configStr = localStorage.getItem('firebase_config');
-      if (!configStr) {
-        removeLoginGate();
-        return;
-      }
+      const config = {
+        apiKey: "AIzaSyDS5o-fMCUkNh0jGwlnj74ggKp1AIiFiVs",
+        authDomain: "careerpathindia-343a1.firebaseapp.com",
+        projectId: "careerpathindia-343a1",
+        storageBucket: "careerpathindia-343a1.appspot.com",
+        messagingSenderId: "717563492580",
+        appId: "1:717563492580:web:8d094fcad2b1a8541954f1"
+      };
 
       let authResolved = false;
       const timeoutId = setTimeout(() => {
@@ -1697,27 +1617,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3000);
 
       try {
-        let str = configStr.trim();
-        const firstBrace = str.indexOf('{');
-        if (firstBrace !== -1) {
-          str = str.substring(firstBrace);
-        }
-        const lastBrace = str.lastIndexOf('}');
-        if (lastBrace !== -1) {
-          str = str.substring(0, lastBrace + 1);
-        }
-
-        let config = null;
-        try {
-          config = JSON.parse(str);
-        } catch (e) {
-          let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
-          clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
-          clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
-          clean = clean.replace(/,\s*([}\]])/g, '$1');
-          config = JSON.parse(clean);
-        }
-
         const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js');
         const { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
         const { getFirestore, doc, setDoc, getDoc, collection, updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
