@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const openSettings = () => {
       inputKey.value = localStorage.getItem('gemini_api_key') || '';
-      inputFbConfig.value = localStorage.getItem('firebase-config') || '';
+      inputFbConfig.value = localStorage.getItem('firebase_config') || '';
       overlay.classList.add('open');
     };
 
@@ -129,9 +129,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const fbVal = inputFbConfig.value.trim();
       if (fbVal) {
-        localStorage.setItem('firebase-config', fbVal);
+        try {
+          // Extract matching Javascript object declaration or standard JSON
+          let str = fbVal;
+          const firstBrace = str.indexOf('{');
+          if (firstBrace !== -1) {
+            str = str.substring(firstBrace);
+          }
+          const lastBrace = str.lastIndexOf('}');
+          if (lastBrace !== -1) {
+            str = str.substring(0, lastBrace + 1);
+          }
+
+          let parsedConfig = null;
+          try {
+            parsedConfig = JSON.parse(str);
+          } catch (e) {
+            // Unquoted keys and single quotes converter
+            let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
+            clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
+            clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
+            clean = clean.replace(/,\s*([5}\]])/g, '$1'); // trailing comma cleanup
+            clean = clean.replace(/,\s*([}\]])/g, '$1');
+            parsedConfig = JSON.parse(clean);
+          }
+
+          if (!parsedConfig || !parsedConfig.apiKey) {
+            throw new Error("Missing 'apiKey' inside the configuration object.");
+          }
+
+          localStorage.setItem('firebase_config', JSON.stringify(parsedConfig));
+        } catch (err) {
+          alert("⚠️ Invalid Firebase Configuration: " + err.message + "\nPlease make sure you copied the correct config block (JSON or JS literal) containing at least an apiKey.");
+          return;
+        }
       } else {
-        localStorage.removeItem('firebase-config');
+        localStorage.removeItem('firebase_config');
       }
 
       closeSettings();
@@ -1648,7 +1681,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async init() {
-      const configStr = localStorage.getItem('firebase-config');
+      const configStr = localStorage.getItem('firebase_config');
       if (!configStr) {
         removeLoginGate();
         return;
@@ -1664,7 +1697,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3000);
 
       try {
-        const config = JSON.parse(configStr);
+        let str = configStr.trim();
+        const firstBrace = str.indexOf('{');
+        if (firstBrace !== -1) {
+          str = str.substring(firstBrace);
+        }
+        const lastBrace = str.lastIndexOf('}');
+        if (lastBrace !== -1) {
+          str = str.substring(0, lastBrace + 1);
+        }
+
+        let config = null;
+        try {
+          config = JSON.parse(str);
+        } catch (e) {
+          let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
+          clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
+          clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
+          clean = clean.replace(/,\s*([}\]])/g, '$1');
+          config = JSON.parse(clean);
+        }
+
         const { initializeApp } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js');
         const { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js');
         const { getFirestore, doc, setDoc, getDoc, collection, updateDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');

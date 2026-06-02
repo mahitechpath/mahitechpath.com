@@ -299,10 +299,31 @@
       let roadmapData = null;
 
       // 1. Try Firestore first if configured
-      const firebaseConfigStr = localStorage.getItem('firebase-config');
+      const firebaseConfigStr = localStorage.getItem('firebase_config');
       if (firebaseConfigStr) {
         try {
-          const config = JSON.parse(firebaseConfigStr);
+          let str = firebaseConfigStr.trim();
+          const firstBrace = str.indexOf('{');
+          if (firstBrace !== -1) {
+            str = str.substring(firstBrace);
+          }
+          const lastBrace = str.lastIndexOf('}');
+          if (lastBrace !== -1) {
+            str = str.substring(0, lastBrace + 1);
+          }
+
+          let config = null;
+          try {
+            config = JSON.parse(str);
+          } catch (e) {
+            let clean = str.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, '$1');
+            clean = clean.replace(/([{,]\s*)([a-zA-Z0-9_\-]+)\s*:/g, '$1"$2":');
+            clean = clean.replace(/'([^'\\]*(?:\\.[^'\\]*)*)'/g, '"$1"');
+            clean = clean.replace(/,\s*([5}\]])/g, '$1');
+            clean = clean.replace(/,\s*([}\]])/g, '$1');
+            config = JSON.parse(clean);
+          }
+
           if (config && config.apiKey) {
             const app = initializeApp(config);
             const db = getFirestore(app);
