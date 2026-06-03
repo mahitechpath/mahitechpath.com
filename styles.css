@@ -3565,3 +3565,88 @@ body.domain-state-psc {
   margin-right: 0.5rem;
   vertical-align: middle;
 }
+
+/* 3D Login Page Card Styles */
+.gate-login-card {
+  position: relative;
+  background-color: rgba(22, 22, 20, 0.7) !important; /* Semi-transparent glassmorphism */
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 3.5rem 2.5rem !important;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  /* 3D Transform settings */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+/* 3D Hover glow dynamic spotlight */
+.gate-login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(49, 130, 206, 0.15), transparent 60%);
+  pointer-events: none;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.gate-login-card:hover::before {
+  opacity: 1;
+}
+
+/* 3D Entry Animation */
+.gate-login-card-entry {
+  animation: card3DEnter 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes card3DEnter {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateY(-60deg) rotateX(20deg) translateZ(-300px) translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) translateZ(0) translateY(0);
+  }
+}
+
+/* Parallax depth items inside the card */
+.gate-login-card .login-logo {
+  transform: translateZ(50px);
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.4));
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gate-login-card .gate-brand {
+  transform: translateZ(40px) !important;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gate-login-card .gate-subtitle {
+  transform: translateZ(30px) !important;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.gate-login-card .gate-btn-google {
+  transform: translateZ(35px) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.gate-login-card .gate-btn-google:hover {
+  transform: translateZ(45px) translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(49, 130, 206, 0.3) !important;
+}

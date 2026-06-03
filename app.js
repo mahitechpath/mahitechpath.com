@@ -1554,12 +1554,35 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           splash.style.display = 'none';
           loginCard.style.display = 'block';
+          loginCard.classList.add('gate-login-card-entry');
           setTimeout(() => {
             loginCard.style.opacity = '1';
           }, 50);
         }, 500);
       }
     }, 5000);
+
+    // Interactive 3D mousemove tracking event listeners
+    const loginCardEl = document.getElementById('gate-login-card-el');
+    if (loginCardEl) {
+      loginCardEl.addEventListener('mousemove', (e) => {
+        const rect = loginCardEl.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const px = x / rect.width;
+        const py = y / rect.height;
+        const rx = (0.5 - py) * 20; // Tilt around X
+        const ry = (px - 0.5) * 20; // Tilt around Y
+        loginCardEl.style.setProperty('--rx', `${rx}deg`);
+        loginCardEl.style.setProperty('--ry', `${ry}deg`);
+        loginCardEl.style.setProperty('--mx', `${px * 100}%`);
+        loginCardEl.style.setProperty('--my', `${py * 100}%`);
+      });
+      loginCardEl.addEventListener('mouseleave', () => {
+        loginCardEl.style.setProperty('--rx', '0deg');
+        loginCardEl.style.setProperty('--ry', '0deg');
+      });
+    }
   };
 
   const removeLoginGate = () => {
