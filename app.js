@@ -8,6 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (filename && filename.endsWith('.html') && filename !== 'index.html' && filename !== 'viewer.html') {
         return filename.replace('.html', '');
       }
+      if (filename === 'viewer.html') {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('id');
+      }
     } catch (e) {}
     return null;
   };
@@ -69,11 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Secure Gemini API Helper ---
   const askGemini = async (prompt, systemPrompt = null, isJson = false) => {
     const headers = { 'Content-Type': 'application/json' };
-    const clientApiKey = localStorage.getItem('gemini_api_key');
-    if (clientApiKey) {
-      headers['x-gemini-api-key'] = clientApiKey;
-    }
-
     const isNested = window.location.pathname.includes('/roadmaps/');
     const apiEndpoint = isNested ? '../api/gemini' : 'api/gemini';
 
@@ -92,64 +91,87 @@ document.addEventListener('DOMContentLoaded', () => {
     return data.reply;
   };
 
-  // --- Settings Modal and API Key Management ---
-  const settingsBtn = document.querySelector('.btn-settings');
-  if (settingsBtn) {
-    // Ingest DOM settings modal overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'settings-modal-overlay';
-    overlay.id = 'settings-modal-overlay';
-    overlay.innerHTML = `
-      <div class="settings-modal">
-        <div class="settings-modal-header">
-          <h3 class="settings-modal-title">\u2699\ufe0f AI &amp; Cloud Settings</h3>
-          <button class="settings-modal-close" id="btn-close-settings">&times;</button>
-        </div>
-        <div class="settings-modal-body">
-          <div class="form-group">
-            <label for="input-api-key" style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 500;">Gemini API Key</label>
-            <input type="password" id="input-api-key" placeholder="AIzaSy..." style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-primary); color: var(--text-primary); font-family: inherit; font-size: 0.9rem; box-sizing: border-box;">
-            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.4;">Your API key is saved locally in your browser's localStorage and never sent anywhere except Google's Gemini endpoints.</p>
-          </div>
-        </div>
-        <div class="settings-modal-footer">
-          <button class="hero-btn" id="btn-save-settings">Save Config</button>
-        </div>
+  const renderFallbackExists = (fallbackEl, slug, query) => {
+    fallbackEl.innerHTML = `
+      <h3>Custom roadmap for "<span id="search-query-highlight"></span>" is ready!</h3>
+      <p>A customized week-by-week career plan has already been generated for this topic.</p>
+      <button id="btn-view-ai" class="hero-btn">View AI Roadmap 🚀</button>
+    `;
+    document.getElementById('search-query-highlight').textContent = query;
+    document.getElementById('btn-view-ai').addEventListener('click', () => {
+      const isNested = window.location.pathname.includes('/roadmaps/');
+      const viewerUrl = isNested ? `viewer.html?id=${slug}` : `roadmaps/viewer.html?id=${slug}`;
+      window.location.href = viewerUrl;
+    });
+  };
+
+  const renderFallbackGenerate = (fallbackEl, slug, query) => {
+    fallbackEl.innerHTML = `
+      <h3>No roadmaps found for "<span id="search-query-highlight"></span>"</h3>
+      <p>You can generate a custom, premium week-by-week roadmap for this topic using Gemini AI!</p>
+      <button id="btn-generate-ai" class="hero-btn">Generate Roadmap with AI \u2728</button>
+    `;
+    document.getElementById('search-query-highlight').textContent = query;
+    document.getElementById('btn-generate-ai').addEventListener('click', () => {
+      generateRoadmapWithAI(query, slug, fallbackEl);
+    });
+  };
+
+  const generateRoadmapWithAI = async (query, slug, fallbackEl) => {
+    fallbackEl.innerHTML = `
+      <h3>Generating roadmap for "${query}"...</h3>
+      <p style="margin-bottom: 1.5rem;">Designing curriculum, 4 phases, 10 mock test MCQs per phase, capstones, and interview strategy. This may take up to a minute...</p>
+      <div class="typing-indicator" style="margin: 0 auto 1.5rem auto; justify-content: center;">
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
       </div>
     `;
-    document.body.appendChild(overlay);
 
-    const closeBtn = document.getElementById('btn-close-settings');
-    const saveBtn = document.getElementById('btn-save-settings');
-    const inputKey = document.getElementById('input-api-key');
+    try {
+      const systemPrompt = 'You are a world-class education curriculum designer. Generate a highly detailed, premium, phase-based learning roadmap for "' + query + '". The output MUST be a single, valid JSON object with the following keys and structure:\n{\n  "id": "' + slug + '",\n  "title": "' + query + ' Career Roadmap",\n  "description": "A comprehensive, dynamic career roadmap to master ' + query + ' with week-by-week curriculum trackers, mock test questions, and capstone projects.",\n  "duration": "16 Weeks",\n  "difficulty": "Intermediate",\n  "role": "' + query + ' Specialist",\n  "prerequisites": "Basic understanding of programming and technology",\n  "phases": [\n    {\n      "num": 1,\n      "title": "Phase 1 Title",\n      "desc": "Phase 1 detailed overview description",\n      "weeks": [\n        {\n          "title": "Week 1: Week Title",\n          "topics": ["Sub-topic A details", "Sub-topic B details"]\n        },\n        {\n          "title": "Week 2: Week Title",\n          "topics": ["Sub-topic C details", "Sub-topic D details"]\n        },\n        {\n          "title": "Week 3: Week Title",\n          "topics": ["Sub-topic E details", "Sub-topic F details"]\n        },\n        {\n          "title": "Week 4: Week Title",\n          "topics": ["Sub-topic G details", "Sub-topic H details"]\n        }\n      ],\n      "mock_questions": [\n        {\n          "question": "A multiple choice question related to Phase 1 topics?",\n          "options": ["Option 0 text", "Option 1 text", "Option 2 text", "Option 3 text"],\n          "correct": 0,\n          "topic": "Sub-topic A details"\n        }\n      ]\n    }\n  ],\n  "capstones": [\n    {\n      "title": "Capstone Project 1 Title",\n      "desc": "Project 1 description and deliverables",\n      "tech": ["Technology 1", "Technology 2"]\n    },\n    {\n      "title": "Capstone Project 2 Title",\n      "desc": "Project 2 description and deliverables",\n      "tech": ["Technology 3", "Technology 4"]\n    }\n  ],\n  "resume_keywords": ["keyword 1", "keyword 2", "keyword 3"],\n  "interview_focus": ["Focus area 1", "Focus area 2"]\n}\nEnsure there are exactly 4 phases, with exactly 4 weeks per phase, and exactly 2 topics per week. Each phase MUST have a "mock_questions" array containing exactly 10 multiple-choice questions with 4 options each, and a 0-3 index for correct. Ensure all JSON keys and values are strictly valid JSON, escaping double quotes properly. Do NOT wrap output in markdown formatting, return ONLY the raw JSON string.';
 
-    const openSettings = () => {
-      inputKey.value = localStorage.getItem('gemini_api_key') || '';
-      overlay.classList.add('open');
-    };
+      const prompt = 'Create a custom learning roadmap for "' + query + '" with exactly 4 phases, 4 weeks per phase (16 weeks total), 10 MCQs per phase, 2 capstones, resume keywords, and interview focus points.';
 
-    const closeSettings = () => {
-      overlay.classList.remove('open');
-    };
-
-    settingsBtn.addEventListener('click', openSettings);
-    closeBtn.addEventListener('click', closeSettings);
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeSettings();
-    });
-
-    saveBtn.addEventListener('click', () => {
-      const val = inputKey.value.trim();
-      if (val) {
-        localStorage.setItem('gemini_api_key', val);
-      } else {
-        localStorage.removeItem('gemini_api_key');
+      const responseText = await askGemini(prompt, systemPrompt, true);
+      let cleanJson = responseText.replace(/```json/gi, '').replace(/```/g, '').trim();
+      const parsedData = JSON.parse(cleanJson);
+      
+      if (!parsedData.title || !parsedData.phases || parsedData.phases.length !== 4) {
+        throw new Error("Invalid roadmap structure returned by AI");
       }
 
-      closeSettings();
-      window.location.reload();
-    });
-  }
+      localStorage.setItem(`custom-roadmap-${slug}`, JSON.stringify(parsedData));
+
+      if (firebaseManager && firebaseManager.db) {
+        const { doc, setDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+        const docRef = doc(firebaseManager.db, 'roadmaps', slug);
+        await setDoc(docRef, parsedData);
+      }
+
+      fallbackEl.innerHTML = `
+        <h3 style="color:var(--accent);">\u2728 Roadmap Generated Successfully!</h3>
+        <p>Redirecting to viewer...</p>
+      `;
+
+      setTimeout(() => {
+        const isNested = window.location.pathname.includes('/roadmaps/');
+        const viewerUrl = isNested ? `viewer.html?id=${slug}` : `roadmaps/viewer.html?id=${slug}`;
+        window.location.href = viewerUrl;
+      }, 1500);
+
+    } catch (err) {
+      console.error("AI Roadmap generation failed:", err);
+      fallbackEl.innerHTML = `
+        <h3 style="color:#e57373;">⚠️ Generation Failed</h3>
+        <p style="font-size:0.9rem; margin-bottom:1rem;">${err.message || err}</p>
+        <button id="btn-retry-ai" class="hero-btn">Try Again</button>
+      `;
+      document.getElementById('btn-retry-ai').addEventListener('click', () => {
+        generateRoadmapWithAI(query, slug, fallbackEl);
+      });
+    }
+  };
 
   // --- Dynamic Search Portal Engine ---
   const careersIndex = [
@@ -825,32 +847,55 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       // Show/hide search fallback card
-      let fallback = document.getElementById('search-fallback');
-      if (matches.length === 0) {
+      if (matches.length === 0 && query.length > 1) {
+        const slug = query.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        
+        let fallback = document.getElementById('search-fallback');
         if (!fallback) {
           fallback = document.createElement('div');
           fallback.id = 'search-fallback';
           fallback.className = 'search-fallback-card';
-          fallback.innerHTML = `
-            <h3>No roadmaps found for "<span id="search-query-highlight"></span>"</h3>
-            <p>You can generate a custom, premium week-by-week roadmap for this topic using Claude AI!</p>
-            <button id="btn-generate-ai" class="hero-btn">Generate with AI \u2728</button>
-          `;
           const mainContainer = document.querySelector('main.container');
           if (mainContainer) {
             mainContainer.appendChild(fallback);
           }
-          
-          document.getElementById('btn-generate-ai').addEventListener('click', () => {
-            const currentQuery = document.getElementById('roadmap-search').value.trim();
-            if (currentQuery) {
-              generateRoadmapWithAI(currentQuery);
-            }
-          });
         }
-        document.getElementById('search-query-highlight').textContent = query;
+        
         fallback.style.display = 'flex';
+        
+        const localRoadmap = localStorage.getItem(`custom-roadmap-${slug}`);
+        if (localRoadmap) {
+          renderFallbackExists(fallback, slug, query);
+        } else if (firebaseManager && firebaseManager.db) {
+          fallback.innerHTML = `
+            <h3>Checking database for "<span id="search-query-highlight">${query}</span>"...</h3>
+            <div class="typing-indicator" style="margin: 1rem auto; justify-content: center;">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+          `;
+          
+          import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js')
+            .then(async ({ doc, getDoc }) => {
+              const docRef = doc(firebaseManager.db, 'roadmaps', slug);
+              const docSnap = await getDoc(docRef);
+              if (docSnap.exists()) {
+                localStorage.setItem(`custom-roadmap-${slug}`, JSON.stringify(docSnap.data()));
+                renderFallbackExists(fallback, slug, query);
+              } else {
+                renderFallbackGenerate(fallback, slug, query);
+              }
+            })
+            .catch(err => {
+              console.error("Error checking Firestore for roadmap:", err);
+              renderFallbackGenerate(fallback, slug, query);
+            });
+        } else {
+          renderFallbackGenerate(fallback, slug, query);
+        }
       } else {
+        const fallback = document.getElementById('search-fallback');
         if (fallback) {
           fallback.style.display = 'none';
         }
@@ -939,13 +984,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
-        openQuizModal(phaseNum, topics);
+        openQuizModal(phaseNum, topics, card);
       });
     });
   };
 
   // Helper to open Quiz Modal
-  const openQuizModal = (phaseNum, topics) => {
+  const openQuizModal = (phaseNum, topics, card) => {
     let currentQuestionIdx = 0;
     let score = 0;
     let userAnswers = [];
@@ -999,6 +1044,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch quiz questions from Gemini serverless proxy
     const loadQuiz = async () => {
       try {
+        if (card && card.getAttribute('data-questions')) {
+          try {
+            const rawQuestions = card.getAttribute('data-questions');
+            const decoded = rawQuestions.startsWith('%') ? decodeURIComponent(rawQuestions) : rawQuestions;
+            questions = JSON.parse(decoded);
+            if (Array.isArray(questions) && questions.length > 0) {
+              loadingPanel.style.display = 'none';
+              container.style.display = 'block';
+              renderQuizState();
+              return;
+            }
+          } catch (e) {
+            console.error("Failed to parse data-questions attribute, falling back to API", e);
+          }
+        }
+
         const headingEl = document.querySelector('.roadmap-header h1');
         const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
 
@@ -1958,45 +2019,63 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inject blocker gate immediately
   injectLoginGate();
 
-  // Initialize progress trackers, Firebase Sync Manager and standard handlers
-  initPhaseLocks();
-  initMockTests();
-  initSmartNotes();
-  initDoubtSolver();
-  initProgressTracker();
+  const isViewerPage = window.location.pathname.endsWith('viewer.html');
+
+  const attachTopicTextListeners = () => {
+    document.querySelectorAll('.topic-text').forEach(textEl => {
+      if (textEl.getAttribute('data-listener-attached')) return;
+      textEl.setAttribute('data-listener-attached', 'true');
+      textEl.style.cursor = 'pointer';
+      textEl.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const topicItem = textEl.closest('.topic-item');
+        if (!topicItem) return;
+        const panel = topicItem.querySelector('.topic-resources-panel');
+        if (!panel) return;
+        
+        const isOpen = topicItem.classList.contains('panel-open');
+        if (isOpen) {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          panel.offsetHeight; // Force reflow
+          panel.style.maxHeight = '0';
+          topicItem.classList.remove('panel-open');
+        } else {
+          topicItem.classList.add('panel-open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          
+          panel.addEventListener('transitionend', function handler(te) {
+            if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
+              panel.style.maxHeight = 'none';
+              panel.removeEventListener('transitionend', handler);
+            }
+          });
+        }
+      });
+    });
+  };
+
+  if (!isViewerPage) {
+    initPhaseLocks();
+    initMockTests();
+    initSmartNotes();
+    initDoubtSolver();
+    initProgressTracker();
+    attachTopicTextListeners();
+  }
 
   firebaseManager = new FirebaseSyncManager();
   firebaseManager.init();
 
-  // Attach text toggling panels click listeners
-  document.querySelectorAll('.topic-text').forEach(textEl => {
-    textEl.style.cursor = 'pointer';
-    textEl.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const topicItem = textEl.closest('.topic-item');
-      if (!topicItem) return;
-      const panel = topicItem.querySelector('.topic-resources-panel');
-      if (!panel) return;
-      
-      const isOpen = topicItem.classList.contains('panel-open');
-      if (isOpen) {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        panel.offsetHeight; // Force reflow
-        panel.style.maxHeight = '0';
-        topicItem.classList.remove('panel-open');
-      } else {
-        topicItem.classList.add('panel-open');
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        
-        panel.addEventListener('transitionend', function handler(te) {
-          if (te.propertyName === 'max-height' && topicItem.classList.contains('panel-open')) {
-            panel.style.maxHeight = 'none';
-            panel.removeEventListener('transitionend', handler);
-          }
-        });
-      }
-    });
+  window.addEventListener('roadmap-rendered', () => {
+    console.log("Roadmap rendered dynamically, initializing listeners.");
+    activeRoadmapId = getRoadmapIdFromPath();
+    initPhaseLocks();
+    initMockTests();
+    initSmartNotes();
+    initDoubtSolver();
+    initProgressTracker();
+    attachTopicTextListeners();
   });
 });

@@ -60,34 +60,51 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </span>
             <ul class="dropdown-menu">
-              <li class="dropdown-header">B.Tech - Software</li>
-              <li><a href="web-dev.html">Web Development</a></li>
-              <li><a href="data-analytics.html">Data Analytics</a></li>
-              <li><a href="data-science.html">Data Science</a></li>
-              <li><a href="ml-ai.html">Machine Learning / AI</a></li>
-              <li><a href="devops-cloud.html">DevOps & Cloud</a></li>
-              <li><a href="mobile-dev.html">Mobile Development</a></li>
-              <li><a href="cybersecurity.html">Cybersecurity</a></li>
-              <li><a href="dsa-cp.html">DSA & CP</a></li>
-              <li class="dropdown-header">B.Tech - Hardware</li>
-              <li><a href="ece.html">ECE (Electronics)</a></li>
-              <li><a href="eee.html">EEE (Electrical)</a></li>
-              <li><a href="mechanical.html">Mechanical Eng.</a></li>
+              <li class="dropdown-header">B.Tech Portals</li>
+              <li><a href="../btech.html">🎓 B.Tech Hub</a></li>
+              <li><a href="../btech-software.html">💻 Software Engineering</a></li>
+              <li><a href="../btech-hardware.html">🛠️ Hardware Engineering Hub</a></li>
+              <li><a href="../btech-ece.html">📡 Electronics &amp; Communication (ECE)</a></li>
+              <li><a href="../btech-eee.html">⚡ Electrical &amp; Electronics (EEE)</a></li>
+              <li><a href="../btech-mechanical.html">⚙️ Mechanical Engineering</a></li>
               <li class="dropdown-header">Government Exams</li>
-              <li><a href="upsc.html">UPSC IAS</a></li>
-              <li><a href="ssc-cgl.html">SSC CGL</a></li>
-              <li><a href="gate.html">GATE Exam</a></li>
-              <li><a href="ibps.html">IBPS Banking</a></li>
-              <li><a href="si-police.html">SI Police</a></li>
-              <li><a href="group1.html">Group 1 Services</a></li>
-              <li><a href="group2-3.html">Group 2 & 3</a></li>
-              <li><a href="state-psc.html">State PSC</a></li>
+              <li><a href="../government.html">🏛️ Government Hub</a></li>
+              <li><a href="../government-central.html">🏛️ Central Government Exams</a></li>
+              <li><a href="../government-state.html">🌲 State Government Exams</a></li>
             </ul>
           </li>
         </ul>
       </nav>
-
+ 
       <div class="nav-controls">
+        <div id="user-profile-container" class="profile-container">
+          <button id="btn-login" class="btn-login-google">
+            <svg class="google-icon" viewBox="0 0 24 24" width="16" height="16">
+              <path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.133 1 1.18 5.925 1.18 12s4.953 11 11.06 11c6.373 0 10.602-4.475 10.602-10.795 0-.727-.08-1.284-.175-1.92H12.24z"/>
+            </svg>
+            <span>Sign In</span>
+          </button>
+          
+          <div id="user-avatar-menu" class="user-avatar-wrapper" style="display: none;">
+            <img id="user-avatar-img" class="user-avatar" src="" alt="User Profile">
+            <div class="profile-dropdown">
+              <div class="profile-dropdown-header">
+                <div id="user-display-name" class="user-name">Guest</div>
+                <div id="user-display-email" class="user-email">guest@example.com</div>
+              </div>
+              <div class="profile-dropdown-badges" id="profile-badges-container">
+                <!-- Badges dynamically rendered -->
+              </div>
+              <div class="profile-dropdown-divider"></div>
+              <a href="../leaderboard.html" class="profile-dropdown-item leaderboard-link-item">🏆 Leaderboard</a>
+              <button id="btn-logout" class="profile-dropdown-item btn-logout-item">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+
         <button class="btn-theme-toggle" aria-label="Toggle Theme"></button>
         <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
           <span></span>
@@ -97,7 +114,7 @@
       </div>
     </div>
   </header>
-
+ 
   <!-- Mobile Overlay & Drawer -->
   <div class="mobile-menu-overlay" id="mobile-overlay"></div>
   <div class="mobile-menu-drawer" id="mobile-drawer">
@@ -107,15 +124,18 @@
     </div>
     <ul class="mobile-menu-links">
       <li><a href="../index.html" class="mobile-menu-link">Home</a></li>
-      <li class="mobile-menu-section-title">All Roadmaps</li>
-      <li><a href="web-dev.html" class="mobile-menu-link">Web Development</a></li>
-      <li><a href="data-analytics.html" class="mobile-menu-link">Data Analytics</a></li>
-      <li><a href="data-science.html" class="mobile-menu-link">Data Science</a></li>
-      <li><a href="ml-ai.html" class="mobile-menu-link">Machine Learning / AI</a></li>
-      <li><a href="devops-cloud.html" class="mobile-menu-link">DevOps & Cloud</a></li>
-      <li><a href="mobile-dev.html" class="mobile-menu-link">Mobile Development</a></li>
-      <li><a href="cybersecurity.html" class="mobile-menu-link">Cybersecurity</a></li>
-      <li><a href="dsa-cp.html" class="mobile-menu-link">DSA & Competitive Programming</a></li>
+      <li><a href="../leaderboard.html" class="mobile-menu-link">🏆 Leaderboard</a></li>
+      <li class="mobile-menu-section-title">B.Tech Portals</li>
+      <li><a href="../btech.html" class="mobile-menu-link">🎓 B.Tech Hub</a></li>
+      <li><a href="../btech-software.html" class="mobile-menu-link">💻 Software Engineering</a></li>
+      <li><a href="../btech-hardware.html" class="mobile-menu-link">🛠️ Hardware Engineering Hub</a></li>
+      <li><a href="../btech-ece.html" class="mobile-menu-link">📡 Electronics &amp; Communication</a></li>
+      <li><a href="../btech-eee.html" class="mobile-menu-link">⚡ Electrical &amp; Electronics</a></li>
+      <li><a href="../btech-mechanical.html" class="mobile-menu-link">⚙️ Mechanical Engineering</a></li>
+      <li class="mobile-menu-section-title">Government Exams</li>
+      <li><a href="../government.html" class="mobile-menu-link">🏛️ Government Hub</a></li>
+      <li><a href="../government-central.html" class="mobile-menu-link">🏛️ Central Government</a></li>
+      <li><a href="../government-state.html" class="mobile-menu-link">🌲 State Government</a></li>
     </ul>
   </div>
 
@@ -380,7 +400,6 @@
         let phaseWeeksHtml = '';
         p.weeks.forEach((w, wIdx) => {
           totalWeeks++;
-          // Support both legacy (tuple/array of [title, list]) and dynamic (object {title, topics}) structures
           const wTitle = w.title || w[0] || `Week ${totalWeeks}`;
           const topicsList = w.topics || w[1] || [];
           
@@ -390,11 +409,31 @@
             const cbId = `${data.id}-${p.num}-${wIdx + 1}-${tIdx + 1}`;
             topicsLi += `
               <li class="topic-item">
-                <label class="topic-checkbox-wrapper">
-                  <input type="checkbox" id="${cbId}" class="topic-checkbox topic-checkbox-viewer">
-                  <span class="checkmark"></span>
+                <div class="topic-main-row">
+                  <input type="checkbox" id="${cbId}" class="topic-checkbox">
+                  <label for="${cbId}" class="checkmark"></label>
                   <span class="topic-text">${topic}</span>
-                </label>
+                  <button class="simplify-btn" data-topic="${topic}">✨ Simplify</button>
+                </div>
+                <div class="topic-resources-panel">
+                  <div class="resources-section-title">📝 Core Notes &amp; Concepts</div>
+                  <ul class="resources-notes-list">
+                    <li>Understand the fundamental theoretical principles and core concepts of ${topic}.</li>
+                    <li>Learn the practical implementation guidelines, standard procedures, and workflows for ${topic}.</li>
+                    <li>Familiarize yourself with the industry-standard tools, libraries, or frameworks used for ${topic}.</li>
+                    <li>Analyze common failure modes, error diagnostics, and optimization techniques for ${topic}.</li>
+                  </ul>
+                  <div class="resources-section-title">🎥 Video Tutorial</div>
+                  <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(topic)}+tutorial" target="_blank" class="watch-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.25rem;"><path d="M8 5v14l11-7z"/></svg>
+                    Watch tutorial on YouTube
+                  </a>
+                  <div class="resources-section-title">📚 Recommended Literature</div>
+                  <ul class="resources-books-list">
+                    <li><span class="book-title">Clean Code</span> <span class="book-author">by Robert C. Martin</span></li>
+                    <li><span class="book-title">The Pragmatic Programmer</span> <span class="book-author">by Andrew Hunt & David Thomas</span></li>
+                  </ul>
+                </div>
               </li>
             `;
           });
@@ -410,14 +449,31 @@
           `;
         });
 
+        const questionsEscaped = JSON.stringify(p.mock_questions || []).replace(/"/g, '&quot;');
+
         phasesHtml += `
-          <section id="phase${p.num}" class="phase-section">
-            <h2 class="phase-heading">
-              <span class="phase-number">Phase ${p.num}</span>
-              ${p.title}
-            </h2>
-            <p style="color: var(--text-secondary); margin-bottom: 2rem;">${p.desc || ''}</p>
-            ${phaseWeeksHtml}
+          <section id="phase${p.num}" class="phase-section" data-phase="${p.num}">
+            <div class="phase-content-wrapper">
+              <h2 class="phase-heading">
+                <span class="phase-number">Phase ${p.num}</span>
+                ${p.title}
+              </h2>
+              <p style="color: var(--text-secondary); margin-bottom: 2rem;">${p.desc || ''}</p>
+              ${phaseWeeksHtml}
+            </div>
+
+            <!-- MOCK TEST CARD -->
+            <div class="mock-test-card" data-phase="${p.num}" data-questions="${questionsEscaped}">
+              <div class="mock-test-header">
+                <h3 class="mock-test-title">📝 Phase ${p.num} Mock Test</h3>
+                <span class="mock-test-badge">10 MCQs &bull; Passing Score: 80%</span>
+              </div>
+              <p class="mock-test-intro">Test your knowledge on Phase ${p.num} topics to unlock Phase ${p.num + 1}.</p>
+              <div class="mock-test-quiz-container">
+                <button class="btn-start-test hero-btn">Start Test</button>
+              </div>
+              <div class="mock-test-results" style="display: none;"></div>
+            </div>
           </section>
         `;
       });
@@ -431,7 +487,6 @@
       const capstonesEl = document.getElementById('viewer-capstones');
       let capstonesHtml = '';
       data.capstones.forEach((c, idx) => {
-        // Support both tuple [title, desc, tech] and object {title, desc, tech}
         const cTitle = c.title || c[0] || `Project ${idx+1}`;
         const cDesc = c.desc || c[1] || '';
         const cTech = c.tech || c[2] || [];
@@ -495,78 +550,9 @@
       const layoutEl = document.getElementById('viewer-layout');
       layoutEl.classList.remove('roadmap-container-hidden');
 
-      // 7. Bind interactive tracker logic
-      initializeProgressTracker(data.id);
+      // 7. Bind interactive tracker logic via app.js
+      window.dispatchEvent(new CustomEvent('roadmap-rendered'));
       initializeScrollSpy();
-    };
-
-    const initializeProgressTracker = (roadmapId) => {
-      const checkboxes = document.querySelectorAll('.topic-checkbox-viewer');
-      const progressRing = document.querySelector('.progress-ring-circle');
-      const resetBtn = document.getElementById('reset-progress');
-      const progressPercentEls = document.querySelectorAll('.progress-percentage');
-      const barFills = document.querySelectorAll('.progress-bar-fill');
-
-      let ringDashArray = 0;
-      if (progressRing) {
-        const radius = progressRing.r.baseVal.value;
-        ringDashArray = 2 * Math.PI * radius;
-        progressRing.style.strokeDasharray = `${ringDashArray} ${ringDashArray}`;
-      }
-
-      const loadState = () => {
-        const savedState = JSON.parse(localStorage.getItem(`roadmap-${roadmapId}`)) || {};
-        checkboxes.forEach(cb => {
-          cb.checked = !!savedState[cb.id];
-        });
-        updateProgress();
-      };
-
-      const saveState = () => {
-        const state = {};
-        checkboxes.forEach(cb => {
-          if (cb.checked) state[cb.id] = true;
-        });
-        localStorage.setItem(`roadmap-${roadmapId}`, JSON.stringify(state));
-      };
-
-      const updateProgress = () => {
-        const total = checkboxes.length;
-        const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
-        const percent = total > 0 ? Math.round((checked / total) * 100) : 0;
-
-        const totalCountEls = [document.getElementById('total-topics'), document.getElementById('total-topics-mobile')];
-        const checkedCountEls = [document.getElementById('checked-topics'), document.getElementById('checked-topics-mobile')];
-        
-        totalCountEls.forEach(el => { if (el) el.textContent = total; });
-        checkedCountEls.forEach(el => { if (el) el.textContent = checked; });
-
-        progressPercentEls.forEach(el => { el.textContent = `${percent}%`; });
-        barFills.forEach(bar => { bar.style.width = `${percent}%`; });
-
-        if (progressRing && ringDashArray > 0) {
-          const offset = ringDashArray - (percent / 100) * ringDashArray;
-          progressRing.style.strokeDashoffset = offset;
-        }
-      };
-
-      checkboxes.forEach(cb => {
-        cb.addEventListener('change', () => {
-          saveState();
-          updateProgress();
-        });
-      });
-
-      if (resetBtn) {
-        resetBtn.addEventListener('click', () => {
-          if (confirm('Are you sure you want to reset your progress for this custom roadmap?')) {
-            localStorage.removeItem(`roadmap-${roadmapId}`);
-            loadState();
-          }
-        });
-      }
-
-      loadState();
     };
 
     const initializeScrollSpy = () => {
