@@ -867,9 +867,9 @@ document.addEventListener('DOMContentLoaded', () => {
           fallback = document.createElement('div');
           fallback.id = 'search-fallback';
           fallback.className = 'search-fallback-card';
-          const mainContainer = document.querySelector('main.container');
-          if (mainContainer) {
-            mainContainer.appendChild(fallback);
+          const container = document.getElementById('search-results-section') || document.querySelector('main.container');
+          if (container) {
+            container.appendChild(fallback);
           }
         }
         
