@@ -1545,7 +1545,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start typewriter effect after logo entry completes roughly
     setTimeout(typeNextChar, 1200);
 
-    // Timeout to transition splash screen to login card after exactly 3 seconds
+    // Timeout to transition splash screen to login card after exactly 5 seconds
     setTimeout(() => {
       const splash = document.getElementById('splash-container');
       const loginCard = document.getElementById('gate-login-card-el');
@@ -1559,7 +1559,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 50);
         }, 500);
       }
-    }, 3000);
+    }, 5000);
   };
 
   const removeLoginGate = () => {
