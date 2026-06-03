@@ -789,6 +789,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // If empty query, show standard recommended deck, hide fallback
       if (!query) {
         document.querySelectorAll('.card.solid-card').forEach(card => card.style.display = 'flex');
+        const categories = document.getElementById('homepage-categories');
+        if (categories) categories.style.display = 'grid';
+        const resultsSection = document.getElementById('search-results-section');
+        if (resultsSection) resultsSection.style.display = 'none';
         const fallback = document.getElementById('search-fallback');
         if (fallback) {
           fallback.style.display = 'none';
@@ -798,6 +802,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Hide all standard cards first
       document.querySelectorAll('.card.solid-card').forEach(card => card.style.display = 'none');
+      const categories = document.getElementById('homepage-categories');
+      if (categories) categories.style.display = 'none';
+      const resultsSection = document.getElementById('search-results-section');
+      if (resultsSection) resultsSection.style.display = 'block';
 
       // Filter matches
       const matches = careersIndex.filter(c => {
