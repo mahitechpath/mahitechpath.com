@@ -2193,7 +2193,7 @@ body.domain-state-psc {
 }
 
 .quiz-option-btn {
-  background: #1c1c1a;
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 0.85rem 1.25rem;
@@ -2224,12 +2224,20 @@ body.domain-state-psc {
 .quiz-option-btn.correct {
   border-color: #2e7d32 !important;
   background-color: rgba(46, 125, 50, 0.08) !important;
-  color: #81c784 !important;
+  color: #2e7d32 !important;
 }
 
 .quiz-option-btn.incorrect {
   border-color: #c62828 !important;
   background-color: rgba(198, 40, 40, 0.08) !important;
+  color: #c62828 !important;
+}
+
+[data-theme="dark"] .quiz-option-btn.correct {
+  color: #81c784 !important;
+}
+
+[data-theme="dark"] .quiz-option-btn.incorrect {
   color: #e57373 !important;
 }
 
@@ -2404,10 +2412,10 @@ body.domain-state-psc {
   right: 2rem;
   width: 380px;
   height: 520px;
-  background: #0a0a09;
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -2425,7 +2433,7 @@ body.domain-state-psc {
 }
 
 .ai-chat-header {
-  background: #161614;
+  background: var(--bg-secondary);
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border-color);
   display: flex;
@@ -2437,7 +2445,7 @@ body.domain-state-psc {
   font-family: var(--font-serif);
   font-size: 1.05rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2464,7 +2472,7 @@ body.domain-state-psc {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: #0e0e0d;
+  background: var(--bg-primary);
 }
 
 .ai-message {
@@ -2484,7 +2492,7 @@ body.domain-state-psc {
 }
 
 .ai-message.assistant {
-  background: #1c1c1a;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   align-self: flex-start;
@@ -2516,7 +2524,7 @@ body.domain-state-psc {
 
 .ai-chat-input-area {
   padding: 1rem;
-  background: #161614;
+  background: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
   display: flex;
   gap: 0.5rem;
@@ -2525,7 +2533,7 @@ body.domain-state-psc {
 
 .ai-chat-input {
   flex-grow: 1;
-  background: #0a0a09;
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 0.65rem 0.85rem;
