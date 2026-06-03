@@ -73,8 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Secure Gemini API Helper ---
   const askGemini = async (prompt, systemPrompt = null, isJson = false) => {
     const headers = { 'Content-Type': 'application/json' };
-    const isNested = window.location.pathname.includes('/roadmaps/');
-    const apiEndpoint = isNested ? '../api/gemini' : 'api/gemini';
+    
+    let apiEndpoint = '/api/gemini';
+    if (window.location.protocol === 'file:') {
+      const isNested = window.location.pathname.includes('/roadmaps/');
+      apiEndpoint = isNested ? '../api/gemini' : 'api/gemini';
+    }
 
     const res = await fetch(apiEndpoint, {
       method: 'POST',
@@ -1475,17 +1479,40 @@ document.addEventListener('DOMContentLoaded', () => {
   const injectLoginGate = () => {
     if (document.getElementById('gate-login-overlay')) return;
 
+    const imgPath = window.location.pathname.includes('/roadmaps/') ? '../images/logo.png' : 'images/logo.png';
+
     const overlay = document.createElement('div');
     overlay.className = 'gate-login-overlay';
     overlay.id = 'gate-login-overlay';
     overlay.innerHTML = `
-      <div class="gate-login-card" id="gate-login-card-el">
+      <!-- Animated Splash Screen Container -->
+      <div class="splash-screen-container" id="splash-container">
+        <div class="splash-logo-wrapper">
+          <img src="${imgPath}" class="splash-logo-img" alt="Logo">
+          <!-- Animated Dashboard Road SVG Lines -->
+          <svg class="splash-road-svg" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="75" cy="75" r="55" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4" />
+            <circle class="anim-road-path" cx="75" cy="75" r="55" stroke="#ffffff" stroke-dasharray="6 4" stroke-width="2" stroke-linecap="round" />
+            <path d="M 20 75 Q 75 20 130 75" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4" />
+            <path class="anim-road-path-alt" d="M 20 75 Q 75 20 130 75" stroke="#ffffff" stroke-dasharray="6 4" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="splash-title">
+          <span class="splash-text-blue" id="splash-text-part1"></span>
+          <span class="splash-text-green" style="margin-left: 0.5rem;" id="splash-text-part2"></span>
+        </div>
+        <div class="splash-subtitle">Roadmaps for Different Domains</div>
+      </div>
+
+      <!-- Login Gate Card (initially hidden) -->
+      <div class="gate-login-card" id="gate-login-card-el" style="display: none; opacity: 0; transition: opacity 0.5s ease;">
         <div id="gate-content" style="text-align: center;">
+          <img src="${imgPath}" class="login-logo" alt="Logo" style="width: 80px; height: 80px; margin-bottom: 1.5rem; object-fit: contain; filter: drop-shadow(0 0 10px rgba(49, 130, 206, 0.3));">
           <h2 class="gate-brand" style="margin-bottom:0.75rem;">Career<span>Path</span> India</h2>
           <p class="gate-subtitle">Please sign in to access B.Tech engineering roadmaps and government exam study guides.</p>
           
           <button class="gate-btn-google" id="gate-btn-login" style="margin: 1.5rem auto 0; max-width: 280px; display: inline-flex;">
-            <svg class="google-icon" viewBox="0 0 24 24" width="18" height="18" style="vertical-align: middle; margin-right: 0.5rem;">
+            <svg class="google-icon" viewBox="0 0 24 24" width="16" height="16" style="vertical-align: middle; margin-right: 0.5rem;">
               <path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C17.955 2.192 15.34 1 12.24 1 6.133 1 1.18 5.925 1.18 12s4.953 11 11.06 11c6.373 0 10.602-4.475 10.602-10.795 0-.727-.08-1.284-.175-1.92H12.24z"/>
             </svg>
             <span>Sign In with Google</span>
@@ -1494,6 +1521,45 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
     document.body.appendChild(overlay);
+
+    // Typewriter text typing animation logic
+    const textPart1 = "CAREERPATH";
+    const textPart2 = "INDIA";
+    const elPart1 = document.getElementById('splash-text-part1');
+    const elPart2 = document.getElementById('splash-text-part2');
+    
+    let charIdx = 0;
+    const typeNextChar = () => {
+      if (charIdx < textPart1.length) {
+        elPart1.textContent += textPart1[charIdx];
+        charIdx++;
+        setTimeout(typeNextChar, 50);
+      } else if (charIdx - textPart1.length < textPart2.length) {
+        const p2Idx = charIdx - textPart1.length;
+        elPart2.textContent += textPart2[p2Idx];
+        charIdx++;
+        setTimeout(typeNextChar, 50);
+      }
+    };
+
+    // Start typewriter effect after logo entry completes roughly
+    setTimeout(typeNextChar, 1200);
+
+    // Timeout to transition splash screen to login card after exactly 3 seconds
+    setTimeout(() => {
+      const splash = document.getElementById('splash-container');
+      const loginCard = document.getElementById('gate-login-card-el');
+      if (splash && loginCard) {
+        splash.style.opacity = '0';
+        setTimeout(() => {
+          splash.style.display = 'none';
+          loginCard.style.display = 'block';
+          setTimeout(() => {
+            loginCard.style.opacity = '1';
+          }, 50);
+        }, 500);
+      }
+    }, 3000);
   };
 
   const removeLoginGate = () => {
