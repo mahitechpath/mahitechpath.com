@@ -144,9 +144,13 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem(`custom-roadmap-${slug}`, JSON.stringify(parsedData));
 
       if (firebaseManager && firebaseManager.db) {
-        const { doc, setDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
-        const docRef = doc(firebaseManager.db, 'roadmaps', slug);
-        await setDoc(docRef, parsedData);
+        const currentUser = firebaseManager.auth ? firebaseManager.auth.currentUser : null;
+        const uid = currentUser ? currentUser.uid : (firebaseManager.user ? firebaseManager.user.uid : null);
+        if (uid) {
+          const { doc, setDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+          const docRef = doc(firebaseManager.db, 'users', uid, 'roadmaps', slug);
+          await setDoc(docRef, parsedData);
+        }
       }
 
       fallbackEl.innerHTML = `
@@ -867,32 +871,54 @@ document.addEventListener('DOMContentLoaded', () => {
         if (localRoadmap) {
           renderFallbackExists(fallback, slug, query);
         } else if (firebaseManager && firebaseManager.db) {
-          fallback.innerHTML = `
-            <h3>Checking database for "<span id="search-query-highlight">${query}</span>"...</h3>
-            <div class="typing-indicator" style="margin: 1rem auto; justify-content: center;">
-              <span class="typing-dot"></span>
-              <span class="typing-dot"></span>
-              <span class="typing-dot"></span>
-            </div>
-          `;
-          
-          import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js')
-            .then(async ({ doc, getDoc }) => {
-              const docRef = doc(firebaseManager.db, 'roadmaps', slug);
+          const checkFirestoreRoadmap = async (uid) => {
+            fallback.innerHTML = `
+              <h3>Checking database for "<span id="search-query-highlight">${query}</span>"...</h3>
+              <div class="typing-indicator" style="margin: 1rem auto; justify-content: center;">
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+                <span class="typing-dot"></span>
+              </div>
+            `;
+            try {
+              const { doc, getDoc } = await import('https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js');
+              const docRef = doc(firebaseManager.db, 'users', uid, 'roadmaps', slug);
               const docSnap = await getDoc(docRef);
               if (docSnap.exists()) {
                 localStorage.setItem(`custom-roadmap-${slug}`, JSON.stringify(docSnap.data()));
                 renderFallbackExists(fallback, slug, query);
               } else {
-                renderFallbackGenerate(fallback, slug, query);
+                const globalDocRef = doc(firebaseManager.db, 'roadmaps', slug);
+                const globalDocSnap = await getDoc(globalDocRef);
+                if (globalDocSnap.exists()) {
+                  localStorage.setItem(`custom-roadmap-${slug}`, JSON.stringify(globalDocSnap.data()));
+                  renderFallbackExists(fallback, slug, query);
+                } else {
+                  renderFallbackGenerate(fallback, slug, query);
+                }
               }
-            })
-            .catch(err => {
+            } catch (err) {
               console.error("Error checking Firestore for roadmap:", err);
               renderFallbackGenerate(fallback, slug, query);
+            }
+          };
+
+          const currentUser = firebaseManager.auth ? firebaseManager.auth.currentUser : null;
+          const uid = currentUser ? currentUser.uid : (firebaseManager.user ? firebaseManager.user.uid : null);
+          if (uid) {
+            checkFirestoreRoadmap(uid);
+          } else {
+            // Wait for auth to resolve
+            const unsubscribe = firebaseManager.auth.onAuthStateChanged(user => {
+              if (user) {
+                checkFirestoreRoadmap(user.uid);
+                unsubscribe();
+              } else {
+                renderFallbackGenerate(fallback, slug, query);
+                unsubscribe();
+              }
             });
-        } else {
-          renderFallbackGenerate(fallback, slug, query);
+          }
         }
       } else {
         const fallback = document.getElementById('search-fallback');
@@ -1446,8 +1472,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.id = 'gate-login-overlay';
     overlay.innerHTML = `
       <div class="gate-login-card" id="gate-login-card-el">
-        <div class="gate-loading-spinner" id="gate-spinner"></div>
-        <div id="gate-content" style="display:none; text-align: center;">
+        <div id="gate-content" style="text-align: center;">
           <h2 class="gate-brand" style="margin-bottom:0.75rem;">Career<span>Path</span> India</h2>
           <p class="gate-subtitle">Please sign in to access B.Tech engineering roadmaps and government exam study guides.</p>
           
@@ -1475,12 +1500,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const showGateLoginScreen = () => {
     injectLoginGate();
     
-    const spinner = document.getElementById('gate-spinner');
-    const content = document.getElementById('gate-content');
     const loginBtn = document.getElementById('gate-btn-login');
-
-    if (spinner) spinner.style.display = 'none';
-    if (content) content.style.display = 'block';
 
     if (loginBtn) {
       loginBtn.disabled = false;
@@ -1716,6 +1736,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async onUserLoggedIn(user) {
+      localStorage.setItem('isLoggedIn', 'true');
       // Toggle navbar UI
       const loginBtn = document.getElementById('btn-login');
       const avatarMenu = document.getElementById('user-avatar-menu');
@@ -1767,6 +1788,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     onUserLoggedOut() {
+      localStorage.removeItem('isLoggedIn');
       const loginBtn = document.getElementById('btn-login');
       const avatarMenu = document.getElementById('user-avatar-menu');
       if (loginBtn) loginBtn.style.display = 'inline-flex';
@@ -2016,8 +2038,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Inject blocker gate immediately
-  injectLoginGate();
+  // Inject blocker gate immediately if not logged in previously
+  const wasLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+  if (!wasLoggedIn) {
+    injectLoginGate();
+  }
 
   const isViewerPage = window.location.pathname.endsWith('viewer.html');
 

@@ -290,7 +290,8 @@
       "imports": {
         "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
         "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
-        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
       }
     }
   </script>
@@ -298,6 +299,7 @@
   <script type="module">
     import { initializeApp } from 'firebase/app';
     import { getFirestore, doc, getDoc } from 'firebase/firestore';
+    import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
     document.addEventListener('DOMContentLoaded', async () => {
       // Helper: get query parameter
@@ -316,47 +318,68 @@
       const layoutEl = document.getElementById('viewer-layout');
       layoutEl.setAttribute('data-roadmap-id', roadmapId);
 
-      let roadmapData = null;
-
-      // 1. Try Firestore first if configured
+      // 1. Try LocalStorage first (instant loading!)
       try {
-        const config = {
-          apiKey: "AIzaSyDS5o-fMCUkNh0jGwlnj74ggKp1AIiFiVs",
-          authDomain: "careerpathindia-343a1.firebaseapp.com",
-          projectId: "careerpathindia-343a1",
-          storageBucket: "careerpathindia-343a1.appspot.com",
-          messagingSenderId: "717563492580",
-          appId: "1:717563492580:web:8d094fcad2b1a8541954f1"
-        };
-        const app = initializeApp(config);
-        const db = getFirestore(app);
-        const docRef = doc(db, 'roadmaps', roadmapId);
-        const docSnap = await getDoc(docRef);
-        if (docSnap.exists()) {
-          roadmapData = docSnap.data();
-          console.log("Loaded roadmap from Firestore:", roadmapId);
+        const localDataStr = localStorage.getItem(`custom-roadmap-${roadmapId}`);
+        if (localDataStr) {
+          const roadmapData = JSON.parse(localDataStr);
+          console.log("Loaded roadmap from LocalStorage:", roadmapId);
+          renderRoadmap(roadmapData);
+          return;
         }
       } catch (err) {
-        console.error("Firestore retrieval error, falling back to LocalStorage:", err);
+        console.error("LocalStorage retrieval error:", err);
       }
 
-      // 2. Fall back to LocalStorage if not found or no Firestore
-      if (!roadmapData) {
-        try {
-          const localDataStr = localStorage.getItem(`custom-roadmap-${roadmapId}`);
-          if (localDataStr) {
-            roadmapData = JSON.parse(localDataStr);
-            console.log("Loaded roadmap from LocalStorage:", roadmapId);
+      // 2. If not found in LocalStorage, try Firestore under user's account path
+      const config = {
+        apiKey: "AIzaSyDS5o-fMCUkNh0jGwlnj74ggKp1AIiFiVs",
+        authDomain: "careerpathindia-343a1.firebaseapp.com",
+        projectId: "careerpathindia-343a1",
+        storageBucket: "careerpathindia-343a1.appspot.com",
+        messagingSenderId: "717563492580",
+        appId: "1:717563492580:web:8d094fcad2b1a8541954f1"
+      };
+
+      try {
+        const app = initializeApp(config);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        onAuthStateChanged(auth, async (user) => {
+          if (user) {
+            try {
+              const docRef = doc(db, 'users', user.uid, 'roadmaps', roadmapId);
+              const docSnap = await getDoc(docRef);
+              if (docSnap.exists()) {
+                const roadmapData = docSnap.data();
+                localStorage.setItem(`custom-roadmap-${roadmapId}`, JSON.stringify(roadmapData));
+                console.log("Loaded roadmap from Firestore:", roadmapId);
+                renderRoadmap(roadmapData);
+              } else {
+                // Try global fall back just in case
+                const globalDocRef = doc(db, 'roadmaps', roadmapId);
+                const globalDocSnap = await getDoc(globalDocRef);
+                if (globalDocSnap.exists()) {
+                  const roadmapData = globalDocSnap.data();
+                  localStorage.setItem(`custom-roadmap-${roadmapId}`, JSON.stringify(roadmapData));
+                  console.log("Loaded roadmap from global Firestore:", roadmapId);
+                  renderRoadmap(roadmapData);
+                } else {
+                  showError();
+                }
+              }
+            } catch (err) {
+              console.error("Firestore retrieval error:", err);
+              showError();
+            }
+          } else {
+            console.log("No authenticated user yet in viewer.html");
+            showError();
           }
-        } catch (err) {
-          console.error("LocalStorage retrieval error:", err);
-        }
-      }
-
-      // 3. Render or error
-      if (roadmapData) {
-        renderRoadmap(roadmapData);
-      } else {
+        });
+      } catch (err) {
+        console.error("Firebase initialization or query error in viewer.html:", err);
         showError();
       }
     });
