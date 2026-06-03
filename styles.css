@@ -2126,7 +2126,7 @@ body.domain-state-psc {
 
 /* --- Mock Test Cards --- */
 .mock-test-card {
-  background: linear-gradient(135deg, #161614, #0d0d0c);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 2rem;
@@ -2134,6 +2134,11 @@ body.domain-state-psc {
   position: relative;
   overflow: hidden;
   box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .mock-test-card {
+  background: linear-gradient(135deg, #161614, #0d0d0c);
 }
 
 .mock-test-header {
@@ -2151,7 +2156,7 @@ body.domain-state-psc {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
   margin: 0;
 }
 

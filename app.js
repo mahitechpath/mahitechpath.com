@@ -1186,18 +1186,6 @@ document.addEventListener('DOMContentLoaded', () => {
           panel.appendChild(wrapper);
         }
         
-        const apiKey = localStorage.getItem('gemini_api_key');
-        if (!apiKey) {
-          wrapper.innerHTML = `
-            <div class="simplified-notes-title">\u2728 Simplified Explanation</div>
-            <div style="font-size:0.85rem; color:#e57373; margin-top:0.5rem; font-weight:500;">
-              Please add your API key in Settings \u2699\ufe0f
-            </div>
-          `;
-          panel.style.maxHeight = 'none';
-          return;
-        }
-        
         const cacheKey = `roadmap-${activeRoadmapId}-topic-${topic}-simplified`;
         const cachedNotes = localStorage.getItem(cacheKey);
         
