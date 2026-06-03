@@ -66,6 +66,32 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', toggleTheme);
   }
 
+  // --- Secure Gemini API Helper ---
+  const askGemini = async (prompt, systemPrompt = null, isJson = false) => {
+    const headers = { 'Content-Type': 'application/json' };
+    const clientApiKey = localStorage.getItem('gemini_api_key');
+    if (clientApiKey) {
+      headers['x-gemini-api-key'] = clientApiKey;
+    }
+
+    const isNested = window.location.pathname.includes('/roadmaps/');
+    const apiEndpoint = isNested ? '../api/gemini' : 'api/gemini';
+
+    const res = await fetch(apiEndpoint, {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify({ prompt, systemPrompt, isJson })
+    });
+
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.error || `HTTP Error ${res.status}`);
+    }
+
+    const data = await res.json();
+    return data.reply;
+  };
+
   // --- Settings Modal and API Key Management ---
   const settingsBtn = document.querySelector('.btn-settings');
   if (settingsBtn) {
@@ -970,35 +996,17 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.offsetHeight;
     overlay.classList.add('open');
 
-    // Fetch quiz questions from Gemini
-    // Fetch quiz questions from Vercel Serverless API
+    // Fetch quiz questions from Gemini serverless proxy
     const loadQuiz = async () => {
       try {
         const headingEl = document.querySelector('.roadmap-header h1');
         const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
 
-        const headers = { 'Content-Type': 'application/json' };
-        const clientApiKey = localStorage.getItem('gemini_api_key');
-        if (clientApiKey) {
-          headers['x-gemini-api-key'] = clientApiKey;
-        }
+        const systemPrompt = "You are an expert examiner. Generate a multiple-choice quiz of exactly 10 questions based on the provided list of topics. Return ONLY a valid JSON array of objects. Each object in the array must have the following keys: 'question' (string), 'options' (array of exactly 4 strings), 'correct' (integer index 0-3 of the correct option), and 'topic' (string matching one of the provided topics).";
+        const prompt = `Generate 10 MCQ questions for the following phase topics from the "${roadmapTitle}" roadmap:\n${topics.join('\n')}`;
 
-        const isNested = window.location.pathname.includes('/roadmaps/');
-        const apiEndpoint = isNested ? '../api/generate-questions' : 'api/generate-questions';
-
-        const res = await fetch(apiEndpoint, {
-          method: 'POST',
-          headers: headers,
-          body: JSON.stringify({ topics: topics, roadmapTitle: roadmapTitle })
-        });
-
-        if (!res.ok) {
-          const errData = await res.json().catch(() => ({}));
-          throw new Error(errData.error || `HTTP Error ${res.status}`);
-        }
-
-        const data = await res.json();
-        let cleanText = data.reply.replace(/```json/gi, '').replace(/```/g, '').trim();
+        const reply = await askGemini(prompt, systemPrompt, true);
+        let cleanText = reply.replace(/```json/gi, '').replace(/```/g, '').trim();
         questions = JSON.parse(cleanText);
         
         if (!Array.isArray(questions) || questions.length !== 10) {
@@ -1216,28 +1224,10 @@ document.addEventListener('DOMContentLoaded', () => {
         panel.style.maxHeight = 'none';
         
         try {
-          const headers = { 'Content-Type': 'application/json' };
-          const clientApiKey = localStorage.getItem('gemini_api_key');
-          if (clientApiKey) {
-            headers['x-gemini-api-key'] = clientApiKey;
-          }
+          const systemPrompt = "You are a world-class educational assistant that simplifies complex, technical topics for absolute beginners. Explain terms cleanly, avoiding jargon, and structure your response as exactly 5 high-impact bullet points.";
+          const prompt = `Summarize the topic "${topic}" in simple, beginner-friendly terms using exactly 5 bullet points. Make it easy to read.`;
 
-          const isNested = window.location.pathname.includes('/roadmaps/');
-          const apiEndpoint = isNested ? '../api/simplify-topic' : 'api/simplify-topic';
-
-          const res = await fetch(apiEndpoint, {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify({ topic: topic })
-          });
-
-          if (!res.ok) {
-            const errData = await res.json().catch(() => ({}));
-            throw new Error(errData.error || `HTTP Error ${res.status}`);
-          }
-
-          const data = await res.json();
-          const simplified = data.reply;
+          const simplified = await askGemini(prompt, systemPrompt, false);
           
           localStorage.setItem(cacheKey, simplified);
           renderSimplifiedNotes(wrapper, simplified);
@@ -1353,28 +1343,8 @@ document.addEventListener('DOMContentLoaded', () => {
       chatMessages.scrollTop = chatMessages.scrollHeight;
       
       try {
-        const headers = { 'Content-Type': 'application/json' };
-        const clientApiKey = localStorage.getItem('gemini_api_key');
-        if (clientApiKey) {
-          headers['x-gemini-api-key'] = clientApiKey;
-        }
-
-        const isNested = window.location.pathname.includes('/roadmaps/');
-        const apiEndpoint = isNested ? '../api/doubt-solver' : 'api/doubt-solver';
-
-        const res = await fetch(apiEndpoint, {
-          method: 'POST',
-          headers: headers,
-          body: JSON.stringify({ query: query, roadmapTitle: roadmapTitle })
-        });
-
-        if (!res.ok) {
-          const errData = await res.json().catch(() => ({}));
-          throw new Error(errData.error || `HTTP Error ${res.status}`);
-        }
-
-        const data = await res.json();
-        const reply = data.reply;
+        const systemPrompt = `You are an expert technical mentor and tutor. The user is studying the "${roadmapTitle}" roadmap. Explain concepts clearly, comprehensively, and in simple terms suited to their level. Use markdown formatting for structures, code snippets, or bullet points if needed.`;
+        const reply = await askGemini(query, systemPrompt, false);
         
         loader.remove();
         

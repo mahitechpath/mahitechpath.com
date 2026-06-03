@@ -18,9 +18,9 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { topics, roadmapTitle } = req.body;
-    if (!topics || !Array.isArray(topics) || !roadmapTitle) {
-      return res.status(400).json({ error: 'Invalid parameters: topics and roadmapTitle are required.' });
+    const { prompt, systemPrompt, isJson } = req.body;
+    if (!prompt) {
+      return res.status(400).json({ error: 'Invalid parameters: prompt is required.' });
     }
 
     const apiKey = process.env.GEMINI_API_KEY || req.headers['x-gemini-api-key'];
@@ -30,20 +30,23 @@ module.exports = async (req, res) => {
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
-    const systemPrompt = "You are an expert examiner. Generate a multiple-choice quiz of exactly 10 questions based on the provided list of topics. Return ONLY a valid JSON array of objects. Each object in the array must have the following keys: 'question' (string), 'options' (array of exactly 4 strings), 'correct' (integer index 0-3 of the correct option), and 'topic' (string matching one of the provided topics).";
-    const userPrompt = `Generate 10 MCQ questions for the following phase topics from the "${roadmapTitle}" roadmap:\n${topics.join('\n')}`;
-
     const requestBody = {
       contents: [
-        { parts: [{ text: userPrompt }] }
-      ],
-      systemInstruction: {
-        parts: [{ text: systemPrompt }]
-      },
-      generationConfig: {
-        responseMimeType: "application/json"
-      }
+        { parts: [{ text: prompt }] }
+      ]
     };
+
+    if (systemPrompt) {
+      requestBody.systemInstruction = {
+        parts: [{ text: systemPrompt }]
+      };
+    }
+
+    if (isJson) {
+      requestBody.generationConfig = {
+        responseMimeType: "application/json"
+      };
+    }
 
     const response = await fetch(url, {
       method: "POST",
