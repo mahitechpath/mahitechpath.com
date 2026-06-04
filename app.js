@@ -1533,19 +1533,19 @@ document.addEventListener('DOMContentLoaded', () => {
       if (charIdx < textPart1.length) {
         elPart1.textContent += textPart1[charIdx];
         charIdx++;
-        setTimeout(typeNextChar, 50);
+        setTimeout(typeNextChar, 40);
       } else if (charIdx - textPart1.length < textPart2.length) {
         const p2Idx = charIdx - textPart1.length;
         elPart2.textContent += textPart2[p2Idx];
         charIdx++;
-        setTimeout(typeNextChar, 50);
+        setTimeout(typeNextChar, 40);
       }
     };
 
     // Start typewriter effect after logo entry completes roughly
-    setTimeout(typeNextChar, 1200);
+    setTimeout(typeNextChar, 800);
 
-    // Timeout to transition splash screen to login card after exactly 5 seconds
+    // Timeout to transition splash screen to login card after exactly 3 seconds
     setTimeout(() => {
       const splash = document.getElementById('splash-container');
       const loginCard = document.getElementById('gate-login-card-el');
@@ -1560,7 +1560,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }, 50);
         }, 500);
       }
-    }, 5000);
+    }, 3000);
 
     // Interactive 3D mousemove tracking event listeners
     const loginCardEl = document.getElementById('gate-login-card-el');
