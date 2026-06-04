@@ -20,16 +20,32 @@ export function Hero() {
             THE 2026 EDITION &middot; 6 PORTALS &middot; 60 CAREERS
           </span>
 
-          <h1 className="text-4xl md:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-tight font-sans">
+          {/* Very large CPI logo section */}
+          <div className="relative group inline-block pt-2">
+            <div className="text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-emerald-500 to-green-500 select-none hover:scale-[1.02] transition-transform duration-300 cursor-help">
+              CPI
+            </div>
+            <div className="text-xs font-bold tracking-[0.3em] text-zinc-500 dark:text-zinc-400 uppercase mt-1">
+              CareerPath India
+            </div>
+            {/* Tooltip */}
+            <div className="absolute top-0 left-28 md:left-36 lg:left-44 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-zinc-950 dark:bg-zinc-900 text-white text-[10px] font-semibold tracking-wider uppercase py-1.5 px-3 rounded-lg border border-zinc-800 dark:border-zinc-700 shadow-xl pointer-events-none w-max">
+              Career &middot; Path &middot; India
+            </div>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-tight font-sans">
             The only roadmap you need to{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-emerald-400 to-green-500">
               get placed in tech &amp; gov.
             </span>
           </h1>
 
-          <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed">
-            A comprehensive collection of phase-by-phase curriculums, projects, and placement tips designed to guide students from absolute foundations to production-grade engineering and premier civil services.
-          </p>
+          {/* Premium tagline block */}
+          <div className="text-lg md:text-xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-200 leading-snug space-y-1">
+            <div>From zero to career-ready.</div>
+            <div className="text-zinc-500 dark:text-zinc-500 font-medium">Phase by phase. Week by week.</div>
+          </div>
 
           <div className="flex flex-wrap gap-4 pt-2">
             <a
