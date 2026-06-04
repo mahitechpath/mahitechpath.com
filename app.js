@@ -1507,13 +1507,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="splash-screen-container" id="splash-container">
         <div class="splash-logo-wrapper">
           <img src="${imgPath}" class="splash-logo-img" alt="Logo">
-          <!-- Animated Dashboard Road SVG Lines -->
-          <svg class="splash-road-svg" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="75" cy="75" r="55" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4" />
-            <circle class="anim-road-path" cx="75" cy="75" r="55" stroke="#ffffff" stroke-dasharray="6 4" stroke-width="2" stroke-linecap="round" />
-            <path d="M 20 75 Q 75 20 130 75" stroke="rgba(255, 255, 255, 0.08)" stroke-width="4" />
-            <path class="anim-road-path-alt" d="M 20 75 Q 75 20 130 75" stroke="#ffffff" stroke-dasharray="6 4" stroke-width="2" stroke-linecap="round" />
-          </svg>
         </div>
         <div class="splash-title">
           <span class="splash-text-blue" id="splash-text-part1"></span>

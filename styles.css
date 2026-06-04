@@ -4055,3 +4055,100 @@ body.light-mode #roadmap-search {
   border-color: #e5e7eb !important;
 }
 
+/* --- Marquee Infinite Scroll Styles --- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite !important;
+}
+
+/* Stats Counter and Marquee permanent dark theme */
+.stats-counter-wrap,
+.marquee-wrap {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #222222 !important;
+}
+
+.stats-counter-wrap .text-white,
+.marquee-wrap .text-white {
+  color: #ffffff !important;
+}
+
+.stats-counter-wrap .text-zinc-500,
+.marquee-wrap .text-zinc-300 {
+  color: #888888 !important;
+}
+
+/* Mobile responsiveness and layout fixes for Hero, Spline, Stats, and Marquee */
+@media (max-width: 1024px) {
+  .hero-section-wrap {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: auto !important;
+    height: auto !important;
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+  }
+  
+  .hero-section-wrap .container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Make sure right column (robot spline) is fully visible and not hidden */
+  .hero-section-wrap .lg\:col-span-5 {
+    display: flex !important;
+    width: 100% !important;
+    height: 350px !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    order: 2 !important; /* Move robot below text on mobile */
+  }
+  
+  .hero-section-wrap .lg\:col-span-5 div {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  /* Left column text layout on mobile */
+  .hero-section-wrap .lg\:col-span-7 {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    order: 1 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero-section-wrap .lg\:col-span-7 .space-y-1,
+  .hero-section-wrap .lg\:col-span-7 .text-xs,
+  .hero-section-wrap .lg\:col-span-7 .text-lg,
+  .hero-section-wrap .lg\:col-span-7 p {
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-section-wrap .lg\:col-span-7 .flex-wrap {
+    justify-content: center !important;
+  }
+}
+
+
