@@ -6,19 +6,19 @@ html {
 
 /* --- Theme Variables --- */
 :root {
-  --bg-primary: #f4f1ec;
-  --bg-secondary: #fbfaf8;
-  --bg-nav: rgba(255, 255, 255, 0.85); /* Clean white background */
-  --bg-search: #ffffff; /* White background for search input */
-  --text-primary: #1c1a17;
-  --text-secondary: #6b665f;
+  --bg-primary: #ffffff; /* Pure white background */
+  --bg-secondary: #f5f5f5; /* Light grey background for cards */
+  --bg-nav: #ffffff; /* Navbar pure white background */
+  --bg-search: #f5f5f5; /* Search input matching card bg */
+  --text-primary: #000000; /* Dark/black colored primary text */
+  --text-secondary: #555555; /* Medium grey secondary text */
   --accent: #2d4a3e;
   --accent-hover: #1e332a;
-  --accent-light: #eaece8;
-  --accent-light-border: #d4dcd2;
-  --border-color: #e2ded7;
-  --progress-bg: #e2ded7;
-  --card-shadow: 0 4px 20px rgba(28, 26, 23, 0.03);
+  --accent-light: #f5f5f5;
+  --accent-light-border: #e5e7eb;
+  --border-color: #e5e7eb;
+  --progress-bg: #e5e7eb;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
   --card-border: 1px solid var(--border-color);
   
   --font-serif: 'Lora', Georgia, serif;
@@ -30,19 +30,19 @@ html {
 }
 
 [data-theme="dark"] {
-  --bg-primary: #121210;
-  --bg-secondary: #1b1b18;
-  --bg-nav: rgba(18, 18, 16, 0.85);
-  --bg-search: #1b1b18; /* Matching dark search input */
-  --text-primary: #eae6df;
-  --text-secondary: #9e9a92;
-  --accent: #7ca890;
-  --accent-hover: #9bbfa9;
-  --accent-light: #1f2723;
-  --accent-light-border: #2d3e35;
-  --border-color: #2c2b27;
-  --progress-bg: #2c2b27;
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --bg-primary: #000000; /* Pure black background */
+  --bg-secondary: #111111; /* Dark grey background for cards */
+  --bg-nav: #000000; /* Navbar pure black background */
+  --bg-search: #111111; /* Search input matching card bg */
+  --text-primary: #ffffff; /* Pure white primary text */
+  --text-secondary: #94a3b8; /* Light slate secondary text */
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --accent-light: #1e293b;
+  --accent-light-border: #334155;
+  --border-color: #222222; /* Subtle dark border color */
+  --progress-bg: #222222;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Reset & Base --- */
@@ -58,7 +58,12 @@ body {
   font-family: var(--font-sans);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Global transitions for smooth theme toggling across all pages and elements */
+body, header, footer, .card, .premium-feature-card, .meta-widget, .toc-sidebar a, input, select, textarea, button, .sub-icon-chip, .premium-explore-btn, svg {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease !important;
 }
 
 /* --- Container --- */
@@ -3654,13 +3659,13 @@ body.domain-state-psc {
 
 /* Hero Section Seamless Blend Background */
 .hero-section-wrap {
-  background-color: #0f172a; /* Slightly lighter dark background for light mode */
+  background-color: var(--bg-primary); /* Dynamic white/black background */
   transition: background-color 0.5s ease;
   position: relative;
 }
 
 [data-theme="dark"] .hero-section-wrap {
-  background-color: #020617; /* Deep navy/black for dark mode */
+  background-color: var(--bg-primary); /* Pure black for dark mode */
 }
 
 /* Seamless bottom fade mask to blend hero into main content background */
@@ -3690,16 +3695,16 @@ body.domain-state-psc {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: rgba(15, 23, 42, 0.75) !important;
+  background: var(--bg-secondary) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 20px !important;
   padding: 2.25rem 2.5rem !important;
   text-decoration: none !important;
-  color: #ffffff !important;
+  color: var(--text-primary) !important;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: var(--card-shadow) !important;
   position: relative;
   overflow: hidden;
 }
@@ -3741,7 +3746,7 @@ body.domain-state-psc {
   height: 90px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3774,7 +3779,7 @@ body.domain-state-psc {
   font-size: 1.45rem !important;
   font-weight: 800 !important;
   letter-spacing: -0.02em !important;
-  color: #ffffff !important;
+  color: var(--text-primary) !important;
   margin: 0 !important;
 }
 
@@ -3792,7 +3797,7 @@ body.domain-state-psc {
 
 .premium-card-subtitle {
   font-size: 0.95rem !important;
-  color: #94a3b8 !important;
+  color: var(--text-secondary) !important;
   line-height: 1.5 !important;
   max-width: 580px !important;
   margin: 0 !important;
@@ -3810,11 +3815,11 @@ body.domain-state-psc {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
   font-size: 0.75rem !important;
   font-weight: 500 !important;
-  color: #cbd5e1 !important;
+  color: var(--text-secondary) !important;
   padding: 0.25rem 0.5rem !important;
   border-radius: 6px !important;
 }
@@ -3830,9 +3835,9 @@ body.domain-state-psc {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: #ffffff !important;
+  background: var(--bg-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-primary) !important;
   font-size: 0.9rem !important;
   font-weight: 600 !important;
   padding: 0.75rem 1.5rem !important;
@@ -3841,10 +3846,10 @@ body.domain-state-psc {
 }
 
 .premium-feature-card:hover .premium-explore-btn {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border-color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25) !important;
+  background: var(--text-primary) !important;
+  color: var(--bg-primary) !important;
+  border-color: var(--text-primary) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
   transform: translateX(4px);
 }
 
