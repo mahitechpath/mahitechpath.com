@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "python ../compile_60_everything.py && tsc && vite build && python copy_assets_to_dist.py",
+    "build": "node build-compile.js && tsc && vite build && node copy-assets.js",
     "preview": "vite preview"
   },
   "dependencies": {
