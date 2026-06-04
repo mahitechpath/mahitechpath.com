@@ -29,8 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', savedTheme);
     if (savedTheme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
     }
     updateThemeIcon(savedTheme);
   };
@@ -41,8 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', newTheme);
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark');
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
     } else {
       document.documentElement.classList.remove('dark');
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
     }
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
