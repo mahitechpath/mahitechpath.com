@@ -123,19 +123,83 @@
       </div>
     </div>
 
-    <!-- Category Navigation Cards (Portals) - 2 Portals -->
-    <div class="categories-container" id="homepage-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
-      <a href="btech.html" class="category-card" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <div class="category-card-icon" style="font-size: 3rem; margin-bottom: 1rem;">🎓</div>
-        <h2 class="category-card-title">B.Tech Roadmaps</h2>
-        <p class="category-card-desc">Comprehensive week-by-week syllabus and placement guides for Software and Hardware (ECE, EEE, Mechanical) branches.</p>
-        <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem;">Explore B.Tech Careers &rarr;</span>
+    <!-- Category Navigation Cards (Portals) - 3 Premium Horizontal Cards -->
+    <div class="categories-container" id="homepage-categories">
+      <!-- Card 1: B.Tech Roadmaps -->
+      <a href="btech.html" class="premium-feature-card btech-card">
+        <div class="card-left-wrapper">
+          <div class="premium-card-icon-illustration">🎓</div>
+          <div class="premium-card-details">
+            <div class="premium-card-header-row">
+              <h2 class="premium-card-title">B.Tech Roadmaps</h2>
+              <span class="premium-card-badge">40 Roadmaps</span>
+            </div>
+            <p class="premium-card-subtitle">Comprehensive week-by-week syllabus and placement guides for Software and Hardware (ECE, EEE, Mechanical) branches.</p>
+            <div class="premium-card-sub-icons">
+              <span class="sub-icon-chip">💻 Software</span>
+              <span class="sub-icon-chip">📡 ECE</span>
+              <span class="sub-icon-chip">⚡ EEE</span>
+              <span class="sub-icon-chip">⚙️ Mechanical</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-right-wrapper">
+          <span class="premium-explore-btn">
+            Explore B.Tech
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
       </a>
-      <a href="government.html" class="category-card" style="padding: 2.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <div class="category-card-icon" style="font-size: 3rem; margin-bottom: 1rem;">🏛️</div>
-        <h2 class="category-card-title">Government Exams</h2>
-        <p class="category-card-desc">Structured preparation roadmaps, recommended books, exam patterns, and strategy guides for Central and State civil service exams.</p>
-        <span style="font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; margin-top: 1rem;">Explore Gov Exams &rarr;</span>
+
+      <!-- Card 2: Government Exams -->
+      <a href="government.html" class="premium-feature-card gov-card">
+        <div class="card-left-wrapper">
+          <div class="premium-card-icon-illustration">🏛️</div>
+          <div class="premium-card-details">
+            <div class="premium-card-header-row">
+              <h2 class="premium-card-title">Government Exams</h2>
+              <span class="premium-card-badge">20 Roadmaps</span>
+            </div>
+            <p class="premium-card-subtitle">Structured preparation roadmaps, recommended books, exam patterns, and strategy guides for Central and State civil service exams.</p>
+            <div class="premium-card-sub-icons">
+              <span class="sub-icon-chip">🏛️ IAS / IPS</span>
+              <span class="sub-icon-chip">🔍 SSC CGL</span>
+              <span class="sub-icon-chip">🏦 Banking PO</span>
+              <span class="sub-icon-chip">🌲 State PSC</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-right-wrapper">
+          <span class="premium-explore-btn">
+            Explore Gov Exams
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <!-- Card 3: AI Generated Roadmaps -->
+      <a href="#roadmap-search" class="premium-feature-card ai-card">
+        <div class="card-left-wrapper">
+          <div class="premium-card-icon-illustration ai-glow-illustration">✨</div>
+          <div class="premium-card-details">
+            <div class="premium-card-header-row">
+              <h2 class="premium-card-title">AI Generated Roadmaps</h2>
+              <span class="premium-card-badge" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">Gemini AI</span>
+            </div>
+            <p class="premium-card-subtitle">Can't find your specialization? Type any career topic in the search bar below to generate a custom week-by-week tracker instantly.</p>
+            <div class="premium-card-sub-icons">
+              <span class="sub-icon-chip">🤖 Custom AI Engine</span>
+              <span class="sub-icon-chip">☁️ Cloud Sync</span>
+              <span class="sub-icon-chip">📈 Progress Tracker</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-right-wrapper">
+          <span class="premium-explore-btn" style="border-color: rgba(168, 85, 247, 0.3);">
+            Generate Custom
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </span>
+        </div>
       </a>
     </div>
 

@@ -3652,3 +3652,246 @@ body.domain-state-psc {
 }
 
 
+/* Hero Section Seamless Blend Background */
+.hero-section-wrap {
+  background-color: #0f172a; /* Slightly lighter dark background for light mode */
+  transition: background-color 0.5s ease;
+  position: relative;
+}
+
+[data-theme="dark"] .hero-section-wrap {
+  background-color: #020617; /* Deep navy/black for dark mode */
+}
+
+/* Seamless bottom fade mask to blend hero into main content background */
+.hero-section-wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--bg-primary));
+  pointer-events: none;
+  transition: background 0.3s ease;
+}
+
+/* Premium Glassmorphic Display Cards */
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 960px !important;
+  margin: 2rem auto 4rem auto !important;
+}
+
+.premium-feature-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 20px !important;
+  padding: 2.25rem 2.5rem !important;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle 100px at var(--mx, 50%) var(--my, 50%), rgba(56, 189, 248, 0.15) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.premium-feature-card:hover::before {
+  opacity: 1;
+}
+
+.premium-feature-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.12), 0 0 25px rgba(56, 189, 248, 0.06) !important;
+}
+
+.card-left-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex: 1;
+  z-index: 2;
+}
+
+.premium-card-icon-illustration {
+  width: 90px;
+  height: 90px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.75rem;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.premium-feature-card:hover .premium-card-icon-illustration {
+  transform: scale(1.05);
+}
+
+.premium-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.premium-card-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.premium-card-title {
+  font-family: var(--font-sans) !important;
+  font-size: 1.45rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+}
+
+.premium-card-badge {
+  background: rgba(56, 189, 248, 0.15) !important;
+  border: 1px solid rgba(56, 189, 248, 0.3) !important;
+  color: #38bdf8 !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  padding: 0.2rem 0.6rem !important;
+  border-radius: 999px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.premium-card-subtitle {
+  font-size: 0.95rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.5 !important;
+  max-width: 580px !important;
+  margin: 0 !important;
+}
+
+.premium-card-sub-icons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.sub-icon-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  color: #cbd5e1 !important;
+  padding: 0.25rem 0.5rem !important;
+  border-radius: 6px !important;
+}
+
+.card-right-wrapper {
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  z-index: 2;
+}
+
+.premium-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.premium-feature-card:hover .premium-explore-btn {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.25) !important;
+  transform: translateX(4px);
+}
+
+/* Animations */
+@keyframes aiGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.2), inset 0 0 10px rgba(168, 85, 247, 0.05);
+    border-color: rgba(168, 85, 247, 0.2);
+    background: rgba(168, 85, 247, 0.04);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.45), inset 0 0 15px rgba(168, 85, 247, 0.2);
+    border-color: rgba(168, 85, 247, 0.5);
+    background: rgba(168, 85, 247, 0.08);
+  }
+}
+
+.ai-glow-illustration {
+  animation: aiGlowPulse 3s infinite alternate !important;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    padding: 0 1rem;
+  }
+  .premium-feature-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.75rem !important;
+    gap: 1.5rem !important;
+  }
+  .card-left-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .card-right-wrapper {
+    width: 100%;
+    padding-left: 0;
+  }
+  .premium-explore-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

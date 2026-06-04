@@ -4,7 +4,7 @@ import { Splite } from "./components/ui/splite";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] bg-[#09090b] flex items-center justify-center overflow-hidden py-12 md:py-20 border-b border-zinc-800/50">
+    <section className="hero-section-wrap relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden py-12 md:py-20">
       {/* Spotlight light effects */}
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#3182ce" />
       <Spotlight className="top-20 right-0 md:-right-20" fill="#48bb78" />
@@ -47,16 +47,13 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right column: Interactive 3D Spline Scene with glassmorphic frame */}
-        <div className="lg:col-span-5 w-full h-[350px] md:h-[450px] relative">
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-500/10 to-emerald-500/10 blur-xl opacity-50" />
-          <div className="relative w-full h-full rounded-2xl border border-zinc-800/80 bg-zinc-950/40 backdrop-blur-md overflow-hidden shadow-2xl flex items-center justify-center">
-            {/* The 3D scene */}
-            <Splite
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full absolute inset-0"
-            />
-          </div>
+        {/* Right column: Interactive 3D Spline Scene (no borders or boxes) */}
+        <div className="lg:col-span-5 w-full h-[400px] md:h-[500px] lg:h-[600px] relative flex items-center justify-center overflow-visible">
+          {/* The 3D scene taking full width and height */}
+          <Splite
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full absolute inset-0 scale-105 md:scale-110 lg:scale-125 transform"
+          />
         </div>
       </div>
     </section>

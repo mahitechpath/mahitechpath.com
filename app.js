@@ -27,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const initTheme = () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     updateThemeIcon(savedTheme);
   };
 
@@ -34,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', newTheme);
+    if (newTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
     localStorage.setItem('theme', newTheme);
     updateThemeIcon(newTheme);
   };
@@ -2178,6 +2188,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Helper to track mouse coordinate hover glow on premium cards
+  const initPremiumCardsMouseTracking = () => {
+    document.querySelectorAll('.premium-feature-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mx', `${x}px`);
+        card.style.setProperty('--my', `${y}px`);
+      });
+    });
+  };
+
   if (!isViewerPage) {
     initPhaseLocks();
     initMockTests();
@@ -2185,6 +2208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDoubtSolver();
     initProgressTracker();
     attachTopicTextListeners();
+    initPremiumCardsMouseTracking();
   }
 
   firebaseManager = new FirebaseSyncManager();
