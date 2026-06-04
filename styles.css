@@ -36,10 +36,10 @@ html {
   --bg-search: #111111; /* Search input matching card bg */
   --text-primary: #ffffff; /* Pure white primary text */
   --text-secondary: #94a3b8; /* Light slate secondary text */
-  --accent: #38bdf8;
-  --accent-hover: #0ea5e9;
-  --accent-light: #1e293b;
-  --accent-light-border: #334155;
+  --accent: #00ffcc; /* Bright cyan/teal */
+  --accent-hover: #00d6ac;
+  --accent-light: rgba(0, 255, 204, 0.08);
+  --accent-light-border: rgba(0, 255, 204, 0.2);
   --border-color: #222222; /* Subtle dark border color */
   --progress-bg: #222222;
   --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
