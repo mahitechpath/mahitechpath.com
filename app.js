@@ -1370,8 +1370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- AI Doubt Solver Chat Panel ---
   const initDoubtSolver = () => {
-    if (!activeRoadmapId) return;
-    
+    // Show Doubt Solver on all pages
     const floatingBtn = document.createElement('button');
     floatingBtn.className = 'ai-doubt-solver-btn';
     floatingBtn.setAttribute('aria-label', 'AI Doubt Solver');
@@ -1380,14 +1379,14 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
     document.body.appendChild(floatingBtn);
     
-    const headingEl = document.querySelector('.roadmap-header h1');
-    const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'this career path';
+    const headingEl = document.querySelector('.roadmap-header h1') || document.querySelector('.hero h1') || document.querySelector('.hero-section-wrap h1');
+    const roadmapTitle = headingEl ? headingEl.textContent.trim() : 'CareerPath India';
     
     const chatPanel = document.createElement('div');
     chatPanel.className = 'ai-doubt-solver-panel';
     chatPanel.innerHTML = `
       <div class="ai-chat-header">
-        <div class="ai-chat-title">\ud83d\udcac Doubt Solver: ${roadmapTitle}</div>
+        <div class="ai-chat-title">💬 Doubt Solver: ${roadmapTitle}</div>
         <button class="ai-chat-close">&times;</button>
       </div>
       <div class="ai-chat-messages">
@@ -1491,6 +1490,315 @@ document.addEventListener('DOMContentLoaded', () => {
       
       return `<p>${html}</p>`.replace(/<p><\/p>/g, '');
     };
+  };
+
+  // --- Domain Page Canvas Animations ---
+  const initDomainCanvasAnimations = () => {
+    // Find either .hero-wrap (for portals) or .roadmap-header (for individual roadmaps)
+    const target = document.querySelector('.hero-wrap') || document.querySelector('.roadmap-header');
+    if (!target) return;
+
+    // Create canvas
+    const canvas = document.createElement('canvas');
+    canvas.className = 'hero-canvas';
+    target.style.position = 'relative'; // Ensure relative layout
+    target.insertBefore(canvas, target.firstChild);
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationFrameId;
+    const resizeCanvas = () => {
+      canvas.width = target.clientWidth;
+      canvas.height = target.clientHeight;
+    };
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Detect domain
+    const path = window.location.pathname.toLowerCase();
+    
+    let domainType = '';
+    if (path.includes('sw-ai-') || path.includes('sw-data-') || path.includes('viewer.html')) {
+      domainType = 'ml-ai';
+    } else if (path.includes('software') || path.includes('sw-')) {
+      domainType = 'software';
+    } else if (path.includes('ece') || path.includes('eee') || path.includes('electrical')) {
+      domainType = 'ece-eee';
+    } else if (path.includes('government') || path.includes('gov-')) {
+      domainType = 'government';
+    }
+
+    if (!domainType) return; // Only animate on designated domain pages
+
+    const isDarkMode = () => document.documentElement.getAttribute('data-theme') === 'dark';
+
+    // 1. Software: floating code particles
+    if (domainType === 'software') {
+      const snippets = ['{}', '0', '1', 'const', 'let', 'import', 'function', '=>', 'class', 'console', '[]', 'null', 'true', 'false'];
+      const particles = [];
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height + canvas.height,
+          text: snippets[Math.floor(Math.random() * snippets.length)],
+          speed: 0.4 + Math.random() * 0.8,
+          fontSize: 10 + Math.random() * 12,
+          opacity: 0.1 + Math.random() * 0.3,
+          dx: -0.2 + Math.random() * 0.4
+        });
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.font = `${isDarkMode() ? 'bold ' : ''}12px var(--font-mono)`;
+        
+        particles.forEach(p => {
+          ctx.font = `${p.fontSize}px var(--font-mono)`;
+          ctx.fillStyle = isDarkMode() ? `rgba(0, 255, 204, ${p.opacity})` : `rgba(45, 74, 62, ${p.opacity * 0.6})`;
+          ctx.fillText(p.text, p.x, p.y);
+          
+          p.y -= p.speed;
+          p.x += p.dx;
+          
+          if (p.y < -30) {
+            p.y = canvas.height + 20;
+            p.x = Math.random() * canvas.width;
+            p.opacity = 0.1 + Math.random() * 0.3;
+          }
+        });
+        animationFrameId = requestAnimationFrame(animate);
+      };
+      animate();
+    }
+
+    // 2. ECE/EEE: glowing circuit board traces
+    else if (domainType === 'ece-eee') {
+      const traces = [];
+      const traceCount = 8;
+      
+      const createTrace = () => {
+        const startTop = Math.random() > 0.5;
+        const x = Math.random() * canvas.width;
+        const y = startTop ? 0 : canvas.height;
+        return {
+          segments: [[x, y]],
+          currentX: x,
+          currentY: y,
+          dirX: 0,
+          dirY: startTop ? 1 : -1,
+          speed: 1.5 + Math.random() * 2,
+          color: isDarkMode() ? 'rgba(0, 255, 204, 0.4)' : 'rgba(45, 74, 62, 0.25)',
+          pulseRadius: 3 + Math.random() * 3,
+          maxSegments: 4,
+          segmentLength: 50 + Math.random() * 100,
+          currentSegmentProgress: 0
+        };
+      };
+
+      for (let i = 0; i < traceCount; i++) {
+        traces.push(createTrace());
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        traces.forEach((t, index) => {
+          ctx.beginPath();
+          ctx.strokeStyle = t.color;
+          ctx.lineWidth = 1.5;
+          ctx.shadowBlur = isDarkMode() ? 4 : 0;
+          ctx.shadowColor = isDarkMode() ? '#00ffcc' : 'transparent';
+          
+          ctx.moveTo(t.segments[0][0], t.segments[0][1]);
+          for (let i = 1; i < t.segments.length; i++) {
+            ctx.lineTo(t.segments[i][0], t.segments[i][1]);
+          }
+          ctx.lineTo(t.currentX, t.currentY);
+          ctx.stroke();
+          
+          // Draw head dot
+          ctx.beginPath();
+          ctx.fillStyle = isDarkMode() ? '#00ffcc' : '#2d4a3e';
+          ctx.arc(t.currentX, t.currentY, t.pulseRadius, 0, Math.PI * 2);
+          ctx.fill();
+          
+          // Move head
+          t.currentX += t.dirX * t.speed;
+          t.currentY += t.dirY * t.speed;
+          t.currentSegmentProgress += t.speed;
+          
+          // Should turn?
+          if (t.currentSegmentProgress >= t.segmentLength) {
+            t.segments.push([t.currentX, t.currentY]);
+            if (t.segments.length > t.maxSegments) {
+              t.segments.shift();
+            }
+            
+            // Turn 90 degrees
+            t.currentSegmentProgress = 0;
+            t.segmentLength = 40 + Math.random() * 80;
+            if (t.dirX === 0) {
+              t.dirX = Math.random() > 0.5 ? 1 : -1;
+              t.dirY = 0;
+            } else {
+              t.dirX = 0;
+              t.dirY = Math.random() > 0.5 ? 1 : -1;
+            }
+          }
+          
+          // Reset trace if off bounds
+          if (t.currentX < -20 || t.currentX > canvas.width + 20 || t.currentY < -20 || t.currentY > canvas.height + 20) {
+            traces[index] = createTrace();
+          }
+        });
+        
+        // Reset shadow
+        ctx.shadowBlur = 0;
+        
+        animationFrameId = requestAnimationFrame(animate);
+      };
+      animate();
+    }
+
+    // 3. Government: floating documents/scrolls (simplified outlines)
+    else if (domainType === 'government') {
+      const docs = [];
+      const docCount = 12;
+
+      for (let i = 0; i < docCount; i++) {
+        docs.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height + canvas.height,
+          w: 12 + Math.random() * 8,
+          h: 16 + Math.random() * 10,
+          speed: 0.3 + Math.random() * 0.5,
+          angle: Math.random() * Math.PI * 2,
+          rotSpeed: -0.01 + Math.random() * 0.02,
+          swaySpeed: 0.01 + Math.random() * 0.02,
+          swayAmp: 0.5 + Math.random() * 1.5,
+          swayTime: Math.random() * 100,
+          opacity: 0.08 + Math.random() * 0.15
+        });
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        docs.forEach(d => {
+          ctx.save();
+          ctx.translate(d.x, d.y);
+          ctx.rotate(d.angle);
+          
+          ctx.strokeStyle = isDarkMode() ? `rgba(255, 255, 255, ${d.opacity})` : `rgba(0, 0, 0, ${d.opacity * 0.8})`;
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          // Draw a sheet of paper (rectangle with a folded corner)
+          ctx.moveTo(-d.w/2, -d.h/2);
+          ctx.lineTo(d.w/2 - 4, -d.h/2);
+          ctx.lineTo(d.w/2, -d.h/2 + 4);
+          ctx.lineTo(d.w/2, d.h/2);
+          ctx.lineTo(-d.w/2, d.h/2);
+          ctx.closePath();
+          ctx.stroke();
+          
+          // Draw fold line
+          ctx.beginPath();
+          ctx.moveTo(d.w/2 - 4, -d.h/2);
+          ctx.lineTo(d.w/2 - 4, -d.h/2 + 4);
+          ctx.lineTo(d.w/2, -d.h/2 + 4);
+          ctx.stroke();
+          
+          // Draw internal dummy text lines
+          ctx.beginPath();
+          ctx.moveTo(-d.w/2 + 3, -d.h/2 + 8);
+          ctx.lineTo(d.w/2 - 3, -d.h/2 + 8);
+          ctx.moveTo(-d.w/2 + 3, -d.h/2 + 12);
+          ctx.lineTo(d.w/2 - 5, -d.h/2 + 12);
+          ctx.moveTo(-d.w/2 + 3, -d.h/2 + 16);
+          ctx.lineTo(d.w/2 - 3, -d.h/2 + 16);
+          ctx.stroke();
+          
+          ctx.restore();
+          
+          // Move
+          d.y -= d.speed;
+          d.x += Math.sin(d.swayTime) * d.swayAmp * 0.5;
+          d.angle += d.rotSpeed;
+          d.swayTime += d.swaySpeed;
+          
+          if (d.y < -30) {
+            d.y = canvas.height + 30;
+            d.x = Math.random() * canvas.width;
+          }
+        });
+        
+        animationFrameId = requestAnimationFrame(animate);
+      };
+      animate();
+    }
+
+    // 4. ML/AI: neural network particle plexus
+    else if (domainType === 'ml-ai') {
+      const particles = [];
+      const particleCount = 35;
+      const maxDistance = 110;
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: -0.3 + Math.random() * 0.6,
+          vy: -0.3 + Math.random() * 0.6,
+          radius: 2 + Math.random() * 3,
+          opacity: 0.15 + Math.random() * 0.35
+        });
+      }
+
+      const animate = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Update particles
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = isDarkMode() ? `rgba(0, 255, 204, ${p.opacity})` : `rgba(45, 74, 62, ${p.opacity * 0.7})`;
+          ctx.fill();
+        });
+        
+        // Draw lines
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const p1 = particles[i];
+            const p2 = particles[j];
+            const dx = p1.x - p2.x;
+            const dy = p1.y - p2.y;
+            const dist = (dx * dx + dy * dy)**0.5;
+            
+            if (dist < maxDistance) {
+              const alpha = (1 - dist / maxDistance) * 0.18;
+              ctx.beginPath();
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = isDarkMode() ? `rgba(0, 255, 204, ${alpha})` : `rgba(45, 74, 62, ${alpha})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        
+        animationFrameId = requestAnimationFrame(animate);
+      };
+      animate();
+    }
   };
 
   // --- Blocker Login Gate Logic ---
@@ -2210,6 +2518,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProgressTracker();
     attachTopicTextListeners();
     initPremiumCardsMouseTracking();
+    initDomainCanvasAnimations();
   }
 
   firebaseManager = new FirebaseSyncManager();
@@ -2224,5 +2533,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initDoubtSolver();
     initProgressTracker();
     attachTopicTextListeners();
+    initDomainCanvasAnimations();
   });
 });

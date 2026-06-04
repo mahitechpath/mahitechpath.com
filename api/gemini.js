@@ -1,18 +1,16 @@
 module.exports = async (req, res) => {
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  const origin = req.headers.origin || '*';
-  res.setHeader('Access-Control-Allow-Origin', origin);
-  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, x-gemini-api-key'
-  );
+  // CORS Headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
+  // Handle preflight request
   if (req.method === 'OPTIONS') {
     res.status(200).end();
     return;
   }
 
+  // Ensure it's a POST request
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
@@ -23,9 +21,9 @@ module.exports = async (req, res) => {
       return res.status(400).json({ error: 'Invalid parameters: prompt is required.' });
     }
 
-    const apiKey = process.env.GEMINI_API_KEY || req.headers['x-gemini-api-key'];
+    const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      return res.status(400).json({ error: 'Gemini API Key is missing. Configure GEMINI_API_KEY environment variable or set it in settings.' });
+      return res.status(500).json({ error: 'Gemini API Key is missing. Configure GEMINI_API_KEY environment variable on server.' });
     }
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
@@ -71,7 +69,7 @@ module.exports = async (req, res) => {
 
     return res.status(200).json({ reply: text });
   } catch (err) {
-    console.error(err);
+    console.error('Error in /api/gemini serverless function:', err);
     return res.status(500).json({ error: err.message || 'Internal Server Error' });
   }
 };

@@ -110,8 +110,11 @@ export function Hero() {
               <div className="text-8xl md:text-9xl font-black tracking-tighter text-white select-none leading-none">
                 CPI
               </div>
-              <div className="text-xs font-bold tracking-[0.4em] text-zinc-400 uppercase pl-1.5">
+              <div className="hidden md:block text-xs font-bold tracking-[0.4em] text-zinc-400 uppercase pl-1.5">
                 CAREER ROADMAP PLATFORM
+              </div>
+              <div className="block md:hidden text-xs font-bold tracking-[0.4em] text-zinc-400 uppercase pl-1.5">
+                AI CAREER GUIDE
               </div>
             </div>
 
