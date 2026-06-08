@@ -744,7 +744,7 @@ app_js_content = r"""document.addEventListener('DOMContentLoaded', () => {
     }
 
     const data = await res.json();
-    return data.reply;
+    return data.reply || data.result;
   };
 
   const renderFallbackExists = (fallbackEl, slug, query) => {
